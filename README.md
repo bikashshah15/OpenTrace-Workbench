@@ -40,6 +40,8 @@ py -3 tools/start.py
 
 If `py -3` is unavailable, use `python tools/start.py` only when `python --version` reports Python 3.10 or newer.
 
+If you previously cloned OpenTrace on Windows, clone into a new folder to ensure Git checks out the bundled Frigate evidence with its original line endings.
+
 Open <http://127.0.0.1:8765/> and click **Explore sample findings** to open the recorded Frigate case. Stop the stack with `docker compose -p opentrace stop`.
 
 | Startup profile | What it enables | Requirements |
