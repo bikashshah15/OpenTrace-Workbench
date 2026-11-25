@@ -1,0 +1,805 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:7e49c80b32f15c7af22bdcde",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "component name",
+     "state": "recorded",
+     "value": "synthetic-alg-0-0"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-0-0",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:95960767a1ac31141ebb38aa",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 10,
+      "line_start": 10,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:9d18a851c1729e4d51018b7e"
+   ]
+  },
+  {
+   "asset_id": "ast:8d830ac76085ee30cf5e3424",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-0-1",
+   "kind": "protocol",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:c356b2da4785ce5bc852a67e",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/1",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:9d18a851c1729e4d51018b7e"
+   ]
+  },
+  {
+   "asset_id": "ast:1c8aea12babcd164c49c7ce4",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-0-2",
+   "kind": "certificate",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:966f9326d80253208916f222",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 12,
+      "line_start": 12,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/2",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:9d18a851c1729e4d51018b7e"
+   ]
+  },
+  {
+   "asset_id": "ast:d5e6f7d72a88d4ae967da3c3",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-1-0",
+   "kind": "protocol",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:578cf3414254efd5f90cdf62",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 10,
+      "line_start": 10,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/3",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:0e1d33633dd355a3342c8650"
+   ]
+  },
+  {
+   "asset_id": "ast:454266d7c12823946e1580f6",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-1-1",
+   "kind": "certificate",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:f80036d50ac3ee26c427693c",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/4",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:0e1d33633dd355a3342c8650"
+   ]
+  },
+  {
+   "asset_id": "ast:dd9fd56020e079447fb0ccfe",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "component name",
+     "state": "recorded",
+     "value": "synthetic-alg-1-2"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-1-2",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:ad2f8ce20c58418f6246071e",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 12,
+      "line_start": 12,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/5",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:0e1d33633dd355a3342c8650"
+   ]
+  },
+  {
+   "asset_id": "ast:2c51c45dfbf670f89a4528d7",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "string literal at the call site",
+     "state": "recorded",
+     "value": "sha256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "sha256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:eb69b917aa92de234494f814",
+     "operation": "synthetic.call",
+     "producer_id": "opentrace-source-check",
+     "source_location": {
+      "excerpt": "  synthetic_hash(\"sha256\")  # invented line",
+      "excerpt_state": "recorded",
+      "file_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "line_end": 12,
+      "line_start": 12,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:7da10a817b1b5eb487d3cea8"
+   ]
+  },
+  {
+   "asset_id": "ast:c8b7934551bedde63d26d6fc",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-2-0",
+   "kind": "certificate",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:887dd1fa81c1510d6910dea6",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 10,
+      "line_start": 10,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/6",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:7da10a817b1b5eb487d3cea8"
+   ]
+  },
+  {
+   "asset_id": "ast:26a38a23f5d8291b45239f88",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "component name",
+     "state": "recorded",
+     "value": "synthetic-alg-2-1"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-alg-2-1",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:a0fa3b29d08fd171dde59a5b",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/7",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:7da10a817b1b5eb487d3cea8"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Cryptographic assets recorded in the original CBOM.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ac743b9e831346d5052357d0a7c607fbeb59c9bc2e083320ddb2ba2d08fa78b5",
+  "assessment": null,
+  "commit_sha": "5103a3384916f4b89b169dd6043d5293512a89c9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 9,
+  "total": 9,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 4,
+  "all": 9,
+  "certificates": 3,
+  "findings": 1,
+  "protocols": 2
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 9,
+  "assets_total": 9,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": "synthetic-cbom-tool 0.0"
+   },
+   "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 1,
+    "files_excluded": 0,
+    "files_parsed": 1,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  }
+ ],
+ "review_items": [
+  {
+   "asset_id": "ast:2c51c45dfbf670f89a4528d7",
+   "bounded_meaning": "Synthetic bounded meaning.",
+   "condition": "Rule state inconclusive; reason codes synthetic",
+   "evidence_ids": [
+    "ev-synthetic-12"
+   ],
+   "next_action": "Synthetic next action.",
+   "rationale": "Synthetic rationale for layout tests.",
+   "review_id": "rev:67757822be23aa79e27bc760",
+   "rule_id": "synthetic_rule.example",
+   "rule_version": "1",
+   "tone": "review"
+  }
+ ],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [
+  {
+   "endpoint_text": "['/a']",
+   "name": "synthetic-service",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "service_id": "art:inv:synthetic-cbom/services/0"
+  }
+ ],
+ "services_counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 3,
+   "group_id": "grp:9d18a851c1729e4d51018b7e",
+   "label": "synthetic/g0/file.py",
+   "path": "synthetic/g0/file.py"
+  },
+  {
+   "assets_total": 3,
+   "group_id": "grp:0e1d33633dd355a3342c8650",
+   "label": "synthetic/g1/file.py",
+   "path": "synthetic/g1/file.py"
+  },
+  {
+   "assets_total": 3,
+   "group_id": "grp:7da10a817b1b5eb487d3cea8",
+   "label": "synthetic/g2/file.py",
+   "path": "synthetic/g2/file.py"
+  }
+ ],
+ "tab": "crypto"
+}

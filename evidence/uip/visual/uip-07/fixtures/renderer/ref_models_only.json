@@ -1,0 +1,237 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:013006c0f9aa27fa3959664b",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic_model_a.bin",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:e5a59dc7e59c6a8ebb6c26ed",
+     "operation": "declared model path",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "f2610744ea9009cecdc9618144a113df7df6069cce55425d7cbe2a9c9e147380",
+      "line_end": 10,
+      "line_start": 10,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/detector_a.py",
+       "text": "synthetic/detector_a.py"
+      },
+      "path": "synthetic/detector_a.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:4861a74084cc922d62bc7115"
+   ]
+  },
+  {
+   "asset_id": "ast:13d2292718c62182495c48ba",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic_model_b.bin",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:03d605714b99977bc52bf6e5",
+     "operation": "declared model path",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "895d89ef2acf760e2929ed794167a237d0cd303574eff51360d0bc5b056f49f1",
+      "line_end": 20,
+      "line_start": 20,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/detector_b.py",
+       "text": "synthetic/detector_b.py"
+      },
+      "path": "synthetic/detector_b.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:6f1c4e2e57d5f2af2a45399d"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Synthetic renderer fixture: invented assets for layout and state coverage.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:052ce00f39e0e25a5d06d55951b879153757742a2ddb37578bd5b48b5912794e",
+  "assessment": null,
+  "commit_sha": "f3e4a50c85d3b8c14561b3c0364ba483b0dc9409",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 2,
+  "total": 2,
+  "truncated": false
+ },
+ "filter": "models",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 2,
+  "findings": 0,
+  "models": 2,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 2,
+  "assets_total": 2,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "scope": "synthetic experimental source observation"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [
+  {
+   "assets_total": 2,
+   "group_id": "grp:4861a74084cc922d62bc7115",
+   "label": "Synthetic detector A",
+   "path": "synthetic/detector_a.py"
+  },
+  {
+   "assets_total": 3,
+   "group_id": "grp:6f1c4e2e57d5f2af2a45399d",
+   "label": "Synthetic detector B",
+   "path": "synthetic/detector_b.py"
+  }
+ ],
+ "tab": "ai"
+}

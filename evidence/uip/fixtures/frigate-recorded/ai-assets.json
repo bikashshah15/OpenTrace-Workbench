@@ -1,0 +1,130 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:575ba1d513d3ea5596a74215",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "yolov6n.hef",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [],
+   "occurrences_total": 0,
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": []
+  }
+ ],
+ "availability": {
+  "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 1,
+  "findings": 0,
+  "models": 1,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": "cisco-aibom 1.10.0"
+   },
+   "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [],
+ "tab": "ai"
+}

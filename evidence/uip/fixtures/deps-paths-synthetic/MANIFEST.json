@@ -1,0 +1,70 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 6069,
+   "path": "paths-all.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "6dc1a5a97d9f36173aaabb7bb15a97f93f8359ff1a1ff524fecedda90c187e69"
+  },
+  {
+   "bytes": 85156,
+   "path": "paths-connectors-omitted.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "ff43752dc802a60adc4a35f0f6685ed72c42b27ab470e71d97f7f5e9bcd44425"
+  },
+  {
+   "bytes": 2878,
+   "path": "paths-cycle-fallback.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "f615610afb399778fcb7748da4525f76f8dcf2bf05ee5e8603fdc04691e76f0a"
+  },
+  {
+   "bytes": 8916,
+   "path": "paths-depth-limit.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "4df7acee9ba61f14f0f9c55063bfffe211c5377dfca5cb815fd03d4b9254ce5e"
+  },
+  {
+   "bytes": 2328,
+   "path": "paths-disconnected-fallback.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "58285c78acff8673ad7d99f3e0be0887e00d9ba28257e0c463ff19d648f1c628"
+  },
+  {
+   "bytes": 4787,
+   "path": "paths-evidence-gaps.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "29cdeb6387872aada3ca0e554a99e62de8434bd623d26cdc5603fdfddba89ee6"
+  },
+  {
+   "bytes": 6134,
+   "path": "paths-lookup-off.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "18ece6802a7650eeb4b7378024932fa649536b1c45eb23c58e76635f7bc3c4af"
+  },
+  {
+   "bytes": 3482,
+   "path": "paths-requested-focus.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "4af77b5bbddb5086edd08cf0d68ae10039c87197074be2e057352e71c3178975"
+  },
+  {
+   "bytes": 5342,
+   "path": "paths-transitive.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "f3d1f5af1b8c89ab53bd9825ff0388f56f94de07127cc5ad27a374aa93cc066e"
+  }
+ ],
+ "name": "deps-paths-synthetic",
+ "normalized": [],
+ "notes": "Chains with shared connectors, a diamond, a cycle, disconnected components, connectors_omitted, depth_limit, every lookup state and a lookup-off variant.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

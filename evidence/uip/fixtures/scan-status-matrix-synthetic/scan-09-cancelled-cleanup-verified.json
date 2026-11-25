@@ -1,0 +1,168 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:d0b1ee42358e983c9c5bba9bfe1039f75625ca315cb292feae7d8d50f8a0a8be",
+  "assessment": null,
+  "commit_sha": "a34abd5d664421e150d9dec126bcfaf2aff1a35e",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "verified"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": "Workbench is not ready: the scan has not completed.",
+  "ready": false
+ },
+ "identity": {
+  "analysis_digest": "sha256:d0b1ee42358e983c9c5bba9bfe1039f75625ca315cb292feae7d8d50f8a0a8be",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/example-org/sample-web/tree/v1.0.0"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "a34abd5d664421e150d9dec126bcfaf2aff1a35e",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 5000,
+  "job_id": "job:83851c76a5ebfeb90a512e38",
+  "seq": 5,
+  "state": "cancelled",
+  "updated_at": "2026-01-01T00:00:05Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:04Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": "2026-01-01T00:00:03Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:04Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:06Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "sbom",
+   "started_at": "2026-01-01T00:00:05Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:06Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:08Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "cbom",
+   "started_at": "2026-01-01T00:00:07Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:08Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:10Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "aibom",
+   "started_at": "2026-01-01T00:00:09Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:10Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:12Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "advisory_lookup",
+   "started_at": "2026-01-01T00:00:11Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:12Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:14Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "source_checks",
+   "started_at": "2026-01-01T00:00:13Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:14Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:16Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "evidence_projection",
+   "started_at": "2026-01-01T00:00:15Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:16Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:18Z",
+   "outputs": [],
+   "reason_code": "cancelled_by_user",
+   "stage_id": "workbench_ready",
+   "started_at": "2026-01-01T00:00:17Z",
+   "state": "cancelled",
+   "updated_at": "2026-01-01T00:00:18Z",
+   "warnings": []
+  }
+ ]
+}

@@ -1,0 +1,220 @@
+{
+  "artifacts": [
+    {
+      "bytes": 162,
+      "captured_at": "2026-10-14T12:00:01.000Z",
+      "content_b64": "eyJjYXB0dXJlX3NldF9pZCI6InNoYTI1NjpjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjIiwibWF0Y2hlcyI6W10sInF1ZXJpZXMiOltdLCJzY2hlbWEiOiJvcGVudHJhY2Uub3N2X2ludmVudG9yeV90YWJsZS8xIn0K",
+      "digest": "sha256:909b9a004d95e7d2fa362ae082f350495341a0f1962a8f745db0cfee11a99e1d",
+      "media_type": "application/json",
+      "producer": "evidence-specialist-b/example",
+      "role": "match_table",
+      "source_ref": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+    }
+  ],
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "claims": [
+    {
+      "claim_id": "t2.cl1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "t2.adv1"
+      ],
+      "explanation": "Supported by the cited evidence.",
+      "proposition": "OSV returned GO-2022-1059 for golang.org/x/text 0.3.7 in this capture.",
+      "status": "supported",
+      "type": "advisory_matches_version",
+      "vuln_id": "GO-2022-1059"
+    },
+    {
+      "claim_id": "t2.zero1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "t2.qc"
+      ],
+      "explanation": "Supported by the cited evidence.",
+      "proposition": "No advisory matches returned for the queried version in this capture.",
+      "query_key": "Go|golang.org/x/text|0.3.7",
+      "status": "supported",
+      "type": "no_advisory_match_returned"
+    }
+  ],
+  "completed_at": "2026-10-14T12:00:01.000Z",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "static inventory; no build; no code execution",
+    "candidate_id": null,
+    "language": "multi",
+    "repo_id": "cohort/mcp-i3",
+    "requested_revision": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "errors": [],
+  "evidence": [
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "osv_inventory_scope",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:909b9a004d95e7d2fa362ae082f350495341a0f1962a8f745db0cfee11a99e1d",
+        "tool": "osv_inventory_scope",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "ecosystems": [
+          "Go"
+        ],
+        "planned_query_digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "queries_captured": 2,
+        "queries_planned": 2,
+        "query_key_form": "bare"
+      },
+      "dimension": "inventory",
+      "evidence_id": "t2.scope",
+      "kind": "osv_inventory_scope",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "osv#scope",
+      "observation": "Planned queries compared with the captured requests.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "osv",
+        "version": "scope"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "advisory_match",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:909b9a004d95e7d2fa362ae082f350495341a0f1962a8f745db0cfee11a99e1d",
+        "tool": "advisory_match",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "affected_events": [
+          {
+            "introduced": "0"
+          },
+          {
+            "fixed": "0.3.8"
+          }
+        ],
+        "aliases": [
+          "CVE-2022-32149",
+          "GHSA-69ch-w2m2-3vjp"
+        ],
+        "ecosystem": "Go",
+        "matched_version": "0.3.7",
+        "package": "golang.org/x/text",
+        "query_key": "Go|golang.org/x/text|0.3.7",
+        "range_check": "consistent",
+        "record_artifact": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "related": [
+          "CGA-wf56-6rqf-4crj"
+        ],
+        "severity": "unknown",
+        "version_original": "v0.3.7",
+        "version_queried": "0.3.7",
+        "vuln_id": "GO-2022-1059",
+        "withdrawn": false
+      },
+      "dimension": "inventory",
+      "evidence_id": "t2.adv1",
+      "kind": "advisory_match",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "osv#Go|golang.org/x/text|0.3.7#GO-2022-1059",
+      "observation": "OSV returned GO-2022-1059 for the queried version.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "golang.org/x/text",
+        "version": "0.3.7"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "osv_query_complete",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:909b9a004d95e7d2fa362ae082f350495341a0f1962a8f745db0cfee11a99e1d",
+        "tool": "osv_query_complete",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "queries": [
+          {
+            "active_count": 1,
+            "all_pages_complete": true,
+            "pages": 1,
+            "query_key": "Go|golang.org/x/text|0.3.7",
+            "returned_count": 1,
+            "version_state": "exact"
+          },
+          {
+            "active_count": 0,
+            "all_pages_complete": true,
+            "pages": 1,
+            "query_key": "Go|golang.org/x/time|0.15.0",
+            "returned_count": 0,
+            "version_state": "exact"
+          }
+        ]
+      },
+      "dimension": "inventory",
+      "evidence_id": "t2.qc",
+      "kind": "osv_query_complete",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "osv#queries",
+      "observation": "2 OSV queries evaluated.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "osv",
+        "version": "queries"
+      }
+    }
+  ],
+  "kind": "result",
+  "missing_evidence": [],
+  "producer": {
+    "capability_version": "3.0",
+    "dimensions_used": [
+      "inventory"
+    ],
+    "implementation": "go",
+    "operations_used": [
+      "osv_inventory_match"
+    ],
+    "service_id": "evidence-specialist-b"
+  },
+  "run_id": "run-t2",
+  "schema_version": "3.0",
+  "status": "complete",
+  "task_id": "t2",
+  "warnings": []
+}

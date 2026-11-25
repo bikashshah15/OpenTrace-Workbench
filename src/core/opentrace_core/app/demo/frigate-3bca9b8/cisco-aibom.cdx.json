@@ -1,0 +1,1324 @@
+{
+  "components": [
+    {
+      "bom-ref": "SharedMemoryFrameManager_/scan/repo/frigate/camera/maintainer.py_21",
+      "description": "SharedMemoryFrameManager \u2014 memory",
+      "name": "SharedMemoryFrameManager",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/camera/maintainer.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "21"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "memory"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "StreamInfoRetriever_/scan/repo/frigate/config/config.py_29",
+      "description": "StreamInfoRetriever \u2014 retriever",
+      "name": "StreamInfoRetriever",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/config/config.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "29"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "retriever"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "TypeGuard_/scan/repo/frigate/plus.py_8",
+      "description": "TypeGuard \u2014 guardrail",
+      "name": "TypeGuard",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/plus.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "8"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "guardrail"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "UntrackedSharedMemory_/scan/repo/frigate/object_detection/util.py_9",
+      "description": "UntrackedSharedMemory \u2014 memory",
+      "name": "UntrackedSharedMemory",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/object_detection/util.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "9"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "memory"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "google.genai.types.Part.from_bytes_/scan/repo/frigate/genai/plugins/gemini.py_303",
+      "description": "google.genai.types.Part.from_bytes \u2014 prompt \u2014 google_genai",
+      "name": "google.genai.types.Part.from_bytes",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/genai/plugins/gemini.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "google_genai"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "303"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "prompt"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "google.genai.types.Part.from_function_call_/scan/repo/frigate/genai/plugins/gemini.py_498",
+      "description": "google.genai.types.Part.from_function_call \u2014 prompt \u2014 google_genai",
+      "name": "google.genai.types.Part.from_function_call",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/genai/plugins/gemini.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "google_genai"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "498"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "prompt"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "hyperparameter:batch_size_/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py_228",
+      "description": "Hyperparameter batch_size",
+      "name": "hyperparameter:batch_size",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "python-kwargs"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "228"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "hyperparameter"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "hyperparameter:learning_rate_/scan/repo/frigate/util/classification.py_269",
+      "description": "Hyperparameter learning_rate",
+      "name": "hyperparameter:learning_rate",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/util/classification.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "python-kwargs"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "269"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "hyperparameter"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "training_run_/scan/repo/frigate/util/classification.py_268",
+      "description": "Model training execution",
+      "name": "training_run",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/util/classification.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "tensorflow/keras"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "268"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "training_run"
+        }
+      ],
+      "type": "application"
+    },
+    {
+      "bom-ref": "Agent Instructions for Frigate NVR_/scan/repo/AGENTS.md_0",
+      "description": "This document provides coding guidelines and best practices for contributing to Frigate NVR, a complete and local NVR designed for Home Assistant with AI object detection.",
+      "name": "Agent Instructions for Frigate NVR",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/AGENTS.md"
+        },
+        {
+          "name": "cisco-aibom:skill_format",
+          "value": "agents_md"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "skill"
+        }
+      ],
+      "type": "file"
+    },
+    {
+      "bom-ref": "Tool_/scan/repo/frigate/genai/plugins/gemini.py_543",
+      "description": "Tool \u2014 tool \u2014 google",
+      "name": "Tool",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/genai/plugins/gemini.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "google"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "543"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "tool"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "ToolCall_/scan/repo/frigate/api/chat.py_35",
+      "description": "ToolCall \u2014 tool",
+      "name": "ToolCall",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/api/chat.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "35"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "tool"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": "google.genai.types.ToolConfig_/scan/repo/frigate/genai/plugins/gemini.py_558",
+      "description": "google.genai.types.ToolConfig \u2014 tool \u2014 google_genai",
+      "name": "google.genai.types.ToolConfig",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/genai/plugins/gemini.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "google_genai"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "558"
+        },
+        {
+          "name": "cisco-aibom:type",
+          "value": "tool"
+        }
+      ],
+      "type": "library"
+    },
+    {
+      "bom-ref": ".embeddings.Embeddings_/scan/repo/frigate/embeddings/maintainer.py_152",
+      "description": ".embeddings.Embeddings \u2014 embedding \u2014 langchain",
+      "name": ".embeddings.Embeddings",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/maintainer.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "langchain"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "152"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "/proc/device-tree/model_/scan/repo/frigate/analytics/collectors/hardware.py_22",
+      "description": "/proc/device-tree/model \u2014 model \u2014 unknown",
+      "name": "/proc/device-tree/model",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/analytics/collectors/hardware.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "22"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "ArcfaceEmbedding_/scan/repo/frigate/data_processing/common/face/recognizer.py_18",
+      "description": "ArcfaceEmbedding \u2014 embedding",
+      "name": "ArcfaceEmbedding",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/data_processing/common/face/recognizer.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "18"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "BaseEmbedding_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_15",
+      "description": "BaseEmbedding \u2014 embedding",
+      "name": "BaseEmbedding",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/lpr_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "15"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Cam-1_web/e2e/specs/settings/camera-wizard-apple-compatibility.spec.ts_31",
+      "description": "Cam-1 \u2014 model \u2014 npm",
+      "name": "Cam-1",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/camera-wizard-apple-compatibility.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "31"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Embeddings_/scan/repo/frigate/data_processing/post/audio_transcription.py_22",
+      "description": "Embeddings \u2014 embedding",
+      "name": "Embeddings",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/data_processing/post/audio_transcription.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "22"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Embeddings_/scan/repo/frigate/embeddings/embeddings.py_99",
+      "description": "Embeddings \u2014 model \u2014 Embeddings",
+      "name": "Embeddings",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/embeddings.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "Embeddings"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "99"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "GenAIEmbedding_/scan/repo/frigate/embeddings/embeddings.py_32",
+      "description": "GenAIEmbedding \u2014 embedding",
+      "name": "GenAIEmbedding",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/embeddings.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "32"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "JinaV1ImageEmbedding_/scan/repo/frigate/embeddings/embeddings.py_33",
+      "description": "JinaV1ImageEmbedding \u2014 embedding",
+      "name": "JinaV1ImageEmbedding",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/embeddings.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "33"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "JinaV2Embedding_/scan/repo/frigate/embeddings/embeddings.py_34",
+      "description": "JinaV2Embedding \u2014 embedding",
+      "name": "JinaV2Embedding",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/embeddings.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "34"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Model_/scan/repo/web/public/locales/cs/views/settings.json_16",
+      "description": "Model \u2014 model \u2014 unknown",
+      "name": "Model",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/cs/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "16"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Modeli_/scan/repo/web/public/locales/tr/views/settings.json_732",
+      "description": "Modeli \u2014 model \u2014 unknown",
+      "name": "Modeli",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/tr/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "732"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Modelis_/scan/repo/web/public/locales/lt/views/settings.json_676",
+      "description": "Modelis \u2014 model \u2014 unknown",
+      "name": "Modelis",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/lt/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "676"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Modell_/scan/repo/web/public/locales/de/views/settings.json_18",
+      "description": "Modell \u2014 model \u2014 unknown",
+      "name": "Modell",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/de/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "18"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Modello_/scan/repo/web/public/locales/it/views/settings.json_37",
+      "description": "Modello \u2014 model \u2014 unknown",
+      "name": "Modello",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/it/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "37"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Modelo_/scan/repo/web/public/locales/pt-BR/views/settings.json_61",
+      "description": "Modelo \u2014 model \u2014 unknown",
+      "name": "Modelo",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/pt-BR/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "61"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Mod\u00e8le_/scan/repo/web/public/locales/fr/views/settings.json_227",
+      "description": "Mod\u00e8le \u2014 model \u2014 unknown",
+      "name": "Mod\u00e8le",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/fr/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "227"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "Mudel_/scan/repo/web/public/locales/et/views/settings.json_75",
+      "description": "Mudel \u2014 model \u2014 unknown",
+      "name": "Mudel",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/public/locales/et/views/settings.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "75"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "PTZ-1_web/e2e/specs/settings/camera-wizard-ptz.spec.ts_28",
+      "description": "PTZ-1 \u2014 model \u2014 npm",
+      "name": "PTZ-1",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/camera-wizard-ptz.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "28"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "bird_/scan/repo/frigate/data_processing/real_time/bird.py_62",
+      "description": "bird \u2014 model \u2014 unknown",
+      "name": "bird",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/data_processing/real_time/bird.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "62"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "dockerfile_copy_models_142_/scan/repo/docker/main/Dockerfile_142",
+      "description": "COPY of model-like artifact",
+      "name": "dockerfile_copy_models_142",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/docker/main/Dockerfile"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "142"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "env:GITHUB_ENDPOINT_/scan/repo/frigate/util/runtime_deps.py_140",
+      "description": "env:GITHUB_ENDPOINT \u2014 llm_endpoint",
+      "name": "env:GITHUB_ENDPOINT",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/util/runtime_deps.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "140"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "env:TF_KERAS_MOBILENET_V2_WEIGHTS_URL_/scan/repo/frigate/util/classification.py_174",
+      "description": "env:TF_KERAS_MOBILENET_V2_WEIGHTS_URL \u2014 model",
+      "name": "env:TF_KERAS_MOBILENET_V2_WEIGHTS_URL",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/util/classification.py"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "174"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "facedet_/scan/repo/frigate/embeddings/onnx/face_embedding.py_35",
+      "description": "facedet \u2014 model \u2014 unknown",
+      "name": "facedet",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/face_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "35"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "genai_web/e2e/specs/explore.spec.ts_11",
+      "description": "genai \u2014 model \u2014 npm",
+      "name": "genai",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/explore.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "11"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "google.genai.types.ThinkingConfig_/scan/repo/frigate/genai/plugins/gemini.py_588",
+      "description": "google.genai.types.ThinkingConfig \u2014 model \u2014 google_genai",
+      "name": "google.genai.types.ThinkingConfig",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/genai/plugins/gemini.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "google_genai"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "588"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "gpt-4o_web/e2e/specs/settings/genai.spec.ts_110",
+      "description": "gpt-4o \u2014 model \u2014 npm",
+      "name": "gpt-4o",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/genai.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "110"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "jinaai/jina-clip-v1_/scan/repo/frigate/embeddings/onnx/jina_v1_embedding.py_38",
+      "description": "jinaai/jina-clip-v1 \u2014 model \u2014 unknown",
+      "name": "jinaai/jina-clip-v1",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/jina_v1_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "38"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "jinaai/jina-clip-v2_/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py_42",
+      "description": "jinaai/jina-clip-v2 \u2014 model \u2014 unknown",
+      "name": "jinaai/jina-clip-v2",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "42"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "jinav1_/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json_1",
+      "description": "jinav1 \u2014 model \u2014 unknown",
+      "name": "jinav1",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "1"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "jinav2_web/e2e/specs/settings/semantic-search.spec.ts_98",
+      "description": "jinav2 \u2014 model \u2014 npm",
+      "name": "jinav2",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/semantic-search.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "98"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "llava_web/e2e/specs/navigation.spec.ts_81",
+      "description": "llava \u2014 model \u2014 npm",
+      "name": "llava",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/navigation.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "81"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "model_artifact_/scan/repo/frigate/embeddings/embeddings.py_33",
+      "description": "Serialized model weights or export",
+      "name": "model_artifact",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/embeddings.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "onnx"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "33"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "paddleocr-onnx_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_42",
+      "description": "paddleocr-onnx \u2014 model \u2014 unknown",
+      "name": "paddleocr-onnx",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/lpr_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "42"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "probe_/scan/repo/frigate/api/app.py_260",
+      "description": "probe \u2014 model \u2014 unknown",
+      "name": "probe",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/api/app.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "260"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "qwen3-asr_web/e2e/specs/settings/genai.spec.ts_193",
+      "description": "qwen3-asr \u2014 model \u2014 npm",
+      "name": "qwen3-asr",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/genai.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "193"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "sherpa-onnx_/scan/repo/frigate/data_processing/common/audio_transcription/model.py_54",
+      "description": "sherpa-onnx \u2014 model \u2014 unknown",
+      "name": "sherpa-onnx",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/data_processing/common/audio_transcription/model.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "54"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "silero_vad_/scan/repo/frigate/data_processing/real_time/whisper_online.py_697",
+      "description": "silero_vad \u2014 model \u2014 unknown",
+      "name": "silero_vad",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/data_processing/real_time/whisper_online.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "697"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "stale-model_web/e2e/specs/settings/genai.spec.ts_87",
+      "description": "stale-model \u2014 model \u2014 npm",
+      "name": "stale-model",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/settings/genai.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "87"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "string_web/src/types/chat.ts_76",
+      "description": "string \u2014 model \u2014 npm",
+      "name": "string",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/src/types/chat.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "76"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "whisper_/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json_1",
+      "description": "whisper \u2014 model \u2014 unknown",
+      "name": "whisper",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "1"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "yolo_web/e2e/specs/system-health.spec.ts_34",
+      "description": "yolo \u2014 model \u2014 npm",
+      "name": "yolo",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "web/e2e/specs/system-health.spec.ts"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "npm"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "34"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "yolov6n.hef_/scan/repo/frigate/detectors/plugins/hailo.py_58",
+      "description": "yolov6n.hef \u2014 model \u2014 unknown",
+      "name": "yolov6n.hef",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/detectors/plugins/hailo.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "58"
+        }
+      ],
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "yolov9_license_plate_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_226",
+      "description": "yolov9_license_plate \u2014 model \u2014 unknown",
+      "name": "yolov9_license_plate",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "/scan/repo/frigate/embeddings/onnx/lpr_embedding.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "226"
+        }
+      ],
+      "type": "machine-learning-model"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": ".embeddings.Embeddings_/scan/repo/frigate/embeddings/maintainer.py_152"
+    },
+    {
+      "ref": "/proc/device-tree/model_/scan/repo/frigate/analytics/collectors/hardware.py_22"
+    },
+    {
+      "ref": "Agent Instructions for Frigate NVR_/scan/repo/AGENTS.md_0"
+    },
+    {
+      "ref": "ArcfaceEmbedding_/scan/repo/frigate/data_processing/common/face/recognizer.py_18"
+    },
+    {
+      "ref": "BaseEmbedding_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_15"
+    },
+    {
+      "ref": "Cam-1_web/e2e/specs/settings/camera-wizard-apple-compatibility.spec.ts_31"
+    },
+    {
+      "ref": "Embeddings_/scan/repo/frigate/data_processing/post/audio_transcription.py_22"
+    },
+    {
+      "ref": "Embeddings_/scan/repo/frigate/embeddings/embeddings.py_99"
+    },
+    {
+      "ref": "GenAIEmbedding_/scan/repo/frigate/embeddings/embeddings.py_32"
+    },
+    {
+      "ref": "JinaV1ImageEmbedding_/scan/repo/frigate/embeddings/embeddings.py_33"
+    },
+    {
+      "ref": "JinaV2Embedding_/scan/repo/frigate/embeddings/embeddings.py_34"
+    },
+    {
+      "ref": "Model_/scan/repo/web/public/locales/cs/views/settings.json_16"
+    },
+    {
+      "ref": "Modeli_/scan/repo/web/public/locales/tr/views/settings.json_732"
+    },
+    {
+      "ref": "Modelis_/scan/repo/web/public/locales/lt/views/settings.json_676"
+    },
+    {
+      "ref": "Modell_/scan/repo/web/public/locales/de/views/settings.json_18"
+    },
+    {
+      "ref": "Modello_/scan/repo/web/public/locales/it/views/settings.json_37"
+    },
+    {
+      "ref": "Modelo_/scan/repo/web/public/locales/pt-BR/views/settings.json_61"
+    },
+    {
+      "ref": "Mod\u00e8le_/scan/repo/web/public/locales/fr/views/settings.json_227"
+    },
+    {
+      "ref": "Mudel_/scan/repo/web/public/locales/et/views/settings.json_75"
+    },
+    {
+      "ref": "PTZ-1_web/e2e/specs/settings/camera-wizard-ptz.spec.ts_28"
+    },
+    {
+      "ref": "SharedMemoryFrameManager_/scan/repo/frigate/camera/maintainer.py_21"
+    },
+    {
+      "ref": "StreamInfoRetriever_/scan/repo/frigate/config/config.py_29"
+    },
+    {
+      "ref": "ToolCall_/scan/repo/frigate/api/chat.py_35"
+    },
+    {
+      "ref": "Tool_/scan/repo/frigate/genai/plugins/gemini.py_543"
+    },
+    {
+      "ref": "TypeGuard_/scan/repo/frigate/plus.py_8"
+    },
+    {
+      "ref": "UntrackedSharedMemory_/scan/repo/frigate/object_detection/util.py_9"
+    },
+    {
+      "ref": "bird_/scan/repo/frigate/data_processing/real_time/bird.py_62"
+    },
+    {
+      "ref": "dockerfile_copy_models_142_/scan/repo/docker/main/Dockerfile_142"
+    },
+    {
+      "ref": "env:GITHUB_ENDPOINT_/scan/repo/frigate/util/runtime_deps.py_140"
+    },
+    {
+      "ref": "env:TF_KERAS_MOBILENET_V2_WEIGHTS_URL_/scan/repo/frigate/util/classification.py_174"
+    },
+    {
+      "ref": "facedet_/scan/repo/frigate/embeddings/onnx/face_embedding.py_35"
+    },
+    {
+      "ref": "genai_web/e2e/specs/explore.spec.ts_11"
+    },
+    {
+      "ref": "google.genai.types.Part.from_bytes_/scan/repo/frigate/genai/plugins/gemini.py_303"
+    },
+    {
+      "ref": "google.genai.types.Part.from_function_call_/scan/repo/frigate/genai/plugins/gemini.py_498"
+    },
+    {
+      "ref": "google.genai.types.ThinkingConfig_/scan/repo/frigate/genai/plugins/gemini.py_588"
+    },
+    {
+      "ref": "google.genai.types.ToolConfig_/scan/repo/frigate/genai/plugins/gemini.py_558"
+    },
+    {
+      "ref": "gpt-4o_web/e2e/specs/settings/genai.spec.ts_110"
+    },
+    {
+      "ref": "hyperparameter:batch_size_/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py_228"
+    },
+    {
+      "ref": "hyperparameter:learning_rate_/scan/repo/frigate/util/classification.py_269"
+    },
+    {
+      "ref": "jinaai/jina-clip-v1_/scan/repo/frigate/embeddings/onnx/jina_v1_embedding.py_38"
+    },
+    {
+      "ref": "jinaai/jina-clip-v2_/scan/repo/frigate/embeddings/onnx/jina_v2_embedding.py_42"
+    },
+    {
+      "ref": "jinav1_/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json_1"
+    },
+    {
+      "ref": "jinav2_web/e2e/specs/settings/semantic-search.spec.ts_98"
+    },
+    {
+      "ref": "llava_web/e2e/specs/navigation.spec.ts_81"
+    },
+    {
+      "ref": "model_artifact_/scan/repo/frigate/embeddings/embeddings.py_33"
+    },
+    {
+      "ref": "paddleocr-onnx_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_42"
+    },
+    {
+      "ref": "probe_/scan/repo/frigate/api/app.py_260"
+    },
+    {
+      "ref": "qwen3-asr_web/e2e/specs/settings/genai.spec.ts_193"
+    },
+    {
+      "ref": "sherpa-onnx_/scan/repo/frigate/data_processing/common/audio_transcription/model.py_54"
+    },
+    {
+      "ref": "silero_vad_/scan/repo/frigate/data_processing/real_time/whisper_online.py_697"
+    },
+    {
+      "ref": "stale-model_web/e2e/specs/settings/genai.spec.ts_87"
+    },
+    {
+      "ref": "string_web/src/types/chat.ts_76"
+    },
+    {
+      "ref": "training_run_/scan/repo/frigate/util/classification.py_268"
+    },
+    {
+      "ref": "whisper_/scan/repo/web/e2e/fixtures/mock-data/config-snapshot.json_1"
+    },
+    {
+      "ref": "yolo_web/e2e/specs/system-health.spec.ts_34"
+    },
+    {
+      "ref": "yolov6n.hef_/scan/repo/frigate/detectors/plugins/hailo.py_58"
+    },
+    {
+      "ref": "yolov9_license_plate_/scan/repo/frigate/embeddings/onnx/lpr_embedding.py_226"
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-11-23T19:44:33.422961+00:00",
+    "tools": [
+      {
+        "name": "cisco-aibom",
+        "vendor": "Cisco",
+        "version": "1.10.1"
+      }
+    ]
+  },
+  "serialNumber": "urn:uuid:e2508446-01d1-4ff3-a15b-354eaf8ffa3e",
+  "version": 1,
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6"
+}

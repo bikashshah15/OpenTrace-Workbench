@@ -1,0 +1,9 @@
+{
+  "code": "nope",
+  "kind": "rejection",
+  "message": "The bundle's capture_set_id differs from the task's.",
+  "retryable": false,
+  "run_id": "run-t1",
+  "schema_version": "3.0",
+  "task_id": "t1"
+}

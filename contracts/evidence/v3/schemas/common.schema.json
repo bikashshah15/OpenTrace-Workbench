@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.opentrace.invalid/evidence/v3/common.schema.json",
+  "title": "opentrace.evidence v2 shared definitions",
+  "$defs": {
+    "schema_version": {
+      "description": "Contract version. Major 3 only; any minor is accepted. A major 3 payload is processed only with the contract token 3.0 (README).",
+      "type": "string",
+      "pattern": "^3\\.(0|[1-9][0-9]*)$"
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "timestamp": {
+      "description": "UTC RFC 3339 timestamp with a literal Z and optional fraction.",
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{1,9})?Z$"
+    },
+    "dimension": {
+      "type": "string",
+      "enum": [
+        "inventory",
+        "code_presence",
+        "call_path",
+        "crypto_discovery",
+        "configuration",
+        "runtime_observation",
+        "change_validation"
+      ]
+    },
+    "operation": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,63}$"
+    },
+    "short_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "context": {
+      "description": "Repository context (context section 8.2). Closed object: identity-critical.",
+      "type": "object",
+      "required": [
+        "repo_id",
+        "requested_revision",
+        "baseline_id",
+        "candidate_id",
+        "language",
+        "build_scope"
+      ],
+      "properties": {
+        "repo_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "requested_revision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "observed_revision": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "baseline_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "candidate_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 128
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "build_scope": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifact_ref": {
+      "description": "Reference to an immutable artifact by content digest only. Closed object: integrity-critical.",
+      "type": "object",
+      "required": [
+        "digest",
+        "media_type"
+      ],
+      "properties": {
+        "digest": {
+          "$ref": "#/$defs/digest"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      },
+      "additionalProperties": false
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "model_calls",
+        "non_loopback_network",
+        "max_worker_jobs_per_task",
+        "worker_timeout_s",
+        "default_task_deadline_s",
+        "max_produced_artifact_bytes"
+      ],
+      "properties": {
+        "model_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "non_loopback_network": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_worker_jobs_per_task": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "worker_timeout_s": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "default_task_deadline_s": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_produced_artifact_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "operation_limits": {
+          "description": "Per-operation limits (I2 contract section 5).",
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message",
+        "retryable"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,63}$"
+        },
+        "message": {
+          "$ref": "#/$defs/short_text"
+        },
+        "retryable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "capture_set_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "vuln_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    }
+  }
+}

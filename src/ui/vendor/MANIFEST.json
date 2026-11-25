@@ -1,0 +1,30 @@
+{
+  "files": {
+    "src/core/opentrace_core/app/demo/frigate_advisories.json": {
+      "bytes": 1459012,
+      "sha256": "4494ea900f33c4c12983c974749779cc634df31ece0dddcb094cf474a8666e06"
+    },
+    "src/ui/styles/prototype.css": {
+      "bytes": 99481,
+      "sha256": "31cacf0e527051b206b4ce741a9ff66c7e973c4baebaeac83c2ce8bd646833fd"
+    },
+    "src/ui/vendor/NOTICES.json": {
+      "bytes": 16144,
+      "sha256": "80739da7a6fa643ccec37a4ec8e3c85558b1f33fc8f09b59faeee75a748f0e14"
+    },
+    "src/ui/vendor/cytoscape.min.js": {
+      "bytes": 435649,
+      "sha256": "081591ab735b2b6a3b31a3c60f8f3a3e2fee8c92939e0c7820ad1208571b6cd8"
+    },
+    "src/ui/vendor/elk-worker.js": {
+      "bytes": 1631868,
+      "sha256": "dca3a19d9ec37f5634bf5876b4ebd2455c3f43f0d32570136c13c13edaba9bfb"
+    },
+    "src/ui/vendor/elk.bundled.js": {
+      "bytes": 1646241,
+      "sha256": "b1032b7cfd2a57c54c6f0e8369d7665e19a579954f7cd20a6dae28f1912ea0d7"
+    }
+  },
+  "prototype": ".context/references/prototypes/opentrace-workbench-2026-11-04.html",
+  "prototype_sha256": "493e48833ccc6c091c5567f3f45ad8df00978f4bd4b1168d94dcdf1caec2ff07"
+}

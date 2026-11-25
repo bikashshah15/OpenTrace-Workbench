@@ -1,0 +1,46 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 1383,
+   "path": "ai-not-run.json",
+   "schema": "opentrace.workbench.ai_assets/1",
+   "sha256": "53af272e88323f2fb0123621273eef46d0480020d52ca21077a80c82665e38a4"
+  },
+  {
+   "bytes": 2157,
+   "path": "bom-not-compared.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "e4e0c195fe2a757660a6c852c74931d451e3838a7f2fca72ce206ff035c783da"
+  },
+  {
+   "bytes": 5728,
+   "path": "contexts.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "07542c051f90eb72337972ec8f7cc0227d187ded541f97ba9e75b46c447a41c7"
+  },
+  {
+   "bytes": 1540,
+   "path": "crypto-unsupported.json",
+   "schema": "opentrace.workbench.crypto_assets/1",
+   "sha256": "583c7e465a9e4aa00b95fc8fc0266066006e3feb8382bf8460d03ba26dade6bc"
+  },
+  {
+   "bytes": 4097,
+   "path": "scan-status.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "5600934c80defdd1feda236662f0ac491e77f0853040743253daf31bd55b94b7"
+  }
+ ],
+ "name": "nonpython-synthetic",
+ "normalized": [],
+ "notes": "A Go repository: go_modules/other_locations contexts; crypto unsupported, ai not_run; BOM comparison not_compared (never an empty success).",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

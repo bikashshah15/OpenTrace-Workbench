@@ -1,0 +1,156 @@
+{
+ "input_digest": "sha256:85b258e6bcd48c6659a03a4f1d52ab5ec2bfe84688f6c65e003d15e684b592d9",
+ "policy_digest": "sha256:2ed807c416eb17e0a539d1160feb44541c46eaba6bdd51c94d10e532f9f32ffd",
+ "policy_id": "ranking_policy/1",
+ "ranked": [
+  {
+   "band": "critical",
+   "ecosystem": "npm",
+   "explanation": "tier E1; band critical; 2 repositories with a supported match; direct occurrence; runtime scope",
+   "family_id": "GHSA-SYNTH-0002",
+   "group_key": "GHSA-SYNTH-0002|npm|shared-npm",
+   "has_direct": true,
+   "has_runtime_scope": true,
+   "has_unknown_member": false,
+   "name_normalized": "shared-npm",
+   "rank": 1,
+   "repos_supported": 2,
+   "tier": "E1"
+  },
+  {
+   "band": "high",
+   "ecosystem": "Go",
+   "explanation": "tier E1; band high; has an unrecorded-severity member; 1 repositories with a supported match; direct occurrence; no runtime-scoped occurrence",
+   "family_id": "CVE-SYNTH-0001",
+   "group_key": "CVE-SYNTH-0001|Go|example.com/jsonschema-go",
+   "has_direct": true,
+   "has_runtime_scope": false,
+   "has_unknown_member": true,
+   "name_normalized": "example.com/jsonschema-go",
+   "rank": 2,
+   "repos_supported": 1,
+   "tier": "E1"
+  },
+  {
+   "band": "unknown",
+   "ecosystem": "Go",
+   "explanation": "tier E1; band unknown; has an unrecorded-severity member; 1 repositories with a supported match; no direct occurrence; no runtime-scoped occurrence",
+   "family_id": "GHSA-SYNTH-0004",
+   "group_key": "GHSA-SYNTH-0004|Go|example.com/oauth2",
+   "has_direct": false,
+   "has_runtime_scope": false,
+   "has_unknown_member": true,
+   "name_normalized": "example.com/oauth2",
+   "rank": 3,
+   "repos_supported": 1,
+   "tier": "E1"
+  }
+ ],
+ "ranker": "evidence_aware/1",
+ "schema": "opentrace.i3.ranking/1",
+ "statement": "A transparent ordering of advisory families over inventory matches. It is not a claim about reachability or impact, and no comparison between rankers is made.",
+ "unresolved": [
+  {
+   "distinct_repos": 1,
+   "ecosystem": "PyPI",
+   "has_direct": true,
+   "items": [
+    {
+     "locator": "/package/0",
+     "path": "uv.lock",
+     "repo": "synth/repo-c",
+     "version_original": "3.1.2"
+    }
+   ],
+   "name_normalized": "jinja2",
+   "occurrences": 1,
+   "position": 1,
+   "reason": "query_rejected"
+  },
+  {
+   "distinct_repos": 1,
+   "ecosystem": "npm",
+   "has_direct": true,
+   "items": [
+    {
+     "locator": "/packages/node_modules/mixed-pkg",
+     "path": "package-lock.json",
+     "repo": "synth/repo-c",
+     "version_original": "^1"
+    }
+   ],
+   "name_normalized": "mixed-pkg",
+   "occurrences": 1,
+   "position": 2,
+   "reason": "range"
+  },
+  {
+   "distinct_repos": 1,
+   "ecosystem": "npm",
+   "has_direct": true,
+   "items": [
+    {
+     "locator": "/packages/node_modules/mixed-pkg",
+     "path": "package-lock.json",
+     "repo": "synth/repo-a",
+     "version_original": "1.0.0"
+    }
+   ],
+   "name_normalized": "mixed-pkg",
+   "occurrences": 1,
+   "position": 3,
+   "reason": "range_inconsistent"
+  },
+  {
+   "distinct_repos": 1,
+   "ecosystem": "Go",
+   "has_direct": false,
+   "items": [
+    {
+     "locator": "/require/3",
+     "path": "go.mod",
+     "repo": "synth/repo-b",
+     "version_original": "v0.0.0"
+    }
+   ],
+   "name_normalized": "example.com/local-mod",
+   "occurrences": 1,
+   "position": 4,
+   "reason": "local_replace"
+  },
+  {
+   "distinct_repos": 1,
+   "ecosystem": "PyPI",
+   "has_direct": false,
+   "items": [
+    {
+     "locator": "/package/1",
+     "path": "uv.lock",
+     "repo": "synth/repo-c",
+     "version_original": "6.0.1"
+    }
+   ],
+   "name_normalized": "pyyaml",
+   "occurrences": 1,
+   "position": 5,
+   "reason": "incomplete_query"
+  },
+  {
+   "distinct_repos": 1,
+   "ecosystem": "npm",
+   "has_direct": false,
+   "items": [
+    {
+     "locator": "/packages/node_modules/ws-pkg",
+     "path": "package-lock.json",
+     "repo": "synth/repo-c",
+     "version_original": "0.0.0"
+    }
+   ],
+   "name_normalized": "ws-pkg",
+   "occurrences": 1,
+   "position": 6,
+   "reason": "workspace"
+  }
+ ]
+}

@@ -1,0 +1,2357 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:0165b22ae73634a0c0a0b5f0",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.0:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:8e1f77b502064c3224b31331",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:df1258feed21e7a77400758a",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.100:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:45ca0bf4a3d26df3612dafa5",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 101,
+      "line_start": 101,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:00d8e1ddf6c542959abe7a26",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.101:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:50e2915f8731e5c7b2fe0bdb",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 102,
+      "line_start": 102,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:849cc7a67dbd9b373b8a4a50",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.102:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:eb3eb4d35784fb5aff38e346",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 103,
+      "line_start": 103,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:99657958e38ca5e116ae6362",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.103:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:4c9ff45a374d57f1e64cad18",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 104,
+      "line_start": 104,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:caabb3ab3eb2976d96fe8ad1",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.104:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:4491e9ce30415a9ce7774cd9",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 105,
+      "line_start": 105,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:042a9b378577013a0b7c423d",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.105:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:75a7f040055e8be41ec6c6f7",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 106,
+      "line_start": 106,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:69a716f937481af154e6df0c",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.106:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:80781888c5472066af37cde2",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 107,
+      "line_start": 107,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:cb8df4ebc2db21aa96b008b0",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.107:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:f7127d4fc83a59edfaf7688e",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 108,
+      "line_start": 108,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:bb0917d4965ddf490647733b",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.108:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:c5ead3adb4415cfd18170519",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 109,
+      "line_start": 109,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:17ce16c0dcc3950cbfc31268",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.109:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:a1a923c8bd06b512a41e2586",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 110,
+      "line_start": 110,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:cab59511d3f32c3c199e4ad8",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.10:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:9819bbd8468548fc32c0848f",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:3015fc077f7dd93fe92b0c0d",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.110:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:7c15b53eb5729a0097ee8cda",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 111,
+      "line_start": 111,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:4ccdfe3b9ca65cf0e6979747",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.111:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:bd88f3b37c816ab19a9c1c80",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 112,
+      "line_start": 112,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:f54b8c8c6d1ce58ef4b74fe4",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.112:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:2ca9c99f9df3f3b2df501d9b",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 113,
+      "line_start": 113,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:2b1d833bac9a85da3bbe01b3",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.113:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d3b645e8d045e68bf842ee4f",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 114,
+      "line_start": 114,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:6d7c8d00c71b3dd28b202ab0",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.114:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:3f77db4f72c07c29206768ae",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 115,
+      "line_start": 115,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:478d51cb012a0c62d905ae95",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.115:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:41d9877261e0ede3b289ff5b",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 116,
+      "line_start": 116,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:8cabfe464761fac535091d9d",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.116:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d81c0fd80c782491fc27a58b",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 117,
+      "line_start": 117,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:b6acc1cac798d5bfd1c628fc",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.117:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:45e7e16c8e93f8938a1ae89d",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 118,
+      "line_start": 118,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:5b68a47e30219f7c2bc35446",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.118:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:43157936b76e7363f49ceb56",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 119,
+      "line_start": 119,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:906c467f492331d9a38a08af",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.119:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:1f1b97f4ef0852da7beefa2f",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 120,
+      "line_start": 120,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:e9f86d04c5c4e727bff4ae06",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.11:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:0cc78b3a27f771ec30d63d4d",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 12,
+      "line_start": 12,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:c08a3b8da8b1b37d5dc71bd0",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.120:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:6fa75cc23841aa0adfe19e2a",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 121,
+      "line_start": 121,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:8a7d4abf7b754da3a4c7b24c",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.121:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:42ba039aad80b0cb261967d3",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 122,
+      "line_start": 122,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:7a5af661f491a2262b3a4487",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.122:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:7fc8716d392e8ac678f8f746",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 123,
+      "line_start": 123,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:c0a25d991453e5792a52a79e",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.123:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:3dd8846295648dc938547e94",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 124,
+      "line_start": 124,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:77acf14e12bafdf141efa6ab",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.124:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:01d3248fd2c4d147f7c24db3",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 125,
+      "line_start": 125,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:b861befe4eb0dca4acbaf31b",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.125:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:5a3b13e02971fabc91547e73",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 126,
+      "line_start": 126,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  },
+  {
+   "asset_id": "ast:db565e368e618459e2116046",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://10.0.0.126:8080/v1/chat/completions",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:656794fbdeeab6d9a92d6298",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 127,
+      "line_start": 127,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Collection was incomplete (opentrace-source-ai). The models shown are those that were recorded; this is not a complete inventory.",
+  "reason_code": "partial_coverage",
+  "state": "partial"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ba35b800906845ddf2116fc6a054cd63d6e3784318ff069a7584642008980084",
+  "assessment": {
+   "bundle_sha256": "ec664ace9648dc673494d1f174ea23617c373e38ad7b77632124339db1bad15d",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "15b981f519dfbe18e944244a17fff47344173353e17888bdfdc180678572b291"
+  },
+  "commit_sha": "785fb4d0de429cd9fb8cde8da538679bf7b51600",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/bounds",
+   "host": "github.com",
+   "name": "bounds",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 30,
+  "total": 500,
+  "truncated": true
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 500,
+  "all": 500,
+  "findings": 0,
+  "models": 0,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 30,
+  "assets_total": 500,
+  "has_more": true,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": "cisco-aibom 1.10.1"
+   },
+   "scope": "AI inventory; per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 1,
+    "files_excluded": 0,
+    "files_parsed": 1,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "partial",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (runtime imports, inference-API endpoint literals, import fallbacks); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [
+  {
+   "assets_total": 500,
+   "group_id": "grp:296883ba225df0a3f3941c72",
+   "label": "big/many.py",
+   "path": "big/many.py"
+  }
+ ],
+ "tab": "ai"
+}

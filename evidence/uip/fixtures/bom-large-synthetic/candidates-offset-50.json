@@ -1,0 +1,431 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+  "assessment": {
+   "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+   "configuration": "config:fixture:f673dd289e88b82a",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+  },
+  "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/bom-lab",
+   "host": "github.com",
+   "name": "bom-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "capabilities": [
+  {
+   "family": "software",
+   "reason_code": null,
+   "state": "completed"
+  },
+  {
+   "family": "cryptography",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "ai_model",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "other",
+   "reason_code": null,
+   "state": "completed"
+  }
+ ],
+ "counts": {
+  "assertions_unique": 49,
+  "candidates_total": 60,
+  "family_counts": {
+   "ai_model": 0,
+   "cryptography": 0,
+   "other": 10,
+   "software": 50
+  },
+  "family_counts_disjoint": true,
+  "filter_group_counts": {
+   "not_represented": 40,
+   "represented": 10,
+   "unknown": 10
+  },
+  "filtered_total": 60,
+  "records_total": 180,
+  "relationships_total": 120,
+  "state_counts": {
+   "conflicting_evidence": 0,
+   "contradicted": 40,
+   "no_rule": 0,
+   "supported": 10,
+   "unknown_coverage": 4,
+   "unverifiable": 6
+  }
+ },
+ "filters": {
+  "category": null,
+  "family": null,
+  "filter_group": null,
+  "query": "",
+  "state": null
+ },
+ "items": [
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:e51bf8c6"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-50",
+    "raw_title": "task-50 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "no_graph_collection_task",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:e51bf8c6",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 50,
+    "line_start": 50,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unknown_coverage"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:9f1ed890"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-51",
+    "raw_title": "task-51 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "evidence_only",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:9f1ed890",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 51,
+    "line_start": 51,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unknown_coverage"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:29628714"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-52",
+    "raw_title": "task-52 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "no_graph_collection_task",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:29628714",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 52,
+    "line_start": 52,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unknown_coverage"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:fd62d74a"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-53",
+    "raw_title": "task-53 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "evidence_only",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:fd62d74a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 53,
+    "line_start": 53,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unknown_coverage"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:ff74add9"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-54",
+    "raw_title": "task-54 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "no_graph_collection_task",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:ff74add9",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 54,
+    "line_start": 54,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:c8a5a33d"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-55",
+    "raw_title": "task-55 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "evidence_only",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:c8a5a33d",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 55,
+    "line_start": 55,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:17099049"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-56",
+    "raw_title": "task-56 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "no_graph_collection_task",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:17099049",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 56,
+    "line_start": 56,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:8fec6247"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-57",
+    "raw_title": "task-57 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "evidence_only",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:8fec6247",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 57,
+    "line_start": 57,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:7dd24316"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-58",
+    "raw_title": "task-58 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "no_graph_collection_task",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:7dd24316",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 58,
+    "line_start": 58,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  },
+  {
+   "assertion_id": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:unknown_coverage:5d100ed3"
+   },
+   "category": "unknown_coverage",
+   "display": {
+    "name": "task-59",
+    "raw_title": "task-59 is declared in source but not represented in the inventory"
+   },
+   "family": "other",
+   "family_basis": "unclassified",
+   "filter_group": "unknown",
+   "graph_state": "evidence_only",
+   "inherited": false,
+   "inventory": null,
+   "item_id": "cand:unknown_coverage:5d100ed3",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 59,
+    "line_start": 59,
+    "path": "reqs/task.txt"
+   },
+   "rule_id": null,
+   "state": "unverifiable"
+  }
+ ],
+ "mode": "discovery_compared",
+ "page": {
+  "has_more": false,
+  "offset": 50,
+  "size": 25
+ },
+ "schema": "opentrace.workbench.bom_candidates/1",
+ "status_detail": null
+}

@@ -1,0 +1,433 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:0d318449315ca4d437b6fc6499d7cd9ca23176df6a0aea6f9844399e33bf25af",
+  "assessment": null,
+  "commit_sha": "6f6ffaf0e60fb9af087ff70cc2ce25cb93c47a6c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/path-lab",
+   "host": "github.com",
+   "name": "path-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "context": {
+  "context_id": "ctx:7cdfed8069c41ffc56c4aa3b",
+  "path": "lab/package-lock.json"
+ },
+ "counts": {
+  "shown": 13,
+  "total": 13,
+  "truncated": false
+ },
+ "edges": [
+  {
+   "edge_id": "edge:6859c5a05ab8f9efeec79b7e",
+   "from": "pkg:n01",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/2e468e"
+   ],
+   "to": "pkg:n02"
+  },
+  {
+   "edge_id": "edge:0de3f80d2801bf371fdcf793",
+   "from": "pkg:n02",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/071ccf"
+   ],
+   "to": "pkg:n03"
+  },
+  {
+   "edge_id": "edge:6f9d0aa7574632ab986cc141",
+   "from": "pkg:n03",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7c11ad"
+   ],
+   "to": "pkg:n04"
+  },
+  {
+   "edge_id": "edge:046efb3a4084eb157ee10cad",
+   "from": "pkg:n04",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f4be6e"
+   ],
+   "to": "pkg:n05"
+  },
+  {
+   "edge_id": "edge:b597683d74ec5581cc5ab5e4",
+   "from": "pkg:n05",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/a1dd3d"
+   ],
+   "to": "pkg:n06"
+  },
+  {
+   "edge_id": "edge:9951a643acccade8378ddd16",
+   "from": "pkg:n06",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/967a4a"
+   ],
+   "to": "pkg:n07"
+  },
+  {
+   "edge_id": "edge:513bc876a7e1958b69de225e",
+   "from": "pkg:n07",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/a96fec"
+   ],
+   "to": "pkg:n08"
+  },
+  {
+   "edge_id": "edge:4b7b102d61f2b2ec3877656e",
+   "from": "pkg:n08",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/76f12b"
+   ],
+   "to": "pkg:n09"
+  },
+  {
+   "edge_id": "edge:c0ea25adc5fcf2ada48613a3",
+   "from": "pkg:n09",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/68228c"
+   ],
+   "to": "pkg:n10"
+  },
+  {
+   "edge_id": "edge:fc658b6c294828dfb0173a66",
+   "from": "pkg:n10",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/74ad2c"
+   ],
+   "to": "pkg:n11"
+  },
+  {
+   "edge_id": "edge:ac0ed5c24583ad2eb3dced35",
+   "from": "pkg:n11",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0cc0bb"
+   ],
+   "to": "pkg:n12"
+  },
+  {
+   "edge_id": "edge:cf441fc2e2cbb37c8ac15c1f",
+   "from": "pkg:top",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0970e2"
+   ],
+   "to": "pkg:n01"
+  }
+ ],
+ "filter": "all",
+ "filter_totals": {
+  "advisory": 0,
+  "all": 13,
+  "direct": 1,
+  "evidence_gaps": 0,
+  "transitive": 12
+ },
+ "focus": {
+  "basis": "graph_root",
+  "candidates_total": 1,
+  "node_id": "pkg:top"
+ },
+ "limits": {
+  "connectors_shown": 0,
+  "connectors_truncated": false,
+  "edges_truncated": false
+ },
+ "lookup": {
+  "counts_by_state": {
+   "match": 0,
+   "missing_version": 0,
+   "no_match": 13,
+   "not_run": 0,
+   "unavailable": 0,
+   "unsupported": 0
+  },
+  "explanation": null,
+  "mode": "recorded"
+ },
+ "nodes": [
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 0,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-top",
+   "node_id": "pkg:top",
+   "path_state": "complete",
+   "role": "focus",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n01",
+   "node_id": "pkg:n01",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n02",
+   "node_id": "pkg:n02",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 3,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n03",
+   "node_id": "pkg:n03",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 4,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n04",
+   "node_id": "pkg:n04",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 5,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n05",
+   "node_id": "pkg:n05",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 6,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n06",
+   "node_id": "pkg:n06",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 7,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n07",
+   "node_id": "pkg:n07",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 8,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n08",
+   "node_id": "pkg:n08",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 9,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n09",
+   "node_id": "pkg:n09",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 10,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n10",
+   "node_id": "pkg:n10",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 11,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n11",
+   "node_id": "pkg:n11",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 12,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n12",
+   "node_id": "pkg:n12",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 13,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": true
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "chain-n13",
+   "node_id": "pkg:n13",
+   "path_state": "depth_limit",
+   "role": "match",
+   "version": "1.0.0"
+  }
+ ],
+ "page": {
+  "has_more": false,
+  "matches_shown": 13,
+  "matches_total": 13,
+  "offset": 0,
+  "range_first": 1,
+  "range_last": 13,
+  "size": 30
+ },
+ "query": "",
+ "schema": "opentrace.workbench.dependency_page/1"
+}

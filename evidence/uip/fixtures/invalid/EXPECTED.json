@@ -1,0 +1,442 @@
+{
+ "31-matches.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:match_page",
+  "layer": "semantic"
+ },
+ "absence-established-true.json": {
+  "code": "projection_failed",
+  "detail_code": "enum_violation",
+  "layer": "structural"
+ },
+ "advisory-without-evidence.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:advisory_evidence",
+  "layer": "semantic"
+ },
+ "assessment-bundle-sha256-changed.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:assessment",
+  "layer": "semantic"
+ },
+ "assessment-configuration-changed.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:assessment",
+  "layer": "semantic"
+ },
+ "assessment-validation-digest-changed.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:assessment",
+  "layer": "semantic"
+ },
+ "attribute-recorded-without-value.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:attribute_value",
+  "layer": "semantic"
+ },
+ "attribute-unavailable-with-value.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:attribute_value",
+  "layer": "semantic"
+ },
+ "bad-enum.json": {
+  "code": "projection_failed",
+  "detail_code": "enum_violation",
+  "layer": "structural"
+ },
+ "binding-mismatch.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:analysis_digest",
+  "layer": "semantic"
+ },
+ "bom-entity-carries-verdict.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:no_verdict_on_record",
+  "layer": "semantic"
+ },
+ "candidate-ref-other-analysis-digest.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_analysis_digest",
+  "layer": "semantic"
+ },
+ "candidate-ref-other-bundle-sha256.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_bundle",
+  "layer": "semantic"
+ },
+ "candidate-ref-other-configuration.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_configuration",
+  "layer": "semantic"
+ },
+ "candidate-ref-other-generation.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_generation",
+  "layer": "semantic"
+ },
+ "candidate-refs-two-sessions.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_session",
+  "layer": "semantic"
+ },
+ "candidates-26-items.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "candidates-offset-out-of-range.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:page_offset",
+  "layer": "semantic"
+ },
+ "context-inspector-security-concern.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:context_security",
+  "layer": "semantic"
+ },
+ "control-character.json": {
+  "code": "projection_failed",
+  "detail_code": "pattern_violation",
+  "layer": "structural"
+ },
+ "counts-truncated-taken-from-has-more.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:counts_truncated",
+  "layer": "semantic"
+ },
+ "dependency-152-nodes.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "dependency-241-edges.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "distinct-greater-than-membership.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:distinct_le_membership",
+  "layer": "semantic"
+ },
+ "duplicate-canonical-ref.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:duplicate_canonical_ref",
+  "layer": "semantic"
+ },
+ "duplicate-node-id.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:duplicate_id",
+  "layer": "semantic"
+ },
+ "empty-list-nonzero-offset.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:page_offset",
+  "layer": "semantic"
+ },
+ "empty-state-with-assets.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:availability_assets",
+  "layer": "semantic"
+ },
+ "evidence-only-with-assertion.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:evidence_only_shape",
+  "layer": "semantic"
+ },
+ "excerpt-601-chars.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "excluded-evidence-on-supporting-edge.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:excluded_as_support",
+  "layer": "semantic"
+ },
+ "failed-stage-with-output.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:stage_outputs",
+  "layer": "semantic"
+ },
+ "failed-state-with-assets.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:availability_assets",
+  "layer": "semantic"
+ },
+ "fallback-category-python.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:fallback_category",
+  "layer": "semantic"
+ },
+ "filter-totals-not-summing.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:filter_totals",
+  "layer": "semantic"
+ },
+ "focus-hides-lookup-not-run.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:gap_causes",
+  "layer": "semantic"
+ },
+ "full-view-151-nodes.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "graph-ref-other-analysis.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_analysis_digest",
+  "layer": "semantic"
+ },
+ "handoff-ready-on-failed-job.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:handoff_ready",
+  "layer": "semantic"
+ },
+ "implementation-link-not-resolved.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:implementation_link",
+  "layer": "semantic"
+ },
+ "inspector-ref-other-generation.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:canonical_ref_generation",
+  "layer": "semantic"
+ },
+ "match-reclassified-as-connector.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:connectors_shown",
+  "layer": "semantic"
+ },
+ "missing-edge-endpoint.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:edge_endpoint",
+  "layer": "semantic"
+ },
+ "missing-field.json": {
+  "code": "projection_failed",
+  "detail_code": "missing_field",
+  "layer": "structural"
+ },
+ "model-filename-marked-resolved.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:model_identity",
+  "layer": "semantic"
+ },
+ "no-match-counted-as-gap.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:evidence_gap_flag",
+  "layer": "semantic"
+ },
+ "not-compared-without-detail.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:not_compared_shape",
+  "layer": "semantic"
+ },
+ "not-run-not-counted-as-gap.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:gap_causes",
+  "layer": "semantic"
+ },
+ "not-run-without-explanation.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:lookup_explanation",
+  "layer": "semantic"
+ },
+ "occurrence-link-credentials.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:link_credentials",
+  "layer": "semantic"
+ },
+ "occurrence-link-data-scheme.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:link_scheme",
+  "layer": "semantic"
+ },
+ "occurrence-link-javascript-scheme.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:link_scheme",
+  "layer": "semantic"
+ },
+ "occurrence-link-unrelated-host.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:link_destination",
+  "layer": "semantic"
+ },
+ "omitted-path-with-drawn-edges.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:omitted_path",
+  "layer": "semantic"
+ },
+ "omitted-path-with-false-truncation-flags.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:truncation_flags",
+  "layer": "semantic"
+ },
+ "original-without-pointer.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:original_pointer",
+  "layer": "semantic"
+ },
+ "query-81-chars.json": {
+  "code": "projection_failed",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "related-offset-out-of-range.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:page_offset",
+  "layer": "semantic"
+ },
+ "relationship-with-items.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:relationship_shape",
+  "layer": "semantic"
+ },
+ "repository-owner-changed.json": {
+  "code": "binding_mismatch",
+  "detail_code": "invariant:repository",
+  "layer": "semantic"
+ },
+ "request-duplicate-parameter.json": {
+  "code": "invalid_request",
+  "detail_code": "duplicate_parameter",
+  "layer": "semantic"
+ },
+ "request-missing-generation.json": {
+  "code": "invalid_request",
+  "detail_code": "missing_field",
+  "layer": "structural"
+ },
+ "request-non-decimal-offset.json": {
+  "code": "invalid_request",
+  "detail_code": "type_error",
+  "layer": "semantic"
+ },
+ "request-offset-too-large.json": {
+  "code": "invalid_request",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "request-page-size-override.json": {
+  "code": "invalid_request",
+  "detail_code": "enum_violation",
+  "layer": "structural"
+ },
+ "request-query-81-chars.json": {
+  "code": "invalid_request",
+  "detail_code": "bound_exceeded",
+  "layer": "structural"
+ },
+ "request-unknown-parameter.json": {
+  "code": "invalid_request",
+  "detail_code": "unknown_parameter",
+  "layer": "semantic"
+ },
+ "request-unsupported-version.json": {
+  "code": "unsupported_version",
+  "detail_code": "schema_version",
+  "layer": "semantic"
+ },
+ "resolution-inconsistent.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:resolution",
+  "layer": "semantic"
+ },
+ "resolved-without-identity.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:pinning",
+  "layer": "semantic"
+ },
+ "revision-link-for-another-path.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:link_destination",
+  "layer": "semantic"
+ },
+ "root-total-mismatch.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:root_distinct_total",
+  "layer": "semantic"
+ },
+ "sbom-completed-without-output.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:stage_outputs",
+  "layer": "semantic"
+ },
+ "scan-job-owned-by-another-request.json": {
+  "code": "job_not_found",
+  "detail_code": "invariant:job_id",
+  "layer": "semantic"
+ },
+ "scan-percent-field.json": {
+  "code": "projection_failed",
+  "detail_code": "unknown_field",
+  "layer": "structural"
+ },
+ "seq-regression.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:sequence_seq",
+  "layer": "semantic"
+ },
+ "shortcut-edge-from-focus.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:depth_mismatch",
+  "layer": "semantic"
+ },
+ "source-checked-without-evidence.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:row_evidence",
+  "layer": "semantic"
+ },
+ "stale-generation.json": {
+  "code": "stale_generation",
+  "detail_code": "invariant:generation",
+  "layer": "semantic"
+ },
+ "supplemental-not-experimental.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:supplemental_experimental",
+  "layer": "semantic"
+ },
+ "supplemental-without-file-hash.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:supplemental_source",
+  "layer": "semantic"
+ },
+ "two-assertions-in-focused-graph.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:assertion_count",
+  "layer": "semantic"
+ },
+ "unknown-field.json": {
+  "code": "projection_failed",
+  "detail_code": "unknown_field",
+  "layer": "structural"
+ },
+ "unlocated-group-with-files.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:unlocated_group",
+  "layer": "semantic"
+ },
+ "unresolved-with-binding.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:pinning",
+  "layer": "semantic"
+ },
+ "wrong-depth.json": {
+  "code": "projection_failed",
+  "detail_code": "invariant:depth_mismatch",
+  "layer": "semantic"
+ },
+ "wrong-schema-id.json": {
+  "code": "projection_failed",
+  "detail_code": "enum_violation",
+  "layer": "structural"
+ },
+ "wrong-type.json": {
+  "code": "projection_failed",
+  "detail_code": "type_error",
+  "layer": "structural"
+ }
+}

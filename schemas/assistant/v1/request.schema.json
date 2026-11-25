@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:opentrace:schemas:assistant:v1:request",
+  "title": "OpenTrace Lab Assistant request v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "question": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "generation": {"type": "integer", "minimum": 1},
+    "adopt_subject": {"type": "boolean"},
+    "subject": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {"enum": ["analysis", "context", "dependency", "advisory", "crypto", "model", "bom", "relationship"]},
+        "id": {"type": ["string", "null"], "maxLength": 256}
+      },
+      "required": ["kind", "id"]
+    }
+  },
+  "required": ["question", "generation", "adopt_subject", "subject"]
+}

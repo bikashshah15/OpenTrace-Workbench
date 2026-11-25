@@ -1,0 +1,16 @@
+{
+  "model": "gpt-6-luna",
+  "context_tokens": 1050000,
+  "max_completion_tokens": 16384,
+  "reserve_input_nusd_per_token": 500,
+  "reserve_output_nusd_per_token": 750,
+  "reservation_nusd": 538000000,
+  "sources": [
+    "https://example.invalid/owner-supplies-the-official-source-1",
+    "https://example.invalid/owner-supplies-the-official-source-2",
+    "https://example.invalid/owner-supplies-the-official-source-3"
+  ],
+  "verified_on": "2000-01-01T00:00:00Z",
+  "valid_until": "2000-01-08T00:00:00Z",
+  "note": "EXAMPLE, expired on purpose: dispatch is refused until the owner replaces this file with a freshly verified record (see deploy/docker/gateway/README.md)."
+}

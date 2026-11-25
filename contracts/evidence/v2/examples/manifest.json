@@ -1,0 +1,200 @@
+{
+  "description": "Expected outcome for every v2 example. 'schema' layer: must fail JSON Schema. 'semantic' layer: must pass JSON Schema and fail the named core rule (validate_v2). Store holds the I2 fixture source manifest only; example artifact refs point at it.",
+  "store_inputs": [
+    "evidence/fixtures/i2/go-acceptlang/source_manifest.json"
+  ],
+  "valid": [
+    {
+      "file": "valid/capability_request.json",
+      "kind": "capability_request"
+    },
+    {
+      "file": "valid/capability_response.json",
+      "kind": "capability_response"
+    },
+    {
+      "file": "valid/task_request_osv.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_govulncheck.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_change_validate.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_change_validate_baseline.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/rejection_oracle_modified.json",
+      "kind": "rejection"
+    },
+    {
+      "file": "valid/result_osv_positive.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_osv.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "valid/result_osv_zero.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_osv.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "valid/result_govulncheck_call_path.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_govulncheck.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "valid/result_change_validate.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_change_validate.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "file": "invalid/result_missing_details.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/claim_not_established_supported.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/call_path_empty_trace.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/missing_reason_unknown.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/rejection_code_unknown.json",
+      "kind": "rejection",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/task_request_major_3.json",
+      "kind": "task_request",
+      "layer": "schema",
+      "expected_code": "unsupported_schema_version"
+    },
+    {
+      "file": "invalid/claim_missing_vuln_id.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/claim_static_scope_only.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V7",
+      "expected_code": "unsupported_call_path",
+      "semantic": {
+        "task": "valid/task_request_govulncheck.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/claim_static_other_vuln.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V7",
+      "expected_code": "unsupported_call_path",
+      "semantic": {
+        "task": "valid/task_request_govulncheck.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/claim_not_established_with_path.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V7b",
+      "expected_code": "contradictory_claims",
+      "semantic": {
+        "task": "valid/task_request_govulncheck.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/claim_no_match_positive.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V8",
+      "expected_code": "positive_query_contradiction",
+      "semantic": {
+        "task": "valid/task_request_osv.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/claim_no_match_incomplete.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V8",
+      "expected_code": "incomplete_query_claim",
+      "semantic": {
+        "task": "valid/task_request_osv.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/change_result_mismatch.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V9",
+      "expected_code": "change_result_mismatch",
+      "semantic": {
+        "task": "valid/task_request_change_validate.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    },
+    {
+      "file": "invalid/capture_set_mismatch.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "V10",
+      "expected_code": "capture_mismatch",
+      "semantic": {
+        "task": "valid/task_request_osv.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:02.000Z"
+      }
+    }
+  ]
+}

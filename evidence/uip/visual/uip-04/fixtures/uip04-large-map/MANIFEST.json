@@ -1,0 +1,92 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "2f8e8cc234115990837c63417736aad88023e26c3282c37f98539bb24fd7be0d"
+  },
+  {
+   "bytes": 24434,
+   "path": "contexts-group-web-offset-100-limit-40.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "dab6e76e521e40fddc3625801930fab6cccba53ee9899d3726ad4daefa42708c"
+  },
+  {
+   "bytes": 24434,
+   "path": "contexts-group-web-offset-140-limit-40.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "35d29673407e26dd8b3f99fdfb11331bfd250a453554d1a55be9c9e3bd7758c3"
+  },
+  {
+   "bytes": 20388,
+   "path": "contexts-group-web-offset-180-limit-40.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "b0fe90a3d5aba1a58c6ea4dde92f1d346e1996bb65a4f8c1b6271f74e01e64b1"
+  },
+  {
+   "bytes": 7093,
+   "path": "contexts-group-web-offset-20-limit-10.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "a31ec65e1db4898ad94d71db2814d040caf441b34467274dd985ff34359d70ef"
+  },
+  {
+   "bytes": 12873,
+   "path": "contexts-group-web-offset-20-limit-20.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "354602aa14cdc225f2935ce9b77e2fae8745c2fbb81001ee42f9892adadc556d"
+  },
+  {
+   "bytes": 12873,
+   "path": "contexts-group-web-offset-40-limit-20.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "d63fb0d6bfa0e640ee31538fdecc1453e3350ef70cc3be26b54bf2036a68adc7"
+  },
+  {
+   "bytes": 12873,
+   "path": "contexts-group-web-offset-60-limit-20.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "769cfb4a22d8a8ef04057048f6851d1818e80a5432c213dbda23977aa6ec9dc7"
+  },
+  {
+   "bytes": 12873,
+   "path": "contexts-group-web-offset-80-limit-20.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "2176a52f97ee15c44a6cd702e97b4977e01e7f705c7511759b45cba9f5a784b0"
+  },
+  {
+   "bytes": 6901,
+   "path": "contexts-page-0-limit-1.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "f2bdf5883fd2047815cfa7e7550ba7082d6ea3d85f3b424768064db3b4bd2d2b"
+  },
+  {
+   "bytes": 20485,
+   "path": "contexts-page-0-limit-5.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "8e0549f842b48cf6ef5b46e5403d4efe9ff6c4a65aac46e7e46259b5ceb81a50"
+  },
+  {
+   "bytes": 71431,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "af0ad1226f0188bfea01dc00a0ed214f8c57982e2f53eff6296870eacdf7f76d"
+  },
+  {
+   "bytes": 154,
+   "path": "error-response-too-large.json",
+   "schema": "opentrace.workbench.error/1",
+   "sha256": "553af36d11d3e88321a33a0aa499a871caa5c2d0e415503dd5b792bbf14b0272"
+  }
+ ],
+ "name": "uip04-large-map",
+ "notes": "More than 600 files; the largest group has 213. Pages of 20 (Graph) and 40 (List); response_too_large retry ladder fixtures.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

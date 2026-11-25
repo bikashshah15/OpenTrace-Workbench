@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-advanced="false" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>OpenTrace · Analyze one repository</title>
+<link rel="icon" href="data:,">
+<!-- Cytoscape injects an inline <style> unless this id exists; its rule lives in app.css (CSP style-src 'self'). -->
+<meta id="__________cytoscape_stylesheet" name="cytoscape-style-shipped" content="app.css">
+<link rel="stylesheet" href="/static/styles/prototype.css">
+<link rel="stylesheet" href="/static/styles/app.css">
+</head>
+<body>
+<a class="skip-link" href="#ot-main">Skip to workspace</a>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true"><defs>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+<symbol id="i-evidence" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+<symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 5a7 7 0 0 1 0 14Z" fill="currentColor"/></symbol>
+</defs></svg>
+<header class="topbar">
+  <div class="brand"><img class="brand-logo" src="/static/assets/opentrace-logo.png" width="44" height="44" alt=""><div><strong>OpenTrace</strong><small>One repository. Traceable evidence.</small></div></div>
+  <div class="top-meta ot-top-links">
+    <button type="button" id="ot-about">About</button>
+    <button type="button" id="ot-demo">Demo ↗</button>
+    <button type="button" id="ot-top-end" class="text-action ot-top-end" hidden>End session</button>
+    <label class="advanced-control" for="ot-advanced"><input id="ot-advanced" type="checkbox" role="switch" aria-describedby="ot-advanced-help"><span class="switch-track" aria-hidden="true"></span><span>Advanced</span></label>
+    <span id="ot-advanced-help" class="sr-only">Show technical detail. Does not scan, call a model, or change results.</span>
+    <button type="button" class="icon-button" id="ot-theme" aria-label="Switch to dark theme"><svg width="18" height="18"><use href="#i-theme"/></svg></button>
+  </div>
+</header>
+<div class="sample-bar"><span class="capture-label">LOCAL SERVICE</span><span id="ot-bar-text">Captured Frigate inventories + OSV query snapshot 2026-11-04. Offline preview · live repository acquisition is not connected.</span></div>
+<div class="shell ot-shell">
+  <nav class="rail ot-rail" aria-label="Workspace navigation">
+    <span class="rail-label">Workspace</span>
+    <button type="button" data-nav="analyze"><svg><use href="#i-map"/></svg>Analyze repository</button>
+    <button type="button" data-nav="workbench"><svg><use href="#i-map"/></svg>Workbench</button>
+    <button type="button" data-nav="evidence"><svg><use href="#i-evidence"/></svg>Evidence</button>
+    <div class="rail-foot"><span>Single repository<br>Source-bound results</span></div>
+  </nav>
+  <main class="main ot-main" id="ot-main" tabindex="-1">
+    <section class="ot-page" id="ot-analyze"></section>
+    <section class="ot-page" id="ot-workbench" hidden></section>
+    <section class="ot-page" id="ot-evidence" hidden></section>
+    <footer class="ot-footer"><span>Inspectable evidence. Explicit limits.<br>OpenTrace · single-repository Workbench</span><span>One repository at a time<br>No scan or model call runs in this preview.</span></footer>
+  </main>
+</div>
+<button type="button" class="assistant-launch" id="ot-assistant-launch" aria-label="Ask Lab Assistant" aria-expanded="false" aria-controls="ot-assistant"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/><path d="m10 8-2 2 2 2"/><path d="m14 8 2 2-2 2"/></svg></button>
+<aside id="ot-assistant" class="ot-assistant" role="dialog" aria-label="Lab assistant" hidden></aside>
+<dialog id="ot-dialog" class="ot-dialog" aria-labelledby="ot-dialog-title"><form method="dialog"><h2 id="ot-dialog-title"></h2><div id="ot-dialog-content"></div><button class="button" value="close" id="ot-dialog-close">Close</button></form></dialog>
+<dialog id="ot-scan-dialog" class="ot-scan-dialog" aria-labelledby="ot-scan-dialog-title"><div class="ot-scan-dialog-head"><h2 id="ot-scan-dialog-title">Repository analysis</h2></div><div id="ot-scan-dialog-body" class="ot-scan-dialog-body"></div><div class="ot-scan-dialog-foot"><button type="button" class="button" id="ot-scan-minimize" data-action="scan-minimize">Minimize</button><button type="button" class="text-action" id="ot-scan-dialog-end" data-action="end">End session</button></div></dialog>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

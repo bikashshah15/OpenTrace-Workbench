@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/scan/v1/job_response.schema.json",
+  "title": "OpenTrace scan job response v1 (transport envelope)",
+  "description": "Wraps the frozen opentrace.workbench.scan_status/1 document unchanged. result is null until a successful or partial hand-off, then the existing analysis payload. Semantic rules (result availability, status/result identity agreement, 1 MiB ceiling) are enforced in src/core/opentrace_core/app/scan_contract.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "result"],
+  "properties": {
+    "schema": {"const": "opentrace.scan_job_response/1"},
+    "status": {"$ref": "https://opentrace.local/contracts/workbench/v1/schemas/scan_status.schema.json"},
+    "result": {"anyOf": [{"type": "null"}, {"type": "object"}]}
+  }
+}

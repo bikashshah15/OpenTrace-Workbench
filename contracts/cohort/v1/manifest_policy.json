@@ -1,0 +1,31 @@
+{
+  "schema": "opentrace.manifest_policy/1",
+  "policy_id": "manifest_policy/1",
+  "basenames": {
+    "go.mod": "go_mod",
+    "go.sum": "go_sum",
+    "go.work": "go_work",
+    "package.json": "package_json",
+    "package-lock.json": "npm_lock",
+    "npm-shrinkwrap.json": "npm_lock",
+    "pnpm-lock.yaml": "pnpm_lock",
+    "pnpm-workspace.yaml": "pnpm_workspace",
+    "yarn.lock": "yarn_lock",
+    "uv.lock": "uv_lock",
+    "poetry.lock": "poetry_lock",
+    "Pipfile.lock": "pipfile_lock",
+    "pyproject.toml": "pyproject"
+  },
+  "basename_patterns": [
+    {"regex": "^requirements.*\\.txt$", "kind": "requirements_txt"}
+  ],
+  "excluded_path_segments": ["node_modules", "vendor", "testdata", ".git"],
+  "inventory_kinds": ["go_mod", "npm_lock", "pnpm_lock", "uv_lock"],
+  "companion_kinds": {"go_sum": "go_mod", "pnpm_workspace": "pnpm_lock"},
+  "limits": {
+    "max_path_bytes": 512,
+    "max_blob_bytes": 4194304,
+    "max_manifests_per_repo": 80,
+    "max_selected_bytes_per_repo": 8388608
+  }
+}

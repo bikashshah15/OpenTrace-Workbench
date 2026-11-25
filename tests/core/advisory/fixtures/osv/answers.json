@@ -1,0 +1,11 @@
+{
+  "_provenance": "Batch envelope and per-query answers are RECORDED-FORMAT FIXTURES written for I5B tests: they follow the OSV /v1/querybatch shape captured in I3, but were not returned by a live OSV call. The advisory record GHSA-23c5-xmqv-rm74.json is the verbatim OSV record from the 2026-11-04 snapshot bundled with the service (src/core/opentrace_core/app/demo/frigate_advisories.json). No live OSV query was made for I5B (EDQ-13/EDQ-15 pending).",
+  "answers": {
+    "npm|minimatch|3.1.2": [
+      "GHSA-23c5-xmqv-rm74"
+    ],
+    "npm|brace-expansion|1.1.11": [],
+    "npm|ms|2.1.3": [],
+    "npm|lockonly|1.0.0": []
+  }
+}

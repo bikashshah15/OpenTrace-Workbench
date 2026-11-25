@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/analysis/v1/schemas/analysis_identity.schema.json",
+  "title": "OpenTrace analysis identity v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "input",
+    "repository",
+    "requested",
+    "resolved",
+    "scan",
+    "session",
+    "analysis_digest"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.analysis_identity/1"
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "manual_sha"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manual_sha": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{7,40}(?!\\n)$"
+            }
+          ]
+        }
+      }
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "host",
+        "owner",
+        "name",
+        "canonical_url"
+      ],
+      "properties": {
+        "host": {
+          "const": "github.com"
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_url": {
+          "type": "string",
+          "pattern": "^https://github\\.com/[^/\\n]+/[^/\\n]+(?!\\n)$"
+        }
+      }
+    },
+    "requested": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "text",
+        "origin"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "default_branch",
+            "branch",
+            "tag",
+            "commit"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "enum": [
+            "url_root",
+            "url_tree",
+            "advanced_manual"
+          ]
+        }
+      }
+    },
+    "resolved": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commit_sha",
+        "resolved_at",
+        "basis",
+        "manual_corroboration"
+      ],
+      "properties": {
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}(?!\\n)$"
+        },
+        "resolved_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{1,6})?Z(?!\\n)$"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default_branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manual_corroboration": {
+          "type": "boolean"
+        }
+      }
+    },
+    "scan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "inventories",
+        "scope"
+      ],
+      "properties": {
+        "profile_id": {
+          "const": "opentrace.scan.default/1"
+        },
+        "inventories": {
+          "enum": [
+            [
+              "aibom"
+            ],
+            [
+              "cbom"
+            ],
+            [
+              "sbom"
+            ],
+            [
+              "aibom",
+              "cbom"
+            ],
+            [
+              "aibom",
+              "sbom"
+            ],
+            [
+              "cbom",
+              "sbom"
+            ],
+            [
+              "aibom",
+              "cbom",
+              "sbom"
+            ]
+          ]
+        },
+        "scope": {
+          "const": "repository_root"
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "session_id",
+        "generation"
+      ],
+      "properties": {
+        "session_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{32}(?!\\n)$"
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "analysis_digest": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}(?!\\n)$"
+    }
+  }
+}

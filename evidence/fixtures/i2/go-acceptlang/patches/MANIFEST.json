@@ -1,0 +1,46 @@
+{
+  "base_manifest_digest": "sha256:ca850ae111d4809095c15dd8da9dba65a665235a8f5bbbdbcb31f784f2705b4c",
+  "patches": [
+    {
+      "candidate_id": "sha256:0c64473a4e3bbaf7e79eba952c7984d35134cc228cb4277cccbfa152ddd0e8cb",
+      "description": "Minimum fix: golang.org/x/text v0.3.7 to v0.3.8",
+      "files": [
+        "go.mod",
+        "go.sum"
+      ],
+      "label": "planner_authored",
+      "name": "cand-min-fix"
+    },
+    {
+      "candidate_id": "sha256:bcdf24007bf5a3c2aa0a414379c18b3a0817ad9debc7cdc30ce51abc136ab31e",
+      "description": "Newest version that clears the advisories (v0.41.0); requires go 1.25.0 and fails under the pinned go1.24.7",
+      "files": [
+        "go.mod",
+        "go.sum"
+      ],
+      "label": "planner_authored",
+      "name": "cand-latest-incompatible"
+    },
+    {
+      "candidate_id": "sha256:6d163dcf598c3230d7ca4bc9e3ad8da341a42be74f380097e6aaf3af11be6f6a",
+      "description": "SYNTHETIC regression: bumps to v0.3.8 and stops calling x/text; fails the required functional test",
+      "files": [
+        "go.mod",
+        "go.sum",
+        "negotiate.go"
+      ],
+      "label": "SYNTHETIC",
+      "name": "cand-regress"
+    },
+    {
+      "candidate_id": "sha256:c140ceda43ac251630f8c020d19ab352d159f5fa12740b77a9bdb25344172be1",
+      "description": "SYNTHETIC tamper: edits the oracle test file; must be rejected before any command runs",
+      "files": [
+        "negotiate_test.go"
+      ],
+      "label": "SYNTHETIC",
+      "name": "cand-oracle-tamper"
+    }
+  ],
+  "schema": "opentrace.patch_manifest/1"
+}

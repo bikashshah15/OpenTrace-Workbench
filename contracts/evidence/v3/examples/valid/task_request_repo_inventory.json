@@ -1,0 +1,39 @@
+{
+  "budget": {
+    "max_produced_artifact_bytes": 1048576,
+    "max_worker_jobs": 1
+  },
+  "capability_version": "3.0",
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "static inventory; no build; no code execution",
+    "candidate_id": null,
+    "language": "go",
+    "observed_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91",
+    "repo_id": "github.com/modelcontextprotocol/go-sdk",
+    "requested_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91"
+  },
+  "deadline": "2026-10-14T12:01:00.000Z",
+  "inputs": [
+    {
+      "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+      "media_type": "text/plain; charset=utf-8",
+      "role": "manifest_bundle_manifest"
+    }
+  ],
+  "issued_at": "2026-10-14T12:00:00.000Z",
+  "kind": "task_request",
+  "operations": [
+    "repo_inventory"
+  ],
+  "requirements": [
+    {
+      "dimension": "inventory",
+      "requirement_id": "req-1"
+    }
+  ],
+  "run_id": "run-t1",
+  "schema_version": "3.0",
+  "task_id": "t1"
+}

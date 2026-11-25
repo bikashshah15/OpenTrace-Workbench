@@ -1,0 +1,240 @@
+# OpenTrace Workbench + isolated scanner worker (I6).
+#
+#   docker compose up --build        then open http://127.0.0.1:8765/   (OPENTRACE_PORT=8766 to use another port)
+#
+# workbench  browser-facing app. Fetches the public GitHub repository (API + git over https) and exports it as DATA.
+#            No Docker socket, no Docker client, no scanners.
+# worker     runs the pinned Syft and cdxgen over that data. network_mode none, read-only root, read-only source,
+#            no capabilities, bounded memory/CPU/processes/scratch, bounded time. Fetches nothing; has no credentials.
+# The two share only two volumes: spool-in (workbench writes, worker reads read-only) and spool-out (worker writes).
+#
+# UIP-07C (optional Cisco AI-BOM phase; OFF unless OPENTRACE_LIVE_AIBOM=cisco AND the profile is started):
+#   docker compose --profile aibom up --build    (the images are built offline from a prepared context: deploy/docker/README.md)
+# aibom-worker  runs the pinned cisco-aibom over the exported tree. Read-only root, read-only source at /scan/repo, no capabilities, bounded
+#               memory/CPU/processes/scratch/time, no published port, no Docker socket. Its only network is the INTERNAL network
+#               aibom-internal, whose only other member is the gateway.
+# aibom-internal is created with gateway_mode_ipv4=isolated (Docker Engine >= 28.0.0): the bridge gets NO IPv4 address (TOPO1-F01), so the Docker VM host
+#               no longer answers on the bridge's address. Docker may now assign 172.30.77.1 to a container (the worker did in TOPO-2): ownership of an address is
+#               established from the host-side address list, not by connecting to it from the worker. Start the AI phase through tools/uip07c/aibom_preflight.py (deploy/docker/README.md): it checks
+#               the Engine, the network and its members, and starts the Workbench only after the AI services verify. Plain `docker compose` bypasses
+#               that gate. The option's effect is established by independent testing on a named platform, not by this file.
+# gateway       the only holder of the provider key and the only route to the provider (the `egress` network). It authorizes per job,
+#               normalises the request, reserves spend before every dispatch, and keeps no request or response bodies.
+# The Workbench joins neither network: it shares only volumes (aibom-spool-in/out, gateway-ctl) with them. The scanner worker is unchanged.
+name: opentrace
+
+services:
+  workbench:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.workbench
+    image: opentrace-workbench:i6
+    ports:
+      - "127.0.0.1:${OPENTRACE_PORT:-8765}:${OPENTRACE_PORT:-8765}"   # loopback on the host only; same port inside, for the Host-header check
+    command: ["python", "-P", "-m", "opentrace_core.app", "--host", "0.0.0.0", "--port", "${OPENTRACE_PORT:-8765}", "--session-root", "/var/opentrace/sessions"]
+    environment:
+      OPENTRACE_LIVE_POLICY: ${OPENTRACE_LIVE_POLICY:-bounded}    # 'allowlist' = the Inspector-only pilot; falls back to the Inspector pilot allowlist whenever the worker does not verify
+      OPENTRACE_LIVE_ADVISORIES: ${OPENTRACE_LIVE_ADVISORIES:-1}  # live OSV lookup is ON by default; set 0 to opt out. Sends only ecosystem, package name and version to api.osv.dev, from the Workbench (the worker has no network)
+      OPENTRACE_LIVE_AIBOM: ${OPENTRACE_LIVE_AIBOM:-}             # UIP-07C: exactly 'cisco' requests the optional AI-BOM phase; unset/anything else = off
+      OPENTRACE_ASSISTANT_BROKER_URL: http://assistant-provider:8766/v1/generate
+      OPENTRACE_ASSISTANT_BROKER_TOKEN_FILE: /run/secrets/assistant_broker_token
+    read_only: true
+    init: true                         # reaps git's orphaned helpers: without it a zombie keeps a cancelled fetch's process group "alive"
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /var/opentrace/sessions:size=768m,uid=10001,gid=10001,mode=0700
+    volumes:
+      - spool-in:/spool/in
+      - spool-out:/spool/out
+      - aibom-spool-in:/spool/aibom-in                          # UIP-07C: tree handoff to the AI worker (memory-backed, uid 10001)
+      - aibom-spool-out:/spool/aibom-out
+      - gateway-ctl:/gateway-ctl                                # job authorization and revoke markers; the gateway's heartbeat and attestations
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2g
+    cpus: 2.0
+    pids_limit: 256
+    depends_on:
+      worker:
+        condition: service_healthy
+    networks: [default, assistant-internal]
+    secrets: [assistant_broker_token]
+    restart: "no"
+
+  worker:
+    build:
+      context: .
+      dockerfile: deploy/docker/Dockerfile.worker
+    image: opentrace-scanner-worker:i6
+    network_mode: none                 # no interface but loopback: the scan job has no network
+    read_only: true
+    init: true                         # reaps orphans so process-group removal can be confirmed
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /work:size=1g,uid=10001,gid=10001,mode=0700   # scratch and scanner output: bounded disk
+    volumes:
+      - spool-in:/spool/in:ro          # the source is read-only inside the worker
+      - spool-out:/spool/out
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 1536m
+    memswap_limit: 1536m               # no swap beyond the memory limit
+    cpus: 1.0
+    pids_limit: 256
+    ulimits:
+      nofile: { soft: 1024, hard: 1024 }
+    healthcheck:
+      test: ["CMD", "python3", "-I", "-c", "import json,sys,time; d=json.load(open('/spool/out/worker.json')); sys.exit(0 if d['ready'] and abs(time.time()-d['time'])<10 else 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: "no"
+
+  # -- UIP-07C: optional Cisco AI-BOM phase (profile `aibom`) ----------------------------------------------------------------------
+  aibom-worker:
+    profiles: ["aibom"]
+    build:
+      context: ${OPENTRACE_AIBOM_CONTEXT:-./.aibom-context/aibom-worker}   # prepared offline by tools/uip07c/build_aibom_images.py context (wheelhouse and KB are not in git)
+      dockerfile: Dockerfile.aibom-worker
+    image: opentrace-aibom-worker:uip07c
+    networks: [aibom-internal]                                  # internal: no external route; the gateway is the only other member
+    extra_hosts: ["gateway:172.30.77.10"]                       # static name; Docker's embedded resolver (127.0.0.11) answers names of containers on aibom-internal only and fails external names
+    read_only: true
+    init: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /work:size=1g,uid=10001,gid=10001,mode=0700             # scratch, cache and output: bounded disk
+    volumes:
+      - aibom-spool-in:/scan:ro                                 # the source is read-only at the constant /scan/repo
+      - aibom-spool-out:/spool/out
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 2g
+    memswap_limit: 2g
+    cpus: 1.0
+    pids_limit: 256
+    ulimits:
+      nofile: { soft: 1024, hard: 1024 }
+    healthcheck:
+      test: ["CMD", "/opt/venv/bin/python", "-I", "-c", "import json,sys,time; d=json.load(open('/spool/out/worker.json')); sys.exit(0 if d['ready'] and abs(time.time()-d['time'])<10 else 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    depends_on:
+      gateway:
+        condition: service_healthy
+    restart: "no"
+
+  gateway:
+    profiles: ["aibom"]
+    build:
+      context: ${OPENTRACE_GATEWAY_CONTEXT:-./.aibom-context/gateway}  # prepared by the same tool (gateway.py + Dockerfile only)
+      dockerfile: Dockerfile.gateway
+    image: opentrace-gateway:uip07c
+    networks:
+      aibom-internal:
+        ipv4_address: 172.30.77.10
+      egress: {}                                                # the only service with an outbound route
+    read_only: true
+    init: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    volumes:
+      - gateway-ctl:/ctl
+      - gateway-ledger:/ledger                                  # append-only spend ledger; persists across restarts; there is no reset path
+    configs:
+      - source: gateway_pricing                                 # owner-issued pricing record (it expires); mounted read-only at /run/opentrace/pricing.json
+        target: /run/opentrace/pricing.json
+    secrets:
+      - provider_key                                            # mounted in this container only; never in an image, volume, log or response
+    environment:
+      OPENTRACE_PROVIDER_KEY_FILE: /run/secrets/provider_key
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    healthcheck:
+      test: ["CMD", "python", "-I", "-c", "import json,sys,time; d=json.load(open('/ctl/gateway.json')); sys.exit(0 if d['ready'] and abs(time.time()-d['time'])<10 else 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    restart: "no"
+
+  # -- LAB-ASSISTANT-01: optional private credential-isolated provider broker --------------------------
+  assistant-provider:
+    profiles: ["assistant"]
+    build:
+      context: .
+      dockerfile: deploy/docker/assistant-provider.Dockerfile
+    image: opentrace-assistant-provider:lab-assistant-01
+    networks: [assistant-internal, assistant-egress]
+    read_only: true
+    init: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    volumes:
+      - assistant-ledger:/var/lib/opentrace/assistant
+    secrets:
+      - assistant_broker_token
+      - assistant_openai_key
+    environment:
+      OPENTRACE_ASSISTANT_PROFILE: ${OPENTRACE_ASSISTANT_PROFILE:-openai}
+      OPENTRACE_ASSISTANT_MODEL: ${OPENTRACE_ASSISTANT_MODEL:-gpt-6-luna}
+      OPENTRACE_ASSISTANT_BROKER_TOKEN_FILE: /run/secrets/assistant_broker_token
+      OPENTRACE_ASSISTANT_OPENAI_KEY_FILE: /run/secrets/assistant_openai_key
+      OPENTRACE_ASSISTANT_LEDGER: /var/lib/opentrace/assistant/ledger.sqlite3
+      OPENTRACE_ASSISTANT_TOKEN_COUNT_COST_VERIFIED: ${OPENTRACE_ASSISTANT_TOKEN_COUNT_COST_VERIFIED:-0}
+      OPENTRACE_ASSISTANT_LOCAL_BASE_URL: ${OPENTRACE_ASSISTANT_LOCAL_BASE_URL:-}
+      OPENTRACE_ASSISTANT_DISPATCH_ALLOWANCE: ${OPENTRACE_ASSISTANT_DISPATCH_ALLOWANCE:-}   # empty = the broker's default
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 768m
+    cpus: 1.0
+    pids_limit: 128
+    healthcheck:
+      test: ["CMD", "python", "-I", "-c", "import json,sys,urllib.request; d=json.load(urllib.request.urlopen('http://127.0.0.1:8766/healthz',timeout=2)); sys.exit(0 if d.get('ready') else 1)"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    restart: "no"
+
+networks:
+  assistant-internal:
+    internal: true
+  assistant-egress: {}
+  aibom-internal:
+    internal: true                                              # no default route; the isolated gateway mode below also removes the bridge's own address
+    driver_opts:
+      com.docker.network.bridge.gateway_mode_ipv4: isolated     # TOPO1-F01: no address on the bridge, so the VM host namespace holds no address on this subnet (.1 may be assigned to a container; judge by host-side addresses; needs Engine >= 28.0.0)
+    ipam:
+      config:
+        - subnet: 172.30.77.0/24
+  egress: {}
+
+configs:
+  gateway_pricing:
+    file: ${OPENTRACE_GATEWAY_PRICING:-./deploy/docker/gateway/pricing.json}
+
+secrets:
+  provider_key:
+    file: ${OPENTRACE_PROVIDER_KEY_FILE:-./deploy/docker/gateway/no-key}   # operator-supplied at L1; the default is an empty placeholder (gateway then reports key_present=false)
+  assistant_openai_key:
+    file: ${OPENTRACE_ASSISTANT_OPENAI_KEY_FILE:-./deploy/docker/gateway/no-key} # empty placeholder only; key belongs to assistant broker, never Workbench/Cisco
+  assistant_broker_token:
+    file: ${OPENTRACE_ASSISTANT_BROKER_TOKEN_FILE:-./deploy/docker/gateway/no-key} # empty placeholder disables dispatch until operator configures the broker channel
+
+volumes:
+  assistant-ledger:
+  spool-in:
+  spool-out:
+  aibom-spool-in:
+    driver: local
+    driver_opts: { type: tmpfs, device: tmpfs, o: "size=320m,uid=10001,gid=10001,mode=0755" }
+  aibom-spool-out:
+    driver: local
+    driver_opts: { type: tmpfs, device: tmpfs, o: "size=64m,uid=10001,gid=10001,mode=0755" }
+  gateway-ctl:
+    driver: local
+    driver_opts: { type: tmpfs, device: tmpfs, o: "size=8m,uid=10001,gid=10001,mode=0755" }
+  gateway-ledger:

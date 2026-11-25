@@ -1,0 +1,136 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:f84c964e53f73db9b231e96f",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "recorded in the CBOM",
+      "state": "recorded",
+      "value": "SHA-256"
+     },
+     "certificate_subject": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "recorded in the CBOM",
+      "state": "recorded",
+      "value": "hash"
+     },
+     "protocol_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "SHA-256",
+    "kind": "algorithm",
+    "occurrences": [],
+    "occurrences_total": 0,
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "source_group_ids": []
+   }
+  ],
+  "availability": {
+   "message": "The CBOM generator failed; nothing was recorded.",
+   "reason_code": "scanner_failed",
+   "state": "failed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:da4c93a073e7267a1af9b237c47037ceeac228de3f439aa800fa843115ce884d",
+   "assessment": null,
+   "commit_sha": "f34542f417a621d7047382b6800f9734d8334084",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/crypto-lab",
+    "host": "github.com",
+    "name": "crypto-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 1,
+   "total": 1,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 0,
+   "all": 0,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 1,
+   "assets_total": 1,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "failed",
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "scope": "cbom generator over the repository root"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [],
+  "tab": "crypto"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "crypto_assets",
+ "sequence": null
+}

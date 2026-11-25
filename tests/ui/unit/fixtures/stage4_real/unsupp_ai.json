@@ -1,0 +1,79 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "The AI inventory lists no AI assets. This does not show that no AI is used.",
+  "reason_code": "no_applicable_assets",
+  "state": "completed_empty"
+ },
+ "binding": {
+  "analysis_digest": "sha256:9cba021cd61f582eb9e4f9b13b68dc720282db98ef20eabdf8f0c6fce566edd0",
+  "assessment": {
+   "bundle_sha256": "3413c13976457dc1128766137b289370c78041d1f69aba4e90853991a0b403cb",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "98feefaf480340307dedc54937b0f3768fafa52cffef0244c24801d3a3212990"
+  },
+  "commit_sha": "00a98af1f8a20108e85d1b4c736780b4efb9c135",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/unsupp",
+   "host": "github.com",
+   "name": "unsupp",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 0,
+  "findings": 0,
+  "models": 0,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": "cisco-aibom 1.10.1"
+   },
+   "scope": "AI inventory; per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [],
+ "tab": "ai"
+}

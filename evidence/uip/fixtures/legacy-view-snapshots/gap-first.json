@@ -1,0 +1,123 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+  "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+  "generation": 1,
+  "session_id": "00000000000000000000000000000001"
+ },
+ "candidate": {
+  "assertion_id": "dreq-types-peewee-5c986a69",
+  "bom": {
+   "inventory_id": "inv:syft-source-dir",
+   "kind": "sbom",
+   "label": "syft 1.51.1",
+   "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+  },
+  "bounded_meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+  "candidate_id": "cand:missing_component:6df16cbe",
+  "category": "missing_component",
+  "category_label": "Missing component",
+  "coverage_contract": {
+   "established": false,
+   "note": "No generator or owner statement was inspected saying this inventory is expected to include direct-URL, VCS or wildcard-pinned requirements. 'intended_coverage' is the researcher's description of what was scanned, not a contract."
+  },
+  "gap_class": "inventory_coverage_gap",
+  "has_evidence": true,
+  "identity_basis": "PEP 503 normalized name within the pypi ecosystem (exact; no substring or resemblance)",
+  "location": "docker/main/requirements-dev.txt:4",
+  "next_action": "establish whether the generator is expected to represent the wildcard_pin form (coverage contract), or add an inventory that does",
+  "not_established": [],
+  "proposed_claim": "requirement types-peewee is represented in inv:syft-source-dir",
+  "rationale": "Contradicted: the declared requirement has no component of that name in the fully parsed inventory, which lists the same requirements file. No coverage contract is established that this inventory should include this declaration form, so this is an inventory discrepancy (coverage gap), not a completeness defect or vulnerability.",
+  "reason_codes": [
+   "not_represented_in_fully_parsed_inventory"
+  ],
+  "records": [
+   {
+    "declarations": [
+     {
+      "form": "wildcard_pin",
+      "line": 4,
+      "marker": null,
+      "text": "types-peewee == 3.17.*",
+      "url": null
+     }
+    ],
+    "evidence_id": "dev-decl-247d3bff-types-peewee",
+    "file_summary": {
+     "forms": {
+      "exact_pin": 1,
+      "wildcard_pin": 1
+     },
+     "requirement_lines": 2,
+     "unsupported_lines": []
+    },
+    "kind": "requirement_declaration",
+    "limitations": [
+     "declaration only: a declared requirement is not an installed or used package",
+     "markers are preserved as text; none was evaluated"
+    ],
+    "method": "requirements-line-parse",
+    "origin": "captured",
+    "reason": "1 declaration line(s): line 4 wildcard_pin",
+    "reason_code": "requirement_declared",
+    "relation": "context",
+    "role": "declaration",
+    "source": {
+     "file": "docker/main/requirements-dev.txt",
+     "file_sha256": "fa2c13dae315506d3afda9c0aa25436867fcb7f0b4186553c3ee7bb64728e85f"
+    }
+   },
+   {
+    "evidence_id": "dev-look-inv-syft-source--ac166b22-types-peewee",
+    "inventory": {
+     "format": "CycloneDX 1.7",
+     "generator": "syft 1.51.1",
+     "raw_sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+    },
+    "kind": "inventory_name_lookup",
+    "limitations": [
+     "lookup result for one normalized package name (exact, no substring matching)",
+     "a source-directory inventory is not an image or runtime SBOM",
+     "binding of the inventory to the revision rests on the SHA-256 it records for this requirements file; the rule checks it"
+    ],
+    "match_names": [],
+    "matches": 0,
+    "method": "cyclonedx-exact-name-lookup",
+    "origin": "captured",
+    "parse": {
+     "complete": true,
+     "components_total": 1989,
+     "library_components": 1976,
+     "unclassified": 0
+    },
+    "query": {
+     "ecosystem": "pypi",
+     "match": "exact normalized name; no substring matching",
+     "normalized_name": "types-peewee"
+    },
+    "reason": "no component with this normalized name among 1976 library components (all classified); the inventory lists the requirements file with the same SHA-256",
+    "reason_code": "not_represented_in_fully_parsed_inventory",
+    "relation": "contradicts",
+    "role": "inventory",
+    "scanned_file": {
+     "file_records": 1,
+     "path": "docker/main/requirements-dev.txt",
+     "recorded_sha256": [
+      "fa2c13dae315506d3afda9c0aa25436867fcb7f0b4186553c3ee7bb64728e85f"
+     ]
+    }
+   }
+  ],
+  "rule_id": "inventory_coverage.requirement_represented/1",
+  "scope": {
+   "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+  },
+  "state": "contradicted",
+  "state_label": "Not represented in the BOM",
+  "title": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir",
+  "trigger": "inv:syft-source-dir lists docker/main/requirements-dev.txt with the same SHA-256 and has no component named types-peewee among 1976 library components"
+ },
+ "generation": 1
+}

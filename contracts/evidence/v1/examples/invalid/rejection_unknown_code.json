@@ -1,0 +1,9 @@
+{
+  "code": "not_a_code",
+  "kind": "rejection",
+  "message": "schema_version 2.0 is not supported; this specialist accepts 1.x.",
+  "retryable": false,
+  "run_id": "run-example-r2",
+  "schema_version": "1.0",
+  "task_id": "ex-task-004"
+}

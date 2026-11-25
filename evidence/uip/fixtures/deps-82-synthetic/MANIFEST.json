@@ -1,0 +1,64 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 4054,
+   "path": "filter-advisory.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "a2eb141b2ebc60729e3a72c2a851faed8a88befd2715dc14f23be217ddae4751"
+  },
+  {
+   "bytes": 19057,
+   "path": "filter-direct.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "c2136b5830ae94f746ed9fe4a4ca26171bb4b169382bb097e1b377a154355640"
+  },
+  {
+   "bytes": 5504,
+   "path": "filter-evidence_gaps.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "3fe3bd1cf701064686eee029cb00b45519d9b45cb8500da4276497f65013dfaa"
+  },
+  {
+   "bytes": 1784,
+   "path": "filter-transitive.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "2006958d50cea921a84fd6c0c5e41b77fc2128d59b65732545ce118b7ae0d5e8"
+  },
+  {
+   "bytes": 19054,
+   "path": "page-offset-00.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "6caf30f34cd6a3626df7c78dfe62b3c36ba7a771f1fbf152f931cc1b2d70ec7d"
+  },
+  {
+   "bytes": 19042,
+   "path": "page-offset-30.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "288ed1de41fe5c92a2b6f332a9fb2be470553ad547fe3ef9d4f2344f8395d039"
+  },
+  {
+   "bytes": 14343,
+   "path": "page-offset-60.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "53bba9444c467525bb0bd0a3782d299d304efce7afadea71c994646b4e4f59a4"
+  },
+  {
+   "bytes": 7496,
+   "path": "search-dep-04.json",
+   "schema": "opentrace.workbench.dependency_page/1",
+   "sha256": "6eb7ff0608c61a43678d2efe962c47b2a025f59d312224325062fd8971a9a308"
+  }
+ ],
+ "name": "deps-82-synthetic",
+ "normalized": [],
+ "notes": "One focus with 82 direct dependencies: pages 30/30/22; connectors never count toward the 30; filter variants.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

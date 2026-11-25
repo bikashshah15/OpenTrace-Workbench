@@ -1,0 +1,195 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": null,
+  "ready": true
+ },
+ "identity": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/blakeblackshear/frigate/tree/v0.18.2"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v0.18.2"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 9000,
+  "job_id": "job:6a5cfd83e5e5a46f3487ccc4",
+  "seq": 9,
+  "state": "completed",
+  "updated_at": "2026-01-01T00:00:09Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "not_configured",
+   "stage_id": "acquire_source",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:06Z",
+   "outputs": [
+    {
+     "artifact_id": "art:inv:syft-source-dir",
+     "kind": "sbom",
+     "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7",
+     "size": 2983356
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": "2026-01-01T00:00:05Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:06Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:08Z",
+   "outputs": [
+    {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "kind": "cbom",
+     "sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+     "size": 9686
+    }
+   ],
+   "reason_code": "no_applicable_assets",
+   "stage_id": "cbom",
+   "started_at": "2026-01-01T00:00:07Z",
+   "state": "completed_empty",
+   "updated_at": "2026-01-01T00:00:08Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:10Z",
+   "outputs": [
+    {
+     "artifact_id": "art:inv:cisco-aibom",
+     "kind": "aibom",
+     "sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6",
+     "size": 1070
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "aibom",
+   "started_at": "2026-01-01T00:00:09Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:10Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:12Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "advisory_lookup",
+   "started_at": "2026-01-01T00:00:11Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:12Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:16Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": "2026-01-01T00:00:15Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:16Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:18Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": "2026-01-01T00:00:17Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:18Z",
+   "warnings": []
+  }
+ ]
+}

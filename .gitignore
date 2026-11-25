@@ -1,0 +1,36 @@
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+.context/local/
+.context/logs/raw/
+.claude/settings.local.json
+# Generated runtime/private analysis outputs, not the tracked governance board
+artifacts/
+evidence/private/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# Go build outputs (I1 Evidence Specialist B)
+src/agents/evidence_specialist/evidence-specialist
+src/agents/evidence_specialist/evidence_specialist
+
+# Committed I2 run records keep their content-addressed artifacts (replay needs them).
+!evidence/i2/runs/*/artifacts/
+
+# Committed I3 run records keep their content-addressed artifacts and capture blobs (clean-clone replay needs them).
+!evidence/i3/runs/*/artifacts/
+!evidence/i3/captures/*/blobs/
+
+# Operator-installed scanner tools (I5 live scans); see tools/live/install_cdxgen.sh
+.tools/
+.aibom-context/
+
+# Local startup configuration and generated secrets (tools/start.py)
+opentrace.yml
+.opentrace/

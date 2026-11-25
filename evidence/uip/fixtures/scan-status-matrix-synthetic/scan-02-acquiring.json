@@ -1,0 +1,168 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:2a6239c8d3796c75e1b51c88e02c5379fa5b99998b65d8bc1ca5e385d4839527",
+  "assessment": null,
+  "commit_sha": "73b817a2b4256f474c2363ea9ef0aa3fa9ea1ebe",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": "Workbench is not ready: the scan has not completed.",
+  "ready": false
+ },
+ "identity": {
+  "analysis_digest": "sha256:2a6239c8d3796c75e1b51c88e02c5379fa5b99998b65d8bc1ca5e385d4839527",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/example-org/sample-web/tree/v1.0.0"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "73b817a2b4256f474c2363ea9ef0aa3fa9ea1ebe",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 2000,
+  "job_id": "job:bb9146e52d750074157f8f59",
+  "seq": 2,
+  "state": "running",
+  "updated_at": "2026-01-01T00:00:02Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": "2026-01-01T00:00:03Z",
+   "state": "running",
+   "updated_at": "2026-01-01T00:00:03Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "cbom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  }
+ ]
+}

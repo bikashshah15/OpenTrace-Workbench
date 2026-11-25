@@ -1,0 +1,10 @@
+# OpenTrace AI-BOM gateway (UIP-07C): holds the provider key and is the only route to the provider. Python standard library only:
+# no package is installed, so there is nothing to fetch at build time. Built with --network none --pull=false.
+FROM python:3.13-slim-bookworm@sha256:aed314f1f0c7e988b7aee5d889414ec977430bad37770966c52aff5366a13a06
+LABEL opentrace.uip07c="gateway"
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+COPY gateway.py /opt/gateway/gateway.py
+RUN groupadd --gid 10001 opentrace && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin opentrace \
+ && mkdir -p /ctl /ledger /run/opentrace && chown 10001:10001 /ctl /ledger
+USER 10001:10001
+CMD ["python", "-I", "/opt/gateway/gateway.py"]

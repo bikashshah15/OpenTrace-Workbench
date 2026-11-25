@@ -1,0 +1,46 @@
+{
+  "capability_version": "3.0",
+  "contract_versions": [
+    "3.0"
+  ],
+  "dimensions": [
+    "inventory"
+  ],
+  "implementation": "go",
+  "kind": "capability_response",
+  "languages": [
+    "go",
+    "multi",
+    "python",
+    "typescript"
+  ],
+  "limits": {
+    "default_task_deadline_s": 30,
+    "max_produced_artifact_bytes": 1048576,
+    "max_worker_jobs_per_task": 1,
+    "model_calls": 0,
+    "non_loopback_network": 0,
+    "operation_limits": {
+      "github_sbom_import": {
+        "deadline_s": 60,
+        "wall_s": 20
+      },
+      "osv_inventory_match": {
+        "deadline_s": 60
+      },
+      "repo_inventory": {
+        "deadline_s": 60,
+        "wall_s": 30
+      }
+    },
+    "worker_timeout_s": 30
+  },
+  "operations": [
+    "github_sbom_import",
+    "osv_inventory_match",
+    "repo_inventory"
+  ],
+  "request_id": "cap-3",
+  "schema_version": "3.0",
+  "service_id": "evidence-specialist-b"
+}

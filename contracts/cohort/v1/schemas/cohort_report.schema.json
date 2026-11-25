@@ -1,0 +1,60 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/cohort_report.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.i3.cohort_report/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "advisories": {
+   "type": "object"
+  },
+  "hosted_lane": {
+   "additionalProperties": false,
+   "properties": {
+    "acquired": {
+     "type": "boolean"
+    },
+    "binding": {
+     "const": "unbound"
+    },
+    "repos": {
+     "type": "object"
+    }
+   },
+   "required": [
+    "acquired",
+    "repos",
+    "binding"
+   ],
+   "type": "object"
+  },
+  "inputs": {
+   "type": "object"
+  },
+  "inventory": {
+   "type": "object"
+  },
+  "non_claims": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "schema": {
+   "const": "opentrace.i3.cohort_report/1"
+  },
+  "tasks": {
+   "type": "object"
+  }
+ },
+ "required": [
+  "schema",
+  "inputs",
+  "tasks",
+  "inventory",
+  "advisories",
+  "hosted_lane",
+  "non_claims"
+ ],
+ "title": "cohort_report",
+ "type": "object"
+}

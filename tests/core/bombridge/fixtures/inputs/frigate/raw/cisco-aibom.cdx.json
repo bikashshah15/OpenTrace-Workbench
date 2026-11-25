@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "bom-ref": "yolov6n.hef_./frigate/detectors/plugins/hailo8l.py_50",
+      "description": "yolov6n.hef \u2014 model \u2014 unknown",
+      "name": "yolov6n.hef",
+      "properties": [
+        {
+          "name": "cisco-aibom:file",
+          "value": "./frigate/detectors/plugins/hailo8l.py"
+        },
+        {
+          "name": "cisco-aibom:framework",
+          "value": "unknown"
+        },
+        {
+          "name": "cisco-aibom:line",
+          "value": "50"
+        }
+      ],
+      "type": "machine-learning-model"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "yolov6n.hef_./frigate/detectors/plugins/hailo8l.py_50"
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-11-02T17:37:31.922146+00:00",
+    "tools": [
+      {
+        "name": "cisco-aibom",
+        "vendor": "Cisco",
+        "version": "1.10.0"
+      }
+    ]
+  },
+  "serialNumber": "urn:uuid:53f84046-3895-4557-b0c3-d2acd019d71b",
+  "version": 1,
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6"
+}

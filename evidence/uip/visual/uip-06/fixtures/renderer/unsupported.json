@@ -1,0 +1,79 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "No supported CBOM inventory exists for this repository; nothing was collected.",
+  "reason_code": "unsupported_ecosystem",
+  "state": "unsupported"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ac743b9e831346d5052357d0a7c607fbeb59c9bc2e083320ddb2ba2d08fa78b5",
+  "assessment": null,
+  "commit_sha": "5103a3384916f4b89b169dd6043d5293512a89c9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "unsupported",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": "synthetic-cbom-tool 0.0"
+   },
+   "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

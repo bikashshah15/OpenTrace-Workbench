@@ -1,0 +1,34 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 2720,
+   "path": "contexts-hostile.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "17236a32ac1c661452404a11237db2a13c2fa8e3cdbf62216daaa82ee30bf0c1"
+  },
+  {
+   "bytes": 4085,
+   "path": "crypto-hostile.json",
+   "schema": "opentrace.workbench.crypto_assets/1",
+   "sha256": "cc81b19ba6ae8116a0db4da8a7d62e4b797a67953c3781da4044925148ab0316"
+  },
+  {
+   "bytes": 1588,
+   "path": "inspector-hostile.json",
+   "schema": "opentrace.workbench.inspector/1",
+   "sha256": "38b059a8352bc552fb210a671435b3c9bc617465e5e86c7870b4e9e3469f0b57"
+  }
+ ],
+ "name": "malicious-text-synthetic",
+ "normalized": [],
+ "notes": "Hostile names, paths, excerpts and URLs validate as inert text with href null; a 600-character excerpt is valid at the boundary. Control characters and the 601 case are in invalid/.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

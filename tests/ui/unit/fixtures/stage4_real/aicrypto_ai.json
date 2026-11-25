@@ -1,0 +1,472 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:ac03128ba64ad0c7d103ca5c",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "ai_edge_litert",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": "occ:cf87d9221bd273cffcb1f9a0",
+     "condition": {
+      "basis": "source_text",
+      "text": "the fallback import runs if the try block (a single import of tflite_runtime) raises ImportError"
+     },
+     "occurrence_id": "occ:45c98bb87b6e49d549f7962c",
+     "operation": "runtime import in source (not an installed or active runtime)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": "from ai_edge_litert.interpreter import Interpreter",
+      "excerpt_state": "recorded",
+      "file_sha256": "31a4b174100ebd3b6c5abb0964117e304688c20152d6a8174720928bd9d47163",
+      "line_end": 4,
+      "line_start": 4,
+      "link": {
+       "href": "https://github.com/acme/aicrypto/blob/7d51a157b7859e127f6088d206c15abf03af1694/det/cpu.py",
+       "text": "det/cpu.py"
+      },
+      "path": "det/cpu.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:30fd9672a485cd19a1e1aed8"
+   ]
+  },
+  {
+   "asset_id": "ast:e7ee38e7dfde04eddd8a2f51",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "hailo_platform",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:33e41fd470d91d5885743910",
+     "operation": "runtime import in source (not an installed or active runtime)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": "import hailo_platform",
+      "excerpt_state": "recorded",
+      "file_sha256": "31a4b174100ebd3b6c5abb0964117e304688c20152d6a8174720928bd9d47163",
+      "line_end": 5,
+      "line_start": 5,
+      "link": {
+       "href": "https://github.com/acme/aicrypto/blob/7d51a157b7859e127f6088d206c15abf03af1694/det/cpu.py",
+       "text": "det/cpu.py"
+      },
+      "path": "det/cpu.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:30fd9672a485cd19a1e1aed8"
+   ]
+  },
+  {
+   "asset_id": "ast:0b397dc7803e152a8babbd22",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "tflite_runtime",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:cf87d9221bd273cffcb1f9a0",
+     "operation": "runtime import in source (not an installed or active runtime)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": "from tflite_runtime.interpreter import Interpreter",
+      "excerpt_state": "recorded",
+      "file_sha256": "31a4b174100ebd3b6c5abb0964117e304688c20152d6a8174720928bd9d47163",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/acme/aicrypto/blob/7d51a157b7859e127f6088d206c15abf03af1694/det/cpu.py",
+       "text": "det/cpu.py"
+      },
+      "path": "det/cpu.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:30fd9672a485cd19a1e1aed8"
+   ]
+  },
+  {
+   "asset_id": "ast:41b9dc4a0ef775a602257892",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "http://127.0.0.1:11434/api/generate",
+   "identity_state": "unresolved",
+   "kind": "ai_service",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:da861c3b29afce0236e61e5b",
+     "operation": "inference-API endpoint literal in source (not a reachable service)",
+     "producer_id": "opentrace-source-ai",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": "f7e0d2693d7ad50159335d581f81c529445ce98eaf407b301863de9151b23222",
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/acme/aicrypto/blob/7d51a157b7859e127f6088d206c15abf03af1694/svc/llm.py",
+       "text": "svc/llm.py"
+      },
+      "path": "svc/llm.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:a6db4d70cf43d2eb2880ba56"
+   ]
+  },
+  {
+   "asset_id": "ast:f92f484d6be67e15df541df7",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "det",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [],
+   "occurrences_total": 0,
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": []
+  }
+ ],
+ "availability": {
+  "message": "Inventory-reported models and experimental source observations (runtime imports, endpoint literals); identity, provider and runtime use are not established.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:d9cfe323fbee9be511780103c62dbdf106214e703d2bb830a740f510c31c3ca6",
+  "assessment": {
+   "bundle_sha256": "1cb843102c207ba8cb518c7a5b7f8c68cd45a79b0191e5d720aecc4ff4cbdc8e",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "1a820f8d8c24607fd5132ae45b067e2ed36c506cc3d2c775984e8a1754cb9bd0"
+  },
+  "commit_sha": "7d51a157b7859e127f6088d206c15abf03af1694",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/aicrypto",
+   "host": "github.com",
+   "name": "aicrypto",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 5,
+  "total": 5,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 1,
+  "all": 5,
+  "findings": 0,
+  "models": 1,
+  "runtimes": 3
+ },
+ "links": [
+  {
+   "basis": "recorded",
+   "condition": "the fallback import runs if the try block (a single import of tflite_runtime) raises ImportError",
+   "evidence_ref": null,
+   "from": "ast:0b397dc7803e152a8babbd22",
+   "relation": "conditionally_selects",
+   "to": "ast:ac03128ba64ad0c7d103ca5c"
+  }
+ ],
+ "page": {
+  "assets_shown": 5,
+  "assets_total": 5,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cisco-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cisco-aibom",
+    "producer_version": "cisco-aibom 1.10.1"
+   },
+   "scope": "AI inventory; per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 7,
+    "files_excluded": 0,
+    "files_parsed": 7,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-ai",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (runtime imports, inference-API endpoint literals, import fallbacks); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [
+  {
+   "assets_total": 3,
+   "group_id": "grp:30fd9672a485cd19a1e1aed8",
+   "label": "det/cpu.py",
+   "path": "det/cpu.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:a6db4d70cf43d2eb2880ba56",
+   "label": "svc/llm.py",
+   "path": "svc/llm.py"
+  }
+ ],
+ "tab": "ai"
+}

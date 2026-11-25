@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "7a64fdef9249a1e0eb05fe890f9d7ead010b1a47630c997f7fe485434ba8b7f5"
+  },
+  {
+   "bytes": 1299,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "60acdea1f54009d0c1951f6dba89a2a431b9b01868bf2da41530ea2db3f9bd0f"
+  }
+ ],
+ "name": "uip04-unlocated-only",
+ "notes": "Every component lacks a recorded location: one header-only Unlocated group, no files.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

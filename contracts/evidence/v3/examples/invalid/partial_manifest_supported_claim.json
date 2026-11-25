@@ -1,0 +1,155 @@
+{
+  "artifacts": [
+    {
+      "bytes": 482,
+      "captured_at": "2026-10-14T12:00:01.000Z",
+      "content_b64": "eyJjb21taXQiOiI3YzQ4NmVmYTgyMjNkNWY2NmFmOGNmN2IyYWM5YmIwNGExZWU2YjkxIiwia2luZCI6ImdvX21vZCIsInBhdGgiOiJnby5tb2QiLCJyZXBvIjoibW9kZWxjb250ZXh0cHJvdG9jb2wvZ28tc2RrIiwicm93cyI6W3siZGlyZWN0Ijp0cnVlLCJlY29zeXN0ZW0iOiJHbyIsImludGVncml0eV9yZWNvcmRlZCI6dHJ1ZSwibG9jYXRvciI6Ii9yZXF1aXJlLzUiLCJuYW1lX25vcm1hbGl6ZWQiOiJnaXRodWIuY29tL2dvbGFuZy1qd3Qvand0L3Y1IiwibmFtZV9vcmlnaW5hbCI6ImdpdGh1Yi5jb20vZ29sYW5nLWp3dC9qd3QvdjUiLCJzY29wZSI6InVua25vd24iLCJzY29wZV9iYXNpcyI6ImdvX21vZF9oYXNfbm9fc2NvcGUiLCJzb3VyY2Vfa2luZCI6ImdvX21vZHVsZSIsInZlcnNpb25fb3JpZ2luYWwiOiJ2NS4zLjEiLCJ2ZXJzaW9uX3N0YXRlIjoiZXhhY3QifV0sInNjaGVtYSI6Im9wZW50cmFjZS5vY2N1cnJlbmNlX3RhYmxlLzEifQo=",
+      "digest": "sha256:84d1a778b41a5c52ff05003054c2a21d7eebda04880386cb1dfafc4e7d268f34",
+      "media_type": "application/json",
+      "producer": "evidence-specialist-b/example",
+      "role": "occurrence_table",
+      "source_ref": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+    }
+  ],
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "claims": [
+    {
+      "claim_id": "t1.cl1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "t1.ev1"
+      ],
+      "explanation": "Left unknown.",
+      "proposition": "go.mod could only be partly read.",
+      "status": "supported",
+      "type": "manifest_inventory_recorded"
+    }
+  ],
+  "completed_at": "2026-10-14T12:00:01.000Z",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "static inventory; no build; no code execution",
+    "candidate_id": null,
+    "language": "go",
+    "observed_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91",
+    "repo_id": "github.com/modelcontextprotocol/go-sdk",
+    "requested_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91"
+  },
+  "errors": [],
+  "evidence": [
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "manifest_inventory",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:84d1a778b41a5c52ff05003054c2a21d7eebda04880386cb1dfafc4e7d268f34",
+        "tool": "manifest_inventory",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "bytes": 123,
+        "git_blob": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "kind": "go_mod",
+        "lock_format_version": null,
+        "occurrence_count": 1,
+        "parser": {
+          "name": "gomod",
+          "version": "i3/1"
+        },
+        "path": "go.mod",
+        "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "status": "partial",
+        "table_artifact": "sha256:84d1a778b41a5c52ff05003054c2a21d7eebda04880386cb1dfafc4e7d268f34",
+        "table_digest": "sha256:84d1a778b41a5c52ff05003054c2a21d7eebda04880386cb1dfafc4e7d268f34",
+        "unparsed_constructs": [
+          {
+            "class": "unterminated_block",
+            "count": 1
+          }
+        ]
+      },
+      "dimension": "inventory",
+      "evidence_id": "t1.ev1",
+      "kind": "manifest_inventory",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "go.mod",
+      "observation": "One occurrence; one construct not understood.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "go.mod",
+        "version": "0000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "manifest_status",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:84d1a778b41a5c52ff05003054c2a21d7eebda04880386cb1dfafc4e7d268f34",
+        "tool": "manifest_status",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "covered_by": "go.mod",
+        "kind": "go_sum",
+        "path": "go.sum",
+        "reason": "companion",
+        "status": "recognized_not_inventoried"
+      },
+      "dimension": "inventory",
+      "evidence_id": "t1.ev2",
+      "kind": "manifest_status",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "go.sum",
+      "observation": "go.sum is a companion of go.mod.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "go.sum",
+        "version": "0000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "kind": "result",
+  "missing_evidence": [
+    {
+      "detail": "unterminated block",
+      "dimension": "inventory",
+      "reason": "manifest_malformed",
+      "requirement_id": "req-1"
+    }
+  ],
+  "producer": {
+    "capability_version": "3.0",
+    "dimensions_used": [
+      "inventory"
+    ],
+    "implementation": "go",
+    "operations_used": [
+      "repo_inventory"
+    ],
+    "service_id": "evidence-specialist-b"
+  },
+  "run_id": "run-t1",
+  "schema_version": "3.0",
+  "status": "partial",
+  "task_id": "t1",
+  "warnings": []
+}

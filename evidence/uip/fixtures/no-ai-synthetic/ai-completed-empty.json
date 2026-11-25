@@ -1,0 +1,73 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "The AI inventory completed and lists no AI assets. This does not show that no AI is used.",
+  "reason_code": "no_applicable_assets",
+  "state": "completed_empty"
+ },
+ "binding": {
+  "analysis_digest": "sha256:2dcb32e43a3ece52d965d65d0a12c1e8c8d13e11faf3c65c9abe946a7e916958",
+  "assessment": null,
+  "commit_sha": "b9ffb4d04b9507f1dda66998084358643b1961b9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/plain-lib",
+   "host": "github.com",
+   "name": "plain-lib",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 0,
+  "findings": 0,
+  "models": 0,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 40,
+    "files_excluded": 0,
+    "files_parsed": 40,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:aibom-fixture",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "fixture-aibom",
+    "producer_version": null
+   },
+   "scope": "AI inventory over the repository root"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [],
+ "tab": "ai"
+}

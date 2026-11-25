@@ -1,0 +1,38 @@
+--- a/go.mod
++++ b/go.mod
+@@ -2,4 +2,4 @@
+ 
+ go 1.22
+ 
+-require golang.org/x/text v0.3.7
++require golang.org/x/text v0.3.8
+--- a/go.sum
++++ b/go.sum
+@@ -1,2 +1,2 @@
+-golang.org/x/text v0.3.7 h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk=
+-golang.org/x/text v0.3.7/go.mod h1:u+2+/6zg+i71rQMx5EYifcz6MCKuco9NR6JIITiCfzQ=
++golang.org/x/text v0.3.8 h1:nAL+RVCQ9uMn3vJZbV+MRnydTJFPf8qqY42YiA6MrqY=
++golang.org/x/text v0.3.8/go.mod h1:E6s5w1FMmriuDzIBO73fBruAKo1PCIq6d2Q6DHfQ8WQ=
+--- a/negotiate.go
++++ b/negotiate.go
+@@ -1,18 +1,7 @@
+ package fixture
+ 
+-import "golang.org/x/text/language"
+-
+ // Negotiate picks the best supported language for an Accept-Language header.
+ func Negotiate(header string, supported []string) (string, error) {
+-	tags, _, err := language.ParseAcceptLanguage(header)
+-	if err != nil {
+-		return "", err
+-	}
+-	var sup []language.Tag
+-	for _, s := range supported {
+-		sup = append(sup, language.Make(s))
+-	}
+-	m := language.NewMatcher(sup)
+-	_, idx, _ := m.Match(tags...)
+-	return supported[idx], nil
++	_ = header
++	return supported[0], nil
+ }

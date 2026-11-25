@@ -1,0 +1,169 @@
+{
+  "description": "Expected outcome for every example. 'schema' layer: must fail JSON Schema. 'semantic' layer: must pass JSON Schema and fail the named core semantic rule (I1-REQ-05). The store for semantic checks holds evidence/fixtures/i1/gomod-basic/go.mod only.",
+  "store_inputs": [
+    "evidence/fixtures/i1/gomod-basic/go.mod"
+  ],
+  "valid": [
+    {
+      "file": "valid/capability_request.json",
+      "kind": "capability_request"
+    },
+    {
+      "file": "valid/capability_response.json",
+      "kind": "capability_response"
+    },
+    {
+      "file": "valid/task_request.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_partial.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/result_complete.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "valid/result_partial.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_partial.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "valid/rejection_unsupported_schema_version.json",
+      "kind": "rejection"
+    }
+  ],
+  "invalid": [
+    {
+      "file": "invalid/result_context_mismatch.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "a",
+      "expected_code": "context_mismatch",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/result_produced_integrity.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "b",
+      "expected_code": "produced_artifact_integrity_failure",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/result_missing_artifact.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "b",
+      "expected_code": "artifact_missing",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/result_unknown_evidence.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "c",
+      "expected_code": "unknown_evidence_reference",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/result_dimension_promotion.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "d",
+      "expected_code": "dimension_promotion",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/result_after_deadline.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "e",
+      "expected_code": "deadline_exceeded",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:45.000Z"
+      }
+    },
+    {
+      "file": "invalid/result_capability_scope.json",
+      "kind": "result",
+      "layer": "semantic",
+      "rule": "f",
+      "expected_code": "capability_scope_exceeded",
+      "semantic": {
+        "task": "valid/task_request.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-13T12:00:01.500Z"
+      }
+    },
+    {
+      "file": "invalid/task_request_schema_major_2.json",
+      "kind": "task_request",
+      "layer": "schema",
+      "rule": "version",
+      "expected_code": "unsupported_schema_version"
+    },
+    {
+      "file": "invalid/task_request_missing_context.json",
+      "kind": "task_request",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/task_request_context_extra_field.json",
+      "kind": "task_request",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/result_bad_status.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/capability_response_missing_limits.json",
+      "kind": "capability_response",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/rejection_unknown_code.json",
+      "kind": "rejection",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    }
+  ]
+}

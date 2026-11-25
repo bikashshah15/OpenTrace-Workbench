@@ -1,0 +1,752 @@
+{
+ "families": [
+  {
+   "active": true,
+   "band": "high",
+   "family_id": "CVE-SYNTH-0001",
+   "has_unknown_member": true,
+   "members": [
+    {
+     "affected": [],
+     "fetched": false,
+     "id": "CVE-SYNTH-0001",
+     "record_digest": null,
+     "related": [],
+     "severity": null,
+     "withdrawn": null
+    },
+    {
+     "affected": [
+      {
+       "ecosystem": "Go",
+       "package": "example.com/jsonschema-go",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GHSA-SYNTH-0001",
+     "record_digest": "sha256:35d6ce064f7892ff1a5331962cb3acea5e7bdbb3b2223c1b0e63821c99c379d7",
+     "related": [],
+     "severity": {
+      "band": "high",
+      "conflict": false,
+      "label": "HIGH",
+      "label_band": "high",
+      "score": 7.5,
+      "source": "label_and_vector",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "vector_band": "high"
+     },
+     "withdrawn": false
+    },
+    {
+     "affected": [
+      {
+       "ecosystem": "Go",
+       "package": "example.com/jsonschema-go",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GO-SYNTH-0001",
+     "record_digest": "sha256:d5fb625fc3ea710cb7f6722dfb4361a4232628ebef7c69a43fd3072f050cdc2e",
+     "related": [
+      "CGA-SYNTH-0001"
+     ],
+     "severity": {
+      "band": "unknown",
+      "conflict": false,
+      "label": null,
+      "label_band": null,
+      "score": null,
+      "source": "absent",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": false
+    }
+   ],
+   "severity_conflict": false,
+   "withdrawn": false
+  },
+  {
+   "active": true,
+   "band": "critical",
+   "family_id": "GHSA-SYNTH-0002",
+   "has_unknown_member": false,
+   "members": [
+    {
+     "affected": [
+      {
+       "ecosystem": "npm",
+       "package": "shared-npm",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GHSA-SYNTH-0002",
+     "record_digest": "sha256:82477f3d098b31e093636f283b69de2ce73dfc742555878c8d9d85a3c52a5c1c",
+     "related": [],
+     "severity": {
+      "band": "critical",
+      "conflict": false,
+      "label": "CRITICAL",
+      "label_band": "critical",
+      "score": null,
+      "source": "label",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": false
+    },
+    {
+     "affected": [
+      {
+       "ecosystem": "npm",
+       "package": "shared-npm",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GO-SYNTH-0002",
+     "record_digest": "sha256:5b8dcd0aad40a390cdd461639051bd71925dab6da3ec886fd2b2b3eabacfe6aa",
+     "related": [],
+     "severity": {
+      "band": "unknown",
+      "conflict": false,
+      "label": null,
+      "label_band": null,
+      "score": null,
+      "source": "absent",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": true
+    }
+   ],
+   "severity_conflict": false,
+   "withdrawn": false
+  },
+  {
+   "active": false,
+   "band": null,
+   "family_id": "GHSA-SYNTH-0003",
+   "has_unknown_member": false,
+   "members": [
+    {
+     "affected": [
+      {
+       "ecosystem": "npm",
+       "package": "@scope/pkg",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GHSA-SYNTH-0003",
+     "record_digest": "sha256:61b7976224b3a9bc9315996be1004b41db42260b2c33c53863ed0d76f874c414",
+     "related": [],
+     "severity": {
+      "band": "unknown",
+      "conflict": false,
+      "label": null,
+      "label_band": null,
+      "score": null,
+      "source": "absent",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": true
+    }
+   ],
+   "severity_conflict": false,
+   "withdrawn": true
+  },
+  {
+   "active": true,
+   "band": "unknown",
+   "family_id": "GHSA-SYNTH-0004",
+   "has_unknown_member": true,
+   "members": [
+    {
+     "affected": [
+      {
+       "ecosystem": "Go",
+       "package": "example.com/oauth2",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GHSA-SYNTH-0004",
+     "record_digest": "sha256:5cfd68eeecbabdbd07d8822c176ba22e1b285010a0341380fed34238129f81dc",
+     "related": [],
+     "severity": {
+      "band": "unknown",
+      "conflict": false,
+      "label": null,
+      "label_band": null,
+      "score": null,
+      "source": "absent",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": false
+    }
+   ],
+   "severity_conflict": false,
+   "withdrawn": false
+  },
+  {
+   "active": true,
+   "band": "medium",
+   "family_id": "GHSA-SYNTH-0005",
+   "has_unknown_member": false,
+   "members": [
+    {
+     "affected": [
+      {
+       "ecosystem": "npm",
+       "package": "mixed-pkg",
+       "ranges": [
+        {
+         "events": [
+          {
+           "introduced": "0"
+          },
+          {
+           "fixed": "9.9.9"
+          }
+         ],
+         "type": "SEMVER"
+        }
+       ]
+      }
+     ],
+     "fetched": true,
+     "id": "GHSA-SYNTH-0005",
+     "record_digest": "sha256:23ecf3ff1dbf78742ec6147f7a150d89e45be948c55befd60c148b31772c1236",
+     "related": [],
+     "severity": {
+      "band": "medium",
+      "conflict": false,
+      "label": "MODERATE",
+      "label_band": "medium",
+      "score": null,
+      "source": "label",
+      "vector": null,
+      "vector_band": null
+     },
+     "withdrawn": false
+    }
+   ],
+   "severity_conflict": false,
+   "withdrawn": false
+  }
+ ],
+ "groups": [
+  {
+   "band": "high",
+   "ecosystem": "Go",
+   "family_id": "CVE-SYNTH-0001",
+   "group_key": "CVE-SYNTH-0001|Go|example.com/jsonschema-go",
+   "has_direct": true,
+   "has_runtime_scope": false,
+   "has_unknown_member": true,
+   "name_normalized": "example.com/jsonschema-go",
+   "rankable": true,
+   "repos_supported": 1,
+   "severity_conflict": false,
+   "statement": "An advisory family has recorded matches for these inventory versions in the captured advisory data.",
+   "tier": "E1",
+   "unmatched_versions": [
+    {
+     "outcome": "complete_zero",
+     "query_key": "Go|example.com/jsonschema-go|0.4.3",
+     "repos": {
+      "synth/repo-a": [
+       {
+        "direct": true,
+        "locator": "/require/1",
+        "path": "go.mod",
+        "repo": "synth/repo-a",
+        "scope": "unknown",
+        "version_original": "v0.4.3"
+       }
+      ]
+     },
+     "version_original": "v0.4.3",
+     "version_queried": "0.4.3"
+    }
+   ],
+   "version_groups": [
+    {
+     "matches": [
+      {
+       "range_check": "consistent",
+       "record_digest": "sha256:35d6ce064f7892ff1a5331962cb3acea5e7bdbb3b2223c1b0e63821c99c379d7",
+       "status": "supported",
+       "vuln_id": "GHSA-SYNTH-0001"
+      },
+      {
+       "range_check": "consistent",
+       "record_digest": "sha256:d5fb625fc3ea710cb7f6722dfb4361a4232628ebef7c69a43fd3072f050cdc2e",
+       "status": "supported",
+       "vuln_id": "GO-SYNTH-0001"
+      }
+     ],
+     "query_key": "Go|example.com/jsonschema-go|0.4.2",
+     "repos": {
+      "synth/repo-b": {
+       "occurrences": [
+        {
+         "direct": true,
+         "locator": "/require/1",
+         "path": "go.mod",
+         "repo": "synth/repo-b",
+         "scope": "unknown",
+         "version_original": "v0.4.2"
+        }
+       ],
+       "reason": null,
+       "status": "matched"
+      }
+     },
+     "status": "matched",
+     "version_original": "v0.4.2",
+     "version_queried": "0.4.2"
+    }
+   ]
+  },
+  {
+   "band": "critical",
+   "ecosystem": "npm",
+   "family_id": "GHSA-SYNTH-0002",
+   "group_key": "GHSA-SYNTH-0002|npm|shared-npm",
+   "has_direct": true,
+   "has_runtime_scope": true,
+   "has_unknown_member": false,
+   "name_normalized": "shared-npm",
+   "rankable": true,
+   "repos_supported": 2,
+   "severity_conflict": false,
+   "statement": "An advisory family has recorded matches for these inventory versions in the captured advisory data.",
+   "tier": "E1",
+   "unmatched_versions": [],
+   "version_groups": [
+    {
+     "matches": [
+      {
+       "range_check": "consistent",
+       "record_digest": "sha256:82477f3d098b31e093636f283b69de2ce73dfc742555878c8d9d85a3c52a5c1c",
+       "status": "supported",
+       "vuln_id": "GHSA-SYNTH-0002"
+      }
+     ],
+     "query_key": "npm|shared-npm|1.0.0",
+     "repos": {
+      "synth/repo-a": {
+       "occurrences": [
+        {
+         "direct": true,
+         "locator": "/packages/node_modules/shared-npm",
+         "path": "package-lock.json",
+         "repo": "synth/repo-a",
+         "scope": "runtime",
+         "version_original": "1.0.0"
+        }
+       ],
+       "reason": null,
+       "status": "matched"
+      },
+      "synth/repo-c": {
+       "occurrences": [
+        {
+         "direct": false,
+         "locator": "/packages/node_modules/shared-npm",
+         "path": "package-lock.json",
+         "repo": "synth/repo-c",
+         "scope": "dev",
+         "version_original": "1.0.0"
+        }
+       ],
+       "reason": null,
+       "status": "matched"
+      }
+     },
+     "status": "matched",
+     "version_original": "1.0.0",
+     "version_queried": "1.0.0"
+    }
+   ]
+  },
+  {
+   "band": "unknown",
+   "ecosystem": "Go",
+   "family_id": "GHSA-SYNTH-0004",
+   "group_key": "GHSA-SYNTH-0004|Go|example.com/oauth2",
+   "has_direct": false,
+   "has_runtime_scope": false,
+   "has_unknown_member": true,
+   "name_normalized": "example.com/oauth2",
+   "rankable": true,
+   "repos_supported": 1,
+   "severity_conflict": false,
+   "statement": "An advisory family has recorded matches for these inventory versions in the captured advisory data.",
+   "tier": "E1",
+   "unmatched_versions": [
+    {
+     "outcome": "complete_zero",
+     "query_key": "Go|example.com/oauth2|0.35.0",
+     "repos": {
+      "synth/repo-a": [
+       {
+        "direct": true,
+        "locator": "/require/2",
+        "path": "go.mod",
+        "repo": "synth/repo-a",
+        "scope": "unknown",
+        "version_original": "v0.35.0"
+       }
+      ]
+     },
+     "version_original": "v0.35.0",
+     "version_queried": "0.35.0"
+    }
+   ],
+   "version_groups": [
+    {
+     "matches": [
+      {
+       "range_check": "consistent",
+       "record_digest": "sha256:5cfd68eeecbabdbd07d8822c176ba22e1b285010a0341380fed34238129f81dc",
+       "status": "supported",
+       "vuln_id": "GHSA-SYNTH-0004"
+      }
+     ],
+     "query_key": "Go|example.com/oauth2|0.37.0",
+     "repos": {
+      "synth/repo-b": {
+       "occurrences": [
+        {
+         "direct": false,
+         "locator": "/require/2",
+         "path": "go.mod",
+         "repo": "synth/repo-b",
+         "scope": "unknown",
+         "version_original": "v0.37.0"
+        }
+       ],
+       "reason": null,
+       "status": "matched"
+      }
+     },
+     "status": "matched",
+     "version_original": "v0.37.0",
+     "version_queried": "0.37.0"
+    }
+   ]
+  },
+  {
+   "band": "medium",
+   "ecosystem": "npm",
+   "family_id": "GHSA-SYNTH-0005",
+   "group_key": "GHSA-SYNTH-0005|npm|mixed-pkg",
+   "has_direct": false,
+   "has_runtime_scope": false,
+   "has_unknown_member": false,
+   "name_normalized": "mixed-pkg",
+   "rankable": false,
+   "repos_supported": 0,
+   "severity_conflict": false,
+   "statement": "An advisory family has recorded matches for these inventory versions in the captured advisory data.",
+   "tier": "E1",
+   "unmatched_versions": [],
+   "version_groups": [
+    {
+     "matches": [
+      {
+       "range_check": "inconsistent",
+       "record_digest": "sha256:23ecf3ff1dbf78742ec6147f7a150d89e45be948c55befd60c148b31772c1236",
+       "status": "unknown",
+       "vuln_id": "GHSA-SYNTH-0005"
+      }
+     ],
+     "query_key": "npm|mixed-pkg|1.0.0",
+     "repos": {
+      "synth/repo-a": {
+       "occurrences": [
+        {
+         "direct": true,
+         "locator": "/packages/node_modules/mixed-pkg",
+         "path": "package-lock.json",
+         "repo": "synth/repo-a",
+         "scope": "runtime",
+         "version_original": "1.0.0"
+        }
+       ],
+       "reason": "range_inconsistent",
+       "status": "unknown"
+      }
+     },
+     "status": "unknown",
+     "version_original": "1.0.0",
+     "version_queried": "1.0.0"
+    }
+   ]
+  }
+ ],
+ "integrity": [],
+ "query_outcomes": [
+  {
+   "active": 2,
+   "outcome": "complete_positive",
+   "query_key": "Go|example.com/jsonschema-go|0.4.2",
+   "reasons": [],
+   "returned": 2
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "Go|example.com/jsonschema-go|0.4.3",
+   "reasons": [],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "Go|example.com/jwt/v5|5.3.1",
+   "reasons": [],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "Go|example.com/jwt/v6|6.0.0",
+   "reasons": [],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "Go|example.com/oauth2|0.35.0",
+   "reasons": [],
+   "returned": 0
+  },
+  {
+   "active": 1,
+   "outcome": "complete_positive",
+   "query_key": "Go|example.com/oauth2|0.37.0",
+   "reasons": [],
+   "returned": 1
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "Go|example.com/only-a|1.0.0",
+   "reasons": [],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "rejected",
+   "query_key": "PyPI|jinja2|3.1.2",
+   "reasons": [
+    "query_rejected"
+   ],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "incomplete",
+   "query_key": "PyPI|pyyaml|6.0.1",
+   "reasons": [
+    "incomplete_query"
+   ],
+   "returned": 0
+  },
+  {
+   "active": 0,
+   "outcome": "complete_positive",
+   "query_key": "npm|@scope/pkg|2.0.0",
+   "reasons": [],
+   "returned": 1
+  },
+  {
+   "active": 1,
+   "outcome": "complete_positive",
+   "query_key": "npm|mixed-pkg|1.0.0",
+   "reasons": [],
+   "returned": 1
+  },
+  {
+   "active": 1,
+   "outcome": "complete_positive",
+   "query_key": "npm|shared-npm|1.0.0",
+   "reasons": [],
+   "returned": 2
+  },
+  {
+   "active": 0,
+   "outcome": "complete_zero",
+   "query_key": "npm|withdrawn-pkg|3.0.0",
+   "reasons": [],
+   "returned": 0
+  }
+ ],
+ "schema": "opentrace.i3.findings/1",
+ "scope": {
+  "go_version_form": "bare",
+  "osv_capture_set_id": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "osv_captured_at": "2026-10-14T00:00:00Z/2026-10-14T00:01:00Z",
+  "planned_query_digest": "sha256:2ef9d685e539db39f2359287fecdd5fb33456a08e75e2e6cc9f821e541804716",
+  "repos": [
+   "synth/repo-a",
+   "synth/repo-b",
+   "synth/repo-c"
+  ],
+  "source_capture_set_id": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ "statement": "An advisory family has recorded matches for these inventory versions in the captured advisory data.",
+ "unresolved": [
+  {
+   "direct": false,
+   "ecosystem": "Go",
+   "locator": "/require/3",
+   "name_normalized": "example.com/local-mod",
+   "path": "go.mod",
+   "reason": "local_replace",
+   "repo": "synth/repo-b",
+   "scope": "unknown",
+   "version_original": "v0.0.0"
+  },
+  {
+   "direct": true,
+   "ecosystem": "PyPI",
+   "locator": "/package/0",
+   "name_normalized": "jinja2",
+   "path": "uv.lock",
+   "reason": "query_rejected",
+   "repo": "synth/repo-c",
+   "scope": "runtime",
+   "version_original": "3.1.2"
+  },
+  {
+   "direct": false,
+   "ecosystem": "PyPI",
+   "locator": "/package/1",
+   "name_normalized": "pyyaml",
+   "path": "uv.lock",
+   "reason": "incomplete_query",
+   "repo": "synth/repo-c",
+   "scope": "unknown",
+   "version_original": "6.0.1"
+  },
+  {
+   "direct": true,
+   "ecosystem": "npm",
+   "locator": "/packages/node_modules/mixed-pkg",
+   "name_normalized": "mixed-pkg",
+   "path": "package-lock.json",
+   "reason": "range",
+   "repo": "synth/repo-c",
+   "scope": "runtime",
+   "version_original": "^1"
+  },
+  {
+   "direct": true,
+   "ecosystem": "npm",
+   "locator": "/packages/node_modules/mixed-pkg",
+   "name_normalized": "mixed-pkg",
+   "path": "package-lock.json",
+   "reason": "range_inconsistent",
+   "repo": "synth/repo-a",
+   "scope": "runtime",
+   "version_original": "1.0.0"
+  },
+  {
+   "direct": false,
+   "ecosystem": "npm",
+   "locator": "/packages/node_modules/ws-pkg",
+   "name_normalized": "ws-pkg",
+   "path": "package-lock.json",
+   "reason": "workspace",
+   "repo": "synth/repo-c",
+   "scope": "unknown",
+   "version_original": "0.0.0"
+  }
+ ],
+ "withdrawn_only_families": [
+  "GHSA-SYNTH-0003"
+ ]
+}

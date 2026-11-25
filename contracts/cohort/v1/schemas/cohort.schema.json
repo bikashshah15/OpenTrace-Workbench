@@ -1,0 +1,188 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/cohort.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.cohort/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "approval": {
+   "type": [
+    "object",
+    "null"
+   ]
+  },
+  "cohort_status": {
+   "enum": [
+    "proposed",
+    "frozen"
+   ],
+   "type": "string"
+  },
+  "execution": {
+   "const": "none"
+  },
+  "manifest_policy_digest": {
+   "pattern": "^sha256:[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "pins_digest": {
+   "pattern": "^sha256:[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "pins_sha256": {
+   "type": "string"
+  },
+  "repos": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "build_viability": {
+      "const": "not_executed"
+     },
+     "clone_url": {
+      "type": "string"
+     },
+     "commit": {
+      "pattern": "^[0-9a-f]{40}$",
+      "type": "string"
+     },
+     "commit_date": {
+      "type": "string"
+     },
+     "declared_toolchain": {
+      "type": "object"
+     },
+     "default_branch": {
+      "type": "string"
+     },
+     "eligibility": {
+      "type": "object"
+     },
+     "eligibility_overall": {
+      "enum": [
+       "eligible",
+       "excluded"
+      ],
+      "type": "string"
+     },
+     "excluded_by_policy": {
+      "type": "array"
+     },
+     "github_api_metadata": {
+      "type": [
+       "string",
+       "object"
+      ]
+     },
+     "license_file": {
+      "type": "object"
+     },
+     "license_observation": {
+      "type": "string"
+     },
+     "non_blob_matches": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "reasons": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "repo": {
+      "type": "string"
+     },
+     "selected_manifests": {
+      "items": {
+       "additionalProperties": false,
+       "properties": {
+        "bytes": {
+         "minimum": 0,
+         "type": [
+          "integer",
+          "null"
+         ]
+        },
+        "git_blob": {
+         "pattern": "^[0-9a-f]{40}$",
+         "type": "string"
+        },
+        "kind": {
+         "type": "string"
+        },
+        "path": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "path",
+        "kind",
+        "git_blob",
+        "bytes"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     },
+     "tracked_bytes": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "tracked_files": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "tree": {
+      "pattern": "^[0-9a-f]{40}$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "repo",
+     "clone_url",
+     "default_branch",
+     "commit",
+     "tree",
+     "commit_date",
+     "license_file",
+     "declared_toolchain",
+     "license_observation",
+     "tracked_files",
+     "tracked_bytes",
+     "selected_manifests",
+     "excluded_by_policy",
+     "non_blob_matches",
+     "eligibility_overall",
+     "eligibility",
+     "build_viability",
+     "github_api_metadata",
+     "reasons"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "schema": {
+   "const": "opentrace.cohort/1"
+  },
+  "source_capture_set_id": {
+   "pattern": "^sha256:[0-9a-f]{64}$",
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema",
+  "cohort_status",
+  "approval",
+  "pins_sha256",
+  "pins_digest",
+  "source_capture_set_id",
+  "manifest_policy_digest",
+  "execution",
+  "repos"
+ ],
+ "title": "cohort",
+ "type": "object"
+}

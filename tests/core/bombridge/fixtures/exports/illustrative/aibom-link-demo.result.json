@@ -1,0 +1,1113 @@
+{
+  "bundle_sha256": "97aeac1e2668a23e755eeb1ecf05efba957e00f534bfa1eece58e6d4fb200a30",
+  "capture": {
+    "build": null,
+    "configuration": null,
+    "execution": null,
+    "inventories": [
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6",
+        "generator": "synthetic-aibom-generator 0.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:synthetic-aibom",
+        "kind": "aibom",
+        "origin": "illustrative",
+        "source_file": "fixtures/illustrative/synthetic-mlbom.cdx.json",
+        "source_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      {
+        "generator": "synthetic",
+        "intended_coverage": [],
+        "inventory_id": "inv:synthetic-source-reading",
+        "kind": "curation",
+        "origin": "illustrative"
+      }
+    ],
+    "model": null,
+    "origin": "illustrative",
+    "repository": {
+      "revision": "0123456789abcdef0123456789abcdef01234567",
+      "url": "https://example.invalid/synthetic-subject"
+    },
+    "scope_id": "scope:aibom-demo",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "configuration",
+      "model",
+      "execution"
+    ]
+  },
+  "findings": [
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "r1-declared-in-aibom",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [
+        {
+          "bom_ref": "model-unique",
+          "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-unique",
+          "has_hash": true,
+          "locators": [
+            "https://models.example.invalid/unique.tflite"
+          ],
+          "match": "locator_equal",
+          "name": "unique-detector"
+        }
+      ],
+      "category": "declaration_agreement",
+      "digest_verification": "not performed: no artifact was acquired or hashed",
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:r1-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": true,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": "scope:aibom-demo::inv:synthetic-aibom::model-unique",
+      "next_action": null,
+      "provenance_note": "AI-BOM occurrence and source observation refer to the same file(s) ['docker/Dockerfile']: their agreement is not independent verification.",
+      "rationale": "Supported (declaration level): the AI-BOM and the source reference agree on the model's acquisition locator. AI-BOM occurrence and source observation refer to the same file(s) ['docker/Dockerfile']: their agreement is not independent verification.",
+      "reason_codes": [
+        "locator_equal_unique"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:aibom-demo",
+      "shared_source_files": [
+        "docker/Dockerfile"
+      ],
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "source-file:docker/Dockerfile@synthetic",
+        "tool-output:aibom-8c9acee73ca0"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e-src-r1",
+          "reason": "docker/Dockerfile lines [1, 1] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "e-aibom",
+          "reason": "one AI-BOM model (model-unique) lists the source-stated acquisition locator",
+          "reason_code": "locator_equal_unique",
+          "relation": "supports",
+          "role": "aibom_document"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "r2-declared-in-aibom",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [
+        {
+          "bom_ref": "model-samename",
+          "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-samename",
+          "has_hash": false,
+          "locators": [
+            "https://mirror.example.invalid/other/samename.tflite"
+          ],
+          "locators_differ": true,
+          "match": "basename_only",
+          "name": "samename"
+        }
+      ],
+      "category": null,
+      "digest_verification": "not applicable: no matched model",
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:r2-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": false,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": null,
+      "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+      "provenance_note": "No shared source file is recorded between the AI-BOM and the source observation; this does not prove they are independent.",
+      "rationale": "Unverifiable: 1 model(s) match by name or basename only (locators differ or absent); name alone is not identity.",
+      "reason_codes": [
+        "candidates_without_locator_match"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:aibom-demo",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:docker/Dockerfile@synthetic",
+        "tool-output:aibom-8c9acee73ca0"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e-src-r2",
+          "reason": "docker/Dockerfile lines [2, 2] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "e-aibom",
+          "reason": "1 model(s) match by name or basename only (locators differ or absent); name alone is not identity",
+          "reason_code": "candidates_without_locator_match",
+          "relation": "inconclusive",
+          "role": "aibom_document"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "r3-declared-in-aibom",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [
+        {
+          "bom_ref": "model-dup-a",
+          "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+          "has_hash": false,
+          "locators": [
+            "https://models.example.invalid/dup.tflite"
+          ],
+          "match": "locator_equal",
+          "name": "dup-a"
+        },
+        {
+          "bom_ref": "model-dup-b",
+          "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+          "has_hash": false,
+          "locators": [
+            "https://models.example.invalid/dup.tflite"
+          ],
+          "match": "locator_equal",
+          "name": "dup-b"
+        }
+      ],
+      "category": null,
+      "digest_verification": "not applicable: no matched model",
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:r3-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": false,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": null,
+      "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+      "provenance_note": "No shared source file is recorded between the AI-BOM and the source observation; this does not prove they are independent.",
+      "rationale": "Unverifiable: 2 AI-BOM models list the same locator; kept as candidates.",
+      "reason_codes": [
+        "ambiguous_model_identity"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:aibom-demo",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:docker/Dockerfile@synthetic",
+        "tool-output:aibom-8c9acee73ca0"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e-src-r3",
+          "reason": "docker/Dockerfile lines [3, 3] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "e-aibom",
+          "reason": "2 AI-BOM models list the same locator; kept as candidates",
+          "reason_code": "ambiguous_model_identity",
+          "relation": "inconclusive",
+          "role": "aibom_document"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "r4-declared-in-aibom",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [],
+      "category": null,
+      "digest_verification": "not applicable: no matched model",
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:r4-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": false,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": null,
+      "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+      "provenance_note": "No shared source file is recorded between the AI-BOM and the source observation; this does not prove they are independent.",
+      "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+      "reason_codes": [
+        "no_matching_model_record"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:aibom-demo",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:docker/Dockerfile@synthetic",
+        "tool-output:aibom-8c9acee73ca0"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e-src-r4",
+          "reason": "docker/Dockerfile lines [4, 4] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "e-aibom",
+          "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+          "reason_code": "no_matching_model_record",
+          "relation": "inconclusive",
+          "role": "aibom_document"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "edges": [
+      {
+        "from": "assertion:r1-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r1",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:r2-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r2",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:r3-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r3",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:r4-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r4",
+        "type": "subject"
+      },
+      {
+        "assertion": "r1-declared-in-aibom",
+        "from": "entity:scope:aibom-demo::inv:synthetic-source-reading::r1",
+        "key": "declared_as:scope:aibom-demo::inv:synthetic-aibom::model-unique",
+        "match": "locator_equal",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-unique",
+        "type": "declared_as"
+      },
+      {
+        "assertion": "r2-declared-in-aibom",
+        "from": "entity:scope:aibom-demo::inv:synthetic-source-reading::r2",
+        "key": "candidate:scope:aibom-demo::inv:synthetic-aibom::model-samename",
+        "match": "basename_only",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-samename",
+        "type": "candidate_match"
+      },
+      {
+        "assertion": "r3-declared-in-aibom",
+        "from": "entity:scope:aibom-demo::inv:synthetic-source-reading::r3",
+        "key": "candidate:scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+        "match": "locator_equal",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+        "type": "candidate_match"
+      },
+      {
+        "assertion": "r3-declared-in-aibom",
+        "from": "entity:scope:aibom-demo::inv:synthetic-source-reading::r3",
+        "key": "candidate:scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+        "match": "locator_equal",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+        "type": "candidate_match"
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "assesses",
+        "reason": "one AI-BOM model (model-unique) lists the source-stated acquisition locator",
+        "reason_code": "locator_equal_unique",
+        "relation": "supports",
+        "role": "aibom_document",
+        "to": "assertion:r1-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "assesses",
+        "reason": "1 model(s) match by name or basename only (locators differ or absent); name alone is not identity",
+        "reason_code": "candidates_without_locator_match",
+        "relation": "inconclusive",
+        "role": "aibom_document",
+        "to": "assertion:r2-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "assesses",
+        "reason": "2 AI-BOM models list the same locator; kept as candidates",
+        "reason_code": "ambiguous_model_identity",
+        "relation": "inconclusive",
+        "role": "aibom_document",
+        "to": "assertion:r3-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "assesses",
+        "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+        "reason_code": "no_matching_model_record",
+        "relation": "inconclusive",
+        "role": "aibom_document",
+        "to": "assertion:r4-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-samename",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-aibom",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-aibom::model-unique",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-src-r1",
+        "key": "assesses",
+        "reason": "docker/Dockerfile lines [1, 1] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:r1-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-src-r1",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r1",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-src-r2",
+        "key": "assesses",
+        "reason": "docker/Dockerfile lines [2, 2] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:r2-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-src-r2",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r2",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-src-r3",
+        "key": "assesses",
+        "reason": "docker/Dockerfile lines [3, 3] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:r3-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-src-r3",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r3",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:e-src-r4",
+        "key": "assesses",
+        "reason": "docker/Dockerfile lines [4, 4] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:r4-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e-src-r4",
+        "key": "observes",
+        "to": "entity:scope:aibom-demo::inv:synthetic-source-reading::r4",
+        "type": "observes"
+      }
+    ],
+    "nodes": [
+      {
+        "applicable": true,
+        "category": "declaration_agreement",
+        "declared_in": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "supported: unique locator match, no shared-source independence"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:r1-declared-in-aibom",
+        "next_action": null,
+        "object": {
+          "inventory_id": "inv:synthetic-aibom",
+          "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+        },
+        "origin": "illustrative",
+        "predicate": "declared_in_aibom",
+        "rationale": "Supported (declaration level): the AI-BOM and the source reference agree on the model's acquisition locator. AI-BOM occurrence and source observation refer to the same file(s) ['docker/Dockerfile']: their agreement is not independent verification.",
+        "reason_codes": [
+          "locator_equal_unique"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "same basename, different location: candidate only"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:r2-declared-in-aibom",
+        "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+        "object": {
+          "inventory_id": "inv:synthetic-aibom",
+          "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+        },
+        "origin": "illustrative",
+        "predicate": "declared_in_aibom",
+        "rationale": "Unverifiable: 1 model(s) match by name or basename only (locators differ or absent); name alone is not identity.",
+        "reason_codes": [
+          "candidates_without_locator_match"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "two AI-BOM models list the locator: ambiguous"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:r3-declared-in-aibom",
+        "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+        "object": {
+          "inventory_id": "inv:synthetic-aibom",
+          "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+        },
+        "origin": "illustrative",
+        "predicate": "declared_in_aibom",
+        "rationale": "Unverifiable: 2 AI-BOM models list the same locator; kept as candidates.",
+        "reason_codes": [
+          "ambiguous_model_identity"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "no AI-BOM record: unverifiable, not contradicted"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:r4-declared-in-aibom",
+        "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+        "object": {
+          "inventory_id": "inv:synthetic-aibom",
+          "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+        },
+        "origin": "illustrative",
+        "predicate": "declared_in_aibom",
+        "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+        "reason_codes": [
+          "no_matching_model_record"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+        "kind": "model",
+        "name": "dup-a",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "model-dup-a",
+          "inventory_id": "inv:synthetic-aibom",
+          "raw_pointer": "/components/2"
+        },
+        "type": "entity",
+        "version": "1"
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+        "kind": "model",
+        "name": "dup-b",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "model-dup-b",
+          "inventory_id": "inv:synthetic-aibom",
+          "raw_pointer": "/components/3"
+        },
+        "type": "entity",
+        "version": "1"
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-aibom::model-samename",
+        "kind": "model",
+        "name": "samename",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "model-samename",
+          "inventory_id": "inv:synthetic-aibom",
+          "raw_pointer": "/components/1"
+        },
+        "type": "entity",
+        "version": "1"
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-aibom::model-unique",
+        "kind": "model",
+        "name": "unique-detector",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "model-unique",
+          "inventory_id": "inv:synthetic-aibom",
+          "raw_pointer": "/components/0"
+        },
+        "type": "entity",
+        "version": "1"
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-source-reading::r1",
+        "kind": "model",
+        "name": "r1",
+        "origin": "illustrative",
+        "source": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "r1"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-source-reading::r2",
+        "kind": "model",
+        "name": "r2",
+        "origin": "illustrative",
+        "source": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "r2"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-source-reading::r3",
+        "kind": "model",
+        "name": "r3",
+        "origin": "illustrative",
+        "source": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "r3"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:aibom-demo::inv:synthetic-source-reading::r4",
+        "kind": "model",
+        "name": "r4",
+        "origin": "illustrative",
+        "source": {
+          "inventory_id": "inv:synthetic-source-reading",
+          "source_ref": "r4"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "evidence:e-aibom",
+        "limitations": [
+          "what the document says, not whether it is right",
+          "the document's coverage is only as stated in it",
+          "SYNTHETIC illustrative manifest; describes no real run"
+        ],
+        "method": "cyclonedx-1.6-intake",
+        "observation": {
+          "binding": {
+            "acquisition_limitations": [
+              "SYNTHETIC illustrative manifest; describes no real run"
+            ],
+            "conflicts": [],
+            "corroborated": null,
+            "declared": "0123456789abcdef0123456789abcdef01234567",
+            "level": "recorded",
+            "notes": [
+              "revision recorded by an acquisition manifest; the document's declaration agrees; not independently corroborated"
+            ],
+            "recorded": "0123456789abcdef0123456789abcdef01234567",
+            "revision": "0123456789abcdef0123456789abcdef01234567"
+          },
+          "counts": {
+            "by_type": {
+              "library": 1,
+              "machine-learning-model": 4
+            },
+            "components_total": 5,
+            "models": 4
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 1,
+            "format": "CycloneDX",
+            "raw_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c",
+            "serial_number": "urn:uuid:00000000-0000-4000-8000-000000000001",
+            "spec_version": "1.6",
+            "timestamp": "2026-01-01T00:00:00Z"
+          },
+          "kind": "aibom_document",
+          "limitations": [
+            "the document states no coverage (no compositions)",
+            "components[1]: model declares no hash (representable, but its digest cannot be verified)",
+            "components[2]: model declares no hash (representable, but its digest cannot be verified)",
+            "components[3]: model declares no hash (representable, but its digest cannot be verified)"
+          ],
+          "models": [
+            {
+              "bom_ref": "model-unique",
+              "external_references": [
+                {
+                  "type": "distribution",
+                  "url": "https://models.example.invalid/unique.tflite"
+                }
+              ],
+              "generator_properties": {},
+              "group": null,
+              "hashes": [
+                {
+                  "alg": "SHA-256",
+                  "content": "84c8f4dab26c5ab4986d98d187c64dfe9b993d9e9f770f039c34e0cae16d3bc0",
+                  "normalized_algorithm": "sha256"
+                }
+              ],
+              "locations": [
+                {
+                  "file": "docker/Dockerfile",
+                  "line": 10
+                }
+              ],
+              "name": "unique-detector",
+              "purl": null,
+              "raw_pointer": "/components/0",
+              "version": "1"
+            },
+            {
+              "bom_ref": "model-samename",
+              "external_references": [
+                {
+                  "type": "distribution",
+                  "url": "https://mirror.example.invalid/other/samename.tflite"
+                }
+              ],
+              "generator_properties": {},
+              "group": null,
+              "hashes": [],
+              "locations": [],
+              "name": "samename",
+              "purl": null,
+              "raw_pointer": "/components/1",
+              "version": "1"
+            },
+            {
+              "bom_ref": "model-dup-a",
+              "external_references": [
+                {
+                  "type": "distribution",
+                  "url": "https://models.example.invalid/dup.tflite"
+                }
+              ],
+              "generator_properties": {},
+              "group": null,
+              "hashes": [],
+              "locations": [],
+              "name": "dup-a",
+              "purl": null,
+              "raw_pointer": "/components/2",
+              "version": "1"
+            },
+            {
+              "bom_ref": "model-dup-b",
+              "external_references": [
+                {
+                  "type": "distribution",
+                  "url": "https://models.example.invalid/dup.tflite"
+                }
+              ],
+              "generator_properties": {},
+              "group": null,
+              "hashes": [],
+              "locations": [],
+              "name": "dup-b",
+              "purl": null,
+              "raw_pointer": "/components/3",
+              "version": "1"
+            }
+          ],
+          "producer": [
+            {
+              "name": "synthetic-aibom-generator",
+              "vendor": "illustrative",
+              "version": "0.0"
+            }
+          ],
+          "status": "ok",
+          "subject": {
+            "bom_ref": "subject",
+            "declared_revision": {
+              "basis": "metadata.component.version is a 40-hex string",
+              "value": "0123456789abcdef0123456789abcdef01234567"
+            },
+            "name": "synthetic-subject",
+            "type": "application",
+            "version": "0123456789abcdef0123456789abcdef01234567"
+          }
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "scope_id": "scope:aibom-demo",
+        "source_locator": "fixtures/illustrative/synthetic-mlbom.cdx.json",
+        "tool": "src/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:aibom-8c9acee73ca0"
+      },
+      {
+        "id": "evidence:e-src-r1",
+        "limitations": [
+          "synthetic text"
+        ],
+        "method": "synthetic",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile"
+          },
+          "excerpt": "RUN wget -O m.tflite https://models.example.invalid/unique.tflite",
+          "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+          "kind": "source_excerpt",
+          "lines": [
+            1,
+            1
+          ]
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "scope_id": "scope:aibom-demo",
+        "source_locator": "docker/Dockerfile",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile@synthetic"
+      },
+      {
+        "id": "evidence:e-src-r2",
+        "limitations": [
+          "synthetic text"
+        ],
+        "method": "synthetic",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile"
+          },
+          "excerpt": "RUN wget -O m.tflite https://origin.example.invalid/models/samename.tflite",
+          "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+          "kind": "source_excerpt",
+          "lines": [
+            2,
+            2
+          ]
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "scope_id": "scope:aibom-demo",
+        "source_locator": "docker/Dockerfile",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile@synthetic"
+      },
+      {
+        "id": "evidence:e-src-r3",
+        "limitations": [
+          "synthetic text"
+        ],
+        "method": "synthetic",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile"
+          },
+          "excerpt": "RUN wget -O m.tflite https://models.example.invalid/dup.tflite",
+          "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+          "kind": "source_excerpt",
+          "lines": [
+            3,
+            3
+          ]
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "scope_id": "scope:aibom-demo",
+        "source_locator": "docker/Dockerfile",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile@synthetic"
+      },
+      {
+        "id": "evidence:e-src-r4",
+        "limitations": [
+          "synthetic text"
+        ],
+        "method": "synthetic",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile"
+          },
+          "excerpt": "RUN wget -O m.tflite https://models.example.invalid/absent.tflite",
+          "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+          "kind": "source_excerpt",
+          "lines": [
+            4,
+            4
+          ]
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "scope_id": "scope:aibom-demo",
+        "source_locator": "docker/Dockerfile",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile@synthetic"
+      }
+    ]
+  },
+  "input_checks": [],
+  "notice": "ILLUSTRATIVE ONLY. Synthetic CycloneDX 1.6 ML-BOM and synthetic source text. Not a real AI-BOM, not about Frigate or any real repository; excluded from real-case summaries.",
+  "rules": [
+    {
+      "artifact_classes": {
+        "build_output": {
+          "meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes",
+          "required_scope": [
+            "build"
+          ]
+        },
+        "committed_file": {
+          "meaning": "digest of the file at the stated repository path and revision",
+          "required_scope": [
+            "revision"
+          ]
+        },
+        "external_acquisition": {
+          "meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision",
+          "required_scope": []
+        }
+      },
+      "rule_id": "model_identity.digest/2"
+    },
+    {
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1"
+    },
+    {
+      "meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2"
+    },
+    {
+      "meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1"
+    }
+  ],
+  "schema": "bombridge.result/2",
+  "summary": {
+    "illustrative": {
+      "illustrative assertion vs illustrative evidence": {
+        "applicability_unknown": 0,
+        "applicable_assessed": 4,
+        "assertions": 4,
+        "excluded_evidence": 0,
+        "not_applicable": 0,
+        "resolved": 1,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 0,
+          "supported": 1,
+          "unverifiable": 3
+        },
+        "unresolved": 3
+      }
+    },
+    "note": "Origin labels are provenance, not ground truth. No precision, recall or accuracy is computed.",
+    "real": {}
+  }
+}

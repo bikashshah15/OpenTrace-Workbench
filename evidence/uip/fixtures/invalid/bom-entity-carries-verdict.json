@@ -1,0 +1,80 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "actions": [
+   "source_access",
+   "ask_about_this"
+  ],
+  "answers": [
+   {
+    "body": "Recorded entity selected in this analysis.",
+    "question_id": "what_is_this",
+    "state": "inventory_reported"
+   },
+   {
+    "body": "It appears in the recorded inventory scope for this revision.",
+    "question_id": "why_here",
+    "state": "inventory_reported"
+   },
+   {
+    "body": "No assessment was performed for this record.",
+    "question_id": "comparison_established",
+    "state": "not_represented"
+   },
+   {
+    "body": "Runtime use, installation and deployed configuration are not established.",
+    "question_id": "what_unknown",
+    "state": "not_assessed"
+   }
+  ],
+  "badge": {
+   "kind": "neutral",
+   "label": "Record"
+  },
+  "binding": {
+   "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+   "assessment": {
+    "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+    "configuration": "config:fixture:f673dd289e88b82a",
+    "kind": "discovery",
+    "schema": "opentrace.bombridge_assessment/1",
+    "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+   },
+   "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/bom-lab",
+    "host": "github.com",
+    "name": "bom-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "evidence_rows": [],
+  "next_step": null,
+  "question_set": "bom_comparison",
+  "schema": "opentrace.workbench.inspector/1",
+  "selection": {
+   "canonical_ref": null,
+   "id": "ent-00",
+   "kind": "entity"
+  },
+  "sources_coverage": {
+   "available": true,
+   "items": [
+    "Original artifact digest is recorded in the scan."
+   ]
+  },
+  "tab": "bom",
+  "title": "Entity 00"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "inspector",
+ "sequence": null
+}

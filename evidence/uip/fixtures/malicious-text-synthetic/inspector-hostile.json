@@ -1,0 +1,66 @@
+{
+ "actions": [
+  "source_access",
+  "ask_about_this"
+ ],
+ "answers": [
+  {
+   "body": "Recorded file selected in this analysis.",
+   "question_id": "what_is_this",
+   "state": "inventory_reported"
+  },
+  {
+   "body": "It appears in the recorded inventory scope for this revision.",
+   "question_id": "why_here",
+   "state": "inventory_reported"
+  },
+  {
+   "body": "This record is not a security assessment.",
+   "question_id": "security_concern",
+   "state": "not_applicable"
+  },
+  {
+   "body": "Runtime use, installation and deployed configuration are not established.",
+   "question_id": "what_unknown",
+   "state": "not_assessed"
+  }
+ ],
+ "badge": {
+  "kind": "context",
+  "label": "Repository context"
+ },
+ "binding": {
+  "analysis_digest": "sha256:8e657b60a1d708f2624eff200c17238bb95a008fdedf1641c9f5b56a4f87fcf7",
+  "assessment": null,
+  "commit_sha": "6677b0f7096aa4a2756460807ffa16fa8b9e1882",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/hostile-lab",
+   "host": "github.com",
+   "name": "hostile-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "evidence_rows": [],
+ "next_step": null,
+ "question_set": "context_four",
+ "schema": "opentrace.workbench.inspector/1",
+ "selection": {
+  "canonical_ref": null,
+  "id": "ctx:aaa9402664f1a41f40ebbc52",
+  "kind": "file"
+ },
+ "sources_coverage": {
+  "available": true,
+  "items": [
+   "Original artifact digest is recorded in the scan."
+  ]
+ },
+ "tab": "contexts",
+ "title": "\"><img src=x onerror=alert(1)>"
+}

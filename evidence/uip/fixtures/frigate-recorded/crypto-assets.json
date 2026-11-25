@@ -1,0 +1,255 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "The captured CBOM lists no cryptographic assets. This does not show that no cryptography is used.",
+  "reason_code": "no_applicable_assets",
+  "state": "completed_empty"
+ },
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 12.9.0"
+   },
+   "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [
+  {
+   "endpoint_text": "['/config', '/config/raw', '/config/raw_paths', '/config/save', '/config/schema.json', '/config/set', '/ffmpeg/presets', '/genai/models', '/genai/probe', '/profile/active', '/audio_labels', '/labels', '/media/sync/current', '/media/sync/status/{job_id}', '/profiles', '/recognized_license_plates', '/sub_labels', '/timeline/hourly', '/logs/{service}', '/metrics', '/nvinfo', '/plus/models', '/restart', '/stats', '/stats/history', '/media/sync', '/timeline', '/vainfo', '/version']",
+   "name": "frigate/api/app-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/0"
+  },
+  {
+   "endpoint_text": "['/auth', '/users', '/users/{username}', '/auth/first_time_login', '/login', ' https://frigate_ip:8971/api/profile\\\\n```', '/logout', '/profile', '/users/{username}/password', '/users/{username}/role']",
+   "name": "frigate/api/auth-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/1"
+  },
+  {
+   "endpoint_text": "['/vlm/monitor', '/chat/completion', '/chat/execute', '/chat/tools']",
+   "name": "frigate/api/chat-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/2"
+  },
+  {
+   "endpoint_text": "['/classification/{name}/dataset/categorize', '/classification/{name}/dataset/{category}/create', '/faces/{name}/create', '/classification/{name}/dataset/{category}/delete', '/classification/{name}', '/classification/{name}/train/delete', '/faces/{name}/delete', '/classification/generate_examples/object', '/classification/generate_examples/state', '/classification/{name}/dataset', '/classification/{name}/train', '/classification/attributes', '/faces', '/classification/{name}/dataset/{category}/reclassify', ",
+   "name": "frigate/api/classification-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/3"
+  },
+  {
+   "endpoint_text": "['/debug_replay/status', '/debug_replay/start', '/debug_replay/start_from_export', '/debug_replay/stop']",
+   "name": "frigate/api/debug_replay-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/4"
+  },
+  {
+   "endpoint_text": "['/events/{camera_name}/{label}/create', '/trigger/embedding', '/events/{event_id}', '/events/', '/events/{event_id}/retain', '/events/{event_id}/end', '/event_ids', '/events', '/events/explore', '/events/search', '/events/summary', '/events/{event_id}/false_positive', '/description/generate', '/events/{event_id}/description/regenerate', '/events/{event_id}/plus', '/events/{event_id}/attributes', '/events/{event_id}/description', '/events/{event_id}/recognized_license_plate', '/events/{event_id}/sub_label']",
+   "name": "frigate/api/event-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/5"
+  },
+  {
+   "endpoint_text": "['/{camera_name}/ptz/info', '/{camera_name}/recordings/{frame_time}/snapshot.{format}', '/{camera_name}/latest.{extension}', '/{camera_name}', '/{camera_name}/start/{start_ts}/end/{end_ts}/clip.mp4', '/{camera_name}/plus/{frame_time}', '/vod/event/{event_id}', 'Returns an HLS playlist for the specified object. Append /master.m3u8 or /index.m3u8 for HLS playback.', '/{camera_name}/region_grid', '/events/{event_id}/clip.mp4', '/events/{event_id}/preview.gif', '/events/{event_id}/snapshot.jpg', '/events/{event",
+   "name": "frigate/api/media-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/6"
+  },
+  {
+   "endpoint_text": "['/{camera_name}/search/motion/{job_id}/cancel', '/{camera_name}/search/motion/{job_id}', '/{camera_name}/search/motion']",
+   "name": "frigate/api/motion_search-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/7"
+  },
+  {
+   "endpoint_text": "['/notifications/pubkey', '/notifications/register']",
+   "name": "frigate/api/notification-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/8"
+  },
+  {
+   "endpoint_text": "['/preview/{camera_name}/start/{start_ts}/end/{end_ts}/frames', '/preview/{year_month}/{day}/{hour}/{camera_name}/{tz_name}', 'America/New_York', '/preview/{camera_name}/start/{start_ts}/end/{end_ts}']",
+   "name": "frigate/api/preview-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/9"
+  },
+  {
+   "endpoint_text": "['/recordings/summary', '/recordings/start/{start}/end/{end}', '/recordings/storage', '/recordings/unavailable', '/{camera_name}/recordings', '/{camera_name}/recordings/summary']",
+   "name": "frigate/api/record-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/10"
+  },
+  {
+   "endpoint_text": "['/reviews/delete', '/review/summarize/start/{start_ts}/end/{end_ts}', '/review/{review_id}', '/review/event/{event_id}', '/review/activity/motion', '/review', '/review_ids', '/review/summary', '/reviews/viewed', '/review/{review_id}/viewed']",
+   "name": "frigate/api/review-py-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/11"
+  },
+  {
+   "endpoint_text": "['rtsp://host/{FRIGATE_FOO:>5}/stream']",
+   "name": "test_env-service",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/services",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": null
+   },
+   "service_id": "art:inv:cdxgen-cbom/services/12"
+  }
+ ],
+ "services_counts": {
+  "shown": 13,
+  "total": 13,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

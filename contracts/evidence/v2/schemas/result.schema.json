@@ -1,0 +1,1242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.opentrace.invalid/evidence/v2/result.schema.json",
+  "title": "result",
+  "type": "object",
+  "required": [
+    "kind",
+    "schema_version",
+    "task_id",
+    "run_id",
+    "producer",
+    "context",
+    "status",
+    "evidence",
+    "claims",
+    "artifacts",
+    "missing_evidence",
+    "warnings",
+    "errors",
+    "completed_at"
+  ],
+  "properties": {
+    "kind": {
+      "const": "result"
+    },
+    "schema_version": {
+      "$ref": "common.schema.json#/$defs/schema_version"
+    },
+    "task_id": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "run_id": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "service_id",
+        "implementation",
+        "capability_version",
+        "operations_used",
+        "dimensions_used"
+      ],
+      "properties": {
+        "service_id": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "implementation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "capability_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+$"
+        },
+        "operations_used": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/operation"
+          }
+        },
+        "dimensions_used": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/dimension"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "context": {
+      "$ref": "common.schema.json#/$defs/context"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial",
+        "failed",
+        "unsupported"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/$defs/evidence_item"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/produced_artifact"
+      }
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "requirement_id",
+          "dimension",
+          "reason"
+        ],
+        "properties": {
+          "requirement_id": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "dimension": {
+            "$ref": "common.schema.json#/$defs/dimension"
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "unsupported_dimension",
+              "unsupported_operation",
+              "input_unavailable",
+              "worker_failed",
+              "incomplete_query",
+              "version_missing",
+              "record_unavailable",
+              "analyzer_error",
+              "toolchain_mismatch",
+              "sandbox_unavailable",
+              "capture_unavailable",
+              "module_unavailable"
+            ]
+          },
+          "detail": {
+            "$ref": "common.schema.json#/$defs/short_text"
+          },
+          "query_key": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/short_text"
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/error"
+      }
+    },
+    "completed_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "capture_set_id": {
+      "$ref": "common.schema.json#/$defs/capture_set_id"
+    },
+    "change_result": {
+      "type": "object",
+      "required": [
+        "variant",
+        "baseline_revision",
+        "candidate_id",
+        "patch_digest",
+        "patch_files",
+        "unexpected_changes",
+        "oracle_files_unchanged",
+        "environment",
+        "environment_digest",
+        "check_spec_digest",
+        "checks",
+        "comparison_limits"
+      ],
+      "properties": {
+        "variant": {
+          "type": "string",
+          "enum": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        "baseline_revision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "candidate_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 128
+        },
+        "patch_digest": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "patch_files": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "unexpected_changes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "oracle_files_unchanged": {
+          "type": "boolean"
+        },
+        "environment": {
+          "type": "object"
+        },
+        "environment_digest": {
+          "$ref": "common.schema.json#/$defs/digest"
+        },
+        "check_spec_digest": {
+          "$ref": "common.schema.json#/$defs/digest"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "comparison_limits": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/short_text"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "evidence_item": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "dimension",
+        "kind",
+        "subject",
+        "artifact_ref",
+        "locator",
+        "observation",
+        "collection_method",
+        "scope",
+        "limitations",
+        "observed_at"
+      ],
+      "properties": {
+        "evidence_id": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "dimension": {
+          "$ref": "common.schema.json#/$defs/dimension"
+        },
+        "kind": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,63}$"
+        },
+        "subject": {
+          "type": "object",
+          "required": [
+            "module",
+            "version",
+            "indirect"
+          ],
+          "properties": {
+            "module": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "indirect": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "artifact_ref": {
+          "$ref": "common.schema.json#/$defs/artifact_ref"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "observation": {
+          "$ref": "common.schema.json#/$defs/short_text"
+        },
+        "collection_method": {
+          "type": "object",
+          "required": [
+            "tool",
+            "tool_version",
+            "argv_template",
+            "output_artifact"
+          ],
+          "properties": {
+            "tool": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "tool_version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "argv_template": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "maxLength": 100
+              }
+            },
+            "output_artifact": {
+              "$ref": "common.schema.json#/$defs/digest"
+            }
+          },
+          "additionalProperties": false
+        },
+        "scope": {
+          "$ref": "common.schema.json#/$defs/short_text"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/short_text"
+          }
+        },
+        "observed_at": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "advisory_match"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "query_key",
+                  "matched_version",
+                  "vuln_id",
+                  "aliases",
+                  "related",
+                  "record_artifact",
+                  "withdrawn",
+                  "severity",
+                  "affected_events",
+                  "range_check"
+                ],
+                "properties": {
+                  "query_key": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "matched_version": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "vuln_id": {
+                    "$ref": "common.schema.json#/$defs/vuln_id"
+                  },
+                  "aliases": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "related": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "record_artifact": {
+                    "$ref": "common.schema.json#/$defs/digest"
+                  },
+                  "withdrawn": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "severity": {
+                    "type": [
+                      "array",
+                      "string"
+                    ]
+                  },
+                  "affected_events": {
+                    "type": "array"
+                  },
+                  "range_check": {
+                    "type": "string",
+                    "enum": [
+                      "consistent",
+                      "inconsistent",
+                      "not_evaluated"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "osv_query_complete"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "capture_set_id",
+                  "queries"
+                ],
+                "properties": {
+                  "capture_set_id": {
+                    "$ref": "common.schema.json#/$defs/capture_set_id"
+                  },
+                  "queries": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "query_key",
+                        "pages",
+                        "all_pages_complete",
+                        "returned_count",
+                        "active_count"
+                      ],
+                      "properties": {
+                        "query_key": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "pages": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "all_pages_complete": {
+                          "type": "boolean"
+                        },
+                        "returned_count": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "active_count": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "govulncheck_scope"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "scan_mode",
+                  "scanner_version",
+                  "go_version",
+                  "goos",
+                  "goarch",
+                  "cgo",
+                  "build_tags",
+                  "db_url",
+                  "db_last_modified",
+                  "analyzed_patterns",
+                  "stream_complete",
+                  "main_module"
+                ],
+                "properties": {
+                  "scan_mode": {
+                    "const": "source"
+                  },
+                  "scanner_version": {
+                    "type": "string"
+                  },
+                  "go_version": {
+                    "type": "string"
+                  },
+                  "goos": {
+                    "type": "string"
+                  },
+                  "goarch": {
+                    "type": "string"
+                  },
+                  "cgo": {
+                    "type": "boolean"
+                  },
+                  "build_tags": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "db_url": {
+                    "type": "string"
+                  },
+                  "db_last_modified": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "analyzed_patterns": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "stream_complete": {
+                    "const": true
+                  },
+                  "main_module": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "vuln_module_required"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "vuln_id",
+                  "level",
+                  "module"
+                ],
+                "properties": {
+                  "vuln_id": {
+                    "$ref": "common.schema.json#/$defs/vuln_id"
+                  },
+                  "level": {
+                    "type": "string",
+                    "enum": [
+                      "module",
+                      "package",
+                      "symbol"
+                    ]
+                  },
+                  "module": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixed_version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "trace": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "module",
+                        "package",
+                        "function",
+                        "position"
+                      ],
+                      "properties": {
+                        "module": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "package": {
+                          "type": "string"
+                        },
+                        "function": {
+                          "type": "string"
+                        },
+                        "receiver": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "position": {
+                          "type": "object",
+                          "required": [
+                            "file",
+                            "line",
+                            "column"
+                          ],
+                          "properties": {
+                            "file": {
+                              "type": "string"
+                            },
+                            "line": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "column": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "vuln_package_imported"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "vuln_id",
+                  "level",
+                  "module"
+                ],
+                "properties": {
+                  "vuln_id": {
+                    "$ref": "common.schema.json#/$defs/vuln_id"
+                  },
+                  "level": {
+                    "type": "string",
+                    "enum": [
+                      "module",
+                      "package",
+                      "symbol"
+                    ]
+                  },
+                  "module": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixed_version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "trace": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "module",
+                        "package",
+                        "function",
+                        "position"
+                      ],
+                      "properties": {
+                        "module": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "package": {
+                          "type": "string"
+                        },
+                        "function": {
+                          "type": "string"
+                        },
+                        "receiver": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "position": {
+                          "type": "object",
+                          "required": [
+                            "file",
+                            "line",
+                            "column"
+                          ],
+                          "properties": {
+                            "file": {
+                              "type": "string"
+                            },
+                            "line": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "column": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "vuln_call_path"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "vuln_id",
+                  "level",
+                  "module",
+                  "trace"
+                ],
+                "properties": {
+                  "vuln_id": {
+                    "$ref": "common.schema.json#/$defs/vuln_id"
+                  },
+                  "level": {
+                    "type": "string",
+                    "enum": [
+                      "module",
+                      "package",
+                      "symbol"
+                    ]
+                  },
+                  "module": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "fixed_version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "trace": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "module",
+                        "package",
+                        "function",
+                        "position"
+                      ],
+                      "properties": {
+                        "module": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "package": {
+                          "type": "string"
+                        },
+                        "function": {
+                          "type": "string"
+                        },
+                        "receiver": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "position": {
+                          "type": "object",
+                          "required": [
+                            "file",
+                            "line",
+                            "column"
+                          ],
+                          "properties": {
+                            "file": {
+                              "type": "string"
+                            },
+                            "line": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "column": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "check_result"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "details"
+            ],
+            "properties": {
+              "details": {
+                "type": "object",
+                "required": [
+                  "variant",
+                  "check_id",
+                  "argv_template",
+                  "required",
+                  "outcome",
+                  "exit_code",
+                  "duration_ms",
+                  "output_artifact"
+                ],
+                "properties": {
+                  "variant": {
+                    "type": "string",
+                    "enum": [
+                      "baseline",
+                      "candidate"
+                    ]
+                  },
+                  "check_id": {
+                    "$ref": "common.schema.json#/$defs/identifier"
+                  },
+                  "argv_template": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "required": {
+                    "type": "boolean"
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "enum": [
+                      "passed",
+                      "failed",
+                      "timeout",
+                      "error",
+                      "not_run"
+                    ]
+                  },
+                  "exit_code": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "duration_ms": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "output_artifact": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^sha256:[0-9a-f]{64}$"
+                  },
+                  "tests_passed": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "tests_failed": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "failed_tests": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "claim_id",
+        "type",
+        "dimension",
+        "proposition",
+        "evidence_ids",
+        "status",
+        "explanation"
+      ],
+      "properties": {
+        "claim_id": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,63}$"
+        },
+        "dimension": {
+          "$ref": "common.schema.json#/$defs/dimension"
+        },
+        "proposition": {
+          "$ref": "common.schema.json#/$defs/short_text"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "supported",
+            "contradicted",
+            "unknown",
+            "hypothetical"
+          ]
+        },
+        "explanation": {
+          "$ref": "common.schema.json#/$defs/short_text"
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "call_path_not_established"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "const": "unknown"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "advisory_matches_version",
+                  "static_call_path_found",
+                  "call_path_not_established",
+                  "vulnerable_package_imported"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "vuln_id"
+            ],
+            "properties": {
+              "vuln_id": {
+                "$ref": "common.schema.json#/$defs/vuln_id"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "no_advisory_match_returned"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "query_key"
+            ],
+            "properties": {
+              "query_key": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "check_passed",
+                  "check_failed"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "check_id",
+              "variant"
+            ],
+            "properties": {
+              "check_id": {
+                "$ref": "common.schema.json#/$defs/identifier"
+              },
+              "variant": {
+                "type": "string",
+                "enum": [
+                  "baseline",
+                  "candidate"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "produced_artifact": {
+      "type": "object",
+      "required": [
+        "digest",
+        "media_type",
+        "bytes",
+        "content_b64",
+        "producer",
+        "source_ref",
+        "captured_at",
+        "role"
+      ],
+      "properties": {
+        "digest": {
+          "$ref": "common.schema.json#/$defs/digest"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1048576
+        },
+        "content_b64": {
+          "type": "string",
+          "maxLength": 1398104,
+          "pattern": "^[A-Za-z0-9+/]*={0,2}$"
+        },
+        "producer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "source_ref": {
+          "$ref": "common.schema.json#/$defs/digest"
+        },
+        "captured_at": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

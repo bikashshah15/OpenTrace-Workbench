@@ -1,0 +1,2818 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "binding": {
+   "analysis_digest": "sha256:f46350943bc00875cf3f9d8bffdc58c9d8e7eec95cb69df4a9b5d9c3fd453fd1",
+   "assessment": null,
+   "commit_sha": "3656a98ab5e7e50529b048c48ffa04d22e0dd31c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/sample-web",
+    "host": "github.com",
+    "name": "sample-web",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "context": {
+   "context_id": "ctx:7e96620179214ba618ffff36",
+   "path": "app/package-lock.json"
+  },
+  "counts": {
+   "shown": 30,
+   "total": 82,
+   "truncated": true
+  },
+  "edges": [
+   {
+    "edge_id": "e0",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e1",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e2",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e3",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e4",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e5",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e6",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e7",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e8",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e9",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e10",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e11",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e12",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e13",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e14",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e15",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e16",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e17",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e18",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e19",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e20",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e21",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e22",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e23",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e24",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e25",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e26",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e27",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e28",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e29",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e30",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e31",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e32",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e33",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e34",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e35",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e36",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e37",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e38",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e39",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e40",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e41",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e42",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e43",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e44",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e45",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e46",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e47",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e48",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e49",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e50",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e51",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e52",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e53",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e54",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e55",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e56",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e57",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e58",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e59",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e60",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e61",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e62",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e63",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e64",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e65",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e66",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e67",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e68",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e69",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e70",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e71",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e72",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e73",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e74",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e75",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e76",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e77",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e78",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e79",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e80",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e81",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e82",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e83",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e84",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e85",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e86",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e87",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e88",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e89",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e90",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e91",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e92",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e93",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e94",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e95",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e96",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e97",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e98",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e99",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e100",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e101",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e102",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e103",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e104",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e105",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e106",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e107",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e108",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e109",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e110",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e111",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e112",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e113",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e114",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e115",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e116",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e117",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e118",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e119",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e120",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e121",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e122",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e123",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e124",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e125",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e126",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e127",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e128",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e129",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e130",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e131",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e132",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e133",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e134",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e135",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e136",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e137",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e138",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e139",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e140",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e141",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e142",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e143",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e144",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e145",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e146",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e147",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e148",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e149",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e150",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e151",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e152",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e153",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e154",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e155",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e156",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e157",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e158",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e159",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e160",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e161",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e162",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e163",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e164",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e165",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e166",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e167",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e168",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e169",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e170",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e171",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e172",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e173",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e174",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e175",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e176",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e177",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e178",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e179",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e180",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e181",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e182",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e183",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e184",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e185",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e186",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e187",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e188",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e189",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e190",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e191",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e192",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e193",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e194",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e195",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e196",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e197",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e198",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e199",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e200",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e201",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e202",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e203",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e204",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e205",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e206",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e207",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e208",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e209",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e210",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e211",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e212",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e213",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e214",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e215",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e216",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e217",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e218",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e219",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e220",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e221",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e222",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e223",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e224",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e225",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e226",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e227",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e228",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e229",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e230",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e231",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e232",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e233",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e234",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e235",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e236",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e237",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e238",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e239",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   },
+   {
+    "edge_id": "e240",
+    "from": "pkg:root",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/e995f9"
+    ],
+    "to": "pkg:dep-001"
+   }
+  ],
+  "filter": "all",
+  "filter_totals": {
+   "advisory": 4,
+   "all": 82,
+   "direct": 82,
+   "evidence_gaps": 6,
+   "transitive": 0
+  },
+  "focus": {
+   "basis": "graph_root",
+   "candidates_total": 1,
+   "node_id": "pkg:root"
+  },
+  "limits": {
+   "connectors_shown": 0,
+   "connectors_truncated": false,
+   "edges_truncated": false
+  },
+  "lookup": {
+   "counts_by_state": {
+    "match": 4,
+    "missing_version": 1,
+    "no_match": 74,
+    "not_run": 1,
+    "unavailable": 1,
+    "unsupported": 1
+   },
+   "explanation": null,
+   "mode": "recorded"
+  },
+  "nodes": [
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 0,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "root-app",
+    "node_id": "pkg:root",
+    "path_state": "complete",
+    "role": "focus",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-001",
+    "node_id": "pkg:dep-001",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.1.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-002",
+    "node_id": "pkg:dep-002",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.2.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-003",
+    "node_id": "pkg:dep-003",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.3.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-004",
+    "node_id": "pkg:dep-004",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.4.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-005",
+    "node_id": "pkg:dep-005",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.5.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-006",
+    "node_id": "pkg:dep-006",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.6.0"
+   },
+   {
+    "advisory_lookup": "match",
+    "advisory_match_count": 1,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-007",
+    "node_id": "pkg:dep-007",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.7.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-008",
+    "node_id": "pkg:dep-008",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.8.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-009",
+    "node_id": "pkg:dep-009",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.9.0"
+   },
+   {
+    "advisory_lookup": "unavailable",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "dep-010",
+    "node_id": "pkg:dep-010",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.10.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-011",
+    "node_id": "pkg:dep-011",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.11.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-012",
+    "node_id": "pkg:dep-012",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.12.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-013",
+    "node_id": "pkg:dep-013",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.13.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-014",
+    "node_id": "pkg:dep-014",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.14.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "missing_source_location"
+    ],
+    "has_source_location": false,
+    "name": "dep-015",
+    "node_id": "pkg:dep-015",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.15.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "missing_source_location"
+    ],
+    "has_source_location": false,
+    "name": "dep-016",
+    "node_id": "pkg:dep-016",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.16.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-017",
+    "node_id": "pkg:dep-017",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.17.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-018",
+    "node_id": "pkg:dep-018",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.18.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-019",
+    "node_id": "pkg:dep-019",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.19.0"
+   },
+   {
+    "advisory_lookup": "missing_version",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "dep-020",
+    "node_id": "pkg:dep-020",
+    "path_state": "complete",
+    "role": "match",
+    "version": null
+   },
+   {
+    "advisory_lookup": "match",
+    "advisory_match_count": 1,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-021",
+    "node_id": "pkg:dep-021",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.21.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-022",
+    "node_id": "pkg:dep-022",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.22.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-023",
+    "node_id": "pkg:dep-023",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.23.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-024",
+    "node_id": "pkg:dep-024",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.24.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-025",
+    "node_id": "pkg:dep-025",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.25.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-026",
+    "node_id": "pkg:dep-026",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.26.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-027",
+    "node_id": "pkg:dep-027",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.27.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-028",
+    "node_id": "pkg:dep-028",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.28.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "dep-029",
+    "node_id": "pkg:dep-029",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.29.0"
+   },
+   {
+    "advisory_lookup": "unsupported",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "dep-030",
+    "node_id": "pkg:dep-030",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.30.0"
+   }
+  ],
+  "page": {
+   "has_more": true,
+   "matches_shown": 30,
+   "matches_total": 82,
+   "offset": 0,
+   "range_first": 1,
+   "range_last": 30,
+   "size": 30
+  },
+  "query": "",
+  "schema": "opentrace.workbench.dependency_page/1"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "dependency_page",
+ "sequence": null
+}

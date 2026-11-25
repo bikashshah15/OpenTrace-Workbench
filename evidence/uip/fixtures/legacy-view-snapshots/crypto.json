@@ -1,0 +1,1078 @@
+{
+ "cards": [
+  {
+   "artifact_id": "art:inv:cdxgen-cbom",
+   "binding_conflicts": [],
+   "binding_label": "none",
+   "binding_notes": [
+    "no declared revision and no acquisition manifest"
+   ],
+   "inventory_id": "inv:cdxgen-cbom",
+   "kind": "cbom",
+   "producer": "cdxgen 12.9.0",
+   "provenance_status": "unknown",
+   "record_count": 0,
+   "record_count_unit": "crypto_assets",
+   "record_counts": {
+    "crypto_assets": 0,
+    "services": 13
+   },
+   "scope": {
+    "basis": "git archive of the pinned revision (acquisition manifest)",
+    "file_count": 343,
+    "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+    "paths": [
+     "frigate"
+    ],
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+   "state": "acquired"
+  },
+  {
+   "artifact_id": "art:inv:cisco-aibom",
+   "binding_conflicts": [],
+   "binding_label": "none",
+   "binding_notes": [
+    "no declared revision and no acquisition manifest"
+   ],
+   "inventory_id": "inv:cisco-aibom",
+   "kind": "aibom",
+   "producer": "cisco-aibom 1.10.0",
+   "provenance_status": "unknown",
+   "record_count": 1,
+   "record_count_unit": "models",
+   "record_counts": {
+    "models": 1
+   },
+   "scope": {
+    "basis": "git archive of the pinned revision (acquisition manifest)",
+    "file_count": 153,
+    "listing_sha256": "540af848448658a7589006c59c4f455c3b7e2aeef44d99d8f63525b4e9345d86",
+    "paths": [
+     "frigate/detectors",
+     "frigate/config",
+     "docker/main"
+    ],
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6",
+   "state": "acquired"
+  },
+  {
+   "artifact_id": "art:inv:syft-source-dir",
+   "binding_conflicts": [],
+   "binding_label": null,
+   "binding_notes": [],
+   "inventory_id": "inv:syft-source-dir",
+   "kind": "sbom",
+   "producer": "syft 1.51.1",
+   "provenance_status": "recorded_unverified",
+   "record_count": 1989,
+   "record_count_unit": "components",
+   "record_counts": {
+    "components": 1989
+   },
+   "scope": {
+    "basis": "whole checkout directory at the pinned revision (syft scan dir:.); file count not enumerated here",
+    "file_count": null,
+    "paths": [
+     "."
+    ],
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7",
+   "state": "acquired"
+  }
+ ],
+ "checks": [
+  {
+   "assertion_id": "p4-model-hashed-with-md5",
+   "bounded_meaning": null,
+   "category": null,
+   "excluded_evidence": [],
+   "family": "software",
+   "layers": null,
+   "next_action": null,
+   "not_established": [],
+   "provenance_note": null,
+   "rationale": "Unverifiable: no rule is implemented for crypto_attribution/hashes_model_with; applicability not established. The relationship is a declaration only.",
+   "reason_codes": [
+    "rule_not_implemented"
+   ],
+   "rule_id": null,
+   "state": "unverifiable",
+   "used_evidence": []
+  },
+  {
+   "assertion_id": "p8-md5-call-represented-in-cdxgen-cbom",
+   "bounded_meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+   "category": null,
+   "excluded_evidence": [
+    {
+     "detail": "the excerpt is not in frigate/detectors/detector_config.py or does not name md5",
+     "evidence_id": "ev11-md5-model-hash-call",
+     "reason_code": "location_or_algorithm_not_in_excerpt"
+    }
+   ],
+   "family": "crypto",
+   "layers": {
+    "algorithm_record": false,
+    "integrity_verification": false,
+    "library_mentioned": false,
+    "matching_call_site": false,
+    "referenced_by_source": true,
+    "runtime_execution": false
+   },
+   "next_action": "resolve the named scope or location gap, then re-run",
+   "not_established": [
+    "that the code runs",
+    "what data is hashed",
+    "integrity verification of any artifact",
+    "that the algorithm is a vulnerability here",
+    "protection of the model by any TLS or other crypto component",
+    "independent verification"
+   ],
+   "provenance_note": "No shared source file is recorded; this does not prove independence. The CBOM was produced by a third-party generator and the source observation is a separate reading, but both read the same file at the same revision, so agreement would still be declaration-level.",
+   "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+   "reason_codes": [
+    "no_algorithm_record"
+   ],
+   "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+   "state": "unverifiable",
+   "used_evidence": [
+    {
+     "evidence_id": "ev10-md5-model-hash",
+     "reason": "frigate/detectors/detector_config.py lines [218, 220] show the md5 call",
+     "reason_code": "operation_in_source_excerpt",
+     "relation": "context",
+     "role": "source_reference"
+    },
+    {
+     "evidence_id": "ev20-cdxgen-cbom",
+     "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+     "reason_code": "no_algorithm_record",
+     "relation": "inconclusive",
+     "role": "cbom_document"
+    }
+   ]
+  }
+ ],
+ "crypto_asset_total": 0,
+ "edges": [
+  {
+   "from": "assertion:p4-model-hashed-with-md5",
+   "key": "subject",
+   "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+   "type": "subject"
+  },
+  {
+   "from": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "key": "object",
+   "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+   "type": "object"
+  },
+  {
+   "from": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "key": "subject",
+   "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+   "type": "subject"
+  },
+  {
+   "from": "evidence:ev10-md5-model-hash",
+   "key": "assesses",
+   "reason": "frigate/detectors/detector_config.py lines [218, 220] show the md5 call",
+   "reason_code": "operation_in_source_excerpt",
+   "relation": "context",
+   "role": "source_reference",
+   "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "type": "assesses",
+   "used": true
+  },
+  {
+   "from": "evidence:ev11-md5-model-hash-call",
+   "key": "excluded",
+   "reason": "the excerpt is not in frigate/detectors/detector_config.py or does not name md5",
+   "reason_code": "location_or_algorithm_not_in_excerpt",
+   "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "type": "excluded_from",
+   "used": false
+  },
+  {
+   "from": "evidence:ev20-cdxgen-cbom",
+   "key": "assesses",
+   "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+   "reason_code": "no_algorithm_record",
+   "relation": "inconclusive",
+   "role": "cbom_document",
+   "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "type": "assesses",
+   "used": true
+  }
+ ],
+ "generation": 1,
+ "inspector": null,
+ "limitations": [
+  {
+   "origin": "curated",
+   "type": "capture_coverage",
+   "unavailable": [],
+   "unknown": [
+    "build",
+    "model",
+    "execution"
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "applicable": null,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "assertion",
+    "record_id": "assertion:p4-model-hashed-with-md5"
+   },
+   "category": null,
+   "declared_in": {
+    "inventory_id": "inv:curated-source-reading",
+    "source_ref": "frigate/detectors/detector_config.py (compute_model_hash); frigate/config/config.py"
+   },
+   "depends_on_configuration": false,
+   "evaluation": "curated assertion vs no used evidence",
+   "family": "crypto_attribution",
+   "id": "assertion:p4-model-hashed-with-md5",
+   "next_action": null,
+   "object": "md5",
+   "origin": "curated",
+   "predicate": "hashes_model_with",
+   "rationale": "Unverifiable: no rule is implemented for crypto_attribution/hashes_model_with; applicability not established. The relationship is a declaration only.",
+   "reason_codes": [
+    "rule_not_implemented"
+   ],
+   "rule_id": null,
+   "scope": {
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "state": "unverifiable",
+   "type": "assertion"
+  },
+  {
+   "applicable": true,
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "assertion",
+    "record_id": "assertion:p8-md5-call-represented-in-cdxgen-cbom"
+   },
+   "category": null,
+   "declared_in": {
+    "inventory_id": "inv:curated-source-reading",
+    "source_ref": "frigate/detectors/detector_config.py:218-220 (researcher reading); question: does cdxgen 12.9.0 represent this MD5 call?"
+   },
+   "depends_on_configuration": false,
+   "evaluation": "curated assertion vs captured evidence",
+   "family": "crypto_attribution",
+   "id": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+   "next_action": "resolve the named scope or location gap, then re-run",
+   "object": {
+    "algorithm": "md5",
+    "file": "frigate/detectors/detector_config.py",
+    "inventory_entity": "scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+    "inventory_id": "inv:cdxgen-cbom",
+    "inventory_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+    "producer": {
+     "name": "cdxgen",
+     "version": "12.9.0"
+    }
+   },
+   "origin": "curated",
+   "predicate": "operation_declared_in_cbom",
+   "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+   "reason_codes": [
+    "no_algorithm_record"
+   ],
+   "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+   "scope": {
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "state": "unverifiable",
+   "type": "assertion"
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "entity",
+    "record_id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom"
+   },
+   "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+   "kind": "inventory",
+   "name": "cdxgen CBOM document",
+   "origin": "curated",
+   "source": {
+    "inventory_id": "inv:curated-source-reading",
+    "source_ref": "inventory-cdxgen-cbom"
+   },
+   "type": "entity",
+   "version": null
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "entity",
+    "record_id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash"
+   },
+   "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+   "kind": "code_location",
+   "name": "ModelConfig.compute_model_hash (frigate/detectors/detector_config.py)",
+   "origin": "curated",
+   "source": {
+    "inventory_id": "inv:curated-source-reading",
+    "source_ref": "md5-model-hash"
+   },
+   "type": "entity",
+   "version": null
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "evidence",
+    "record_id": "evidence:ev10-md5-model-hash"
+   },
+   "id": "evidence:ev10-md5-model-hash",
+   "limitations": [
+    "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+    "source pattern; does not show this runs, nor that the hash is used for security"
+   ],
+   "method": "verbatim-snippet-locate",
+   "observation": {
+    "artifact": {
+     "locator": "frigate/detectors/detector_config.py"
+    },
+    "excerpt": "                file_hash = hashlib.md5()\n                while chunk := f.read(8192):\n                    file_hash.update(chunk)",
+    "file_sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17",
+    "file_sha256_algorithm": "sha256",
+    "kind": "source_excerpt",
+    "lines": [
+     218,
+     220
+    ]
+   },
+   "origin": "captured",
+   "scope": {
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+   "source_locator": "frigate/detectors/detector_config.py",
+   "tool": "tools/build_frigate_bundle.py",
+   "type": "evidence",
+   "underlying_source": "source-file:frigate/detectors/detector_config.py@cfa08c56b23d"
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "evidence",
+    "record_id": "evidence:ev11-md5-model-hash-call"
+   },
+   "id": "evidence:ev11-md5-model-hash-call",
+   "limitations": [
+    "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+    "a call site; execution not observed"
+   ],
+   "method": "verbatim-snippet-locate",
+   "observation": {
+    "artifact": {
+     "locator": "frigate/config/config.py"
+    },
+    "excerpt": "            model.compute_model_hash()",
+    "file_sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630",
+    "file_sha256_algorithm": "sha256",
+    "kind": "source_excerpt",
+    "lines": [
+     758,
+     758
+    ]
+   },
+   "origin": "captured",
+   "scope": {
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+   "source_locator": "frigate/config/config.py",
+   "tool": "tools/build_frigate_bundle.py",
+   "type": "evidence",
+   "underlying_source": "source-file:frigate/config/config.py@cfa08c56b23d"
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "evidence",
+    "record_id": "evidence:ev20-cdxgen-cbom"
+   },
+   "id": "evidence:ev20-cdxgen-cbom",
+   "limitations": [
+    "what the document says, not whether it is right",
+    "the document's coverage is only as stated in it",
+    "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+    "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+    "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+    "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+    "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+    "token usage, cost: not applicable; no LLM is used"
+   ],
+   "method": "cyclonedx-1.6-cbom-intake",
+   "observation": {
+    "acquisition_documented_coverage": {
+     "source": "cdxgen 12.9.0 README, section 'Generate Cryptography Bill of Materials (CBOM)' (installed package)",
+     "statement": "CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented."
+    },
+    "acquisition_generator": {
+     "install": "npm install --ignore-scripts @cyclonedx/cdxgen@12.9.0 into .tools/cdxgen (git-ignored); release published 2026-10-22; Node.js v26.7.0",
+     "invocation": "cdxgen -t python --include-crypto --evidence --no-install-deps --spec-version 1.6 --json-pretty -o <output> <scan-root>   (run as: env -i PATH HOME=<isolated-empty-dir> NO_COLOR=1 sandbox-exec -p '(version 1)(allow default)(deny network*)' <cdxgen> ...; cwd = an empty temp dir; see tools/run_cdxgen_scan.sh)",
+     "name": "cdxgen",
+     "third_party": true,
+     "version": "12.9.0"
+    },
+    "acquisition_outcome": {
+     "components": 0,
+     "cryptographic_assets": 0,
+     "cyclonedx_spec_version": "1.6",
+     "exit_code": 0,
+     "log_file": "inputs/frigate/raw/cdxgen-cbom.run.log",
+     "meaning": "a successful scan that reported no cryptographic asset; not a failed scan",
+     "services": 13,
+     "source_locations_for_crypto": 0,
+     "status": "completed",
+     "warnings_in_log": []
+    },
+    "acquisition_scope": {
+     "file_count": 343,
+     "included_paths": [
+      "frigate"
+     ],
+     "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+     "method": "git archive of the pinned revision restricted to the listed paths"
+    },
+    "assets": [],
+    "binding": {
+     "acquisition_limitations": [
+      "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+      "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+      "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+      "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+      "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+      "token usage, cost: not applicable; no LLM is used"
+     ],
+     "conflicts": [],
+     "corroborated": null,
+     "declared": null,
+     "level": "recorded",
+     "notes": [
+      "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+     ],
+     "recorded": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+     "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+    },
+    "counts": {
+     "assets": 0,
+     "by_type": {},
+     "components_total": 0,
+     "library_mentions": 0,
+     "services": 13
+    },
+    "coverage": {
+     "compositions": [],
+     "stated": false
+    },
+    "document": {
+     "document_version": 2,
+     "format": "CycloneDX",
+     "raw_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+     "serial_number": "urn:uuid:69b6c75d-6acc-453a-aaba-77cc2f516562",
+     "spec_version": "1.6",
+     "timestamp": "2026-11-02T17:49:35Z"
+    },
+    "extractor_notes": {},
+    "kind": "cbom_document",
+    "library_mentions": [],
+    "limitations": [
+     "the document states no coverage (no compositions)",
+     "the document declares no cryptographic-asset component (a successful document with zero crypto assets; not a failed scan)"
+    ],
+    "producer": [
+     {
+      "name": "cdxgen",
+      "vendor": "OWASP Foundation",
+      "version": "12.9.0"
+     }
+    ],
+    "services": {
+     "count": 13,
+     "names": [
+      "frigate/api/app-py-service",
+      "frigate/api/auth-py-service",
+      "frigate/api/chat-py-service",
+      "frigate/api/classification-py-service",
+      "frigate/api/debug_replay-py-service",
+      "frigate/api/event-py-service",
+      "frigate/api/media-py-service",
+      "frigate/api/motion_search-py-service",
+      "frigate/api/notification-py-service",
+      "frigate/api/preview-py-service",
+      "frigate/api/record-py-service",
+      "frigate/api/review-py-service",
+      "test_env-service"
+     ],
+     "note": "service records describe endpoints found in source; they are not cryptographic assets"
+    },
+    "status": "ok",
+    "subject": {
+     "bom_ref": "pkg:pypi/frigate-cdxgen-scope@latest",
+     "declared_revision": null,
+     "name": "frigate-cdxgen-scope",
+     "type": "application",
+     "version": "latest"
+    }
+   },
+   "origin": "captured",
+   "scope": {
+    "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+   },
+   "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+   "source_locator": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+   "tool": "src/bombridge/adapters.py",
+   "type": "evidence",
+   "underlying_source": "tool-output:cbom-200ca6c7556c"
+  }
+ ],
+ "selected_id": null,
+ "selection_prompt": null,
+ "services": [
+  {
+   "id": "art:inv:cdxgen-cbom/services/0",
+   "record": {
+    "authenticated": true,
+    "endpoints": [
+     "/config",
+     "/config/raw",
+     "/config/raw_paths",
+     "/config/save",
+     "/config/schema.json",
+     "/config/set",
+     "/ffmpeg/presets",
+     "/genai/models",
+     "/genai/probe",
+     "/profile/active",
+     "/audio_labels",
+     "/labels",
+     "/media/sync/current",
+     "/media/sync/status/{job_id}",
+     "/profiles",
+     "/recognized_license_plates",
+     "/sub_labels",
+     "/timeline/hourly",
+     "/logs/{service}",
+     "/metrics",
+     "/nvinfo",
+     "/plus/models",
+     "/restart",
+     "/stats",
+     "/stats/history",
+     "/media/sync",
+     "/timeline",
+     "/vainfo",
+     "/version"
+    ],
+    "name": "frigate/api/app-py-service",
+    "properties": [],
+    "x-trust-boundary": true
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/1",
+   "record": {
+    "authenticated": true,
+    "endpoints": [
+     "/auth",
+     "/users",
+     "/users/{username}",
+     "/auth/first_time_login",
+     "/login",
+     " https://frigate_ip:8971/api/profile\\n```",
+     "/logout",
+     "/profile",
+     "/users/{username}/password",
+     "/users/{username}/role"
+    ],
+    "name": "frigate/api/auth-py-service",
+    "properties": [],
+    "x-trust-boundary": true
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/2",
+   "record": {
+    "authenticated": true,
+    "endpoints": [
+     "/vlm/monitor",
+     "/chat/completion",
+     "/chat/execute",
+     "/chat/tools"
+    ],
+    "name": "frigate/api/chat-py-service",
+    "properties": [],
+    "x-trust-boundary": true
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/3",
+   "record": {
+    "endpoints": [
+     "/classification/{name}/dataset/categorize",
+     "/classification/{name}/dataset/{category}/create",
+     "/faces/{name}/create",
+     "/classification/{name}/dataset/{category}/delete",
+     "/classification/{name}",
+     "/classification/{name}/train/delete",
+     "/faces/{name}/delete",
+     "/classification/generate_examples/object",
+     "/classification/generate_examples/state",
+     "/classification/{name}/dataset",
+     "/classification/{name}/train",
+     "/classification/attributes",
+     "/faces",
+     "/classification/{name}/dataset/{category}/reclassify",
+     "/faces/reprocess",
+     "/faces/{name}/reclassify",
+     "/faces/recognize",
+     "/faces/{name}/register",
+     "/reindex",
+     "/classification/{name}/dataset/{old_category}/rename",
+     "/faces/{old_name}/rename",
+     "/lpr/reprocess",
+     "/faces/train/{name}/classify",
+     "/audio/transcribe"
+    ],
+    "name": "frigate/api/classification-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/4",
+   "record": {
+    "endpoints": [
+     "/debug_replay/status",
+     "/debug_replay/start",
+     "/debug_replay/start_from_export",
+     "/debug_replay/stop"
+    ],
+    "name": "frigate/api/debug_replay-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/5",
+   "record": {
+    "endpoints": [
+     "/events/{camera_name}/{label}/create",
+     "/trigger/embedding",
+     "/events/{event_id}",
+     "/events/",
+     "/events/{event_id}/retain",
+     "/events/{event_id}/end",
+     "/event_ids",
+     "/events",
+     "/events/explore",
+     "/events/search",
+     "/events/summary",
+     "/events/{event_id}/false_positive",
+     "/description/generate",
+     "/events/{event_id}/description/regenerate",
+     "/events/{event_id}/plus",
+     "/events/{event_id}/attributes",
+     "/events/{event_id}/description",
+     "/events/{event_id}/recognized_license_plate",
+     "/events/{event_id}/sub_label"
+    ],
+    "name": "frigate/api/event-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/6",
+   "record": {
+    "endpoints": [
+     "/{camera_name}/ptz/info",
+     "/{camera_name}/recordings/{frame_time}/snapshot.{format}",
+     "/{camera_name}/latest.{extension}",
+     "/{camera_name}",
+     "/{camera_name}/start/{start_ts}/end/{end_ts}/clip.mp4",
+     "/{camera_name}/plus/{frame_time}",
+     "/vod/event/{event_id}",
+     "Returns an HLS playlist for the specified object. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+     "/{camera_name}/region_grid",
+     "/events/{event_id}/clip.mp4",
+     "/events/{event_id}/preview.gif",
+     "/events/{event_id}/snapshot.jpg",
+     "/events/{event_id}/snapshot-clean.webp",
+     "/events/{event_id}/thumbnail.{extension}",
+     "/{camera_name}/grid.jpg",
+     "/{camera_name}/{label}/clip.mp4",
+     "/{camera_name}/{label}/snapshot.jpg",
+     "/{camera_name}/{label}/thumbnail.jpg",
+     "/{camera_name}/{label}/best.jpg",
+     "/{camera_name}/start/{start_ts}/end/{end_ts}/preview.gif",
+     "/{camera_name}/start/{start_ts}/end/{end_ts}/preview.mp4",
+     "/preview/{file_name}/thumbnail.webp",
+     "/preview/{file_name}/thumbnail.jpg",
+     "/review/{review_id}/clip.mp4",
+     "/review/{event_id}/preview",
+     "/vod/{year_month}/{day}/{hour}/{camera_name}/{tz_name}",
+     "Returns an HLS playlist for the specified date-time (with timezone) on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+     "/vod/{year_month}/{day}/{hour}/{camera_name}",
+     "Returns an HLS playlist for the specified date-time on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+     "/vod/{camera_name}/start/{start_ts}/end/{end_ts}",
+     "Returns an HLS playlist for the specified timestamp-range on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback."
+    ],
+    "name": "frigate/api/media-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/7",
+   "record": {
+    "endpoints": [
+     "/{camera_name}/search/motion/{job_id}/cancel",
+     "/{camera_name}/search/motion/{job_id}",
+     "/{camera_name}/search/motion"
+    ],
+    "name": "frigate/api/motion_search-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/8",
+   "record": {
+    "authenticated": true,
+    "endpoints": [
+     "/notifications/pubkey",
+     "/notifications/register"
+    ],
+    "name": "frigate/api/notification-py-service",
+    "properties": [],
+    "x-trust-boundary": true
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/9",
+   "record": {
+    "endpoints": [
+     "/preview/{camera_name}/start/{start_ts}/end/{end_ts}/frames",
+     "/preview/{year_month}/{day}/{hour}/{camera_name}/{tz_name}",
+     "America/New_York",
+     "/preview/{camera_name}/start/{start_ts}/end/{end_ts}"
+    ],
+    "name": "frigate/api/preview-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/10",
+   "record": {
+    "authenticated": true,
+    "endpoints": [
+     "/recordings/summary",
+     "/recordings/start/{start}/end/{end}",
+     "/recordings/storage",
+     "/recordings/unavailable",
+     "/{camera_name}/recordings",
+     "/{camera_name}/recordings/summary"
+    ],
+    "name": "frigate/api/record-py-service",
+    "properties": [],
+    "x-trust-boundary": true
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/11",
+   "record": {
+    "endpoints": [
+     "/reviews/delete",
+     "/review/summarize/start/{start_ts}/end/{end_ts}",
+     "/review/{review_id}",
+     "/review/event/{event_id}",
+     "/review/activity/motion",
+     "/review",
+     "/review_ids",
+     "/review/summary",
+     "/reviews/viewed",
+     "/review/{review_id}/viewed"
+    ],
+    "name": "frigate/api/review-py-service",
+    "properties": []
+   }
+  },
+  {
+   "id": "art:inv:cdxgen-cbom/services/12",
+   "record": {
+    "authenticated": false,
+    "endpoints": [
+     "rtsp://host/{FRIGATE_FOO:>5}/stream"
+    ],
+    "name": "test_env-service",
+    "properties": []
+   }
+  }
+ ],
+ "supporting_records": [
+  {
+   "evidence_id": "ev10-md5-model-hash",
+   "label": "used",
+   "record": {
+    "id": "evidence:ev10-md5-model-hash",
+    "limitations": [
+     "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+     "source pattern; does not show this runs, nor that the hash is used for security"
+    ],
+    "method": "verbatim-snippet-locate",
+    "observation": {
+     "artifact": {
+      "locator": "frigate/detectors/detector_config.py"
+     },
+     "excerpt": "                file_hash = hashlib.md5()\n                while chunk := f.read(8192):\n                    file_hash.update(chunk)",
+     "file_sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17",
+     "file_sha256_algorithm": "sha256",
+     "kind": "source_excerpt",
+     "lines": [
+      218,
+      220
+     ]
+    },
+    "origin": "captured",
+    "scope": {
+     "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+    },
+    "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+    "source_locator": "frigate/detectors/detector_config.py",
+    "tool": "tools/build_frigate_bundle.py",
+    "type": "evidence",
+    "underlying_source": "source-file:frigate/detectors/detector_config.py@cfa08c56b23d"
+   }
+  },
+  {
+   "evidence_id": "ev11-md5-model-hash-call",
+   "label": "excluded",
+   "record": {
+    "id": "evidence:ev11-md5-model-hash-call",
+    "limitations": [
+     "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+     "a call site; execution not observed"
+    ],
+    "method": "verbatim-snippet-locate",
+    "observation": {
+     "artifact": {
+      "locator": "frigate/config/config.py"
+     },
+     "excerpt": "            model.compute_model_hash()",
+     "file_sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630",
+     "file_sha256_algorithm": "sha256",
+     "kind": "source_excerpt",
+     "lines": [
+      758,
+      758
+     ]
+    },
+    "origin": "captured",
+    "scope": {
+     "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+    },
+    "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+    "source_locator": "frigate/config/config.py",
+    "tool": "tools/build_frigate_bundle.py",
+    "type": "evidence",
+    "underlying_source": "source-file:frigate/config/config.py@cfa08c56b23d"
+   }
+  },
+  {
+   "evidence_id": "ev20-cdxgen-cbom",
+   "label": "used",
+   "record": {
+    "id": "evidence:ev20-cdxgen-cbom",
+    "limitations": [
+     "what the document says, not whether it is right",
+     "the document's coverage is only as stated in it",
+     "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+     "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+     "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+     "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+     "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+     "token usage, cost: not applicable; no LLM is used"
+    ],
+    "method": "cyclonedx-1.6-cbom-intake",
+    "observation": {
+     "acquisition_documented_coverage": {
+      "source": "cdxgen 12.9.0 README, section 'Generate Cryptography Bill of Materials (CBOM)' (installed package)",
+      "statement": "CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented."
+     },
+     "acquisition_generator": {
+      "install": "npm install --ignore-scripts @cyclonedx/cdxgen@12.9.0 into .tools/cdxgen (git-ignored); release published 2026-10-22; Node.js v26.7.0",
+      "invocation": "cdxgen -t python --include-crypto --evidence --no-install-deps --spec-version 1.6 --json-pretty -o <output> <scan-root>   (run as: env -i PATH HOME=<isolated-empty-dir> NO_COLOR=1 sandbox-exec -p '(version 1)(allow default)(deny network*)' <cdxgen> ...; cwd = an empty temp dir; see tools/run_cdxgen_scan.sh)",
+      "name": "cdxgen",
+      "third_party": true,
+      "version": "12.9.0"
+     },
+     "acquisition_outcome": {
+      "components": 0,
+      "cryptographic_assets": 0,
+      "cyclonedx_spec_version": "1.6",
+      "exit_code": 0,
+      "log_file": "inputs/frigate/raw/cdxgen-cbom.run.log",
+      "meaning": "a successful scan that reported no cryptographic asset; not a failed scan",
+      "services": 13,
+      "source_locations_for_crypto": 0,
+      "status": "completed",
+      "warnings_in_log": []
+     },
+     "acquisition_scope": {
+      "file_count": 343,
+      "included_paths": [
+       "frigate"
+      ],
+      "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+      "method": "git archive of the pinned revision restricted to the listed paths"
+     },
+     "assets": [],
+     "binding": {
+      "acquisition_limitations": [
+       "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+       "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+       "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+       "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+       "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+       "token usage, cost: not applicable; no LLM is used"
+      ],
+      "conflicts": [],
+      "corroborated": null,
+      "declared": null,
+      "level": "recorded",
+      "notes": [
+       "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+      ],
+      "recorded": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+      "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+     },
+     "counts": {
+      "assets": 0,
+      "by_type": {},
+      "components_total": 0,
+      "library_mentions": 0,
+      "services": 13
+     },
+     "coverage": {
+      "compositions": [],
+      "stated": false
+     },
+     "document": {
+      "document_version": 2,
+      "format": "CycloneDX",
+      "raw_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+      "serial_number": "urn:uuid:69b6c75d-6acc-453a-aaba-77cc2f516562",
+      "spec_version": "1.6",
+      "timestamp": "2026-11-02T17:49:35Z"
+     },
+     "extractor_notes": {},
+     "kind": "cbom_document",
+     "library_mentions": [],
+     "limitations": [
+      "the document states no coverage (no compositions)",
+      "the document declares no cryptographic-asset component (a successful document with zero crypto assets; not a failed scan)"
+     ],
+     "producer": [
+      {
+       "name": "cdxgen",
+       "vendor": "OWASP Foundation",
+       "version": "12.9.0"
+      }
+     ],
+     "services": {
+      "count": 13,
+      "names": [
+       "frigate/api/app-py-service",
+       "frigate/api/auth-py-service",
+       "frigate/api/chat-py-service",
+       "frigate/api/classification-py-service",
+       "frigate/api/debug_replay-py-service",
+       "frigate/api/event-py-service",
+       "frigate/api/media-py-service",
+       "frigate/api/motion_search-py-service",
+       "frigate/api/notification-py-service",
+       "frigate/api/preview-py-service",
+       "frigate/api/record-py-service",
+       "frigate/api/review-py-service",
+       "test_env-service"
+      ],
+      "note": "service records describe endpoints found in source; they are not cryptographic assets"
+     },
+     "status": "ok",
+     "subject": {
+      "bom_ref": "pkg:pypi/frigate-cdxgen-scope@latest",
+      "declared_revision": null,
+      "name": "frigate-cdxgen-scope",
+      "type": "application",
+      "version": "latest"
+     }
+    },
+    "origin": "captured",
+    "scope": {
+     "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+    },
+    "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+    "source_locator": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+    "tool": "src/bombridge/adapters.py",
+    "type": "evidence",
+    "underlying_source": "tool-output:cbom-200ca6c7556c"
+   }
+  }
+ ],
+ "total": 7
+}

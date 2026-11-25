@@ -1,0 +1,418 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/dependency_page.schema.json",
+  "title": "OpenTrace workbench dependency page v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "context",
+    "focus",
+    "filter",
+    "query",
+    "lookup",
+    "filter_totals",
+    "page",
+    "nodes",
+    "edges",
+    "limits",
+    "counts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.dependency_page/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "context_id",
+        "path"
+      ],
+      "properties": {
+        "context_id": {
+          "$ref": "common.schema.json#/$defs/ctx_id"
+        },
+        "path": {
+          "$ref": "common.schema.json#/$defs/path"
+        }
+      }
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node_id",
+        "basis",
+        "candidates_total"
+      ],
+      "properties": {
+        "node_id": {
+          "$ref": "common.schema.json#/$defs/engine_id"
+        },
+        "basis": {
+          "enum": [
+            "requested",
+            "explicit_root_metadata",
+            "graph_root",
+            "cycle_fallback",
+            "disconnected_fallback"
+          ]
+        },
+        "candidates_total": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "filter": {
+      "enum": [
+        "all",
+        "advisory",
+        "direct",
+        "transitive",
+        "evidence_gaps"
+      ]
+    },
+    "query": {
+      "$ref": "common.schema.json#/$defs/query"
+    },
+    "lookup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "explanation",
+        "counts_by_state"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "off",
+            "live",
+            "recorded"
+          ]
+        },
+        "explanation": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/message"
+            }
+          ]
+        },
+        "counts_by_state": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "match",
+            "no_match",
+            "unavailable",
+            "unsupported",
+            "missing_version",
+            "not_run"
+          ],
+          "properties": {
+            "match": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "no_match": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unavailable": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unsupported": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "missing_version": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "not_run": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "filter_totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "all",
+        "advisory",
+        "direct",
+        "transitive",
+        "evidence_gaps"
+      ],
+      "properties": {
+        "all": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "advisory": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "direct": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "transitive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence_gaps": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offset",
+        "size",
+        "matches_total",
+        "matches_shown",
+        "has_more",
+        "range_first",
+        "range_last"
+      ],
+      "properties": {
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        },
+        "matches_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "matches_shown": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "range_first": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "range_last": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id",
+          "name",
+          "version",
+          "ecosystem",
+          "role",
+          "depth",
+          "path_state",
+          "advisory_lookup",
+          "advisory_match_count",
+          "has_source_location",
+          "flags",
+          "gap_causes"
+        ],
+        "properties": {
+          "node_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "name": {
+            "$ref": "common.schema.json#/$defs/text_or_empty"
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          },
+          "ecosystem": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          },
+          "role": {
+            "enum": [
+              "focus",
+              "match",
+              "connector"
+            ]
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 13
+          },
+          "path_state": {
+            "enum": [
+              "complete",
+              "connectors_omitted",
+              "depth_limit"
+            ]
+          },
+          "advisory_lookup": {
+            "enum": [
+              "match",
+              "no_match",
+              "unavailable",
+              "unsupported",
+              "missing_version",
+              "not_run"
+            ]
+          },
+          "advisory_match_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "has_source_location": {
+            "type": "boolean"
+          },
+          "flags": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "direct",
+              "transitive",
+              "evidence_gap"
+            ],
+            "properties": {
+              "direct": {
+                "type": "boolean"
+              },
+              "transitive": {
+                "type": "boolean"
+              },
+              "evidence_gap": {
+                "type": "boolean"
+              }
+            }
+          },
+          "gap_causes": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "missing_source_location",
+                "lookup_not_run",
+                "lookup_incomplete"
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 3
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 151
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id",
+          "from",
+          "to",
+          "kind",
+          "source_pointers"
+        ],
+        "properties": {
+          "edge_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "from": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "to": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "kind": {
+            "const": "declares_dependency"
+          },
+          "source_pointers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512,
+              "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+            },
+            "minItems": 0,
+            "maxItems": 3
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 240
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "connectors_shown",
+        "connectors_truncated",
+        "edges_truncated"
+      ],
+      "properties": {
+        "connectors_shown": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "connectors_truncated": {
+          "type": "boolean"
+        },
+        "edges_truncated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    }
+  }
+}

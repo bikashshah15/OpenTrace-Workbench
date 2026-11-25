@@ -1,0 +1,624 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:3658b159dc3b452a4439a652",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "string literal at a jwt call",
+     "state": "recorded",
+     "value": "HS256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "HS256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:3a308b629aaf66fc5c0c19e9",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 522,
+      "line_start": 522,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:34b43477a25a82317bfe4bee",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 523,
+      "line_start": 523,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:5497a43c21b39d12775e39ad",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 524,
+      "line_start": 524,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:02757b46d477530306ff0f79",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 525,
+      "line_start": 525,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:380145aed427aa5642f24bed",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 526,
+      "line_start": 526,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d0534d2b4334774a2ba4df29",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 527,
+      "line_start": 527,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d69e920ebfdefcda72fa3765",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 528,
+      "line_start": 528,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:32174973719e933035c51789",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 529,
+      "line_start": 529,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:758f86f4ef16fd77123a0d51",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 530,
+      "line_start": 530,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:ceb1a5992b916c114c393d0e",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 531,
+      "line_start": 531,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d208b015bfcbf6b06ac0782e",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 532,
+      "line_start": 532,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:fb04b6dc7e400eff4e1deed3",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 533,
+      "line_start": 533,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:8642a5213b0a4b9a145139d1",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 534,
+      "line_start": 534,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:e7df01020d2294be4fc47abd",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 535,
+      "line_start": 535,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:4015792aabd194d4decc65c8",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 536,
+      "line_start": 536,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:6dbf5f39d5c7c6f9c901dd2d",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 537,
+      "line_start": 537,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:b6307de3c438bd96e57182f1",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 538,
+      "line_start": 538,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:6f8c7480de2a16106294a69d",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 539,
+      "line_start": 539,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:f7f9aa269afe47f34cd530a6",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 540,
+      "line_start": 540,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:2d67f187efc0f2af160e4f1a",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "90c8407987165148951946aa1b50113dcf72b5f1c68445a09a486ed50896b108",
+      "line_end": 541,
+      "line_start": 541,
+      "link": {
+       "href": "https://github.com/acme/bounds/blob/785fb4d0de429cd9fb8cde8da538679bf7b51600/big/many.py",
+       "text": "big/many.py"
+      },
+      "path": "big/many.py"
+     }
+    }
+   ],
+   "occurrences_total": 500,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:296883ba225df0a3f3941c72"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Collection was incomplete (opentrace-source-crypto). The assets shown are those that were recorded; this is not a complete inventory.",
+  "reason_code": "partial_coverage",
+  "state": "partial"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ba35b800906845ddf2116fc6a054cd63d6e3784318ff069a7584642008980084",
+  "assessment": {
+   "bundle_sha256": "ec664ace9648dc673494d1f174ea23617c373e38ad7b77632124339db1bad15d",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "15b981f519dfbe18e944244a17fff47344173353e17888bdfdc180678572b291"
+  },
+  "commit_sha": "785fb4d0de429cd9fb8cde8da538679bf7b51600",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/bounds",
+   "host": "github.com",
+   "name": "bounds",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 1,
+  "all": 1,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 9.9.9"
+   },
+   "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 1,
+    "files_excluded": 0,
+    "files_parsed": 1,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "partial",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (hashlib, jwt and TLS-configuration call sites of supported forms); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 1,
+   "group_id": "grp:296883ba225df0a3f3941c72",
+   "label": "big/many.py",
+   "path": "big/many.py"
+  }
+ ],
+ "tab": "crypto"
+}

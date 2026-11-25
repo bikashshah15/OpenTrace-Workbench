@@ -1,0 +1,279 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:ad1144bf5b2aeec407e4a55c",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "string literal at a jwt call",
+     "state": "recorded",
+     "value": "HS256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "HS256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:a1faac65ecc0378d0f839ab9",
+     "operation": "jwt.encode call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "jwt.encode(p, k, algorithm='HS256')",
+      "excerpt_state": "recorded",
+      "file_sha256": "40bbe855dc7655380134e6a7bd43f2c528a7547f9dd05dbefe6dc816aebfef8f",
+      "line_end": 4,
+      "line_start": 4,
+      "link": {
+       "href": "https://github.com/acme/aifault/blob/a63a6ea2407c47ba2dd43e78a83ff0ac7c64949e/ok/h.py",
+       "text": "ok/h.py"
+      },
+      "path": "ok/h.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:1319139db89691c268cecdca"
+   ]
+  },
+  {
+   "asset_id": "ast:b8043f391dcbbf3ed007a43b",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "algorithm named at a hashlib call site",
+     "state": "recorded",
+     "value": "sha256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "sha256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:7d8306791dcdc96c9164d69c",
+     "operation": "hashlib hash call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "hashlib.sha256(b'x')",
+      "excerpt_state": "recorded",
+      "file_sha256": "40bbe855dc7655380134e6a7bd43f2c528a7547f9dd05dbefe6dc816aebfef8f",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/acme/aifault/blob/a63a6ea2407c47ba2dd43e78a83ff0ac7c64949e/ok/h.py",
+       "text": "ok/h.py"
+      },
+      "path": "ok/h.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:1319139db89691c268cecdca"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Cryptographic assets from the original CBOM (when present) and experimental source observations; neither establishes runtime use or deployed configuration.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:d0718ea00cd72a210e02b3fbe2d24eecbd848c458d04258bc365271117f34b38",
+  "assessment": {
+   "bundle_sha256": "bce41026aef6cb27a83384ca238452ac99f9ba270fcb856d36ad36dde87994c8",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "f82f17bf17d7f0a6edeff85306510f7ae2a5386e15804284e3699c3bffca49c2"
+  },
+  "commit_sha": "a63a6ea2407c47ba2dd43e78a83ff0ac7c64949e",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/aifault",
+   "host": "github.com",
+   "name": "aifault",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 2,
+  "total": 2,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 2,
+  "all": 2,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 2,
+  "assets_total": 2,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 9.9.9"
+   },
+   "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 2,
+    "files_excluded": 0,
+    "files_parsed": 2,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (hashlib, jwt and TLS-configuration call sites of supported forms); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 2,
+   "group_id": "grp:1319139db89691c268cecdca",
+   "label": "ok/h.py",
+   "path": "ok/h.py"
+  }
+ ],
+ "tab": "crypto"
+}

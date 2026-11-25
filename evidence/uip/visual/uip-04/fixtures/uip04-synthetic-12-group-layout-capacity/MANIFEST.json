@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "119369c505fb060ae79d0087b32b349e77f8d220cb32ff422b99f41b1845e497"
+  },
+  {
+   "bytes": 18103,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "b669326b06446402ede4bcc69589ff1cd5fa57fe80cca98f50e53eac74b3c3d5"
+  }
+ ],
+ "name": "uip04-synthetic-12-group-layout-capacity",
+ "notes": "SYNTHETIC layout-capacity test only: a hand-built 12-group payload (the schema maximum). It is not a classifier output and not a repository fixture.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

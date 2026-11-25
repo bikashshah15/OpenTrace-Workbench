@@ -1,0 +1,642 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:9bda4f330d99f7188f019f68",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w0.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:922964f870c08a0511e49924",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w00/file.py",
+       "text": "synthetic/w00/file.py"
+      },
+      "path": "synthetic/w00/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:a1e110a43568ba351928e343"
+   ]
+  },
+  {
+   "asset_id": "ast:cf94e0da5a7d437f61240d95",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w1.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:b18787c72a73e366002a8c10",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w01/file.py",
+       "text": "synthetic/w01/file.py"
+      },
+      "path": "synthetic/w01/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/1",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:8b5f15f27cf12b0a799645d3"
+   ]
+  },
+  {
+   "asset_id": "ast:f169ffcab6158e9f73c356b5",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w2.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:9094d9802c5a8f30274d62b9",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w02/file.py",
+       "text": "synthetic/w02/file.py"
+      },
+      "path": "synthetic/w02/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/2",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:f1ee5c30bf54f86ed42c6c90"
+   ]
+  },
+  {
+   "asset_id": "ast:f70329d2d967629fcb719a83",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w3.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:32207ebd8376ab3e519efaa0",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w03/file.py",
+       "text": "synthetic/w03/file.py"
+      },
+      "path": "synthetic/w03/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/3",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:5be8ae0f3afa92f019c90251"
+   ]
+  },
+  {
+   "asset_id": "ast:18852a35c54c9390000646a6",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w4.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:1b199db66343cd6a01b39c10",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w04/file.py",
+       "text": "synthetic/w04/file.py"
+      },
+      "path": "synthetic/w04/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/4",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:bd8af4c32153f8fb08ced85a"
+   ]
+  },
+  {
+   "asset_id": "ast:224ded00d8c7b3ce51e25219",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w5.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:e5205316d121761e506b954c",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w05/file.py",
+       "text": "synthetic/w05/file.py"
+      },
+      "path": "synthetic/w05/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/5",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:0980b51ceaaf5d9566f04f62"
+   ]
+  },
+  {
+   "asset_id": "ast:32109e9cd937edbf5b3976cd",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-w6.onnx",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:9a4ecaec979acc19b129021e",
+     "operation": "inventory-reported location",
+     "producer_id": "synthetic-aibom",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/w06/file.py",
+       "text": "synthetic/w06/file.py"
+      },
+      "path": "synthetic/w06/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/6",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:922b87eee87ebe0cfd1263cc"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:052ce00f39e0e25a5d06d55951b879153757742a2ddb37578bd5b48b5912794e",
+  "assessment": null,
+  "commit_sha": "f3e4a50c85d3b8c14561b3c0364ba483b0dc9409",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 7,
+  "total": 7,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 7,
+  "findings": 0,
+  "models": 7,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 7,
+  "assets_total": 7,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": "synthetic-aibom 0.0"
+   },
+   "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [
+  {
+   "assets_total": 1,
+   "group_id": "grp:a1e110a43568ba351928e343",
+   "label": "synthetic/w00/file.py",
+   "path": "synthetic/w00/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:8b5f15f27cf12b0a799645d3",
+   "label": "synthetic/w01/file.py",
+   "path": "synthetic/w01/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:f1ee5c30bf54f86ed42c6c90",
+   "label": "synthetic/w02/file.py",
+   "path": "synthetic/w02/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:5be8ae0f3afa92f019c90251",
+   "label": "synthetic/w03/file.py",
+   "path": "synthetic/w03/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:bd8af4c32153f8fb08ced85a",
+   "label": "synthetic/w04/file.py",
+   "path": "synthetic/w04/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:0980b51ceaaf5d9566f04f62",
+   "label": "synthetic/w05/file.py",
+   "path": "synthetic/w05/file.py"
+  },
+  {
+   "assets_total": 1,
+   "group_id": "grp:922b87eee87ebe0cfd1263cc",
+   "label": "synthetic/w06/file.py",
+   "path": "synthetic/w06/file.py"
+  }
+ ],
+ "tab": "ai"
+}

@@ -1,0 +1,34 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 1644,
+   "path": "ai-completed-empty.json",
+   "schema": "opentrace.workbench.ai_assets/1",
+   "sha256": "efae329f2827ac28be07323912a6ff136b441c525e63ec9819e3c9bf6795719a"
+  },
+  {
+   "bytes": 1081,
+   "path": "ai-not-run.json",
+   "schema": "opentrace.workbench.ai_assets/1",
+   "sha256": "c2d17c0311b3cf85894f1e53f6e30d5d4ac1e4f1d6f57108b08e4830ca474fa2"
+  },
+  {
+   "bytes": 4308,
+   "path": "scan-status.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "cec537131140b8d767dcb05724cb4d23149f5f62645628c64fbd973e05ae878c"
+  }
+ ],
+ "name": "no-ai-synthetic",
+ "normalized": [],
+ "notes": "A repository without AI assets: ai_assets completed_empty versus an unconfigured stage (not_run) kept distinct.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

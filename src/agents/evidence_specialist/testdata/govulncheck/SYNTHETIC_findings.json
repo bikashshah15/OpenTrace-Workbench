@@ -1,0 +1,164 @@
+{
+  "config": {
+    "protocol_version": "v1.0.0",
+    "scanner_name": "govulncheck",
+    "scanner_version": "v1.1.4",
+    "db": "file://<capture-db>",
+    "db_last_modified": "2026-01-01T00:00:00Z",
+    "go_version": "go1.24.7",
+    "scan_level": "symbol",
+    "scan_mode": "source"
+  }
+}
+{
+  "SBOM": {
+    "go_version": "go1.24.7",
+    "modules": [
+      {
+        "path": "example.com/opentrace/fixture/i2"
+      },
+      {
+        "path": "golang.org/x/text",
+        "version": "v0.3.7"
+      },
+      {
+        "path": "stdlib",
+        "version": "v1.24.7"
+      }
+    ],
+    "roots": [
+      "example.com/opentrace/fixture/i2/cmd/negotiate"
+    ]
+  }
+}
+{
+  "progress": {
+    "message": "Fetching vulnerabilities from the database..."
+  }
+}
+{
+  "osv": {
+    "schema_version": "1.3.1",
+    "id": "SYNTH-0001",
+    "modified": "2026-01-01T00:00:00Z",
+    "published": "2026-01-01T00:00:00Z",
+    "aliases": [
+      "SYNTH-ALIAS-1"
+    ],
+    "summary": "SYNTHETIC test entry",
+    "details": "SYNTHETIC test entry for plumbing tests only.",
+    "affected": [
+      {
+        "package": {
+          "name": "golang.org/x/text",
+          "ecosystem": "Go"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.3.8"
+              }
+            ]
+          }
+        ],
+        "ecosystem_specific": {
+          "imports": [
+            {
+              "path": "golang.org/x/text/language",
+              "symbols": [
+                "ParseAcceptLanguage",
+                "MatchStrings"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://example.invalid/synthetic"
+      }
+    ],
+    "database_specific": {
+      "url": "https://example.invalid/SYNTH-0001"
+    }
+  }
+}
+{
+  "progress": {
+    "message": "Checking the code against the vulnerabilities..."
+  }
+}
+{
+  "finding": {
+    "osv": "SYNTH-0001",
+    "fixed_version": "v0.3.8",
+    "trace": [
+      {
+        "module": "golang.org/x/text",
+        "version": "v0.3.7"
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "SYNTH-0001",
+    "fixed_version": "v0.3.8",
+    "trace": [
+      {
+        "module": "golang.org/x/text",
+        "version": "v0.3.7",
+        "package": "golang.org/x/text/language"
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "SYNTH-0001",
+    "fixed_version": "v0.3.8",
+    "trace": [
+      {
+        "module": "golang.org/x/text",
+        "version": "v0.3.7",
+        "package": "golang.org/x/text/language",
+        "function": "ParseAcceptLanguage",
+        "position": {
+          "filename": "language/parse.go",
+          "offset": 5495,
+          "line": 158,
+          "column": 6
+        }
+      },
+      {
+        "module": "example.com/opentrace/fixture/i2",
+        "package": "example.com/opentrace/fixture/i2",
+        "function": "Negotiate",
+        "position": {
+          "filename": "negotiate.go",
+          "offset": 245,
+          "line": 7,
+          "column": 46
+        }
+      },
+      {
+        "module": "example.com/opentrace/fixture/i2",
+        "package": "example.com/opentrace/fixture/i2/cmd/negotiate",
+        "function": "main",
+        "position": {
+          "filename": "cmd/negotiate/main.go",
+          "offset": 128,
+          "line": 11,
+          "column": 31
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,486 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:f526762a6ef5baae6932dbb0",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "detector.bin",
+    "identity_state": "unresolved",
+    "kind": "model_artifact",
+    "occurrences": [],
+    "occurrences_total": 0,
+    "provenance": {
+     "artifact_id": "art:aibom-fixture",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "fixture-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:03b172e8dd2c03da7089f1bd"
+    ]
+   },
+   {
+    "asset_id": "ast:4b33ab56ee203a05ec3e5311",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "the source names no provider",
+      "state": "unknown",
+      "value": null
+     }
+    },
+    "display_group": {
+     "group_id": "grp:ba039dc37411defefd001526",
+     "rule": "same basename shown together; identities stay separate"
+    },
+    "display_name": "model.bin",
+    "identity_state": "resolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:2088d4fd254232503e8aa5e4",
+      "operation": "model reference",
+      "producer_id": "fixture-source-refs",
+      "source_location": {
+       "excerpt": "model: https://a.invalid/model.bin",
+       "excerpt_state": "recorded",
+       "file_sha256": "4c2145b89a77bef300ba3a1001a0ff579420d8cfe24a6bab2c88985d70933cba",
+       "line_end": 5,
+       "line_start": 5,
+       "link": {
+        "href": "https://github.com/example-org/crypto-lab/blob/f34542f417a621d7047382b6800f9734d8334084/config/a.yaml",
+        "text": "config/a.yaml"
+       },
+       "path": "config/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-refs",
+     "producer_version": "0.1"
+    },
+    "source_group_ids": [
+     "grp:03b172e8dd2c03da7089f1bd"
+    ]
+   },
+   {
+    "asset_id": "ast:3a44d6745ebb752eb0169399",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": {
+     "group_id": "grp:ba039dc37411defefd001526",
+     "rule": "same basename shown together; identities stay separate"
+    },
+    "display_name": "model.bin",
+    "identity_state": "unresolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:abac3f4dcde42c9d1a78c0a8",
+      "operation": "model reference",
+      "producer_id": "fixture-source-refs",
+      "source_location": {
+       "excerpt": "model: https://b.invalid/model.bin",
+       "excerpt_state": "recorded",
+       "file_sha256": "5d30d219b0bae37a03ffc16b56d25e4c5733ed96e76b278668442ab2c621cc4b",
+       "line_end": 9,
+       "line_start": 9,
+       "link": {
+        "href": "https://github.com/example-org/crypto-lab/blob/f34542f417a621d7047382b6800f9734d8334084/config/b.yaml",
+        "text": "config/b.yaml"
+       },
+       "path": "config/b.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-refs",
+     "producer_version": "0.1"
+    },
+    "source_group_ids": [
+     "grp:03b172e8dd2c03da7089f1bd"
+    ]
+   },
+   {
+    "asset_id": "ast:6b9d56b2d09b4d0399570cdd",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "runtime_primary",
+    "identity_state": "unresolved",
+    "kind": "runtime",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:feddea59b3c732403090f0db",
+      "operation": "runtime import",
+      "producer_id": "fixture-source-refs",
+      "source_location": {
+       "excerpt": "import runtime_primary",
+       "excerpt_state": "recorded",
+       "file_sha256": "4328ae531bc1919dcd25d4ce3e747cd33feb8a7213af0fee22dd98249a8586cf",
+       "line_end": 4,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/crypto-lab/blob/f34542f417a621d7047382b6800f9734d8334084/src/infer.py",
+        "text": "src/infer.py"
+       },
+       "path": "src/infer.py"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-refs",
+     "producer_version": "0.1"
+    },
+    "source_group_ids": [
+     "grp:03b172e8dd2c03da7089f1bd"
+    ]
+   },
+   {
+    "asset_id": "ast:a4bbef2fc53c50a277b10c34",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "runtime_fallback",
+    "identity_state": "unresolved",
+    "kind": "runtime",
+    "occurrences": [
+     {
+      "alternative_of": "occ:feddea59b3c732403090f0db",
+      "condition": {
+       "basis": "source_text",
+       "text": "used only if the first import fails"
+      },
+      "occurrence_id": "occ:0b32d338d00627d543c3e315",
+      "operation": "runtime import",
+      "producer_id": "fixture-source-refs",
+      "source_location": {
+       "excerpt": "import runtime_fallback",
+       "excerpt_state": "recorded",
+       "file_sha256": "4328ae531bc1919dcd25d4ce3e747cd33feb8a7213af0fee22dd98249a8586cf",
+       "line_end": 7,
+       "line_start": 6,
+       "link": {
+        "href": "https://github.com/example-org/crypto-lab/blob/f34542f417a621d7047382b6800f9734d8334084/src/infer.py",
+        "text": "src/infer.py"
+       },
+       "path": "src/infer.py"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-refs",
+     "producer_version": "0.1"
+    },
+    "source_group_ids": [
+     "grp:03b172e8dd2c03da7089f1bd"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Model references and runtime imports are source observations only; no model binary or runtime use is established.",
+   "reason_code": "partial_coverage",
+   "state": "partial"
+  },
+  "binding": {
+   "analysis_digest": "sha256:da4c93a073e7267a1af9b237c47037ceeac228de3f439aa800fa843115ce884d",
+   "assessment": null,
+   "commit_sha": "f34542f417a621d7047382b6800f9734d8334084",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/crypto-lab",
+    "host": "github.com",
+    "name": "crypto-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 5,
+   "total": 5,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 5,
+   "findings": 0,
+   "models": 3,
+   "runtimes": 2
+  },
+  "links": [
+   {
+    "basis": "recorded",
+    "condition": "fallback import only if the first import fails",
+    "evidence_ref": null,
+    "from": "ast:6b9d56b2d09b4d0399570cdd",
+    "relation": "conditionally_selects",
+    "to": "ast:a4bbef2fc53c50a277b10c34"
+   },
+   {
+    "basis": "recorded",
+    "condition": null,
+    "evidence_ref": null,
+    "from": "ast:4b33ab56ee203a05ec3e5311",
+    "relation": "references",
+    "to": "grp:03b172e8dd2c03da7089f1bd"
+   }
+  ],
+  "page": {
+   "assets_shown": 5,
+   "assets_total": 5,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 30,
+     "files_excluded": 0,
+     "files_parsed": 30,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:aibom-fixture",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "fixture-aibom",
+     "producer_version": null
+    },
+    "scope": "AI inventory over the repository root"
+   },
+   {
+    "coverage": {
+     "excluded_paths": [
+      "scripts/gen.py"
+     ],
+     "files_considered": 10,
+     "files_excluded": 1,
+     "files_parsed": 9,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 1
+    },
+    "outcome": "partial",
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-refs",
+     "producer_version": "0.1"
+    },
+    "scope": "experimental source and config reference scan"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 3,
+    "group_id": "grp:03b172e8dd2c03da7089f1bd",
+    "label": "Source: config",
+    "path": "config"
+   }
+  ],
+  "tab": "ai"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "ai_assets",
+ "sequence": null
+}

@@ -1,0 +1,575 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/crypto_assets.schema.json",
+  "title": "OpenTrace workbench crypto assets v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "tab",
+    "availability",
+    "absence_established",
+    "producers",
+    "filter",
+    "filter_totals",
+    "source_groups",
+    "assets",
+    "links",
+    "review_items",
+    "page",
+    "counts",
+    "services",
+    "services_counts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.crypto_assets/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "tab": {
+      "const": "crypto"
+    },
+    "availability": {
+      "$ref": "common.schema.json#/$defs/availability"
+    },
+    "absence_established": {
+      "const": false
+    },
+    "producers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "provenance",
+          "scope",
+          "outcome",
+          "coverage"
+        ],
+        "properties": {
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "outcome": {
+            "enum": [
+              "not_run",
+              "unsupported",
+              "failed",
+              "partial",
+              "completed_empty",
+              "completed"
+            ]
+          },
+          "coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "files_considered",
+              "files_parsed",
+              "files_excluded",
+              "excluded_paths",
+              "unparsed_total",
+              "unknown_dynamic_values_total"
+            ],
+            "properties": {
+              "files_considered": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "files_parsed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "files_excluded": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "excluded_paths": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/path"
+                },
+                "minItems": 0,
+                "maxItems": 10
+              },
+              "unparsed_total": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "unknown_dynamic_values_total": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "filter": {
+      "enum": [
+        "all",
+        "findings",
+        "algorithms",
+        "protocols",
+        "certificates"
+      ]
+    },
+    "filter_totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "all",
+        "findings",
+        "algorithms",
+        "protocols",
+        "certificates"
+      ],
+      "properties": {
+        "all": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "findings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "algorithms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "protocols": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "certificates": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "source_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_id",
+          "label",
+          "path",
+          "assets_total"
+        ],
+        "properties": {
+          "group_id": {
+            "$ref": "common.schema.json#/$defs/grp_id"
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/label"
+          },
+          "path": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/path"
+              }
+            ]
+          },
+          "assets_total": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 24
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_id",
+          "kind",
+          "display_name",
+          "provenance",
+          "attributes",
+          "source_group_ids",
+          "occurrences",
+          "occurrences_total"
+        ],
+        "properties": {
+          "asset_id": {
+            "$ref": "common.schema.json#/$defs/ast_id"
+          },
+          "kind": {
+            "enum": [
+              "algorithm",
+              "protocol",
+              "certificate",
+              "other_crypto"
+            ]
+          },
+          "display_name": {
+            "$ref": "common.schema.json#/$defs/text"
+          },
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "algorithm_name",
+              "primitive",
+              "parameter",
+              "protocol_name",
+              "protocol_version",
+              "certificate_subject"
+            ],
+            "properties": {
+              "algorithm_name": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "primitive": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "parameter": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "protocol_name": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "protocol_version": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "certificate_subject": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              }
+            }
+          },
+          "source_group_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/grp_id"
+            },
+            "minItems": 0,
+            "maxItems": 24
+          },
+          "occurrences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "occurrence_id",
+                "source_location",
+                "operation",
+                "condition",
+                "alternative_of",
+                "producer_id"
+              ],
+              "properties": {
+                "occurrence_id": {
+                  "$ref": "common.schema.json#/$defs/occ_id"
+                },
+                "source_location": {
+                  "$ref": "common.schema.json#/$defs/source_location"
+                },
+                "operation": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200,
+                      "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                    }
+                  ]
+                },
+                "condition": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "text",
+                    "basis"
+                  ],
+                  "properties": {
+                    "text": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200,
+                          "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                        }
+                      ]
+                    },
+                    "basis": {
+                      "enum": [
+                        "source_text",
+                        "recorded_artifact",
+                        "none"
+                      ]
+                    }
+                  }
+                },
+                "alternative_of": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "$ref": "common.schema.json#/$defs/occ_id"
+                    }
+                  ]
+                },
+                "producer_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64,
+                  "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                }
+              }
+            },
+            "minItems": 0,
+            "maxItems": 20
+          },
+          "occurrences_total": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 30
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "relation",
+          "from",
+          "to",
+          "basis",
+          "evidence_ref",
+          "condition"
+        ],
+        "properties": {
+          "relation": {
+            "enum": [
+              "uses",
+              "references",
+              "implemented_by",
+              "located_in"
+            ]
+          },
+          "from": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "to": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "basis": {
+            "enum": [
+              "recorded",
+              "resolved"
+            ]
+          },
+          "evidence_ref": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/engine_id"
+              }
+            ]
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 90
+    },
+    "review_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "review_id",
+          "asset_id",
+          "rule_id",
+          "rule_version",
+          "tone",
+          "condition",
+          "evidence_ids",
+          "rationale",
+          "bounded_meaning",
+          "next_action"
+        ],
+        "properties": {
+          "review_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "asset_id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/ast_id"
+              }
+            ]
+          },
+          "rule_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "rule_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "tone": {
+            "enum": [
+              "review",
+              "advisory"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/engine_id"
+            },
+            "minItems": 0,
+            "maxItems": 20
+          },
+          "rationale": {
+            "$ref": "common.schema.json#/$defs/rationale"
+          },
+          "bounded_meaning": {
+            "$ref": "common.schema.json#/$defs/message"
+          },
+          "next_action": {
+            "$ref": "common.schema.json#/$defs/message"
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 50
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offset",
+        "size",
+        "assets_total",
+        "assets_shown",
+        "has_more"
+      ],
+      "properties": {
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        },
+        "assets_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assets_shown": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    },
+    "counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "service_id",
+          "name",
+          "endpoint_text",
+          "provenance"
+        ],
+        "properties": {
+          "service_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "name": {
+            "$ref": "common.schema.json#/$defs/text"
+          },
+          "endpoint_text": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 512,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 30
+    },
+    "services_counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    }
+  }
+}

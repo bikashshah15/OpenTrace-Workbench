@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/contexts.schema.json",
+  "title": "OpenTrace workbench contexts v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "root",
+    "edge_semantics",
+    "groups",
+    "selected_id",
+    "counts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.contexts/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "root": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "canonical_url",
+        "commit_sha",
+        "distinct_total",
+        "membership_total",
+        "located_distinct_total",
+        "unlocated_total"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "canonical_url": {
+          "$ref": "common.schema.json#/$defs/url"
+        },
+        "commit_sha": {
+          "$ref": "common.schema.json#/$defs/hex40"
+        },
+        "distinct_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "membership_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "located_distinct_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unlocated_total": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "edge_semantics": {
+      "const": "grouping_or_inventory_location"
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_id",
+          "kind",
+          "category",
+          "token",
+          "label",
+          "basis",
+          "distinct_total",
+          "membership_total",
+          "files",
+          "files_counts",
+          "files_offset"
+        ],
+        "properties": {
+          "group_id": {
+            "$ref": "common.schema.json#/$defs/grp_id"
+          },
+          "kind": {
+            "enum": [
+              "located",
+              "unlocated"
+            ]
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "documentation",
+                  "web",
+                  "node_packages",
+                  "python_requirements",
+                  "go_modules",
+                  "rust_crates",
+                  "java_build",
+                  "github_actions",
+                  "container_files",
+                  "other_locations"
+                ]
+              }
+            ]
+          },
+          "token": {
+            "enum": [
+              "blue",
+              "green",
+              "amber",
+              "purple",
+              "neutral"
+            ]
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/label"
+          },
+          "basis": {
+            "enum": [
+              "path_prefix",
+              "manifest_basename",
+              "ecosystem",
+              "fallback"
+            ]
+          },
+          "distinct_total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "membership_total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "file_id",
+                "path",
+                "raw_locations",
+                "raw_locations_total",
+                "normalization_basis",
+                "distinct_total",
+                "membership_total",
+                "dependency_context_id",
+                "revision_link"
+              ],
+              "properties": {
+                "file_id": {
+                  "$ref": "common.schema.json#/$defs/ctx_id"
+                },
+                "path": {
+                  "$ref": "common.schema.json#/$defs/path"
+                },
+                "raw_locations": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "common.schema.json#/$defs/path"
+                  },
+                  "minItems": 0,
+                  "maxItems": 5
+                },
+                "raw_locations_total": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "normalization_basis": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "syft_root_relative",
+                      "syft_recorded_path",
+                      "cyclonedx_occurrence"
+                    ]
+                  },
+                  "minItems": 0,
+                  "maxItems": 3
+                },
+                "distinct_total": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "membership_total": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "dependency_context_id": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "$ref": "common.schema.json#/$defs/ctx_id"
+                    }
+                  ]
+                },
+                "revision_link": {
+                  "$ref": "common.schema.json#/$defs/link"
+                }
+              }
+            },
+            "minItems": 0,
+            "maxItems": 40
+          },
+          "files_counts": {
+            "$ref": "common.schema.json#/$defs/count_block"
+          },
+          "files_offset": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 12
+    },
+    "selected_id": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^(grp|ctx):[0-9a-f]{24}(?!\\n)$"
+        }
+      ]
+    },
+    "counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    }
+  }
+}

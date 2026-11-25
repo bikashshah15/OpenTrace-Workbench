@@ -1,0 +1,40 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 13412,
+   "path": "contexts-group-python-last-page.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "ff0eddd80a00627123c44d78f2b8d9f56ed028d715e6fedae9614604aa2b48d6"
+  },
+  {
+   "bytes": 25491,
+   "path": "contexts-group-python-offset-20.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "11d0d45c6b26d525706edba67bb6bf0f568ee816ef6297d074c241629a78310b"
+  },
+  {
+   "bytes": 104612,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "a745aabcf1f856b43ebc2299dbd0ed9d3fb1cc2da576da9ef8fa2bdddf2d339d"
+  },
+  {
+   "bytes": 104638,
+   "path": "contexts-selected-group.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "91f228ecab0e21b4068d242f7f5337e221246ca1dfa04a32cd558feb75f3a698"
+  }
+ ],
+ "name": "contexts-600-synthetic",
+ "normalized": [],
+ "notes": "600 files across all ten categories, unlocated components, components shared between groups (distinct vs membership), 20-file default paging and a one-group page.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

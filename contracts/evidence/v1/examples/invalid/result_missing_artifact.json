@@ -1,0 +1,181 @@
+{
+  "artifacts": [
+    {
+      "bytes": 385,
+      "captured_at": "2026-10-13T12:00:01.250Z",
+      "content_b64": "ewoJIk1vZHVsZSI6IHsKCQkiUGF0aCI6ICJleGFtcGxlLmNvbS9vcGVudHJhY2UvZml4dHVyZS9pMSIKCX0sCgkiR28iOiAiMS4yMiIsCgkiUmVxdWlyZSI6IFsKCQl7CgkJCSJQYXRoIjogImdpdGh1Yi5jb20vZ29vZ2xlL3V1aWQiLAoJCQkiVmVyc2lvbiI6ICJ2MS42LjAiCgkJfSwKCQl7CgkJCSJQYXRoIjogImdvbGFuZy5vcmcveC90ZXh0IiwKCQkJIlZlcnNpb24iOiAidjAuMTQuMCIKCQl9LAoJCXsKCQkJIlBhdGgiOiAiZ29sYW5nLm9yZy94L3N5cyIsCgkJCSJWZXJzaW9uIjogInYwLjE1LjAiLAoJCQkiSW5kaXJlY3QiOiB0cnVlCgkJfQoJXSwKCSJFeGNsdWRlIjogbnVsbCwKCSJSZXBsYWNlIjogbnVsbCwKCSJSZXRyYWN0IjogbnVsbCwKCSJUb29sIjogbnVsbAp9Cg==",
+      "digest": "sha256:107cb41c5344460caa066b3e983033b4e140f6335d106b003cbd5402dea91c86",
+      "media_type": "application/json",
+      "producer": "evidence-specialist-b/go_mod_inventory",
+      "role": "raw_tool_output",
+      "source_ref": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "ex-task-002.cl1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "ex-task-002.ev1"
+      ],
+      "explanation": "Supported by inventory evidence ex-task-002.ev1 from go mod edit -json.",
+      "proposition": "The input go.mod records a requirement on github.com/google/uuid v1.6.0.",
+      "status": "supported",
+      "type": "module_requirement_recorded"
+    },
+    {
+      "claim_id": "ex-task-002.cl2",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "ex-task-002.ev2"
+      ],
+      "explanation": "Supported by inventory evidence ex-task-002.ev2 from go mod edit -json.",
+      "proposition": "The input go.mod records a requirement on golang.org/x/text v0.14.0.",
+      "status": "supported",
+      "type": "module_requirement_recorded"
+    },
+    {
+      "claim_id": "ex-task-002.cl3",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "ex-task-002.ev3"
+      ],
+      "explanation": "Supported by inventory evidence ex-task-002.ev3 from go mod edit -json.",
+      "proposition": "The input go.mod records a requirement on golang.org/x/sys v0.15.0.",
+      "status": "supported",
+      "type": "module_requirement_recorded"
+    }
+  ],
+  "completed_at": "2026-10-13T12:00:01.250Z",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "go.mod require directives only",
+    "candidate_id": null,
+    "language": "go",
+    "repo_id": "opentrace-fixture/i1-gomod-basic",
+    "requested_revision": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+  },
+  "errors": [],
+  "evidence": [
+    {
+      "artifact_ref": {
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "go",
+          "mod",
+          "edit",
+          "-json",
+          "<private-temp-copy>/go.mod"
+        ],
+        "output_artifact": "sha256:107cb41c5344460caa066b3e983033b4e140f6335d106b003cbd5402dea91c86",
+        "tool": "go mod edit -json",
+        "tool_version": "go1.24.7"
+      },
+      "dimension": "inventory",
+      "evidence_id": "ex-task-002.ev1",
+      "kind": "module_requirement",
+      "limitations": [
+        "Declared requirement only: does not establish that the module is downloaded, built, executed or vulnerable.",
+        "Module graph not resolved (GOPROXY=off, no go.sum verification)."
+      ],
+      "locator": "go.mod#Require[0]",
+      "observation": "go.mod records a direct requirement on github.com/google/uuid v1.6.0.",
+      "observed_at": "2026-10-13T12:00:01.250Z",
+      "scope": "go.mod require directives only, as declared in the input artifact.",
+      "subject": {
+        "indirect": false,
+        "module": "github.com/google/uuid",
+        "version": "v1.6.0"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "go",
+          "mod",
+          "edit",
+          "-json",
+          "<private-temp-copy>/go.mod"
+        ],
+        "output_artifact": "sha256:107cb41c5344460caa066b3e983033b4e140f6335d106b003cbd5402dea91c86",
+        "tool": "go mod edit -json",
+        "tool_version": "go1.24.7"
+      },
+      "dimension": "inventory",
+      "evidence_id": "ex-task-002.ev2",
+      "kind": "module_requirement",
+      "limitations": [
+        "Declared requirement only: does not establish that the module is downloaded, built, executed or vulnerable.",
+        "Module graph not resolved (GOPROXY=off, no go.sum verification)."
+      ],
+      "locator": "go.mod#Require[1]",
+      "observation": "go.mod records a direct requirement on golang.org/x/text v0.14.0.",
+      "observed_at": "2026-10-13T12:00:01.250Z",
+      "scope": "go.mod require directives only, as declared in the input artifact.",
+      "subject": {
+        "indirect": false,
+        "module": "golang.org/x/text",
+        "version": "v0.14.0"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "go",
+          "mod",
+          "edit",
+          "-json",
+          "<private-temp-copy>/go.mod"
+        ],
+        "output_artifact": "sha256:107cb41c5344460caa066b3e983033b4e140f6335d106b003cbd5402dea91c86",
+        "tool": "go mod edit -json",
+        "tool_version": "go1.24.7"
+      },
+      "dimension": "inventory",
+      "evidence_id": "ex-task-002.ev3",
+      "kind": "module_requirement",
+      "limitations": [
+        "Declared requirement only: does not establish that the module is downloaded, built, executed or vulnerable.",
+        "Module graph not resolved (GOPROXY=off, no go.sum verification)."
+      ],
+      "locator": "go.mod#Require[2]",
+      "observation": "go.mod records an indirect requirement on golang.org/x/sys v0.15.0.",
+      "observed_at": "2026-10-13T12:00:01.250Z",
+      "scope": "go.mod require directives only, as declared in the input artifact.",
+      "subject": {
+        "indirect": true,
+        "module": "golang.org/x/sys",
+        "version": "v0.15.0"
+      }
+    }
+  ],
+  "kind": "result",
+  "missing_evidence": [],
+  "producer": {
+    "capability_version": "1.0",
+    "dimensions_used": [
+      "inventory"
+    ],
+    "implementation": "go",
+    "operations_used": [
+      "go_mod_inventory"
+    ],
+    "service_id": "evidence-specialist-b"
+  },
+  "run_id": "run-example-s1",
+  "schema_version": "1.0",
+  "status": "complete",
+  "task_id": "ex-task-002",
+  "warnings": []
+}

@@ -1,0 +1,903 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:f46350943bc00875cf3f9d8bffdc58c9d8e7eec95cb69df4a9b5d9c3fd453fd1",
+  "assessment": null,
+  "commit_sha": "3656a98ab5e7e50529b048c48ffa04d22e0dd31c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "context": {
+  "context_id": "ctx:7e96620179214ba618ffff36",
+  "path": "app/package-lock.json"
+ },
+ "counts": {
+  "shown": 30,
+  "total": 82,
+  "truncated": true
+ },
+ "edges": [
+  {
+   "edge_id": "edge:38e4a05c61e18b868ce91465",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f6b5f0"
+   ],
+   "to": "pkg:dep-031"
+  },
+  {
+   "edge_id": "edge:a6c64966f478eb283746a629",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/056e97"
+   ],
+   "to": "pkg:dep-032"
+  },
+  {
+   "edge_id": "edge:95c0cac083a98e3a87ea2090",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/d2f1aa"
+   ],
+   "to": "pkg:dep-033"
+  },
+  {
+   "edge_id": "edge:602950122d7bedab7244cbed",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/9eb65b"
+   ],
+   "to": "pkg:dep-034"
+  },
+  {
+   "edge_id": "edge:91679a11d803c161ca15e290",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ddfbc3"
+   ],
+   "to": "pkg:dep-035"
+  },
+  {
+   "edge_id": "edge:3d492c8327b514959787dd40",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/3594f2"
+   ],
+   "to": "pkg:dep-036"
+  },
+  {
+   "edge_id": "edge:8c4007bfb35f7b0d188521c9",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/6ce610"
+   ],
+   "to": "pkg:dep-037"
+  },
+  {
+   "edge_id": "edge:8bfb52ef2440fef7ce631e52",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/a308ea"
+   ],
+   "to": "pkg:dep-038"
+  },
+  {
+   "edge_id": "edge:41542bf43b7f77a1ca5e3e6f",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/2356cc"
+   ],
+   "to": "pkg:dep-039"
+  },
+  {
+   "edge_id": "edge:f05fe116431fa60d05af1ffe",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/4bc0aa"
+   ],
+   "to": "pkg:dep-040"
+  },
+  {
+   "edge_id": "edge:3949f7619d29699f4cd90afa",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/cf2602"
+   ],
+   "to": "pkg:dep-041"
+  },
+  {
+   "edge_id": "edge:f6fd4e801380eec4f4327685",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/e7301c"
+   ],
+   "to": "pkg:dep-042"
+  },
+  {
+   "edge_id": "edge:b07fd56a963b30c6b68685a3",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/085790"
+   ],
+   "to": "pkg:dep-043"
+  },
+  {
+   "edge_id": "edge:3a6445d4cb77d2669f82fe1f",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f355ae"
+   ],
+   "to": "pkg:dep-044"
+  },
+  {
+   "edge_id": "edge:49b38b01d86fec7d1448307a",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/df88c9"
+   ],
+   "to": "pkg:dep-045"
+  },
+  {
+   "edge_id": "edge:f20d7b3c1fb65b4d142881db",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/dc82b7"
+   ],
+   "to": "pkg:dep-046"
+  },
+  {
+   "edge_id": "edge:d91a684a97c24d4a74d04bc3",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1902c0"
+   ],
+   "to": "pkg:dep-047"
+  },
+  {
+   "edge_id": "edge:61f12585b3a611c04553dea4",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/583951"
+   ],
+   "to": "pkg:dep-048"
+  },
+  {
+   "edge_id": "edge:c97041a4cddaf8dd266708c0",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/cb3cd8"
+   ],
+   "to": "pkg:dep-049"
+  },
+  {
+   "edge_id": "edge:0db8911f2cf33f7bbc0d73ff",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/dfddbe"
+   ],
+   "to": "pkg:dep-050"
+  },
+  {
+   "edge_id": "edge:93451fdd8f4edf9b62b1d136",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/270b31"
+   ],
+   "to": "pkg:dep-051"
+  },
+  {
+   "edge_id": "edge:4554ff8dd2f2b120a293132c",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/108201"
+   ],
+   "to": "pkg:dep-052"
+  },
+  {
+   "edge_id": "edge:dc3a333c6d6a8a87eb6e47d3",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/622970"
+   ],
+   "to": "pkg:dep-053"
+  },
+  {
+   "edge_id": "edge:be7910da24c38c27a1dd6074",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/cade0a"
+   ],
+   "to": "pkg:dep-054"
+  },
+  {
+   "edge_id": "edge:e3a4c6dd35e29c9412d3e22a",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/8c8eaf"
+   ],
+   "to": "pkg:dep-055"
+  },
+  {
+   "edge_id": "edge:7a4da2a9912171da0452c7b1",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/833617"
+   ],
+   "to": "pkg:dep-056"
+  },
+  {
+   "edge_id": "edge:d1f5f201ee954d61ffbbb310",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ece162"
+   ],
+   "to": "pkg:dep-057"
+  },
+  {
+   "edge_id": "edge:ac6dda5aed395beaadcd316b",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/d00e68"
+   ],
+   "to": "pkg:dep-058"
+  },
+  {
+   "edge_id": "edge:9918a6bf70c1e29754316f93",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/82fcf1"
+   ],
+   "to": "pkg:dep-059"
+  },
+  {
+   "edge_id": "edge:59350237df4498b5f9daabe1",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f45961"
+   ],
+   "to": "pkg:dep-060"
+  }
+ ],
+ "filter": "all",
+ "filter_totals": {
+  "advisory": 4,
+  "all": 82,
+  "direct": 82,
+  "evidence_gaps": 6,
+  "transitive": 0
+ },
+ "focus": {
+  "basis": "graph_root",
+  "candidates_total": 1,
+  "node_id": "pkg:root"
+ },
+ "limits": {
+  "connectors_shown": 0,
+  "connectors_truncated": false,
+  "edges_truncated": false
+ },
+ "lookup": {
+  "counts_by_state": {
+   "match": 4,
+   "missing_version": 1,
+   "no_match": 74,
+   "not_run": 1,
+   "unavailable": 1,
+   "unsupported": 1
+  },
+  "explanation": "Advisory lookup was not performed for these components; this is not a completed clean lookup and not a finding.",
+  "mode": "recorded"
+ },
+ "nodes": [
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 0,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "root-app",
+   "node_id": "pkg:root",
+   "path_state": "complete",
+   "role": "focus",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-031",
+   "node_id": "pkg:dep-031",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.31.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-032",
+   "node_id": "pkg:dep-032",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.32.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-033",
+   "node_id": "pkg:dep-033",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.33.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-034",
+   "node_id": "pkg:dep-034",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.34.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-035",
+   "node_id": "pkg:dep-035",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.35.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-036",
+   "node_id": "pkg:dep-036",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.36.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-037",
+   "node_id": "pkg:dep-037",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.37.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-038",
+   "node_id": "pkg:dep-038",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.38.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-039",
+   "node_id": "pkg:dep-039",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.39.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-040",
+   "node_id": "pkg:dep-040",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.40.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-041",
+   "node_id": "pkg:dep-041",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.41.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-042",
+   "node_id": "pkg:dep-042",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.42.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-043",
+   "node_id": "pkg:dep-043",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.43.0"
+  },
+  {
+   "advisory_lookup": "match",
+   "advisory_match_count": 1,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-044",
+   "node_id": "pkg:dep-044",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.44.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-045",
+   "node_id": "pkg:dep-045",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.45.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-046",
+   "node_id": "pkg:dep-046",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.46.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-047",
+   "node_id": "pkg:dep-047",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.47.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-048",
+   "node_id": "pkg:dep-048",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.48.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-049",
+   "node_id": "pkg:dep-049",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.49.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-050",
+   "node_id": "pkg:dep-050",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.50.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-051",
+   "node_id": "pkg:dep-051",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.51.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-052",
+   "node_id": "pkg:dep-052",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.52.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-053",
+   "node_id": "pkg:dep-053",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.53.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-054",
+   "node_id": "pkg:dep-054",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.54.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-055",
+   "node_id": "pkg:dep-055",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.55.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-056",
+   "node_id": "pkg:dep-056",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.56.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-057",
+   "node_id": "pkg:dep-057",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.57.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-058",
+   "node_id": "pkg:dep-058",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.58.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "dep-059",
+   "node_id": "pkg:dep-059",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.59.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "dep-060",
+   "node_id": "pkg:dep-060",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.60.0"
+  }
+ ],
+ "page": {
+  "has_more": true,
+  "matches_shown": 30,
+  "matches_total": 82,
+  "offset": 30,
+  "range_first": 31,
+  "range_last": 60,
+  "size": 30
+ },
+ "query": "",
+ "schema": "opentrace.workbench.dependency_page/1"
+}

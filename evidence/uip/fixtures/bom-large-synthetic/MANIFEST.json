@@ -1,0 +1,130 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 34187,
+   "path": "candidates-not-represented.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "c44f9e0fe47883e9a3cd34adc8ea46cfe490868135c81ebd47be5bdb8e75587e"
+  },
+  {
+   "bytes": 34174,
+   "path": "candidates-offset-00.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "ebd7a9292edd80044e8a3abb8525db72e9575376009f1627660fe97606d53f8e"
+  },
+  {
+   "bytes": 34086,
+   "path": "candidates-offset-25.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "74a0cb6acc276599180813b0056fa8e8a5cb452b0c248389601b76999367d3c6"
+  },
+  {
+   "bytes": 12458,
+   "path": "candidates-offset-50.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "7ef815c2ba6740a53965f3182e82f3dc0d7798e25d57b5ee616b5d5c8ae0f029"
+  },
+  {
+   "bytes": 4568,
+   "path": "candidates-search-same-name.json",
+   "schema": "opentrace.workbench.bom_candidates/1",
+   "sha256": "6ec792009f41d3449c0bc025d938ecf0fb485178a7da9909cda41bd157b17cd3"
+  },
+  {
+   "bytes": 2803,
+   "path": "graph-evidence-only.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "9f90f2e8e5d5df0606b36becf1af7afce794ce2a7b87a35ab8844d652c768303"
+  },
+  {
+   "bytes": 5871,
+   "path": "graph-focused-assertion.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "20da613488be13d2c23835511b75d987fa8edc792b627d14f0eb2eee95d94a72"
+  },
+  {
+   "bytes": 121211,
+   "path": "graph-full-view-offset-000.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "2504cc3feb807cb963cb4d776d5a69af94b7d8761e1e2ae90640117f84f42cd4"
+  },
+  {
+   "bytes": 125965,
+   "path": "graph-full-view-offset-100.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "67e6fdde107050f5580cd17509c006896470202cf749722a08c6f9fdea5566e7"
+  },
+  {
+   "bytes": 1249,
+   "path": "graph-group-summary.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "fc25775c55c74f22387c8931fd76122d2ac61f1ddb5c204472318feca5a4b82b"
+  },
+  {
+   "bytes": 1302,
+   "path": "graph-no-graph.json",
+   "schema": "opentrace.workbench.bom_graph/1",
+   "sha256": "f535e71cc61cd99f960386066b82462df9f63762e6291b5b826a4c317c59b0fe"
+  },
+  {
+   "bytes": 2668,
+   "path": "inspector-candidate.json",
+   "schema": "opentrace.workbench.inspector/1",
+   "sha256": "7f77f43e382b63036a3a50d703de342e07d0c278d9a8eb10c6e9018ec6b10b7c"
+  },
+  {
+   "bytes": 1842,
+   "path": "inspector-entity.json",
+   "schema": "opentrace.workbench.inspector/1",
+   "sha256": "e8280915c6d9659da5f1d973b10547b8ff7ade3a04f6a7e690564e92bc7e3726"
+  },
+  {
+   "bytes": 1885,
+   "path": "related-none.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "14c0a04c9b20b90c76487fe77973690d46cf58ec463afe6b512a3df5620bce25"
+  },
+  {
+   "bytes": 1534,
+   "path": "related-relationship.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "07d66ac989fa757429b61c23ee058c69679807d73026e575862e1920545b8224"
+  },
+  {
+   "bytes": 6770,
+   "path": "related-shared-offset-00.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "303ed5cf81e4f1649315fa4540fef228bbab65a3469f32d3f478d7f61392b5d3"
+  },
+  {
+   "bytes": 6775,
+   "path": "related-shared-offset-20.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "b15ed5e65e0823d764a8948216c7b69a3b06d879da4658399ae36ffa0622e8e7"
+  },
+  {
+   "bytes": 2825,
+   "path": "related-shared-offset-40.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "c2da213ebfcce68cc2f116eeb8523d96b0df8cb1e7c6d2b12ab7beabb92fb9d8"
+  },
+  {
+   "bytes": 1779,
+   "path": "related-single.json",
+   "schema": "opentrace.workbench.bom_related_checks/1",
+   "sha256": "aaaeec0bd63740c6e233fe4bd8335a4eebeac5e2760c50298ba3d2262c08284d"
+  }
+ ],
+ "name": "bom-large-synthetic",
+ "normalized": [],
+ "notes": "60 candidates (25/25/10), a record shared by 45 checks (20/20/5), evidence-only and no-graph tasks, a shared assertion, one name at two files, excluded evidence, a 400-node full view paged by 100 plus neighbors.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

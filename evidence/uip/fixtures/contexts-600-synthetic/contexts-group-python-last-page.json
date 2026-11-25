@@ -1,0 +1,416 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:61888cc95fe44e4e99bd9cfaf7c68052206e8c55540c86a00ffecfcb0a28744e",
+  "assessment": null,
+  "commit_sha": "078a5f28680ded5c0d6b5207d14bc13311c70cc2",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/mono-lab",
+   "host": "github.com",
+   "name": "mono-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 10,
+  "truncated": true
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "manifest_basename",
+   "category": "python_requirements",
+   "distinct_total": 372,
+   "files": [
+    {
+     "dependency_context_id": "ctx:14c4018b5fc35867eb40a641",
+     "distinct_total": 4,
+     "file_id": "ctx:14c4018b5fc35867eb40a641",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s100/requirements.txt",
+     "raw_locations": [
+      "/services/s100/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s100/requirements.txt",
+      "text": "services/s100/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:d5781f051932906074b5a2fc",
+     "distinct_total": 3,
+     "file_id": "ctx:d5781f051932906074b5a2fc",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s101/requirements.txt",
+     "raw_locations": [
+      "/services/s101/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s101/requirements.txt",
+      "text": "services/s101/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:899178b977f575390001b06a",
+     "distinct_total": 3,
+     "file_id": "ctx:899178b977f575390001b06a",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s102/requirements.txt",
+     "raw_locations": [
+      "/services/s102/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s102/requirements.txt",
+      "text": "services/s102/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:02ea5f286bc9b1ac823cabee",
+     "distinct_total": 3,
+     "file_id": "ctx:02ea5f286bc9b1ac823cabee",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s103/requirements.txt",
+     "raw_locations": [
+      "/services/s103/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s103/requirements.txt",
+      "text": "services/s103/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:bb0bb9104879d9d954d08033",
+     "distinct_total": 3,
+     "file_id": "ctx:bb0bb9104879d9d954d08033",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s104/requirements.txt",
+     "raw_locations": [
+      "/services/s104/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s104/requirements.txt",
+      "text": "services/s104/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:bdd7f9eb351aba2533c5d920",
+     "distinct_total": 3,
+     "file_id": "ctx:bdd7f9eb351aba2533c5d920",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s105/requirements.txt",
+     "raw_locations": [
+      "/services/s105/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s105/requirements.txt",
+      "text": "services/s105/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:650bd567db830bfc90bb4009",
+     "distinct_total": 3,
+     "file_id": "ctx:650bd567db830bfc90bb4009",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s106/requirements.txt",
+     "raw_locations": [
+      "/services/s106/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s106/requirements.txt",
+      "text": "services/s106/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:2d927da16a4996e25cfc51fa",
+     "distinct_total": 3,
+     "file_id": "ctx:2d927da16a4996e25cfc51fa",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s107/requirements.txt",
+     "raw_locations": [
+      "/services/s107/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s107/requirements.txt",
+      "text": "services/s107/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1796d6dc49485d77dea0c341",
+     "distinct_total": 3,
+     "file_id": "ctx:1796d6dc49485d77dea0c341",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s108/requirements.txt",
+     "raw_locations": [
+      "/services/s108/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s108/requirements.txt",
+      "text": "services/s108/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:57a42ff8f3cfe592bdac163a",
+     "distinct_total": 3,
+     "file_id": "ctx:57a42ff8f3cfe592bdac163a",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s109/requirements.txt",
+     "raw_locations": [
+      "/services/s109/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s109/requirements.txt",
+      "text": "services/s109/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:e47fdf4b56511201c2182a59",
+     "distinct_total": 4,
+     "file_id": "ctx:e47fdf4b56511201c2182a59",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s110/requirements.txt",
+     "raw_locations": [
+      "/services/s110/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s110/requirements.txt",
+      "text": "services/s110/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:fc481df5458b5792cc06232d",
+     "distinct_total": 3,
+     "file_id": "ctx:fc481df5458b5792cc06232d",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s111/requirements.txt",
+     "raw_locations": [
+      "/services/s111/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s111/requirements.txt",
+      "text": "services/s111/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:5f626ad220c9744ef7d97daa",
+     "distinct_total": 3,
+     "file_id": "ctx:5f626ad220c9744ef7d97daa",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s112/requirements.txt",
+     "raw_locations": [
+      "/services/s112/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s112/requirements.txt",
+      "text": "services/s112/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8c2c2fd6d1d298f010f07352",
+     "distinct_total": 3,
+     "file_id": "ctx:8c2c2fd6d1d298f010f07352",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s113/requirements.txt",
+     "raw_locations": [
+      "/services/s113/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s113/requirements.txt",
+      "text": "services/s113/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:44d4b073e561dd653e4ec12d",
+     "distinct_total": 3,
+     "file_id": "ctx:44d4b073e561dd653e4ec12d",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s114/requirements.txt",
+     "raw_locations": [
+      "/services/s114/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s114/requirements.txt",
+      "text": "services/s114/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:cbe4700964b1312813f719f8",
+     "distinct_total": 3,
+     "file_id": "ctx:cbe4700964b1312813f719f8",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s115/requirements.txt",
+     "raw_locations": [
+      "/services/s115/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s115/requirements.txt",
+      "text": "services/s115/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:47d98a110c4c4b8207be6814",
+     "distinct_total": 3,
+     "file_id": "ctx:47d98a110c4c4b8207be6814",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s116/requirements.txt",
+     "raw_locations": [
+      "/services/s116/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s116/requirements.txt",
+      "text": "services/s116/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:42dc38349936f02a919f5cb4",
+     "distinct_total": 3,
+     "file_id": "ctx:42dc38349936f02a919f5cb4",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s117/requirements.txt",
+     "raw_locations": [
+      "/services/s117/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s117/requirements.txt",
+      "text": "services/s117/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:f189b3f6e133e4c5b05a2479",
+     "distinct_total": 3,
+     "file_id": "ctx:f189b3f6e133e4c5b05a2479",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s118/requirements.txt",
+     "raw_locations": [
+      "/services/s118/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s118/requirements.txt",
+      "text": "services/s118/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:f3bf40ae84b90744fc8bd67e",
+     "distinct_total": 3,
+     "file_id": "ctx:f3bf40ae84b90744fc8bd67e",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "services/s119/requirements.txt",
+     "raw_locations": [
+      "/services/s119/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/mono-lab/blob/078a5f28680ded5c0d6b5207d14bc13311c70cc2/services/s119/requirements.txt",
+      "text": "services/s119/requirements.txt"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 120,
+    "truncated": true
+   },
+   "files_offset": 100,
+   "group_id": "grp:9fcccf5d45ebb217a43cb8a0",
+   "kind": "located",
+   "label": "Python requirements",
+   "membership_total": 372,
+   "token": "amber"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/mono-lab",
+  "commit_sha": "078a5f28680ded5c0d6b5207d14bc13311c70cc2",
+  "distinct_total": 1819,
+  "located_distinct_total": 1812,
+  "membership_total": 1854,
+  "name": "example-org/mono-lab",
+  "unlocated_total": 7
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

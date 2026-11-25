@@ -1,0 +1,145 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "counts": {
+  "edges_in_scope": 2,
+  "edges_shown": 2,
+  "neighbors_shown": 0,
+  "nodes_in_scope": 3,
+  "nodes_shown": 3,
+  "omitted_edges": 0,
+  "omitted_nodes": 0,
+  "primary_shown": 3
+ },
+ "edges": [
+  {
+   "edge_id": "edge:e57ca245699a20c2bb8f0e49",
+   "from": "dreq-types-peewee-5c986a69",
+   "label": "context",
+   "rationale": null,
+   "role": "context",
+   "to": "dev-decl-247d3bff-types-peewee",
+   "type": "context"
+  },
+  {
+   "edge_id": "edge:717dcc5bc73ca06305a6901e",
+   "from": "dreq-types-peewee-5c986a69",
+   "label": "contradicts",
+   "rationale": null,
+   "role": "context",
+   "to": "dev-look-inv-syft-source--ac166b22-types-peewee",
+   "type": "contradicts"
+  }
+ ],
+ "graph_state": "assertion_graph",
+ "message_code": null,
+ "nodes": [
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "graph_assertion",
+    "record_id": "dreq-types-peewee-5c986a69"
+   },
+   "evidence_role": null,
+   "full_label": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir",
+   "kind": "assertion",
+   "label": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir",
+   "node_id": "dreq-types-peewee-5c986a69",
+   "origin": "recorded_result",
+   "role": "primary",
+   "state": "contradicted"
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "graph_evidence",
+    "record_id": "dev-decl-247d3bff-types-peewee"
+   },
+   "evidence_role": "context",
+   "full_label": "Requirement declaration",
+   "kind": "evidence",
+   "label": "Requirement declaration",
+   "node_id": "dev-decl-247d3bff-types-peewee",
+   "origin": "recorded_result",
+   "role": "primary",
+   "state": null
+  },
+  {
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "graph_evidence",
+    "record_id": "dev-look-inv-syft-source--ac166b22-types-peewee"
+   },
+   "evidence_role": "context",
+   "full_label": "Inventory lookup",
+   "kind": "evidence",
+   "label": "Inventory lookup",
+   "node_id": "dev-look-inv-syft-source--ac166b22-types-peewee",
+   "origin": "recorded_result",
+   "role": "primary",
+   "state": null
+  }
+ ],
+ "page": null,
+ "records": [
+  {
+   "full_label": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir",
+   "node_id": "dreq-types-peewee-5c986a69"
+  },
+  {
+   "full_label": "Requirement declaration",
+   "node_id": "dev-decl-247d3bff-types-peewee"
+  },
+  {
+   "full_label": "Inventory lookup",
+   "node_id": "dev-look-inv-syft-source--ac166b22-types-peewee"
+  }
+ ],
+ "schema": "opentrace.workbench.bom_graph/1",
+ "scope": {
+  "candidate_id": "cand:missing_component:6df16cbe",
+  "group": null,
+  "kind": "focused_candidate",
+  "query": ""
+ },
+ "truncated": false
+}

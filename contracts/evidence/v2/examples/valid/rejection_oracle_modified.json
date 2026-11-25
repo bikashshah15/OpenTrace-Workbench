@@ -1,0 +1,9 @@
+{
+  "code": "oracle_modified",
+  "kind": "rejection",
+  "message": "Oracle file negotiate_test.go changed after the patch.",
+  "retryable": false,
+  "run_id": "run-tcv",
+  "schema_version": "2.0",
+  "task_id": "tcv"
+}

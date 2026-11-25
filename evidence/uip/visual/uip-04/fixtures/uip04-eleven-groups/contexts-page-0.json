@@ -1,0 +1,613 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:e85734069469ae3172e45058e7a965badbc0d1d2dc98b3590b8bf632fdd7af5c",
+  "assessment": null,
+  "commit_sha": "09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 11,
+  "total": 11,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:c33c8348f54eea7c8be1b3cb",
+     "distinct_total": 3,
+     "file_id": "ctx:c33c8348f54eea7c8be1b3cb",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/a0.md",
+     "raw_locations": [
+      "/docs/a0.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/docs/a0.md",
+      "text": "docs/a0.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:2f905a900f39cd5ab198ed50",
+     "distinct_total": 3,
+     "file_id": "ctx:2f905a900f39cd5ab198ed50",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/a1.md",
+     "raw_locations": [
+      "/docs/a1.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/docs/a1.md",
+      "text": "docs/a1.md"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:396b08281c310f574489510e",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 6,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:64b3f863b1ff857501ad20ef",
+     "distinct_total": 3,
+     "file_id": "ctx:64b3f863b1ff857501ad20ef",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a0.js",
+     "raw_locations": [
+      "/web/a0.js"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/web/a0.js",
+      "text": "web/a0.js"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:23fa13486f3771649b626142",
+     "distinct_total": 3,
+     "file_id": "ctx:23fa13486f3771649b626142",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a1.js",
+     "raw_locations": [
+      "/web/a1.js"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/web/a1.js",
+      "text": "web/a1.js"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:4df7debd28c46b386bed243f",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 6,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "node_packages",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:cd6a9cb0f76454840c96134c",
+     "distinct_total": 3,
+     "file_id": "ctx:cd6a9cb0f76454840c96134c",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "app/package-0/package.json",
+     "raw_locations": [
+      "/app/package-0/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/app/package-0/package.json",
+      "text": "app/package-0/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:4de8f93c456c346d0009d02b",
+     "distinct_total": 3,
+     "file_id": "ctx:4de8f93c456c346d0009d02b",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "app/package-1/package.json",
+     "raw_locations": [
+      "/app/package-1/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/app/package-1/package.json",
+      "text": "app/package-1/package.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:01729d353e4e34243a087a84",
+   "kind": "located",
+   "label": "Node packages",
+   "membership_total": 6,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "python_requirements",
+   "distinct_total": 9,
+   "files": [
+    {
+     "dependency_context_id": "ctx:f7f053a84d7108d8c4148fd3",
+     "distinct_total": 3,
+     "file_id": "ctx:f7f053a84d7108d8c4148fd3",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "req/requirements-0.txt",
+     "raw_locations": [
+      "/req/requirements-0.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/req/requirements-0.txt",
+      "text": "req/requirements-0.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:99fc5dc979a97b67bb2645d8",
+     "distinct_total": 3,
+     "file_id": "ctx:99fc5dc979a97b67bb2645d8",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "req/requirements-1.txt",
+     "raw_locations": [
+      "/req/requirements-1.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/req/requirements-1.txt",
+      "text": "req/requirements-1.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:cac8280e5078f2cdc0e0b1a7",
+     "distinct_total": 3,
+     "file_id": "ctx:cac8280e5078f2cdc0e0b1a7",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "req/requirements-2.txt",
+     "raw_locations": [
+      "/req/requirements-2.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/req/requirements-2.txt",
+      "text": "req/requirements-2.txt"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 3,
+    "total": 3,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:6a7fb3669fdf93d8048bd398",
+   "kind": "located",
+   "label": "Python requirements",
+   "membership_total": 9,
+   "token": "amber"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:c36270b30d1c76f6588d62a3",
+     "distinct_total": 3,
+     "file_id": "ctx:c36270b30d1c76f6588d62a3",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "mod/go0/go.mod",
+     "raw_locations": [
+      "/mod/go0/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/mod/go0/go.mod",
+      "text": "mod/go0/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:f3fd1c2eabcd0453b0e2b2ee",
+     "distinct_total": 3,
+     "file_id": "ctx:f3fd1c2eabcd0453b0e2b2ee",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "mod/go1/go.mod",
+     "raw_locations": [
+      "/mod/go1/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/mod/go1/go.mod",
+      "text": "mod/go1/go.mod"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:4a8d8eb232c45df357929236",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 6,
+   "token": "amber"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "rust_crates",
+   "distinct_total": 3,
+   "files": [
+    {
+     "dependency_context_id": "ctx:de6866e6349032cd3a98737b",
+     "distinct_total": 3,
+     "file_id": "ctx:de6866e6349032cd3a98737b",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "crate/c0/Cargo.toml",
+     "raw_locations": [
+      "/crate/c0/Cargo.toml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/crate/c0/Cargo.toml",
+      "text": "crate/c0/Cargo.toml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:b042488ac7e030ed1acaa6c7",
+   "kind": "located",
+   "label": "Rust crates",
+   "membership_total": 3,
+   "token": "amber"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "java_build",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:bbd6e71453f564e83059b2c2",
+     "distinct_total": 3,
+     "file_id": "ctx:bbd6e71453f564e83059b2c2",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "jvm/j0/pom.xml",
+     "raw_locations": [
+      "/jvm/j0/pom.xml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/jvm/j0/pom.xml",
+      "text": "jvm/j0/pom.xml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1081fbb3394729c73de8a75f",
+     "distinct_total": 3,
+     "file_id": "ctx:1081fbb3394729c73de8a75f",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "jvm/j1/pom.xml",
+     "raw_locations": [
+      "/jvm/j1/pom.xml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/jvm/j1/pom.xml",
+      "text": "jvm/j1/pom.xml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:10cb5edc2126b1672091700a",
+   "kind": "located",
+   "label": "Java build files",
+   "membership_total": 6,
+   "token": "amber"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 9,
+   "files": [
+    {
+     "dependency_context_id": "ctx:6363e20296a68b5de657e137",
+     "distinct_total": 3,
+     "file_id": "ctx:6363e20296a68b5de657e137",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w0.yml",
+     "raw_locations": [
+      "/.github/workflows/w0.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/.github/workflows/w0.yml",
+      "text": ".github/workflows/w0.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:9ccd8f164fed655783b98d04",
+     "distinct_total": 3,
+     "file_id": "ctx:9ccd8f164fed655783b98d04",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w1.yml",
+     "raw_locations": [
+      "/.github/workflows/w1.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/.github/workflows/w1.yml",
+      "text": ".github/workflows/w1.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:0e68e1148d42fd859c76b83c",
+     "distinct_total": 3,
+     "file_id": "ctx:0e68e1148d42fd859c76b83c",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w2.yml",
+     "raw_locations": [
+      "/.github/workflows/w2.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/.github/workflows/w2.yml",
+      "text": ".github/workflows/w2.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 3,
+    "total": 3,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:3dbce4443636caeca389e980",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 9,
+   "token": "purple"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "container_files",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:d874e69a7187aadae301f9bd",
+     "distinct_total": 3,
+     "file_id": "ctx:d874e69a7187aadae301f9bd",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "ctr/Dockerfile.0",
+     "raw_locations": [
+      "/ctr/Dockerfile.0"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/ctr/Dockerfile.0",
+      "text": "ctr/Dockerfile.0"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:980502701890a4400b9f16c4",
+     "distinct_total": 3,
+     "file_id": "ctx:980502701890a4400b9f16c4",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "ctr/Dockerfile.1",
+     "raw_locations": [
+      "/ctr/Dockerfile.1"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/ctr/Dockerfile.1",
+      "text": "ctr/Dockerfile.1"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:a5fe31f1d0d532cb0948be30",
+   "kind": "located",
+   "label": "Container files",
+   "membership_total": 6,
+   "token": "purple"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:f976b8e3a2b66b8e1781cca8",
+     "distinct_total": 3,
+     "file_id": "ctx:f976b8e3a2b66b8e1781cca8",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "other/o0.rs",
+     "raw_locations": [
+      "/other/o0.rs"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/other/o0.rs",
+      "text": "other/o0.rs"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6e4d5c7742bc91db54ec0631",
+     "distinct_total": 3,
+     "file_id": "ctx:6e4d5c7742bc91db54ec0631",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "other/o1.rs",
+     "raw_locations": [
+      "/other/o1.rs"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7/other/o1.rs",
+      "text": "other/o1.rs"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:89d9c9b26501ee70b84ebd10",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 6,
+   "token": "neutral"
+  },
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 2,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:8760c403adb303fdb9ca95e1",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 2,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "09bc0be1c7f5b152ff2ba69a9dcc3e297cecafd7",
+  "distinct_total": 65,
+  "located_distinct_total": 63,
+  "membership_total": 63,
+  "name": "example-org/sample-web",
+  "unlocated_total": 2
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

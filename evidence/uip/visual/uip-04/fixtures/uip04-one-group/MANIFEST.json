@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "d70f0fda02f269feec74d21f820ccb5cb44b9b6a302da794bf82fdfdb6930389"
+  },
+  {
+   "bytes": 2341,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "89908ed3b451bd6a21f49d0e216364461868ee5142e97d325781896e72bc4397"
+  }
+ ],
+ "name": "uip04-one-group",
+ "notes": "A single Go modules group.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

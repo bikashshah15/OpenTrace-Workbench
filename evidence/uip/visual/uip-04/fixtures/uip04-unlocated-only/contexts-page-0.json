@@ -1,0 +1,55 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:a25957a30811a23475d9631a5a66f63d417f85c8893c833ff3e5c5eda269e81c",
+  "assessment": null,
+  "commit_sha": "606aa68b3523c67ca05eb43ee087d1d11765ab12",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 7,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:48b675523e0bad658278da16",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 7,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "606aa68b3523c67ca05eb43ee087d1d11765ab12",
+  "distinct_total": 7,
+  "located_distinct_total": 0,
+  "membership_total": 0,
+  "name": "example-org/sample-web",
+  "unlocated_total": 7
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

@@ -1,0 +1,116 @@
+{
+ "binding": null,
+ "binding_state": "unresolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": "Workbench is not ready: the scan has not completed.",
+  "ready": false
+ },
+ "identity": null,
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 2000,
+  "job_id": "job:d849882e6e22173f7a7b1d25",
+  "seq": 2,
+  "state": "failed",
+  "updated_at": "2026-01-01T00:00:02Z"
+ },
+ "mode": "captured",
+ "pinned": false,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": "invalid_revision",
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "failed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "acquire_source",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "sbom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "cbom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "evidence_projection",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "upstream_failed",
+   "stage_id": "workbench_ready",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  }
+ ]
+}

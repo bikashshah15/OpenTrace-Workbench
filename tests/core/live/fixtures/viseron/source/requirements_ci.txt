@@ -1,0 +1,6 @@
+# Extra requirements for GitHub Actions CI
+hailort==4.22.0
+# GitHub Actions installs PyPI OpenCV packages for lint/type-check jobs only.
+opencv-python==4.11.0.86
+opencv-contrib-python==4.11.0.86
+pygobject==3.42.2 # Newer versions does not compile for the Jetson Nano

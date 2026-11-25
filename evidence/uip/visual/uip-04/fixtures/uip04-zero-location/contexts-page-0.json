@@ -1,0 +1,37 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:0e8d01049e41b6a03e00d66b04624f451ccee09c10c0245d9b7d6218fb18a8c9",
+  "assessment": null,
+  "commit_sha": "7576e971dca177bef133fc2715b1f79dd143984c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "7576e971dca177bef133fc2715b1f79dd143984c",
+  "distinct_total": 0,
+  "located_distinct_total": 0,
+  "membership_total": 0,
+  "name": "example-org/sample-web",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

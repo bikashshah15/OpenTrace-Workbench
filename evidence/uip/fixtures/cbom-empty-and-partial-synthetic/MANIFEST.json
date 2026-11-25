@@ -1,0 +1,52 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 12307,
+   "path": "ai-references.json",
+   "schema": "opentrace.workbench.ai_assets/1",
+   "sha256": "add10b4525279d779e5fe6a12615b58884e43fb17dc70d662a031da8c0f0ef82"
+  },
+  {
+   "bytes": 1101,
+   "path": "ai-unsupported.json",
+   "schema": "opentrace.workbench.ai_assets/1",
+   "sha256": "54a5d271da752c78073d760093250db63f3b3148d504fe87dfab244f69ea443f"
+  },
+  {
+   "bytes": 2798,
+   "path": "crypto-completed-empty.json",
+   "schema": "opentrace.workbench.crypto_assets/1",
+   "sha256": "17586ded40a51f56bdb3f72f7486f7d83c8ebb207055b4c58f65e2790dda41b7"
+  },
+  {
+   "bytes": 1681,
+   "path": "crypto-failed.json",
+   "schema": "opentrace.workbench.crypto_assets/1",
+   "sha256": "5a29fceff2f14f58b8aee44a06129e4bf83677a7a1f378f4839b6e1e22567392"
+  },
+  {
+   "bytes": 8663,
+   "path": "crypto-partial.json",
+   "schema": "opentrace.workbench.crypto_assets/1",
+   "sha256": "4d100e0e2dc088b029f1ddac19a8c0776b6d60006dd50da042aa649b993c04a3"
+  },
+  {
+   "bytes": 4334,
+   "path": "scan-status.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "42272d46ccd0e5f24c87beca37ad80477ee3546aa24a17ef86d22b523ebc783d"
+  }
+ ],
+ "name": "cbom-empty-and-partial-synthetic",
+ "normalized": [],
+ "notes": "Crypto empty/partial/failed states, endpoint services, supplemental-shaped (experimental, invented) records; AI unsupported, same-basename references, alternatives, unavailable/unknown attributes.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

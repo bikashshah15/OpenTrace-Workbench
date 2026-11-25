@@ -1,0 +1,2260 @@
+{
+  "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+  "capture": {
+    "build": null,
+    "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+    "configuration_source": {
+      "follows": [
+        "config/config.yml.example",
+        "docs/docs/configuration/advanced/reference.md (detectors)",
+        "docs/docs/configuration/object_detectors.md (CPU Detector)"
+      ],
+      "not_upstream": true,
+      "origin": "researcher-created",
+      "path": "inputs/frigate/researcher-config.yml",
+      "sha256": "1a287afaa3378a482c6b7709ffe54c53dcc759db43f20327ff0993f01fb68ece"
+    },
+    "execution": null,
+    "inventories": [
+      {
+        "command": "cd workdir/frigate && syft scan dir:. --exclude './.git/**' -o cyclonedx-json=../../inputs/frigate/raw/syft-source-dir.cdx.json -q",
+        "coverage_contract": {
+          "established": false,
+          "note": "No generator or owner statement was inspected saying this inventory is expected to include direct-URL, VCS or wildcard-pinned requirements. 'intended_coverage' is the researcher's description of what was scanned, not a contract."
+        },
+        "format": "CycloneDX 1.7 JSON",
+        "generator": "syft 1.51.1",
+        "intended_coverage": [
+          "package-manifests-and-lockfiles-in-source-tree"
+        ],
+        "inventory_id": "inv:syft-source-dir",
+        "kind": "sbom",
+        "label": "source-directory inventory (package manifests and lockfiles in the checkout); not a deployed-image or runtime SBOM",
+        "name_lookups": [
+          {
+            "components_checked": 1989,
+            "matches": 0,
+            "method": "exact, case-insensitive component-name equality (an observation, not an identity decision)",
+            "name": "yolov6n.hef"
+          }
+        ],
+        "origin": "captured",
+        "raw_sha256_note": "source_sha256 below is the digest of the unmodified raw file; the raw file embeds local absolute paths and a timestamp and is not published",
+        "record_counts": {
+          "basis": "counted from the raw CycloneDX file",
+          "by_type": {
+            "file": 13,
+            "library": 1976
+          },
+          "components": 1989
+        },
+        "scan_binding": {
+          "basis": "scan run by the researcher in the checkout at the pinned revision (HEAD verified at clone time and at bundle build, no working-tree changes); scan time is the timestamp inside the raw file",
+          "corroboration": "for docker/main/requirements-wheels.txt only: the SHA-256 Syft recorded for the scanned file equals the SHA-256 of that file at the pinned revision (checked by the rule)",
+          "not_established": "that every other scanned file matches the pinned revision"
+        },
+        "scan_scope": {
+          "basis": "whole checkout directory at the pinned revision (syft scan dir:.); file count not enumerated here",
+          "file_count": null,
+          "paths": [
+            "."
+          ],
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "source_file": "inputs/frigate/raw/syft-source-dir.cdx.json",
+        "source_sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7",
+        "subject": "directory scan of the checkout at the pinned revision (tool's own subject is the directory '.'; revision binding is by this scan, not declared by the BOM)"
+      },
+      {
+        "generator": "researcher (manual reading of pinned source)",
+        "intended_coverage": [],
+        "inventory_id": "inv:curated-source-reading",
+        "kind": "curation",
+        "label": "not a BOM; relationships here are researcher-stated and unassessed",
+        "origin": "curated"
+      },
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6 (CBOM)",
+        "generator": "cdxgen 12.9.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:cdxgen-cbom",
+        "kind": "cbom",
+        "label": "CBOM \u00b7 cdxgen 12.9.0: third-party generator, source-only run over the frigate/ package; documented CBOM coverage is Java keystores/certificates and JS/TS source algorithms, not Python source algorithms",
+        "origin": "captured",
+        "scan_scope": {
+          "basis": "git archive of the pinned revision (acquisition manifest)",
+          "file_count": 343,
+          "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+          "paths": [
+            "frigate"
+          ],
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "source_file": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+        "source_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+        "third_party_generator": true
+      },
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6",
+        "generator": "cisco-aibom 1.10.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:cisco-aibom",
+        "kind": "aibom",
+        "label": "AI-BOM \u00b7 Cisco AI BOM 1.10.0 (LLM-assisted; a declaration by the generator, not independent verification)",
+        "origin": "captured",
+        "scan_scope": {
+          "basis": "git archive of the pinned revision (acquisition manifest)",
+          "file_count": 153,
+          "listing_sha256": "540af848448658a7589006c59c4f455c3b7e2aeef44d99d8f63525b4e9345d86",
+          "paths": [
+            "frigate/detectors",
+            "frigate/config",
+            "docker/main"
+          ],
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "source_file": "inputs/frigate/raw/cisco-aibom.cdx.json",
+        "source_sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6"
+      }
+    ],
+    "model": null,
+    "origin": "curated",
+    "repository": {
+      "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+      "revision_selection": {
+        "method": "latest non-prerelease GitHub release on 2026-10-30 (gh api repos/blakeblackshear/frigate/releases/latest -> v0.18.2); tag resolved by `git clone --depth 1 --branch v0.18.2`; HEAD verified equal to this SHA",
+        "tag": "v0.18.2"
+      },
+      "url": "https://github.com/blakeblackshear/frigate"
+    },
+    "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "model",
+      "execution"
+    ]
+  },
+  "findings": [
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for model_identity/acquired_from; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "p1-model-acquired-from",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:p1-model-acquired-from",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for model_identity/acquired_from; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for runtime/default_model_path; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "p2-detector-default-model",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:p2-detector-default-model",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for runtime/default_model_path; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for runtime/uses_library; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "p3-detector-uses-tflite-runtime",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:p3-detector-uses-tflite-runtime",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for runtime/uses_library; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for crypto_attribution/hashes_model_with; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "p4-model-hashed-with-md5",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:p4-model-hashed-with-md5",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for crypto_attribution/hashes_model_with; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion names a declared requirement and a specific inventory",
+        "reason_code": "representation_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "p5-requirement-represented-in-inventory",
+      "assertion_origin": "curated",
+      "bounded_meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "category": "inventory_coverage_gap",
+      "coverage_contract": {
+        "established": false,
+        "note": "No generator or owner statement was inspected saying this inventory is expected to include direct-URL, VCS or wildcard-pinned requirements. 'intended_coverage' is the researcher's description of what was scanned, not a contract."
+      },
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:p5-requirement-represented-in-inventory",
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "next_action": "establish whether this generator is expected to represent this declaration form (documentation or owner statement), or add an inventory that does",
+      "rationale": "Contradicted: the declared requirement has no component of that name in the fully parsed inventory, which lists the same requirements file. No coverage contract is established that this inventory should include this declaration form, so this is an inventory discrepancy (coverage gap), not a completeness defect or vulnerability.",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_underlying_sources": {},
+      "state": "contradicted",
+      "underlying_sources": [
+        "source-file:docker/main/requirements-wheels.txt@cfa08c56b23d",
+        "tool-output:syft-source-dir"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev14-requirements-declaration-tflite-runtime",
+          "reason": "2 declaration line(s): line 75 direct_url marker \"platform_machine == 'x86_64'\"; line 76 direct_url marker \"platform_machine == 'aarch64'\"",
+          "reason_code": "requirement_declared",
+          "relation": "context",
+          "role": "declaration"
+        },
+        {
+          "evidence_id": "ev09-syft-lookup-tflite-runtime",
+          "reason": "no component with this normalized name among 1976 library components (all classified); the inventory lists the requirements file with the same SHA-256",
+          "reason_code": "not_represented_in_fully_parsed_inventory",
+          "relation": "contradicts",
+          "role": "inventory"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "p7-model-declared-in-aibom",
+      "assertion_origin": "curated",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [],
+      "category": null,
+      "digest_verification": "not applicable: no matched model",
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev03-config-default-model-path",
+          "reason_code": "locator_not_in_excerpt"
+        },
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev04-docs-cpu-model-statement",
+          "reason_code": "locator_not_in_excerpt"
+        },
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev10-md5-model-hash",
+          "reason_code": "locator_not_in_excerpt"
+        }
+      ],
+      "finding_id": "finding:p7-model-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": false,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": null,
+      "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+      "provenance_note": "No shared source file is recorded between the AI-BOM and the source observation; this does not prove they are independent.",
+      "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+      "reason_codes": [
+        "no_matching_model_record"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:docker/main/Dockerfile@cfa08c56b23d",
+        "tool-output:aibom-5d1217e2d3db"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev01-dockerfile-model-download",
+          "reason": "docker/main/Dockerfile lines [138, 138] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "ev21-cisco-aibom",
+          "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+          "reason_code": "no_matching_model_record",
+          "relation": "inconclusive",
+          "role": "aibom_document"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-located crypto operation is declared in a named CBOM",
+        "reason_code": "cbom_operation_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "p8-md5-call-represented-in-cdxgen-cbom",
+      "assertion_origin": "curated",
+      "bounded_meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "candidates": [],
+      "category": null,
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [
+        {
+          "detail": "the excerpt is not in frigate/detectors/detector_config.py or does not name md5",
+          "evidence_id": "ev11-md5-model-hash-call",
+          "reason_code": "location_or_algorithm_not_in_excerpt"
+        }
+      ],
+      "finding_id": "finding:p8-md5-call-represented-in-cdxgen-cbom",
+      "generator_third_party": true,
+      "layers": {
+        "algorithm_record": false,
+        "integrity_verification": false,
+        "library_mentioned": false,
+        "matching_call_site": false,
+        "referenced_by_source": true,
+        "runtime_execution": false
+      },
+      "matched_asset": null,
+      "matched_model": null,
+      "next_action": "resolve the named scope or location gap, then re-run",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "provenance_note": "No shared source file is recorded; this does not prove independence. The CBOM was produced by a third-party generator and the source observation is a separate reading, but both read the same file at the same revision, so agreement would still be declaration-level.",
+      "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+      "reason_codes": [
+        "no_algorithm_record"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+      "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:frigate/detectors/detector_config.py@cfa08c56b23d",
+        "tool-output:cbom-200ca6c7556c"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev10-md5-model-hash",
+          "reason": "frigate/detectors/detector_config.py lines [218, 220] show the md5 call",
+          "reason_code": "operation_in_source_excerpt",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "ev20-cdxgen-cbom",
+          "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+          "reason_code": "no_algorithm_record",
+          "relation": "inconclusive",
+          "role": "cbom_document"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "edges": [
+      {
+        "from": "assertion:p1-model-acquired-from",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p2-detector-default-model",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p3-detector-uses-tflite-runtime",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p3-detector-uses-tflite-runtime",
+        "key": "object",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "type": "object"
+      },
+      {
+        "from": "assertion:p4-model-hashed-with-md5",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p5-requirement-represented-in-inventory",
+        "key": "object",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-syft-source-dir",
+        "type": "object"
+      },
+      {
+        "from": "assertion:p5-requirement-represented-in-inventory",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p7-model-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:p7-model-declared-in-aibom",
+        "key": "object",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cisco-aibom",
+        "type": "object"
+      },
+      {
+        "from": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "key": "object",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+        "type": "object"
+      },
+      {
+        "from": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "key": "subject",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+        "type": "subject"
+      },
+      {
+        "from": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "key": "declared_in:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::requirements-file",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::requirements-file",
+        "type": "declared_in"
+      },
+      {
+        "basis": "same normalized package name; whether the library entity (used in p3) denotes this declared requirement is not established",
+        "from": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "key": "identity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "status": "uncertain",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "type": "identity_match"
+      },
+      {
+        "from": "evidence:ev01-dockerfile-model-download",
+        "key": "assesses",
+        "reason": "docker/main/Dockerfile lines [138, 138] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:p7-model-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev01-dockerfile-model-download",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev02-dockerfile-models-stage-no-checksum",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev03-config-default-model-path",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:p7-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev03-config-default-model-path",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev03-config-default-model-path",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev04-docs-cpu-model-statement",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:p7-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev04-docs-cpu-model-statement",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev04-docs-cpu-model-statement",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev05-researcher-config-detector",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev06-example-config-no-detectors",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev07-cpu-detector-import",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev07-cpu-detector-import",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev08-requirements-tflite-runtime",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev09-syft-lookup-tflite-runtime",
+        "key": "assesses",
+        "reason": "no component with this normalized name among 1976 library components (all classified); the inventory lists the requirements file with the same SHA-256",
+        "reason_code": "not_represented_in_fully_parsed_inventory",
+        "relation": "contradicts",
+        "role": "inventory",
+        "to": "assertion:p5-requirement-represented-in-inventory",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev09-syft-lookup-tflite-runtime",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-syft-source-dir",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev09-syft-lookup-tflite-runtime",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev10-md5-model-hash",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:p7-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev10-md5-model-hash",
+        "key": "assesses",
+        "reason": "frigate/detectors/detector_config.py lines [218, 220] show the md5 call",
+        "reason_code": "operation_in_source_excerpt",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev10-md5-model-hash",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev10-md5-model-hash",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev11-md5-model-hash-call",
+        "key": "excluded",
+        "reason": "the excerpt is not in frigate/detectors/detector_config.py or does not name md5",
+        "reason_code": "location_or_algorithm_not_in_excerpt",
+        "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev11-md5-model-hash-call",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev13-model-url-head-and-tag",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev14-requirements-declaration-tflite-runtime",
+        "key": "assesses",
+        "reason": "2 declaration line(s): line 75 direct_url marker \"platform_machine == 'x86_64'\"; line 76 direct_url marker \"platform_machine == 'aarch64'\"",
+        "reason_code": "requirement_declared",
+        "relation": "context",
+        "role": "declaration",
+        "to": "assertion:p5-requirement-represented-in-inventory",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev14-requirements-declaration-tflite-runtime",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev14-requirements-declaration-tflite-runtime",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::requirements-file",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev15-dockerfile-installs-requirements",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::requirements-file",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev16-requirements-no-ai-edge-litert",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev20-cdxgen-cbom",
+        "key": "assesses",
+        "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+        "reason_code": "no_algorithm_record",
+        "relation": "inconclusive",
+        "role": "cbom_document",
+        "to": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev21-cisco-aibom",
+        "key": "assesses",
+        "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+        "reason_code": "no_matching_model_record",
+        "relation": "inconclusive",
+        "role": "aibom_document",
+        "to": "assertion:p7-model-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev21-cisco-aibom",
+        "key": "observes",
+        "to": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:cisco-aibom::yolov6n.hef_<scan-root>/frigate/detectors/plugins/hailo8l.py_50",
+        "type": "observes"
+      }
+    ],
+    "nodes": [
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "docker/main/Dockerfile (models stage)"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:p1-model-acquired-from",
+        "next_action": null,
+        "object": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+        "origin": "curated",
+        "predicate": "acquired_from",
+        "rationale": "Unverifiable: no rule is implemented for model_identity/acquired_from; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {},
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "frigate/config/config.py (default model path); docs object_detectors.md (CPU Detector)"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "runtime",
+        "id": "assertion:p2-detector-default-model",
+        "next_action": null,
+        "object": "/cpu_model.tflite",
+        "origin": "curated",
+        "predicate": "default_model_path",
+        "rationale": "Unverifiable: no rule is implemented for runtime/default_model_path; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "frigate/detectors/plugins/cpu_tfl.py (import with ai_edge_litert fallback); docker/main/requirements-wheels.txt"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "runtime",
+        "id": "assertion:p3-detector-uses-tflite-runtime",
+        "next_action": null,
+        "object": "scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "origin": "curated",
+        "predicate": "uses_library",
+        "rationale": "Unverifiable: no rule is implemented for runtime/uses_library; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "frigate/detectors/detector_config.py (compute_model_hash); frigate/config/config.py"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "crypto_attribution",
+        "id": "assertion:p4-model-hashed-with-md5",
+        "next_action": null,
+        "object": "md5",
+        "origin": "curated",
+        "predicate": "hashes_model_with",
+        "rationale": "Unverifiable: no rule is implemented for crypto_attribution/hashes_model_with; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": "inventory_coverage_gap",
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "docker/main/requirements-wheels.txt:75-76 (declaration); researcher-stated bounded assertion"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "inventory_coverage",
+        "id": "assertion:p5-requirement-represented-in-inventory",
+        "next_action": "establish whether this generator is expected to represent this declaration form (documentation or owner statement), or add an inventory that does",
+        "object": {
+          "inventory_entity": "scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-syft-source-dir",
+          "inventory_id": "inv:syft-source-dir",
+          "inventory_sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+        },
+        "origin": "curated",
+        "predicate": "represents_requirement",
+        "rationale": "Contradicted: the declared requirement has no component of that name in the fully parsed inventory, which lists the same requirements file. No coverage contract is established that this inventory should include this declaration form, so this is an inventory discrepancy (coverage gap), not a completeness defect or vulnerability.",
+        "reason_codes": [
+          "not_represented_in_fully_parsed_inventory"
+        ],
+        "rule_id": "inventory_coverage.requirement_represented/1",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "contradicted",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "docker/main/Dockerfile:138 (acquisition locator)"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "model_identity",
+        "id": "assertion:p7-model-declared-in-aibom",
+        "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+        "object": {
+          "inventory_entity": "scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cisco-aibom",
+          "inventory_id": "inv:cisco-aibom",
+          "inventory_sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6"
+        },
+        "origin": "curated",
+        "predicate": "declared_in_aibom",
+        "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+        "reason_codes": [
+          "no_matching_model_record"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "frigate/detectors/detector_config.py:218-220 (researcher reading); question: does cdxgen 12.9.0 represent this MD5 call?"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "crypto_attribution",
+        "id": "assertion:p8-md5-call-represented-in-cdxgen-cbom",
+        "next_action": "resolve the named scope or location gap, then re-run",
+        "object": {
+          "algorithm": "md5",
+          "file": "frigate/detectors/detector_config.py",
+          "inventory_entity": "scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+          "inventory_id": "inv:cdxgen-cbom",
+          "inventory_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+          "producer": {
+            "name": "cdxgen",
+            "version": "12.9.0"
+          }
+        },
+        "origin": "curated",
+        "predicate": "operation_declared_in_cbom",
+        "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 13 service record(s); none is a md5 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+        "reason_codes": [
+          "no_algorithm_record"
+        ],
+        "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:cisco-aibom::yolov6n.hef_<scan-root>/frigate/detectors/plugins/hailo8l.py_50",
+        "kind": "model",
+        "name": "yolov6n.hef",
+        "origin": "captured",
+        "source": {
+          "bom_ref": "yolov6n.hef_<scan-root>/frigate/detectors/plugins/hailo8l.py_50",
+          "inventory_id": "inv:cisco-aibom",
+          "raw_pointer": "/components/0"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu-model",
+        "kind": "model",
+        "name": "cpu_model.tflite (default CPU detector model)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "cpu-model"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::cpu1-detector",
+        "kind": "detector",
+        "name": "detectors.cpu1 (type: cpu) in the researcher config",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "cpu1-detector"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cdxgen-cbom",
+        "kind": "inventory",
+        "name": "cdxgen CBOM document",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-cdxgen-cbom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-cisco-aibom",
+        "kind": "inventory",
+        "name": "Cisco AI BOM document",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-cisco-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::inventory-syft-source-dir",
+        "kind": "inventory",
+        "name": "Syft 1.51.1 source-directory inventory",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-syft-source-dir"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::md5-model-hash",
+        "kind": "code_location",
+        "name": "ModelConfig.compute_model_hash (frigate/detectors/detector_config.py)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "md5-model-hash"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::req-tflite-runtime",
+        "kind": "requirement",
+        "name": "tflite_runtime (declared requirement)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "req-tflite-runtime"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::requirements-file",
+        "kind": "source_file",
+        "name": "docker/main/requirements-wheels.txt",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "requirements-file"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:frigate-v0.18.2-cpu-pilot::inv:curated-source-reading::tflite-runtime",
+        "kind": "library",
+        "name": "tflite_runtime",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "tflite-runtime"
+        },
+        "type": "entity",
+        "version": "2.17.1 (per direct-URL requirement)"
+      },
+      {
+        "id": "evidence:ev01-dockerfile-model-download",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "a build instruction, not an observed download"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/Dockerfile"
+          },
+          "excerpt": "RUN wget -qO cpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "file_sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            138,
+            138
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/Dockerfile",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/Dockerfile@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev02-dockerfile-models-stage-no-checksum",
+        "limitations": [
+          "term search over the models stage only; zero matches is not proof that no digest is declared elsewhere"
+        ],
+        "method": "term-count-in-region",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/Dockerfile"
+          },
+          "file_sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "--digest": 0,
+            "checksum": 0,
+            "md5sum": 0,
+            "sha256": 0,
+            "sha512": 0
+          },
+          "region_lines": [
+            134,
+            149
+          ],
+          "terms": [
+            "sha256",
+            "sha512",
+            "md5sum",
+            "checksum",
+            "--digest"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/Dockerfile (models stage)",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/Dockerfile@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev03-config-default-model-path",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "code path as written; not executed"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "frigate/config/config.py"
+          },
+          "excerpt": "                if detector_config.type == \"cpu\" or detector_config.type.endswith(\n                    \"_tfl\"\n                ):\n                    model_config[\"path\"] = \"/cpu_model.tflite\"",
+          "file_sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            746,
+            749
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "frigate/config/config.py",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:frigate/config/config.py@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev04-docs-cpu-model-statement",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "documentation claim about the container image"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docs/docs/configuration/object_detectors.md"
+          },
+          "excerpt": "A TensorFlow Lite model is provided in the container at `/cpu_model.tflite` and is used by this detector type by default.",
+          "file_sha256": "3e0a9594e34bf8e509e805a6060def34ad2893d0280fb4d4b1677cd382f2c064",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            484,
+            484
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docs/docs/configuration/object_detectors.md",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docs/docs/configuration/object_detectors.md@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev05-researcher-config-detector",
+        "limitations": [
+          "researcher-created file; shows the configured detector type only",
+          "configuration does not establish that a model was loaded"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "inputs/frigate/researcher-config.yml"
+          },
+          "excerpt": "  cpu1:\n    type: cpu",
+          "file_sha256": "1a287afaa3378a482c6b7709ffe54c53dcc759db43f20327ff0993f01fb68ece",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            13,
+            14
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "bombridge:inputs/frigate/researcher-config.yml",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "bombridge-file:inputs/frigate/researcher-config.yml"
+      },
+      {
+        "id": "evidence:ev06-example-config-no-detectors",
+        "limitations": [
+          "only this example file; other upstream docs show detector blocks (see ev04 and the reference doc)"
+        ],
+        "method": "term-count-in-file",
+        "observation": {
+          "artifact": {
+            "locator": "config/config.yml.example"
+          },
+          "file_sha256": "0061a38e4c75bde197457160cbb263d530667ff9ac3a1e9b843cc0cd92b0b5ec",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "detectors": 0,
+            "model": 0
+          },
+          "terms": [
+            "detectors",
+            "model"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "config/config.yml.example",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:config/config.yml.example@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev07-cpu-detector-import",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "the import falls back to ai_edge_litert; which library is used at runtime is not established"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "frigate/detectors/plugins/cpu_tfl.py"
+          },
+          "excerpt": "try:\n    from tflite_runtime.interpreter import Interpreter\nexcept ModuleNotFoundError:\n    from ai_edge_litert.interpreter import Interpreter",
+          "file_sha256": "59194a6ce433575ae97fa697991638a9555d17b7a7c1c0a369d18c35880b6419",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            12,
+            15
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "frigate/detectors/plugins/cpu_tfl.py",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:frigate/detectors/plugins/cpu_tfl.py@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev08-requirements-tflite-runtime",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "direct-URL requirements, no hash pinned"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/requirements-wheels.txt"
+          },
+          "excerpt": "tflite_runtime @ https://github.com/frigate-nvr/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_x86_64.whl; platform_machine == 'x86_64'\ntflite_runtime @ https://github.com/feranick/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_aarch64.whl; platform_machine == 'aarch64'",
+          "file_sha256": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            75,
+            76
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/requirements-wheels.txt",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/requirements-wheels.txt@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev09-syft-lookup-tflite-runtime",
+        "limitations": [
+          "lookup result for one normalized package name; says nothing about what the generator is expected to cover",
+          "source-directory inventory: not an image or runtime SBOM",
+          "scan-to-revision binding rests on the researcher's scan record plus the recorded hash of one file"
+        ],
+        "method": "cyclonedx-exact-name-lookup",
+        "observation": {
+          "components_attributed_to_selected_file": [
+            "mypy",
+            "python-multipart",
+            "tzlocal"
+          ],
+          "inventory": {
+            "format": "CycloneDX 1.7",
+            "generator": "syft 1.51.1",
+            "raw_sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+          },
+          "kind": "inventory_name_lookup",
+          "matches": [],
+          "parse": {
+            "complete": true,
+            "components_total": 1989,
+            "library_components": 1976,
+            "unclassified_components": 0
+          },
+          "query": {
+            "ecosystem": "pypi",
+            "match": "exact normalized name; no substring matching",
+            "normalized_name": "tflite-runtime"
+          },
+          "scanned_file": {
+            "file_components_matching_path_suffix": 1,
+            "path": "docker/main/requirements-wheels.txt",
+            "recorded_sha256": [
+              "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20"
+            ]
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "inputs/frigate/raw/syft-source-dir.cdx.json",
+        "tool": "tools/build_frigate_bundle.py (src/bombridge/adapters.py) over syft 1.51.1 output",
+        "type": "evidence",
+        "underlying_source": "tool-output:syft-source-dir"
+      },
+      {
+        "id": "evidence:ev10-md5-model-hash",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "source pattern; does not show this runs, nor that the hash is used for security"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "frigate/detectors/detector_config.py"
+          },
+          "excerpt": "                file_hash = hashlib.md5()\n                while chunk := f.read(8192):\n                    file_hash.update(chunk)",
+          "file_sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            218,
+            220
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "frigate/detectors/detector_config.py",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:frigate/detectors/detector_config.py@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev11-md5-model-hash-call",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "a call site; execution not observed"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "frigate/config/config.py"
+          },
+          "excerpt": "            model.compute_model_hash()",
+          "file_sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            758,
+            758
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "frigate/config/config.py",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:frigate/config/config.py@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev12-github-release-no-assets",
+        "limitations": [
+          "state of the GitHub release page on the collection date; SBOMs could be published elsewhere (registry attestations, docs)"
+        ],
+        "method": "github-api-query",
+        "observation": {
+          "command": "gh api repos/blakeblackshear/frigate/releases/latest --jq '{tag:.tag_name,published:.published_at,prerelease:.prerelease,assets:[.assets[].name]}'",
+          "kind": "remote_query",
+          "result": {
+            "assets": [],
+            "prerelease": false,
+            "published": "2026-10-15T22:41:47Z",
+            "tag": "v0.18.2"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "gh api repos/blakeblackshear/frigate/releases/latest",
+        "tool": "gh api (GitHub CLI)",
+        "type": "evidence",
+        "underlying_source": "remote:github-release-v0.18.2"
+      },
+      {
+        "id": "evidence:ev13-model-url-head-and-tag",
+        "limitations": [
+          "reachability and size on the collection date only; a Git tag can be moved, so the URL does not fix the bytes",
+          "no bytes were retrieved, so there is no locally observed digest"
+        ],
+        "method": "http-head-and-github-api-query",
+        "observation": {
+          "command": [
+            "curl -sIL https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+            "gh api repos/google-coral/test_data/git/ref/tags/release-frogfish"
+          ],
+          "kind": "remote_query",
+          "result": {
+            "content_length_bytes": 4281768,
+            "final_http_status": 200,
+            "note": "an ETag header is returned; it is transport metadata, not a digest declared by Frigate, and is not used",
+            "tag_release-frogfish": {
+              "object_type": "commit",
+              "sha": "c21de4450f88a20ac5968628d375787745932a5a"
+            }
+          }
+        },
+        "origin": "captured",
+        "scope": {},
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "model URL in ev01 (metadata only; the model was not downloaded)",
+        "tool": "curl -I; gh api",
+        "type": "evidence",
+        "underlying_source": "remote:google-coral-test-data-release-frogfish"
+      },
+      {
+        "id": "evidence:ev14-requirements-declaration-tflite-runtime",
+        "limitations": [
+          "declaration only: markers are preserved as text and were not evaluated",
+          "wheel identity comes from the URL file name; no wheel was downloaded or inspected",
+          "a declared requirement is not a source import, an inventory component or an observed runtime library"
+        ],
+        "method": "requirements-line-parse",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/requirements-wheels.txt"
+          },
+          "declarations": [
+            {
+              "form": "direct_url",
+              "line": 75,
+              "marker": "platform_machine == 'x86_64'",
+              "name": "tflite_runtime",
+              "normalized_name": "tflite-runtime",
+              "original_text": "tflite_runtime @ https://github.com/frigate-nvr/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_x86_64.whl; platform_machine == 'x86_64'",
+              "url": "https://github.com/frigate-nvr/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_x86_64.whl",
+              "wheel": {
+                "abi_tag": "cp311",
+                "distribution": "tflite_runtime",
+                "platform_tag": "linux_x86_64",
+                "python_tag": "cp311",
+                "source": "file name in URL only",
+                "version": "2.17.1"
+              }
+            },
+            {
+              "form": "direct_url",
+              "line": 76,
+              "marker": "platform_machine == 'aarch64'",
+              "name": "tflite_runtime",
+              "normalized_name": "tflite-runtime",
+              "original_text": "tflite_runtime @ https://github.com/feranick/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_aarch64.whl; platform_machine == 'aarch64'",
+              "url": "https://github.com/feranick/TFlite-builds/releases/download/v2.17.1/tflite_runtime-2.17.1-cp311-cp311-linux_aarch64.whl",
+              "wheel": {
+                "abi_tag": "cp311",
+                "distribution": "tflite_runtime",
+                "platform_tag": "linux_aarch64",
+                "python_tag": "cp311",
+                "source": "file name in URL only",
+                "version": "2.17.1"
+              }
+            }
+          ],
+          "file_sha256": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20",
+          "file_sha256_algorithm": "sha256",
+          "file_summary": {
+            "forms": {
+              "direct_url": 2,
+              "exact_pin": 3,
+              "vcs": 1,
+              "wildcard_pin": 64
+            },
+            "requirement_lines": 70,
+            "unsupported_lines": []
+          },
+          "kind": "requirement_declaration",
+          "markers_note": "markers are preserved as text; none was evaluated",
+          "target": {
+            "normalized_name": "tflite-runtime"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/requirements-wheels.txt",
+        "tool": "tools/build_frigate_bundle.py (src/bombridge/adapters.py)",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/requirements-wheels.txt@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev15-dockerfile-installs-requirements",
+        "limitations": [
+          "build instruction text; no image was built, so what was installed is unobserved"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/Dockerfile"
+          },
+          "excerpt": "COPY docker/main/requirements-wheels.txt /requirements-wheels.txt\nRUN pip3 wheel --wheel-dir=/wheels -r /requirements-wheels.txt",
+          "file_sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            197,
+            198
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/Dockerfile",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/Dockerfile@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev16-requirements-no-ai-edge-litert",
+        "limitations": [
+          "one file only; a manual grep over docker/**/requirements*.txt, pyproject.toml and the Dockerfile also found nothing but that search is not recorded as evidence",
+          "the fallback package is source-only: no declaration was found, and which library runs is unobserved"
+        ],
+        "method": "term-count-in-file",
+        "observation": {
+          "artifact": {
+            "locator": "docker/main/requirements-wheels.txt"
+          },
+          "file_sha256": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "ai-edge-litert": 0,
+            "ai_edge_litert": 0
+          },
+          "terms": [
+            "ai_edge_litert",
+            "ai-edge-litert"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "docker/main/requirements-wheels.txt",
+        "tool": "tools/build_frigate_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/main/requirements-wheels.txt@cfa08c56b23d"
+      },
+      {
+        "id": "evidence:ev20-cdxgen-cbom",
+        "limitations": [
+          "what the document says, not whether it is right",
+          "the document's coverage is only as stated in it",
+          "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+          "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+          "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+          "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+          "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+          "token usage, cost: not applicable; no LLM is used"
+        ],
+        "method": "cyclonedx-1.6-cbom-intake",
+        "observation": {
+          "acquisition_documented_coverage": {
+            "source": "cdxgen 12.9.0 README, section 'Generate Cryptography Bill of Materials (CBOM)' (installed package)",
+            "statement": "CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented."
+          },
+          "acquisition_generator": {
+            "install": "npm install --ignore-scripts @cyclonedx/cdxgen@12.9.0 into .tools/cdxgen (git-ignored); release published 2026-10-22; Node.js v26.7.0",
+            "invocation": "cdxgen -t python --include-crypto --evidence --no-install-deps --spec-version 1.6 --json-pretty -o <output> <scan-root>   (run as: env -i PATH HOME=<isolated-empty-dir> NO_COLOR=1 sandbox-exec -p '(version 1)(allow default)(deny network*)' <cdxgen> ...; cwd = an empty temp dir; see tools/run_cdxgen_scan.sh)",
+            "name": "cdxgen",
+            "third_party": true,
+            "version": "12.9.0"
+          },
+          "acquisition_outcome": {
+            "components": 0,
+            "cryptographic_assets": 0,
+            "cyclonedx_spec_version": "1.6",
+            "exit_code": 0,
+            "log_file": "inputs/frigate/raw/cdxgen-cbom.run.log",
+            "meaning": "a successful scan that reported no cryptographic asset; not a failed scan",
+            "services": 13,
+            "source_locations_for_crypto": 0,
+            "status": "completed",
+            "warnings_in_log": []
+          },
+          "acquisition_scope": {
+            "file_count": 343,
+            "included_paths": [
+              "frigate"
+            ],
+            "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+            "method": "git archive of the pinned revision restricted to the listed paths"
+          },
+          "assets": [],
+          "binding": {
+            "acquisition_limitations": [
+              "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+              "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+              "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+              "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+              "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+              "token usage, cost: not applicable; no LLM is used"
+            ],
+            "conflicts": [],
+            "corroborated": null,
+            "declared": null,
+            "level": "recorded",
+            "notes": [
+              "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+            ],
+            "recorded": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+            "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+          },
+          "counts": {
+            "assets": 0,
+            "by_type": {},
+            "components_total": 0,
+            "library_mentions": 0,
+            "services": 13
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 2,
+            "format": "CycloneDX",
+            "raw_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+            "serial_number": "urn:uuid:69b6c75d-6acc-453a-aaba-77cc2f516562",
+            "spec_version": "1.6",
+            "timestamp": "2026-11-02T17:49:35Z"
+          },
+          "extractor_notes": {},
+          "kind": "cbom_document",
+          "library_mentions": [],
+          "limitations": [
+            "the document states no coverage (no compositions)",
+            "the document declares no cryptographic-asset component (a successful document with zero crypto assets; not a failed scan)"
+          ],
+          "producer": [
+            {
+              "name": "cdxgen",
+              "vendor": "OWASP Foundation",
+              "version": "12.9.0"
+            }
+          ],
+          "services": {
+            "count": 13,
+            "names": [
+              "frigate/api/app-py-service",
+              "frigate/api/auth-py-service",
+              "frigate/api/chat-py-service",
+              "frigate/api/classification-py-service",
+              "frigate/api/debug_replay-py-service",
+              "frigate/api/event-py-service",
+              "frigate/api/media-py-service",
+              "frigate/api/motion_search-py-service",
+              "frigate/api/notification-py-service",
+              "frigate/api/preview-py-service",
+              "frigate/api/record-py-service",
+              "frigate/api/review-py-service",
+              "test_env-service"
+            ],
+            "note": "service records describe endpoints found in source; they are not cryptographic assets"
+          },
+          "status": "ok",
+          "subject": {
+            "bom_ref": "pkg:pypi/frigate-cdxgen-scope@latest",
+            "declared_revision": null,
+            "name": "frigate-cdxgen-scope",
+            "type": "application",
+            "version": "latest"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+        "tool": "src/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:cbom-200ca6c7556c"
+      },
+      {
+        "id": "evidence:ev21-cisco-aibom",
+        "limitations": [
+          "what the document says, not whether it is right",
+          "the document's coverage is only as stated in it",
+          "a source copy limited to three paths of the pinned revision; the rest of the repository was not scanned",
+          "LLM-assisted generation is not deterministic; the output is a declaration by the generator, not independent verification",
+          "the document may not record the source revision; scope here comes from this manifest",
+          "token usage and cost were not recorded",
+          "the paid scan finished (5 Chat Completions calls) but the CLI exited 1 at --validate (jsonschema missing) before writing the file; the file was then produced from the tool's own scan cache by the same command with the network denied at OS level and a dummy key"
+        ],
+        "method": "cyclonedx-1.6-intake",
+        "observation": {
+          "binding": {
+            "acquisition_limitations": [
+              "a source copy limited to three paths of the pinned revision; the rest of the repository was not scanned",
+              "LLM-assisted generation is not deterministic; the output is a declaration by the generator, not independent verification",
+              "the document may not record the source revision; scope here comes from this manifest",
+              "token usage and cost were not recorded",
+              "the paid scan finished (5 Chat Completions calls) but the CLI exited 1 at --validate (jsonschema missing) before writing the file; the file was then produced from the tool's own scan cache by the same command with the network denied at OS level and a dummy key"
+            ],
+            "conflicts": [],
+            "corroborated": null,
+            "declared": null,
+            "level": "recorded",
+            "notes": [
+              "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+            ],
+            "recorded": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+            "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+          },
+          "counts": {
+            "by_type": {
+              "machine-learning-model": 1
+            },
+            "components_total": 1,
+            "models": 1
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 1,
+            "format": "CycloneDX",
+            "raw_sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6",
+            "serial_number": "urn:uuid:53f84046-3895-4557-b0c3-d2acd019d71b",
+            "spec_version": "1.6",
+            "timestamp": "2026-11-02T17:37:31.922146+00:00"
+          },
+          "kind": "aibom_document",
+          "limitations": [
+            "no metadata.component: the document names no subject",
+            "the document declares no source revision; scope cannot be taken from the document",
+            "the document states no coverage (no compositions)",
+            "components[0]: model declares no hash (representable, but its digest cannot be verified)",
+            "bom-ref shortened in derived records: the absolute path of the local scan copy is replaced by <scan-root>; the raw file is unchanged"
+          ],
+          "models": [
+            {
+              "bom_ref": "yolov6n.hef_<scan-root>/frigate/detectors/plugins/hailo8l.py_50",
+              "external_references": [],
+              "generator_properties": {
+                "cisco-aibom:file": "<scan-root>/frigate/detectors/plugins/hailo8l.py",
+                "cisco-aibom:framework": "unknown",
+                "cisco-aibom:line": "50"
+              },
+              "group": null,
+              "hashes": [],
+              "locations": [],
+              "name": "yolov6n.hef",
+              "purl": null,
+              "raw_pointer": "/components/0",
+              "scan_relative_file": "frigate/detectors/plugins/hailo8l.py",
+              "version": null
+            }
+          ],
+          "producer": [
+            {
+              "name": "cisco-aibom",
+              "vendor": "Cisco",
+              "version": "1.10.0"
+            }
+          ],
+          "status": "ok",
+          "subject": null
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+        },
+        "scope_id": "scope:frigate-v0.18.2-cpu-pilot",
+        "source_locator": "inputs/frigate/raw/cisco-aibom.cdx.json",
+        "tool": "src/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:aibom-5d1217e2d3db"
+      }
+    ]
+  },
+  "input_checks": [
+    {
+      "detail": "Dockerfile models stage names the CPU model URL; config.py defaults the cpu detector to /cpu_model.tflite.",
+      "evidence": [
+        "ev01-dockerfile-model-download",
+        "ev03-config-default-model-path",
+        "ev04-docs-cpu-model-statement"
+      ],
+      "input": "01-model-reference",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "URL is reachable (HTTP 200, 4,281,768 bytes); deliberately not downloaded in this increment.",
+      "evidence": [
+        "ev13-model-url-head-and-tag"
+      ],
+      "input": "02-model-artifact",
+      "next_action": "optionally retrieve the file with retrieval metadata and record the observed digest",
+      "status": "referenced_not_acquired"
+    },
+    {
+      "detail": "No digest or checksum was found for the model in the inspected places. Absence is not proven.",
+      "evidence": [
+        "ev02-dockerfile-models-stage-no-checksum"
+      ],
+      "input": "03-declared-expected-digest",
+      "next_action": "look for a published digest from the model's upstream (google-coral/test_data) before any digest assessment; do not derive one by hashing the file",
+      "searched": [
+        "docker/main/Dockerfile models stage (term search)",
+        "docs object_detectors.md CPU section (read)",
+        "frigate/config/config.py default-path logic (read)",
+        "Syft source-directory inventory (no model component)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "Selected by the researcher-created config only (detectors.cpu1.type: cpu). The upstream example config selects no detector.",
+      "evidence": [
+        "ev05-researcher-config-detector",
+        "ev06-example-config-no-detectors"
+      ],
+      "input": "04-detector-runtime-selection",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "GitHub release v0.18.2 lists no assets and no SBOM-named file exists in the checkout.",
+      "evidence": [
+        "ev12-github-release-no-assets"
+      ],
+      "input": "05-release-sbom",
+      "searched": [
+        "GitHub releases/latest assets",
+        "checkout file names (*sbom*, *bom*.json, cyclonedx*, *.spdx*)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "Syft 1.51.1 source-directory inventory generated here (1,989 components). It is not an image/runtime SBOM and does not describe a built Frigate.",
+      "evidence": [
+        "ev09-syft-lookup-tflite-runtime"
+      ],
+      "input": "06-source-directory-sbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "The Syft inventory has no component with normalized name 'tflite-runtime' although docker/main/requirements-wheels.txt:75-76 declares it by direct URL. Syft attributes exactly 3 components to that file: its 3 exact-pinned '==x.y.z' lines. Assessed by p5; see finding.",
+      "evidence": [
+        "ev09-syft-lookup-tflite-runtime",
+        "ev14-requirements-declaration-tflite-runtime"
+      ],
+      "input": "07-sbom-component-for-detector-runtime",
+      "next_action": "establish whether this generator is expected to represent direct-URL requirements before treating the discrepancy as a completeness defect",
+      "searched": [
+        "Syft source-directory inventory, exact normalized-name lookup in the pypi ecosystem"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "AI-BOM acquired. One Cisco AI BOM 1.10.0 scan (OpenAI gpt-6-luna over Chat Completions, reasoning_effort none, bounded settings) ran on the 153-file public source copy (revision cfa08c56..., frigate/detectors, frigate/config, docker/main). The scan completed and the output validates as CycloneDX 1.6. It reports exactly one machine-learning-model: yolov6n.hef (frigate/detectors/plugins/hailo8l.py:50), with no hash, purl, version or external reference. The agent removed the other two candidates (the Dockerfile COPY step and a file-extension check). The CPU model Frigate downloads (cpu_model.tflite, Dockerfile:138) is not reported. A registry lookup for yolov6n.hef failed and the tool logged a 'degraded' warning although the result status is success. The CLI exited 1 at --validate (jsonschema missing) before writing the file; the file was produced from the tool's scan cache with the network denied. The tool reported no token usage or cost. See docs/AIBOM_ACQUISITION.md.",
+      "input": "08-ai-bom",
+      "next_action": "none for this scan; do not rerun without a new approval",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "A CBOM was produced by cdxgen 12.9.0 (third-party) over the frigate/ package at the pinned revision (343 files; source-only, no dependency install, network denied). The scan succeeded and the CycloneDX 1.6 document contains 0 components, 0 cryptographic assets and 13 service records (HTTP endpoint listings). cdxgen documents CBOM coverage for Java keystores/certificates and JavaScript/TypeScript source algorithms, not Python source algorithms.",
+      "evidence": [
+        "ev20-cdxgen-cbom"
+      ],
+      "input": "09-cbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Source applies hashlib.md5 to the model file in compute_model_hash, called from config.py. A source pattern only: no cryptographic asset is declared in the loaded CBOM, and use is not observed.",
+      "evidence": [
+        "ev10-md5-model-hash",
+        "ev11-md5-model-hash-call"
+      ],
+      "input": "10-cryptographic-source-pattern",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Nothing was built or run, so model loading, detector selection at runtime and library use are unobserved by design.",
+      "input": "11-runtime-execution-observation",
+      "status": "unsupported_by_collector"
+    },
+    {
+      "detail": "No container image was built or inspected; the model's in-image bytes are unobserved.",
+      "input": "12-build-output-identity",
+      "status": "unsupported_by_collector"
+    },
+    {
+      "detail": "cpu_tfl.py falls back to ai_edge_litert when tflite_runtime is missing; no requirements declaration for ai_edge_litert was found. The fallback is a source observation only; no runtime library is selected here.",
+      "evidence": [
+        "ev16-requirements-no-ai-edge-litert",
+        "ev07-cpu-detector-import"
+      ],
+      "input": "13-fallback-library-declaration",
+      "searched": [
+        "docker/main/requirements-wheels.txt (term search, recorded)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "docker/main/requirements-wheels.txt is copied and passed to `pip3 wheel -r` in the main Dockerfile. It is the selected requirements file for this pilot; nothing was built.",
+      "evidence": [
+        "ev15-dockerfile-installs-requirements"
+      ],
+      "input": "14-requirements-file-selection",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "No existing AI-BOM for this repository or revision was found. Absence is not proven. A content match for 'modelCard' in the Frigate tree is a React UI component (web/src/views/classification/ModelSelectionView.tsx), not an AI-BOM.",
+      "evidence": [
+        "ev12-github-release-no-assets"
+      ],
+      "input": "15-existing-aibom-input",
+      "next_action": "none until an AI-BOM is obtained",
+      "searched": [
+        "BOMBridge tree (file names *aibom*, *ai-bom*, *ai_bom*)",
+        "Frigate checkout at the pinned revision (file names *aibom*, *ai-bom*, *ai_bom*, *.cdx.json, *bom*.json, *mlbom*; content terms 'machine-learning-model', 'aibom', 'ai-bom')",
+        "GitHub release v0.18.2 assets (none)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "cdxgen 12.9.0 was selected as the sole CBOM producer and run once (see 09-cbom). IBM sonar-cryptography / CBOMkit-hyperion was not run by decision (needs a SonarQube server; its Python coverage is pyca/cryptography only). The earlier BOMBridge hashlib extractor is historical research data and is not used.",
+      "evidence": [
+        "ev20-cdxgen-cbom"
+      ],
+      "input": "16-third-party-cbom-generators",
+      "status": "present_inspected"
+    }
+  ],
+  "inventory_links": [
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: docker/main, frigate/config, frigate/detectors. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 syft \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev21-cisco-aibom"
+      ],
+      "id": "records:sbom-aibom",
+      "kind": "record_identifier_or_path",
+      "reason": "exact-name lookup of 'yolov6n.hef' found no component among the 1989 SBOM components; the AI-BOM model also carries no purl, hash or external reference that could be compared with package identifiers",
+      "status": "unresolved",
+      "title": "SBOM \u00b7 syft \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-cbom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: frigate. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev20-cdxgen-cbom"
+      ],
+      "id": "records:sbom-cbom",
+      "kind": "record_identifier_or_path",
+      "reason": "the CBOM contains 0 component(s) and 0 cryptographic asset(s) (13 service record(s) are endpoint listings), so there is no CBOM record that carries an identifier to compare with the SBOM's components",
+      "status": "unresolved",
+      "title": "SBOM \u00b7 syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:cdxgen-cbom",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:cbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: frigate/config, frigate/detectors. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "CBOM \u00b7 cdxgen \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:cdxgen-cbom",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev20-cdxgen-cbom",
+        "ev21-cisco-aibom"
+      ],
+      "id": "records:cbom-aibom",
+      "kind": "record_identifier_or_path",
+      "reason": "the CBOM reports 0 cryptographic asset(s) and no model; the AI-BOM reports 1 model(s) (yolov6n.hef). The model's source file frigate/detectors/plugins/hailo8l.py lies inside the CBOM scan scope, but the CBOM has no record located there. A model and a cryptographic asset are different record types; no shared identifier or path links them.",
+      "status": "unresolved",
+      "title": "CBOM \u00b7 cdxgen \u2194 AI-BOM \u00b7 cisco-aibom"
+    }
+  ],
+  "notice": "REAL PILOT, PARTIAL. Frigate v0.18.2 inspected from a source checkout; nothing was built or run. Declarations are curated source-readings by the researcher, not BOM contents. Evidence is captured verbatim from the pinned tree. Three real inventories are loaded, each from one named producer and bound to its own scan scope within the pinned revision: SBOM from Syft 1.51.1 (whole source directory), CBOM from cdxgen 12.9.0 (frigate/ package, source-only; it reported zero cryptographic assets), AI-BOM from Cisco AI BOM 1.10.0 (153 files; one model, yolov6n.hef). Loading three inventories is not a three-BOM verification. Increment 3 adds one bounded check on the Syft inventory (tflite_runtime). An earlier BOMBridge-generated hashlib inventory is kept only as historical research data and is not part of this graph.",
+  "rules": [
+    {
+      "artifact_classes": {
+        "build_output": {
+          "meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes",
+          "required_scope": [
+            "build"
+          ]
+        },
+        "committed_file": {
+          "meaning": "digest of the file at the stated repository path and revision",
+          "required_scope": [
+            "revision"
+          ]
+        },
+        "external_acquisition": {
+          "meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision",
+          "required_scope": []
+        }
+      },
+      "rule_id": "model_identity.digest/2"
+    },
+    {
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1"
+    },
+    {
+      "meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2"
+    },
+    {
+      "meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1"
+    }
+  ],
+  "schema": "bombridge.result/2",
+  "summary": {
+    "illustrative": {},
+    "note": "Origin labels are provenance, not ground truth. No precision, recall or accuracy is computed.",
+    "real": {
+      "curated assertion vs captured evidence": {
+        "applicability_unknown": 0,
+        "applicable_assessed": 3,
+        "assertions": 3,
+        "excluded_evidence": 4,
+        "not_applicable": 0,
+        "resolved": 1,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 1,
+          "supported": 0,
+          "unverifiable": 2
+        },
+        "unresolved": 2
+      },
+      "curated assertion vs no used evidence": {
+        "applicability_unknown": 4,
+        "applicable_assessed": 0,
+        "assertions": 4,
+        "excluded_evidence": 0,
+        "not_applicable": 0,
+        "resolved": 0,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 0,
+          "supported": 0,
+          "unverifiable": 0
+        },
+        "unresolved": 4
+      }
+    }
+  }
+}

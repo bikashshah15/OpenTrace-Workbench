@@ -1,0 +1,40 @@
+{
+  "schema": "bombridge.manifest/0",
+  "note": "Candidate evaluation subjects. Frigate and Viseron each have a pinned revision (partial capture); the others are not collected. Availability of BOMs, model artifacts and extraction paths is otherwise unknown.",
+  "repositories": [
+    {
+      "id": "frigate",
+      "url": "https://github.com/blakeblackshear/frigate",
+      "pinned_revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+      "capture_status": "partial",
+      "pinned_tag": "v0.18.2",
+      "capture_note": "One configuration (researcher-created CPU detector) inspected from a source checkout; no build, no execution, no model artifact acquired, no digest declared. See docs/FRIGATE_FEASIBILITY.md."
+    },
+    {
+      "id": "viseron",
+      "url": "https://github.com/roflcoopter/viseron",
+      "pinned_revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe",
+      "capture_status": "partial",
+      "pinned_tag": "v3.7.0",
+      "capture_note": "One configuration (researcher-created hailo object detector) inspected from a source checkout; SBOM (Syft), CBOM (cdxgen, zero assets) and AI-BOM (Cisco, one scan, zero models) captured; no build, no execution, no model artifact acquired. See docs/VISERON.md."
+    },
+    {
+      "id": "inference",
+      "url": "https://github.com/roboflow/inference",
+      "pinned_revision": null,
+      "capture_status": "not collected"
+    },
+    {
+      "id": "esp-who",
+      "url": "https://github.com/espressif/esp-who",
+      "pinned_revision": null,
+      "capture_status": "not collected"
+    },
+    {
+      "id": "edgeimpulse-standalone-inferencing-linux",
+      "url": "https://github.com/edgeimpulse/example-standalone-inferencing-linux",
+      "pinned_revision": null,
+      "capture_status": "not collected"
+    }
+  ]
+}

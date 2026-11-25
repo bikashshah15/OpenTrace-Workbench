@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "7c751c0d4a83b2e7110ac8d5106a294f6d0f1ab3be7453bb4a869a3439b6be48"
+  },
+  {
+   "bytes": 3644,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "60d70c0e4914b839826957746fccc25912d5c4715a71028eea1b1f5d9ca4b42e"
+  }
+ ],
+ "name": "uip04-unlocated-with-files",
+ "notes": "Located files plus an Unlocated group in the next grid slot.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

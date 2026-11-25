@@ -1,0 +1,29 @@
+{
+ "generation": 1,
+ "identity": {
+  "analysis_digest": "sha256:71ce65e3da73834a48ab3900cb0dae33e3e0514c57d2e9b1773bcd6f95b7d1b3",
+  "basis": "url_revision",
+  "commit": "aba37dec82019e67a43a12766e371e62b14320cb",
+  "configuration": "config:fixture",
+  "mode": "captured",
+  "name": "xbxrepox/bx",
+  "owner": "o-w-n-e-r",
+  "repository": "https://github.com/o-w-n-e-r/xbxrepox/bx",
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  }
+ },
+ "ok": true,
+ "summary": {
+  "advisory_groups": 0,
+  "advisory_rows": 0,
+  "cards": [],
+  "checks": [],
+  "components": 0,
+  "edges": 0,
+  "inventory_checks": 0,
+  "unresolved_edges": 0
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "contract_versions": [
+    "2.0"
+  ],
+  "kind": "capability_request",
+  "request_id": "ex2-cap-001",
+  "requester": {
+    "implementation": "python",
+    "service_id": "investigator-a"
+  },
+  "schema_version": "2.0",
+  "wanted_dimensions": [
+    "inventory",
+    "code_presence",
+    "call_path",
+    "change_validation"
+  ]
+}

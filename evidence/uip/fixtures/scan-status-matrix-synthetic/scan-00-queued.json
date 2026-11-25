@@ -1,0 +1,116 @@
+{
+ "binding": null,
+ "binding_state": "unresolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": "Workbench is not ready: the scan has not completed.",
+  "ready": false
+ },
+ "identity": null,
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 0,
+  "job_id": "job:bb9146e52d750074157f8f59",
+  "seq": 0,
+  "state": "queued",
+  "updated_at": "2026-01-01T00:00:00Z"
+ },
+ "mode": "captured",
+ "pinned": false,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "cbom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": null,
+   "state": "queued",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  }
+ ]
+}

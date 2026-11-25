@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/requests.schema.json",
+  "title": "OpenTrace workbench requests v1",
+  "type": "object",
+  "$defs": {
+    "scan_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "job_id"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "job_id": {
+          "$ref": "common.schema.json#/$defs/job_id"
+        },
+        "since_seq": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "contexts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "selected": {
+          "type": "string",
+          "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]{0,159}|(?:grp|ctx|ast|occ|job):[0-9a-f]{24})(?!\\n)$"
+        },
+        "group_id": {
+          "$ref": "common.schema.json#/$defs/grp_id"
+        },
+        "files_offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "files_limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        }
+      }
+    },
+    "dependency_page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "context_id"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "context_id": {
+          "$ref": "common.schema.json#/$defs/ctx_id"
+        },
+        "focus_id": {
+          "type": "string",
+          "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]{0,159}|(?:grp|ctx|ast|occ|job):[0-9a-f]{24})(?!\\n)$"
+        },
+        "filter": {
+          "enum": [
+            "all",
+            "advisory",
+            "direct",
+            "transitive",
+            "evidence_gaps"
+          ]
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        }
+      }
+    },
+    "crypto_assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "filter": {
+          "enum": [
+            "all",
+            "findings",
+            "algorithms",
+            "protocols",
+            "certificates"
+          ]
+        },
+        "group_id": {
+          "$ref": "common.schema.json#/$defs/grp_id"
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        }
+      }
+    },
+    "ai_assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "filter": {
+          "enum": [
+            "all",
+            "models",
+            "runtimes",
+            "ai_services",
+            "findings"
+          ]
+        },
+        "group_id": {
+          "$ref": "common.schema.json#/$defs/grp_id"
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        }
+      }
+    },
+    "inspector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "tab",
+        "selection_kind",
+        "selection_id"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "tab": {
+          "enum": [
+            "contexts",
+            "dependencies",
+            "crypto",
+            "ai",
+            "bom"
+          ]
+        },
+        "selection_kind": {
+          "enum": [
+            "repository",
+            "group",
+            "file",
+            "package",
+            "asset",
+            "occurrence",
+            "review_item",
+            "candidate",
+            "assertion",
+            "entity",
+            "evidence",
+            "edge"
+          ]
+        },
+        "selection_id": {
+          "type": "string",
+          "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]{0,159}|(?:grp|ctx|ast|occ|job):[0-9a-f]{24})(?!\\n)$"
+        }
+      }
+    },
+    "bom_candidates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "family": {
+          "enum": [
+            "software",
+            "cryptography",
+            "ai_model",
+            "other"
+          ]
+        },
+        "filter_group": {
+          "enum": [
+            "represented",
+            "not_represented",
+            "unknown"
+          ]
+        },
+        "state": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "conflicting_evidence",
+            "unverifiable",
+            "unknown_coverage",
+            "no_rule"
+          ]
+        },
+        "category": {
+          "enum": [
+            "missing_component",
+            "missing_connection",
+            "missing_bom_document",
+            "unknown_coverage"
+          ]
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 25
+        }
+      }
+    },
+    "bom_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "scope_kind"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "scope_kind": {
+          "enum": [
+            "focused_candidate",
+            "group_summary",
+            "full_view"
+          ]
+        },
+        "candidate_id": {
+          "$ref": "common.schema.json#/$defs/engine_id"
+        },
+        "group": {
+          "enum": [
+            "software",
+            "cryptography",
+            "ai_model",
+            "other",
+            "all"
+          ]
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      }
+    },
+    "bom_related_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generation",
+        "subject_kind",
+        "subject_id"
+      ],
+      "properties": {
+        "generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "subject_kind": {
+          "enum": [
+            "record",
+            "relationship"
+          ]
+        },
+        "subject_id": {
+          "$ref": "requests.schema.json#/$defs/bom_record_id"
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 20
+        }
+      }
+    },
+    "bom_record_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*|[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*_<scan-root>/[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*)(?!\\n)$"
+    }
+  }
+}

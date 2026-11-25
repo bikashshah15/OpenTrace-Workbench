@@ -1,0 +1,2657 @@
+{
+  "bundle_sha256": "8aa40ee7382150ade907ef25b61228d1fa3b129d5a87972e7b7f077b7f632519",
+  "capture": {
+    "build": null,
+    "configuration": "config:researcher-hailo-detector:sha256-8db687991ce57a4d",
+    "configuration_source": {
+      "follows": [
+        "docs/src/pages/components-explorer/components/hailo/index.mdx (upstream configuration example, lines 28-45)"
+      ],
+      "not_upstream": true,
+      "origin": "researcher-created",
+      "path": "inputs/viseron/researcher-config.yaml",
+      "sha256": "8db687991ce57a4d66492708ab21ef36963e7a2047f2af239ee71c4311ac4979"
+    },
+    "execution": null,
+    "inventories": [
+      {
+        "command": "cd <git-archive copy of the pinned revision> && syft scan dir:. -o cyclonedx-json@1.6=<output>   (network denied; see tools/run_viseron_captures.sh)",
+        "coverage_contract": {
+          "established": false,
+          "note": "No generator or owner statement was inspected saying which declaration forms or requirement files this inventory is expected to include."
+        },
+        "format": "CycloneDX 1.6 JSON",
+        "generator": "syft 1.51.1",
+        "intended_coverage": [
+          "package-manifests-and-lockfiles-in-source-tree"
+        ],
+        "inventory_id": "inv:syft-source-dir",
+        "kind": "sbom",
+        "label": "source-directory inventory (package manifests and lockfiles in the tracked tree); not a deployed-image or runtime SBOM",
+        "origin": "captured",
+        "raw_sha256_note": "source_sha256 below is the digest of the unmodified raw file; the raw file embeds the local absolute path of the scan copy and a timestamp and is not published",
+        "record_counts": {
+          "basis": "counted from the raw CycloneDX file",
+          "by_type": {
+            "file": 11,
+            "library": 1780
+          },
+          "components": 1791
+        },
+        "scan_binding": {
+          "basis": "scan of a git-archive copy of the pinned revision (acquisition manifest inputs/viseron/syft-acquisition.json); scan time is the timestamp inside the raw file",
+          "corroboration": "for requirements_ci.txt only: the SHA-256 Syft recorded for the scanned file equals the SHA-256 of that file at the pinned revision (checked by the rule)",
+          "not_established": "that every other scanned file matches the pinned revision"
+        },
+        "scan_scope": {
+          "basis": "whole tracked tree at the pinned revision (git archive, 1,066 files; acquisition manifest)",
+          "file_count": 1066,
+          "listing_sha256": "213f9a546102fe2040f1ec628cd47e1c8759419172868cc5c826aaaa371f8bc4",
+          "paths": [
+            "."
+          ],
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "source_file": "inputs/viseron/raw/syft-sbom.cdx.json",
+        "source_sha256": "3a39cbc92c5826f2c4f668c86c45eddef547e6ab76e1c4cd1106c58c043f1888",
+        "subject": "directory scan of a git-archive copy of the pinned revision (the tool's own subject is the directory '.'; revision binding is by the acquisition manifest, not declared by the BOM)"
+      },
+      {
+        "generator": "researcher (manual reading of pinned source)",
+        "intended_coverage": [],
+        "inventory_id": "inv:curated-source-reading",
+        "kind": "curation",
+        "label": "not a BOM; relationships here are researcher-stated and unassessed unless a rule applies",
+        "origin": "curated"
+      },
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6 (CBOM)",
+        "generator": "cdxgen 12.9.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:cdxgen-cbom",
+        "kind": "cbom",
+        "label": "CBOM \u00b7 cdxgen 12.9.0: third-party generator, source-only run over the viseron/ package; documented CBOM coverage is Java keystores/certificates and JS/TS source algorithms, not Python source algorithms",
+        "origin": "captured",
+        "scan_scope": {
+          "basis": "git archive of the pinned revision (acquisition manifest)",
+          "file_count": 267,
+          "listing_sha256": "7217378298610e3a261ac89393401ad6c6d8b15b10f2f3612fca4574ab4b6abe",
+          "paths": [
+            "viseron"
+          ],
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "source_file": "inputs/viseron/raw/cdxgen-cbom.cdx.json",
+        "source_sha256": "f270672b3e9227ad5a4d2772422cac27d9efbbd086080cce07dbce69c02ae5c5",
+        "third_party_generator": true
+      },
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6",
+        "generator": "cisco-aibom 1.10.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:cisco-aibom",
+        "kind": "aibom",
+        "label": "AI-BOM \u00b7 Cisco AI BOM 1.10.0 (static stage found no candidate; LLM stage skipped; a declaration by the generator, not independent verification)",
+        "origin": "captured",
+        "scan_scope": {
+          "basis": "git archive of the pinned revision (acquisition manifest)",
+          "file_count": 3,
+          "listing_sha256": "2b32d9ad9fafdae4a791e4decb93c2bac53bdcb35b9c2519550f75f208a8baed",
+          "paths": [
+            "viseron/components/hailo/__init__.py",
+            "viseron/components/hailo/const.py",
+            "viseron/components/hailo/utils.py"
+          ],
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "source_file": "inputs/viseron/raw/cisco-aibom.cdx.json",
+        "source_sha256": "df419872519c8597d86a1bca5f5bf34743ce94cbf15d461327f1cdf719b02a3d"
+      }
+    ],
+    "model": null,
+    "origin": "curated",
+    "repository": {
+      "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe",
+      "revision_selection": {
+        "method": "latest non-prerelease GitHub release on 2026-11-02 (gh api repos/roflcoopter/viseron/releases/latest -> v3.7.0); tag resolved by `git clone --depth 1 --branch v3.7.0`; HEAD verified equal to this SHA",
+        "tag": "v3.7.0"
+      },
+      "url": "https://github.com/roflcoopter/viseron"
+    },
+    "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "model",
+      "execution"
+    ]
+  },
+  "findings": [
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for runtime/default_model_url; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "c1-detector-default-model-url",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:c1-detector-default-model-url",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for runtime/default_model_url; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for runtime/loads_model_with; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "c2-detector-loads-hef-with-hailoinfer",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:c2-detector-loads-hef-with-hailoinfer",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for runtime/loads_model_with; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for runtime/uses_library; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "c3-loader-uses-hailo-platform",
+      "assertion_origin": "curated",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "curated assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:c3-loader-uses-hailo-platform",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for runtime/uses_library; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion maps a source import to a component of a named SBOM",
+        "reason_code": "import_mapping_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "c4-import-resolves-to-sbom-component",
+      "assertion_origin": "curated",
+      "bounded_meaning": "The top-level module imported at the stated source line is provided by a distribution whose own source declaration names it, and that distribution's name and version equal exactly one component of the stated SBOM. Source-reconstructed mapping, not installed-package metadata. Not a statement that the component is installed or run, that its declaring file is a runtime dependency list, or that the import executes.",
+      "category": "source_reconstructed_mapping",
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:c4-import-resolves-to-sbom-component",
+      "layers": {
+        "distribution_declares_module": true,
+        "import_observed": true,
+        "sbom_component_name_and_version_equal": true
+      },
+      "matched_component": {
+        "bom_ref": "pkg:pypi/hailort@4.22.0?package-id=b716a076e44ff2c9",
+        "locations": [
+          "/requirements_ci.txt"
+        ],
+        "name": "hailort",
+        "purl": "pkg:pypi/hailort@4.22.0",
+        "version": "4.22.0"
+      },
+      "next_action": null,
+      "not_established": [
+        "installation of the component in any image",
+        "that the SBOM's declaring file is a runtime dependency list",
+        "that the import executes",
+        "installed-package metadata (top_level.txt, RECORD)",
+        "that a model loaded by this library is described by any AI-BOM"
+      ],
+      "provenance_note": "The component is attributed by the SBOM to /requirements_ci.txt only. Whether that file lists what the runtime installs is a separate question and is not decided here.",
+      "rationale": "Supported (source-reconstructed): module hailo_platform is provided by distribution hailort 4.22.0 by that distribution's own setup declaration, and the SBOM has exactly that component. The component is attributed by the SBOM to /requirements_ci.txt only. Whether that file lists what the runtime installs is a separate question and is not decided here.",
+      "reason_codes": [
+        "component_equals_declared_distribution"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "dependency_mapping.import_resolves_to_component/1",
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "source-file:viseron/components/hailo/__init__.py@699c65bc3eae",
+        "third-party-source:hailo-ai/hailort@v4.22.0 (commit 8445792b5e97970c1f3f2681bb6c417fefd15861)",
+        "tool-output:syft-sbom-viseron"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev12-import-hailo-platform",
+          "reason": "viseron/components/hailo/__init__.py lines [13, 13] import module hailo_platform",
+          "reason_code": "import_statement_observed",
+          "relation": "context",
+          "role": "import"
+        },
+        {
+          "evidence_id": "ev16-distribution-declaration-hailort",
+          "reason": "setup name='hailort' (line 136), version='4.22.0' (line 149), packages=find_packages() (line 143); the listing at the tag has hailo_platform/__init__.py",
+          "reason_code": "distribution_declares_module",
+          "relation": "context",
+          "role": "distribution"
+        },
+        {
+          "evidence_id": "ev14-syft-lookup-hailort",
+          "reason": "component hailort 4.22.0 (pkg:pypi/hailort@4.22.0) equals the distribution's declared name and version; the SBOM attributes it to /requirements_ci.txt",
+          "reason_code": "component_equals_declared_distribution",
+          "relation": "supports",
+          "role": "inventory"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion names a declared requirement and a specific inventory",
+        "reason_code": "representation_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "c5-hailort-requirement-represented-in-sbom",
+      "assertion_origin": "curated",
+      "bounded_meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "category": "requirement_represented",
+      "coverage_contract": {
+        "established": false,
+        "note": "No generator or owner statement was inspected saying which declaration forms or requirement files this inventory is expected to include."
+      },
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:c5-hailort-requirement-represented-in-sbom",
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "next_action": null,
+      "rationale": "Supported: the inventory contains one component with the declared normalized name (name-level only; version, platform and artifact not compared).",
+      "reason_codes": [
+        "represented_by_unambiguous_component"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "source-file:requirements_ci.txt@699c65bc3eae",
+        "tool-output:syft-sbom-viseron"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev13-requirement-declaration-hailort",
+          "reason": "1 declaration line(s): line 2 exact_pin",
+          "reason_code": "requirement_declared",
+          "relation": "context",
+          "role": "declaration"
+        },
+        {
+          "evidence_id": "ev14-syft-lookup-hailort",
+          "reason": "one component identity with the same normalized name and ecosystem",
+          "reason_code": "represented_by_unambiguous_component",
+          "relation": "supports",
+          "role": "inventory"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-located crypto operation is declared in a named CBOM",
+        "reason_code": "cbom_operation_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "c6-sha256-call-represented-in-cdxgen-cbom",
+      "assertion_origin": "curated",
+      "bounded_meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "candidates": [],
+      "category": null,
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:c6-sha256-call-represented-in-cdxgen-cbom",
+      "generator_third_party": true,
+      "layers": {
+        "algorithm_record": false,
+        "integrity_verification": false,
+        "library_mentioned": false,
+        "matching_call_site": false,
+        "referenced_by_source": true,
+        "runtime_execution": false
+      },
+      "matched_asset": null,
+      "matched_model": null,
+      "next_action": "resolve the named scope or location gap, then re-run",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "provenance_note": "No shared source file is recorded; this does not prove independence. The CBOM was produced by a third-party generator and the source observation is a separate reading, but both read the same file at the same revision, so agreement would still be declaration-level.",
+      "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 0 service record(s); none is a sha256 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+      "reason_codes": [
+        "no_algorithm_record"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:viseron/components/webserver/auth.py@699c65bc3eae",
+        "tool-output:cbom-f270672b3e92"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev25-sha256-token-hash",
+          "reason": "viseron/components/webserver/auth.py lines [708, 710] show the sha256 call",
+          "reason_code": "operation_in_source_excerpt",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "ev30-cdxgen-cbom",
+          "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 0 service record(s); none is a sha256 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+          "reason_code": "no_algorithm_record",
+          "relation": "inconclusive",
+          "role": "cbom_document"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion asks whether a source-referenced model is declared in a named AI-BOM",
+        "reason_code": "aibom_declaration_assertion"
+      },
+      "artifact_class": null,
+      "assertion_id": "c7-default-model-declared-in-aibom",
+      "assertion_origin": "curated",
+      "bounded_meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "candidates": [],
+      "category": null,
+      "digest_verification": "not applicable: no matched model",
+      "evaluation": "curated assertion vs captured evidence",
+      "evidence_origins": [
+        "captured"
+      ],
+      "excluded_evidence": [
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev07-get-model-default",
+          "reason_code": "locator_not_in_excerpt"
+        },
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev08-get-model-download-cache",
+          "reason_code": "locator_not_in_excerpt"
+        },
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev09-detector-calls-get-model",
+          "reason_code": "locator_not_in_excerpt"
+        },
+        {
+          "detail": "the excerpt does not contain the declared acquisition locator as a whole URL",
+          "evidence_id": "ev11-hef-load",
+          "reason_code": "locator_not_in_excerpt"
+        }
+      ],
+      "finding_id": "finding:c7-default-model-declared-in-aibom",
+      "layers": {
+        "artifact_acquired_and_hashed": false,
+        "declared_in_aibom": false,
+        "observed_loading": false,
+        "referenced_by_source": true
+      },
+      "matched_model": null,
+      "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+      "provenance_note": "No shared source file is recorded between the AI-BOM and the source observation; this does not prove they are independent.",
+      "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+      "reason_codes": [
+        "no_matching_model_record"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1",
+      "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+      "shared_source_files": [],
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "source-file:viseron/components/hailo/const.py@699c65bc3eae",
+        "tool-output:aibom-df419872519c"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "ev06-default-model-urls",
+          "reason": "viseron/components/hailo/const.py lines [7, 14] state the acquisition locator",
+          "reason_code": "locator_stated_in_source",
+          "relation": "context",
+          "role": "source_reference"
+        },
+        {
+          "evidence_id": "ev31-cisco-aibom",
+          "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+          "reason_code": "no_matching_model_record",
+          "relation": "inconclusive",
+          "role": "aibom_document"
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "edges": [
+      {
+        "from": "assertion:c1-detector-default-model-url",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c2-detector-loads-hef-with-hailoinfer",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c2-detector-loads-hef-with-hailoinfer",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "type": "object"
+      },
+      {
+        "from": "assertion:c3-loader-uses-hailo-platform",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "object"
+      },
+      {
+        "from": "assertion:c3-loader-uses-hailo-platform",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c4-import-resolves-to-sbom-component",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c4-import-resolves-to-sbom-component",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+        "type": "object"
+      },
+      {
+        "from": "assertion:c5-hailort-requirement-represented-in-sbom",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+        "type": "object"
+      },
+      {
+        "from": "assertion:c5-hailort-requirement-represented-in-sbom",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c6-sha256-call-represented-in-cdxgen-cbom",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cdxgen-cbom",
+        "type": "object"
+      },
+      {
+        "from": "assertion:c6-sha256-call-represented-in-cdxgen-cbom",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::sha256-token-hash",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c7-default-model-declared-in-aibom",
+        "key": "subject",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:c7-default-model-declared-in-aibom",
+        "key": "object",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cisco-aibom",
+        "type": "object"
+      },
+      {
+        "from": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "key": "declared_in:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::requirements-ci-file",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::requirements-ci-file",
+        "type": "declared_in"
+      },
+      {
+        "from": "evidence:ev01-upstream-docs-example",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev02-researcher-config",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev03-researcher-config-no-model-path",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev04-default-model-path-none",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev05-schema-model-path",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev06-default-model-urls",
+        "key": "assesses",
+        "reason": "viseron/components/hailo/const.py lines [7, 14] state the acquisition locator",
+        "reason_code": "locator_stated_in_source",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev06-default-model-urls",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev07-get-model-default",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev07-get-model-default",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev07-get-model-default",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev08-get-model-download-cache",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev08-get-model-download-cache",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev09-detector-calls-get-model",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev09-detector-calls-get-model",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev09-detector-calls-get-model",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev10-detector-calls-hailoinfer",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev10-detector-calls-hailoinfer",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev11-hef-load",
+        "key": "excluded",
+        "reason": "the excerpt does not contain the declared acquisition locator as a whole URL",
+        "reason_code": "locator_not_in_excerpt",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:ev11-hef-load",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev11-hef-load",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev12-import-hailo-platform",
+        "key": "assesses",
+        "reason": "viseron/components/hailo/__init__.py lines [13, 13] import module hailo_platform",
+        "reason_code": "import_statement_observed",
+        "relation": "context",
+        "role": "import",
+        "to": "assertion:c4-import-resolves-to-sbom-component",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev12-import-hailo-platform",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev12-import-hailo-platform",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev13-requirement-declaration-hailort",
+        "key": "assesses",
+        "reason": "1 declaration line(s): line 2 exact_pin",
+        "reason_code": "requirement_declared",
+        "relation": "context",
+        "role": "declaration",
+        "to": "assertion:c5-hailort-requirement-represented-in-sbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev13-requirement-declaration-hailort",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev13-requirement-declaration-hailort",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::requirements-ci-file",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev14-syft-lookup-hailort",
+        "key": "assesses",
+        "reason": "component hailort 4.22.0 (pkg:pypi/hailort@4.22.0) equals the distribution's declared name and version; the SBOM attributes it to /requirements_ci.txt",
+        "reason_code": "component_equals_declared_distribution",
+        "relation": "supports",
+        "role": "inventory",
+        "to": "assertion:c4-import-resolves-to-sbom-component",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev14-syft-lookup-hailort",
+        "key": "assesses",
+        "reason": "one component identity with the same normalized name and ecosystem",
+        "reason_code": "represented_by_unambiguous_component",
+        "relation": "supports",
+        "role": "inventory",
+        "to": "assertion:c5-hailort-requirement-represented-in-sbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev14-syft-lookup-hailort",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev14-syft-lookup-hailort",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev15-syft-lookup-hailo-platform",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev15-syft-lookup-hailo-platform",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev16-distribution-declaration-hailort",
+        "key": "assesses",
+        "reason": "setup name='hailort' (line 136), version='4.22.0' (line 149), packages=find_packages() (line 143); the listing at the tag has hailo_platform/__init__.py",
+        "reason_code": "distribution_declares_module",
+        "relation": "context",
+        "role": "distribution",
+        "to": "assertion:c4-import-resolves-to-sbom-component",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev16-distribution-declaration-hailort",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev17-dockerfile-hailo-builds-wheel",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev18-dockerfile-hailo-builds-platform-wheel",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev19-hailo-version-pin",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev20-base-image-copies-wheels",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev21-image-installs-wheels",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev22-docs-pyhailort-in-container",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev23-requirements-txt-no-hailo",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev24-hailo-component-no-digest",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev25-sha256-token-hash",
+        "key": "assesses",
+        "reason": "viseron/components/webserver/auth.py lines [708, 710] show the sha256 call",
+        "reason_code": "operation_in_source_excerpt",
+        "relation": "context",
+        "role": "source_reference",
+        "to": "assertion:c6-sha256-call-represented-in-cdxgen-cbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev25-sha256-token-hash",
+        "key": "observes",
+        "to": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::sha256-token-hash",
+        "type": "observes"
+      },
+      {
+        "from": "evidence:ev30-cdxgen-cbom",
+        "key": "assesses",
+        "reason": "the document has 0 component(s), 0 cryptographic asset(s) and 0 service record(s); none is a sha256 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented",
+        "reason_code": "no_algorithm_record",
+        "relation": "inconclusive",
+        "role": "cbom_document",
+        "to": "assertion:c6-sha256-call-represented-in-cdxgen-cbom",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:ev31-cisco-aibom",
+        "key": "assesses",
+        "reason": "no model record shares the locator or a name; absence is not a contradiction (no coverage contract)",
+        "reason_code": "no_matching_model_record",
+        "relation": "inconclusive",
+        "role": "aibom_document",
+        "to": "assertion:c7-default-model-declared-in-aibom",
+        "type": "assesses",
+        "used": true
+      }
+    ],
+    "nodes": [
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/hailo/const.py:7-14 and viseron/components/hailo/utils.py:107-113 (researcher reading)"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "runtime",
+        "id": "assertion:c1-detector-default-model-url",
+        "next_action": null,
+        "object": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef",
+        "origin": "curated",
+        "predicate": "default_model_url",
+        "rationale": "Unverifiable: no rule is implemented for runtime/default_model_url; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:researcher-hailo-detector:sha256-8db687991ce57a4d",
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/hailo/__init__.py:145-147, 186-190, 330-332 (researcher reading)"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "runtime",
+        "id": "assertion:c2-detector-loads-hef-with-hailoinfer",
+        "next_action": null,
+        "object": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "origin": "curated",
+        "predicate": "loads_model_with",
+        "rationale": "Unverifiable: no rule is implemented for runtime/loads_model_with; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:researcher-hailo-detector:sha256-8db687991ce57a4d",
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/hailo/__init__.py:13 (import) and :330 (HEF)"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "curated assertion vs no used evidence",
+        "family": "runtime",
+        "id": "assertion:c3-loader-uses-hailo-platform",
+        "next_action": null,
+        "object": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "origin": "curated",
+        "predicate": "uses_library",
+        "rationale": "Unverifiable: no rule is implemented for runtime/uses_library; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:researcher-hailo-detector:sha256-8db687991ce57a4d",
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": "source_reconstructed_mapping",
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/hailo/__init__.py:13; hailort v4.22.0 platform/setup.py:136-143 (distribution declaration)"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "dependency_mapping",
+        "id": "assertion:c4-import-resolves-to-sbom-component",
+        "next_action": null,
+        "object": {
+          "import_file": "viseron/components/hailo/__init__.py",
+          "inventory_entity": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+          "inventory_id": "inv:syft-source-dir",
+          "inventory_sha256": "3a39cbc92c5826f2c4f668c86c45eddef547e6ab76e1c4cd1106c58c043f1888",
+          "top_level": "hailo_platform"
+        },
+        "origin": "curated",
+        "predicate": "import_resolves_to_component",
+        "rationale": "Supported (source-reconstructed): module hailo_platform is provided by distribution hailort 4.22.0 by that distribution's own setup declaration, and the SBOM has exactly that component. The component is attributed by the SBOM to /requirements_ci.txt only. Whether that file lists what the runtime installs is a separate question and is not decided here.",
+        "reason_codes": [
+          "component_equals_declared_distribution"
+        ],
+        "rule_id": "dependency_mapping.import_resolves_to_component/1",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": "requirement_represented",
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "requirements_ci.txt:2 (declaration); researcher-stated bounded assertion"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "inventory_coverage",
+        "id": "assertion:c5-hailort-requirement-represented-in-sbom",
+        "next_action": null,
+        "object": {
+          "inventory_entity": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+          "inventory_id": "inv:syft-source-dir",
+          "inventory_sha256": "3a39cbc92c5826f2c4f668c86c45eddef547e6ab76e1c4cd1106c58c043f1888"
+        },
+        "origin": "curated",
+        "predicate": "represents_requirement",
+        "rationale": "Supported: the inventory contains one component with the declared normalized name (name-level only; version, platform and artifact not compared).",
+        "reason_codes": [
+          "represented_by_unambiguous_component"
+        ],
+        "rule_id": "inventory_coverage.requirement_represented/1",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/webserver/auth.py:708-710 (researcher reading); question: does cdxgen 12.9.0 represent this SHA-256 call?"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "crypto_attribution",
+        "id": "assertion:c6-sha256-call-represented-in-cdxgen-cbom",
+        "next_action": "resolve the named scope or location gap, then re-run",
+        "object": {
+          "algorithm": "sha256",
+          "file": "viseron/components/webserver/auth.py",
+          "inventory_entity": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cdxgen-cbom",
+          "inventory_id": "inv:cdxgen-cbom",
+          "inventory_sha256": "f270672b3e9227ad5a4d2772422cac27d9efbbd086080cce07dbce69c02ae5c5",
+          "producer": {
+            "name": "cdxgen",
+            "version": "12.9.0"
+          }
+        },
+        "origin": "curated",
+        "predicate": "operation_declared_in_cbom",
+        "rationale": "Unverifiable: the document has 0 component(s), 0 cryptographic asset(s) and 0 service record(s); none is a sha256 record. Absence is not a contradiction: no coverage contract establishes that this generator should report this construct; its documented coverage: CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented.",
+        "reason_codes": [
+          "no_algorithm_record"
+        ],
+        "rule_id": "crypto_attribution.operation_declared_in_cbom/2",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "viseron/components/hailo/const.py:7-14 (default model URL); question: does the Cisco AI-BOM declare this model?"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "curated assertion vs captured evidence",
+        "family": "model_identity",
+        "id": "assertion:c7-default-model-declared-in-aibom",
+        "next_action": "resolve the named identity, scope or coverage gap, then re-run",
+        "object": {
+          "inventory_entity": "scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cisco-aibom",
+          "inventory_id": "inv:cisco-aibom",
+          "inventory_sha256": "df419872519c8597d86a1bca5f5bf34743ce94cbf15d461327f1cdf719b02a3d"
+        },
+        "origin": "curated",
+        "predicate": "declared_in_aibom",
+        "rationale": "Unverifiable: no model record shares the locator or a name; absence is not a contradiction (no coverage contract).",
+        "reason_codes": [
+          "no_matching_model_record"
+        ],
+        "rule_id": "model_identity.declared_in_aibom/1",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::default-model",
+        "kind": "model",
+        "name": "yolov11m.hef (Hailo model-zoo default; not acquired)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "default-model"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-detector",
+        "kind": "detector",
+        "name": "hailo object_detector (researcher config, no model_path)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "hailo-detector"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hailo-platform-import",
+        "kind": "library",
+        "name": "hailo_platform (import name, not a package name)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "hailo-platform-import"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::hef-loader",
+        "kind": "code_location",
+        "name": "HailoInfer.__init__: HEF(hef_path) (viseron/components/hailo/__init__.py)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "hef-loader"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cdxgen-cbom",
+        "kind": "inventory",
+        "name": "cdxgen CBOM document",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-cdxgen-cbom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-cisco-aibom",
+        "kind": "inventory",
+        "name": "Cisco AI BOM document",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-cisco-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::inventory-syft-sbom",
+        "kind": "inventory",
+        "name": "Syft 1.51.1 source-directory inventory",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "inventory-syft-sbom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::req-hailort",
+        "kind": "requirement",
+        "name": "hailort (declared requirement)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "req-hailort"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::requirements-ci-file",
+        "kind": "source_file",
+        "name": "requirements_ci.txt",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "requirements-ci-file"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:viseron-v3.7.0-hailo-detector::inv:curated-source-reading::sha256-token-hash",
+        "kind": "code_location",
+        "name": "AuthenticationService._hash_refresh_token (viseron/components/webserver/auth.py)",
+        "origin": "curated",
+        "source": {
+          "inventory_id": "inv:curated-source-reading",
+          "source_ref": "sha256-token-hash"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "evidence:ev01-upstream-docs-example",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "an UPSTREAM documentation example; it names no model_path and no Viseron default is claimed beyond what the code shows"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docs/src/pages/components-explorer/components/hailo/index.mdx"
+          },
+          "excerpt": "hailo:\n  object_detector:\n    cameras:\n      camera_one:\n        fps: 1\n        labels:\n          - label: person\n            confidence: 0.8",
+          "file_sha256": "d3be9f89a6694859596700719bce232340ae15201c67644c0a4b69b1d3215501",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            29,
+            36
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docs/src/pages/components-explorer/components/hailo/index.mdx",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docs/src/pages/components-explorer/components/hailo/index.mdx@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev02-researcher-config",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "RESEARCHER-CREATED configuration, not upstream; nothing was run"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "inputs/viseron/researcher-config.yaml"
+          },
+          "excerpt": "hailo:\n  object_detector:\n    cameras:\n      camera_one:\n        fps: 1\n        labels:\n          - label: person\n            confidence: 0.8",
+          "file_sha256": "8db687991ce57a4d66492708ab21ef36963e7a2047f2af239ee71c4311ac4979",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            7,
+            14
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/researcher-config.yaml",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:inputs/viseron/researcher-config.yaml@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev03-researcher-config-no-model-path",
+        "limitations": [
+          "counts the term inside the configuration block only (the header comment is excluded); a researcher-created file"
+        ],
+        "method": "term-count-in-file",
+        "observation": {
+          "artifact": {
+            "locator": "inputs/viseron/researcher-config.yaml"
+          },
+          "file_sha256": "8db687991ce57a4d66492708ab21ef36963e7a2047f2af239ee71c4311ac4979",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "model_path": 0
+          },
+          "region_lines": [
+            7,
+            15
+          ],
+          "terms": [
+            "model_path"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/researcher-config.yaml",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "researcher-file:inputs/viseron/researcher-config.yaml"
+      },
+      {
+        "id": "evidence:ev04-default-model-path-none",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "a default value; the configured model is whatever the user's config sets"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/const.py"
+          },
+          "excerpt": "DEFAULT_MODEL_PATH: Final = None",
+          "file_sha256": "478756fd95ab817ff831c6b0b5614dcdeec770a008cd3de07b3a04bc48ef1d1e",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            31,
+            31
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/const.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/const.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev05-schema-model-path",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "configuration schema text; validation was not run"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/__init__.py"
+          },
+          "excerpt": "        vol.Optional(\n            CONFIG_MODEL_PATH,\n            default=DEFAULT_MODEL_PATH,\n            description=DESC_MODEL_PATH,\n        ): Maybe(str, vol.Any(PathExists(), Url())),",
+          "file_sha256": "93bf7e2bc5c5e7aa137cf0d6e633257ef60f8228d1feb13b12c88d48ce344717",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            60,
+            64
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/__init__.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/__init__.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev06-default-model-urls",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "HAILO8_DEFAULT_URL and HAILO8L_DEFAULT_URL are the same string at this revision (both name .../hailo8l/yolov11m.hef), so the default locator does not depend on the detected architecture",
+          "a locator names where bytes would come from; the file was not downloaded and no digest is declared",
+          "string_literals: the string values the language evaluates for the excerpt's literals (adjacent literals are concatenated); the excerpt itself is verbatim"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/const.py"
+          },
+          "excerpt": "HAILO8_DEFAULT_URL = (\n    \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/\"\n    \"ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef\"\n)\nHAILO8L_DEFAULT_URL = (\n    \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/\"\n    \"ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef\"\n)",
+          "file_sha256": "478756fd95ab817ff831c6b0b5614dcdeec770a008cd3de07b3a04bc48ef1d1e",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            7,
+            14
+          ],
+          "string_literals": [
+            "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef",
+            "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/const.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/const.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev07-get-model-default",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "the branch shown runs only if no model_path is configured and a Hailo architecture is detected at runtime"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/utils.py"
+          },
+          "excerpt": "def get_model(model_path: str | None, hailo_arch: Literal[\"hailo8\", \"hailo8l\"]) -> str:\n    \"\"\"Return locally cached model or download if a URL is provided.\"\"\"\n    if model_path is None:\n        if hailo_arch == \"hailo8l\":\n            model_path = HAILO8L_DEFAULT_URL\n        else:\n            model_path = HAILO8_DEFAULT_URL",
+          "file_sha256": "605676cdb957db33b99ce94154949dc97fc77d5ff5efcd5c50a5fc8076d3f6e6",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            107,
+            113
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/utils.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/utils.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev08-get-model-download-cache",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "download and caching code text; no download happened"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/utils.py"
+          },
+          "excerpt": "    # Determine model name and cache destination\n    model_name = get_model_name(model_path)\n    cached_model_path = os.path.join(MODEL_CACHE, model_name)\n\n    # Search for cached path\n    if os.path.exists(cached_model_path):\n        LOGGER.debug(\"Using cached model %s\", cached_model_path)\n        return cached_model_path\n\n    LOGGER.info(\"Downloading model %s -> %s\", model_path, cached_model_path)\n    download_model(model_path, cached_model_path)\n    return cached_model_path",
+          "file_sha256": "605676cdb957db33b99ce94154949dc97fc77d5ff5efcd5c50a5fc8076d3f6e6",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            127,
+            138
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/utils.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/utils.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev09-detector-calls-get-model",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "call site text; configured loading, not observed execution"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/__init__.py"
+          },
+          "excerpt": "        self.model_path = get_model(\n            config[CONFIG_OBJECT_DETECTOR][CONFIG_MODEL_PATH], hailo_arch\n        )",
+          "file_sha256": "93bf7e2bc5c5e7aa137cf0d6e633257ef60f8228d1feb13b12c88d48ce344717",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            145,
+            147
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/__init__.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/__init__.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev10-detector-calls-hailoinfer",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "call site text inside process_initialization (runs in a child process when Viseron runs); configured loading, not observed execution"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/__init__.py"
+          },
+          "excerpt": "            self._hailo_inference = HailoInfer(\n                self.model_path,\n                multi_process_service=self._config[CONFIG_MULTI_PROCESS_SERVICE],\n            )\n            (",
+          "file_sha256": "93bf7e2bc5c5e7aa137cf0d6e633257ef60f8228d1feb13b12c88d48ce344717",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            186,
+            190
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/__init__.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/__init__.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev11-hef-load",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "the call that opens the HEF file; configured loading, not observed execution"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/__init__.py"
+          },
+          "excerpt": "        self.hef = HEF(hef_path)\n\n        self.infer_model = self.target.create_infer_model(hef_path)",
+          "file_sha256": "93bf7e2bc5c5e7aa137cf0d6e633257ef60f8228d1feb13b12c88d48ce344717",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            330,
+            332
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/__init__.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/__init__.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev12-import-hailo-platform",
+        "limitations": [
+          "parsed with ast from the file text; nothing was imported",
+          "a module name, not a package name: it says nothing about which distribution provides it"
+        ],
+        "method": "python-ast-import-parse",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/__init__.py"
+          },
+          "file_sha256": "93bf7e2bc5c5e7aa137cf0d6e633257ef60f8228d1feb13b12c88d48ce344717",
+          "file_sha256_algorithm": "sha256",
+          "imported_names": [
+            "HEF",
+            "FormatType",
+            "HailoSchedulingAlgorithm",
+            "VDevice"
+          ],
+          "kind": "python_import",
+          "lines": [
+            13,
+            13
+          ],
+          "modules": [
+            "hailo_platform"
+          ],
+          "statement": "from hailo_platform import HEF, FormatType, HailoSchedulingAlgorithm, VDevice",
+          "top_level": [
+            "hailo_platform"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/__init__.py",
+        "tool": "tools/build_viseron_bundle.py (src/bombridge/adapters.py)",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/__init__.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev13-requirement-declaration-hailort",
+        "limitations": [
+          "declaration only",
+          "the file's own header says it holds extra requirements for GitHub Actions CI; it is not the runtime dependency list",
+          "a declared requirement is not a source import, an inventory component or an observed runtime library"
+        ],
+        "method": "requirements-line-parse",
+        "observation": {
+          "artifact": {
+            "locator": "requirements_ci.txt"
+          },
+          "declarations": [
+            {
+              "form": "exact_pin",
+              "line": 2,
+              "name": "hailort",
+              "normalized_name": "hailort",
+              "original_text": "hailort==4.22.0",
+              "specifier": "==4.22.0"
+            }
+          ],
+          "file_sha256": "aa0e0f54d818ead9d1eba1649674badd9af13ffe7899cddbb31f63f88c7491d0",
+          "file_sha256_algorithm": "sha256",
+          "file_summary": {
+            "forms": {
+              "exact_pin": 3,
+              "unsupported": 1
+            },
+            "requirement_lines": 4,
+            "unsupported_lines": [
+              6
+            ]
+          },
+          "kind": "requirement_declaration",
+          "markers_note": "markers are preserved as text; none was evaluated",
+          "target": {
+            "normalized_name": "hailort"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "requirements_ci.txt",
+        "tool": "tools/build_viseron_bundle.py (src/bombridge/adapters.py)",
+        "type": "evidence",
+        "underlying_source": "source-file:requirements_ci.txt@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev14-syft-lookup-hailort",
+        "limitations": [
+          "lookup result for one normalized package name",
+          "source-directory inventory: not an image or runtime SBOM",
+          "scan-to-revision binding rests on the acquisition manifest plus the recorded hash of one file"
+        ],
+        "method": "cyclonedx-exact-name-lookup",
+        "observation": {
+          "components_attributed_to_selected_file": [
+            "hailort",
+            "opencv-contrib-python",
+            "opencv-python",
+            "pygobject"
+          ],
+          "inventory": {
+            "format": "CycloneDX 1.6",
+            "generator": "syft 1.51.1",
+            "raw_sha256": "3a39cbc92c5826f2c4f668c86c45eddef547e6ab76e1c4cd1106c58c043f1888"
+          },
+          "kind": "inventory_name_lookup",
+          "matches": [
+            {
+              "bom_ref": "pkg:pypi/hailort@4.22.0?package-id=b716a076e44ff2c9",
+              "locations": [
+                "/requirements_ci.txt"
+              ],
+              "name": "hailort",
+              "purl": "pkg:pypi/hailort@4.22.0",
+              "version": "4.22.0"
+            }
+          ],
+          "parse": {
+            "complete": true,
+            "components_total": 1791,
+            "library_components": 1780,
+            "unclassified_components": 0
+          },
+          "query": {
+            "ecosystem": "pypi",
+            "match": "exact normalized name; no substring matching",
+            "normalized_name": "hailort"
+          },
+          "scanned_file": {
+            "file_components_matching_path_suffix": 1,
+            "path": "requirements_ci.txt",
+            "recorded_sha256": [
+              "aa0e0f54d818ead9d1eba1649674badd9af13ffe7899cddbb31f63f88c7491d0"
+            ]
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/raw/syft-sbom.cdx.json",
+        "tool": "tools/build_viseron_bundle.py (src/bombridge/adapters.py) over syft 1.51.1 output",
+        "type": "evidence",
+        "underlying_source": "tool-output:syft-sbom-viseron"
+      },
+      {
+        "id": "evidence:ev15-syft-lookup-hailo-platform",
+        "limitations": [
+          "the IMPORT NAME looked up as if it were a package name: recorded to show that this does not work, and is not used as evidence of a mapping"
+        ],
+        "method": "cyclonedx-exact-name-lookup",
+        "observation": {
+          "components_attributed_to_selected_file": [
+            "hailort",
+            "opencv-contrib-python",
+            "opencv-python",
+            "pygobject"
+          ],
+          "inventory": {
+            "format": "CycloneDX 1.6",
+            "generator": "syft 1.51.1",
+            "raw_sha256": "3a39cbc92c5826f2c4f668c86c45eddef547e6ab76e1c4cd1106c58c043f1888"
+          },
+          "kind": "inventory_name_lookup",
+          "matches": [],
+          "parse": {
+            "complete": true,
+            "components_total": 1791,
+            "library_components": 1780,
+            "unclassified_components": 0
+          },
+          "query": {
+            "ecosystem": "pypi",
+            "match": "exact normalized name; no substring matching",
+            "normalized_name": "hailo-platform"
+          },
+          "scanned_file": {
+            "file_components_matching_path_suffix": 1,
+            "path": "requirements_ci.txt",
+            "recorded_sha256": [
+              "aa0e0f54d818ead9d1eba1649674badd9af13ffe7899cddbb31f63f88c7491d0"
+            ]
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/raw/syft-sbom.cdx.json",
+        "tool": "tools/build_viseron_bundle.py (src/bombridge/adapters.py) over syft 1.51.1 output",
+        "type": "evidence",
+        "underlying_source": "tool-output:syft-sbom-viseron"
+      },
+      {
+        "id": "evidence:ev16-distribution-declaration-hailort",
+        "limitations": [
+          "THIRD-PARTY source at tag v4.22.0, not a file of the Viseron revision; scope.revision names the Viseron revision whose Dockerfile.hailo builds that tag (the binding is Dockerfile.hailo:33-41 and azure-pipelines/.env:9)",
+          "a source declaration (setup name, version, packages=find_packages() with the directory listing at the tag); installed-package metadata (top_level.txt, RECORD) was not observed and no wheel was built or inspected"
+        ],
+        "method": "setup-py-ast-parse+listing",
+        "observation": {
+          "artifact": {
+            "locator": "hailort/libhailort/bindings/python/platform/setup.py"
+          },
+          "copy": {
+            "git_blob_sha1": "cf6e2b8c31dd7060dc2dbb8894381ff33e2ca0b7",
+            "listing_copy": "inputs/viseron/evidence/hailort-v4.22.0-platform-tree.json",
+            "listing_sha256": "67cf21f1bd98c246acd81e99363c192ab115b71ddd85d54028d5db2a5890f863",
+            "path": "inputs/viseron/evidence/hailort-v4.22.0-platform-setup.py",
+            "sha256": "c79befc3087a8d55ed8120b26af819beb09f749a8d45c96f7d5d8ba00f87d533"
+          },
+          "distribution": {
+            "name": "hailort",
+            "name_line": 136,
+            "version": "4.22.0",
+            "version_line": 149
+          },
+          "file_sha256": "c79befc3087a8d55ed8120b26af819beb09f749a8d45c96f7d5d8ba00f87d533",
+          "file_sha256_algorithm": "sha256",
+          "kind": "distribution_declaration",
+          "packages_expression": "find_packages()",
+          "packages_line": 143,
+          "provided_top_level": [
+            "hailo_platform"
+          ],
+          "tree": {
+            "base_path": "hailort/libhailort/bindings/python/platform",
+            "commit": "8445792b5e97970c1f3f2681bb6c417fefd15861",
+            "directories": [
+              "hailo_platform",
+              "hailo_tutorials"
+            ],
+            "ref": "v4.22.0",
+            "repository": "https://github.com/hailo-ai/hailort"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "https://github.com/hailo-ai/hailort/blob/v4.22.0/hailort/libhailort/bindings/python/platform/setup.py (copy: inputs/viseron/evidence/hailort-v4.22.0-platform-setup.py)",
+        "tool": "tools/build_viseron_bundle.py (src/bombridge/adapters.py)",
+        "type": "evidence",
+        "underlying_source": "third-party-source:hailo-ai/hailort@v4.22.0 (commit 8445792b5e97970c1f3f2681bb6c417fefd15861)"
+      },
+      {
+        "id": "evidence:ev17-dockerfile-hailo-builds-wheel",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "build instruction text; no image was built"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile.hailo"
+          },
+          "excerpt": "    git clone --branch v${HAILO_VERSION} --depth 1 https://github.com/hailo-ai/hailort.git && \\",
+          "file_sha256": "171abebecc98537e92a9db46ee8a1b20a977370a872f49dec2a26fe1d87a85c4",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            33,
+            33
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docker/Dockerfile.hailo",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile.hailo@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev18-dockerfile-hailo-builds-platform-wheel",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "build instruction text; no image was built"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile.hailo"
+          },
+          "excerpt": "    cd /tmp/hailort/hailort/libhailort/bindings/python/platform && \\\n    python3 setup.py bdist_wheel --dist-dir=/wheels && \\\n    pip3 wheel . -w /wheels && \\",
+          "file_sha256": "171abebecc98537e92a9db46ee8a1b20a977370a872f49dec2a26fe1d87a85c4",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            39,
+            41
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docker/Dockerfile.hailo",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile.hailo@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev19-hailo-version-pin",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "a build variable (HAILO_VERSION); no image was built"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "azure-pipelines/.env"
+          },
+          "excerpt": "HAILO_VERSION=\"4.22.0\"",
+          "file_sha256": "38ed54e60fdf18210ce680cefffedd1eae667f91654733e98dcec1907c77a2d3",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            9,
+            9
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "azure-pipelines/.env",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:azure-pipelines/.env@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev20-base-image-copies-wheels",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "build instruction text; no image was built"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/amd64/Dockerfile.base"
+          },
+          "excerpt": "COPY --from=hailo /wheels /wheels/",
+          "file_sha256": "dc050d5b2eb247ac0cb2051f0023b44bbed808a274ee808fd7bc63aa022552d5",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            77,
+            77
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docker/amd64/Dockerfile.base",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/amd64/Dockerfile.base@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev21-image-installs-wheels",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "build instruction text; no image was built"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docker/Dockerfile"
+          },
+          "excerpt": "  && python3 -m pip install --no-deps --ignore-installed /wheels/*.whl \\",
+          "file_sha256": "76529fac650d557f33ace06f1af6997b12eec49e4e25d9025e4045efcfc83caa",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            130,
+            130
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docker/Dockerfile",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docker/Dockerfile@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev22-docs-pyhailort-in-container",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "documentation text (a statement by the maintainers); not verified against an image"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "docs/src/pages/components-explorer/components/hailo/index.mdx"
+          },
+          "excerpt": "It is only required to install the `HailoRT PCIe driver` and `HailoRT`. `PyHailoRT` is not necessary since it is installed inside the container.",
+          "file_sha256": "d3be9f89a6694859596700719bce232340ae15201c67644c0a4b69b1d3215501",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            62,
+            62
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "docs/src/pages/components-explorer/components/hailo/index.mdx",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:docs/src/pages/components-explorer/components/hailo/index.mdx@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev23-requirements-txt-no-hailo",
+        "limitations": [
+          "one file; the file Syft also lists (requirements.txt) declares no hailo package, which is why the only SBOM component for hailort comes from requirements_ci.txt"
+        ],
+        "method": "term-count-in-file",
+        "observation": {
+          "artifact": {
+            "locator": "requirements.txt"
+          },
+          "file_sha256": "f25e8cc785c08a04b9b255cc34d7b3aad0166b571cf2c956054a9b97b0c8a5a2",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "hailo": 0
+          },
+          "terms": [
+            "hailo"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "requirements.txt",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:requirements.txt@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev24-hailo-component-no-digest",
+        "limitations": [
+          "one file (the model resolution code); const.py was checked by reading: no digest is declared for the default model either"
+        ],
+        "method": "term-count-in-file",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/hailo/utils.py"
+          },
+          "file_sha256": "605676cdb957db33b99ce94154949dc97fc77d5ff5efcd5c50a5fc8076d3f6e6",
+          "file_sha256_algorithm": "sha256",
+          "kind": "text_search",
+          "match_counts": {
+            "checksum": 0,
+            "digest": 0,
+            "hash": 0,
+            "md5": 0,
+            "sha256": 0
+          },
+          "terms": [
+            "sha256",
+            "checksum",
+            "digest",
+            "md5",
+            "hash"
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/hailo/utils.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/hailo/utils.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev25-sha256-token-hash",
+        "limitations": [
+          "text of the file at the pinned revision; says nothing about what is built, deployed or executed",
+          "a source pattern; does not show this runs, nor what the digest protects"
+        ],
+        "method": "verbatim-snippet-locate",
+        "observation": {
+          "artifact": {
+            "locator": "viseron/components/webserver/auth.py"
+          },
+          "excerpt": "    def _hash_refresh_token(token: str) -> str:\n        \"\"\"Hash a refresh token secret for short-lived reuse tracking.\"\"\"\n        return hashlib.sha256(token.encode()).hexdigest()",
+          "file_sha256": "2a64fa30d8d5876f2be556cc44f59d064d2028e90b6cc289cf0675032fc925fe",
+          "file_sha256_algorithm": "sha256",
+          "kind": "source_excerpt",
+          "lines": [
+            708,
+            710
+          ]
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "viseron/components/webserver/auth.py",
+        "tool": "tools/build_viseron_bundle.py",
+        "type": "evidence",
+        "underlying_source": "source-file:viseron/components/webserver/auth.py@699c65bc3eae"
+      },
+      {
+        "id": "evidence:ev30-cdxgen-cbom",
+        "limitations": [
+          "what the document says, not whether it is right",
+          "the document's coverage is only as stated in it",
+          "a git-archive copy of the viseron/ Python package of the pinned revision (267 files); the root requirements files, docker/ and the rest of the repository were not scanned, so cdxgen read no dependency manifest",
+          "Python source was read; dependencies were not installed and no Viseron code was executed; the network was denied at OS level",
+          "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms; this package imports hashlib, hmac and bcrypt)",
+          "the log says the generator could not identify component evidence from its source slices (empty slices); recorded as a warning, exit code 0",
+          "CycloneDX 1.6 was chosen with --spec-version because BOMBridge reads 1.6",
+          "token usage, cost: not applicable; no LLM is used"
+        ],
+        "method": "cyclonedx-1.6-cbom-intake",
+        "observation": {
+          "acquisition_documented_coverage": {
+            "source": "cdxgen 12.9.0 README, section 'Generate Cryptography Bill of Materials (CBOM)' (installed package)",
+            "statement": "CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented."
+          },
+          "acquisition_generator": {
+            "install": "npm install --ignore-scripts @cyclonedx/cdxgen@12.9.0 into .tools/cdxgen (git-ignored); the same installation as the Frigate capture",
+            "invocation": "cdxgen -t python --include-crypto --evidence --no-install-deps --spec-version 1.6 --json-pretty -o <output> <scan-root>   (run as: env -i PATH HOME=<isolated-empty-dir> NO_COLOR=1 sandbox-exec -p '(version 1)(allow default)(deny network*)' <cdxgen> ...; cwd = an empty temp dir; see tools/run_viseron_captures.sh)",
+            "name": "cdxgen",
+            "third_party": true,
+            "version": "12.9.0"
+          },
+          "acquisition_outcome": {
+            "components": 0,
+            "cryptographic_assets": 0,
+            "cyclonedx_spec_version": "1.6",
+            "exit_code": 0,
+            "log_file": "inputs/viseron/raw/cdxgen-cbom.run.log",
+            "meaning": "a successful scan that reported no cryptographic asset; not a failed scan",
+            "services": 0,
+            "source_locations_for_crypto": 0,
+            "status": "completed",
+            "warnings_in_log": [
+              "Unable to identify component evidence for the input SBOM based on the slices from atom. The slices are either empty or lack appropriate tags."
+            ]
+          },
+          "acquisition_scope": {
+            "file_count": 267,
+            "included_paths": [
+              "viseron"
+            ],
+            "listing_sha256": "7217378298610e3a261ac89393401ad6c6d8b15b10f2f3612fca4574ab4b6abe",
+            "method": "git archive of the pinned revision restricted to the listed paths"
+          },
+          "assets": [],
+          "binding": {
+            "acquisition_limitations": [
+              "a git-archive copy of the viseron/ Python package of the pinned revision (267 files); the root requirements files, docker/ and the rest of the repository were not scanned, so cdxgen read no dependency manifest",
+              "Python source was read; dependencies were not installed and no Viseron code was executed; the network was denied at OS level",
+              "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms; this package imports hashlib, hmac and bcrypt)",
+              "the log says the generator could not identify component evidence from its source slices (empty slices); recorded as a warning, exit code 0",
+              "CycloneDX 1.6 was chosen with --spec-version because BOMBridge reads 1.6",
+              "token usage, cost: not applicable; no LLM is used"
+            ],
+            "conflicts": [],
+            "corroborated": null,
+            "declared": null,
+            "level": "recorded",
+            "notes": [
+              "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+            ],
+            "recorded": "699c65bc3eaec09eb3ade8b82ef1adec106298fe",
+            "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+          },
+          "counts": {
+            "assets": 0,
+            "by_type": {},
+            "components_total": 0,
+            "library_mentions": 0,
+            "services": 0
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 2,
+            "format": "CycloneDX",
+            "raw_sha256": "f270672b3e9227ad5a4d2772422cac27d9efbbd086080cce07dbce69c02ae5c5",
+            "serial_number": "urn:uuid:cc21c723-822b-4291-8369-e185afd19e74",
+            "spec_version": "1.6",
+            "timestamp": "2026-11-02T21:19:26Z"
+          },
+          "extractor_notes": {},
+          "kind": "cbom_document",
+          "library_mentions": [],
+          "limitations": [
+            "the document states no coverage (no compositions)",
+            "the document declares no cryptographic-asset component (a successful document with zero crypto assets; not a failed scan)"
+          ],
+          "producer": [
+            {
+              "name": "cdxgen",
+              "vendor": "OWASP Foundation",
+              "version": "12.9.0"
+            }
+          ],
+          "services": {
+            "count": 0,
+            "names": [],
+            "note": null
+          },
+          "status": "ok",
+          "subject": {
+            "bom_ref": "pkg:pypi/viseron-cdxgen-scope@latest",
+            "declared_revision": null,
+            "name": "viseron-cdxgen-scope",
+            "type": "application",
+            "version": "latest"
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/raw/cdxgen-cbom.cdx.json",
+        "tool": "src/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:cbom-f270672b3e92"
+      },
+      {
+        "id": "evidence:ev31-cisco-aibom",
+        "limitations": [
+          "what the document says, not whether it is right",
+          "the document's coverage is only as stated in it",
+          "a source copy of three files of the pinned revision (20,754 bytes); the rest of the repository was not scanned",
+          "the tool's static stage found zero candidate model references in these files, so its LLM (agentic) stage was skipped; the document is the tool's static result, not an LLM judgement",
+          "the default model is named only as a URL string constant (const.py:7-14); the tool did not report it, so a model that is referenced this way is outside what this scan reported",
+          "the document does not record the source revision; scope here comes from this manifest",
+          "token usage and cost: the tool reports none; the log and the tool's cache show no model call, so none is claimed or estimated beyond that"
+        ],
+        "method": "cyclonedx-1.6-intake",
+        "observation": {
+          "binding": {
+            "acquisition_limitations": [
+              "a source copy of three files of the pinned revision (20,754 bytes); the rest of the repository was not scanned",
+              "the tool's static stage found zero candidate model references in these files, so its LLM (agentic) stage was skipped; the document is the tool's static result, not an LLM judgement",
+              "the default model is named only as a URL string constant (const.py:7-14); the tool did not report it, so a model that is referenced this way is outside what this scan reported",
+              "the document does not record the source revision; scope here comes from this manifest",
+              "token usage and cost: the tool reports none; the log and the tool's cache show no model call, so none is claimed or estimated beyond that"
+            ],
+            "conflicts": [],
+            "corroborated": null,
+            "declared": null,
+            "level": "recorded",
+            "notes": [
+              "revision recorded by an acquisition manifest; the document declares none; not independently corroborated"
+            ],
+            "recorded": "699c65bc3eaec09eb3ade8b82ef1adec106298fe",
+            "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+          },
+          "counts": {
+            "by_type": {},
+            "components_total": 0,
+            "models": 0
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 1,
+            "format": "CycloneDX",
+            "raw_sha256": "df419872519c8597d86a1bca5f5bf34743ce94cbf15d461327f1cdf719b02a3d",
+            "serial_number": "urn:uuid:fc5c4f66-0a61-4c21-9353-a5a7ffbbf10c",
+            "spec_version": "1.6",
+            "timestamp": "2026-11-02T21:50:18.093336+00:00"
+          },
+          "kind": "aibom_document",
+          "limitations": [
+            "no metadata.component: the document names no subject",
+            "the document declares no source revision; scope cannot be taken from the document",
+            "the document states no coverage (no compositions)",
+            "the document declares no machine-learning-model component"
+          ],
+          "models": [],
+          "producer": [
+            {
+              "name": "cisco-aibom",
+              "vendor": "Cisco",
+              "version": "1.10.0"
+            }
+          ],
+          "status": "ok",
+          "subject": null
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+        },
+        "scope_id": "scope:viseron-v3.7.0-hailo-detector",
+        "source_locator": "inputs/viseron/raw/cisco-aibom.cdx.json",
+        "tool": "src/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:aibom-df419872519c"
+      }
+    ]
+  },
+  "input_checks": [
+    {
+      "detail": "const.py names a default Hailo model-zoo URL (yolov11m.hef) used when no model_path is configured; utils.get_model resolves it by detected architecture (both defaults are the same URL).",
+      "evidence": [
+        "ev04-default-model-path-none",
+        "ev06-default-model-urls",
+        "ev07-get-model-default"
+      ],
+      "input": "01-model-reference",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "The .hef is downloaded by Viseron at start-up; it was not downloaded here.",
+      "evidence": [
+        "ev08-get-model-download-cache"
+      ],
+      "input": "02-model-artifact",
+      "next_action": "optionally retrieve the file with retrieval metadata and record the observed digest",
+      "status": "referenced_not_acquired"
+    },
+    {
+      "detail": "No digest or checksum for the default model was found in the model-resolution code or constants. Absence is not proven.",
+      "evidence": [
+        "ev24-hailo-component-no-digest"
+      ],
+      "input": "03-declared-expected-digest",
+      "next_action": "look for a digest published by the Hailo model zoo before any digest assessment",
+      "searched": [
+        "viseron/components/hailo/utils.py (term search: sha256, checksum, digest, md5, hash)",
+        "viseron/components/hailo/const.py (read)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "Selected by the researcher-created configuration (hailo.object_detector, no model_path). The upstream documentation example is similar but is a different file.",
+      "evidence": [
+        "ev01-upstream-docs-example",
+        "ev02-researcher-config",
+        "ev03-researcher-config-no-model-path"
+      ],
+      "input": "04-detector-runtime-selection",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "GitHub release v3.7.0 lists no assets and no SBOM-named file exists in the tracked tree.",
+      "input": "05-release-sbom",
+      "searched": [
+        "GitHub releases/tags/v3.7.0 assets (none)",
+        "tracked file names (*sbom*, *bom*.json, cyclonedx*, *.spdx*)"
+      ],
+      "status": "not_found_in_inspected_scope"
+    },
+    {
+      "detail": "Syft 1.51.1 source-directory inventory generated here from a git-archive copy of the pinned revision (1,791 components, CycloneDX 1.6). Not an image or runtime SBOM.",
+      "evidence": [
+        "ev14-syft-lookup-hailort"
+      ],
+      "input": "06-source-directory-sbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "The Syft inventory has one component named hailort 4.22.0, attributed only to requirements_ci.txt, a CI requirements file. The loader imports hailo_platform; the mapping hailo_platform -> hailort is reconstructed from the hailort 4.22.0 source declaration (see c4).",
+      "evidence": [
+        "ev13-requirement-declaration-hailort",
+        "ev14-syft-lookup-hailort",
+        "ev15-syft-lookup-hailo-platform",
+        "ev16-distribution-declaration-hailort"
+      ],
+      "input": "07-sbom-component-for-detector-runtime",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "AI-BOM acquired by one authorized Cisco AI BOM 1.10.0 scan of the 3-file public source copy (20,754 bytes: the hailo detector's __init__.py, const.py, utils.py). The scan completed and the output validates as CycloneDX 1.6. It reports zero components and zero models. The tool's static stage found no candidate, so its LLM stage was skipped and no model call was made. The default model is named only as a URL string constant (const.py:7-14). A valid zero-model result is a completed scan.",
+      "evidence": [
+        "ev31-cisco-aibom"
+      ],
+      "input": "08-ai-bom",
+      "next_action": "none for this scan; do not rerun without a new approval",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "A CBOM was produced by cdxgen 12.9.0 (third-party) over the viseron/ package at the pinned revision (267 files; source-only, no dependency install, network denied). The scan succeeded and the CycloneDX 1.6 document contains 0 components, 0 cryptographic assets and 0 services. cdxgen documents CBOM coverage for Java keystores/certificates and JS/TS source algorithms, not Python source algorithms.",
+      "evidence": [
+        "ev30-cdxgen-cbom"
+      ],
+      "input": "09-cbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Source applies hashlib.sha256 to a refresh token (webserver/auth.py:710). A source pattern only; not a model hash and not part of the hailo chain; used to test what the CBOM represents.",
+      "evidence": [
+        "ev25-sha256-token-hash"
+      ],
+      "input": "10-cryptographic-source-pattern",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Nothing was built or run: no Viseron instance, container, Hailo device, or model download. Configured loading is read from source; no loading was observed.",
+      "input": "11-runtime-execution-observation",
+      "status": "unsupported_by_collector"
+    }
+  ],
+  "inventory_links": [
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: viseron/components/hailo/__init__.py, viseron/components/hailo/const.py, viseron/components/hailo/utils.py. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 syft \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev31-cisco-aibom"
+      ],
+      "id": "records:sbom-aibom",
+      "kind": "record_identifier_or_path",
+      "reason": "the AI-BOM reports no model, so there is no record to compare with the SBOM",
+      "status": "unresolved",
+      "title": "SBOM \u00b7 syft \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-cbom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: viseron. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev30-cdxgen-cbom"
+      ],
+      "id": "records:sbom-cbom",
+      "kind": "record_identifier_or_path",
+      "reason": "the CBOM contains 0 component(s) and 0 cryptographic asset(s) (0 service record(s) are endpoint listings), so there is no CBOM record that carries an identifier to compare with the SBOM's components",
+      "status": "unresolved",
+      "title": "SBOM \u00b7 syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:cdxgen-cbom",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:cbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: viseron/components/hailo/__init__.py, viseron/components/hailo/const.py, viseron/components/hailo/utils.py. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "CBOM \u00b7 cdxgen \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:cdxgen-cbom",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev30-cdxgen-cbom",
+        "ev31-cisco-aibom"
+      ],
+      "id": "records:cbom-aibom",
+      "kind": "record_identifier_or_path",
+      "reason": "the AI-BOM reports no model, so there is no record to compare with the CBOM (which reports 0 cryptographic asset(s))",
+      "status": "unresolved",
+      "title": "CBOM \u00b7 cdxgen \u2194 AI-BOM \u00b7 cisco-aibom"
+    }
+  ],
+  "notice": "REAL PILOT, PARTIAL. Viseron v3.7.0 inspected from a source checkout; nothing was built or run. One detector configuration (hailo object_detector, researcher-created, no model_path). Declarations are curated source readings by the researcher, not BOM contents. Evidence is captured verbatim from the pinned tree. Two real inventories are loaded (SBOM from Syft 1.51.1, whole tracked tree; CBOM from cdxgen 12.9.0, viseron/ package, source-only, zero cryptographic assets) and one is NOT acquired (AI-BOM: no scan has been authorized for Viseron). Loading inventories is not verification of a model-to-library connection.",
+  "rules": [
+    {
+      "artifact_classes": {
+        "build_output": {
+          "meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes",
+          "required_scope": [
+            "build"
+          ]
+        },
+        "committed_file": {
+          "meaning": "digest of the file at the stated repository path and revision",
+          "required_scope": [
+            "revision"
+          ]
+        },
+        "external_acquisition": {
+          "meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision",
+          "required_scope": []
+        }
+      },
+      "rule_id": "model_identity.digest/2"
+    },
+    {
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1"
+    },
+    {
+      "meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2"
+    },
+    {
+      "meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1"
+    },
+    {
+      "meaning": "The top-level module imported at the stated source line is provided by a distribution whose own source declaration names it, and that distribution's name and version equal exactly one component of the stated SBOM. Source-reconstructed mapping, not installed-package metadata. Not a statement that the component is installed or run, that its declaring file is a runtime dependency list, or that the import executes.",
+      "not_established": [
+        "installation of the component in any image",
+        "that the SBOM's declaring file is a runtime dependency list",
+        "that the import executes",
+        "installed-package metadata (top_level.txt, RECORD)",
+        "that a model loaded by this library is described by any AI-BOM"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "dependency_mapping.import_resolves_to_component/1"
+    }
+  ],
+  "schema": "bombridge.result/2",
+  "summary": {
+    "illustrative": {},
+    "note": "Origin labels are provenance, not ground truth. No precision, recall or accuracy is computed.",
+    "real": {
+      "curated assertion vs captured evidence": {
+        "applicability_unknown": 0,
+        "applicable_assessed": 4,
+        "assertions": 4,
+        "excluded_evidence": 4,
+        "not_applicable": 0,
+        "resolved": 2,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 0,
+          "supported": 2,
+          "unverifiable": 2
+        },
+        "unresolved": 2
+      },
+      "curated assertion vs no used evidence": {
+        "applicability_unknown": 3,
+        "applicable_assessed": 0,
+        "assertions": 3,
+        "excluded_evidence": 0,
+        "not_applicable": 0,
+        "resolved": 0,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 0,
+          "supported": 0,
+          "unverifiable": 0
+        },
+        "unresolved": 3
+      }
+    }
+  }
+}

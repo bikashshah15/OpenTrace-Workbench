@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/inspector.schema.json",
+  "title": "OpenTrace workbench inspector v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "tab",
+    "selection",
+    "title",
+    "badge",
+    "question_set",
+    "answers",
+    "evidence_rows",
+    "sources_coverage",
+    "actions",
+    "next_step"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.inspector/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "tab": {
+      "enum": [
+        "contexts",
+        "dependencies",
+        "crypto",
+        "ai",
+        "bom"
+      ]
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "canonical_ref"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "repository",
+            "group",
+            "file",
+            "package",
+            "asset",
+            "occurrence",
+            "review_item",
+            "candidate",
+            "assertion",
+            "entity",
+            "evidence",
+            "edge"
+          ]
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/engine_id"
+        },
+        "canonical_ref": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/canonical_ref"
+            }
+          ]
+        }
+      }
+    },
+    "title": {
+      "$ref": "common.schema.json#/$defs/text"
+    },
+    "badge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "label"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "context",
+            "neutral",
+            "review",
+            "advisory",
+            "inventory"
+          ]
+        },
+        "label": {
+          "$ref": "common.schema.json#/$defs/label"
+        }
+      }
+    },
+    "question_set": {
+      "enum": [
+        "context_four",
+        "bom_comparison"
+      ]
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question_id",
+          "state",
+          "body"
+        ],
+        "properties": {
+          "question_id": {
+            "enum": [
+              "what_is_this",
+              "why_here",
+              "security_concern",
+              "comparison_established",
+              "what_unknown"
+            ]
+          },
+          "state": {
+            "enum": [
+              "source_checked",
+              "inventory_reported",
+              "declared",
+              "unknown",
+              "not_assessed",
+              "not_applicable",
+              "needs_review",
+              "advisory_match",
+              "captured",
+              "represented",
+              "not_represented",
+              "cannot_establish",
+              "conflicting_evidence",
+              "no_rule"
+            ]
+          },
+          "body": {
+            "$ref": "common.schema.json#/$defs/rationale"
+          }
+        }
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "evidence_rows": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/evidence_row"
+      },
+      "minItems": 0,
+      "maxItems": 20
+    },
+    "sources_coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "available",
+        "items"
+      ],
+      "properties": {
+        "available": {
+          "type": "boolean"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/message"
+          },
+          "minItems": 0,
+          "maxItems": 20
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "source_access",
+          "advisory_access",
+          "ask_about_this",
+          "download_artifact",
+          "open_graph"
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 6
+    },
+    "next_step": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "common.schema.json#/$defs/message"
+        }
+      ]
+    }
+  }
+}

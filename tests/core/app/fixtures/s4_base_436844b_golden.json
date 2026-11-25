@@ -1,0 +1,2436 @@
+{
+ "ai.failed": {
+  "absence_established": false,
+  "assets": [],
+  "availability": {
+   "message": "The AI inventory collection failed (scanner_failed); no assets can be shown.",
+   "reason_code": "scanner_failed",
+   "state": "failed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 0,
+   "findings": 0,
+   "models": 0,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 0,
+   "assets_total": 0,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "failed",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [],
+  "tab": "ai"
+ },
+ "ai.models.captured": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0796c1a0950eebb414843091",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "yolo.onnx",
+    "identity_state": "unresolved",
+    "kind": "inventory_model",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:318b28c3112960600f5e5246",
+      "operation": "inventory-reported location",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/a.yaml",
+        "text": "m/a.yaml"
+       },
+       "path": "m/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:90424184c452634714f1be94"
+    ]
+   },
+   {
+    "asset_id": "ast:5aa4d10ab980eb31a6cca1a7",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "big.gguf",
+    "identity_state": "unresolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:df245cfc4bcc0e6bf8bbc074",
+      "operation": "declared model URL: https://example.org/big.gguf",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": null,
+       "line_start": null,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/b.yaml",
+        "text": "m/b.yaml"
+       },
+       "path": "m/b.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:f2bbf1dc9f5a1adc01604469"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 2,
+   "findings": 0,
+   "models": 2,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:90424184c452634714f1be94",
+    "label": "m/a.yaml",
+    "path": "m/a.yaml"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:f2bbf1dc9f5a1adc01604469",
+    "label": "m/b.yaml",
+    "path": "m/b.yaml"
+   }
+  ],
+  "tab": "ai"
+ },
+ "ai.models.filter_models": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0796c1a0950eebb414843091",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "yolo.onnx",
+    "identity_state": "unresolved",
+    "kind": "inventory_model",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:318b28c3112960600f5e5246",
+      "operation": "inventory-reported location",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/a.yaml",
+        "text": "m/a.yaml"
+       },
+       "path": "m/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:90424184c452634714f1be94"
+    ]
+   },
+   {
+    "asset_id": "ast:5aa4d10ab980eb31a6cca1a7",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "big.gguf",
+    "identity_state": "unresolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:df245cfc4bcc0e6bf8bbc074",
+      "operation": "declared model URL: https://example.org/big.gguf",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": null,
+       "line_start": null,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/b.yaml",
+        "text": "m/b.yaml"
+       },
+       "path": "m/b.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:f2bbf1dc9f5a1adc01604469"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "models",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 2,
+   "findings": 0,
+   "models": 2,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:90424184c452634714f1be94",
+    "label": "m/a.yaml",
+    "path": "m/a.yaml"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:f2bbf1dc9f5a1adc01604469",
+    "label": "m/b.yaml",
+    "path": "m/b.yaml"
+   }
+  ],
+  "tab": "ai"
+ },
+ "ai.models.live": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0796c1a0950eebb414843091",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "yolo.onnx",
+    "identity_state": "unresolved",
+    "kind": "inventory_model",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:318b28c3112960600f5e5246",
+      "operation": "inventory-reported location",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/a.yaml",
+        "text": "m/a.yaml"
+       },
+       "path": "m/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:90424184c452634714f1be94"
+    ]
+   },
+   {
+    "asset_id": "ast:5aa4d10ab980eb31a6cca1a7",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "big.gguf",
+    "identity_state": "unresolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:df245cfc4bcc0e6bf8bbc074",
+      "operation": "declared model URL: https://example.org/big.gguf",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": null,
+       "line_start": null,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/b.yaml",
+        "text": "m/b.yaml"
+       },
+       "path": "m/b.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:f2bbf1dc9f5a1adc01604469"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 2,
+   "findings": 0,
+   "models": 2,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory; per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:90424184c452634714f1be94",
+    "label": "m/a.yaml",
+    "path": "m/a.yaml"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:f2bbf1dc9f5a1adc01604469",
+    "label": "m/b.yaml",
+    "path": "m/b.yaml"
+   }
+  ],
+  "tab": "ai"
+ },
+ "ai.models.query": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0796c1a0950eebb414843091",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "yolo.onnx",
+    "identity_state": "unresolved",
+    "kind": "inventory_model",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:318b28c3112960600f5e5246",
+      "operation": "inventory-reported location",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/a.yaml",
+        "text": "m/a.yaml"
+       },
+       "path": "m/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:90424184c452634714f1be94"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 1,
+   "total": 1,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 2,
+   "findings": 0,
+   "models": 2,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 1,
+   "assets_total": 1,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:90424184c452634714f1be94",
+    "label": "m/a.yaml",
+    "path": "m/a.yaml"
+   }
+  ],
+  "tab": "ai"
+ },
+ "ai.none": {
+  "absence_established": false,
+  "assets": [],
+  "availability": {
+   "message": "No AI inventory was generated for this analysis.",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 0,
+   "findings": 0,
+   "models": 0,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 0,
+   "assets_total": 0,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [],
+  "tab": "ai"
+ },
+ "ai.partial": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0796c1a0950eebb414843091",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "yolo.onnx",
+    "identity_state": "unresolved",
+    "kind": "inventory_model",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:318b28c3112960600f5e5246",
+      "operation": "inventory-reported location",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/a.yaml",
+        "text": "m/a.yaml"
+       },
+       "path": "m/a.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:90424184c452634714f1be94"
+    ]
+   },
+   {
+    "asset_id": "ast:5aa4d10ab980eb31a6cca1a7",
+    "attributes": {
+     "active_configuration": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "artifact_digest": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "dataset_provenance": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "license": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "model_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "provider": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_group": null,
+    "display_name": "big.gguf",
+    "identity_state": "unresolved",
+    "kind": "model_reference",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:df245cfc4bcc0e6bf8bbc074",
+      "operation": "declared model URL: https://example.org/big.gguf",
+      "producer_id": "cisco-aibom",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": null,
+       "line_start": null,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/9738b5ff70fd273221b36095c60ac38582f1175d/m/b.yaml",
+        "text": "m/b.yaml"
+       },
+       "path": "m/b.yaml"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:f2bbf1dc9f5a1adc01604469"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Collection was incomplete (cisco-aibom). The models shown are those that were recorded; this is not a complete inventory.",
+   "reason_code": "partial_coverage",
+   "state": "partial"
+  },
+  "binding": {
+   "analysis_digest": "sha256:ef8beb85535958859d297d3d0a0ca383e702b3beebf38a62217cde35dcc2ce71",
+   "assessment": null,
+   "commit_sha": "9738b5ff70fd273221b36095c60ac38582f1175d",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "ai_services": 0,
+   "all": 2,
+   "findings": 0,
+   "models": 2,
+   "runtimes": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "partial",
+    "provenance": {
+     "artifact_id": "art:inv:cisco-aibom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cisco-aibom",
+     "producer_version": "cisco-aibom 1.10.0"
+    },
+    "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.ai_assets/1",
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:90424184c452634714f1be94",
+    "label": "m/a.yaml",
+    "path": "m/a.yaml"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:f2bbf1dc9f5a1adc01604469",
+    "label": "m/b.yaml",
+    "path": "m/b.yaml"
+   }
+  ],
+  "tab": "ai"
+ },
+ "crypto.cbom.captured": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:53acd5801e8eb3271f0991e1",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "SHA-256"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "SHA-256",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:22267b94e861bdd28d396168",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/a.js",
+        "text": "a.js"
+       },
+       "path": "a.js"
+      }
+     },
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:2dc530f019c29f67004789d8",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 9,
+       "line_start": 9,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/b.js",
+        "text": "b.js"
+       },
+       "path": "b.js"
+      }
+     }
+    ],
+    "occurrences_total": 2,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:115477d1addef05ccf0d7df0",
+     "grp:65457126c41dad6928440d4b"
+    ]
+   },
+   {
+    "asset_id": "ast:4ffb63f703901b0462b4412b",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "AES-128-GCM"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "AES-128-GCM",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:c6bf50121042e19ac5710d59",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 4,
+       "line_start": 4,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/c.js",
+        "text": "c.js"
+       },
+       "path": "c.js"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:35c41b23ebef4455daf10b8e"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Cryptographic assets recorded in the original CBOM.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:0c5c4d13d332c0008913eb773f8831b77b7977c4491b6d7203ad17899b46d302",
+   "assessment": null,
+   "commit_sha": "a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 2,
+   "all": 2,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": "cdxgen 12.9.0"
+    },
+    "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:115477d1addef05ccf0d7df0",
+    "label": "a.js",
+    "path": "a.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:65457126c41dad6928440d4b",
+    "label": "b.js",
+    "path": "b.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:35c41b23ebef4455daf10b8e",
+    "label": "c.js",
+    "path": "c.js"
+   }
+  ],
+  "tab": "crypto"
+ },
+ "crypto.cbom.filter_algorithms": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:53acd5801e8eb3271f0991e1",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "SHA-256"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "SHA-256",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:22267b94e861bdd28d396168",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/a.js",
+        "text": "a.js"
+       },
+       "path": "a.js"
+      }
+     },
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:2dc530f019c29f67004789d8",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 9,
+       "line_start": 9,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/b.js",
+        "text": "b.js"
+       },
+       "path": "b.js"
+      }
+     }
+    ],
+    "occurrences_total": 2,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:115477d1addef05ccf0d7df0",
+     "grp:65457126c41dad6928440d4b"
+    ]
+   },
+   {
+    "asset_id": "ast:4ffb63f703901b0462b4412b",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "AES-128-GCM"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "AES-128-GCM",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:c6bf50121042e19ac5710d59",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 4,
+       "line_start": 4,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/c.js",
+        "text": "c.js"
+       },
+       "path": "c.js"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:35c41b23ebef4455daf10b8e"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Cryptographic assets recorded in the original CBOM.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:0c5c4d13d332c0008913eb773f8831b77b7977c4491b6d7203ad17899b46d302",
+   "assessment": null,
+   "commit_sha": "a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "algorithms",
+  "filter_totals": {
+   "algorithms": 2,
+   "all": 2,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": "cdxgen 12.9.0"
+    },
+    "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:115477d1addef05ccf0d7df0",
+    "label": "a.js",
+    "path": "a.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:65457126c41dad6928440d4b",
+    "label": "b.js",
+    "path": "b.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:35c41b23ebef4455daf10b8e",
+    "label": "c.js",
+    "path": "c.js"
+   }
+  ],
+  "tab": "crypto"
+ },
+ "crypto.cbom.live": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:53acd5801e8eb3271f0991e1",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "SHA-256"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "SHA-256",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:22267b94e861bdd28d396168",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 3,
+       "line_start": 3,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/a.js",
+        "text": "a.js"
+       },
+       "path": "a.js"
+      }
+     },
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:2dc530f019c29f67004789d8",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 9,
+       "line_start": 9,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/b.js",
+        "text": "b.js"
+       },
+       "path": "b.js"
+      }
+     }
+    ],
+    "occurrences_total": 2,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:115477d1addef05ccf0d7df0",
+     "grp:65457126c41dad6928440d4b"
+    ]
+   },
+   {
+    "asset_id": "ast:4ffb63f703901b0462b4412b",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "component name",
+      "state": "recorded",
+      "value": "AES-128-GCM"
+     },
+     "certificate_subject": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded in the artifact",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "AES-128-GCM",
+    "kind": "algorithm",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "none",
+       "text": null
+      },
+      "occurrence_id": "occ:c6bf50121042e19ac5710d59",
+      "operation": "node:crypto.createHash",
+      "producer_id": "cdxgen",
+      "source_location": {
+       "excerpt": null,
+       "excerpt_state": "unavailable",
+       "file_sha256": null,
+       "line_end": 4,
+       "line_start": 4,
+       "link": {
+        "href": "https://github.com/example-org/unit-lab/blob/a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c/c.js",
+        "text": "c.js"
+       },
+       "path": "c.js"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:35c41b23ebef4455daf10b8e"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Cryptographic assets recorded in the original CBOM.",
+   "reason_code": null,
+   "state": "completed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:0c5c4d13d332c0008913eb773f8831b77b7977c4491b6d7203ad17899b46d302",
+   "assessment": null,
+   "commit_sha": "a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 2,
+   "total": 2,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 2,
+   "all": 2,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 2,
+   "assets_total": 2,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": "cdxgen 12.9.0"
+    },
+    "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [
+   {
+    "assets_total": 1,
+    "group_id": "grp:115477d1addef05ccf0d7df0",
+    "label": "a.js",
+    "path": "a.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:65457126c41dad6928440d4b",
+    "label": "b.js",
+    "path": "b.js"
+   },
+   {
+    "assets_total": 1,
+    "group_id": "grp:35c41b23ebef4455daf10b8e",
+    "label": "c.js",
+    "path": "c.js"
+   }
+  ],
+  "tab": "crypto"
+ },
+ "crypto.failed": {
+  "absence_established": false,
+  "assets": [],
+  "availability": {
+   "message": "The cryptographic-asset collection failed (scanner_failed); no assets can be shown.",
+   "reason_code": "scanner_failed",
+   "state": "failed"
+  },
+  "binding": {
+   "analysis_digest": "sha256:0c5c4d13d332c0008913eb773f8831b77b7977c4491b6d7203ad17899b46d302",
+   "assessment": null,
+   "commit_sha": "a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 0,
+   "all": 0,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 0,
+   "assets_total": 0,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "failed",
+    "provenance": {
+     "artifact_id": "art:inv:cdxgen-cbom",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "cdxgen",
+     "producer_version": "cdxgen 12.9.0"
+    },
+    "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [],
+  "tab": "crypto"
+ },
+ "crypto.none": {
+  "absence_established": false,
+  "assets": [],
+  "availability": {
+   "message": "Cryptographic-asset collection was not run for this analysis.",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  "binding": {
+   "analysis_digest": "sha256:0c5c4d13d332c0008913eb773f8831b77b7977c4491b6d7203ad17899b46d302",
+   "assessment": null,
+   "commit_sha": "a6e75b4f5ae6b6c21bb9690bcd63b2ad77be523c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/unit-lab",
+    "host": "github.com",
+    "name": "unit-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 0,
+   "all": 0,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 0
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 0,
+   "assets_total": 0,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [],
+  "tab": "crypto"
+ },
+ "declarations.copies": [
+  "requirements.txt"
+ ],
+ "declarations.digest": "f08586a994b9ba0dbb18261da8dd0e8b9533bfec84e6cfe4cbd7fbd8d47e39fc",
+ "declarations.record": {
+  "collected_by": {
+   "note": "reads files of the exported tree only; nothing imported, installed, downloaded or executed; requirement-file selection and line rules follow the BOMBridge gap-discovery overlay",
+   "tool": "opentrace_core/live/source_declarations.py"
+  },
+  "crypto_call_sites": [
+   {
+    "algorithm": "sha256",
+    "algorithm_literal": null,
+    "algorithm_resolved": true,
+    "algorithm_source": "function_name",
+    "audit_complete": true,
+    "binding": "module_level_import",
+    "binding_status": "unique_module_level",
+    "call": "hashlib.sha256",
+    "col": 0,
+    "context": "<module>",
+    "end_line": 2,
+    "excerpt": "hashlib.sha256(b'x').hexdigest()",
+    "excerpt_truncated": false,
+    "file_sha256": "276e316be1013b0c33b248c5ee0fbe84e31407061be2115e6a31a5503cc144fd",
+    "imported_name": null,
+    "line": 2,
+    "operation": "hash",
+    "path": "app/main.py",
+    "source_line": "hashlib.sha256(b'x').hexdigest()"
+   }
+  ],
+  "limitations": [
+   "source declarations state what the requirement files name; they do not show what is built, installed or loaded",
+   "requirement files are matched by name; a file installed under another name is not found",
+   "markers are preserved as text and never evaluated; -r/-c directives are reported, not followed",
+   "only Python requirement files are read; other declaration files are listed by name and never compared",
+   "model_references are statically observed HTTP(S) model-file URLs in Python string constants, Dockerfile lines and shell lines (UIP-13): not download, load, execution or selection, possibly dead code, a docstring or a string that is not a setting; dynamic expressions are diagnostics only; crypto_call_sites are statically observed Python hashlib calls (UIP-12): not execution, not proof that the called module is the standard library, and not a statement about cryptography the scan did not observe"
+  ],
+  "model_references": [
+   {
+    "end_line": 3,
+    "excerpt": "MODEL = 'https://example.org/m/yolo.onnx'",
+    "excerpt_truncated": false,
+    "file_sha256": "276e316be1013b0c33b248c5ee0fbe84e31407061be2115e6a31a5503cc144fd",
+    "line": 3,
+    "locator": "https://example.org/m/yolo.onnx",
+    "method": "python-ast-string-constant",
+    "occurrence_id": "ef0815f4f9425635",
+    "ordinal": 0,
+    "path": "app/main.py",
+    "source_kind": "python"
+   }
+  ],
+  "repository": "https://github.com/acme/widget",
+  "requirement_files": [
+   {
+    "bytes": 23,
+    "declaration_lines": 2,
+    "named_requirements": 2,
+    "path": "requirements.txt",
+    "sha256": "7d29728ecf1a47ca3f1961c72ccb26dc50cbb404c512d232caadc37c8a389210"
+   }
+  ],
+  "revision": "dddddddddddddddddddddddddddddddddddddddd",
+  "schema": "bombridge.source-declarations/1",
+  "searched": {
+   "directories_unreadable": {
+    "count": 0,
+    "count_kind": "exact",
+    "listed": [],
+    "listed_limit": 50
+   },
+   "limits": {
+    "budget_seconds": 10.0,
+    "bytes_per_file": 1048576,
+    "entries": 20000,
+    "lines_per_file": 20000,
+    "requirement_files": 64,
+    "total_bytes": 8388608
+   },
+   "local_module_named_hashlib": {
+    "count": 0,
+    "listed": [],
+    "listed_limit": 20,
+    "status": "absent_after_complete_search"
+   },
+   "model_sources": {
+    "bytes_read": 104,
+    "census": {
+     "dockerfile": 0,
+     "matched_model_source_entries": 3,
+     "other_languages": 0,
+     "python": 2,
+     "shell": 1
+    },
+    "collector": "opentrace_core/live/model_refs.py",
+    "collector_version": "1",
+    "complete": true,
+    "count_kind": "exact",
+    "deadline_hit": false,
+    "diagnostics": [],
+    "diagnostics_listed_limit": 100,
+    "diagnostics_total": {
+     "by_code": {},
+     "count": 0
+    },
+    "dynamic": {
+     "count": 0
+    },
+    "extensions": [
+     ".tflite",
+     ".hef",
+     ".onnx",
+     ".pt",
+     ".pth",
+     ".pb",
+     ".rknn",
+     ".engine",
+     ".h5",
+     ".safetensors",
+     ".gguf",
+     ".mlmodel",
+     ".caffemodel",
+     ".ort"
+    ],
+    "globs": {
+     "dockerfile": [
+      "Dockerfile",
+      "Dockerfile.*",
+      "*.Dockerfile",
+      "*.dockerfile"
+     ],
+     "python": [
+      "*.py"
+     ],
+     "shell": [
+      "*.sh"
+     ]
+    },
+    "limits": {
+     "budget_seconds_soft": 20.0,
+     "bytes_per_file": 524288,
+     "diagnostics": 100,
+     "files": 2000,
+     "lines_per_file": 20000,
+     "locator_chars": 2048,
+     "record_bytes": 4194304,
+     "references": 1000,
+     "total_bytes": 33554432
+    },
+    "not_processed_time_budget": 0,
+    "over_file_limit": 0,
+    "phase_error": false,
+    "processed": 3,
+    "references": {
+     "groups": 1,
+     "observed": 1,
+     "over_limit": 0,
+     "recorded": 1
+    },
+    "selected": 3,
+    "skipped": {
+     "by_reason": {},
+     "count": 0
+    },
+    "timing": "the budget is soft: checked between bounded operations only; an in-flight read or ast.parse can overrun it",
+    "traversal_complete": true
+   },
+   "order": "depth-first; per directory, files then subdirectories, each in byte-wise name order; symlinks not followed",
+   "other_source_languages": {
+    "by_extension": {},
+    "count": 0,
+    "count_kind": "exact"
+   },
+   "python": {
+    "audit_failures": {
+     "count": 0,
+     "listed": [],
+     "listed_limit": 50
+    },
+    "bytes_parsed": 96,
+    "complete": true,
+    "count_kind": "exact",
+    "deadline_hit": false,
+    "limits": {
+     "budget_seconds_soft": 20.0,
+     "bytes_per_file": 524288,
+     "excerpt_chars": 2000,
+     "lines_per_file": 20000,
+     "python_files": 2000,
+     "sites": 1000,
+     "total_bytes": 33554432
+    },
+    "not_parsed_time_budget": 0,
+    "over_file_limit": 0,
+    "parsed": 2,
+    "python_files_total": 2,
+    "python_version": "3.14.7",
+    "selected": 2,
+    "sites": {
+     "observed": 1,
+     "over_site_limit": 0,
+     "recorded": 1
+    },
+    "skipped": {
+     "by_reason": {},
+     "count": 0,
+     "listed": [],
+     "listed_limit": 100
+    },
+    "syntax_errors": {
+     "count": 0,
+     "listed": [],
+     "listed_limit": 50
+    },
+    "timing": "the budget is soft: checked between bounded operations only; an in-flight parse/visit/audit can overrun it",
+    "traversal_complete": true
+   },
+   "requirement_files_matched": {
+    "count": 1,
+    "count_kind": "exact"
+   },
+   "requirement_files_skipped": {
+    "by_reason": {},
+    "count": 0,
+    "count_kind": "exact",
+    "listed": [],
+    "listed_limit": 100
+   },
+   "requirement_globs": [
+    "*requirements*.txt",
+    "requirements/*.txt"
+   ],
+   "traversal": {
+    "complete": true,
+    "count_kind": "exact",
+    "entries_visited": 4,
+    "stop_reason": null
+   },
+   "unsupported_declaration_files": {
+    "count": 0,
+    "count_kind": "exact",
+    "listed": [],
+    "listed_limit": 50
+   }
+  }
+ },
+ "declarations.summary_keys": [
+  "collected",
+  "crypto_sites",
+  "local_module",
+  "matched",
+  "model_references",
+  "models",
+  "named_requirements",
+  "other_languages",
+  "python",
+  "record_sha256",
+  "skipped",
+  "traversal",
+  "unreadable",
+  "unsupported"
+ ]
+}

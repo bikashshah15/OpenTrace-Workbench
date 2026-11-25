@@ -1,0 +1,79 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "Cryptographic-asset collection was not run for this analysis.",
+  "reason_code": "not_configured",
+  "state": "not_run"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ac743b9e831346d5052357d0a7c607fbeb59c9bc2e083320ddb2ba2d08fa78b5",
+  "assessment": null,
+  "commit_sha": "5103a3384916f4b89b169dd6043d5293512a89c9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

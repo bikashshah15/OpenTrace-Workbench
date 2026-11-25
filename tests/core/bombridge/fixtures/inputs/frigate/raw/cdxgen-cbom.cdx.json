@@ -1,0 +1,312 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:69b6c75d-6acc-453a-aaba-77cc2f516562",
+  "version": 2,
+  "metadata": {
+    "timestamp": "2026-11-02T17:49:35Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "12.9.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@12.9.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@12.9.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "pre-build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "frigate-cdxgen-scope",
+      "version": "latest",
+      "type": "application",
+      "bom-ref": "pkg:pypi/frigate-cdxgen-scope@latest",
+      "purl": "pkg:pypi/frigate-cdxgen-scope@latest"
+    },
+    "properties": []
+  },
+  "components": [],
+  "dependencies": [],
+  "annotations": [
+    {
+      "bom-ref": "metadata-annotations",
+      "subjects": [
+        "pkg:pypi/frigate-cdxgen-scope@latest"
+      ],
+      "annotator": {
+        "component": {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "12.9.0",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@12.9.0",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@12.9.0",
+          "publisher": "OWASP Foundation",
+          "authors": [
+            {
+              "name": "OWASP Foundation"
+            }
+          ]
+        }
+      },
+      "timestamp": "2026-11-02T17:49:35Z",
+      "text": "This Software-as-a-Service BOM (SaaSBOM) document was created on Monday, November 2, 2026 with cdxgen. The data was captured during the pre-build lifecycle phase without building the application. The document describes an application named 'frigate-cdxgen-scope'. BOM file is empty without components. 13 are described in this SaaSBOM under services."
+    }
+  ],
+  "services": [
+    {
+      "name": "frigate/api/app-py-service",
+      "endpoints": [
+        "/config",
+        "/config/raw",
+        "/config/raw_paths",
+        "/config/save",
+        "/config/schema.json",
+        "/config/set",
+        "/ffmpeg/presets",
+        "/genai/models",
+        "/genai/probe",
+        "/profile/active",
+        "/audio_labels",
+        "/labels",
+        "/media/sync/current",
+        "/media/sync/status/{job_id}",
+        "/profiles",
+        "/recognized_license_plates",
+        "/sub_labels",
+        "/timeline/hourly",
+        "/logs/{service}",
+        "/metrics",
+        "/nvinfo",
+        "/plus/models",
+        "/restart",
+        "/stats",
+        "/stats/history",
+        "/media/sync",
+        "/timeline",
+        "/vainfo",
+        "/version"
+      ],
+      "authenticated": true,
+      "x-trust-boundary": true,
+      "properties": []
+    },
+    {
+      "name": "frigate/api/auth-py-service",
+      "endpoints": [
+        "/auth",
+        "/users",
+        "/users/{username}",
+        "/auth/first_time_login",
+        "/login",
+        " https://frigate_ip:8971/api/profile\\n```",
+        "/logout",
+        "/profile",
+        "/users/{username}/password",
+        "/users/{username}/role"
+      ],
+      "authenticated": true,
+      "x-trust-boundary": true,
+      "properties": []
+    },
+    {
+      "name": "frigate/api/chat-py-service",
+      "endpoints": [
+        "/vlm/monitor",
+        "/chat/completion",
+        "/chat/execute",
+        "/chat/tools"
+      ],
+      "authenticated": true,
+      "x-trust-boundary": true,
+      "properties": []
+    },
+    {
+      "name": "frigate/api/classification-py-service",
+      "endpoints": [
+        "/classification/{name}/dataset/categorize",
+        "/classification/{name}/dataset/{category}/create",
+        "/faces/{name}/create",
+        "/classification/{name}/dataset/{category}/delete",
+        "/classification/{name}",
+        "/classification/{name}/train/delete",
+        "/faces/{name}/delete",
+        "/classification/generate_examples/object",
+        "/classification/generate_examples/state",
+        "/classification/{name}/dataset",
+        "/classification/{name}/train",
+        "/classification/attributes",
+        "/faces",
+        "/classification/{name}/dataset/{category}/reclassify",
+        "/faces/reprocess",
+        "/faces/{name}/reclassify",
+        "/faces/recognize",
+        "/faces/{name}/register",
+        "/reindex",
+        "/classification/{name}/dataset/{old_category}/rename",
+        "/faces/{old_name}/rename",
+        "/lpr/reprocess",
+        "/faces/train/{name}/classify",
+        "/audio/transcribe"
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/debug_replay-py-service",
+      "endpoints": [
+        "/debug_replay/status",
+        "/debug_replay/start",
+        "/debug_replay/start_from_export",
+        "/debug_replay/stop"
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/event-py-service",
+      "endpoints": [
+        "/events/{camera_name}/{label}/create",
+        "/trigger/embedding",
+        "/events/{event_id}",
+        "/events/",
+        "/events/{event_id}/retain",
+        "/events/{event_id}/end",
+        "/event_ids",
+        "/events",
+        "/events/explore",
+        "/events/search",
+        "/events/summary",
+        "/events/{event_id}/false_positive",
+        "/description/generate",
+        "/events/{event_id}/description/regenerate",
+        "/events/{event_id}/plus",
+        "/events/{event_id}/attributes",
+        "/events/{event_id}/description",
+        "/events/{event_id}/recognized_license_plate",
+        "/events/{event_id}/sub_label"
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/media-py-service",
+      "endpoints": [
+        "/{camera_name}/ptz/info",
+        "/{camera_name}/recordings/{frame_time}/snapshot.{format}",
+        "/{camera_name}/latest.{extension}",
+        "/{camera_name}",
+        "/{camera_name}/start/{start_ts}/end/{end_ts}/clip.mp4",
+        "/{camera_name}/plus/{frame_time}",
+        "/vod/event/{event_id}",
+        "Returns an HLS playlist for the specified object. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+        "/{camera_name}/region_grid",
+        "/events/{event_id}/clip.mp4",
+        "/events/{event_id}/preview.gif",
+        "/events/{event_id}/snapshot.jpg",
+        "/events/{event_id}/snapshot-clean.webp",
+        "/events/{event_id}/thumbnail.{extension}",
+        "/{camera_name}/grid.jpg",
+        "/{camera_name}/{label}/clip.mp4",
+        "/{camera_name}/{label}/snapshot.jpg",
+        "/{camera_name}/{label}/thumbnail.jpg",
+        "/{camera_name}/{label}/best.jpg",
+        "/{camera_name}/start/{start_ts}/end/{end_ts}/preview.gif",
+        "/{camera_name}/start/{start_ts}/end/{end_ts}/preview.mp4",
+        "/preview/{file_name}/thumbnail.webp",
+        "/preview/{file_name}/thumbnail.jpg",
+        "/review/{review_id}/clip.mp4",
+        "/review/{event_id}/preview",
+        "/vod/{year_month}/{day}/{hour}/{camera_name}/{tz_name}",
+        "Returns an HLS playlist for the specified date-time (with timezone) on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+        "/vod/{year_month}/{day}/{hour}/{camera_name}",
+        "Returns an HLS playlist for the specified date-time on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback.",
+        "/vod/{camera_name}/start/{start_ts}/end/{end_ts}",
+        "Returns an HLS playlist for the specified timestamp-range on the specified camera. Append /master.m3u8 or /index.m3u8 for HLS playback."
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/motion_search-py-service",
+      "endpoints": [
+        "/{camera_name}/search/motion/{job_id}/cancel",
+        "/{camera_name}/search/motion/{job_id}",
+        "/{camera_name}/search/motion"
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/notification-py-service",
+      "endpoints": [
+        "/notifications/pubkey",
+        "/notifications/register"
+      ],
+      "authenticated": true,
+      "x-trust-boundary": true,
+      "properties": []
+    },
+    {
+      "name": "frigate/api/preview-py-service",
+      "endpoints": [
+        "/preview/{camera_name}/start/{start_ts}/end/{end_ts}/frames",
+        "/preview/{year_month}/{day}/{hour}/{camera_name}/{tz_name}",
+        "America/New_York",
+        "/preview/{camera_name}/start/{start_ts}/end/{end_ts}"
+      ],
+      "properties": []
+    },
+    {
+      "name": "frigate/api/record-py-service",
+      "endpoints": [
+        "/recordings/summary",
+        "/recordings/start/{start}/end/{end}",
+        "/recordings/storage",
+        "/recordings/unavailable",
+        "/{camera_name}/recordings",
+        "/{camera_name}/recordings/summary"
+      ],
+      "authenticated": true,
+      "x-trust-boundary": true,
+      "properties": []
+    },
+    {
+      "name": "frigate/api/review-py-service",
+      "endpoints": [
+        "/reviews/delete",
+        "/review/summarize/start/{start_ts}/end/{end_ts}",
+        "/review/{review_id}",
+        "/review/event/{event_id}",
+        "/review/activity/motion",
+        "/review",
+        "/review_ids",
+        "/review/summary",
+        "/reviews/viewed",
+        "/review/{review_id}/viewed"
+      ],
+      "properties": []
+    },
+    {
+      "name": "test_env-service",
+      "endpoints": [
+        "rtsp://host/{FRIGATE_FOO:>5}/stream"
+      ],
+      "authenticated": false,
+      "properties": []
+    }
+  ]
+}

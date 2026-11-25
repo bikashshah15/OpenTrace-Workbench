@@ -1,0 +1,768 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:94757003cfe03b32ab174ac8",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-0-0",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:1a1ed040156c3f916dc874ce",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "74b5e3c1a590cd112190b56a68e9c7eccef158fb587f7e14e7c54950cbd1cd53",
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:244043045122e313567fbf74"
+   ]
+  },
+  {
+   "asset_id": "ast:33dc3ec0a74d78ecc3c0e924",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-0-1",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d3f64842470f31994bbcdfd2",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "74b5e3c1a590cd112190b56a68e9c7eccef158fb587f7e14e7c54950cbd1cd53",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:244043045122e313567fbf74"
+   ]
+  },
+  {
+   "asset_id": "ast:a40d21fa5ebf3a08ad55bf67",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-0-2",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:64bdc27bcafdd0aa182a1f0b",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "74b5e3c1a590cd112190b56a68e9c7eccef158fb587f7e14e7c54950cbd1cd53",
+      "line_end": 3,
+      "line_start": 3,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g0/file.py",
+       "text": "synthetic/g0/file.py"
+      },
+      "path": "synthetic/g0/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:244043045122e313567fbf74"
+   ]
+  },
+  {
+   "asset_id": "ast:997d17346eb29db4b203f2ff",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-1-0",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:3c85a171172550cdf0f203c9",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "7a17b136ef863894bfe07d059759f3501119ff01f559e09f05711e6345da626f",
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:87f4571f82e11882386e921a"
+   ]
+  },
+  {
+   "asset_id": "ast:1edffa044fe3468725172e4d",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-1-1",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:69b9a5d8acf4cb370da2799e",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "7a17b136ef863894bfe07d059759f3501119ff01f559e09f05711e6345da626f",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:87f4571f82e11882386e921a"
+   ]
+  },
+  {
+   "asset_id": "ast:623fe50637cb224501670ee3",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-1-2",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:7ddea5997607f62c4a99fb7f",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "7a17b136ef863894bfe07d059759f3501119ff01f559e09f05711e6345da626f",
+      "line_end": 3,
+      "line_start": 3,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:87f4571f82e11882386e921a"
+   ]
+  },
+  {
+   "asset_id": "ast:c5442389b0fcd0379059587c",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-2-0",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:ba0341c54824c808f04ec4c7",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "71b9f0274e4ad54304d3a7d549d15222ab4c6b0aea0aa86e02e995e999b8e5b2",
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:40c1762fa15211549770de28"
+   ]
+  },
+  {
+   "asset_id": "ast:3a70450450938e5859fc5b7b",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-2-1",
+   "identity_state": "unresolved",
+   "kind": "model_reference",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:d2f4e58195d9c50da5cc3bb1",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "71b9f0274e4ad54304d3a7d549d15222ab4c6b0aea0aa86e02e995e999b8e5b2",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:40c1762fa15211549770de28"
+   ]
+  },
+  {
+   "asset_id": "ast:bb23895de66231583a3fc6b7",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic-2-2",
+   "identity_state": "unresolved",
+   "kind": "runtime",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:10c37757ff7791bfd30ccfb2",
+     "operation": "declared",
+     "producer_id": "synthetic-ai-inventory",
+     "source_location": {
+      "excerpt": "synthetic excerpt line",
+      "excerpt_state": "recorded",
+      "file_sha256": "71b9f0274e4ad54304d3a7d549d15222ab4c6b0aea0aa86e02e995e999b8e5b2",
+      "line_end": 3,
+      "line_start": 3,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/f3e4a50c85d3b8c14561b3c0364ba483b0dc9409/synthetic/g2/file.py",
+       "text": "synthetic/g2/file.py"
+      },
+      "path": "synthetic/g2/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:40c1762fa15211549770de28"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Synthetic renderer fixture: invented assets for layout and state coverage.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:052ce00f39e0e25a5d06d55951b879153757742a2ddb37578bd5b48b5912794e",
+  "assessment": null,
+  "commit_sha": "f3e4a50c85d3b8c14561b3c0364ba483b0dc9409",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 9,
+  "total": 9,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 9,
+  "findings": 0,
+  "models": 6,
+  "runtimes": 3
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 9,
+  "assets_total": 9,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "synthetic-ai-inventory",
+    "producer_version": null
+   },
+   "scope": "synthetic experimental source observation"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [
+  {
+   "assets_total": 3,
+   "group_id": "grp:244043045122e313567fbf74",
+   "label": "Synthetic group 0",
+   "path": "synthetic/g0/file.py"
+  },
+  {
+   "assets_total": 3,
+   "group_id": "grp:87f4571f82e11882386e921a",
+   "label": "Synthetic group 1",
+   "path": "synthetic/g1/file.py"
+  },
+  {
+   "assets_total": 3,
+   "group_id": "grp:40c1762fa15211549770de28",
+   "label": "Synthetic group 2",
+   "path": "synthetic/g2/file.py"
+  }
+ ],
+ "tab": "ai"
+}

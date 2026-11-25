@@ -1,0 +1,160 @@
+{
+  "artifacts": [
+    {
+      "bytes": 590,
+      "captured_at": "2026-10-14T12:00:01.000Z",
+      "content_b64": "eyJsYW5lIjoiaG9zdGVkX3VuYm91bmQiLCJyZXBvIjoibW9kZWxjb250ZXh0cHJvdG9jb2wvZ28tc2RrIiwicm93cyI6W3siZWNvc3lzdGVtIjoiR28iLCJuYW1lX25vcm1hbGl6ZWQiOiJnb2xhbmcub3JnL3gvdGltZSIsIm5hbWVfb3JpZ2luYWwiOiJnb2xhbmcub3JnL3gvdGltZSIsInB1cmwiOiJwa2c6Z29sYW5nL2dvbGFuZy5vcmcveC90aW1lQHYwLjE1LjAiLCJzb3VyY2VfcGF0aCI6bnVsbCwic3BkeF9pZCI6IlNQRFhSZWYtUGFja2FnZS1hIiwidmVyc2lvbl9vcmlnaW5hbCI6InYwLjE1LjAiLCJ2ZXJzaW9uX3N0YXRlIjoiZXhhY3QifSx7ImVjb3N5c3RlbSI6IkdvIiwibmFtZV9ub3JtYWxpemVkIjoiZ29sYW5nLm9yZy94L3N5bmMiLCJuYW1lX29yaWdpbmFsIjoiZ29sYW5nLm9yZy94L3N5bmMiLCJwdXJsIjoicGtnOmdvbGFuZy9nb2xhbmcub3JnL3gvc3luY0B2MC4yMC4wIiwic291cmNlX3BhdGgiOm51bGwsInNwZHhfaWQiOiJTUERYUmVmLVBhY2thZ2UtYiIsInZlcnNpb25fb3JpZ2luYWwiOiJ2MC4yMC4wIiwidmVyc2lvbl9zdGF0ZSI6ImV4YWN0In1dLCJzY2hlbWEiOiJvcGVudHJhY2UuaG9zdGVkX3RhYmxlLzEifQo=",
+      "digest": "sha256:a35289dc25f5a0bc3f7b6c17ba5499ad8b07074500da5d18f7ebf3700a24fdd8",
+      "media_type": "application/json",
+      "producer": "evidence-specialist-b/example",
+      "role": "hosted_table",
+      "source_ref": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+    }
+  ],
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "claims": [
+    {
+      "claim_id": "t3.cl1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "t3.ev1",
+        "t3.ev2"
+      ],
+      "explanation": "Supported by the cited evidence.",
+      "proposition": "GitHub's current dependency graph export lists 2 packages; it is unbound to the pinned commit.",
+      "status": "supported",
+      "type": "manifest_inventory_recorded"
+    }
+  ],
+  "completed_at": "2026-10-14T12:00:01.000Z",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "static inventory; no build; no code execution",
+    "candidate_id": null,
+    "language": "go",
+    "observed_revision": null,
+    "repo_id": "github.com/modelcontextprotocol/go-sdk",
+    "requested_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91"
+  },
+  "errors": [],
+  "evidence": [
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "hosted_sbom_scope",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:a35289dc25f5a0bc3f7b6c17ba5499ad8b07074500da5d18f7ebf3700a24fdd8",
+        "tool": "hosted_sbom_scope",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "acquisition_history": [
+          {
+            "state": "generate_requested"
+          },
+          {
+            "state": "pending"
+          },
+          {
+            "state": "ready"
+          },
+          {
+            "state": "downloaded"
+          }
+        ],
+        "created": "2026-10-14T11:59:00Z",
+        "creators": [
+          "GitHub"
+        ],
+        "credential_class": "unauthenticated",
+        "default_branch_head_after": "ffffffffffffffffffffffffffffffffffffffff",
+        "default_branch_head_before": "ffffffffffffffffffffffffffffffffffffffff",
+        "document_binding": "unbound",
+        "document_comment": null,
+        "head_moved": false,
+        "package_count": 2,
+        "repo": "modelcontextprotocol/go-sdk",
+        "report_bytes": 2048,
+        "requested_pin": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91",
+        "revision_binding": "unbound",
+        "spdx_version": "SPDX-2.3",
+        "state": "downloaded"
+      },
+      "dimension": "inventory",
+      "evidence_id": "t3.ev1",
+      "kind": "hosted_sbom_scope",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "hosted#scope",
+      "observation": "Hosted dependency-graph export, unbound to the pinned commit.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "hosted",
+        "version": "scope"
+      }
+    },
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "hosted_package_table",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:a35289dc25f5a0bc3f7b6c17ba5499ad8b07074500da5d18f7ebf3700a24fdd8",
+        "tool": "hosted_package_table",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "key": "spdx_id",
+        "lane": "hosted_unbound",
+        "row_count": 2,
+        "table_artifact": "sha256:a35289dc25f5a0bc3f7b6c17ba5499ad8b07074500da5d18f7ebf3700a24fdd8",
+        "table_digest": "sha256:a35289dc25f5a0bc3f7b6c17ba5499ad8b07074500da5d18f7ebf3700a24fdd8"
+      },
+      "dimension": "inventory",
+      "evidence_id": "t3.ev2",
+      "kind": "hosted_package_table",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "hosted#table",
+      "observation": "Two hosted packages.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "hosted",
+        "version": "table"
+      }
+    }
+  ],
+  "kind": "result",
+  "missing_evidence": [],
+  "producer": {
+    "capability_version": "3.0",
+    "dimensions_used": [
+      "inventory"
+    ],
+    "implementation": "go",
+    "operations_used": [
+      "github_sbom_import"
+    ],
+    "service_id": "evidence-specialist-b"
+  },
+  "run_id": "run-t3",
+  "schema_version": "3.0",
+  "status": "complete",
+  "task_id": "t3",
+  "warnings": []
+}

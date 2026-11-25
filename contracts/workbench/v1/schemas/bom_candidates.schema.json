@@ -1,0 +1,573 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/bom_candidates.schema.json",
+  "title": "OpenTrace workbench BOM candidates v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "mode",
+    "status_detail",
+    "capabilities",
+    "counts",
+    "filters",
+    "items",
+    "page"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.bom_candidates/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "mode": {
+      "enum": [
+        "discovery_compared",
+        "legacy_checks",
+        "not_compared"
+      ]
+    },
+    "status_detail": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "code",
+            "message"
+          ],
+          "properties": {
+            "code": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80,
+              "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+            },
+            "message": {
+              "$ref": "common.schema.json#/$defs/message"
+            }
+          }
+        }
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "family",
+          "state",
+          "reason_code"
+        ],
+        "properties": {
+          "family": {
+            "enum": [
+              "software",
+              "cryptography",
+              "ai_model",
+              "other"
+            ]
+          },
+          "state": {
+            "enum": [
+              "not_run",
+              "unsupported",
+              "failed",
+              "partial",
+              "completed_empty",
+              "completed"
+            ]
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "disabled",
+                  "not_configured",
+                  "upstream_failed",
+                  "unsupported_ecosystem",
+                  "invalid_revision",
+                  "policy_refused",
+                  "rate_limited",
+                  "scanner_unavailable",
+                  "scanner_failed",
+                  "timeout",
+                  "output_invalid",
+                  "cleanup_unverified",
+                  "partial_coverage",
+                  "no_applicable_assets",
+                  "cancelled_by_user",
+                  "session_ended"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 4
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidates_total",
+        "assertions_unique",
+        "records_total",
+        "relationships_total",
+        "filtered_total",
+        "family_counts",
+        "state_counts",
+        "filter_group_counts",
+        "family_counts_disjoint"
+      ],
+      "properties": {
+        "candidates_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assertions_unique": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "records_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "relationships_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "filtered_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "family_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "software",
+            "cryptography",
+            "ai_model",
+            "other"
+          ],
+          "properties": {
+            "software": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cryptography": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ai_model": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "other": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "state_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "supported",
+            "contradicted",
+            "conflicting_evidence",
+            "unverifiable",
+            "unknown_coverage",
+            "no_rule"
+          ],
+          "properties": {
+            "supported": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "contradicted": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "conflicting_evidence": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unverifiable": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unknown_coverage": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "no_rule": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "filter_group_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "represented",
+            "not_represented",
+            "unknown"
+          ],
+          "properties": {
+            "represented": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "not_represented": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unknown": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "family_counts_disjoint": {
+          "type": "boolean"
+        }
+      }
+    },
+    "filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "filter_group",
+        "state",
+        "category",
+        "query"
+      ],
+      "properties": {
+        "family": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "software",
+                "cryptography",
+                "ai_model",
+                "other"
+              ]
+            }
+          ]
+        },
+        "filter_group": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "represented",
+                "not_represented",
+                "unknown"
+              ]
+            }
+          ]
+        },
+        "state": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "supported",
+                "contradicted",
+                "conflicting_evidence",
+                "unverifiable",
+                "unknown_coverage",
+                "no_rule"
+              ]
+            }
+          ]
+        },
+        "category": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "missing_component",
+                "missing_connection",
+                "missing_bom_document",
+                "unknown_coverage"
+              ]
+            }
+          ]
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "item_kind",
+          "assertion_id",
+          "canonical_ref",
+          "display",
+          "family",
+          "family_basis",
+          "category",
+          "state",
+          "filter_group",
+          "inherited",
+          "location",
+          "inventory",
+          "rule_id",
+          "graph_state"
+        ],
+        "properties": {
+          "item_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "item_kind": {
+            "enum": [
+              "candidate",
+              "legacy_check"
+            ]
+          },
+          "assertion_id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/engine_id"
+              }
+            ]
+          },
+          "canonical_ref": {
+            "$ref": "common.schema.json#/$defs/canonical_ref"
+          },
+          "display": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "raw_title"
+            ],
+            "properties": {
+              "name": {
+                "$ref": "common.schema.json#/$defs/text_or_empty"
+              },
+              "raw_title": {
+                "$ref": "common.schema.json#/$defs/text_or_empty"
+              }
+            }
+          },
+          "family": {
+            "enum": [
+              "software",
+              "cryptography",
+              "ai_model",
+              "other"
+            ]
+          },
+          "family_basis": {
+            "enum": [
+              "typed_metadata",
+              "inventory_kind",
+              "unclassified"
+            ]
+          },
+          "category": {
+            "enum": [
+              "missing_component",
+              "missing_connection",
+              "missing_bom_document",
+              "unknown_coverage"
+            ]
+          },
+          "state": {
+            "enum": [
+              "supported",
+              "contradicted",
+              "conflicting_evidence",
+              "unverifiable",
+              "unknown_coverage",
+              "no_rule"
+            ]
+          },
+          "filter_group": {
+            "enum": [
+              "represented",
+              "not_represented",
+              "unknown"
+            ]
+          },
+          "inherited": {
+            "type": "boolean"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path",
+                  "line_start",
+                  "line_end"
+                ],
+                "properties": {
+                  "path": {
+                    "$ref": "common.schema.json#/$defs/path"
+                  },
+                  "line_start": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    ]
+                  },
+                  "line_end": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "inventory": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "inventory_id",
+                  "kind",
+                  "generator",
+                  "sha256"
+                ],
+                "properties": {
+                  "inventory_id": {
+                    "$ref": "common.schema.json#/$defs/engine_id"
+                  },
+                  "kind": {
+                    "enum": [
+                      "sbom",
+                      "cbom",
+                      "aibom"
+                    ]
+                  },
+                  "generator": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 120,
+                        "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                      }
+                    ]
+                  },
+                  "sha256": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "$ref": "common.schema.json#/$defs/hex64"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "rule_id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          },
+          "graph_state": {
+            "enum": [
+              "assertion_graph",
+              "evidence_only",
+              "no_graph_collection_task",
+              "not_compared"
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 25
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offset",
+        "size",
+        "has_more"
+      ],
+      "properties": {
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 25
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

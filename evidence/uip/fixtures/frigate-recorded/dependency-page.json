@@ -1,0 +1,1730 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "context": {
+  "context_id": "ctx:9d0ff26a0da7a08962ff8834",
+  "path": "web/package-lock.json"
+ },
+ "counts": {
+  "shown": 30,
+  "total": 336,
+  "truncated": true
+ },
+ "edges": [
+  {
+   "edge_id": "edge:6a214dfe5376125ee5ad4774",
+   "from": "art:inv:syft-source-dir/components/1012",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f176d5"
+   ],
+   "to": "art:inv:syft-source-dir/components/125"
+  },
+  {
+   "edge_id": "edge:091330398f87f64d2ceb74be",
+   "from": "art:inv:syft-source-dir/components/1582",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/741123"
+   ],
+   "to": "art:inv:syft-source-dir/components/186"
+  },
+  {
+   "edge_id": "edge:a2f0bff4193efd534eb0d1dc",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b44214"
+   ],
+   "to": "art:inv:syft-source-dir/components/1012"
+  },
+  {
+   "edge_id": "edge:eb1dcf251f47943c250b8152",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/20e25d"
+   ],
+   "to": "art:inv:syft-source-dir/components/1582"
+  },
+  {
+   "edge_id": "edge:dcc731857204f613643be7a3",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/371ae6"
+   ],
+   "to": "art:inv:syft-source-dir/components/185"
+  },
+  {
+   "edge_id": "edge:c53b0f4dc315f593fd1cabf4",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/d5be41"
+   ],
+   "to": "art:inv:syft-source-dir/components/228"
+  },
+  {
+   "edge_id": "edge:c56f52a2597da12b6345a39c",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/e6132b"
+   ],
+   "to": "art:inv:syft-source-dir/components/255"
+  },
+  {
+   "edge_id": "edge:22c166826561a6c433eacc87",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f3c49f"
+   ],
+   "to": "art:inv:syft-source-dir/components/286"
+  },
+  {
+   "edge_id": "edge:80526c0181201b29f778b61a",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/288a78"
+   ],
+   "to": "art:inv:syft-source-dir/components/288"
+  },
+  {
+   "edge_id": "edge:aa0c80e92723405f00739d5b",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1a7407"
+   ],
+   "to": "art:inv:syft-source-dir/components/289"
+  },
+  {
+   "edge_id": "edge:861be89b7fd6bbf9030aa305",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/9250e2"
+   ],
+   "to": "art:inv:syft-source-dir/components/290"
+  },
+  {
+   "edge_id": "edge:e1c62e7d80a9fd34ce009d50",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/e372e4"
+   ],
+   "to": "art:inv:syft-source-dir/components/297"
+  },
+  {
+   "edge_id": "edge:eba59222d100550ec095543c",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7f6aac"
+   ],
+   "to": "art:inv:syft-source-dir/components/298"
+  },
+  {
+   "edge_id": "edge:e17966ce0af62e3d7f864bac",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/70d227"
+   ],
+   "to": "art:inv:syft-source-dir/components/302"
+  },
+  {
+   "edge_id": "edge:8186173bc92386fe2ec8d336",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b223fb"
+   ],
+   "to": "art:inv:syft-source-dir/components/305"
+  },
+  {
+   "edge_id": "edge:84b48bf1576db5a40893cc1c",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/6c9e67"
+   ],
+   "to": "art:inv:syft-source-dir/components/320"
+  },
+  {
+   "edge_id": "edge:a58cb10afadb6d32d4345527",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7bcd57"
+   ],
+   "to": "art:inv:syft-source-dir/components/323"
+  },
+  {
+   "edge_id": "edge:1ab4082c9fcf4ed0808f4151",
+   "from": "art:inv:syft-source-dir/components/1934",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b9d5d5"
+   ],
+   "to": "art:inv:syft-source-dir/components/324"
+  },
+  {
+   "edge_id": "edge:aa2f5dbb8d6c5970db32461b",
+   "from": "art:inv:syft-source-dir/components/222",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b38be7"
+   ],
+   "to": "art:inv:syft-source-dir/components/221"
+  },
+  {
+   "edge_id": "edge:2fd6256a7eb015c7a4bc1329",
+   "from": "art:inv:syft-source-dir/components/222",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7768b6"
+   ],
+   "to": "art:inv:syft-source-dir/components/224"
+  },
+  {
+   "edge_id": "edge:344df59a0635da3734ef89e5",
+   "from": "art:inv:syft-source-dir/components/223",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7ef117"
+   ],
+   "to": "art:inv:syft-source-dir/components/222"
+  },
+  {
+   "edge_id": "edge:2b23d16176a5b113ec2cee3a",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ad69e6"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:f413da4ae2db0890832ba8fc",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/03705a"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:03487e91c875fe7677ce36d6",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/8b5a69"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:ce1c71b7a8d8518745840bd1",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/bdc597"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:ada7fb8ce4ceebd0c77d6815",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/06f710"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:4f299ae9bf3332b8e66ae860",
+   "from": "art:inv:syft-source-dir/components/286",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/75d79f"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:71d2391152982ed08d2556b3",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/78287e"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:dc43b991bd18b1d3badcc8f5",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ef4b35"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:87865406cf6b528d0a26656b",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b9a877"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:6875948ea4b4896762d5bc7d",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/30732a"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:5aa5af3375a55dc28bfef853",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/dc28b4"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:379b0994b8961843d8fe9dc0",
+   "from": "art:inv:syft-source-dir/components/289",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/7b0bc1"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:2c08b4eedc787f2fe5d7036c",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/4e56b1"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:b07b3288a8040ec1fa505de4",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f8ee9c"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:b05580df553aa28a4e5fef1e",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/5b241a"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:23645f5e1309dc5ee6b32572",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/afa582"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:fb06afe408877e5a33bbb996",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/beeacf"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:4f1dd8b87d7a7dd5d2f77e48",
+   "from": "art:inv:syft-source-dir/components/290",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/cd7ad4"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:7b782dd3cf3203619d43406f",
+   "from": "art:inv:syft-source-dir/components/297",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b9fc6f"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:c4ef77068b097d99fdbbd2be",
+   "from": "art:inv:syft-source-dir/components/297",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c994e3"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:3179c4339441961b1878cf8a",
+   "from": "art:inv:syft-source-dir/components/297",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/eec50a"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:13b1ef48d7b1725b418b2323",
+   "from": "art:inv:syft-source-dir/components/297",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/a3cb0d"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:7249c5d8923b76c91232d69f",
+   "from": "art:inv:syft-source-dir/components/297",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/d7dbcd"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:2f2f78cac4cea7471d7125a1",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/500296"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:894007e1233308fffc027bed",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f7ab5b"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:33dcd1bb9dcf3bfdd000635e",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/4d9a7d"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:8bd4755d59cd3b612634f029",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c28401"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:c2e9c3c0b29685a0f5b76048",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/710431"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:0a2a4a7cf476bbc4b6506f28",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/e1b83d"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:21e6339063bd4aaeb0e82f64",
+   "from": "art:inv:syft-source-dir/components/298",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/97300b"
+   ],
+   "to": "art:inv:syft-source-dir/components/301"
+  },
+  {
+   "edge_id": "edge:ff1e352b1561df805b7caf98",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/9374d9"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:4b5d9ad441e888be07e87c21",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1797fd"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:f07c18232db02eb453229b5f",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1f0a5f"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:d71a84251a87d48c87310183",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ae0377"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:5b244b10d5408b453a83561d",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/00121d"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:ad88e6a828774c633d23d575",
+   "from": "art:inv:syft-source-dir/components/302",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/792612"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:8ddad6f88f0d4baf1ad16c11",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0df933"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:4a6862d96e853f0505ec9d17",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/498c27"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:6b6cb520bac7c62993b2b946",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0a3ef5"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:53ab329a8272e005a113a17e",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0c960b"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:af5a68d41d19d118b5111835",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/2123b7"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:07629103d00936f34b654eab",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/55031e"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:38e338b5fb063d7129026dca",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/347afd"
+   ],
+   "to": "art:inv:syft-source-dir/components/301"
+  },
+  {
+   "edge_id": "edge:b1bb140c99ed577215462d28",
+   "from": "art:inv:syft-source-dir/components/305",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/507a77"
+   ],
+   "to": "art:inv:syft-source-dir/components/312"
+  },
+  {
+   "edge_id": "edge:d932c3d68be7ab3051560c74",
+   "from": "art:inv:syft-source-dir/components/312",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1822ac"
+   ],
+   "to": "art:inv:syft-source-dir/components/223"
+  },
+  {
+   "edge_id": "edge:4311ce52b98db131d9ae3c31",
+   "from": "art:inv:syft-source-dir/components/312",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/645ef1"
+   ],
+   "to": "art:inv:syft-source-dir/components/287"
+  },
+  {
+   "edge_id": "edge:a6a03d81047d13fae9a28f3f",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/3edcca"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:f132694674ad1f28025ca94a",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/4061ac"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:f5b523a6f4e644b3b6e665c5",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/eb8808"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:38fc5a49c9d76614811a2ea3",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c3e9f8"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:589d706280780bf721d95c4a",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ef0739"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:122349ac86423c99ec5356c5",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/27e136"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:243b244292ebb6e73f746f5d",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/714e00"
+   ],
+   "to": "art:inv:syft-source-dir/components/299"
+  },
+  {
+   "edge_id": "edge:ea79f6628c572624ef01191d",
+   "from": "art:inv:syft-source-dir/components/320",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/e626fa"
+   ],
+   "to": "art:inv:syft-source-dir/components/300"
+  },
+  {
+   "edge_id": "edge:ac706f132c0f12f6f9d87ce5",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/1501bb"
+   ],
+   "to": "art:inv:syft-source-dir/components/282"
+  },
+  {
+   "edge_id": "edge:5150500f79efdab19fdd7d12",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/0cd975"
+   ],
+   "to": "art:inv:syft-source-dir/components/283"
+  },
+  {
+   "edge_id": "edge:e7dbe4ee23e74e33f1a1dd21",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c25115"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:937f29194a8fbc9a5957c673",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/42bd64"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:89290f5cfc53f4fe92243868",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f44fff"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:440e7caad1cd66267981b86c",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/58ce80"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:9d00d78d1bac2e58f03cd48b",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/a50291"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:7a61c4f68dcb172e4f32bbdc",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c6ab4b"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:af00cb89fe0b7c122ab108a7",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b65baf"
+   ],
+   "to": "art:inv:syft-source-dir/components/299"
+  },
+  {
+   "edge_id": "edge:ca7bd99cd016cf38c513e5f4",
+   "from": "art:inv:syft-source-dir/components/323",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/89ba02"
+   ],
+   "to": "art:inv:syft-source-dir/components/300"
+  },
+  {
+   "edge_id": "edge:609e975a000f798cdc43082f",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/eb8834"
+   ],
+   "to": "art:inv:syft-source-dir/components/282"
+  },
+  {
+   "edge_id": "edge:0fe8e7788d4dd06290135001",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/c6aedb"
+   ],
+   "to": "art:inv:syft-source-dir/components/283"
+  },
+  {
+   "edge_id": "edge:5ef095217ed7efeba559eaef",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/35dbfb"
+   ],
+   "to": "art:inv:syft-source-dir/components/284"
+  },
+  {
+   "edge_id": "edge:da0b5ff856c36fe9bae53aa4",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/5d1c42"
+   ],
+   "to": "art:inv:syft-source-dir/components/285"
+  },
+  {
+   "edge_id": "edge:c934c9130746171d5f552963",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/75a4ee"
+   ],
+   "to": "art:inv:syft-source-dir/components/291"
+  },
+  {
+   "edge_id": "edge:7a5e16df59f9d3aea6134297",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/29bc16"
+   ],
+   "to": "art:inv:syft-source-dir/components/292"
+  },
+  {
+   "edge_id": "edge:1665af7f3c4b1f52bb7b60fa",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/634883"
+   ],
+   "to": "art:inv:syft-source-dir/components/293"
+  },
+  {
+   "edge_id": "edge:7dba2ab82f78d25186ede3c4",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/2186a2"
+   ],
+   "to": "art:inv:syft-source-dir/components/294"
+  },
+  {
+   "edge_id": "edge:5802a593c72940428062c667",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/b58b81"
+   ],
+   "to": "art:inv:syft-source-dir/components/295"
+  },
+  {
+   "edge_id": "edge:658b7e50970e2b982f188d3a",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/ed3f0d"
+   ],
+   "to": "art:inv:syft-source-dir/components/296"
+  },
+  {
+   "edge_id": "edge:cf23f8ec93bbda57ef00640a",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/265c2c"
+   ],
+   "to": "art:inv:syft-source-dir/components/299"
+  },
+  {
+   "edge_id": "edge:e3a1b7758501d385f8e3ae0a",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/bbe259"
+   ],
+   "to": "art:inv:syft-source-dir/components/300"
+  },
+  {
+   "edge_id": "edge:4528c6a06b0db455c9ba6ae2",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/03178a"
+   ],
+   "to": "art:inv:syft-source-dir/components/301"
+  },
+  {
+   "edge_id": "edge:2f68ffd94be0175cd65900f0",
+   "from": "art:inv:syft-source-dir/components/324",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/574a72"
+   ],
+   "to": "art:inv:syft-source-dir/components/312"
+  }
+ ],
+ "filter": "all",
+ "filter_totals": {
+  "advisory": 12,
+  "all": 336,
+  "direct": 82,
+  "evidence_gaps": 324,
+  "transitive": 254
+ },
+ "focus": {
+  "basis": "graph_root",
+  "candidates_total": 7,
+  "node_id": "art:inv:syft-source-dir/components/1934"
+ },
+ "limits": {
+  "connectors_shown": 7,
+  "connectors_truncated": false,
+  "edges_truncated": false
+ },
+ "lookup": {
+  "counts_by_state": {
+   "match": 12,
+   "missing_version": 0,
+   "no_match": 0,
+   "not_run": 324,
+   "unavailable": 0,
+   "unsupported": 0
+  },
+  "explanation": "The recorded advisory snapshot does not state per-component query coverage: components without a recorded match are shown as not run, not as a completed clean lookup.",
+  "mode": "recorded"
+ },
+ "nodes": [
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 0,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "web-new",
+   "node_id": "art:inv:syft-source-dir/components/1934",
+   "path_state": "complete",
+   "role": "focus",
+   "version": "0.0.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@babel/runtime",
+   "node_id": "art:inv:syft-source-dir/components/125",
+   "path_state": "complete",
+   "role": "match",
+   "version": "7.29.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@cycjimmy/jsmpeg-player",
+   "node_id": "art:inv:syft-source-dir/components/185",
+   "path_state": "complete",
+   "role": "match",
+   "version": "6.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@date-fns/tz",
+   "node_id": "art:inv:syft-source-dir/components/186",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.4.1"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 5,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@floating-ui/core",
+   "node_id": "art:inv:syft-source-dir/components/221",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.7.5"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 4,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@floating-ui/dom",
+   "node_id": "art:inv:syft-source-dir/components/222",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.7.6"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 3,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@floating-ui/react-dom",
+   "node_id": "art:inv:syft-source-dir/components/223",
+   "path_state": "complete",
+   "role": "match",
+   "version": "2.1.8"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 5,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@floating-ui/utils",
+   "node_id": "art:inv:syft-source-dir/components/224",
+   "path_state": "complete",
+   "role": "match",
+   "version": "0.2.11"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@hookform/resolvers",
+   "node_id": "art:inv:syft-source-dir/components/228",
+   "path_state": "complete",
+   "role": "match",
+   "version": "3.10.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@melloware/react-logviewer",
+   "node_id": "art:inv:syft-source-dir/components/255",
+   "path_state": "complete",
+   "role": "match",
+   "version": "6.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/number",
+   "node_id": "art:inv:syft-source-dir/components/282",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/number",
+   "node_id": "art:inv:syft-source-dir/components/283",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.1"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/primitive",
+   "node_id": "art:inv:syft-source-dir/components/284",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.1"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/primitive",
+   "node_id": "art:inv:syft-source-dir/components/285",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.3"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-alert-dialog",
+   "node_id": "art:inv:syft-source-dir/components/286",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.15"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 3,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-arrow",
+   "node_id": "art:inv:syft-source-dir/components/287",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.7"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-aspect-ratio",
+   "node_id": "art:inv:syft-source-dir/components/288",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-checkbox",
+   "node_id": "art:inv:syft-source-dir/components/289",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.3.3"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-collapsible",
+   "node_id": "art:inv:syft-source-dir/components/290",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.12"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-collection",
+   "node_id": "art:inv:syft-source-dir/components/291",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-collection",
+   "node_id": "art:inv:syft-source-dir/components/292",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.7"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-compose-refs",
+   "node_id": "art:inv:syft-source-dir/components/293",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-context",
+   "node_id": "art:inv:syft-source-dir/components/294",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.1"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-context",
+   "node_id": "art:inv:syft-source-dir/components/295",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.2"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-context",
+   "node_id": "art:inv:syft-source-dir/components/296",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.3"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-context-menu",
+   "node_id": "art:inv:syft-source-dir/components/297",
+   "path_state": "complete",
+   "role": "match",
+   "version": "2.2.16"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-dialog",
+   "node_id": "art:inv:syft-source-dir/components/298",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.15"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-direction",
+   "node_id": "art:inv:syft-source-dir/components/299",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-direction",
+   "node_id": "art:inv:syft-source-dir/components/300",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.1"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-dismissable-layer",
+   "node_id": "art:inv:syft-source-dir/components/301",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.1.11"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-dropdown-menu",
+   "node_id": "art:inv:syft-source-dir/components/302",
+   "path_state": "complete",
+   "role": "match",
+   "version": "2.1.16"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "i18next",
+   "node_id": "art:inv:syft-source-dir/components/1012",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "24.2.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "react-day-picker",
+   "node_id": "art:inv:syft-source-dir/components/1582",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "9.14.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 2,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": true,
+    "transitive": true
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-popper",
+   "node_id": "art:inv:syft-source-dir/components/312",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "1.2.8"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-hover-card",
+   "node_id": "art:inv:syft-source-dir/components/305",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "1.1.15"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-scroll-area",
+   "node_id": "art:inv:syft-source-dir/components/323",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "1.2.3"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-select",
+   "node_id": "art:inv:syft-source-dir/components/324",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "2.2.6"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "@radix-ui/react-radio-group",
+   "node_id": "art:inv:syft-source-dir/components/320",
+   "path_state": "complete",
+   "role": "connector",
+   "version": "1.3.8"
+  }
+ ],
+ "page": {
+  "has_more": true,
+  "matches_shown": 30,
+  "matches_total": 336,
+  "offset": 0,
+  "range_first": 1,
+  "range_last": 30,
+  "size": 30
+ },
+ "query": "",
+ "schema": "opentrace.workbench.dependency_page/1"
+}

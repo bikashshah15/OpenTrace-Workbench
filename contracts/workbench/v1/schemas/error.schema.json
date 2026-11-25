@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/error.schema.json",
+  "title": "OpenTrace workbench error v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "error",
+    "message"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.error/1"
+    },
+    "error": {
+      "enum": [
+        "invalid_request",
+        "stale_generation",
+        "no_analysis",
+        "not_found",
+        "projection_failed",
+        "unsupported_version",
+        "binding_mismatch",
+        "response_too_large",
+        "job_not_found"
+      ]
+    },
+    "message": {
+      "$ref": "common.schema.json#/$defs/message"
+    },
+    "field": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+    },
+    "detail_code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

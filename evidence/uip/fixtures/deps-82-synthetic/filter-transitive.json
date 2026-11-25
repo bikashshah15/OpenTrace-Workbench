@@ -1,0 +1,90 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:f46350943bc00875cf3f9d8bffdc58c9d8e7eec95cb69df4a9b5d9c3fd453fd1",
+  "assessment": null,
+  "commit_sha": "3656a98ab5e7e50529b048c48ffa04d22e0dd31c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "context": {
+  "context_id": "ctx:7e96620179214ba618ffff36",
+  "path": "app/package-lock.json"
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "edges": [],
+ "filter": "transitive",
+ "filter_totals": {
+  "advisory": 4,
+  "all": 82,
+  "direct": 82,
+  "evidence_gaps": 6,
+  "transitive": 0
+ },
+ "focus": {
+  "basis": "graph_root",
+  "candidates_total": 1,
+  "node_id": "pkg:root"
+ },
+ "limits": {
+  "connectors_shown": 0,
+  "connectors_truncated": false,
+  "edges_truncated": false
+ },
+ "lookup": {
+  "counts_by_state": {
+   "match": 4,
+   "missing_version": 1,
+   "no_match": 74,
+   "not_run": 1,
+   "unavailable": 1,
+   "unsupported": 1
+  },
+  "explanation": null,
+  "mode": "recorded"
+ },
+ "nodes": [
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 0,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "root-app",
+   "node_id": "pkg:root",
+   "path_state": "complete",
+   "role": "focus",
+   "version": "1.0.0"
+  }
+ ],
+ "page": {
+  "has_more": false,
+  "matches_shown": 0,
+  "matches_total": 0,
+  "offset": 0,
+  "range_first": 0,
+  "range_last": 0,
+  "size": 30
+ },
+ "query": "",
+ "schema": "opentrace.workbench.dependency_page/1"
+}

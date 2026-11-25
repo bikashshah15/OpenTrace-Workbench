@@ -1,0 +1,153 @@
+{
+ "cohort": {
+  "A_linked": 14,
+  "A_source_occurrences": -1,
+  "A_unresolved": 3,
+  "B_outcomes": {
+   "complete_positive": 5,
+   "complete_zero": 6,
+   "incomplete": 1,
+   "rejected": 1
+  },
+  "B_unique_query_triples": 13,
+  "C_both": 1,
+  "C_only_queried": 10,
+  "C_only_unresolved": 2,
+  "C_unique_identities": 13,
+  "D_query_occurrence_links": 14
+ },
+ "definitions": {
+  "A": "source occurrences (rows in occurrence tables)",
+  "B": "unique query triples (ecosystem, name, version sent) planned from exact occurrences",
+  "C": "unique package identities (ecosystem, name)",
+  "D": "query-to-occurrence links"
+ },
+ "repos": {
+  "synth/repo-a": {
+   "hosted": {
+    "binding": "unbound",
+    "package_count": null,
+    "state": "hosted_not_acquired"
+   },
+   "manifests": {
+    "excluded_by_policy": null,
+    "inventoried": {
+     "parsed": 2
+    },
+    "scope_reported": false,
+    "selected": 0,
+    "status_evidence": {},
+    "unaccounted": []
+   },
+   "occurrences_by_version_state": {
+    "exact": 8
+   },
+   "quantities": {
+    "A_linked": 8,
+    "A_source_occurrences": 8,
+    "A_unresolved": 0,
+    "B_outcomes": {
+     "complete_positive": 2,
+     "complete_zero": 6,
+     "incomplete": 0,
+     "rejected": 0
+    },
+    "B_unique_query_triples": 8,
+    "C_both": 0,
+    "C_only_queried": 8,
+    "C_only_unresolved": 0,
+    "C_unique_identities": 8,
+    "D_query_occurrence_links": 8
+   },
+   "reconciliation_counts": null,
+   "unresolved_by_reason": {}
+  },
+  "synth/repo-b": {
+   "hosted": {
+    "binding": "unbound",
+    "package_count": null,
+    "state": "hosted_not_acquired"
+   },
+   "manifests": {
+    "excluded_by_policy": null,
+    "inventoried": {
+     "parsed": 1
+    },
+    "scope_reported": false,
+    "selected": 0,
+    "status_evidence": {},
+    "unaccounted": []
+   },
+   "occurrences_by_version_state": {
+    "exact": 2,
+    "local_replace": 1
+   },
+   "quantities": {
+    "A_linked": 2,
+    "A_source_occurrences": 3,
+    "A_unresolved": 1,
+    "B_outcomes": {
+     "complete_positive": 2,
+     "complete_zero": 0,
+     "incomplete": 0,
+     "rejected": 0
+    },
+    "B_unique_query_triples": 2,
+    "C_both": 0,
+    "C_only_queried": 2,
+    "C_only_unresolved": 1,
+    "C_unique_identities": 3,
+    "D_query_occurrence_links": 2
+   },
+   "reconciliation_counts": null,
+   "unresolved_by_reason": {
+    "local_replace": 1
+   }
+  },
+  "synth/repo-c": {
+   "hosted": {
+    "binding": "unbound",
+    "package_count": null,
+    "state": "hosted_not_acquired"
+   },
+   "manifests": {
+    "excluded_by_policy": null,
+    "inventoried": {
+     "parsed": 2
+    },
+    "scope_reported": false,
+    "selected": 0,
+    "status_evidence": {},
+    "unaccounted": []
+   },
+   "occurrences_by_version_state": {
+    "exact": 4,
+    "range": 1,
+    "workspace": 1
+   },
+   "quantities": {
+    "A_linked": 4,
+    "A_source_occurrences": 6,
+    "A_unresolved": 2,
+    "B_outcomes": {
+     "complete_positive": 2,
+     "complete_zero": 0,
+     "incomplete": 1,
+     "rejected": 1
+    },
+    "B_unique_query_triples": 4,
+    "C_both": 0,
+    "C_only_queried": 4,
+    "C_only_unresolved": 2,
+    "C_unique_identities": 6,
+    "D_query_occurrence_links": 4
+   },
+   "reconciliation_counts": null,
+   "unresolved_by_reason": {
+    "range": 1,
+    "workspace": 1
+   }
+  }
+ },
+ "schema": "opentrace.i3.coverage/1"
+}

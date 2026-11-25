@@ -1,0 +1,17 @@
+{
+ "advisories": {},
+ "hosted_lane": {
+  "acquired": false,
+  "binding": "bound",
+  "repos": {}
+ },
+ "inputs": {
+  "source_capture_set_id": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ "inventory": {},
+ "non_claims": [
+  "SYNTHETIC example."
+ ],
+ "schema": "opentrace.i3.cohort_report/1",
+ "tasks": {}
+}

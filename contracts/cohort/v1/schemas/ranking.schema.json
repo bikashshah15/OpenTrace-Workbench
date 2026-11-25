@@ -1,0 +1,161 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/ranking.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.i3.ranking/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "input_digest": {
+   "pattern": "^sha256:[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "policy_digest": {
+   "pattern": "^sha256:[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "policy_id": {
+   "type": "string"
+  },
+  "ranked": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "band": {
+      "type": "string"
+     },
+     "ecosystem": {
+      "enum": [
+       "Go",
+       "npm",
+       "PyPI"
+      ],
+      "type": "string"
+     },
+     "explanation": {
+      "type": "string"
+     },
+     "family_id": {
+      "type": "string"
+     },
+     "group_key": {
+      "type": "string"
+     },
+     "has_direct": {
+      "type": "boolean"
+     },
+     "has_runtime_scope": {
+      "type": "boolean"
+     },
+     "has_unknown_member": {
+      "type": "boolean"
+     },
+     "name_normalized": {
+      "type": "string"
+     },
+     "rank": {
+      "minimum": 1,
+      "type": "integer"
+     },
+     "repos_supported": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "tier": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "rank",
+     "group_key",
+     "family_id",
+     "ecosystem",
+     "name_normalized",
+     "band",
+     "tier",
+     "repos_supported",
+     "has_direct",
+     "has_runtime_scope",
+     "has_unknown_member",
+     "explanation"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "ranker": {
+   "enum": [
+    "severity_first/1",
+    "evidence_aware/1"
+   ],
+   "type": "string"
+  },
+  "schema": {
+   "const": "opentrace.i3.ranking/1"
+  },
+  "statement": {
+   "type": "string"
+  },
+  "unresolved": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "distinct_repos": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "ecosystem": {
+      "enum": [
+       "Go",
+       "npm",
+       "PyPI"
+      ],
+      "type": "string"
+     },
+     "has_direct": {
+      "type": "boolean"
+     },
+     "items": {
+      "type": "array"
+     },
+     "name_normalized": {
+      "type": "string"
+     },
+     "occurrences": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "position": {
+      "minimum": 1,
+      "type": "integer"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "ecosystem",
+     "name_normalized",
+     "reason",
+     "distinct_repos",
+     "occurrences",
+     "has_direct",
+     "items",
+     "position"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema",
+  "ranker",
+  "policy_id",
+  "policy_digest",
+  "input_digest",
+  "ranked",
+  "unresolved",
+  "statement"
+ ],
+ "title": "ranking",
+ "type": "object"
+}

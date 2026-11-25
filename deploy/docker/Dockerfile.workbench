@@ -1,0 +1,36 @@
+# OpenTrace Workbench (browser-facing). No scanners, no Docker client, no Docker socket.
+# Live OSV advisory lookup (on by default; OPENTRACE_LIVE_ADVISORIES=0 opts out) runs here, not in the scanner worker, and needs three things in
+# this image: Evidence Specialist B (built below from this repository, offline), the Go toolchain on PATH (B refuses to start without `go`; it
+# parses lockfiles itself and never runs repository code) and the Investigator Python package that drives B.
+FROM golang:1.24.7-bookworm@sha256:b8bae5bd9ba9b1f89b635c91c24cc75cea335a16fb5076310f38566fc674b1ec AS specialist
+WORKDIR /src
+COPY src/agents/evidence_specialist/ ./
+RUN GOTOOLCHAIN=local GOPROXY=off GOFLAGS= CGO_ENABLED=0 go build -trimpath -o /out/evidence-specialist .
+
+FROM python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends git ca-certificates \
+ && rm -rf /var/lib/apt/lists/* \
+ && groupadd --gid 10001 opentrace && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin opentrace
+COPY requirements-dev.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt && rm /tmp/requirements.txt
+WORKDIR /opt/opentrace
+# The captured Frigate demo needs the committed bundles and the evidence contracts; nothing else from the repository.
+COPY src/core ./src/core
+COPY src/agents/investigator ./src/agents/investigator
+COPY src/ui ./src/ui
+COPY contracts ./contracts
+COPY tests/core/bombridge/fixtures ./tests/core/bombridge/fixtures
+# Advisory pipeline runtime: the Specialist binary and the Go toolchain it probes at start-up (GOROOT is read-only data here).
+COPY --from=specialist /out/evidence-specialist /opt/opentrace/bin/evidence-specialist
+COPY --from=specialist /usr/local/go /usr/local/go
+# Handoff directories for the worker channel; the volumes inherit this ownership on first use.
+RUN mkdir -p /spool/in /spool/out /var/opentrace/sessions && chown -R 10001:10001 /spool /var/opentrace
+USER 10001:10001
+ENV PYTHONPATH=/opt/opentrace/src/core:/opt/opentrace/src/agents/investigator \
+    PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+    OPENTRACE_SPECIALIST_BIN=/opt/opentrace/bin/evidence-specialist \
+    OPENTRACE_CONTAINER_BIND=1 OPENTRACE_LIVE_SCAN=1 OPENTRACE_SCAN_BACKEND=worker
+EXPOSE 8765
+CMD ["python", "-P", "-m", "opentrace_core.app", "--host", "0.0.0.0", "--port", "8765", "--session-root", "/var/opentrace/sessions"]

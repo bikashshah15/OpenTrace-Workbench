@@ -1,0 +1,82 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 2421,
+   "path": "scan-00-queued.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "f4ef75cb59ef1ff0bad1fce9e06a963d951cdb858b88910a9300c82e5d91e9ff"
+  },
+  {
+   "bytes": 2444,
+   "path": "scan-01-resolving.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "0fbfdcd7a0dac0f13b55caab1d3033a9a7ac45551ae992a45294ee47d104f141"
+  },
+  {
+   "bytes": 3800,
+   "path": "scan-02-acquiring.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "0b3916c93240e4eed169cae1ec52d22d8a508ff072ee1bc0a9c088720b44f360"
+  },
+  {
+   "bytes": 3839,
+   "path": "scan-03-sbom-running.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "afe2ce5febfc1ed11b0e8e68d4e0401af6148ec0e5ea8a4db43b2d36a8d6903e"
+  },
+  {
+   "bytes": 4313,
+   "path": "scan-04-completed.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "5fecf947d5a07d3bacb3ed5e376423cdeb0bfc7126f5b9519234c9513ab9f0a4"
+  },
+  {
+   "bytes": 4337,
+   "path": "scan-05-completed-empty-cbom.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "cf945c6436960cd61c951c55e897c02c7a807e69b793ff1c177f9dea2aa605d1"
+  },
+  {
+   "bytes": 4334,
+   "path": "scan-06-partial.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "d20c9e9e1089f9a6c2ed1e713c75e9d76640ef72adc44a2e76626c2f326740e2"
+  },
+  {
+   "bytes": 2586,
+   "path": "scan-07-failed-resolution.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "6d849f426a8c9f27da4ea5b4d850dd62f0eea77e50bddc6fdb86426fb9076e55"
+  },
+  {
+   "bytes": 4154,
+   "path": "scan-08-failed-scan.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "177bb9b94bfcb61f95fe51f2238cb72003096bedd36409610f5c715852ec4829"
+  },
+  {
+   "bytes": 4198,
+   "path": "scan-09-cancelled-cleanup-verified.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "b8449947d0af71965804a808da01d474255a12551c54b7cbb21b6feaef1569b7"
+  },
+  {
+   "bytes": 4200,
+   "path": "scan-10-cancelled-cleanup-unverified.json",
+   "schema": "opentrace.workbench.scan_status/1",
+   "sha256": "970cc0cc917f464050982ac7cd9cd79a1d099aaeb512e406d04bb3c77a748ed2"
+  }
+ ],
+ "name": "scan-status-matrix-synthetic",
+ "normalized": [],
+ "notes": "A seq-ordered job sequence (files 00-04) plus terminal variants covering every stage state, handoff ready/blocked and cancel cleanup verified/unverified; pre-resolution payloads carry a null binding.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": []
+}

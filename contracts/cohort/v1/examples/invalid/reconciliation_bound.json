@@ -1,0 +1,69 @@
+{
+ "repos": [
+  {
+   "binding_state": "bound",
+   "compared": false,
+   "counts": {
+    "agree": 0,
+    "hosted_only": 0,
+    "hosted_unmatchable": 0,
+    "pinned_only": 0,
+    "pinned_unmatchable": 0,
+    "version_differs": 0
+   },
+   "lists": {
+    "agree": [],
+    "hosted_only": [],
+    "hosted_unmatchable": [],
+    "pinned_only": [],
+    "pinned_unmatchable": [],
+    "version_differs": []
+   },
+   "repo": "synth/repo-a"
+  },
+  {
+   "binding_state": "unbound",
+   "compared": false,
+   "counts": {
+    "agree": 0,
+    "hosted_only": 0,
+    "hosted_unmatchable": 0,
+    "pinned_only": 0,
+    "pinned_unmatchable": 0,
+    "version_differs": 0
+   },
+   "lists": {
+    "agree": [],
+    "hosted_only": [],
+    "hosted_unmatchable": [],
+    "pinned_only": [],
+    "pinned_unmatchable": [],
+    "version_differs": []
+   },
+   "repo": "synth/repo-b"
+  },
+  {
+   "binding_state": "unbound",
+   "compared": false,
+   "counts": {
+    "agree": 0,
+    "hosted_only": 0,
+    "hosted_unmatchable": 0,
+    "pinned_only": 0,
+    "pinned_unmatchable": 0,
+    "version_differs": 0
+   },
+   "lists": {
+    "agree": [],
+    "hosted_only": [],
+    "hosted_unmatchable": [],
+    "pinned_only": [],
+    "pinned_unmatchable": [],
+    "version_differs": []
+   },
+   "repo": "synth/repo-c"
+  }
+ ],
+ "schema": "opentrace.i3.reconciliation/1",
+ "statement": "SYNTHETIC comparison; never a binding."
+}

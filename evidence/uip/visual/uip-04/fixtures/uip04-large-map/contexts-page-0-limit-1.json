@@ -1,0 +1,271 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:9cc4a0fa29df11b80ef4a3958f6ffb148bf38bf918a6fe35e5194159cc8d3805",
+  "assessment": null,
+  "commit_sha": "32d7128786fec1f691336cc4c3b95fd9fa8ab65c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 7,
+  "total": 7,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 240,
+   "files": [
+    {
+     "dependency_context_id": "ctx:726565939577968bda076a67",
+     "distinct_total": 2,
+     "file_id": "ctx:726565939577968bda076a67",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d000.md",
+     "raw_locations": [
+      "/docs/d000.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d000.md",
+      "text": "docs/d000.md"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 120,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:79894ed799bda9f2d6700ba4",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 240,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 426,
+   "files": [
+    {
+     "dependency_context_id": "ctx:ac11cc89f96c0d5078a8edf4",
+     "distinct_total": 2,
+     "file_id": "ctx:ac11cc89f96c0d5078a8edf4",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg000/package.json",
+     "raw_locations": [
+      "/web/pkg000/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg000/package.json",
+      "text": "web/pkg000/package.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 213,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:0fe8680c687b75fafebc3f63",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 426,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "python_requirements",
+   "distinct_total": 180,
+   "files": [
+    {
+     "dependency_context_id": "ctx:b054ed10ccd6dd880ce0a3d3",
+     "distinct_total": 2,
+     "file_id": "ctx:b054ed10ccd6dd880ce0a3d3",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r000/requirements.txt",
+     "raw_locations": [
+      "/deps/r000/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r000/requirements.txt",
+      "text": "deps/r000/requirements.txt"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 90,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:0bac90dd15ee06eda5e0586a",
+   "kind": "located",
+   "label": "Python requirements",
+   "membership_total": 180,
+   "token": "amber"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 280,
+   "files": [
+    {
+     "dependency_context_id": "ctx:cc3e016cbdb210f2caf70aba",
+     "distinct_total": 2,
+     "file_id": "ctx:cc3e016cbdb210f2caf70aba",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc000/go.mod",
+     "raw_locations": [
+      "/svc/svc000/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc000/go.mod",
+      "text": "svc/svc000/go.mod"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 140,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:24b16ed60c3be1f5bd55f7fd",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 280,
+   "token": "amber"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 80,
+   "files": [
+    {
+     "dependency_context_id": "ctx:adb200c89be67c5906409412",
+     "distinct_total": 2,
+     "file_id": "ctx:adb200c89be67c5906409412",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w000.yml",
+     "raw_locations": [
+      "/.github/workflows/w000.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w000.yml",
+      "text": ".github/workflows/w000.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 40,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:cacf220f7502e56aea99a344",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 80,
+   "token": "purple"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 100,
+   "files": [
+    {
+     "dependency_context_id": "ctx:9a659404aa1b2b76c128ed2e",
+     "distinct_total": 2,
+     "file_id": "ctx:9a659404aa1b2b76c128ed2e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o000/main.c",
+     "raw_locations": [
+      "/misc/o000/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o000/main.c",
+      "text": "misc/o000/main.c"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 50,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:58b96cc259780d27abeaa97a",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 100,
+   "token": "neutral"
+  },
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 11,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:0333a94cdad34e3ac4fa7f35",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 11,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "32d7128786fec1f691336cc4c3b95fd9fa8ab65c",
+  "distinct_total": 1317,
+  "located_distinct_total": 1306,
+  "membership_total": 1306,
+  "name": "example-org/sample-web",
+  "unlocated_total": 11
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

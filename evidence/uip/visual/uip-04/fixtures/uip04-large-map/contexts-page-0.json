@@ -1,0 +1,2323 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:9cc4a0fa29df11b80ef4a3958f6ffb148bf38bf918a6fe35e5194159cc8d3805",
+  "assessment": null,
+  "commit_sha": "32d7128786fec1f691336cc4c3b95fd9fa8ab65c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 7,
+  "total": 7,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 240,
+   "files": [
+    {
+     "dependency_context_id": "ctx:726565939577968bda076a67",
+     "distinct_total": 2,
+     "file_id": "ctx:726565939577968bda076a67",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d000.md",
+     "raw_locations": [
+      "/docs/d000.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d000.md",
+      "text": "docs/d000.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:dae512ff1f8dc08e10dc0aa0",
+     "distinct_total": 2,
+     "file_id": "ctx:dae512ff1f8dc08e10dc0aa0",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d001.md",
+     "raw_locations": [
+      "/docs/d001.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d001.md",
+      "text": "docs/d001.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:4f965787f6e06a203620c7a9",
+     "distinct_total": 2,
+     "file_id": "ctx:4f965787f6e06a203620c7a9",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d002.md",
+     "raw_locations": [
+      "/docs/d002.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d002.md",
+      "text": "docs/d002.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c2ab2637a241d91893647b71",
+     "distinct_total": 2,
+     "file_id": "ctx:c2ab2637a241d91893647b71",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d003.md",
+     "raw_locations": [
+      "/docs/d003.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d003.md",
+      "text": "docs/d003.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8efd5113a1b8e5ca16b80451",
+     "distinct_total": 2,
+     "file_id": "ctx:8efd5113a1b8e5ca16b80451",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d004.md",
+     "raw_locations": [
+      "/docs/d004.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d004.md",
+      "text": "docs/d004.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:ac9900aec6ae0f794ed81e2f",
+     "distinct_total": 2,
+     "file_id": "ctx:ac9900aec6ae0f794ed81e2f",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d005.md",
+     "raw_locations": [
+      "/docs/d005.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d005.md",
+      "text": "docs/d005.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:241f016dcfb83793ce7ab825",
+     "distinct_total": 2,
+     "file_id": "ctx:241f016dcfb83793ce7ab825",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d006.md",
+     "raw_locations": [
+      "/docs/d006.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d006.md",
+      "text": "docs/d006.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6fa7e9a93c73f4f27f173521",
+     "distinct_total": 2,
+     "file_id": "ctx:6fa7e9a93c73f4f27f173521",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d007.md",
+     "raw_locations": [
+      "/docs/d007.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d007.md",
+      "text": "docs/d007.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c64ba18acd03a18aab3ac26e",
+     "distinct_total": 2,
+     "file_id": "ctx:c64ba18acd03a18aab3ac26e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d008.md",
+     "raw_locations": [
+      "/docs/d008.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d008.md",
+      "text": "docs/d008.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7cc02aca94d624486bb8e126",
+     "distinct_total": 2,
+     "file_id": "ctx:7cc02aca94d624486bb8e126",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d009.md",
+     "raw_locations": [
+      "/docs/d009.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d009.md",
+      "text": "docs/d009.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6f9006b690ac14d95e67f4a6",
+     "distinct_total": 2,
+     "file_id": "ctx:6f9006b690ac14d95e67f4a6",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d010.md",
+     "raw_locations": [
+      "/docs/d010.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d010.md",
+      "text": "docs/d010.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:a2371f9d0ccbaf2f67f13d9e",
+     "distinct_total": 2,
+     "file_id": "ctx:a2371f9d0ccbaf2f67f13d9e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d011.md",
+     "raw_locations": [
+      "/docs/d011.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d011.md",
+      "text": "docs/d011.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:70b038db044432d5d73cac3b",
+     "distinct_total": 2,
+     "file_id": "ctx:70b038db044432d5d73cac3b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d012.md",
+     "raw_locations": [
+      "/docs/d012.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d012.md",
+      "text": "docs/d012.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8e71d21e76d52fe12c29a5ac",
+     "distinct_total": 2,
+     "file_id": "ctx:8e71d21e76d52fe12c29a5ac",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d013.md",
+     "raw_locations": [
+      "/docs/d013.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d013.md",
+      "text": "docs/d013.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:43ac1ae6eb78e095c7c8e350",
+     "distinct_total": 2,
+     "file_id": "ctx:43ac1ae6eb78e095c7c8e350",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d014.md",
+     "raw_locations": [
+      "/docs/d014.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d014.md",
+      "text": "docs/d014.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:a8cfa3cb86035848426af318",
+     "distinct_total": 2,
+     "file_id": "ctx:a8cfa3cb86035848426af318",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d015.md",
+     "raw_locations": [
+      "/docs/d015.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d015.md",
+      "text": "docs/d015.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1bdfe4b1ff2133829c3d4aca",
+     "distinct_total": 2,
+     "file_id": "ctx:1bdfe4b1ff2133829c3d4aca",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d016.md",
+     "raw_locations": [
+      "/docs/d016.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d016.md",
+      "text": "docs/d016.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7c72fb9acffd9d7b4e690166",
+     "distinct_total": 2,
+     "file_id": "ctx:7c72fb9acffd9d7b4e690166",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d017.md",
+     "raw_locations": [
+      "/docs/d017.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d017.md",
+      "text": "docs/d017.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7817e255a3bb128c668e7a5b",
+     "distinct_total": 2,
+     "file_id": "ctx:7817e255a3bb128c668e7a5b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d018.md",
+     "raw_locations": [
+      "/docs/d018.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d018.md",
+      "text": "docs/d018.md"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:bc9d53d4b68c0a30240b5f9c",
+     "distinct_total": 2,
+     "file_id": "ctx:bc9d53d4b68c0a30240b5f9c",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/d019.md",
+     "raw_locations": [
+      "/docs/d019.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/docs/d019.md",
+      "text": "docs/d019.md"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 120,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:79894ed799bda9f2d6700ba4",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 240,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 426,
+   "files": [
+    {
+     "dependency_context_id": "ctx:ac11cc89f96c0d5078a8edf4",
+     "distinct_total": 2,
+     "file_id": "ctx:ac11cc89f96c0d5078a8edf4",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg000/package.json",
+     "raw_locations": [
+      "/web/pkg000/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg000/package.json",
+      "text": "web/pkg000/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:32df67e71cb7b39a9b553ecc",
+     "distinct_total": 2,
+     "file_id": "ctx:32df67e71cb7b39a9b553ecc",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg001/package.json",
+     "raw_locations": [
+      "/web/pkg001/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg001/package.json",
+      "text": "web/pkg001/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:fb622af7bd98147e62b31887",
+     "distinct_total": 2,
+     "file_id": "ctx:fb622af7bd98147e62b31887",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg002/package.json",
+     "raw_locations": [
+      "/web/pkg002/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg002/package.json",
+      "text": "web/pkg002/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6346070e95cdc3fde03d437b",
+     "distinct_total": 2,
+     "file_id": "ctx:6346070e95cdc3fde03d437b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg003/package.json",
+     "raw_locations": [
+      "/web/pkg003/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg003/package.json",
+      "text": "web/pkg003/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:de4cdda4e3e71271b088983d",
+     "distinct_total": 2,
+     "file_id": "ctx:de4cdda4e3e71271b088983d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg004/package.json",
+     "raw_locations": [
+      "/web/pkg004/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg004/package.json",
+      "text": "web/pkg004/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7427729f6f30e44327fae37b",
+     "distinct_total": 2,
+     "file_id": "ctx:7427729f6f30e44327fae37b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg005/package.json",
+     "raw_locations": [
+      "/web/pkg005/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg005/package.json",
+      "text": "web/pkg005/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:a707dbbbdaca7e7a5b689fe3",
+     "distinct_total": 2,
+     "file_id": "ctx:a707dbbbdaca7e7a5b689fe3",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg006/package.json",
+     "raw_locations": [
+      "/web/pkg006/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg006/package.json",
+      "text": "web/pkg006/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7db35d4c0590891c5e812d5d",
+     "distinct_total": 2,
+     "file_id": "ctx:7db35d4c0590891c5e812d5d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg007/package.json",
+     "raw_locations": [
+      "/web/pkg007/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg007/package.json",
+      "text": "web/pkg007/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7b129a33a3564233232196dd",
+     "distinct_total": 2,
+     "file_id": "ctx:7b129a33a3564233232196dd",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg008/package.json",
+     "raw_locations": [
+      "/web/pkg008/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg008/package.json",
+      "text": "web/pkg008/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:212a993db0ae5e98f6d2ac30",
+     "distinct_total": 2,
+     "file_id": "ctx:212a993db0ae5e98f6d2ac30",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg009/package.json",
+     "raw_locations": [
+      "/web/pkg009/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg009/package.json",
+      "text": "web/pkg009/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b2c592259f65f2461925628f",
+     "distinct_total": 2,
+     "file_id": "ctx:b2c592259f65f2461925628f",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg010/package.json",
+     "raw_locations": [
+      "/web/pkg010/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg010/package.json",
+      "text": "web/pkg010/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:aa36b650093141a7fb2b2f76",
+     "distinct_total": 2,
+     "file_id": "ctx:aa36b650093141a7fb2b2f76",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg011/package.json",
+     "raw_locations": [
+      "/web/pkg011/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg011/package.json",
+      "text": "web/pkg011/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:50b758602f2e2e7c014865c3",
+     "distinct_total": 2,
+     "file_id": "ctx:50b758602f2e2e7c014865c3",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg012/package.json",
+     "raw_locations": [
+      "/web/pkg012/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg012/package.json",
+      "text": "web/pkg012/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:15e3105e8b9155bc0240bedc",
+     "distinct_total": 2,
+     "file_id": "ctx:15e3105e8b9155bc0240bedc",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg013/package.json",
+     "raw_locations": [
+      "/web/pkg013/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg013/package.json",
+      "text": "web/pkg013/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:3bdff13424e83e72f2228fba",
+     "distinct_total": 2,
+     "file_id": "ctx:3bdff13424e83e72f2228fba",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg014/package.json",
+     "raw_locations": [
+      "/web/pkg014/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg014/package.json",
+      "text": "web/pkg014/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:2a6753af0d230f96fdb11690",
+     "distinct_total": 2,
+     "file_id": "ctx:2a6753af0d230f96fdb11690",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg015/package.json",
+     "raw_locations": [
+      "/web/pkg015/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg015/package.json",
+      "text": "web/pkg015/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8ae1ec6b9270bfbcfccf544d",
+     "distinct_total": 2,
+     "file_id": "ctx:8ae1ec6b9270bfbcfccf544d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg016/package.json",
+     "raw_locations": [
+      "/web/pkg016/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg016/package.json",
+      "text": "web/pkg016/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b9f0f8a3545fda257b366b34",
+     "distinct_total": 2,
+     "file_id": "ctx:b9f0f8a3545fda257b366b34",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg017/package.json",
+     "raw_locations": [
+      "/web/pkg017/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg017/package.json",
+      "text": "web/pkg017/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:30f76231952cc0a5588acbf6",
+     "distinct_total": 2,
+     "file_id": "ctx:30f76231952cc0a5588acbf6",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg018/package.json",
+     "raw_locations": [
+      "/web/pkg018/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg018/package.json",
+      "text": "web/pkg018/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:47c01843e99e1f544c7c9b6d",
+     "distinct_total": 2,
+     "file_id": "ctx:47c01843e99e1f544c7c9b6d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/pkg019/package.json",
+     "raw_locations": [
+      "/web/pkg019/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/web/pkg019/package.json",
+      "text": "web/pkg019/package.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 213,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:0fe8680c687b75fafebc3f63",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 426,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "python_requirements",
+   "distinct_total": 180,
+   "files": [
+    {
+     "dependency_context_id": "ctx:b054ed10ccd6dd880ce0a3d3",
+     "distinct_total": 2,
+     "file_id": "ctx:b054ed10ccd6dd880ce0a3d3",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r000/requirements.txt",
+     "raw_locations": [
+      "/deps/r000/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r000/requirements.txt",
+      "text": "deps/r000/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:0a5d54c7df28b71c558d7af7",
+     "distinct_total": 2,
+     "file_id": "ctx:0a5d54c7df28b71c558d7af7",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r001/requirements.txt",
+     "raw_locations": [
+      "/deps/r001/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r001/requirements.txt",
+      "text": "deps/r001/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:9dba660c5b9344dc5a102e1e",
+     "distinct_total": 2,
+     "file_id": "ctx:9dba660c5b9344dc5a102e1e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r002/requirements.txt",
+     "raw_locations": [
+      "/deps/r002/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r002/requirements.txt",
+      "text": "deps/r002/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b52dc22f32faeaabc1e01627",
+     "distinct_total": 2,
+     "file_id": "ctx:b52dc22f32faeaabc1e01627",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r003/requirements.txt",
+     "raw_locations": [
+      "/deps/r003/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r003/requirements.txt",
+      "text": "deps/r003/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:212a36f1582bd4e64a9ed079",
+     "distinct_total": 2,
+     "file_id": "ctx:212a36f1582bd4e64a9ed079",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r004/requirements.txt",
+     "raw_locations": [
+      "/deps/r004/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r004/requirements.txt",
+      "text": "deps/r004/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1a3b1a53d2416a86c7a213bb",
+     "distinct_total": 2,
+     "file_id": "ctx:1a3b1a53d2416a86c7a213bb",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r005/requirements.txt",
+     "raw_locations": [
+      "/deps/r005/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r005/requirements.txt",
+      "text": "deps/r005/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:a46ebc6c87d55137f6b88c04",
+     "distinct_total": 2,
+     "file_id": "ctx:a46ebc6c87d55137f6b88c04",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r006/requirements.txt",
+     "raw_locations": [
+      "/deps/r006/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r006/requirements.txt",
+      "text": "deps/r006/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:91103d8cc2cefb1bd6eab0cc",
+     "distinct_total": 2,
+     "file_id": "ctx:91103d8cc2cefb1bd6eab0cc",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r007/requirements.txt",
+     "raw_locations": [
+      "/deps/r007/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r007/requirements.txt",
+      "text": "deps/r007/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:d3be34f8d35f1cd8a6d9cf69",
+     "distinct_total": 2,
+     "file_id": "ctx:d3be34f8d35f1cd8a6d9cf69",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r008/requirements.txt",
+     "raw_locations": [
+      "/deps/r008/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r008/requirements.txt",
+      "text": "deps/r008/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6e2b5c2b61012c4ac09affce",
+     "distinct_total": 2,
+     "file_id": "ctx:6e2b5c2b61012c4ac09affce",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r009/requirements.txt",
+     "raw_locations": [
+      "/deps/r009/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r009/requirements.txt",
+      "text": "deps/r009/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:245ca44c702c73758b27c337",
+     "distinct_total": 2,
+     "file_id": "ctx:245ca44c702c73758b27c337",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r010/requirements.txt",
+     "raw_locations": [
+      "/deps/r010/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r010/requirements.txt",
+      "text": "deps/r010/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6662aab52878fbf64c91494d",
+     "distinct_total": 2,
+     "file_id": "ctx:6662aab52878fbf64c91494d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r011/requirements.txt",
+     "raw_locations": [
+      "/deps/r011/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r011/requirements.txt",
+      "text": "deps/r011/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:de36b95f49ba293a1cb15fc0",
+     "distinct_total": 2,
+     "file_id": "ctx:de36b95f49ba293a1cb15fc0",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r012/requirements.txt",
+     "raw_locations": [
+      "/deps/r012/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r012/requirements.txt",
+      "text": "deps/r012/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:036c6ac6d9f7fa7fc5ebac26",
+     "distinct_total": 2,
+     "file_id": "ctx:036c6ac6d9f7fa7fc5ebac26",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r013/requirements.txt",
+     "raw_locations": [
+      "/deps/r013/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r013/requirements.txt",
+      "text": "deps/r013/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:99b8c4c6537557df8438f999",
+     "distinct_total": 2,
+     "file_id": "ctx:99b8c4c6537557df8438f999",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r014/requirements.txt",
+     "raw_locations": [
+      "/deps/r014/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r014/requirements.txt",
+      "text": "deps/r014/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:ce0fc5d0b7b57618f5d98729",
+     "distinct_total": 2,
+     "file_id": "ctx:ce0fc5d0b7b57618f5d98729",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r015/requirements.txt",
+     "raw_locations": [
+      "/deps/r015/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r015/requirements.txt",
+      "text": "deps/r015/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8b08fff80c530e186b7f8f0e",
+     "distinct_total": 2,
+     "file_id": "ctx:8b08fff80c530e186b7f8f0e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r016/requirements.txt",
+     "raw_locations": [
+      "/deps/r016/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r016/requirements.txt",
+      "text": "deps/r016/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7f3decfd18620b3bfa756979",
+     "distinct_total": 2,
+     "file_id": "ctx:7f3decfd18620b3bfa756979",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r017/requirements.txt",
+     "raw_locations": [
+      "/deps/r017/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r017/requirements.txt",
+      "text": "deps/r017/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:3db4f7f14b7888f4f67a6f2d",
+     "distinct_total": 2,
+     "file_id": "ctx:3db4f7f14b7888f4f67a6f2d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r018/requirements.txt",
+     "raw_locations": [
+      "/deps/r018/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r018/requirements.txt",
+      "text": "deps/r018/requirements.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:0c3e2195355e30f3fbbb7907",
+     "distinct_total": 2,
+     "file_id": "ctx:0c3e2195355e30f3fbbb7907",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "deps/r019/requirements.txt",
+     "raw_locations": [
+      "/deps/r019/requirements.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/deps/r019/requirements.txt",
+      "text": "deps/r019/requirements.txt"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 90,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:0bac90dd15ee06eda5e0586a",
+   "kind": "located",
+   "label": "Python requirements",
+   "membership_total": 180,
+   "token": "amber"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 280,
+   "files": [
+    {
+     "dependency_context_id": "ctx:cc3e016cbdb210f2caf70aba",
+     "distinct_total": 2,
+     "file_id": "ctx:cc3e016cbdb210f2caf70aba",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc000/go.mod",
+     "raw_locations": [
+      "/svc/svc000/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc000/go.mod",
+      "text": "svc/svc000/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b441e36455f72694b1684cfd",
+     "distinct_total": 2,
+     "file_id": "ctx:b441e36455f72694b1684cfd",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc001/go.mod",
+     "raw_locations": [
+      "/svc/svc001/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc001/go.mod",
+      "text": "svc/svc001/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:a925c3b432b005e7251fcc45",
+     "distinct_total": 2,
+     "file_id": "ctx:a925c3b432b005e7251fcc45",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc002/go.mod",
+     "raw_locations": [
+      "/svc/svc002/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc002/go.mod",
+      "text": "svc/svc002/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:5f9454f0f7fb52b33e0e3429",
+     "distinct_total": 2,
+     "file_id": "ctx:5f9454f0f7fb52b33e0e3429",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc003/go.mod",
+     "raw_locations": [
+      "/svc/svc003/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc003/go.mod",
+      "text": "svc/svc003/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:84d1bc86cca8b948a26a6f41",
+     "distinct_total": 2,
+     "file_id": "ctx:84d1bc86cca8b948a26a6f41",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc004/go.mod",
+     "raw_locations": [
+      "/svc/svc004/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc004/go.mod",
+      "text": "svc/svc004/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1862d7fd468a08aff3fd0070",
+     "distinct_total": 2,
+     "file_id": "ctx:1862d7fd468a08aff3fd0070",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc005/go.mod",
+     "raw_locations": [
+      "/svc/svc005/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc005/go.mod",
+      "text": "svc/svc005/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:81e3e823f84481258843d01f",
+     "distinct_total": 2,
+     "file_id": "ctx:81e3e823f84481258843d01f",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc006/go.mod",
+     "raw_locations": [
+      "/svc/svc006/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc006/go.mod",
+      "text": "svc/svc006/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:e6aa98292a25d5ce05ff7bdd",
+     "distinct_total": 2,
+     "file_id": "ctx:e6aa98292a25d5ce05ff7bdd",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc007/go.mod",
+     "raw_locations": [
+      "/svc/svc007/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc007/go.mod",
+      "text": "svc/svc007/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1641836887b2ab8b097b8880",
+     "distinct_total": 2,
+     "file_id": "ctx:1641836887b2ab8b097b8880",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc008/go.mod",
+     "raw_locations": [
+      "/svc/svc008/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc008/go.mod",
+      "text": "svc/svc008/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:86682322669d637d5d480bc0",
+     "distinct_total": 2,
+     "file_id": "ctx:86682322669d637d5d480bc0",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc009/go.mod",
+     "raw_locations": [
+      "/svc/svc009/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc009/go.mod",
+      "text": "svc/svc009/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:2324e279a7c92a30d3a47a68",
+     "distinct_total": 2,
+     "file_id": "ctx:2324e279a7c92a30d3a47a68",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc010/go.mod",
+     "raw_locations": [
+      "/svc/svc010/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc010/go.mod",
+      "text": "svc/svc010/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:5b0d1b9950acc860b6dd858e",
+     "distinct_total": 2,
+     "file_id": "ctx:5b0d1b9950acc860b6dd858e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc011/go.mod",
+     "raw_locations": [
+      "/svc/svc011/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc011/go.mod",
+      "text": "svc/svc011/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:dccfb8943f9a6106e7aaf967",
+     "distinct_total": 2,
+     "file_id": "ctx:dccfb8943f9a6106e7aaf967",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc012/go.mod",
+     "raw_locations": [
+      "/svc/svc012/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc012/go.mod",
+      "text": "svc/svc012/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:40b1c742e4eaf4b4541185f9",
+     "distinct_total": 2,
+     "file_id": "ctx:40b1c742e4eaf4b4541185f9",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc013/go.mod",
+     "raw_locations": [
+      "/svc/svc013/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc013/go.mod",
+      "text": "svc/svc013/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:e45fb68c19a943c489772568",
+     "distinct_total": 2,
+     "file_id": "ctx:e45fb68c19a943c489772568",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc014/go.mod",
+     "raw_locations": [
+      "/svc/svc014/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc014/go.mod",
+      "text": "svc/svc014/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b06715da56f534f72fc8cc14",
+     "distinct_total": 2,
+     "file_id": "ctx:b06715da56f534f72fc8cc14",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc015/go.mod",
+     "raw_locations": [
+      "/svc/svc015/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc015/go.mod",
+      "text": "svc/svc015/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:9bdcdae4f4af8d5b2c33b16b",
+     "distinct_total": 2,
+     "file_id": "ctx:9bdcdae4f4af8d5b2c33b16b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc016/go.mod",
+     "raw_locations": [
+      "/svc/svc016/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc016/go.mod",
+      "text": "svc/svc016/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:18c6a9da503532121d6759d5",
+     "distinct_total": 2,
+     "file_id": "ctx:18c6a9da503532121d6759d5",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc017/go.mod",
+     "raw_locations": [
+      "/svc/svc017/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc017/go.mod",
+      "text": "svc/svc017/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:1000b71cc26ece20e360d24e",
+     "distinct_total": 2,
+     "file_id": "ctx:1000b71cc26ece20e360d24e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc018/go.mod",
+     "raw_locations": [
+      "/svc/svc018/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc018/go.mod",
+      "text": "svc/svc018/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:3a30462e95cb14a73e5f4b88",
+     "distinct_total": 2,
+     "file_id": "ctx:3a30462e95cb14a73e5f4b88",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/svc019/go.mod",
+     "raw_locations": [
+      "/svc/svc019/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/svc/svc019/go.mod",
+      "text": "svc/svc019/go.mod"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 140,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:24b16ed60c3be1f5bd55f7fd",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 280,
+   "token": "amber"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 80,
+   "files": [
+    {
+     "dependency_context_id": "ctx:adb200c89be67c5906409412",
+     "distinct_total": 2,
+     "file_id": "ctx:adb200c89be67c5906409412",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w000.yml",
+     "raw_locations": [
+      "/.github/workflows/w000.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w000.yml",
+      "text": ".github/workflows/w000.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:166c5c40a309483a50fb822f",
+     "distinct_total": 2,
+     "file_id": "ctx:166c5c40a309483a50fb822f",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w001.yml",
+     "raw_locations": [
+      "/.github/workflows/w001.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w001.yml",
+      "text": ".github/workflows/w001.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:555d99de3a205a89dbb622f5",
+     "distinct_total": 2,
+     "file_id": "ctx:555d99de3a205a89dbb622f5",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w002.yml",
+     "raw_locations": [
+      "/.github/workflows/w002.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w002.yml",
+      "text": ".github/workflows/w002.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8dbde4518e2e8963eb2b2446",
+     "distinct_total": 2,
+     "file_id": "ctx:8dbde4518e2e8963eb2b2446",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w003.yml",
+     "raw_locations": [
+      "/.github/workflows/w003.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w003.yml",
+      "text": ".github/workflows/w003.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8dbfab2abf82d343acf3585e",
+     "distinct_total": 2,
+     "file_id": "ctx:8dbfab2abf82d343acf3585e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w004.yml",
+     "raw_locations": [
+      "/.github/workflows/w004.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w004.yml",
+      "text": ".github/workflows/w004.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:8c89898830e6e36396c76b16",
+     "distinct_total": 2,
+     "file_id": "ctx:8c89898830e6e36396c76b16",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w005.yml",
+     "raw_locations": [
+      "/.github/workflows/w005.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w005.yml",
+      "text": ".github/workflows/w005.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:17bbf753576659ca71e0e03b",
+     "distinct_total": 2,
+     "file_id": "ctx:17bbf753576659ca71e0e03b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w006.yml",
+     "raw_locations": [
+      "/.github/workflows/w006.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w006.yml",
+      "text": ".github/workflows/w006.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:96b53cada4e0beff1671e21b",
+     "distinct_total": 2,
+     "file_id": "ctx:96b53cada4e0beff1671e21b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w007.yml",
+     "raw_locations": [
+      "/.github/workflows/w007.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w007.yml",
+      "text": ".github/workflows/w007.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:114e151718e1f60e1cd7b2a9",
+     "distinct_total": 2,
+     "file_id": "ctx:114e151718e1f60e1cd7b2a9",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w008.yml",
+     "raw_locations": [
+      "/.github/workflows/w008.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w008.yml",
+      "text": ".github/workflows/w008.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:299e858db35111118c59ac9d",
+     "distinct_total": 2,
+     "file_id": "ctx:299e858db35111118c59ac9d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w009.yml",
+     "raw_locations": [
+      "/.github/workflows/w009.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w009.yml",
+      "text": ".github/workflows/w009.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:7fe79a8d248eb779699172a5",
+     "distinct_total": 2,
+     "file_id": "ctx:7fe79a8d248eb779699172a5",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w010.yml",
+     "raw_locations": [
+      "/.github/workflows/w010.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w010.yml",
+      "text": ".github/workflows/w010.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:99f6ed5cee0b55119e04e6d5",
+     "distinct_total": 2,
+     "file_id": "ctx:99f6ed5cee0b55119e04e6d5",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w011.yml",
+     "raw_locations": [
+      "/.github/workflows/w011.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w011.yml",
+      "text": ".github/workflows/w011.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:769032706ebad07d7c771537",
+     "distinct_total": 2,
+     "file_id": "ctx:769032706ebad07d7c771537",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w012.yml",
+     "raw_locations": [
+      "/.github/workflows/w012.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w012.yml",
+      "text": ".github/workflows/w012.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:91ae339a5d649c1042d69455",
+     "distinct_total": 2,
+     "file_id": "ctx:91ae339a5d649c1042d69455",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w013.yml",
+     "raw_locations": [
+      "/.github/workflows/w013.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w013.yml",
+      "text": ".github/workflows/w013.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:916909197e4b6c2a3e40ca31",
+     "distinct_total": 2,
+     "file_id": "ctx:916909197e4b6c2a3e40ca31",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w014.yml",
+     "raw_locations": [
+      "/.github/workflows/w014.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w014.yml",
+      "text": ".github/workflows/w014.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6d48ed5f1337d1e20ca27f30",
+     "distinct_total": 2,
+     "file_id": "ctx:6d48ed5f1337d1e20ca27f30",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w015.yml",
+     "raw_locations": [
+      "/.github/workflows/w015.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w015.yml",
+      "text": ".github/workflows/w015.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:d31ae26253fc319dd982ae7c",
+     "distinct_total": 2,
+     "file_id": "ctx:d31ae26253fc319dd982ae7c",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w016.yml",
+     "raw_locations": [
+      "/.github/workflows/w016.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w016.yml",
+      "text": ".github/workflows/w016.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:6f210c97de1a51772cbf3415",
+     "distinct_total": 2,
+     "file_id": "ctx:6f210c97de1a51772cbf3415",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w017.yml",
+     "raw_locations": [
+      "/.github/workflows/w017.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w017.yml",
+      "text": ".github/workflows/w017.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:cf603ab80d6fbabeef8f2235",
+     "distinct_total": 2,
+     "file_id": "ctx:cf603ab80d6fbabeef8f2235",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w018.yml",
+     "raw_locations": [
+      "/.github/workflows/w018.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w018.yml",
+      "text": ".github/workflows/w018.yml"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:b66dfbfcc5810ba595f379c0",
+     "distinct_total": 2,
+     "file_id": "ctx:b66dfbfcc5810ba595f379c0",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/w019.yml",
+     "raw_locations": [
+      "/.github/workflows/w019.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/.github/workflows/w019.yml",
+      "text": ".github/workflows/w019.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 40,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:cacf220f7502e56aea99a344",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 80,
+   "token": "purple"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 100,
+   "files": [
+    {
+     "dependency_context_id": "ctx:9a659404aa1b2b76c128ed2e",
+     "distinct_total": 2,
+     "file_id": "ctx:9a659404aa1b2b76c128ed2e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o000/main.c",
+     "raw_locations": [
+      "/misc/o000/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o000/main.c",
+      "text": "misc/o000/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:e19484b381ed39a2050ab63d",
+     "distinct_total": 2,
+     "file_id": "ctx:e19484b381ed39a2050ab63d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o001/main.c",
+     "raw_locations": [
+      "/misc/o001/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o001/main.c",
+      "text": "misc/o001/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:06fac755bba90e751f16415c",
+     "distinct_total": 2,
+     "file_id": "ctx:06fac755bba90e751f16415c",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o002/main.c",
+     "raw_locations": [
+      "/misc/o002/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o002/main.c",
+      "text": "misc/o002/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:cbd544da9befb12609163f95",
+     "distinct_total": 2,
+     "file_id": "ctx:cbd544da9befb12609163f95",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o003/main.c",
+     "raw_locations": [
+      "/misc/o003/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o003/main.c",
+      "text": "misc/o003/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c2e3e468f5f25476c435452a",
+     "distinct_total": 2,
+     "file_id": "ctx:c2e3e468f5f25476c435452a",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o004/main.c",
+     "raw_locations": [
+      "/misc/o004/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o004/main.c",
+      "text": "misc/o004/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:98b566ebcf7091d0ef339a5f",
+     "distinct_total": 2,
+     "file_id": "ctx:98b566ebcf7091d0ef339a5f",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o005/main.c",
+     "raw_locations": [
+      "/misc/o005/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o005/main.c",
+      "text": "misc/o005/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:73dc6f92c1a5d2d3fa579e5c",
+     "distinct_total": 2,
+     "file_id": "ctx:73dc6f92c1a5d2d3fa579e5c",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o006/main.c",
+     "raw_locations": [
+      "/misc/o006/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o006/main.c",
+      "text": "misc/o006/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:f41513ea7ddf31b0c5450f77",
+     "distinct_total": 2,
+     "file_id": "ctx:f41513ea7ddf31b0c5450f77",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o007/main.c",
+     "raw_locations": [
+      "/misc/o007/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o007/main.c",
+      "text": "misc/o007/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:3bed59d6033dcd2799e88edf",
+     "distinct_total": 2,
+     "file_id": "ctx:3bed59d6033dcd2799e88edf",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o008/main.c",
+     "raw_locations": [
+      "/misc/o008/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o008/main.c",
+      "text": "misc/o008/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:05a67f9598bf11244669db47",
+     "distinct_total": 2,
+     "file_id": "ctx:05a67f9598bf11244669db47",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o009/main.c",
+     "raw_locations": [
+      "/misc/o009/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o009/main.c",
+      "text": "misc/o009/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c01492389d813e7ffdc0332b",
+     "distinct_total": 2,
+     "file_id": "ctx:c01492389d813e7ffdc0332b",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o010/main.c",
+     "raw_locations": [
+      "/misc/o010/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o010/main.c",
+      "text": "misc/o010/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:f38019441620014ad689ba39",
+     "distinct_total": 2,
+     "file_id": "ctx:f38019441620014ad689ba39",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o011/main.c",
+     "raw_locations": [
+      "/misc/o011/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o011/main.c",
+      "text": "misc/o011/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:93ddac22eda25b465992d747",
+     "distinct_total": 2,
+     "file_id": "ctx:93ddac22eda25b465992d747",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o012/main.c",
+     "raw_locations": [
+      "/misc/o012/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o012/main.c",
+      "text": "misc/o012/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:18d86220b407eab935c4084e",
+     "distinct_total": 2,
+     "file_id": "ctx:18d86220b407eab935c4084e",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o013/main.c",
+     "raw_locations": [
+      "/misc/o013/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o013/main.c",
+      "text": "misc/o013/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:4072e743084de8e5a2ef27ac",
+     "distinct_total": 2,
+     "file_id": "ctx:4072e743084de8e5a2ef27ac",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o014/main.c",
+     "raw_locations": [
+      "/misc/o014/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o014/main.c",
+      "text": "misc/o014/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:23d36ee3338c20c7d22ce0ff",
+     "distinct_total": 2,
+     "file_id": "ctx:23d36ee3338c20c7d22ce0ff",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o015/main.c",
+     "raw_locations": [
+      "/misc/o015/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o015/main.c",
+      "text": "misc/o015/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:d0925fe2ed8bf92bff824af1",
+     "distinct_total": 2,
+     "file_id": "ctx:d0925fe2ed8bf92bff824af1",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o016/main.c",
+     "raw_locations": [
+      "/misc/o016/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o016/main.c",
+      "text": "misc/o016/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:2c8188ea18e35aa25c915802",
+     "distinct_total": 2,
+     "file_id": "ctx:2c8188ea18e35aa25c915802",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o017/main.c",
+     "raw_locations": [
+      "/misc/o017/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o017/main.c",
+      "text": "misc/o017/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:e9263f5c29d922e72dda0dd0",
+     "distinct_total": 2,
+     "file_id": "ctx:e9263f5c29d922e72dda0dd0",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o018/main.c",
+     "raw_locations": [
+      "/misc/o018/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o018/main.c",
+      "text": "misc/o018/main.c"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c5d15e5fb4a71b02670a6404",
+     "distinct_total": 2,
+     "file_id": "ctx:c5d15e5fb4a71b02670a6404",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "misc/o019/main.c",
+     "raw_locations": [
+      "/misc/o019/main.c"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/32d7128786fec1f691336cc4c3b95fd9fa8ab65c/misc/o019/main.c",
+      "text": "misc/o019/main.c"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 20,
+    "total": 50,
+    "truncated": true
+   },
+   "files_offset": 0,
+   "group_id": "grp:58b96cc259780d27abeaa97a",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 100,
+   "token": "neutral"
+  },
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 11,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:0333a94cdad34e3ac4fa7f35",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 11,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "32d7128786fec1f691336cc4c3b95fd9fa8ab65c",
+  "distinct_total": 1317,
+  "located_distinct_total": 1306,
+  "membership_total": 1306,
+  "name": "example-org/sample-web",
+  "unlocated_total": 11
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

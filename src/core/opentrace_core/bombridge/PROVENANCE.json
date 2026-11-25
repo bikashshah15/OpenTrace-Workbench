@@ -1,0 +1,492 @@
+{
+  "dependency": {
+    "networkx": "3.4.2"
+  },
+  "donor": {
+    "commit": "7195f6eb1743e9fc31368c8234471a268ba51ce4",
+    "url": "https://github.com/bikashshah15/BOMBridge"
+  },
+  "donor_overlay": {
+    "assembled_donor_suite": "213 tests, OK, 4 skipped (base alone: 153 tests, 2 failures, 2 skipped)",
+    "credit": "Peiran Shi (BOMBridge gap discovery and connection verification)",
+    "dependency": "none added; the overlay's optional packaging use is not ported (79 Frigate requirement candidates are identical with and without it)",
+    "donor_base": "7195f6eb1743e9fc31368c8234471a268ba51ce4",
+    "not_ported": [
+      "rules_dependencies.py",
+      "adapters_dependencies.py",
+      "adapters_external.py",
+      "capture.py",
+      "dependency_graph.py",
+      "rules_cbom.py edit",
+      "rules_mapping.py edit",
+      "graph.py edit",
+      "links.py edit",
+      "contract.py edit",
+      "preview_model.py",
+      "cli.py",
+      "collect_*.py tools",
+      "prototype HTML"
+    ],
+    "overlay": "BOMBridge_gap_discovery_files (changed-file overlay; HOW_TO_APPLY.md, docs/DISCOVERY.md)",
+    "used": {
+      "exports/frigate/frigate-v0.18.2-cpu-pilot.discovery.result.json": "4659e0778d5b92e1caf461ba1e4d3b0ee806c412972b48f20c8e6392a976bc71",
+      "inputs/frigate/source-declarations.json": "aada73d87aebbba9f0f65a61d09549b921f5bf8b7c3fbe0e5b510168bc24185c",
+      "src/bombridge/adapters.py": "276c3917b41e2bebe4b167f16c8a6e4ced2bbc5addc2b7500c0b757a94869d71",
+      "src/bombridge/discovery.py": "21bfe5a92eb2b5100e36a455e89f3c41f5e564b09c1a8e19a2f1413786c6f545",
+      "src/bombridge/pipeline.py": "61c57a6fece11aea6f01f402b63569ceac5412620a4a76f1097a820679e0a0a3",
+      "src/bombridge/rules_inventory.py": "88748535839bd2d9a337a74c747ac7ab705cae333af047802d3db252d35f867e",
+      "src/bombridge/sources.py": "7b1397138059662ee8d86fe611a382e178f229e2cde62c9492b61c039ed75720"
+    }
+  },
+  "excluded_tests": [
+    {
+      "reason": "runs donor tools/build_aibom_demo.py (not imported)",
+      "replacement": "INT-01 parity on aibom-link-demo export",
+      "test": "test_aibom.DemoAndPilot.test_deterministic_export_matches_golden"
+    },
+    {
+      "reason": "needs donor tools/build_crypto_inventory.py and pinned Frigate workdir; donor skips it without that checkout",
+      "replacement": "none (historical producer)",
+      "test": "test_cbom.Extractor.test_committed_raw_inventory_regenerates_identically"
+    },
+    {
+      "reason": "runs donor tools/make_acquisition_manifest.py and .tools (not imported)",
+      "replacement": "none in I4B; acquisition tooling is I5",
+      "test": "test_cbom.PreparedAibomScope.test_manifest_writer_produces_a_valid_manifest_and_never_estimates_usage"
+    },
+    {
+      "reason": "runs git ls-files over the whole repository, which would inspect OpenTrace changes",
+      "replacement": "OpenTrace's own hygiene tests (I3)",
+      "test": "test_cbom.SecretHygiene.test_no_credentials_in_tracked_text"
+    },
+    {
+      "reason": "inspects donor tools/run_aibom_scan.sh (not imported)",
+      "replacement": "none (script not imported)",
+      "test": "test_cbom.SecretHygiene.test_run_script_reads_the_key_only_from_the_environment_and_disables_env_files"
+    }
+  ],
+  "files": [
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/__init__.py",
+      "donor_sha256": "61de4e6bc47b10fd9055e9c52caf07694719acaa95e8913d787e466f6680bed4",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/__init__.py",
+      "sha256": "61de4e6bc47b10fd9055e9c52caf07694719acaa95e8913d787e466f6680bed4"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/assess.py",
+      "donor_sha256": "9f34b605286460c973d9ef1fff644aaa3490921e0b63d8dd1bf97f2cf5cd117d",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/assess.py",
+      "sha256": "9f34b605286460c973d9ef1fff644aaa3490921e0b63d8dd1bf97f2cf5cd117d"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/contract.py",
+      "donor_sha256": "1ad36406747f41f34f9bf42124f1271e760085fd574feb73aeb6cbef723eec45",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/contract.py",
+      "sha256": "1ad36406747f41f34f9bf42124f1271e760085fd574feb73aeb6cbef723eec45"
+    },
+    {
+      "adaptation": "local_change",
+      "donor_path": "src/bombridge/rules.py",
+      "donor_sha256": "f1b517a996e717d915edec4f4c776299d8d8fd1d43b34e90d174c4f536937b15",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/rules.py",
+      "sha256": "ae357d4dc5835f341bf4e6c8975438be5081498fca51ba652e59025560a03351"
+    },
+    {
+      "adaptation": "local_change",
+      "donor_path": "src/bombridge/rules_inventory.py",
+      "donor_sha256": "c2ec5ce45ce88556f71635c2c62926b47e9c568af9b87759363ba85f6d8115d5",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/rules_inventory.py",
+      "sha256": "88748535839bd2d9a337a74c747ac7ab705cae333af047802d3db252d35f867e"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/rules_aibom.py",
+      "donor_sha256": "51894216862cfa215e8497fb8a829fb5a03458106646c3facc208f6a7b70e04b",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/rules_aibom.py",
+      "sha256": "51894216862cfa215e8497fb8a829fb5a03458106646c3facc208f6a7b70e04b"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/rules_cbom.py",
+      "donor_sha256": "7c4518ad3d8dfa81eade2afa58d880649122863c9a0997910cd2c4c793a60de0",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/rules_cbom.py",
+      "sha256": "7c4518ad3d8dfa81eade2afa58d880649122863c9a0997910cd2c4c793a60de0"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/rules_mapping.py",
+      "donor_sha256": "14004808bfbc87b70ce8d91ead7ceefb6b2f1e042c15dcbc672662b6534220a1",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/rules_mapping.py",
+      "sha256": "14004808bfbc87b70ce8d91ead7ceefb6b2f1e042c15dcbc672662b6534220a1"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/graph.py",
+      "donor_sha256": "cb91ef57d320d82da2dadaeac91a70a154db7c59197ce56a4975511888850c5a",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/graph.py",
+      "sha256": "cb91ef57d320d82da2dadaeac91a70a154db7c59197ce56a4975511888850c5a"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/links.py",
+      "donor_sha256": "694421c79130154e11ca1feff8382829def73561ce75ea81ae627bdb58584b35",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/links.py",
+      "sha256": "694421c79130154e11ca1feff8382829def73561ce75ea81ae627bdb58584b35"
+    },
+    {
+      "adaptation": "local_change",
+      "donor_path": "src/bombridge/pipeline.py",
+      "donor_sha256": "1279bf99d12038afd9409df56119f9d2348ebe93b3689343e24c59e030940c67",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/pipeline.py",
+      "sha256": "a811d09a53df839fa5570f0cf60cb9e62bd700c6a444ebd9fb3bc90f20086a95"
+    },
+    {
+      "adaptation": "local_change",
+      "donor_path": "src/bombridge/adapters.py",
+      "donor_sha256": "a3b4d353cb043d0a50e4da61231a99cca289b2255b4d75ef2a234183fee01552",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/adapters.py",
+      "sha256": "c499ff405721d56c98fdbc85d5ecfd7a474c5b4cd8220adc8654ba2d7c6fe8d5"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/acquisition.py",
+      "donor_sha256": "aa5054b7c26a4034f0c3503de380cb0a13e25757482a0278c2ef5b03ad892933",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/acquisition.py",
+      "sha256": "aa5054b7c26a4034f0c3503de380cb0a13e25757482a0278c2ef5b03ad892933"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/aibom_bundle.py",
+      "donor_sha256": "8b6a572e4ed4b23eff412b725b66570015e20a67cfe306d9f9f373787ac71a3a",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/aibom_bundle.py",
+      "sha256": "8b6a572e4ed4b23eff412b725b66570015e20a67cfe306d9f9f373787ac71a3a"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/cbom_bundle.py",
+      "donor_sha256": "5bd37e3e3a286c031841464a852e83a2e1c14e2b259d72b41d731aba9861e067",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/cbom_bundle.py",
+      "sha256": "5bd37e3e3a286c031841464a852e83a2e1c14e2b259d72b41d731aba9861e067"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/cryptoscan.py",
+      "donor_sha256": "79d92b3f21725fd6accb8542ad50722ec2661c3064c717580c111c5cc79ced6f",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/cryptoscan.py",
+      "sha256": "79d92b3f21725fd6accb8542ad50722ec2661c3064c717580c111c5cc79ced6f"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/cli.py",
+      "donor_sha256": "dc7f97c6903dc2cc8a4309935a0396bc4941c5deae788d077fcdcffdee081e18",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/cli.py",
+      "sha256": "dc7f97c6903dc2cc8a4309935a0396bc4941c5deae788d077fcdcffdee081e18"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "src/bombridge/__main__.py",
+      "donor_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "kind": "source",
+      "path": "src/core/opentrace_core/bombridge/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "adaptation": "imports+fixture_root+deletions",
+      "donor_path": "tests/test_assess.py",
+      "donor_sha256": "2d4ebe8d1dc9b384beb6b5357471e5979c3b2d49880c5f4a9aa1cf9e79a6bd57",
+      "kind": "test",
+      "path": "tests/core/bombridge/test_assess.py",
+      "sha256": "f9733b26d9b027ac05bf3482bb8625fc0349e729d32d99d82632223702fae24f"
+    },
+    {
+      "adaptation": "imports+fixture_root+deletions",
+      "donor_path": "tests/test_requirement_check.py",
+      "donor_sha256": "2c0cfc0d1ed92769c1d736ccbfb206baf7ea7553fd279fd749f6f735640896e6",
+      "kind": "test",
+      "path": "tests/core/bombridge/test_requirement_check.py",
+      "sha256": "ba6fe02c5f07dee67cdf196ebdd3901809384530dee727d3d831a50c758b29cc"
+    },
+    {
+      "adaptation": "imports+fixture_root+deletions",
+      "donor_path": "tests/test_aibom.py",
+      "donor_sha256": "cd4a2b91f4ce287256649acda33b36e0102f0ecc87708582ad2ac0e86db0b0f4",
+      "kind": "test",
+      "path": "tests/core/bombridge/test_aibom.py",
+      "sha256": "8ee1ac42d2ad2c7760073ce4c8cd32bbf7106f4664083233c373a3efec0ad1c4"
+    },
+    {
+      "adaptation": "imports+fixture_root+deletions",
+      "donor_path": "tests/test_cbom.py",
+      "donor_sha256": "6bad707ade32cd2ee154f5bcc9e1d6dd187d46199d6511aaa6fc40e267af78b4",
+      "kind": "test",
+      "path": "tests/core/bombridge/test_cbom.py",
+      "sha256": "706529f0fd5eb3c8cbdc857cffb41d599e25d51f667a09fc83abddc909bb2ed3"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "bundles/frigate-v0.18.2-cpu-pilot.json",
+      "donor_sha256": "27ed6618b5814e4c95c317668b370fcfd536e14a65ed2029a6ae397c7b49b594",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/bundles/frigate-v0.18.2-cpu-pilot.json",
+      "sha256": "27ed6618b5814e4c95c317668b370fcfd536e14a65ed2029a6ae397c7b49b594"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "bundles/aibom-link-demo.bundle.json",
+      "donor_sha256": "24e3b74db0fc3dcdbb7e2877a69542dfb26ed09e5bfdb17d1b37a85052db10d6",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/bundles/aibom-link-demo.bundle.json",
+      "sha256": "24e3b74db0fc3dcdbb7e2877a69542dfb26ed09e5bfdb17d1b37a85052db10d6"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "bundles/viseron-v3.7.0-hailo-detector.json",
+      "donor_sha256": "5ee26bd0e7937edb8e2b1f8b81f56507f193fb238a4a38f760a48d8cd4b67fee",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/bundles/viseron-v3.7.0-hailo-detector.json",
+      "sha256": "5ee26bd0e7937edb8e2b1f8b81f56507f193fb238a4a38f760a48d8cd4b67fee"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "exports/frigate/frigate-v0.18.2-cpu-pilot.result.json",
+      "donor_sha256": "c6b60a9d68c37415c449cc0734f591c0ba0ece5bb47e9d6095c85d553bd43dff",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/exports/frigate/frigate-v0.18.2-cpu-pilot.result.json",
+      "sha256": "c6b60a9d68c37415c449cc0734f591c0ba0ece5bb47e9d6095c85d553bd43dff"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "exports/illustrative/toy-detector.result.json",
+      "donor_sha256": "8193cb8ad7181cd1165a10a56b45793db933b4200fe0890f076aa433dcdd5044",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/exports/illustrative/toy-detector.result.json",
+      "sha256": "8193cb8ad7181cd1165a10a56b45793db933b4200fe0890f076aa433dcdd5044"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "exports/illustrative/aibom-link-demo.result.json",
+      "donor_sha256": "7170b83052f77fab539272199ebfbd88d0f50f3c235ed36d32a07c8f708eab55",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/exports/illustrative/aibom-link-demo.result.json",
+      "sha256": "7170b83052f77fab539272199ebfbd88d0f50f3c235ed36d32a07c8f708eab55"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "exports/viseron/viseron-v3.7.0-hailo-detector.result.json",
+      "donor_sha256": "32869fe4beb01110d2c24db0a4529799abcfaf2740119da98ff34b584499e7af",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/exports/viseron/viseron-v3.7.0-hailo-detector.result.json",
+      "sha256": "32869fe4beb01110d2c24db0a4529799abcfaf2740119da98ff34b584499e7af"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "fixtures/illustrative/toy-detector.json",
+      "donor_sha256": "f38586c3d8748c9ca6098c576235055e1d2949ccd64a317ae3dc46fec1bf92d1",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/fixtures/illustrative/toy-detector.json",
+      "sha256": "f38586c3d8748c9ca6098c576235055e1d2949ccd64a317ae3dc46fec1bf92d1"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "fixtures/illustrative/synthetic-mlbom.cdx.json",
+      "donor_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/fixtures/illustrative/synthetic-mlbom.cdx.json",
+      "sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "config/repositories.json",
+      "donor_sha256": "ccd9a1db1bc9db9719ff45b280c4f4b1ed69b82a9cb8d8d0e90778c25e6d01db",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/config/repositories.json",
+      "sha256": "ccd9a1db1bc9db9719ff45b280c4f4b1ed69b82a9cb8d8d0e90778c25e6d01db"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/raw/syft-source-dir.cdx.json",
+      "donor_sha256": "b7f24bb62503cfe11a8339a27493029f15da0312c94e9c1a01e76e18f285cee9",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/syft-source-dir.cdx.json",
+      "sha256": "b7f24bb62503cfe11a8339a27493029f15da0312c94e9c1a01e76e18f285cee9"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+      "donor_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/cdxgen-cbom.cdx.json",
+      "sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/raw/cisco-aibom.cdx.json",
+      "donor_sha256": "5d1217e2d3db8ba3d1fb76ff351e236df7e0671c3b629fa7b7c87eaaffe608dd",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/cisco-aibom.cdx.json",
+      "sha256": "5d1217e2d3db8ba3d1fb76ff351e236df7e0671c3b629fa7b7c87eaaffe608dd"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/raw/bombridge-crypto-inventory.cdx.json",
+      "donor_sha256": "edfa6416934747756024139b6f8b7fe905cea502a20e798e2f4b597e59ee06a9",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/bombridge-crypto-inventory.cdx.json",
+      "sha256": "edfa6416934747756024139b6f8b7fe905cea502a20e798e2f4b597e59ee06a9"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/aibom-scope.json",
+      "donor_sha256": "f6ad6426cb28ad23914a9481ee16dcd48cb2ada483748013f47b89493586700e",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/aibom-scope.json",
+      "sha256": "f6ad6426cb28ad23914a9481ee16dcd48cb2ada483748013f47b89493586700e"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/cdxgen-acquisition.json",
+      "donor_sha256": "659d7bd2dc4c58dcd91f2899513e1c207488d5800726ac1a592c7bfdfd59fdad",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/cdxgen-acquisition.json",
+      "sha256": "659d7bd2dc4c58dcd91f2899513e1c207488d5800726ac1a592c7bfdfd59fdad"
+    },
+    {
+      "adaptation": "none",
+      "donor_path": "inputs/frigate/crypto-acquisition.json",
+      "donor_sha256": "a5196366a0a18fa9f614dd06704925e4d595631aa86eb8b6147469423540a686",
+      "kind": "fixture",
+      "path": "tests/core/bombridge/fixtures/inputs/frigate/crypto-acquisition.json",
+      "sha256": "a5196366a0a18fa9f614dd06704925e4d595631aa86eb8b6147469423540a686"
+    }
+  ],
+  "local_changes": [
+    {
+      "change": "Overlay (Peiran Shi) requirement-line rules ported: inline-comment handling, 'unpinned' form, pip directive description, walk_components() and nested-component traversal in inventory_lookup_observation. NOT ported: the overlay's optional packaging/_pep508_ok check, evaluate_marker, version_satisfies, and its AI-BOM and CBOM observation edits (so rule /2 and the legacy goldens are unchanged).",
+      "donor_sha256": "a3b4d353cb043d0a50e4da61231a99cca289b2255b4d75ef2a234183fee01552",
+      "path": "src/core/opentrace_core/bombridge/adapters.py",
+      "sha256": "c499ff405721d56c98fdbc85d5ecfd7a474c5b4cd8220adc8654ba2d7c6fe8d5",
+      "task": "I8"
+    },
+    {
+      "change": "pipeline.py: list crypto_attribution.operation_declared_in_cbom/3 in result.rules only when a finding uses it, so earlier exports stay byte-identical. I8: attach_findings() and a result['discovery'] section only when the bundle carries a discovery section (from the gap-discovery overlay, unchanged), so every earlier export stays byte-identical. UIP-12: list crypto_attribution.operation_declared_in_cbom/4 in result.rules only when a finding uses it.",
+      "donor_sha256": "1279bf99d12038afd9409df56119f9d2348ebe93b3689343e24c59e030940c67",
+      "path": "src/core/opentrace_core/bombridge/pipeline.py",
+      "sha256": "a811d09a53df839fa5570f0cf60cb9e62bd700c6a444ebd9fb3bc90f20086a95",
+      "task": "I5C, I8, UIP-12"
+    },
+    {
+      "change": "rules.py: dispatch to rules_cbom3 before rules_cbom for assertions that request rule_version 3. pipeline.py: list crypto_attribution.operation_declared_in_cbom/3 in result.rules only when a finding uses it (as for the mapping rule), so earlier exports stay byte-identical. UIP-12: dispatch to rules_cbom4 (rule_version 4) BEFORE the version-agnostic rules_cbom branch.",
+      "donor_sha256": "f1b517a996e717d915edec4f4c776299d8d8fd1d43b34e90d174c4f536937b15",
+      "path": "src/core/opentrace_core/bombridge/rules.py",
+      "sha256": "ae357d4dc5835f341bf4e6c8975438be5081498fca51ba652e59025560a03351",
+      "task": "I5C, UIP-12"
+    },
+    {
+      "change": "Replaced by the gap-discovery overlay's rules_inventory.py, byte-identical to it (declaration/lookup candidates restricted to the asserted package and file; differing declaration file digests refused). Same rule ID /1; legacy goldens unchanged.",
+      "donor_sha256": "c2ec5ce45ce88556f71635c2c62926b47e9c568af9b87759363ba85f6d8115d5",
+      "overlay_sha256": "88748535839bd2d9a337a74c747ac7ab705cae333af047802d3db252d35f867e",
+      "path": "src/core/opentrace_core/bombridge/rules_inventory.py",
+      "sha256": "88748535839bd2d9a337a74c747ac7ab705cae333af047802d3db252d35f867e",
+      "task": "I8"
+    }
+  ],
+  "opentrace_authored_files": [
+    {
+      "note": "new rule version /3; not a donor file; rules_cbom.py (/2) is unchanged",
+      "path": "src/core/opentrace_core/bombridge/rules_cbom3.py",
+      "task": "I5C"
+    },
+    {
+      "note": "adapted subset of the overlay's discovery.py (requirement -> SBOM path only), with donor sources.requirement_declarations and a pure read_declarations(); see its module docstring for each omission; UIP-12 adds the optional keywords requirements/extra_generators/generator_report/propagate to discover() (child-_Out generator boundary for the requirement and extra generators, ID-strict _Out with full-content collision checks, UIP-12 correction 01); defaults keep the output byte-identical UIP-13: the generated discovery note names the model family when its generator ran (per-generator note text only; no discovered logic changed).",
+      "overlay_source_sha256": "21bfe5a92eb2b5100e36a455e89f3c41f5e564b09c1a8e19a2f1413786c6f545",
+      "path": "src/core/opentrace_core/bombridge/discovery.py",
+      "task": "I8, UIP-12, UIP-13"
+    },
+    {
+      "note": "new rule version /4 (UIP-12; owner decision D7): Python hashlib call sites vs a CBOM with a finite alias mapping and prerequisite gates; not a donor file; rules_cbom.py (/2) and rules_cbom3.py (/3) are unchanged",
+      "path": "src/core/opentrace_core/bombridge/rules_cbom4.py",
+      "task": "UIP-12"
+    },
+    {
+      "note": "Python hashlib call sites compared with the selected CBOM, in the spirit of the gap-discovery overlay's discovery._crypto (BOMBridge donor base 7195f6eb, overlay by Peiran Shi); not copied; unresolved/ambiguous/out-of-scope sites stay visible, no missing_component category, column-aware IDs",
+      "overlay_source_sha256": "21bfe5a92eb2b5100e36a455e89f3c41f5e564b09c1a8e19a2f1413786c6f545",
+      "path": "src/core/opentrace_core/bombridge/discovery_crypto.py",
+      "task": "UIP-12"
+    },
+    {
+      "note": "static model references compared with the selected AI-BOM through the unchanged rule model_identity.declared_in_aibom/1; OpenTrace-authored, in the spirit of the gap-discovery overlay's discovery._models (BOMBridge donor base 7195f6eb; overlay by Peiran Shi; overlay file not copied; overlay sha256 21bfe5a92eb2b5100e36a455e89f3c41f5e564b09c1a8e19a2f1413786c6f545). Differences: unknown-coverage candidates keep every observed reference visible; document-level and per-occurrence gates precede any assertion; hash-derived identifiers; transactional truncation. BOMBridge licensing remains unresolved (BB-REL-01).",
+      "path": "src/core/opentrace_core/bombridge/discovery_models.py",
+      "task": "UIP-13"
+    }
+  ],
+  "opentrace_authored_outside_import": [
+    {
+      "note": "OpenTrace-authored bounded, deterministic, cancellable collector of Python requirement files over the sealed exported tree. Replaces the overlay's checkout collector (sources.collect: git ls-files over a checkout), which cannot run on a tree without .git. Reuses, without copying code: the overlay's REQUIREMENT_GLOBS selection rule and the pip line parsing already imported as bombridge.adapters.parse_requirement_line / bombridge.discovery.requirement_declarations. Model-locator and hashlib collection of the overlay's sources.py are NOT ported (UIP-10 Stage 1).",
+      "overlay_reference": {
+        "file": "src/bombridge/sources.py",
+        "sha256": "7b1397138059662ee8d86fe611a382e178f229e2cde62c9492b61c039ed75720"
+      },
+      "path": "src/core/opentrace_core/live/source_declarations.py",
+      "task": "UIP-10"
+    },
+    {
+      "note": "OpenTrace-authored live orchestration: the live generalisation of the I8 recorded-case flow (server._discover_gaps). Calls bombridge.discovery.discover and the unchanged assessment worker; selects the SBOM by recorded metadata; maps collection state onto the frozen capability vocabulary. No donor code; no imported-file hash changes.",
+      "path": "src/core/opentrace_core/app/live_discovery.py",
+      "task": "UIP-10"
+    },
+    {
+      "donor_reference": {
+        "file": "src/bombridge/cryptoscan.py",
+        "sha256": "79d92b3f21725fd6accb8542ad50722ec2661c3064c717580c111c5cc79ced6f"
+      },
+      "note": "OpenTrace-authored bounded, soft-budgeted, cancellable second-phase collector of Python hashlib call sites over the sealed exported tree (UIP-12). Calls the imported, unchanged cryptoscan.scan_source and adds a conservative second AST audit (original literal, alias binding) only for files that yielded sites. The overlay's checkout collector (sources.collect: git ls-files) is not used; its record field names are followed.",
+      "overlay_reference": {
+        "file": "src/bombridge/sources.py",
+        "sha256": "7b1397138059662ee8d86fe611a382e178f229e2cde62c9492b61c039ed75720"
+      },
+      "path": "src/core/opentrace_core/live/crypto_sites.py",
+      "task": "UIP-12"
+    },
+    {
+      "note": "OpenTrace-authored bounded, deterministic, cancellable collector of static HTTP(S) model-file references in Python string constants, Dockerfile lines and shell lines over the sealed exported tree. Ports, without copying code, the selection globs, the finite extension list and the narrow reference / joined-literal logic of the overlay's sources.py (sha256 7b1397138059662ee8d86fe611a382e178f229e2cde62c9492b61c039ed75720; no git history; Peiran Shi). Differences: URL tokens keep braces and dollar signs so template placeholders are diagnostics; f-string literal pieces are never emitted as locators; trailing punctuation is stripped; bounds, cancellation, path safety, per-file isolation and diagnostics are new. BOMBridge licensing remains unresolved (BB-REL-01); nothing here claims permission.",
+      "overlay_reference": {
+        "file": "src/bombridge/sources.py",
+        "sha256": "7b1397138059662ee8d86fe611a382e178f229e2cde62c9492b61c039ed75720"
+      },
+      "path": "src/core/opentrace_core/live/model_refs.py",
+      "task": "UIP-13"
+    }
+  ],
+  "overlay_fixtures": {
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/main/requirements-dev.txt": "fa2c13dae315506d3afda9c0aa25436867fcb7f0b4186553c3ee7bb64728e85f",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/main/requirements-ov.txt": "7ab93a268ab269b1034d07c243ff22b3dc80a89b1b308de37e11d5184f186d95",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/main/requirements-wheels.txt": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/main/requirements.txt": "dbd92a49d51cea7d79ab49fda674b8a4a9ab9e72133128808fb0e5e82d146508",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/rockchip/requirements-wheels-rk.txt": "9ada430ac004cbcc73887ed2523ba81269b482cbd5a27866b8cf55c2821ddd4c",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/rocm/requirements-wheels-rocm.txt": "05b4648cf50cf156da5d3e9224d2b142d4f50a752e123c90155a395ebb92e97c",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/tensorrt/requirements-amd64.txt": "a5bb9425bd72a44ca161110be337b8af1e857d8a48dce6c65e38fc101e8c54aa",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/tensorrt/requirements-arm64.txt": "c39ff802de2ba1fff8b388ae94c9f0887ac01bc472273557d697568635197fa2",
+    "tests/core/bombridge/fixtures/inputs/frigate/raw/source/docker/tensorrt/requirements-models-arm64.txt": "f2c36d07841e06e95d59263d51793829e8ec2097d5d7e2b8c97b892e2802624c",
+    "tests/core/bombridge/fixtures/inputs/frigate/source-declarations.json": "aada73d87aebbba9f0f65a61d09549b921f5bf8b7c3fbe0e5b510168bc24185c"
+  }
+}

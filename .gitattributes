@@ -1,0 +1,113 @@
+# Git-archive publication filter; never an access/privacy control for collaborators.
+# Explicit directory and nested-file coverage. Test the actual archive before publication.
+.context export-ignore
+.claude export-ignore
+.github export-ignore
+tools/context export-ignore
+tools/release export-ignore
+.context/** export-ignore
+.claude/** export-ignore
+.github/** export-ignore
+AGENTS.md export-ignore
+CLAUDE.md export-ignore
+CONTEXT_START_HERE.md export-ignore
+SHA256SUMS export-ignore
+tools/context/** export-ignore
+tools/release/** export-ignore
+docs/RELEASE.md export-ignore
+artifacts/** export-ignore
+evidence/private/** export-ignore
+# Release candidate: development run logs that carry local absolute paths and are not inputs to any test, demo or reproduction step.
+evidence/uip/uip-07c export-ignore
+evidence/uip/uip-07c/** export-ignore
+evidence/ui-polish-01 export-ignore
+evidence/ui-polish-01/** export-ignore
+evidence/ui-evidence-status-01 export-ignore
+evidence/ui-evidence-status-01/** export-ignore
+# Public submission: the only evaluation evidence is the 2026-11-23 Frigate replay (src/core/opentrace_core/app/demo/frigate-3bca9b8).
+# Older I2/I3 capture archives and development validation logs stay in the private repository.
+evidence/i2 export-ignore
+evidence/i2/** export-ignore
+evidence/i3 export-ignore
+evidence/i3/** export-ignore
+evidence/uip/validation/** export-ignore
+evidence/uip/acceptance/** export-ignore
+evidence/uip/reviews/** export-ignore
+# Baseline records: only v1-v3 are read by public tests (tests/uip/test_correction01.py, tests/core/app/test_view_fixtures.py); the rest stay private.
+evidence/uip/baseline/*.json export-ignore
+evidence/uip/baseline/*.md export-ignore
+evidence/uip/baseline/uip-* export-ignore
+evidence/uip/baseline/opentrace-uip-baseline-v1.json -export-ignore
+evidence/uip/baseline/opentrace-uip-baseline-v2.json -export-ignore
+evidence/uip/baseline/opentrace-uip-baseline-v3.json -export-ignore
+evidence/uip/visual/*.md export-ignore
+evidence/uip/visual/*.json export-ignore
+evidence/uip/visual/sidebar-refinement export-ignore
+evidence/uip/visual/sidebar-refinement-bom-rerun export-ignore
+evidence/uip/visual/uip-02 export-ignore
+evidence/uip/visual/uip-03 export-ignore
+evidence/uip/visual/uip-05 export-ignore
+# uip-04/06/07: keep only the renderer fixtures (and uip-04/reference_geometry.json) that unit tests read.
+evidence/uip/visual/uip-04/app export-ignore
+evidence/uip/visual/uip-04/correction-01 export-ignore
+evidence/uip/visual/uip-04/reference export-ignore
+evidence/uip/visual/uip-04/side-by-side export-ignore
+evidence/uip/visual/uip-04/*.md export-ignore
+evidence/uip/visual/uip-04/manifest.json export-ignore
+evidence/uip/visual/uip-04/thresholds.json export-ignore
+evidence/uip/visual/uip-04/variance.json export-ignore
+evidence/uip/visual/uip-06/captures export-ignore
+evidence/uip/visual/uip-06/reference_captures export-ignore
+evidence/uip/visual/uip-06/*.md export-ignore
+evidence/uip/visual/uip-06/*.json export-ignore
+evidence/uip/visual/uip-07/captures export-ignore
+evidence/uip/visual/uip-07/broader_results export-ignore
+evidence/uip/visual/uip-07/reference_captures export-ignore
+evidence/uip/visual/uip-07/*.md export-ignore
+evidence/uip/visual/uip-07/*.json export-ignore
+# Tests that exercise the excluded I2/I3 capture archives (their evidence/i2 and evidence/i3 inputs are private); other tests are unchanged.
+tests/core/cohort/test_cohort_record.py export-ignore
+tests/core/cohort/test_plan.py export-ignore
+tests/core/cohort/test_families.py export-ignore
+tests/core/cohort/test_severity.py export-ignore
+tests/core/cohort/test_identity.py export-ignore
+tests/investigator/test_i3_schedule.py export-ignore
+tests/tools/test_run_i3.py export-ignore
+tests/tools/test_i3_hygiene.py export-ignore
+tests/tools/test_i3_paths.py export-ignore
+# Final pass: draft design note and review-owned experiment scripts (local absolute paths; referenced only by private records).
+docs/LAB_ASSISTANT_PROVIDER_PROFILES_DRAFT.md export-ignore
+tools/uip07c/topo1 export-ignore
+tools/uip07c/topo1/** export-ignore
+tools/uip07c/topo2 export-ignore
+tools/uip07c/topo2/** export-ignore
+# Frigate-only public submission: I1/I2/I3 experiment scripts, synthetic demonstration data and the tests that exist only for them stay private.
+# (src/agents/*, contracts/, evidence/fixtures/i1|i2|i3 and tests of kept code stay: the live advisory lookup, the Docker image and the Go tests use them.)
+tools/i1 export-ignore
+tools/i1/** export-ignore
+tools/i2 export-ignore
+tools/i2/** export-ignore
+tools/i3 export-ignore
+tools/i3/** export-ignore
+evidence/i1 export-ignore
+evidence/i1/** export-ignore
+tests/tools/i3_helpers.py export-ignore
+tests/tools/test_acquire.py export-ignore
+tests/tools/test_acquire_github.py export-ignore
+tests/tools/test_acquire_osv.py export-ignore
+tests/tools/test_egress_forwarder.py export-ignore
+tests/tools/test_i3_acquire_source.py export-ignore
+tests/tools/test_i3_connect_allowlist.py export-ignore
+tests/tools/test_i3_hygiene.py export-ignore
+tests/tools/test_i3_no_execution.py export-ignore
+tests/tools/test_i3_paths.py export-ignore
+tests/tools/test_pattern_amendment.py export-ignore
+tests/tools/test_replay.py export-ignore
+tests/tools/test_run_i2.py export-ignore
+tests/tools/test_run_i3.py export-ignore
+
+# Internal adapter notes and unused deployment placeholders stay private.
+docs/BOMBRIDGE_ADAPTER.md export-ignore
+deploy/aws export-ignore
+deploy/local export-ignore
+deploy/university export-ignore

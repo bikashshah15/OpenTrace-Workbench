@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.opentrace.invalid/evidence/v2/capability_response.schema.json",
+  "title": "capability_response",
+  "type": "object",
+  "required": [
+    "kind",
+    "schema_version",
+    "request_id",
+    "service_id",
+    "implementation",
+    "capability_version",
+    "contract_versions",
+    "operations",
+    "dimensions",
+    "languages",
+    "limits"
+  ],
+  "properties": {
+    "kind": {
+      "const": "capability_response"
+    },
+    "schema_version": {
+      "$ref": "common.schema.json#/$defs/schema_version"
+    },
+    "request_id": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "service_id": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "implementation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "capability_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "contract_versions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+\\.[0-9]+$"
+      }
+    },
+    "operations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/operation"
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/dimension"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      }
+    },
+    "limits": {
+      "$ref": "common.schema.json#/$defs/limits"
+    }
+  },
+  "additionalProperties": true
+}

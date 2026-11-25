@@ -1,0 +1,29 @@
+{
+ "generation": 1,
+ "identity": {
+  "analysis_digest": "sha256:f243886e894d54ab9e2d321bbc2d7235688e6db71b1d0fab97d080891e5690cd",
+  "basis": "url_revision",
+  "commit": "18ba886e159b40ed59b4aac48bb6a1f3e719b479",
+  "configuration": "config:fixture",
+  "mode": "captured",
+  "name": "sample-web",
+  "owner": "example-org",
+  "repository": "https://github.com/example-org/sample-web",
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  }
+ },
+ "ok": true,
+ "summary": {
+  "advisory_groups": 0,
+  "advisory_rows": 0,
+  "cards": [],
+  "checks": [],
+  "components": 0,
+  "edges": 0,
+  "inventory_checks": 0,
+  "unresolved_edges": 0
+ }
+}

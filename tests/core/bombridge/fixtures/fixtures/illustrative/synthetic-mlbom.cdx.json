@@ -1,0 +1,107 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "model-unique",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 10,
+            "location": "docker/Dockerfile"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://models.example.invalid/unique.tflite"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "84c8f4dab26c5ab4986d98d187c64dfe9b993d9e9f770f039c34e0cae16d3bc0"
+        }
+      ],
+      "modelCard": {
+        "note": "kept only in the raw file"
+      },
+      "name": "unique-detector",
+      "type": "machine-learning-model",
+      "version": "1"
+    },
+    {
+      "bom-ref": "model-samename",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://mirror.example.invalid/other/samename.tflite"
+        }
+      ],
+      "modelCard": {
+        "note": "kept only in the raw file"
+      },
+      "name": "samename",
+      "type": "machine-learning-model",
+      "version": "1"
+    },
+    {
+      "bom-ref": "model-dup-a",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://models.example.invalid/dup.tflite"
+        }
+      ],
+      "modelCard": {
+        "note": "kept only in the raw file"
+      },
+      "name": "dup-a",
+      "type": "machine-learning-model",
+      "version": "1"
+    },
+    {
+      "bom-ref": "model-dup-b",
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://models.example.invalid/dup.tflite"
+        }
+      ],
+      "modelCard": {
+        "note": "kept only in the raw file"
+      },
+      "name": "dup-b",
+      "type": "machine-learning-model",
+      "version": "1"
+    },
+    {
+      "bom-ref": "lib-1",
+      "name": "synthetic-lib",
+      "type": "library",
+      "version": "1.0"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "subject",
+      "name": "synthetic-subject",
+      "type": "application",
+      "version": "0123456789abcdef0123456789abcdef01234567"
+    },
+    "timestamp": "2026-01-01T00:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "author": "illustrative",
+          "name": "synthetic-aibom-generator",
+          "type": "application",
+          "version": "0.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:00000000-0000-4000-8000-000000000001",
+  "specVersion": "1.6",
+  "version": 1
+}

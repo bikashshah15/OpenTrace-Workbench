@@ -1,0 +1,1174 @@
+{
+  "reference": {
+    "file": ".context/references/prototypes/OpenTrace-UI-Update-9-Combined.html",
+    "sha256": "d5bc14fabff29dc42a53dab1f91ae88a6165d70aee808f17e76d066901b3a148"
+  },
+  "viewport": "1366x900",
+  "themes": {
+    "light": {
+      "viewBox": "0 0 1400 1050",
+      "connectors": "M700 130 V160 H352 V215 M700 160 H1048 V215 M560 88 H18 V470 H56 M840 88 H1384 V470 H1344",
+      "root": {
+        "rect": {
+          "x": 560,
+          "y": 44,
+          "w": 280,
+          "h": 86
+        },
+        "texts": [
+          {
+            "x": 580,
+            "y": 74,
+            "size": 20,
+            "text": "Frigate · cfa08c5"
+          },
+          {
+            "x": 580,
+            "y": 98,
+            "size": 15,
+            "text": "1,989 component records"
+          },
+          {
+            "x": 580,
+            "y": 119,
+            "size": 13,
+            "text": "13 captured source locations"
+          }
+        ]
+      },
+      "groups": [
+        {
+          "kind": "docs",
+          "zone": {
+            "x": 40,
+            "y": 200,
+            "w": 625,
+            "h": 190
+          },
+          "header": {
+            "x": 56,
+            "y": 215,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 73,
+              "y": 241,
+              "size": 19,
+              "text": "Documentation"
+            },
+            {
+              "x": 73,
+              "y": 261,
+              "size": 14,
+              "text": "1 captured source location · 1513 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "docs/package-lock.json",
+              "rect": {
+                "x": 89,
+                "y": 291,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 312,
+                  "size": 15,
+                  "text": "docs/"
+                },
+                {
+                  "x": 104,
+                  "y": 334,
+                  "size": 17,
+                  "text": "package-lock.json"
+                },
+                {
+                  "x": 619,
+                  "y": 313,
+                  "size": 14,
+                  "text": "1513 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M72 273 V322 H89"
+          ]
+        },
+        {
+          "kind": "web",
+          "zone": {
+            "x": 735,
+            "y": 200,
+            "w": 625,
+            "h": 190
+          },
+          "header": {
+            "x": 751,
+            "y": 215,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 768,
+              "y": 241,
+              "size": 19,
+              "text": "Web"
+            },
+            {
+              "x": 768,
+              "y": 261,
+              "size": 14,
+              "text": "1 captured source location · 421 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "web/package-lock.json",
+              "rect": {
+                "x": 784,
+                "y": 291,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 312,
+                  "size": 15,
+                  "text": "web/"
+                },
+                {
+                  "x": 799,
+                  "y": 334,
+                  "size": 17,
+                  "text": "package-lock.json"
+                },
+                {
+                  "x": 1314,
+                  "y": 313,
+                  "size": 14,
+                  "text": "421 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M767 273 V322 H784"
+          ]
+        },
+        {
+          "kind": "python",
+          "zone": {
+            "x": 40,
+            "y": 440,
+            "w": 625,
+            "h": 570
+          },
+          "header": {
+            "x": 56,
+            "y": 455,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 73,
+              "y": 481,
+              "size": 19,
+              "text": "Python requirements"
+            },
+            {
+              "x": 73,
+              "y": 501,
+              "size": 14,
+              "text": "5 captured source locations · 21 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "docker/tensorrt/requirements-amd64.txt",
+              "rect": {
+                "x": 89,
+                "y": 531,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 552,
+                  "size": 15,
+                  "text": "docker/tensorrt/"
+                },
+                {
+                  "x": 104,
+                  "y": 574,
+                  "size": 17,
+                  "text": "requirements-amd64.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 553,
+                  "size": 14,
+                  "text": "13 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/main/requirements-wheels.txt",
+              "rect": {
+                "x": 89,
+                "y": 605,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 626,
+                  "size": 15,
+                  "text": "docker/main/"
+                },
+                {
+                  "x": 104,
+                  "y": 648,
+                  "size": 17,
+                  "text": "requirements-wheels.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 627,
+                  "size": 14,
+                  "text": "3 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/tensorrt/requirements-models-arm64.txt",
+              "rect": {
+                "x": 89,
+                "y": 679,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 700,
+                  "size": 15,
+                  "text": "docker/tensorrt/"
+                },
+                {
+                  "x": 104,
+                  "y": 722,
+                  "size": 17,
+                  "text": "requirements-models-arm64.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 701,
+                  "size": 14,
+                  "text": "2 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/rockchip/requirements-wheels-rk.txt",
+              "rect": {
+                "x": 89,
+                "y": 753,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 774,
+                  "size": 15,
+                  "text": "docker/rockchip/"
+                },
+                {
+                  "x": 104,
+                  "y": 796,
+                  "size": 17,
+                  "text": "requirements-wheels-rk.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 775,
+                  "size": 14,
+                  "text": "2 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/main/requirements-dev.txt",
+              "rect": {
+                "x": 89,
+                "y": 827,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 848,
+                  "size": 15,
+                  "text": "docker/main/"
+                },
+                {
+                  "x": 104,
+                  "y": 870,
+                  "size": 17,
+                  "text": "requirements-dev.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 849,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M72 513 V562 H89",
+            "M72 513 V636 H89",
+            "M72 513 V710 H89",
+            "M72 513 V784 H89",
+            "M72 513 V858 H89"
+          ]
+        },
+        {
+          "kind": "actions",
+          "zone": {
+            "x": 735,
+            "y": 440,
+            "w": 625,
+            "h": 570
+          },
+          "header": {
+            "x": 751,
+            "y": 455,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 768,
+              "y": 481,
+              "size": 19,
+              "text": "GitHub Actions"
+            },
+            {
+              "x": 768,
+              "y": 501,
+              "size": 14,
+              "text": "6 captured source locations · 21 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": ".github/workflows/ci.yml",
+              "rect": {
+                "x": 784,
+                "y": 531,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 552,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 574,
+                  "size": 17,
+                  "text": "ci.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 553,
+                  "size": 14,
+                  "text": "7 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/actions/setup/action.yml",
+              "rect": {
+                "x": 784,
+                "y": 605,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 626,
+                  "size": 15,
+                  "text": ".github/actions/setup/"
+                },
+                {
+                  "x": 799,
+                  "y": 648,
+                  "size": 17,
+                  "text": "action.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 627,
+                  "size": 14,
+                  "text": "5 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/pull_request.yml",
+              "rect": {
+                "x": 784,
+                "y": 679,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 700,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 722,
+                  "size": 17,
+                  "text": "pull_request.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 701,
+                  "size": 14,
+                  "text": "4 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/release.yml",
+              "rect": {
+                "x": 784,
+                "y": 753,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 774,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 796,
+                  "size": 17,
+                  "text": "release.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 775,
+                  "size": 14,
+                  "text": "3 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/pr_template_check.yml",
+              "rect": {
+                "x": 784,
+                "y": 827,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 848,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 870,
+                  "size": 17,
+                  "text": "pr_template_check.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 849,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/stale.yml",
+              "rect": {
+                "x": 784,
+                "y": 901,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 922,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 944,
+                  "size": 17,
+                  "text": "stale.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 923,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M767 513 V562 H784",
+            "M767 513 V636 H784",
+            "M767 513 V710 H784",
+            "M767 513 V784 H784",
+            "M767 513 V858 H784",
+            "M767 513 V932 H784"
+          ]
+        }
+      ],
+      "tokens": {
+        "docs": {
+          "zoneFill": "rgb(234, 240, 248)",
+          "edge": "rgb(119, 146, 183)",
+          "headerFill": "rgb(219, 231, 245)",
+          "fileFill": "rgb(244, 247, 252)"
+        },
+        "web": {
+          "zoneFill": "rgb(233, 243, 238)",
+          "edge": "rgb(114, 155, 131)",
+          "headerFill": "rgb(215, 234, 222)",
+          "fileFill": "rgb(243, 249, 245)"
+        },
+        "python": {
+          "zoneFill": "rgb(247, 240, 227)",
+          "edge": "rgb(177, 148, 91)",
+          "headerFill": "rgb(239, 225, 196)",
+          "fileFill": "rgb(252, 248, 240)"
+        },
+        "actions": {
+          "zoneFill": "rgb(240, 236, 247)",
+          "edge": "rgb(153, 132, 179)",
+          "headerFill": "rgb(228, 220, 240)",
+          "fileFill": "rgb(248, 245, 252)"
+        }
+      }
+    },
+    "dark": {
+      "viewBox": "0 0 1400 1050",
+      "connectors": "M700 130 V160 H352 V215 M700 160 H1048 V215 M560 88 H18 V470 H56 M840 88 H1384 V470 H1344",
+      "root": {
+        "rect": {
+          "x": 560,
+          "y": 44,
+          "w": 280,
+          "h": 86
+        },
+        "texts": [
+          {
+            "x": 580,
+            "y": 74,
+            "size": 20,
+            "text": "Frigate · cfa08c5"
+          },
+          {
+            "x": 580,
+            "y": 98,
+            "size": 15,
+            "text": "1,989 component records"
+          },
+          {
+            "x": 580,
+            "y": 119,
+            "size": 13,
+            "text": "13 captured source locations"
+          }
+        ]
+      },
+      "groups": [
+        {
+          "kind": "docs",
+          "zone": {
+            "x": 40,
+            "y": 200,
+            "w": 625,
+            "h": 190
+          },
+          "header": {
+            "x": 56,
+            "y": 215,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 73,
+              "y": 241,
+              "size": 19,
+              "text": "Documentation"
+            },
+            {
+              "x": 73,
+              "y": 261,
+              "size": 14,
+              "text": "1 captured source location · 1513 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "docs/package-lock.json",
+              "rect": {
+                "x": 89,
+                "y": 291,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 312,
+                  "size": 15,
+                  "text": "docs/"
+                },
+                {
+                  "x": 104,
+                  "y": 334,
+                  "size": 17,
+                  "text": "package-lock.json"
+                },
+                {
+                  "x": 619,
+                  "y": 313,
+                  "size": 14,
+                  "text": "1513 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M72 273 V322 H89"
+          ]
+        },
+        {
+          "kind": "web",
+          "zone": {
+            "x": 735,
+            "y": 200,
+            "w": 625,
+            "h": 190
+          },
+          "header": {
+            "x": 751,
+            "y": 215,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 768,
+              "y": 241,
+              "size": 19,
+              "text": "Web"
+            },
+            {
+              "x": 768,
+              "y": 261,
+              "size": 14,
+              "text": "1 captured source location · 421 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "web/package-lock.json",
+              "rect": {
+                "x": 784,
+                "y": 291,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 312,
+                  "size": 15,
+                  "text": "web/"
+                },
+                {
+                  "x": 799,
+                  "y": 334,
+                  "size": 17,
+                  "text": "package-lock.json"
+                },
+                {
+                  "x": 1314,
+                  "y": 313,
+                  "size": 14,
+                  "text": "421 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M767 273 V322 H784"
+          ]
+        },
+        {
+          "kind": "python",
+          "zone": {
+            "x": 40,
+            "y": 440,
+            "w": 625,
+            "h": 570
+          },
+          "header": {
+            "x": 56,
+            "y": 455,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 73,
+              "y": 481,
+              "size": 19,
+              "text": "Python requirements"
+            },
+            {
+              "x": 73,
+              "y": 501,
+              "size": 14,
+              "text": "5 captured source locations · 21 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": "docker/tensorrt/requirements-amd64.txt",
+              "rect": {
+                "x": 89,
+                "y": 531,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 552,
+                  "size": 15,
+                  "text": "docker/tensorrt/"
+                },
+                {
+                  "x": 104,
+                  "y": 574,
+                  "size": 17,
+                  "text": "requirements-amd64.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 553,
+                  "size": 14,
+                  "text": "13 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/main/requirements-wheels.txt",
+              "rect": {
+                "x": 89,
+                "y": 605,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 626,
+                  "size": 15,
+                  "text": "docker/main/"
+                },
+                {
+                  "x": 104,
+                  "y": 648,
+                  "size": 17,
+                  "text": "requirements-wheels.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 627,
+                  "size": 14,
+                  "text": "3 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/tensorrt/requirements-models-arm64.txt",
+              "rect": {
+                "x": 89,
+                "y": 679,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 700,
+                  "size": 15,
+                  "text": "docker/tensorrt/"
+                },
+                {
+                  "x": 104,
+                  "y": 722,
+                  "size": 17,
+                  "text": "requirements-models-arm64.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 701,
+                  "size": 14,
+                  "text": "2 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/rockchip/requirements-wheels-rk.txt",
+              "rect": {
+                "x": 89,
+                "y": 753,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 774,
+                  "size": 15,
+                  "text": "docker/rockchip/"
+                },
+                {
+                  "x": 104,
+                  "y": 796,
+                  "size": 17,
+                  "text": "requirements-wheels-rk.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 775,
+                  "size": 14,
+                  "text": "2 records"
+                }
+              ]
+            },
+            {
+              "path": "docker/main/requirements-dev.txt",
+              "rect": {
+                "x": 89,
+                "y": 827,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 104,
+                  "y": 848,
+                  "size": 15,
+                  "text": "docker/main/"
+                },
+                {
+                  "x": 104,
+                  "y": 870,
+                  "size": 17,
+                  "text": "requirements-dev.txt"
+                },
+                {
+                  "x": 619,
+                  "y": 849,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M72 513 V562 H89",
+            "M72 513 V636 H89",
+            "M72 513 V710 H89",
+            "M72 513 V784 H89",
+            "M72 513 V858 H89"
+          ]
+        },
+        {
+          "kind": "actions",
+          "zone": {
+            "x": 735,
+            "y": 440,
+            "w": 625,
+            "h": 570
+          },
+          "header": {
+            "x": 751,
+            "y": 455,
+            "w": 593,
+            "h": 58
+          },
+          "headerText": [
+            {
+              "x": 768,
+              "y": 481,
+              "size": 19,
+              "text": "GitHub Actions"
+            },
+            {
+              "x": 768,
+              "y": 501,
+              "size": 14,
+              "text": "6 captured source locations · 21 distinct records"
+            }
+          ],
+          "files": [
+            {
+              "path": ".github/workflows/ci.yml",
+              "rect": {
+                "x": 784,
+                "y": 531,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 552,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 574,
+                  "size": 17,
+                  "text": "ci.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 553,
+                  "size": 14,
+                  "text": "7 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/actions/setup/action.yml",
+              "rect": {
+                "x": 784,
+                "y": 605,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 626,
+                  "size": 15,
+                  "text": ".github/actions/setup/"
+                },
+                {
+                  "x": 799,
+                  "y": 648,
+                  "size": 17,
+                  "text": "action.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 627,
+                  "size": 14,
+                  "text": "5 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/pull_request.yml",
+              "rect": {
+                "x": 784,
+                "y": 679,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 700,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 722,
+                  "size": 17,
+                  "text": "pull_request.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 701,
+                  "size": 14,
+                  "text": "4 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/release.yml",
+              "rect": {
+                "x": 784,
+                "y": 753,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 774,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 796,
+                  "size": 17,
+                  "text": "release.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 775,
+                  "size": 14,
+                  "text": "3 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/pr_template_check.yml",
+              "rect": {
+                "x": 784,
+                "y": 827,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 848,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 870,
+                  "size": 17,
+                  "text": "pr_template_check.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 849,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            },
+            {
+              "path": ".github/workflows/stale.yml",
+              "rect": {
+                "x": 784,
+                "y": 901,
+                "w": 545,
+                "h": 64
+              },
+              "texts": [
+                {
+                  "x": 799,
+                  "y": 922,
+                  "size": 15,
+                  "text": ".github/workflows/"
+                },
+                {
+                  "x": 799,
+                  "y": 944,
+                  "size": 17,
+                  "text": "stale.yml"
+                },
+                {
+                  "x": 1314,
+                  "y": 923,
+                  "size": 14,
+                  "text": "1 records"
+                }
+              ]
+            }
+          ],
+          "links": [
+            "M767 513 V562 H784",
+            "M767 513 V636 H784",
+            "M767 513 V710 H784",
+            "M767 513 V784 H784",
+            "M767 513 V858 H784",
+            "M767 513 V932 H784"
+          ]
+        }
+      ],
+      "tokens": {
+        "docs": {
+          "zoneFill": "rgb(32, 45, 61)",
+          "edge": "rgb(126, 159, 198)",
+          "headerFill": "rgb(41, 61, 85)",
+          "fileFill": "rgb(36, 51, 69)"
+        },
+        "web": {
+          "zoneFill": "rgb(35, 54, 44)",
+          "edge": "rgb(127, 170, 141)",
+          "headerFill": "rgb(44, 71, 56)",
+          "fileFill": "rgb(41, 62, 50)"
+        },
+        "python": {
+          "zoneFill": "rgb(58, 50, 36)",
+          "edge": "rgb(189, 163, 109)",
+          "headerFill": "rgb(76, 63, 41)",
+          "fileFill": "rgb(65, 56, 39)"
+        },
+        "actions": {
+          "zoneFill": "rgb(48, 40, 60)",
+          "edge": "rgb(174, 150, 199)",
+          "headerFill": "rgb(64, 51, 80)",
+          "fileFill": "rgb(55, 46, 69)"
+        }
+      }
+    }
+  },
+  "blocked_requests": []
+}

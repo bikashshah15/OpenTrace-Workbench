@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.opentrace.invalid/evidence/v2/rejection.schema.json",
+  "title": "rejection",
+  "type": "object",
+  "required": [
+    "kind",
+    "schema_version",
+    "task_id",
+    "run_id",
+    "code",
+    "message",
+    "retryable"
+  ],
+  "properties": {
+    "kind": {
+      "const": "rejection"
+    },
+    "schema_version": {
+      "$ref": "common.schema.json#/$defs/schema_version"
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 128
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "unsupported_schema_version",
+        "invalid_request",
+        "deadline_exceeded",
+        "operation_not_supported",
+        "unsupported_kind",
+        "context_mismatch",
+        "unsupported_capability_version",
+        "candidate_mismatch",
+        "capture_mismatch",
+        "patch_scope_violation",
+        "oracle_modified"
+      ]
+    },
+    "message": {
+      "$ref": "common.schema.json#/$defs/short_text"
+    },
+    "retryable": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

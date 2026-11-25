@@ -1,0 +1,39 @@
+{
+  "budget": {
+    "max_produced_artifact_bytes": 262144,
+    "max_worker_jobs": 1
+  },
+  "capability_version": "1.0",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "go.mod require directives only",
+    "candidate_id": null,
+    "language": "go",
+    "observed_by": "unknown-field",
+    "repo_id": "opentrace-fixture/i1-gomod-basic",
+    "requested_revision": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b"
+  },
+  "deadline": "2026-10-13T12:00:30.000Z",
+  "inputs": [
+    {
+      "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+      "media_type": "text/plain; charset=utf-8",
+      "role": "go.mod"
+    }
+  ],
+  "issued_at": "2026-10-13T12:00:00.000Z",
+  "kind": "task_request",
+  "operations": [
+    "go_mod_inventory"
+  ],
+  "requirements": [
+    {
+      "description": "Evidence of dimension inventory for the fixture context",
+      "dimension": "inventory",
+      "requirement_id": "req-1-inventory"
+    }
+  ],
+  "run_id": "run-example-s1",
+  "schema_version": "1.0",
+  "task_id": "ex-task-002"
+}

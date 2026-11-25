@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "80ee4cef4569539f88b709a7eabb686ecb813ef6142fbda2cfc53251e630b500"
+  },
+  {
+   "bytes": 9602,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "d6f6a6c61439579befad80fb1c8f6f33ad5c97383c9f54b58b4e3e004a3f4b54"
+  }
+ ],
+ "name": "uip04-multi-ecosystem",
+ "notes": "A multi-ecosystem synthetic repository with located and unlocated components.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

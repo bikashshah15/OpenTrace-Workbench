@@ -1,0 +1,105 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "The CBOM lists no cryptographic assets. This does not show that no cryptography is used.",
+  "reason_code": "no_applicable_assets",
+  "state": "completed_empty"
+ },
+ "binding": {
+  "analysis_digest": "sha256:9cba021cd61f582eb9e4f9b13b68dc720282db98ef20eabdf8f0c6fce566edd0",
+  "assessment": {
+   "bundle_sha256": "3413c13976457dc1128766137b289370c78041d1f69aba4e90853991a0b403cb",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "98feefaf480340307dedc54937b0f3768fafa52cffef0244c24801d3a3212990"
+  },
+  "commit_sha": "00a98af1f8a20108e85d1b4c736780b4efb9c135",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/unsupp",
+   "host": "github.com",
+   "name": "unsupp",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 9.9.9"
+   },
+   "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

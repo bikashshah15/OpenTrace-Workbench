@@ -1,0 +1,1 @@
+govulncheck: loading packages: err: exit status 1: stderr: go: golang.org/x/text@v0.41.0 requires go >= 1.25.0 (running go 1.24.7; GOTOOLCHAIN=local)

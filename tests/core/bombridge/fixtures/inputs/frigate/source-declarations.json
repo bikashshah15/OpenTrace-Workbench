@@ -1,0 +1,246 @@
+{
+  "checkout": {
+    "method": "git rev-parse HEAD equals the pinned revision; files listed with git ls-files (tracked files only)",
+    "verified_head": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+  },
+  "collected_by": {
+    "note": "reads files only; nothing imported, installed, downloaded or executed",
+    "tool": "tools/collect_source_declarations.py (src/bombridge/sources.py)"
+  },
+  "crypto_call_sites": [
+    {
+      "algorithm": "sha256",
+      "algorithm_resolved": true,
+      "call": "hashlib.pbkdf2_hmac",
+      "context": "hash_password",
+      "end_line": 376,
+      "excerpt": "    pw_hash = hashlib.pbkdf2_hmac(\n        \"sha256\", password.encode(\"utf-8\"), salt.encode(\"utf-8\"), iterations\n    )",
+      "file_sha256": "eef3797d34709e33e0f6f659afb64575d2201d08d724246be25353314192b3a6",
+      "line": 374,
+      "path": "frigate/api/auth.py",
+      "source_line": "pw_hash = hashlib.pbkdf2_hmac("
+    },
+    {
+      "algorithm": "sha256",
+      "algorithm_resolved": true,
+      "call": "hashlib.sha256",
+      "context": "profile",
+      "end_line": 813,
+      "excerpt": "        cache_key = hashlib.sha256(key_material.encode()).hexdigest()",
+      "file_sha256": "eef3797d34709e33e0f6f659afb64575d2201d08d724246be25353314192b3a6",
+      "line": 813,
+      "path": "frigate/api/auth.py",
+      "source_line": "cache_key = hashlib.sha256(key_material.encode()).hexdigest()"
+    },
+    {
+      "algorithm": "md5",
+      "algorithm_resolved": true,
+      "call": "hashlib.md5",
+      "context": "ModelConfig.compute_model_hash",
+      "end_line": 215,
+      "excerpt": "            self._model_hash = hashlib.md5(b\"unknown\").hexdigest()",
+      "file_sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17",
+      "line": 215,
+      "path": "frigate/detectors/detector_config.py",
+      "source_line": "self._model_hash = hashlib.md5(b\"unknown\").hexdigest()"
+    },
+    {
+      "algorithm": "md5",
+      "algorithm_resolved": true,
+      "call": "hashlib.md5",
+      "context": "ModelConfig.compute_model_hash",
+      "end_line": 218,
+      "excerpt": "                file_hash = hashlib.md5()",
+      "file_sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17",
+      "line": 218,
+      "path": "frigate/detectors/detector_config.py",
+      "source_line": "file_hash = hashlib.md5()"
+    }
+  ],
+  "limitations": [
+    "source declarations state what the code and build files name; they do not show what is built, installed, downloaded or loaded",
+    "model locators are URL string constants with a model-file extension; models named any other way (archives, runtime-built strings, configuration files) are not found",
+    "crypto call sites are hashlib calls only (cryptoscan coverage); other libraries are not inventoried",
+    "requirement files are matched by name; a file installed under another name is not found"
+  ],
+  "model_references": [
+    {
+      "excerpt": "RUN wget -qO edgetpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "file_sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37",
+      "lines": [
+        137,
+        137
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "method": "line-url-token",
+      "path": "docker/main/Dockerfile"
+    },
+    {
+      "excerpt": "RUN wget -qO cpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "file_sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37",
+      "lines": [
+        138,
+        138
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "method": "line-url-token",
+      "path": "docker/main/Dockerfile"
+    },
+    {
+      "excerpt": "H8_DEFAULT_URL = \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov6n.hef\"",
+      "file_sha256": "8dd559f9b9645113e50ba9c8b935e097cb061ee2b1dccd840da8d8134f80573c",
+      "lines": [
+        52,
+        52
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov6n.hef",
+      "method": "python-ast-string-constant",
+      "path": "frigate/detectors/plugins/hailo8l.py"
+    },
+    {
+      "excerpt": "H8L_DEFAULT_URL = \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8l/yolov6n.hef\"",
+      "file_sha256": "8dd559f9b9645113e50ba9c8b935e097cb061ee2b1dccd840da8d8134f80573c",
+      "lines": [
+        53,
+        53
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8l/yolov6n.hef",
+      "method": "python-ast-string-constant",
+      "path": "frigate/detectors/plugins/hailo8l.py"
+    },
+    {
+      "excerpt": "      https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx",
+      "file_sha256": "f9b6aee3a9bfd244b0b02e2fcc974bfdac77ee86a7870d2237e33331056092e1",
+      "lines": [
+        105,
+        105
+      ],
+      "locator": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx",
+      "method": "python-ast-string-constant",
+      "path": "testing-scripts/object_dataset.py"
+    },
+    {
+      "excerpt": "            \"Path to ONNX MobileNetV2 file for model-independent embeddings \"\n            \"(required by --confuses). Download once with: curl -L -o \"\n            \"/config/model_cache/mobilenetv2-7.onnx https://github.com/onnx/\"\n            \"models/raw/main/validated/vision/classification/mobilenet/model/\"\n            \"mobilenetv2-7.onnx\"",
+      "file_sha256": "f9b6aee3a9bfd244b0b02e2fcc974bfdac77ee86a7870d2237e33331056092e1",
+      "lines": [
+        921,
+        925
+      ],
+      "locator": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx",
+      "method": "python-ast-joined-string-literals",
+      "path": "testing-scripts/object_dataset.py",
+      "string_literal": "Path to ONNX MobileNetV2 file for model-independent embeddings (required by --confuses). Download once with: curl -L -o /config/model_cache/mobilenetv2-7.onnx https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx"
+    }
+  ],
+  "repository": "https://github.com/blakeblackshear/frigate",
+  "requirement_files": [
+    {
+      "bytes": 48,
+      "copy": "inputs/frigate/raw/source/docker/main/requirements-dev.txt",
+      "declaration_lines": 2,
+      "named_requirements": 2,
+      "path": "docker/main/requirements-dev.txt",
+      "sha256": "fa2c13dae315506d3afda9c0aa25436867fcb7f0b4186553c3ee7bb64728e85f"
+    },
+    {
+      "bytes": 27,
+      "copy": "inputs/frigate/raw/source/docker/main/requirements-ov.txt",
+      "declaration_lines": 2,
+      "named_requirements": 2,
+      "path": "docker/main/requirements-ov.txt",
+      "sha256": "7ab93a268ab269b1034d07c243ff22b3dc80a89b1b308de37e11d5184f186d95"
+    },
+    {
+      "bytes": 2021,
+      "copy": "inputs/frigate/raw/source/docker/main/requirements-wheels.txt",
+      "declaration_lines": 70,
+      "named_requirements": 69,
+      "path": "docker/main/requirements-wheels.txt",
+      "sha256": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20"
+    },
+    {
+      "bytes": 23,
+      "copy": "inputs/frigate/raw/source/docker/main/requirements.txt",
+      "declaration_lines": 1,
+      "named_requirements": 1,
+      "path": "docker/main/requirements.txt",
+      "sha256": "dbd92a49d51cea7d79ab49fda674b8a4a9ab9e72133128808fb0e5e82d146508"
+    },
+    {
+      "bytes": 50,
+      "copy": "inputs/frigate/raw/source/docker/rockchip/requirements-wheels-rk.txt",
+      "declaration_lines": 2,
+      "named_requirements": 2,
+      "path": "docker/rockchip/requirements-wheels-rk.txt",
+      "sha256": "9ada430ac004cbcc73887ed2523ba81269b482cbd5a27866b8cf55c2821ddd4c"
+    },
+    {
+      "bytes": 159,
+      "copy": "inputs/frigate/raw/source/docker/rocm/requirements-wheels-rocm.txt",
+      "declaration_lines": 1,
+      "named_requirements": 1,
+      "path": "docker/rocm/requirements-wheels-rocm.txt",
+      "sha256": "05b4648cf50cf156da5d3e9224d2b142d4f50a752e123c90155a395ebb92e97c"
+    },
+    {
+      "bytes": 997,
+      "copy": "inputs/frigate/raw/source/docker/tensorrt/requirements-amd64.txt",
+      "declaration_lines": 17,
+      "named_requirements": 16,
+      "path": "docker/tensorrt/requirements-amd64.txt",
+      "sha256": "a5bb9425bd72a44ca161110be337b8af1e857d8a48dce6c65e38fc101e8c54aa"
+    },
+    {
+      "bytes": 100,
+      "copy": "inputs/frigate/raw/source/docker/tensorrt/requirements-arm64.txt",
+      "declaration_lines": 2,
+      "named_requirements": 2,
+      "path": "docker/tensorrt/requirements-arm64.txt",
+      "sha256": "c39ff802de2ba1fff8b388ae94c9f0887ac01bc472273557d697568635197fa2"
+    },
+    {
+      "bytes": 96,
+      "copy": "inputs/frigate/raw/source/docker/tensorrt/requirements-models-arm64.txt",
+      "declaration_lines": 2,
+      "named_requirements": 2,
+      "path": "docker/tensorrt/requirements-models-arm64.txt",
+      "sha256": "f2c36d07841e06e95d59263d51793829e8ec2097d5d7e2b8c97b892e2802624c"
+    }
+  ],
+  "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "schema": "bombridge.source-declarations/1",
+  "searched": {
+    "dynamic_or_archive_url_expressions_not_classified": 0,
+    "model_extensions": [
+      ".tflite",
+      ".hef",
+      ".onnx",
+      ".pt",
+      ".pth",
+      ".pb",
+      ".rknn",
+      ".engine",
+      ".h5",
+      ".safetensors",
+      ".gguf",
+      ".mlmodel",
+      ".caffemodel",
+      ".ort"
+    ],
+    "parse_errors": [],
+    "reference_files_scanned": 422,
+    "reference_globs": [
+      "*.py",
+      "Dockerfile",
+      "Dockerfile.*",
+      "*.Dockerfile",
+      "*.dockerfile",
+      "*.sh"
+    ],
+    "requirement_globs": [
+      "*requirements*.txt",
+      "requirements/*.txt"
+    ],
+    "tracked_files": 3020
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 661,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "b80afcd3716c562d6b8a47e84eaa637424798cb1d2da1b2ee488b7115d02417a"
+  },
+  {
+   "bytes": 5463,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "c4adef8719e7bdf6c7793a2f33ad0df4d4688fa287f52215ced6eb6898ef7226"
+  }
+ ],
+ "name": "uip04-hostile-text",
+ "notes": "Markup-like, URL-scheme-like and bidi text in paths: rendered as text, links stay inert unless an exact pinned https://github.com/ URL.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

@@ -1,0 +1,43 @@
+{
+  "budget": {
+    "max_produced_artifact_bytes": 1048576,
+    "max_worker_jobs": 1
+  },
+  "capability_version": "2.0",
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "linux/amd64 cgo=0 no build tags, ./...",
+    "candidate_id": "sha256:0c64473a4e3bbaf7e79eba952c7984d35134cc228cb4277cccbfa152ddd0e8cb",
+    "language": "go",
+    "repo_id": "opentrace-fixture/i2-go-acceptlang",
+    "requested_revision": "sha256:ca850ae111d4809095c15dd8da9dba65a665235a8f5bbbdbcb31f784f2705b4c"
+  },
+  "deadline": "2026-10-13T12:04:00.000Z",
+  "inputs": [
+    {
+      "digest": "sha256:ca850ae111d4809095c15dd8da9dba65a665235a8f5bbbdbcb31f784f2705b4c",
+      "media_type": "application/json",
+      "role": "source_manifest"
+    },
+    {
+      "digest": "sha256:0c64473a4e3bbaf7e79eba952c7984d35134cc228cb4277cccbfa152ddd0e8cb",
+      "media_type": "text/x-diff",
+      "role": "candidate_patch"
+    }
+  ],
+  "issued_at": "2026-10-13T12:00:00.000Z",
+  "kind": "task_request",
+  "operations": [
+    "change_validate"
+  ],
+  "requirements": [
+    {
+      "dimension": "change_validation",
+      "requirement_id": "req-1"
+    }
+  ],
+  "run_id": "run-tcv",
+  "schema_version": "2.0",
+  "task_id": "tcv"
+}

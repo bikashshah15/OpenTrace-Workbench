@@ -1,0 +1,12 @@
+{
+  "schema": "opentrace.live_allowlist/1",
+  "note": "Live acquisition is limited to the exact repository and full 40-hex commit listed here. Adding an entry is an owner decision (EDQ-08, EDQ-04). A URL that resolves to any other commit is refused, not scanned.",
+  "entries": [
+    {
+      "repo": "modelcontextprotocol/inspector",
+      "commit_sha": "074b8108f340590268f2900741403755e923a11c",
+      "pinned_by": ".context/intake/I3_COHORT_CANDIDATES_2026-10-14.json (I3 cohort pin, observed 2026-10-14); license observed there as Apache-2.0",
+      "why": "Small public npm workspace (6 package-lock.json files, 1,667 files) whose lockfiles are statically parsable without running any package manager."
+    }
+  ]
+}

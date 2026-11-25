@@ -1,0 +1,110 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:8e657b60a1d708f2624eff200c17238bb95a008fdedf1641c9f5b56a4f87fcf7",
+  "assessment": null,
+  "commit_sha": "6677b0f7096aa4a2756460807ffa16fa8b9e1882",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/hostile-lab",
+   "host": "github.com",
+   "name": "hostile-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 2,
+  "total": 2,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 1,
+   "files": [
+    {
+     "dependency_context_id": null,
+     "distinct_total": 1,
+     "file_id": "ctx:4a22cb2a4e9f2ebd9d215f7e",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_recorded_path"
+     ],
+     "path": "docs/a‮b‬.md",
+     "raw_locations": [
+      "/docs/x.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": null,
+      "text": "javascript:alert(1)"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:3ffa189d4498270ea1ec2ade",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 1,
+   "token": "blue"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 2,
+   "files": [
+    {
+     "dependency_context_id": null,
+     "distinct_total": 2,
+     "file_id": "ctx:37ecfd9309f37645c77decfa",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_recorded_path"
+     ],
+     "path": "src/\"><img src=x onerror=alert(1)>.py",
+     "raw_locations": [
+      "/src/\"><img src=x onerror=alert(1)>.py"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/hostile-lab/blob/6677b0f7096aa4a2756460807ffa16fa8b9e1882/src/%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E.py",
+      "text": "src/\"><img src=x onerror=alert(1)>.py"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:d1f3880c6fa9d411979c3a4b",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 2,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/hostile-lab",
+  "commit_sha": "6677b0f7096aa4a2756460807ffa16fa8b9e1882",
+  "distinct_total": 3,
+  "located_distinct_total": 3,
+  "membership_total": 3,
+  "name": "example-org/hostile-lab",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

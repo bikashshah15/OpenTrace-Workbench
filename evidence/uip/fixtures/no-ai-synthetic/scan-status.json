@@ -1,0 +1,182 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:73717cd31b8249e9fa66f171f8e9df47fd7ecfa28fa1394661c0b9a93e922afd",
+  "assessment": null,
+  "commit_sha": "fd7b41adb234d578b220673d2089c54701c21b0a",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/plain-lib",
+   "host": "github.com",
+   "name": "plain-lib",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": null,
+  "ready": true
+ },
+ "identity": {
+  "analysis_digest": "sha256:73717cd31b8249e9fa66f171f8e9df47fd7ecfa28fa1394661c0b9a93e922afd",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/example-org/plain-lib/tree/v1.0.0"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/example-org/plain-lib",
+   "host": "github.com",
+   "name": "plain-lib",
+   "owner": "example-org"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "fd7b41adb234d578b220673d2089c54701c21b0a",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 7000,
+  "job_id": "job:00353a8040e3a89dee091f56",
+  "seq": 7,
+  "state": "completed",
+  "updated_at": "2026-01-01T00:00:07Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:04Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": "2026-01-01T00:00:03Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:04Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:06Z",
+   "outputs": [
+    {
+     "artifact_id": "art:sbom-4af36d9a",
+     "kind": "sbom",
+     "sha256": "23203de2d1b6c107dc27d238c598a5cc16ba3641bcc45ec3d3ee31034a46a833",
+     "size": 1009
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": "2026-01-01T00:00:05Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:06Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:08Z",
+   "outputs": [
+    {
+     "artifact_id": "art:cbom-163dcfbc",
+     "kind": "cbom",
+     "sha256": "36b4a1b89509b009c26a97b43c561ee11513b061a7e981bc99072fbd09e67905",
+     "size": 1009
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "cbom",
+   "started_at": "2026-01-01T00:00:07Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:08Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "not_configured",
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:16Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": "2026-01-01T00:00:15Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:16Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:18Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": "2026-01-01T00:00:17Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:18Z",
+   "warnings": []
+  }
+ ]
+}

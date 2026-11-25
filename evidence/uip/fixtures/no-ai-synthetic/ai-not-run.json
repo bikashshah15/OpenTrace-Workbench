@@ -1,0 +1,52 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "AI inventory is not configured for this scan.",
+  "reason_code": "not_configured",
+  "state": "not_run"
+ },
+ "binding": {
+  "analysis_digest": "sha256:2dcb32e43a3ece52d965d65d0a12c1e8c8d13e11faf3c65c9abe946a7e916958",
+  "assessment": null,
+  "commit_sha": "b9ffb4d04b9507f1dda66998084358643b1961b9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/plain-lib",
+   "host": "github.com",
+   "name": "plain-lib",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 0,
+  "findings": 0,
+  "models": 0,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [],
+ "tab": "ai"
+}

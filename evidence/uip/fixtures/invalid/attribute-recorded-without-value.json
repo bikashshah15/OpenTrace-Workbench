@@ -1,0 +1,353 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:f84c964e53f73db9b231e96f",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "recorded in the CBOM",
+      "state": "recorded",
+      "value": null
+     },
+     "certificate_subject": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "recorded in the CBOM",
+      "state": "recorded",
+      "value": "hash"
+     },
+     "protocol_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "SHA-256",
+    "kind": "algorithm",
+    "occurrences": [],
+    "occurrences_total": 0,
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/components/0",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "source_group_ids": []
+   },
+   {
+    "asset_id": "ast:b566eead58ed89c17df31572",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "certificate_subject": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "source text",
+      "state": "recorded",
+      "value": "TLS"
+     },
+     "protocol_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "TLS client setup",
+    "kind": "protocol",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "source_text",
+       "text": "verification flag is set in source"
+      },
+      "occurrence_id": "occ:9cb501f2756de30173af8056",
+      "operation": "TLS context creation",
+      "producer_id": "fixture-source-observer",
+      "source_location": {
+       "excerpt": "ctx = make_context(verify=False)",
+       "excerpt_state": "recorded",
+       "file_sha256": "41492b2d44958c9ffdbc7d8048edfada2abcb808767166474795656f138bb024",
+       "line_end": 14,
+       "line_start": 12,
+       "link": {
+        "href": "https://github.com/example-org/crypto-lab/blob/f34542f417a621d7047382b6800f9734d8334084/src/net/client.py",
+        "text": "src/net/client.py"
+       },
+       "path": "src/net/client.py"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-observer",
+     "producer_version": "0.1"
+    },
+    "source_group_ids": [
+     "grp:8671420b01667147a07e6eea"
+    ]
+   },
+   {
+    "asset_id": "ast:dc8fc5c2a16233fe093194a9",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "certificate_subject": {
+      "basis": "recorded in the CBOM",
+      "state": "recorded",
+      "value": "CN=service.invalid"
+     },
+     "parameter": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "service-cert",
+    "kind": "certificate",
+    "occurrences": [],
+    "occurrences_total": 0,
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/components/1",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "source_group_ids": [
+     "grp:8671420b01667147a07e6eea"
+    ]
+   }
+  ],
+  "availability": {
+   "message": "Two files were excluded and two dynamic values are unknown; the list is incomplete.",
+   "reason_code": "partial_coverage",
+   "state": "partial"
+  },
+  "binding": {
+   "analysis_digest": "sha256:da4c93a073e7267a1af9b237c47037ceeac228de3f439aa800fa843115ce884d",
+   "assessment": null,
+   "commit_sha": "f34542f417a621d7047382b6800f9734d8334084",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/crypto-lab",
+    "host": "github.com",
+    "name": "crypto-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 3,
+   "total": 3,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 1,
+   "all": 3,
+   "certificates": 1,
+   "findings": 1,
+   "protocols": 1
+  },
+  "links": [
+   {
+    "basis": "recorded",
+    "condition": null,
+    "evidence_ref": null,
+    "from": "ast:b566eead58ed89c17df31572",
+    "relation": "located_in",
+    "to": "grp:8671420b01667147a07e6eea"
+   }
+  ],
+  "page": {
+   "assets_shown": 3,
+   "assets_total": 3,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 120,
+     "files_excluded": 0,
+     "files_parsed": 120,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "completed",
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/components",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": "1.0"
+    },
+    "scope": "cbom generator over the repository root"
+   },
+   {
+    "coverage": {
+     "excluded_paths": [
+      "vendor/big.generated.c",
+      "src/net/dynamic.py"
+     ],
+     "files_considered": 4,
+     "files_excluded": 2,
+     "files_parsed": 2,
+     "unknown_dynamic_values_total": 2,
+     "unparsed_total": 2
+    },
+    "outcome": "partial",
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-observer",
+     "producer_version": "0.1"
+    },
+    "scope": "experimental static observation of two source files"
+   }
+  ],
+  "review_items": [
+   {
+    "asset_id": "ast:b566eead58ed89c17df31572",
+    "bounded_meaning": "Deployed configuration is not established by this source line.",
+    "condition": "A source flag disables certificate verification when set",
+    "evidence_ids": [
+     "ev:8b5cc4df7eec"
+    ],
+    "next_action": "Check whether the flag is configurable at deployment.",
+    "rationale": "The source text sets a verification flag to false in one call. This is a conditional review item, not a confirmed vulnerability.",
+    "review_id": "rev:82f3e9c695dc",
+    "rule_id": "fixture.tls_flag_review",
+    "rule_version": "1",
+    "tone": "review"
+   }
+  ],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [
+   {
+    "endpoint_text": "https://svc0.invalid/api",
+    "name": "endpoint-0",
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/services/0",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "service_id": "svc:3b4e774c2821"
+   },
+   {
+    "endpoint_text": "https://svc1.invalid/api",
+    "name": "endpoint-1",
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/services/1",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "service_id": "svc:5f931ca32153"
+   },
+   {
+    "endpoint_text": "https://svc2.invalid/api",
+    "name": "endpoint-2",
+    "provenance": {
+     "artifact_id": "art:cbom-fixture",
+     "experimental": false,
+     "json_pointer": "/services/2",
+     "origin": "original_artifact",
+     "producer_id": "fixture-cbom",
+     "producer_version": null
+    },
+    "service_id": "svc:24bcab513932"
+   }
+  ],
+  "services_counts": {
+   "shown": 3,
+   "total": 3,
+   "truncated": false
+  },
+  "source_groups": [
+   {
+    "assets_total": 2,
+    "group_id": "grp:8671420b01667147a07e6eea",
+    "label": "Source: src/net",
+    "path": "src/net"
+   }
+  ],
+  "tab": "crypto"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "crypto_assets",
+ "sequence": null
+}

@@ -1,0 +1,91 @@
+{
+ "description": "SYNTHETIC examples of the I3 derived artifacts (S8). Valid examples must pass the schema; invalid examples must fail it.",
+ "invalid": [
+  {
+   "file": "invalid/findings_missing_scope_lane.json",
+   "kind": "findings",
+   "why": "scope.lane is required"
+  },
+  {
+   "file": "invalid/findings_wrong_lane.json",
+   "kind": "findings",
+   "why": "the findings lane is pinned_source_inventory only"
+  },
+  {
+   "file": "invalid/findings_unknown_tier.json",
+   "kind": "findings",
+   "why": "tier is E1, E2 or E3"
+  },
+  {
+   "file": "invalid/findings_extra_property.json",
+   "kind": "findings",
+   "why": "closed object: no verdict field exists"
+  },
+  {
+   "file": "invalid/findings_unknown_outcome.json",
+   "kind": "findings",
+   "why": "outcome is one of four named values"
+  },
+  {
+   "file": "invalid/coverage_missing_quantity.json",
+   "kind": "coverage",
+   "why": "all four quantities are required"
+  },
+  {
+   "file": "invalid/coverage_negative_count.json",
+   "kind": "coverage",
+   "why": "counts are non-negative"
+  },
+  {
+   "file": "invalid/ranking_unknown_ranker.json",
+   "kind": "ranking",
+   "why": "only the two named rankers exist"
+  },
+  {
+   "file": "invalid/ranking_bad_input_digest.json",
+   "kind": "ranking",
+   "why": "input_digest is a sha256 digest"
+  },
+  {
+   "file": "invalid/ranking_rank_zero.json",
+   "kind": "ranking",
+   "why": "ranks start at 1"
+  },
+  {
+   "file": "invalid/reconciliation_bound.json",
+   "kind": "reconciliation",
+   "why": "a hosted document is never bound"
+  },
+  {
+   "file": "invalid/cohort_report_hosted_bound.json",
+   "kind": "cohort_report",
+   "why": "the hosted lane is unbound always"
+  }
+ ],
+ "valid": [
+  {
+   "file": "valid/findings.json",
+   "kind": "findings"
+  },
+  {
+   "file": "valid/coverage.json",
+   "kind": "coverage"
+  },
+  {
+   "file": "valid/ranking_severity_first.json",
+   "kind": "ranking"
+  },
+  {
+   "file": "valid/ranking_evidence_aware.json",
+   "kind": "ranking"
+  },
+  {
+   "file": "valid/reconciliation.json",
+   "kind": "reconciliation"
+  },
+  {
+   "file": "valid/cohort_report.json",
+   "kind": "cohort_report"
+  }
+ ]
+}

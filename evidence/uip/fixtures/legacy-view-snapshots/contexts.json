@@ -1,0 +1,153 @@
+{
+ "component_total": 1989,
+ "generation": 1,
+ "inspector": null,
+ "membership_total": 1976,
+ "rows": [
+  {
+   "id": "context:.github/actions/setup/action.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/actions/setup/action.yml",
+   "raw_locations": [
+    "/.github/actions/setup/action.yml"
+   ],
+   "total": 5
+  },
+  {
+   "id": "context:.github/workflows/ci.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/workflows/ci.yml",
+   "raw_locations": [
+    "/.github/workflows/ci.yml"
+   ],
+   "total": 7
+  },
+  {
+   "id": "context:.github/workflows/pr_template_check.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/workflows/pr_template_check.yml",
+   "raw_locations": [
+    "/.github/workflows/pr_template_check.yml"
+   ],
+   "total": 1
+  },
+  {
+   "id": "context:.github/workflows/pull_request.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/workflows/pull_request.yml",
+   "raw_locations": [
+    "/.github/workflows/pull_request.yml"
+   ],
+   "total": 4
+  },
+  {
+   "id": "context:.github/workflows/release.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/workflows/release.yml",
+   "raw_locations": [
+    "/.github/workflows/release.yml"
+   ],
+   "total": 3
+  },
+  {
+   "id": "context:.github/workflows/stale.yml",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": ".github/workflows/stale.yml",
+   "raw_locations": [
+    "/.github/workflows/stale.yml"
+   ],
+   "total": 1
+  },
+  {
+   "id": "context:docker/main/requirements-dev.txt",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docker/main/requirements-dev.txt",
+   "raw_locations": [
+    "/docker/main/requirements-dev.txt"
+   ],
+   "total": 1
+  },
+  {
+   "id": "context:docker/main/requirements-wheels.txt",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docker/main/requirements-wheels.txt",
+   "raw_locations": [
+    "/docker/main/requirements-wheels.txt"
+   ],
+   "total": 3
+  },
+  {
+   "id": "context:docker/rockchip/requirements-wheels-rk.txt",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docker/rockchip/requirements-wheels-rk.txt",
+   "raw_locations": [
+    "/docker/rockchip/requirements-wheels-rk.txt"
+   ],
+   "total": 2
+  },
+  {
+   "id": "context:docker/tensorrt/requirements-amd64.txt",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docker/tensorrt/requirements-amd64.txt",
+   "raw_locations": [
+    "/docker/tensorrt/requirements-amd64.txt"
+   ],
+   "total": 13
+  },
+  {
+   "id": "context:docker/tensorrt/requirements-models-arm64.txt",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docker/tensorrt/requirements-models-arm64.txt",
+   "raw_locations": [
+    "/docker/tensorrt/requirements-models-arm64.txt"
+   ],
+   "total": 2
+  },
+  {
+   "id": "context:docs/package-lock.json",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "docs/package-lock.json",
+   "raw_locations": [
+    "/docs/package-lock.json"
+   ],
+   "total": 1513
+  },
+  {
+   "id": "context:web/package-lock.json",
+   "normalization_basis": [
+    "syft_root_relative"
+   ],
+   "path": "web/package-lock.json",
+   "raw_locations": [
+    "/web/package-lock.json"
+   ],
+   "total": 421
+  }
+ ],
+ "selected_id": null,
+ "unlocated_total": 13
+}

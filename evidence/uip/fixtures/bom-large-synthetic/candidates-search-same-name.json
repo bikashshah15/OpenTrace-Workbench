@@ -1,0 +1,169 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+  "assessment": {
+   "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+   "configuration": "config:fixture:f673dd289e88b82a",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+  },
+  "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/bom-lab",
+   "host": "github.com",
+   "name": "bom-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "capabilities": [
+  {
+   "family": "software",
+   "reason_code": null,
+   "state": "completed"
+  },
+  {
+   "family": "cryptography",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "ai_model",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "other",
+   "reason_code": null,
+   "state": "completed"
+  }
+ ],
+ "counts": {
+  "assertions_unique": 49,
+  "candidates_total": 60,
+  "family_counts": {
+   "ai_model": 0,
+   "cryptography": 0,
+   "other": 10,
+   "software": 50
+  },
+  "family_counts_disjoint": true,
+  "filter_group_counts": {
+   "not_represented": 40,
+   "represented": 10,
+   "unknown": 10
+  },
+  "filtered_total": 2,
+  "records_total": 180,
+  "relationships_total": 120,
+  "state_counts": {
+   "conflicting_evidence": 0,
+   "contradicted": 40,
+   "no_rule": 0,
+   "supported": 10,
+   "unknown_coverage": 4,
+   "unverifiable": 6
+  }
+ },
+ "filters": {
+  "category": null,
+  "family": null,
+  "filter_group": null,
+  "query": "same-name",
+  "state": null
+ },
+ "items": [
+  {
+   "assertion_id": "assert-05",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:e51c453a"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "same-name",
+    "raw_title": "same-name is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:e51c453a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 6,
+    "line_start": 6,
+    "path": "reqs/r5.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-06",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:59d7f60d"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "same-name",
+    "raw_title": "same-name is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:59d7f60d",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 7,
+    "line_start": 7,
+    "path": "reqs/r6.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  }
+ ],
+ "mode": "discovery_compared",
+ "page": {
+  "has_more": false,
+  "offset": 0,
+  "size": 25
+ },
+ "schema": "opentrace.workbench.bom_candidates/1",
+ "status_detail": null
+}

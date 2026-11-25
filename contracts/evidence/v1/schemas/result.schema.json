@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.opentrace.invalid/evidence/v1/result.schema.json",
+  "title": "result",
+  "type": "object",
+  "required": ["kind", "schema_version", "task_id", "run_id", "producer", "context", "status", "evidence", "claims", "artifacts", "missing_evidence", "warnings", "errors", "completed_at"],
+  "properties": {
+    "kind": {"const": "result"},
+    "schema_version": {"$ref": "common.schema.json#/$defs/schema_version"},
+    "task_id": {"$ref": "common.schema.json#/$defs/identifier"},
+    "run_id": {"$ref": "common.schema.json#/$defs/identifier"},
+    "producer": {
+      "type": "object",
+      "required": ["service_id", "implementation", "capability_version", "operations_used", "dimensions_used"],
+      "properties": {
+        "service_id": {"$ref": "common.schema.json#/$defs/identifier"},
+        "implementation": {"type": "string", "minLength": 1, "maxLength": 32},
+        "capability_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+        "operations_used": {"type": "array", "uniqueItems": true, "items": {"$ref": "common.schema.json#/$defs/operation"}},
+        "dimensions_used": {"type": "array", "uniqueItems": true, "items": {"$ref": "common.schema.json#/$defs/dimension"}}
+      },
+      "additionalProperties": false
+    },
+    "context": {"$ref": "common.schema.json#/$defs/context"},
+    "status": {"type": "string", "enum": ["complete", "partial", "failed", "unsupported"]},
+    "evidence": {"type": "array", "maxItems": 1000, "items": {"$ref": "#/$defs/evidence_item"}},
+    "claims": {"type": "array", "maxItems": 1000, "items": {"$ref": "#/$defs/claim"}},
+    "artifacts": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/produced_artifact"}},
+    "missing_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["requirement_id", "dimension", "reason"],
+        "properties": {
+          "requirement_id": {"$ref": "common.schema.json#/$defs/identifier"},
+          "dimension": {"$ref": "common.schema.json#/$defs/dimension"},
+          "reason": {"type": "string", "enum": ["unsupported_dimension", "unsupported_operation", "input_unavailable", "worker_failed"]},
+          "detail": {"$ref": "common.schema.json#/$defs/short_text"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "warnings": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/short_text"}},
+    "errors": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/error"}},
+    "completed_at": {"$ref": "common.schema.json#/$defs/timestamp"}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "evidence_item": {
+      "type": "object",
+      "required": ["evidence_id", "dimension", "kind", "subject", "artifact_ref", "locator", "observation", "collection_method", "scope", "limitations", "observed_at"],
+      "properties": {
+        "evidence_id": {"$ref": "common.schema.json#/$defs/identifier"},
+        "dimension": {"$ref": "common.schema.json#/$defs/dimension"},
+        "kind": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+        "subject": {
+          "type": "object",
+          "required": ["module", "version", "indirect"],
+          "properties": {
+            "module": {"type": "string", "minLength": 1, "maxLength": 300},
+            "version": {"type": "string", "minLength": 1, "maxLength": 100},
+            "indirect": {"type": "boolean"}
+          },
+          "additionalProperties": false
+        },
+        "artifact_ref": {"$ref": "common.schema.json#/$defs/artifact_ref"},
+        "locator": {"type": "string", "minLength": 1, "maxLength": 200},
+        "observation": {"$ref": "common.schema.json#/$defs/short_text"},
+        "collection_method": {
+          "type": "object",
+          "required": ["tool", "tool_version", "argv_template", "output_artifact"],
+          "properties": {
+            "tool": {"type": "string", "minLength": 1, "maxLength": 100},
+            "tool_version": {"type": "string", "minLength": 1, "maxLength": 100},
+            "argv_template": {"type": "array", "minItems": 1, "items": {"type": "string", "maxLength": 100}},
+            "output_artifact": {"$ref": "common.schema.json#/$defs/digest"}
+          },
+          "additionalProperties": false
+        },
+        "scope": {"$ref": "common.schema.json#/$defs/short_text"},
+        "limitations": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/short_text"}},
+        "observed_at": {"$ref": "common.schema.json#/$defs/timestamp"}
+      },
+      "additionalProperties": true
+    },
+    "claim": {
+      "type": "object",
+      "required": ["claim_id", "type", "dimension", "proposition", "evidence_ids", "status", "explanation"],
+      "properties": {
+        "claim_id": {"$ref": "common.schema.json#/$defs/identifier"},
+        "type": {"type": "string", "pattern": "^[a-z][a-z0-9_]{0,63}$"},
+        "dimension": {"$ref": "common.schema.json#/$defs/dimension"},
+        "proposition": {"$ref": "common.schema.json#/$defs/short_text"},
+        "evidence_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "common.schema.json#/$defs/identifier"}},
+        "status": {"type": "string", "enum": ["supported", "contradicted", "unknown", "hypothetical"]},
+        "explanation": {"$ref": "common.schema.json#/$defs/short_text"}
+      },
+      "additionalProperties": true
+    },
+    "produced_artifact": {
+      "type": "object",
+      "required": ["digest", "media_type", "bytes", "content_b64", "producer", "source_ref", "captured_at", "role"],
+      "properties": {
+        "digest": {"$ref": "common.schema.json#/$defs/digest"},
+        "media_type": {"type": "string", "minLength": 1, "maxLength": 100},
+        "bytes": {"type": "integer", "minimum": 0, "maximum": 262144},
+        "content_b64": {"type": "string", "maxLength": 349528, "pattern": "^[A-Za-z0-9+/]*={0,2}$"},
+        "producer": {"type": "string", "minLength": 1, "maxLength": 200},
+        "source_ref": {"$ref": "common.schema.json#/$defs/digest"},
+        "captured_at": {"$ref": "common.schema.json#/$defs/timestamp"},
+        "role": {"type": "string", "minLength": 1, "maxLength": 64}
+      },
+      "additionalProperties": false
+    }
+  }
+}

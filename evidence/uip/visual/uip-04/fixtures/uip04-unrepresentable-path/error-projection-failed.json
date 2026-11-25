@@ -1,0 +1,7 @@
+{
+ "detail_code": "unrepresentable_path",
+ "error": "projection_failed",
+ "field": "/groups",
+ "message": "a recorded location cannot be carried by the contract; nothing was dropped or rewritten",
+ "schema": "opentrace.workbench.error/1"
+}

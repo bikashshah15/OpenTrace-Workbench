@@ -1,0 +1,255 @@
+{
+  "checkout": {
+    "method": "git rev-parse HEAD equals the pinned revision; files listed with git ls-files (tracked files only)",
+    "verified_head": "699c65bc3eaec09eb3ade8b82ef1adec106298fe"
+  },
+  "collected_by": {
+    "note": "reads files only; nothing imported, installed, downloaded or executed",
+    "tool": "tools/collect_source_declarations.py (src/bombridge/sources.py)"
+  },
+  "crypto_call_sites": [
+    {
+      "algorithm": "sha256",
+      "algorithm_resolved": true,
+      "call": "hashlib.sha256",
+      "context": "Auth._hash_refresh_token",
+      "end_line": 710,
+      "excerpt": "        return hashlib.sha256(token.encode()).hexdigest()",
+      "file_sha256": "2a64fa30d8d5876f2be556cc44f59d064d2028e90b6cc289cf0675032fc925fe",
+      "line": 710,
+      "path": "viseron/components/webserver/auth.py",
+      "source_line": "return hashlib.sha256(token.encode()).hexdigest()"
+    },
+    {
+      "algorithm": "sha256",
+      "algorithm_resolved": true,
+      "call": "hashlib.sha256",
+      "context": "Auth.create_access_token",
+      "end_line": 898,
+      "excerpt": "            token_hash = hashlib.sha256(raw_token.encode()).hexdigest()",
+      "file_sha256": "2a64fa30d8d5876f2be556cc44f59d064d2028e90b6cc289cf0675032fc925fe",
+      "line": 898,
+      "path": "viseron/components/webserver/auth.py",
+      "source_line": "token_hash = hashlib.sha256(raw_token.encode()).hexdigest()"
+    },
+    {
+      "algorithm": "sha256",
+      "algorithm_resolved": true,
+      "call": "hashlib.sha256",
+      "context": "Auth.validate_access_token_pat",
+      "end_line": 935,
+      "excerpt": "        incoming_hash = hashlib.sha256(raw_token.encode()).hexdigest()",
+      "file_sha256": "2a64fa30d8d5876f2be556cc44f59d064d2028e90b6cc289cf0675032fc925fe",
+      "line": 935,
+      "path": "viseron/components/webserver/auth.py",
+      "source_line": "incoming_hash = hashlib.sha256(raw_token.encode()).hexdigest()"
+    }
+  ],
+  "limitations": [
+    "source declarations state what the code and build files name; they do not show what is built, installed, downloaded or loaded",
+    "model locators are URL string constants with a model-file extension; models named any other way (archives, runtime-built strings, configuration files) are not found",
+    "crypto call sites are hashlib calls only (cryptoscan coverage); other libraries are not inventoried",
+    "requirement files are matched by name; a file installed under another name is not found"
+  ],
+  "model_references": [
+    {
+      "excerpt": "  wget https://github.com/google-coral/test_data/raw/master/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite -O /detectors/models/edgetpu/model.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        15,
+        15
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/master/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://github.com/google-coral/test_data/raw/master/ssd_mobilenet_v2_coco_quant_postprocess.tflite         -O /detectors/models/edgetpu/cpu_model.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        16,
+        16
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/master/ssd_mobilenet_v2_coco_quant_postprocess.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://github.com/google-coral/test_data/raw/master/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite  -O /detectors/models/edgetpu/mobiledet_model.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        17,
+        17
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/master/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://github.com/google-coral/test_data/raw/master/ssdlite_mobiledet_coco_qat_postprocess.tflite          -O /detectors/models/edgetpu/mobiledet_cpu_model.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        18,
+        18
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/master/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://raw.githubusercontent.com/google-coral/test_data/master/efficientdet_lite3_512_ptq_edgetpu.tflite   -O /detectors/models/edgetpu/efficientdet_lite3.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        19,
+        19
+      ],
+      "locator": "https://raw.githubusercontent.com/google-coral/test_data/master/efficientdet_lite3_512_ptq_edgetpu.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://raw.githubusercontent.com/google-coral/test_data/master/efficientdet_lite3_512_ptq.tflite           -O /detectors/models/edgetpu/efficientdet_lite3_cpu_model.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        20,
+        20
+      ],
+      "locator": "https://raw.githubusercontent.com/google-coral/test_data/master/efficientdet_lite3_512_ptq.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://raw.githubusercontent.com/google-coral/test_data/master/tf2_mobilenet_v3_edgetpu_1.0_224_ptq_edgetpu.tflite -O /classifiers/models/edgetpu/tf2_mobilenet_v3_edgetpu_1.0_224_ptq_edgetpu.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        23,
+        23
+      ],
+      "locator": "https://raw.githubusercontent.com/google-coral/test_data/master/tf2_mobilenet_v3_edgetpu_1.0_224_ptq_edgetpu.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "  wget https://raw.githubusercontent.com/google-coral/test_data/master/tf2_mobilenet_v3_edgetpu_1.0_224_ptq.tflite -O /classifiers/models/edgetpu/tf2_mobilenet_v3_edgetpu_1.0_224_ptq_cpu.tflite --progress=bar:force:noscroll && \\",
+      "file_sha256": "2816a521a5ed3ae3414b13a877130a5d34b792759af7d96ea05fa11a5440c3f0",
+      "lines": [
+        24,
+        24
+      ],
+      "locator": "https://raw.githubusercontent.com/google-coral/test_data/master/tf2_mobilenet_v3_edgetpu_1.0_224_ptq.tflite",
+      "method": "line-url-token",
+      "path": "docker/Dockerfile.models"
+    },
+    {
+      "excerpt": "    \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/\"\n    \"ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef\"",
+      "file_sha256": "478756fd95ab817ff831c6b0b5614dcdeec770a008cd3de07b3a04bc48ef1d1e",
+      "lines": [
+        8,
+        9
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef",
+      "method": "python-ast-joined-string-literals",
+      "path": "viseron/components/hailo/const.py",
+      "string_literal": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef"
+    },
+    {
+      "excerpt": "    \"https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/\"\n    \"ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef\"",
+      "file_sha256": "478756fd95ab817ff831c6b0b5614dcdeec770a008cd3de07b3a04bc48ef1d1e",
+      "lines": [
+        12,
+        13
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef",
+      "method": "python-ast-joined-string-literals",
+      "path": "viseron/components/hailo/const.py",
+      "string_literal": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8l/yolov11m.hef"
+    }
+  ],
+  "repository": "https://github.com/roflcoopter/viseron",
+  "requirement_files": [
+    {
+      "bytes": 42,
+      "copy": "inputs/viseron/raw/source/requirements-3.9.txt",
+      "declaration_lines": 3,
+      "named_requirements": 3,
+      "path": "requirements-3.9.txt",
+      "sha256": "60f64cbd9f2ab04f4382e4ffd18862b34a9e8327bda6c5663c6678637b11606b"
+    },
+    {
+      "bytes": 1137,
+      "copy": "inputs/viseron/raw/source/requirements.txt",
+      "declaration_lines": 46,
+      "named_requirements": 46,
+      "path": "requirements.txt",
+      "sha256": "f25e8cc785c08a04b9b255cc34d7b3aad0166b571cf2c956054a9b97b0c8a5a2"
+    },
+    {
+      "bytes": 267,
+      "copy": "inputs/viseron/raw/source/requirements_ci.txt",
+      "declaration_lines": 4,
+      "named_requirements": 4,
+      "path": "requirements_ci.txt",
+      "sha256": "aa0e0f54d818ead9d1eba1649674badd9af13ffe7899cddbb31f63f88c7491d0"
+    },
+    {
+      "bytes": 175,
+      "copy": "inputs/viseron/raw/source/requirements_conflicts.txt",
+      "declaration_lines": 1,
+      "named_requirements": 1,
+      "path": "requirements_conflicts.txt",
+      "sha256": "662b100b51479e963982c763cf388c120f549652649ce4a1b46bbc1029f32a0c"
+    },
+    {
+      "bytes": 115,
+      "copy": "inputs/viseron/raw/source/requirements_container_test.txt",
+      "declaration_lines": 6,
+      "named_requirements": 6,
+      "path": "requirements_container_test.txt",
+      "sha256": "0694de893098e40d77b009d2b6d093bf34b22212041e3960f1566c8bbc88fc52"
+    },
+    {
+      "bytes": 826,
+      "copy": "inputs/viseron/raw/source/requirements_test.txt",
+      "declaration_lines": 39,
+      "named_requirements": 39,
+      "path": "requirements_test.txt",
+      "sha256": "394468dd6b0d5ee4c85b43ca21b9aaec0a71e63e43ad214bcd31bf935aa90283"
+    }
+  ],
+  "revision": "699c65bc3eaec09eb3ade8b82ef1adec106298fe",
+  "schema": "bombridge.source-declarations/1",
+  "searched": {
+    "dynamic_or_archive_url_expressions_not_classified": 0,
+    "model_extensions": [
+      ".tflite",
+      ".hef",
+      ".onnx",
+      ".pt",
+      ".pth",
+      ".pb",
+      ".rknn",
+      ".engine",
+      ".h5",
+      ".safetensors",
+      ".gguf",
+      ".mlmodel",
+      ".caffemodel",
+      ".ort"
+    ],
+    "parse_errors": [],
+    "reference_files_scanned": 431,
+    "reference_globs": [
+      "*.py",
+      "Dockerfile",
+      "Dockerfile.*",
+      "*.Dockerfile",
+      "*.dockerfile",
+      "*.sh"
+    ],
+    "requirement_globs": [
+      "*requirements*.txt",
+      "requirements/*.txt"
+    ],
+    "tracked_files": 1066
+  }
+}

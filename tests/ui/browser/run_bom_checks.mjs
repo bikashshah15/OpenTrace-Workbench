@@ -1,0 +1,107 @@
+// UIP-08 focused offline browser check. No scanner, provider or external request.
+// Usage: PYTHON=<venv python> node tests/ui/browser/run_bom_checks.mjs OUT_DIR
+import { spawn } from 'node:child_process';
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { createHash } from 'node:crypto';
+import { join, resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { launch, newPage } from './cdp.mjs';
+const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
+const OUT = resolve(process.argv[2] || join(tmpdir(), 'uip08-bom-checks'));
+mkdirSync(OUT, { recursive: true });
+const root = mkdtempSync(join(tmpdir(), 'uip08-bom-sessions-'));
+const reference = join(REPO, '.context/references/prototypes/OpenTrace-UI-Update-9-Combined.html');
+const referenceHash = createHash('sha256').update(readFileSync(reference)).digest('hex');
+if (referenceHash !== 'd5bc14fabff29dc42a53dab1f91ae88a6165d70aee808f17e76d066901b3a148') throw new Error('reference hash changed');
+const svc = spawn(process.env.PYTHON || 'python3', ['-m', 'opentrace_core.app', '--port', '0', '--session-root', join(root, 's')], {
+  cwd: REPO, env: { ...process.env, PYTHONPATH: join(REPO, 'src/core'), OPENTRACE_LIVE_SCAN: '0' }, stdio: ['ignore', 'pipe', 'pipe'] });
+const base = await new Promise((res, rej) => { let buf = ''; const t = setTimeout(() => rej(new Error('local service failed to start')), 30000);
+  svc.stdout.on('data', (d) => { buf += d; const m = buf.match(/http:\/\/127\.0\.0\.1:\d+\//); if (m) { clearTimeout(t); res(m[0]); } });
+  svc.on('exit', () => rej(new Error('local service exited before start'))); });
+const { browser, close } = await launch();
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const results = []; const check = (name, ok, detail = '') => { results.push({ name, ok: !!ok, detail }); console.log(`${ok ? 'PASS' : 'FAIL'} ${name}${detail ? ': ' + detail : ''}`); };
+async function start(width, height, theme = 'light') {
+  const pg = await newPage(browser, { width, height, mobile: width <= 700 });
+  await pg.goto(base); await pg.waitFor(`document.querySelector('#ot-demo')`);
+  if (theme === 'dark') await pg.click('#ot-theme');
+  await pg.click('#ot-demo'); await pg.waitFor(`document.querySelector('#ot-tab-bom')`, 30000);
+  await pg.click('#ot-tab-bom'); await pg.waitFor(`window.__otStore.get().bom8.queue?.items?.length > 0`, 30000);
+  await pg.waitFor(`document.querySelector('[data-bom-cy="inline"]')?._cy?.nodes().length > 0`, 30000);
+  await sleep(400);
+  return pg;
+}
+try {
+  const pg = await start(1366, 900);
+  let state = await pg.eval(`(()=>{const b=window.__otStore.get().bom8,h=document.querySelector('[data-bom-cy="inline"]');return {view:b.view,candidates:b.queue.counts.candidates_total,nodes:h._cy.nodes().length,edges:h._cy.edges().length,positions:h._cy.nodes().map(n=>n.position()),overflow:document.documentElement.scrollWidth>innerWidth,selected:b.selected}})()`);
+  check('real Demo projection and Cytoscape focused graph', state.view === 'gaps' && state.candidates === 79 && state.nodes > 0 && state.edges > 0 && state.positions.some(p => p.x > 0), JSON.stringify(state));
+  check('desktop no horizontal overflow', !state.overflow);
+  await pg.eval(`document.querySelector('#ot-graph-frame').scrollIntoView({block:'start'})`); await sleep(200);
+  await pg.screenshot(join(OUT, '1366-light-focused.png'));
+  const graphNode = await pg.eval(`window.__otStore.get().bom8.graph.nodes[0].node_id`);
+  await pg.eval(`(()=>{document.querySelector('[data-bom-cy="inline"]')._cy.getElementById(${JSON.stringify(graphNode)}).emit('tap');return true})()`);
+  await pg.waitFor(`window.__otStore.get().bom8.selectedRecord===${JSON.stringify(graphNode)} && window.__otStore.get().bom8.related?.subject.id===${JSON.stringify(graphNode)}`, 30000);
+  check('Cytoscape node tap selects exact related record', await pg.eval(`window.__otStore.get().bom8.selectedRecord===${JSON.stringify(graphNode)}`));
+  if (await pg.eval(`!!window.__otStore.get().bom8.popup`)) await pg.key('Escape');
+  const geometry = (root, queue, main, inspector, canvas, tabs) => `(()=>{const rect=(q)=>{const x=document.querySelector(q);if(!x)return null;const r=x.getBoundingClientRect(),c=getComputedStyle(x);return {x:Math.round(r.x),y:Math.round(r.y),width:Math.round(r.width),height:Math.round(r.height),fontSize:c.fontSize,background:c.backgroundColor}};return {root:rect(${JSON.stringify(root)}),queue:rect(${JSON.stringify(queue)}),main:rect(${JSON.stringify(main)}),inspector:rect(${JSON.stringify(inspector)}),canvas:rect(${JSON.stringify(canvas)}),tabs:[...document.querySelectorAll(${JSON.stringify(tabs)})].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth>innerWidth}})()`;
+  const application = await pg.eval(geometry('.ot-bom8','.ot-bom8-queue','.ot-bom8-main','.ot-bom8-inspector','.ot-bom8-stage','.ot-bom8-tabs button'));
+  const ref = await newPage(browser, { width: 1366, height: 900 });
+  await ref.send('Fetch.enable', { patterns: [{ urlPattern:'http://*' }, { urlPattern:'https://*' }] });
+  browser.on((m) => { if (m.sessionId === ref.sessionId && m.method === 'Fetch.requestPaused') ref.send('Fetch.failRequest', { requestId:m.params.requestId, errorReason:'BlockedByClient' }).catch(()=>{}); });
+  await ref.goto('file://' + reference); await ref.click('#ot-demo'); await sleep(700); await ref.click('[data-ot2-layer="bom"]'); await ref.click('#b9-tab-gaps'); await sleep(300);
+  const prototype = await ref.eval(geometry('#bom8','.b8-queue','.b8-detail','.b9-inspector','.b8-canvas','#bom8 [data-b9-tab]'));
+  await ref.eval(`document.querySelector('#bom8').scrollIntoView({block:'start'})`); await ref.screenshot(join(OUT, '1366-light-reference-gaps.png'));
+  await ref.close();
+  const widths = Object.fromEntries(['queue','main','inspector','canvas'].map(k => [k, { reference:prototype[k]?.width, application:application[k]?.width, delta:(application[k]?.width || 0)-(prototype[k]?.width || 0) }]));
+  writeFileSync(join(OUT,'bom_diagnostic.json'), JSON.stringify({ schema:'opentrace.uip08.bom_diagnostic/1', reference_sha256:referenceHash, state:'Focused gaps, default selected check; reference preview data and bound I8 app data differ', viewport:'1366x900 light', prototype, application, widths, tab_order_equal:JSON.stringify(prototype.tabs)===JSON.stringify(application.tabs) }, null, 2)+'\n');
+  check('focused reference tab order and no overflow', JSON.stringify(prototype.tabs)===JSON.stringify(application.tabs) && !prototype.overflow && !application.overflow);
+  await pg.click('[data-action="bom-select"]:nth-of-type(2)');
+  await pg.waitFor(`window.__otStore.get().bom8.graph?.scope.candidate_id===window.__otStore.get().bom8.selected`, 30000);
+  check('queue selection synchronizes graph and details', await pg.eval(`!!document.querySelector('.ot-bom8-inspector h3') && window.__otStore.get().bom8.graph.scope.candidate_id===window.__otStore.get().bom8.selected`));
+  await pg.click('[data-action="bom-expand"]'); await pg.waitFor(`document.querySelector('[data-bom-cy="popup"]')?._cy?.nodes().length > 0`, 30000);
+  check('expanded popup has live Cytoscape graph', await pg.eval(`document.querySelector('[data-bom-cy="popup"]')?._cy?.nodes().length>0`));
+  await pg.screenshot(join(OUT, '1366-light-expanded.png'));
+  await pg.key('Escape');
+  check('Escape closes popup and restores focus', await pg.eval(`!document.querySelector('.ot-bom8-overlay') && document.activeElement?.dataset.action==='bom-expand'`));
+  await pg.click('[data-action="bom-view"][data-view="full"]');
+  await pg.waitFor(`window.__otStore.get().bom8.graph?.scope.kind==='full_view'`, 30000);
+  await pg.waitFor(`document.querySelector('[data-bom-cy="inline"]')?._cy?.nodes().length > 0`, 30000);
+  check('full graph page uses real Cytoscape nodes', await pg.eval(`document.querySelector('[data-bom-cy="inline"]')._cy.nodes().length>0`));
+  await pg.click('[data-action="bom-full-page"][data-dir="1"]'); await pg.waitFor(`window.__otStore.get().bom8.graph?.page.offset===100`, 30000);
+  await pg.click('[data-action="bom-full-page"][data-dir="1"]'); await pg.waitFor(`window.__otStore.get().bom8.graph?.page.offset===200`, 30000);
+  const id = 'entity:scope:frigate-v0.18.2-cpu-pilot::inv:bombridge-discovery::source-file:docker/main/requirements-ov.txt';
+  await pg.eval(`([...document.querySelectorAll('[data-action="bom-record"]')].find(x=>x.dataset.id===${JSON.stringify(id)}))?.click()`);
+  await pg.waitFor(`window.__otStore.get().bom8.popup==='chooser'`, 30000);
+  check('exact shared record opens bounded related-check chooser', await pg.eval(`window.__otStore.get().bom8.related?.related_total===2 && document.querySelectorAll('.ot-bom8-chooser [data-action="bom-related"]').length===2`));
+  await pg.screenshot(join(OUT, '1366-light-chooser.png'));
+  await pg.key('Escape');
+  check('chooser Escape restores record focus', await pg.eval(`!document.querySelector('.ot-bom8-overlay') && document.activeElement?.dataset.id===${JSON.stringify(id)}`));
+  // Delay only the first query request, then change filter and release it: old data must not replace the newer page.
+  await pg.eval(`(()=>{const real=window.fetch.bind(window);let first=true;window.fetch=(u,o)=>{if(first&&String(u).includes('/bom-candidates?')&&String(u).includes('query=types')){first=false;return new Promise(r=>{window.__releaseBom=()=>real(u,o).then(r)})}return real(u,o)}})()`);
+  await pg.eval(`(()=>{const x=document.querySelector('#ot-bom8-q');x.value='types';x.dispatchEvent(new Event('input',{bubbles:true}))})()`);
+  await pg.waitFor(`!!window.__releaseBom`, 10000);
+  await pg.click('[data-action="bom-filter"][data-filter="not_represented"]');
+  await pg.waitFor(`window.__otStore.get().bom8.queue?.filters.filter_group==='not_represented'`, 30000);
+  await pg.eval(`window.__releaseBom()`); await sleep(300);
+  check('late queue response cannot replace new filter', await pg.eval(`window.__otStore.get().bom8.queue?.filters.filter_group==='not_represented'`));
+  await pg.close();
+  const mobile = await start(390, 844, 'dark');
+  const mobileState = await mobile.eval(`({display:getComputedStyle(document.querySelector('.ot-bom8-layout')).display,drawer:document.querySelector('.ot-bom8-inspector').classList.contains('open'),overflow:document.documentElement.scrollWidth>innerWidth,cyNodes:document.querySelector('[data-bom-cy="inline"]')._cy.nodes().length,theme:document.documentElement.dataset.theme})`);
+  check('390px dark responsive drawer and live graph', mobileState.display === 'block' && !mobileState.drawer && !mobileState.overflow && mobileState.cyNodes > 0 && mobileState.theme === 'dark', JSON.stringify(mobileState));
+  await mobile.screenshot(join(OUT, '390-dark-collapsed.png'));
+  await mobile.click('[data-action="bom-drawer"]');
+  check('mobile Details drawer opens', await mobile.eval(`document.querySelector('.ot-bom8-inspector').classList.contains('open')`));
+  await mobile.screenshot(join(OUT, '390-dark-details.png'));
+  await mobile.close();
+  const wide = await start(1600, 900);
+  check('1600px real graph and no overflow', await wide.eval(`document.querySelector('[data-bom-cy="inline"]')?._cy?.nodes().length>0 && document.documentElement.scrollWidth<=innerWidth`));
+  await wide.eval(`document.querySelector('#ot-graph-frame').scrollIntoView({block:'start'})`); await sleep(200);
+  await wide.screenshot(join(OUT, '1600-light-focused.png'));
+  check('browser made no non-loopback HTTP request', [pg,mobile,wide,ref].every(p => p.log.requests.every(r => !/^https?:/.test(r.url) || r.url.startsWith(base))));
+  await wide.close();
+} finally {
+  svc.kill('SIGTERM'); await close(); rmSync(root, { recursive: true, force: true });
+}
+writeFileSync(join(OUT, 'result.json'), JSON.stringify({ schema:'opentrace.uip08.browser_checks/1', fixture:'offline captured Demo, local loopback app, live scan disabled', viewports:['1366x900 light','390x844 dark','1600x900 light'], results }, null, 2)+'\n');
+if (results.some(r=>!r.ok)) process.exitCode=1;

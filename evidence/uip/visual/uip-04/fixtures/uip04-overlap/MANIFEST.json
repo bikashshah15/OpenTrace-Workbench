@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "1c6dc76d45cefc6eca3536f5eeae71d512fad2aff7c266b3d40253db4bc649fb"
+  },
+  {
+   "bytes": 4290,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "0e82b903ad2192dc7fa1d6b4fe55d7d2905a8aad51895a6ad988542b7d27d4bd"
+  }
+ ],
+ "name": "uip04-overlap",
+ "notes": "Components shared between files and groups: group distinct < group membership; the root counts each component once.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

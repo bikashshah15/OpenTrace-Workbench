@@ -1,0 +1,9 @@
+{
+  "name": "opentrace-cdxgen-pin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Pinned CBOM scanner for OpenTrace live scans (I5). Install with tools/live/install_cdxgen.sh; never with lifecycle scripts.",
+  "dependencies": {
+    "@cyclonedx/cdxgen": "12.9.0"
+  }
+}

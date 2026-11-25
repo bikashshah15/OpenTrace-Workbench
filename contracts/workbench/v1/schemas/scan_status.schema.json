@@ -1,0 +1,431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/scan_status.schema.json",
+  "title": "OpenTrace workbench scan status v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "generation",
+    "mode",
+    "job",
+    "binding_state",
+    "binding",
+    "pinned",
+    "identity",
+    "stages",
+    "handoff",
+    "cleanup"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.scan_status/1"
+    },
+    "generation": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "mode": {
+      "enum": [
+        "live",
+        "captured"
+      ]
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "job_id",
+        "seq",
+        "state",
+        "created_at",
+        "updated_at",
+        "elapsed_ms"
+      ],
+      "properties": {
+        "job_id": {
+          "$ref": "common.schema.json#/$defs/job_id"
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "state": {
+          "enum": [
+            "queued",
+            "running",
+            "completed",
+            "partial",
+            "failed",
+            "cancelled"
+          ]
+        },
+        "created_at": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "updated_at": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "elapsed_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "binding_state": {
+      "enum": [
+        "unresolved",
+        "resolved"
+      ]
+    },
+    "binding": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "common.schema.json#/$defs/binding"
+        }
+      ]
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "identity": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schema",
+            "input",
+            "repository",
+            "requested",
+            "resolved",
+            "scan",
+            "session",
+            "analysis_digest"
+          ],
+          "properties": {
+            "schema": {
+              "const": "opentrace.analysis_identity/1"
+            },
+            "input": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "url",
+                "manual_sha"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2048,
+                  "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                },
+                "manual_sha": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{7,40}(?!\\n)$"
+                    }
+                  ]
+                }
+              }
+            },
+            "repository": {
+              "$ref": "common.schema.json#/$defs/repository"
+            },
+            "requested": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "text",
+                "origin"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "default_branch",
+                    "branch",
+                    "tag",
+                    "commit"
+                  ]
+                },
+                "text": {
+                  "$ref": "common.schema.json#/$defs/text"
+                },
+                "origin": {
+                  "enum": [
+                    "url_root",
+                    "url_tree",
+                    "advanced_manual"
+                  ]
+                }
+              }
+            },
+            "resolved": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "commit_sha",
+                "resolved_at",
+                "basis",
+                "manual_corroboration"
+              ],
+              "properties": {
+                "commit_sha": {
+                  "$ref": "common.schema.json#/$defs/hex40"
+                },
+                "resolved_at": {
+                  "$ref": "common.schema.json#/$defs/timestamp"
+                },
+                "basis": {
+                  "$ref": "common.schema.json#/$defs/text"
+                },
+                "default_branch": {
+                  "$ref": "common.schema.json#/$defs/text"
+                },
+                "manual_corroboration": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "scan": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "profile_id",
+                "inventories",
+                "scope"
+              ],
+              "properties": {
+                "profile_id": {
+                  "const": "opentrace.scan.default/1"
+                },
+                "inventories": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "aibom",
+                      "cbom",
+                      "sbom"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 3
+                },
+                "scope": {
+                  "const": "repository_root"
+                }
+              }
+            },
+            "session": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "generation"
+              ],
+              "properties": {
+                "generation": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "analysis_digest": {
+              "$ref": "common.schema.json#/$defs/digest"
+            }
+          }
+        }
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage_id",
+          "state",
+          "reason_code",
+          "started_at",
+          "finished_at",
+          "updated_at",
+          "outputs",
+          "warnings"
+        ],
+        "properties": {
+          "stage_id": {
+            "enum": [
+              "resolve_revision",
+              "acquire_source",
+              "sbom",
+              "cbom",
+              "aibom",
+              "advisory_lookup",
+              "source_checks",
+              "evidence_projection",
+              "workbench_ready"
+            ]
+          },
+          "state": {
+            "enum": [
+              "queued",
+              "running",
+              "completed",
+              "completed_empty",
+              "partial",
+              "not_run",
+              "unsupported",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "reason_code": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "disabled",
+                  "not_configured",
+                  "upstream_failed",
+                  "unsupported_ecosystem",
+                  "invalid_revision",
+                  "policy_refused",
+                  "rate_limited",
+                  "scanner_unavailable",
+                  "scanner_failed",
+                  "timeout",
+                  "output_invalid",
+                  "cleanup_unverified",
+                  "partial_coverage",
+                  "no_applicable_assets",
+                  "cancelled_by_user",
+                  "session_ended"
+                ]
+              }
+            ]
+          },
+          "started_at": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/timestamp"
+              }
+            ]
+          },
+          "finished_at": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/timestamp"
+              }
+            ]
+          },
+          "updated_at": {
+            "$ref": "common.schema.json#/$defs/timestamp"
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "artifact_id",
+                "sha256",
+                "size"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "sbom",
+                    "cbom",
+                    "aibom"
+                  ]
+                },
+                "artifact_id": {
+                  "$ref": "common.schema.json#/$defs/engine_id"
+                },
+                "sha256": {
+                  "$ref": "common.schema.json#/$defs/hex64"
+                },
+                "size": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "minItems": 0,
+            "maxItems": 4
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/message"
+            },
+            "minItems": 0,
+            "maxItems": 10
+          }
+        }
+      },
+      "minItems": 9,
+      "maxItems": 9
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ready",
+        "blocked_reason"
+      ],
+      "properties": {
+        "ready": {
+          "type": "boolean"
+        },
+        "blocked_reason": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/message"
+            }
+          ]
+        }
+      }
+    },
+    "cleanup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "not_needed",
+            "pending",
+            "verified",
+            "unverified"
+          ]
+        }
+      }
+    }
+  }
+}

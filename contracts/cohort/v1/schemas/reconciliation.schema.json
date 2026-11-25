@@ -1,0 +1,52 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/reconciliation.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.i3.reconciliation/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "repos": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "binding_state": {
+      "const": "unbound"
+     },
+     "compared": {
+      "type": "boolean"
+     },
+     "counts": {
+      "type": "object"
+     },
+     "lists": {
+      "type": "object"
+     },
+     "repo": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "repo",
+     "binding_state",
+     "lists",
+     "counts",
+     "compared"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "schema": {
+   "const": "opentrace.i3.reconciliation/1"
+  },
+  "statement": {
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema",
+  "repos",
+  "statement"
+ ],
+ "title": "reconciliation",
+ "type": "object"
+}

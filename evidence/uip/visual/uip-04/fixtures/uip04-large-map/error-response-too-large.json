@@ -1,0 +1,6 @@
+{
+ "detail_code": "bound_exceeded",
+ "error": "response_too_large",
+ "message": "payload exceeds the ceiling",
+ "schema": "opentrace.workbench.error/1"
+}

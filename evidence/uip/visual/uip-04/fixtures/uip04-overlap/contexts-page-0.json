@@ -1,0 +1,164 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:9649b677df531fb9f292ba26f7286ce5d1baeedb85e0ca0b50c8baf7a2aee821",
+  "assessment": null,
+  "commit_sha": "ee79a2c24844fcf7ce010b4a17592ead58d8fc6a",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 3,
+  "total": 3,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 3,
+   "files": [
+    {
+     "dependency_context_id": "ctx:8efacfc8b2aafb15ff67b02f",
+     "distinct_total": 3,
+     "file_id": "ctx:8efacfc8b2aafb15ff67b02f",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/package-lock.json",
+     "raw_locations": [
+      "/docs/package-lock.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/ee79a2c24844fcf7ce010b4a17592ead58d8fc6a/docs/package-lock.json",
+      "text": "docs/package-lock.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:5b99a5ed598e6a571f27f6f9",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 3,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 4,
+   "files": [
+    {
+     "dependency_context_id": "ctx:f32906a7d6140fd468c9f0a2",
+     "distinct_total": 3,
+     "file_id": "ctx:f32906a7d6140fd468c9f0a2",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a/package.json",
+     "raw_locations": [
+      "/web/a/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/ee79a2c24844fcf7ce010b4a17592ead58d8fc6a/web/a/package.json",
+      "text": "web/a/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:fc26af2ce0f66039e2d5ba0a",
+     "distinct_total": 2,
+     "file_id": "ctx:fc26af2ce0f66039e2d5ba0a",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/b/package.json",
+     "raw_locations": [
+      "/web/b/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/ee79a2c24844fcf7ce010b4a17592ead58d8fc6a/web/b/package.json",
+      "text": "web/b/package.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:36435390f7e27fe39ff4d46a",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 5,
+   "token": "green"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 2,
+   "files": [
+    {
+     "dependency_context_id": "ctx:4eeb7b5816246c7d7bdfaf14",
+     "distinct_total": 2,
+     "file_id": "ctx:4eeb7b5816246c7d7bdfaf14",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/ci.yml",
+     "raw_locations": [
+      "/.github/workflows/ci.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/ee79a2c24844fcf7ce010b4a17592ead58d8fc6a/.github/workflows/ci.yml",
+      "text": ".github/workflows/ci.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:8e017b061950b0c093082d64",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 2,
+   "token": "purple"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "ee79a2c24844fcf7ce010b4a17592ead58d8fc6a",
+  "distinct_total": 6,
+  "located_distinct_total": 6,
+  "membership_total": 10,
+  "name": "example-org/sample-web",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

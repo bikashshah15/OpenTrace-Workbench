@@ -1,0 +1,34 @@
+# OpenTrace local configuration for `python3 tools/start.py --profile with-llm`.
+#   cp opentrace.example.yml opentrace.yml        (opentrace.yml is git-ignored; never commit a key)
+# The default `python3 tools/start.py` (no-llm profile) needs no file and no key.
+#
+# Point at a FILE that holds your OpenAI API key (the key itself never goes in this file). The same file is
+# mounted as a Docker secret for the Cisco AI-BOM gateway and for the Lab Assistant provider.
+llm:
+  provider: openai
+  api_key_file: /absolute/path/to/openai.key
+
+  # Optional. Set to true only after you have verified how OpenAI bills the /v1/responses/input_tokens
+  # endpoint. Until then the Lab Assistant stays disabled and start.py says so.
+  # assistant_billing_verified: true
+
+  # Your local gateway pricing record (relative paths are relative to this checkout). Create it once from the committed template, which is
+  # expired on purpose, then verify the official pricing and update verified_on / valid_until / sources in YOUR copy (valid for at most 14 days):
+  #   mkdir -p .opentrace && cp -n deploy/docker/gateway/pricing.json .opentrace/aibom-pricing.json
+  # See deploy/docker/gateway/README.md. .opentrace/ is git-ignored.
+  gateway_pricing_file: .opentrace/aibom-pricing.json
+
+  # Optional. How many provider dispatches the Lab Assistant may make in total (default 400; one question normally uses two, so about 200 questions).
+  # The dollar budget is a separate, fixed $5 ceiling. Raising this number and restarting keeps everything already recorded in the usage ledger.
+  # assistant_dispatch_allowance: 800
+
+# --- Future providers: NOT SUPPORTED for live use. start.py rejects these with a clear message. ---
+# OpenAI is the only live provider in this version.
+#
+# llm:
+#   provider: anthropic          # Anthropic Claude (unsupported)
+#   api_key_file: /absolute/path/to/anthropic.key
+#
+# llm:
+#   provider: google             # Google Gemini (unsupported)
+#   api_key_file: /absolute/path/to/gemini.key

@@ -1,0 +1,265 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:f46350943bc00875cf3f9d8bffdc58c9d8e7eec95cb69df4a9b5d9c3fd453fd1",
+  "assessment": null,
+  "commit_sha": "3656a98ab5e7e50529b048c48ffa04d22e0dd31c",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "context": {
+  "context_id": "ctx:7e96620179214ba618ffff36",
+  "path": "app/package-lock.json"
+ },
+ "counts": {
+  "shown": 6,
+  "total": 6,
+  "truncated": false
+ },
+ "edges": [
+  {
+   "edge_id": "edge:0025788fc547195c50e6b1d7",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/51adf4"
+   ],
+   "to": "pkg:dep-010"
+  },
+  {
+   "edge_id": "edge:bbd313a4e4e5d871aec5dbb5",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/030d4c"
+   ],
+   "to": "pkg:dep-015"
+  },
+  {
+   "edge_id": "edge:ca893f617eb1f8c774462845",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/811cab"
+   ],
+   "to": "pkg:dep-016"
+  },
+  {
+   "edge_id": "edge:1848d480ff9b83f95db2965a",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/6bae0a"
+   ],
+   "to": "pkg:dep-020"
+  },
+  {
+   "edge_id": "edge:bfe05502dd2ca221dced34cc",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/315e51"
+   ],
+   "to": "pkg:dep-030"
+  },
+  {
+   "edge_id": "edge:59350237df4498b5f9daabe1",
+   "from": "pkg:root",
+   "kind": "declares_dependency",
+   "source_pointers": [
+    "/dependencies/f45961"
+   ],
+   "to": "pkg:dep-060"
+  }
+ ],
+ "filter": "evidence_gaps",
+ "filter_totals": {
+  "advisory": 4,
+  "all": 82,
+  "direct": 82,
+  "evidence_gaps": 6,
+  "transitive": 0
+ },
+ "focus": {
+  "basis": "graph_root",
+  "candidates_total": 1,
+  "node_id": "pkg:root"
+ },
+ "limits": {
+  "connectors_shown": 0,
+  "connectors_truncated": false,
+  "edges_truncated": false
+ },
+ "lookup": {
+  "counts_by_state": {
+   "match": 4,
+   "missing_version": 1,
+   "no_match": 74,
+   "not_run": 1,
+   "unavailable": 1,
+   "unsupported": 1
+  },
+  "explanation": "Advisory lookup was not performed for these components; this is not a completed clean lookup and not a finding.",
+  "mode": "recorded"
+ },
+ "nodes": [
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 0,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": false,
+    "evidence_gap": false,
+    "transitive": false
+   },
+   "gap_causes": [],
+   "has_source_location": true,
+   "name": "root-app",
+   "node_id": "pkg:root",
+   "path_state": "complete",
+   "role": "focus",
+   "version": "1.0.0"
+  },
+  {
+   "advisory_lookup": "unavailable",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_incomplete"
+   ],
+   "has_source_location": true,
+   "name": "dep-010",
+   "node_id": "pkg:dep-010",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.10.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "missing_source_location"
+   ],
+   "has_source_location": false,
+   "name": "dep-015",
+   "node_id": "pkg:dep-015",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.15.0"
+  },
+  {
+   "advisory_lookup": "no_match",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "missing_source_location"
+   ],
+   "has_source_location": false,
+   "name": "dep-016",
+   "node_id": "pkg:dep-016",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.16.0"
+  },
+  {
+   "advisory_lookup": "missing_version",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_incomplete"
+   ],
+   "has_source_location": true,
+   "name": "dep-020",
+   "node_id": "pkg:dep-020",
+   "path_state": "complete",
+   "role": "match",
+   "version": null
+  },
+  {
+   "advisory_lookup": "unsupported",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_incomplete"
+   ],
+   "has_source_location": true,
+   "name": "dep-030",
+   "node_id": "pkg:dep-030",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.30.0"
+  },
+  {
+   "advisory_lookup": "not_run",
+   "advisory_match_count": 0,
+   "depth": 1,
+   "ecosystem": "npm",
+   "flags": {
+    "direct": true,
+    "evidence_gap": true,
+    "transitive": false
+   },
+   "gap_causes": [
+    "lookup_not_run"
+   ],
+   "has_source_location": true,
+   "name": "dep-060",
+   "node_id": "pkg:dep-060",
+   "path_state": "complete",
+   "role": "match",
+   "version": "1.60.0"
+  }
+ ],
+ "page": {
+  "has_more": false,
+  "matches_shown": 6,
+  "matches_total": 6,
+  "offset": 0,
+  "range_first": 1,
+  "range_last": 6,
+  "size": 30
+ },
+ "query": "",
+ "schema": "opentrace.workbench.dependency_page/1"
+}

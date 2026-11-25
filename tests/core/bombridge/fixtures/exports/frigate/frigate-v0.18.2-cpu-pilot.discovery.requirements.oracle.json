@@ -1,0 +1,959 @@
+{
+  "candidates": [
+    {
+      "assertion_id": "dreq-netaddr-2baf7270",
+      "candidate_id": "cand:missing_component:01f9483a",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:69",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-paho-mqtt-9a1402c1",
+      "candidate_id": "cand:missing_component:05e76658",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:21",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-aiofiles-1dd33f89",
+      "candidate_id": "cand:missing_component:0bd313c8",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:1",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-memray-010898c2",
+      "candidate_id": "cand:missing_component:0f681d0f",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:83",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-scipy-06a708a4",
+      "candidate_id": "cand:missing_component:0ff56a96",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:43",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-faster-whisper-d531bef5",
+      "candidate_id": "cand:missing_component:11958881",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:79",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-cython-611bcd8d",
+      "candidate_id": "cand:missing_component:1a1d944f",
+      "category": "missing_component",
+      "evidence_location": "docker/tensorrt/requirements-amd64.txt:3",
+      "group": "requirements:inv:syft-source-dir:docker/tensorrt/requirements-amd64.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pandas-4d255eae",
+      "candidate_id": "cand:missing_component:230788b6",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:22",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-ollama-a5e8d3f3",
+      "candidate_id": "cand:missing_component:254607c5",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:51",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-tensorflow-cpu-dc7f9530",
+      "candidate_id": "cand:missing_component:2645a241",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:17",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-librosa-ab89a6d1",
+      "candidate_id": "cand:missing_component:2a406c52",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:80",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-sherpa-onnx-7fd36e0c",
+      "candidate_id": "cand:missing_component:2b70cbfc",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:78",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-ws4py-de4716ef",
+      "candidate_id": "cand:missing_component:2ba3022f",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:36",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-joserfc-cbd79f69",
+      "candidate_id": "cand:missing_component:2be856fd",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:10",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-starlette-98345d95",
+      "candidate_id": "cand:missing_component:2c2f8846",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:5",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-google-genai-7a98f9fb",
+      "candidate_id": "cand:missing_component:2ed57684",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:50",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-openvino-47c53502",
+      "candidate_id": "cand:missing_component:327fee36",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:45",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-tensorflow-20885001",
+      "candidate_id": "cand:missing_component:3bda71b6",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:16",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pyzmq-da65649d",
+      "candidate_id": "cand:missing_component:45635763",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:29",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-click-0ac4ff98",
+      "candidate_id": "cand:missing_component:50f13ccf",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:2",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-markupsafe-8aa13811",
+      "candidate_id": "cand:missing_component:55a9c687",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:13",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-requests-57d1c256",
+      "candidate_id": "cand:missing_component:57228300",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:32",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-onvif-zeep-async-304c393c",
+      "candidate_id": "cand:missing_component:57fc0822",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:20",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-soundfile-1adc400a",
+      "candidate_id": "cand:missing_component:5942dfbd",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:81",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-verboselogs-d35ebb6f",
+      "candidate_id": "cand:missing_component:5a18f63d",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:71",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-numpy-e492595b",
+      "candidate_id": "cand:missing_component:5adaa766",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:40",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-prometheus-client-5b060216",
+      "candidate_id": "cand:missing_component:609eedce",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:73",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-filelock-26619435",
+      "candidate_id": "cand:missing_component:67be7754",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:65",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-types-peewee-5c986a69",
+      "candidate_id": "cand:missing_component:6df16cbe",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-dev.txt:4",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-dev.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-fastapi-7657fae2",
+      "candidate_id": "cand:missing_component:78d52e27",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:7",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-distlib-b038f139",
+      "candidate_id": "cand:missing_component:7cc3d55f",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:64",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-slowapi-40f3b370",
+      "candidate_id": "cand:missing_component:7cf6ba21",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:9",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-contextlib2-b996d713",
+      "candidate_id": "cand:missing_component:810ec59d",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:63",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-netifaces-c1ebf9b3",
+      "candidate_id": "cand:missing_component:811f9c88",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:70",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-onnxruntime-4e607741",
+      "candidate_id": "cand:missing_component:82ad0e88",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:46",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-setproctitle-9d070933",
+      "candidate_id": "cand:missing_component:87f7e7a8",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:35",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "p5-requirement-represented-in-inventory",
+      "candidate_id": "cand:missing_component:88eb4e77",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:75,76",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-virtualenv-51ebf0e7",
+      "candidate_id": "cand:missing_component:8b880815",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:72",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-psutil-e1c785dd",
+      "candidate_id": "cand:missing_component:8eb309cf",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:25",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-openai-5cd3cbae",
+      "candidate_id": "cand:missing_component:91773f62",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:52",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-importlib-metadata-af923de5",
+      "candidate_id": "cand:missing_component:923983f1",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:67",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-shapely-9127a914",
+      "candidate_id": "cand:missing_component:97de7359",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:58",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pyclipper-53a526c5",
+      "candidate_id": "cand:missing_component:9a326100",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:57",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-titlecase-4b892a71",
+      "candidate_id": "cand:missing_component:a024ab58",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:38",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-norfair-5b34d1ae",
+      "candidate_id": "cand:missing_component:a6e0b740",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:34",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-types-requests-453bf34e",
+      "candidate_id": "cand:missing_component:a97dd97b",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:33",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-rapidfuzz-c608a642",
+      "candidate_id": "cand:missing_component:af63e0bf",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:59",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-uvicorn-f8e07b1b",
+      "candidate_id": "cand:missing_component:afc7ec77",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:8",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pathvalidate-bc009195",
+      "candidate_id": "cand:missing_component:b628400f",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:12",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-aiohttp-6a47c41f",
+      "candidate_id": "cand:missing_component:b81f0c4f",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:4",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-peewee-b9b95466",
+      "candidate_id": "cand:missing_component:b8c36de3",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:23",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-transformers-efb99a92",
+      "candidate_id": "cand:missing_component:b9d578b5",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:48",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-opencv-contrib-pytho-d2d74b89",
+      "candidate_id": "cand:missing_component:be7dd227",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:42",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pywebpush-810b5f4a",
+      "candidate_id": "cand:missing_component:c5c69c9d",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:55",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-ruamel-yaml-1e1fe49a",
+      "candidate_id": "cand:missing_component:c91fab56",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:30",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-py-vapid-90e8cb45",
+      "candidate_id": "cand:missing_component:cd5cb94d",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:54",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-future-1573185b",
+      "candidate_id": "cand:missing_component:d334da41",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:66",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-peewee-migrate-e9fad9ba",
+      "candidate_id": "cand:missing_component:d552fd43",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:24",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-argcomplete-3f6e67f8",
+      "candidate_id": "cand:missing_component:d7466742",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:62",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pydantic-67a864c4",
+      "candidate_id": "cand:missing_component:d7a61989",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:26",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-opencv-python-headle-0ff90905",
+      "candidate_id": "cand:missing_component:d9d8dba4",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:41",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-cryptography-a1a1658d",
+      "candidate_id": "cand:missing_component:db96be05",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:11",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-unidecode-c46177c4",
+      "candidate_id": "cand:missing_component:dea9b685",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:37",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-starlette-context-2e728169",
+      "candidate_id": "cand:missing_component:e1699567",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:6",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-onnxruntime-gpu-9c94eec1",
+      "candidate_id": "cand:missing_component:ebb4e802",
+      "category": "missing_component",
+      "evidence_location": "docker/tensorrt/requirements-amd64.txt:17",
+      "group": "requirements:inv:syft-source-dir:docker/tensorrt/requirements-amd64.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-importlib-resources-d4785497",
+      "candidate_id": "cand:missing_component:edc4257a",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:68",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-pytz-fb77847b",
+      "candidate_id": "cand:missing_component:ee177a19",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:28",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-appdirs-d7b4b588",
+      "candidate_id": "cand:missing_component:f1c36ea5",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:61",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-py3nvml-f5ced6d5",
+      "candidate_id": "cand:missing_component:fd8ded39",
+      "category": "missing_component",
+      "evidence_location": "docker/main/requirements-wheels.txt:27",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-wheels.txt",
+      "reason_codes": [
+        "not_represented_in_fully_parsed_inventory"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "contradicted"
+    },
+    {
+      "assertion_id": "dreq-onnxruntime-migraphx-d357eb7a",
+      "candidate_id": "cand:unknown_coverage:29bb56df",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/rocm/requirements-wheels-rocm.txt:1",
+      "group": "requirements:inv:syft-source-dir:docker/rocm/requirements-wheels-rocm.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": null,
+      "candidate_id": "cand:unknown_coverage:350d0726",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/main/requirements-wheels.txt:16,17,75,76",
+      "group": "requirements:docker/main/requirements-wheels.txt",
+      "reason_codes": null,
+      "rule_id": null,
+      "state": null
+    },
+    {
+      "assertion_id": "dreq-cuda-python-582fe094",
+      "candidate_id": "cand:unknown_coverage:4b0a19b7",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/tensorrt/requirements-arm64.txt:1",
+      "group": "requirements:inv:syft-source-dir:docker/tensorrt/requirements-arm64.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": "dreq-scikit-build-1cedcaae",
+      "candidate_id": "cand:unknown_coverage:671c750e",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/main/requirements.txt:1",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": "dreq-openvino-727e6762",
+      "candidate_id": "cand:unknown_coverage:7f90bf11",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/main/requirements-ov.txt:2",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-ov.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": "dreq-numpy-6eda9c45",
+      "candidate_id": "cand:unknown_coverage:a10d3018",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/main/requirements-ov.txt:1",
+      "group": "requirements:inv:syft-source-dir:docker/main/requirements-ov.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": "dreq-numpy-bcbec1d1",
+      "candidate_id": "cand:unknown_coverage:d7fb38dc",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/tensorrt/requirements-arm64.txt:2",
+      "group": "requirements:inv:syft-source-dir:docker/tensorrt/requirements-arm64.txt",
+      "reason_codes": [
+        "scan_binding_unsubstantiated"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1",
+      "state": "unverifiable"
+    },
+    {
+      "assertion_id": null,
+      "candidate_id": "cand:unknown_coverage:dbf6838d",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/tensorrt/requirements-arm64.txt:1,2",
+      "group": "requirements:docker/tensorrt/requirements-arm64.txt",
+      "reason_codes": null,
+      "rule_id": null,
+      "state": null
+    },
+    {
+      "assertion_id": null,
+      "candidate_id": "cand:unknown_coverage:dd0f5060",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/tensorrt/requirements-amd64.txt:3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+      "group": "requirements:docker/tensorrt/requirements-amd64.txt",
+      "reason_codes": null,
+      "rule_id": null,
+      "state": null
+    },
+    {
+      "assertion_id": null,
+      "candidate_id": "cand:unknown_coverage:ee2ff9d5",
+      "category": "unknown_coverage",
+      "evidence_location": "docker/tensorrt/requirements-models-arm64.txt:1,2",
+      "group": "requirements:docker/tensorrt/requirements-models-arm64.txt",
+      "reason_codes": null,
+      "rule_id": null,
+      "state": null
+    }
+  ],
+  "counts": {
+    "candidates": 79,
+    "contradicted": 69,
+    "missing_component": 69,
+    "unknown_coverage": 10,
+    "unverifiable": 6
+  },
+  "provenance": {
+    "donor_base": "7195f6eb1743e9fc31368c8234471a268ba51ce4",
+    "note": "independent expected values for the ported engine: produced by the donor's own run, not by OpenTrace code",
+    "selection": "every candidate whose group starts with 'requirements' (the requirement -> SBOM path ported in I8); donor model, hashlib, dependency and structure candidates are not included",
+    "source": "BOMBridge gap-discovery overlay (Peiran Shi), exports/frigate/frigate-v0.18.2-cpu-pilot.discovery.result.json",
+    "source_sha256": "4659e0778d5b92e1caf461ba1e4d3b0ee806c412972b48f20c8e6392a976bc71"
+  },
+  "schema": "opentrace.i8-discovery-oracle/1"
+}

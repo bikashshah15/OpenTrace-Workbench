@@ -1,0 +1,4 @@
+FD-C17 condition C1. packageurl-python 0.17.6 ships no licence file in its wheel; its declared licence is MIT.
+This is the upstream MIT text, added next to the package notices (the wheel itself is installed unmodified).
+Source: https://raw.githubusercontent.com/package-url/packageurl-python/v0.17.6/mit.LICENSE
+sha256: 8e442c79545ac0c0a1a2cf0cf213312a45826acd6cdc6af223447dd5f708ee5d

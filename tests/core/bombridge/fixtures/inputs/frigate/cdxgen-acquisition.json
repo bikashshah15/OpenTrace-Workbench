@@ -1,0 +1,1420 @@
+{
+ "documented_coverage": {
+  "source": "cdxgen 12.9.0 README, section 'Generate Cryptography Bill of Materials (CBOM)' (installed package)",
+  "statement": "CBOM covers Java keystores and certificates, plus JavaScript and TypeScript source-level algorithm inventory (node:crypto, WebCrypto, JWT). Python source-level algorithm inventory is not documented."
+ },
+ "generator": {
+  "install": "npm install --ignore-scripts @cyclonedx/cdxgen@12.9.0 into .tools/cdxgen (git-ignored); release published 2026-10-22; Node.js v26.7.0",
+  "invocation": "cdxgen -t python --include-crypto --evidence --no-install-deps --spec-version 1.6 --json-pretty -o <output> <scan-root>   (run as: env -i PATH HOME=<isolated-empty-dir> NO_COLOR=1 sandbox-exec -p '(version 1)(allow default)(deny network*)' <cdxgen> ...; cwd = an empty temp dir; see tools/run_cdxgen_scan.sh)",
+  "name": "cdxgen",
+  "third_party": true,
+  "version": "12.9.0"
+ },
+ "inputs": [
+  {
+   "path": "frigate/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/__main__.py",
+   "sha256": "370a3245a10bde33380bf907a93f18f9daffaaf4bbd8dc10b69fbecba2fa29dd"
+  },
+  {
+   "path": "frigate/api/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/api/app.py",
+   "sha256": "95543d6a2d378199a0ff79f77afa33cbd341c2279add9c3988c41b391be67614"
+  },
+  {
+   "path": "frigate/api/auth.py",
+   "sha256": "eef3797d34709e33e0f6f659afb64575d2201d08d724246be25353314192b3a6"
+  },
+  {
+   "path": "frigate/api/camera.py",
+   "sha256": "a51fc1e27cf8b639566c796ace575b506aa500275d37a4d889cd82445dbe27ca"
+  },
+  {
+   "path": "frigate/api/chat.py",
+   "sha256": "4a7eca5be10d79ea5d6185ce4527e1c9430a82e866e0c4db12f713ff2cbc9961"
+  },
+  {
+   "path": "frigate/api/chat_util.py",
+   "sha256": "dad2070f59126c262163941d0704b91ae9ba4b56adb0fa1c2777518e971fb911"
+  },
+  {
+   "path": "frigate/api/classification.py",
+   "sha256": "7e7a72949d70b26403d807bc22a8b35dffd0fe366549aa7c7a4b26b3351e90cc"
+  },
+  {
+   "path": "frigate/api/config_util.py",
+   "sha256": "3474099e7625cdac53af7ba7724e5b2eb07ca38eb653312a97f16297436d35a0"
+  },
+  {
+   "path": "frigate/api/debug_replay.py",
+   "sha256": "72261a3760b71edcdf06712f0118c97dcfb2c3f1e314cc5777cf3acf3e1624bc"
+  },
+  {
+   "path": "frigate/api/defs/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/api/defs/query/app_query_parameters.py",
+   "sha256": "caf1a03792701b708b1301d79690cc951e90074d28bb12ad758dbe1eaf1da217"
+  },
+  {
+   "path": "frigate/api/defs/query/events_query_parameters.py",
+   "sha256": "286c5520fd55689754e334cdf191dc012e273133842f3006a1fa6025946eb917"
+  },
+  {
+   "path": "frigate/api/defs/query/media_query_parameters.py",
+   "sha256": "29c47421a217d871bdd79c8e74ab3ce601de56436e76ac444005878fb490e6ed"
+  },
+  {
+   "path": "frigate/api/defs/query/recordings_query_parameters.py",
+   "sha256": "e90d68375526f4d3c6e771edcf9ca0cf2d3da69eee9c0d51b622bfeab3cb1bc0"
+  },
+  {
+   "path": "frigate/api/defs/query/regenerate_query_parameters.py",
+   "sha256": "f33c0e30820e1e38f93515e030b2fb798e0d2bd5c95e8df9e22fc8d2b69b5efc"
+  },
+  {
+   "path": "frigate/api/defs/query/review_query_parameters.py",
+   "sha256": "556865b5461382886ff73a6c0299825a4b1943de363f946dd04fe7d2a50d8c11"
+  },
+  {
+   "path": "frigate/api/defs/request/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/api/defs/request/app_body.py",
+   "sha256": "955ccbc0d14a617c8222941f829a677ad0b939eeda8e53ef0a5ea39b34d70d65"
+  },
+  {
+   "path": "frigate/api/defs/request/batch_export_body.py",
+   "sha256": "8153caa97093c79545a101e982da8a4ae867366202bf4ffb5e3b4e7abe31e71b"
+  },
+  {
+   "path": "frigate/api/defs/request/chat_body.py",
+   "sha256": "ef2a092ce9efbf3a9b73614a741d21a48f0b9058f950c50eb0392648fb9d13d7"
+  },
+  {
+   "path": "frigate/api/defs/request/classification_body.py",
+   "sha256": "0f32ac385a171c76d0fce5a89f83b6d39bd07d47369ce0461a9e0f91b247126b"
+  },
+  {
+   "path": "frigate/api/defs/request/events_body.py",
+   "sha256": "d184e9e1e87daef60e5eb1cc6164684b99ac06f78657224ba551db58a6998073"
+  },
+  {
+   "path": "frigate/api/defs/request/export_bulk_body.py",
+   "sha256": "6c776264acfdf25a74381a890df453fab0626f1938d731da42faba396cc588ef"
+  },
+  {
+   "path": "frigate/api/defs/request/export_case_body.py",
+   "sha256": "0429f2185423a58ad2c7fb871070ccd143f627ac5ac7540eb8a2878f1d4e3859"
+  },
+  {
+   "path": "frigate/api/defs/request/export_recordings_body.py",
+   "sha256": "77fff82fe8961594a3f2bde745c18da2e618416793a4dc6cb993649d831d10cc"
+  },
+  {
+   "path": "frigate/api/defs/request/export_rename_body.py",
+   "sha256": "3b0e4d9ccf89294b85efa89d50eae9d22b2c9e0b15979e0dd64be97b3b6f2c32"
+  },
+  {
+   "path": "frigate/api/defs/request/review_body.py",
+   "sha256": "dc0469ff1b72c6cdaa7ca5915c3672f5233cd716938397f5961bf90569cbce62"
+  },
+  {
+   "path": "frigate/api/defs/response/chat_response.py",
+   "sha256": "42d0feae1375a921126c7003fa7b37e87f1aad0960d766370ff1ac00701141bc"
+  },
+  {
+   "path": "frigate/api/defs/response/classification_response.py",
+   "sha256": "e26e11280d92b15908fd592beeb2a21f65082b6a58051c41b1094c2e8d22d437"
+  },
+  {
+   "path": "frigate/api/defs/response/event_response.py",
+   "sha256": "576fec7f999ad7e64647997524890ecc61b14b13790e106e62889b13d27a7af8"
+  },
+  {
+   "path": "frigate/api/defs/response/export_case_response.py",
+   "sha256": "0187bddbc3119caf45c31fde11ec8830ab3cf10ea80a08c896f1bcf149a60257"
+  },
+  {
+   "path": "frigate/api/defs/response/export_response.py",
+   "sha256": "87f85eec841dc862bb9838acbc0f378f3ac03569eec1488d66d5bb2fc1c4c39b"
+  },
+  {
+   "path": "frigate/api/defs/response/generic_response.py",
+   "sha256": "1bc619fd2e841bb1663772f27f92cc8a4a189b53782d01626bd8f011260884ff"
+  },
+  {
+   "path": "frigate/api/defs/response/preview_response.py",
+   "sha256": "d8906cca8d5815d9fe8897df8de7d3d07ce550f548eb0722e03686f36b5cce98"
+  },
+  {
+   "path": "frigate/api/defs/response/review_response.py",
+   "sha256": "a627e58b5a2d4be25f42976fa69ca2952aa871d25f9a0259441d7458aea11711"
+  },
+  {
+   "path": "frigate/api/defs/tags.py",
+   "sha256": "a51ba5081cd2f66227cefccdb17ad5e827696c9d2c4cb9572eafb5f78b6e8ae9"
+  },
+  {
+   "path": "frigate/api/event.py",
+   "sha256": "ed692d038f2427fe57a519de0095ef11bcf64b8a05fc8fb22e9c3ee5ce3e5af0"
+  },
+  {
+   "path": "frigate/api/export.py",
+   "sha256": "4b5d0db5f9596f5c1bb412018295f00013a553626b8eecc9b560d926b80067ee"
+  },
+  {
+   "path": "frigate/api/fastapi_app.py",
+   "sha256": "344092d5f13ff93d5c2a928c13296efaf9c8ff3f6e48994476213c1d646f3cde"
+  },
+  {
+   "path": "frigate/api/media.py",
+   "sha256": "5546d3e6abf99bb837caf0e7ac2f2025da55e414279bf620babf29f6a1dcbb5b"
+  },
+  {
+   "path": "frigate/api/media_auth.py",
+   "sha256": "bbe3f9f742b299c03adc892e81099d46d66a3333af04f330f1b6849a18923ad3"
+  },
+  {
+   "path": "frigate/api/motion_search.py",
+   "sha256": "805be27333ab9fb0242e8d36b8882f74f355b82cae78f7a63eb3d684b6be7aa3"
+  },
+  {
+   "path": "frigate/api/notification.py",
+   "sha256": "cfb3198d48acfa57c12086a1e1e390f28c2d8f2aee5e6e18f88380aea1d349e5"
+  },
+  {
+   "path": "frigate/api/preview.py",
+   "sha256": "fa3201b11573eb5c634e817b8ffe0a02c2f64c4b6e05d68e035cd3f20e9462f6"
+  },
+  {
+   "path": "frigate/api/record.py",
+   "sha256": "172fd8b61211fcb34f81481b6b5eaba4a21b459ff871daf2505806a827699b09"
+  },
+  {
+   "path": "frigate/api/review.py",
+   "sha256": "405bfe994f1033b19a5e7cdf31a2bc24c65a202c2720cf1467b10456571b59cb"
+  },
+  {
+   "path": "frigate/app.py",
+   "sha256": "238f44c6cd28636dd05de3c56f7678595af967e9d4bb49ddac05b20f334b42c3"
+  },
+  {
+   "path": "frigate/camera/__init__.py",
+   "sha256": "771d2d6b3188ce3acc528835badc0f680cbacb3f94daf2efebbc63cae40a9371"
+  },
+  {
+   "path": "frigate/camera/activity_manager.py",
+   "sha256": "d2219b37662d7dbbb1ed8d1b140008e8f0ccf1abad8daa31f2ac83e454eba528"
+  },
+  {
+   "path": "frigate/camera/maintainer.py",
+   "sha256": "841a654718bf79e91bcf852449f89fac3d288cce960425521f9f48c1aae77153"
+  },
+  {
+   "path": "frigate/camera/state.py",
+   "sha256": "7fb8260ae15b573205cb91bd3cfc4bb9777451cc5f829889f26e1f42aebd5455"
+  },
+  {
+   "path": "frigate/comms/base_communicator.py",
+   "sha256": "1ba45df2049666ea30c000ac24167dbc2fe3b5066428f5104827872652786f39"
+  },
+  {
+   "path": "frigate/comms/config_updater.py",
+   "sha256": "03e73fe0629fd438a671314a8497dd2c831917d6153e495e13a80ca011cc745f"
+  },
+  {
+   "path": "frigate/comms/detections_updater.py",
+   "sha256": "ee4ec2a28130813c734c42675336cf7f32d4331e592e3eaaf263d7b8f11ce576"
+  },
+  {
+   "path": "frigate/comms/dispatcher.py",
+   "sha256": "fa36a9557f071b630488f1e1a708eace03b753c64c2934276e2018e63f49e511"
+  },
+  {
+   "path": "frigate/comms/embeddings_updater.py",
+   "sha256": "6ae5416cad92782cc1d2b4423e82f4fa08e75fdf3a57397945de5eebc0421bc6"
+  },
+  {
+   "path": "frigate/comms/event_metadata_updater.py",
+   "sha256": "bf0f2aa32a55bc1d7622338326ef42636252650ff97b5a02e7b90347587a8e38"
+  },
+  {
+   "path": "frigate/comms/events_updater.py",
+   "sha256": "d195a829b577aa9d907743a12fa12b17ded25b9ae6c82e0ed88b1cb97fe16af7"
+  },
+  {
+   "path": "frigate/comms/inter_process.py",
+   "sha256": "6c79616ecf3bd597907995f03ee414b3c099cbf1f2d41508ef6cbc7896daac1f"
+  },
+  {
+   "path": "frigate/comms/mqtt.py",
+   "sha256": "8dc48c8144e6042323b51b877062e5942394b923ccfa1596558276ca6eee4a3c"
+  },
+  {
+   "path": "frigate/comms/object_detector_signaler.py",
+   "sha256": "969246652fddfd52f2eecf682c29d3158932a747a05856510be7309f75c49007"
+  },
+  {
+   "path": "frigate/comms/recordings_updater.py",
+   "sha256": "334978643ce651e078f459233b728fdabd64973f8cba8bf46fad28c09a5ac1b4"
+  },
+  {
+   "path": "frigate/comms/review_updater.py",
+   "sha256": "be67bbf399e1826120c05f28e10c80dae97ad6ca1519fef7af44bb9e7f83db4f"
+  },
+  {
+   "path": "frigate/comms/runtime_state.py",
+   "sha256": "c7e84a7098f60d09c993e2fa3bc4b9eeccf58330952f2cccda867912278efcd2"
+  },
+  {
+   "path": "frigate/comms/webpush.py",
+   "sha256": "d28aa909802569bd5e3e60d48b9146afbf29c5f721ccc52bcb6d7b1afcfc109f"
+  },
+  {
+   "path": "frigate/comms/ws.py",
+   "sha256": "06deb021cd5f193c0177dad9837ea5f77b96256c05996d77aff563d5587f6cd2"
+  },
+  {
+   "path": "frigate/comms/zmq_proxy.py",
+   "sha256": "1995289018bbace1c6ac7b0876f0ef30fea33fa28f94a5b8fee8b91ae6d48429"
+  },
+  {
+   "path": "frigate/config/__init__.py",
+   "sha256": "36625c350085be2a8affc1deafd1a06d05762391bef112d8ff8af710d4c248d9"
+  },
+  {
+   "path": "frigate/config/auth.py",
+   "sha256": "31ec3ca93710ddbf68028bd5c766a7899c4d9e2a32afafd23a71f48b42c18067"
+  },
+  {
+   "path": "frigate/config/base.py",
+   "sha256": "c7fe67a09b7924d8f837bdfbbfc6e1c70e43bcd0ade2ea4f82fdaf17049c3b86"
+  },
+  {
+   "path": "frigate/config/camera/__init__.py",
+   "sha256": "ef0b11b2a705a477b341804a63588437cbbc50ce29f07158ee66030cce3bec6a"
+  },
+  {
+   "path": "frigate/config/camera/audio.py",
+   "sha256": "d688a56027147701cbfef0ecdcc5c346f810ec06313970de200aa47ced25e88e"
+  },
+  {
+   "path": "frigate/config/camera/birdseye.py",
+   "sha256": "543ea69fdce71b149680a924de9d3ed60eb5f2c71d2dcf2239a7036a35336a7c"
+  },
+  {
+   "path": "frigate/config/camera/camera.py",
+   "sha256": "62db9eb9894c82985b9dad73d1006026b5929400c6bd5cee2c048a38ca522f8f"
+  },
+  {
+   "path": "frigate/config/camera/detect.py",
+   "sha256": "f88d382e483479e6569804c7788ef726806a5eec92481b6999850ab284627b55"
+  },
+  {
+   "path": "frigate/config/camera/ffmpeg.py",
+   "sha256": "3ac8fcb5e6f4d139e5c7063ca8ede1204bf99fa867f6909e54ed027362e6ee6c"
+  },
+  {
+   "path": "frigate/config/camera/genai.py",
+   "sha256": "e6d8393d128303e0788b2587be9aabab0bc318fe493a9830b6047c120947160d"
+  },
+  {
+   "path": "frigate/config/camera/live.py",
+   "sha256": "3b287dee0fccdec0efb31bf3ab7af9fd2f4d2c3a4f509185c088cb1b1def0cba"
+  },
+  {
+   "path": "frigate/config/camera/mask.py",
+   "sha256": "e7f7a142255c445b16ddd81a1f03c96390b0d9eaef9eed86018df31e988db9c7"
+  },
+  {
+   "path": "frigate/config/camera/motion.py",
+   "sha256": "12906a1a93d6ee2dea2559a8d9fba165a285a7a3c725c6a1ab5fae28e1237d02"
+  },
+  {
+   "path": "frigate/config/camera/mqtt.py",
+   "sha256": "63b487587c0b35a641e5c891155d0c86d60ca08cd44fb0453251bf3890ab29e9"
+  },
+  {
+   "path": "frigate/config/camera/notification.py",
+   "sha256": "f2c140cfbd72e27ed587207851161299e66cddfe825de48363efa9d0436ca235"
+  },
+  {
+   "path": "frigate/config/camera/objects.py",
+   "sha256": "8bb0abcffd5e0176ba89198274023b3f04061521e4fb5d1f61d403c732bc651e"
+  },
+  {
+   "path": "frigate/config/camera/onvif.py",
+   "sha256": "775e27c5499c3363ac3e471625e82403666615cb2ec20bd95cc8c8335a5823a7"
+  },
+  {
+   "path": "frigate/config/camera/profile.py",
+   "sha256": "08e4eea920fcfd30d12572949262aace357866d02c9323bba74edb72c501627d"
+  },
+  {
+   "path": "frigate/config/camera/record.py",
+   "sha256": "d717668d979fc46de90bc410ef9fce1bce822c56e1897e53456aa323d188e8e7"
+  },
+  {
+   "path": "frigate/config/camera/review.py",
+   "sha256": "bb296f1c9629f5961c5a69b149cdc9b4614ade8c62f65ee3aa59a46e7a0183fb"
+  },
+  {
+   "path": "frigate/config/camera/snapshots.py",
+   "sha256": "1998b9e023b884a3e3dbefc70b7c3a24bd9464ca62b3b8addd1d77c81c0524a6"
+  },
+  {
+   "path": "frigate/config/camera/timestamp.py",
+   "sha256": "fb88c694f116cd7404930c3dbafc6a00b9c1f2fc434ff9bbef0b23cd2e1d12a4"
+  },
+  {
+   "path": "frigate/config/camera/ui.py",
+   "sha256": "7850700fabce14d1fa81eaea78cea524f78259c6778dfa96c369b658fbad9006"
+  },
+  {
+   "path": "frigate/config/camera/updater.py",
+   "sha256": "98cc0d8c58e662b887f80ebf5b7624dd3d8f1874b731685345d2f757c2bea710"
+  },
+  {
+   "path": "frigate/config/camera/zone.py",
+   "sha256": "57d0f27357b375de29d109f93d3ca88a168e42b4304a3056ccbe619038a031a3"
+  },
+  {
+   "path": "frigate/config/camera_group.py",
+   "sha256": "4f12ba5001597ccc39112c6204bc7d831ffbd4c8411f7b6e3da0fa69431c8151"
+  },
+  {
+   "path": "frigate/config/classification.py",
+   "sha256": "fe8899b2e28106ddb1ab41422f4f81fe17300c7084803e2f4290091ff791cd8f"
+  },
+  {
+   "path": "frigate/config/config.py",
+   "sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630"
+  },
+  {
+   "path": "frigate/config/database.py",
+   "sha256": "fa947faa96924e99122bbbba915658edb3788e0576dc38cf667cf5755cafaf51"
+  },
+  {
+   "path": "frigate/config/env.py",
+   "sha256": "918ed8e330608cb16f31a841bcc04580ff17701465b89b9000e474a415fe73ff"
+  },
+  {
+   "path": "frigate/config/holder.py",
+   "sha256": "f14862840a104c5b14e572e5b901dac1bab09dd30bdb80f341bafc84b5558b0b"
+  },
+  {
+   "path": "frigate/config/logger.py",
+   "sha256": "be67cde13fe69d0dc0f6ebb67bebc3cddfabf8d481de3f80881ecd9c6c19bbc6"
+  },
+  {
+   "path": "frigate/config/mqtt.py",
+   "sha256": "9f71bcc8662abfb53112a868231ab6146bf584ee575022337015ebfc73583e7b"
+  },
+  {
+   "path": "frigate/config/network.py",
+   "sha256": "ac2f933f53562b7928d07a49dc522b04ee9ebeb41520daca9655b777a6bf546f"
+  },
+  {
+   "path": "frigate/config/profile.py",
+   "sha256": "3a9b8b13f4a09292623acb46cdf51152f50ad07e95eb77769130ebc6cfa4be16"
+  },
+  {
+   "path": "frigate/config/profile_manager.py",
+   "sha256": "a8dd100799feacaf7059df0159ab1517e71ec275279105398712ac2c0d463319"
+  },
+  {
+   "path": "frigate/config/proxy.py",
+   "sha256": "8c0b70026422fa210aa6bee89d7bafc9e7eaa16489baf60f18cbb498be5fc071"
+  },
+  {
+   "path": "frigate/config/telemetry.py",
+   "sha256": "be2378b863960abe4ae74a1dcf5cdc01af8bfa7943f444b71a13695f0cb331ac"
+  },
+  {
+   "path": "frigate/config/tls.py",
+   "sha256": "cc68a496b904f58744f94df2b8fddba1be6b50e9abf4922b3a08d1bc72771e0a"
+  },
+  {
+   "path": "frigate/config/ui.py",
+   "sha256": "fd0b6201c00b0e54e9d213d45532ba1083e9fb0c6ce1a300ce69cada5025bb0e"
+  },
+  {
+   "path": "frigate/const.py",
+   "sha256": "cbbfb5c127f54e69f0fc73582a43f235cc52cde8ab71b46de97c072a4bc10d51"
+  },
+  {
+   "path": "frigate/data_processing/common/audio_transcription/model.py",
+   "sha256": "337a6c13f07ce0f05e4084355f48f927e9097f703b6f3b1e536c795355d30f00"
+  },
+  {
+   "path": "frigate/data_processing/common/face/model.py",
+   "sha256": "7ed5a4d71d62393a809aaf964d236468915b852172f685968ba839d451948b55"
+  },
+  {
+   "path": "frigate/data_processing/common/license_plate/mixin.py",
+   "sha256": "0b5421f77c596a63381bd804d361bff915515987ad35b80049e99895e6b6e295"
+  },
+  {
+   "path": "frigate/data_processing/common/license_plate/model.py",
+   "sha256": "5934b8ccfd329a5c6a57b12348b11807c103b43d800bc4a065f1a113ec93b7ed"
+  },
+  {
+   "path": "frigate/data_processing/post/api.py",
+   "sha256": "510cab564e0ca0f97b3bfb5d8ac81a827104e8d962da2e501270b0015ff4cac2"
+  },
+  {
+   "path": "frigate/data_processing/post/audio_transcription.py",
+   "sha256": "ff89439846658f4f86bf677ed9228ae75fb56da95d3c66d5fb0544d6b35731e8"
+  },
+  {
+   "path": "frigate/data_processing/post/license_plate.py",
+   "sha256": "33887a2cfa78beb0716c1342eebdffc239e32dcd083f4511751fa93c4d8cc1f2"
+  },
+  {
+   "path": "frigate/data_processing/post/object_descriptions.py",
+   "sha256": "4cb97a62ebe73ae43e29e765cef193c075b6c84880b5a291033bf3082532cea4"
+  },
+  {
+   "path": "frigate/data_processing/post/review_descriptions.py",
+   "sha256": "126bd78461f75a7e3b565a3fa4fd70e1730eaa19f7d0527886f147314a2eb8ca"
+  },
+  {
+   "path": "frigate/data_processing/post/semantic_trigger.py",
+   "sha256": "bf0dfa579abf55a4b100d4821e92dcad01584fb8a0cbde59cbeb874679d0dcfe"
+  },
+  {
+   "path": "frigate/data_processing/post/types.py",
+   "sha256": "969b31ab585686f257a0f4ab724d8a830b1928c3f90b4ed25fd5f30428e4f598"
+  },
+  {
+   "path": "frigate/data_processing/real_time/api.py",
+   "sha256": "b0a5e2c2e742f2b47539f0ce9a732b41ad8c9ca0c3c908f3edd79c297917fba9"
+  },
+  {
+   "path": "frigate/data_processing/real_time/audio_transcription.py",
+   "sha256": "7835e0354450cdd6eef2dacb4a288649fbbbff7777359469964d877e2c189b5d"
+  },
+  {
+   "path": "frigate/data_processing/real_time/bird.py",
+   "sha256": "07d27564b8ab67f228784283a83dbbfaacb862b29f526c95d0d5066c3f80e0f3"
+  },
+  {
+   "path": "frigate/data_processing/real_time/custom_classification.py",
+   "sha256": "54b504b85f43206db7c638aca26cee5c2761541cba0471bed7e32200e763797e"
+  },
+  {
+   "path": "frigate/data_processing/real_time/face.py",
+   "sha256": "49e683c871c32620906fc2915375af6aafc0866a92adb869c8308fdb3e8e7961"
+  },
+  {
+   "path": "frigate/data_processing/real_time/license_plate.py",
+   "sha256": "3e4237ce606736ff871f9db58c464a3063c65247ca35a091fa49a7b422ef39ad"
+  },
+  {
+   "path": "frigate/data_processing/real_time/whisper_online.py",
+   "sha256": "8aa52e3fe3715f37c7998fd7962b50cb2055b7f5463fc4826d5c74af991149e0"
+  },
+  {
+   "path": "frigate/data_processing/types.py",
+   "sha256": "23e35b75577bea39ec8d4abad4412150808262e57bb277a10a3765ab2869d672"
+  },
+  {
+   "path": "frigate/db/sqlitevecq.py",
+   "sha256": "023b98cfbd5c4cb2b7196c7153cdf3895ec6d72665bcae75d72d5daa8fea9f47"
+  },
+  {
+   "path": "frigate/debug_replay.py",
+   "sha256": "25191f3fca14b20556c1b8e33d993b16fcc7074fdfd0aaaeb163873069f4e79f"
+  },
+  {
+   "path": "frigate/detectors/__init__.py",
+   "sha256": "c4eb4ae2534744acd1d95aa5c6dffebc2ad1ccc0163dfc8fbc73f961ad0d8ce2"
+  },
+  {
+   "path": "frigate/detectors/detection_api.py",
+   "sha256": "454266e22834bc455d2ae34032d5d19c760aa3d96359664d4f986b49d10e0f79"
+  },
+  {
+   "path": "frigate/detectors/detection_runners.py",
+   "sha256": "bb74708a0f3da0404afe72104a3aab79c655e68e3c0641b1425eeb7550d75d91"
+  },
+  {
+   "path": "frigate/detectors/detector_config.py",
+   "sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17"
+  },
+  {
+   "path": "frigate/detectors/detector_types.py",
+   "sha256": "54cbdb078cc3bca2492189ad0915b0fd24a8d7113592225e478ba5f3eb922b99"
+  },
+  {
+   "path": "frigate/detectors/detector_utils.py",
+   "sha256": "187a910ad8db7d498e3a490f176620f39f98616bce13db3790233424ccd7e3dd"
+  },
+  {
+   "path": "frigate/detectors/plugins/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/detectors/plugins/axengine.py",
+   "sha256": "a7d3de43017db9da24ca7788d4c6dcda285cbfe9e157057cbeb61f4b910fa91d"
+  },
+  {
+   "path": "frigate/detectors/plugins/cpu_tfl.py",
+   "sha256": "59194a6ce433575ae97fa697991638a9555d17b7a7c1c0a369d18c35880b6419"
+  },
+  {
+   "path": "frigate/detectors/plugins/deepstack.py",
+   "sha256": "26a8e9e3385059241e12d7a6c38e578d1b7682b87993c1423b5a7d2301d48f34"
+  },
+  {
+   "path": "frigate/detectors/plugins/edgetpu_tfl.py",
+   "sha256": "e9ee6e152537472f54e4a3dec225d4a64ff1bfb6231e5a485ed926404eea7eca"
+  },
+  {
+   "path": "frigate/detectors/plugins/hailo8l.py",
+   "sha256": "8dd559f9b9645113e50ba9c8b935e097cb061ee2b1dccd840da8d8134f80573c"
+  },
+  {
+   "path": "frigate/detectors/plugins/memryx.py",
+   "sha256": "751c035d95b2f06a7a8282beffd6514ef9db89584106fced3c2b473c92c1d0de"
+  },
+  {
+   "path": "frigate/detectors/plugins/onnx.py",
+   "sha256": "7982fab3de44b1a08a388a0bf9bbbac723f1d582b1cbfa05209ac003e2c4f211"
+  },
+  {
+   "path": "frigate/detectors/plugins/openvino.py",
+   "sha256": "7748377a684a6f9c4b89eba667648846d48b72ea5c0e4d5c588d9f099ea096a4"
+  },
+  {
+   "path": "frigate/detectors/plugins/rknn.py",
+   "sha256": "0fb092ca7a6f8b9d44154159d9dc354cc45e0e83afd307705f813c466e6deb9d"
+  },
+  {
+   "path": "frigate/detectors/plugins/synaptics.py",
+   "sha256": "9372f5606be8720955709599f67e14c4d6c37e1065bd74c77fd73955ea243f4f"
+  },
+  {
+   "path": "frigate/detectors/plugins/teflon_tfl.py",
+   "sha256": "eb6308f90c3eddaa6f44fdc6a9b568d5900b5fcebbd7590be9d50f46ad2ceeec"
+  },
+  {
+   "path": "frigate/detectors/plugins/tensorrt.py",
+   "sha256": "77057c2e25e397979e5af1ed710ec2071a8942ba57ca1eaaa81df80155c8f1ac"
+  },
+  {
+   "path": "frigate/detectors/plugins/zmq_ipc.py",
+   "sha256": "a7196d7827a05e66ee28611ac963b4bcb16a6f851eb43a55d5a659cbb1b05018"
+  },
+  {
+   "path": "frigate/embeddings/__init__.py",
+   "sha256": "79150b2132fb223a40d2da78b3f22bfec4063b4e6fc57f36ba5e3e7dd4dc2bd9"
+  },
+  {
+   "path": "frigate/embeddings/embeddings.py",
+   "sha256": "13a5e57a51240a7fb20d73d8cc0c802a830e5fe65874c592eb4b33a5a2112338"
+  },
+  {
+   "path": "frigate/embeddings/genai_embedding.py",
+   "sha256": "38ddf4193dc98ec98a58e112dea7037283bc91d5c031d2aea0195a8d8f2d23bc"
+  },
+  {
+   "path": "frigate/embeddings/maintainer.py",
+   "sha256": "4e7c3eb7bea5f051c4a0dd557b689d63fc14a26494b13806fe8e95f0c9f3e676"
+  },
+  {
+   "path": "frigate/embeddings/onnx/base_embedding.py",
+   "sha256": "d77aee7873f839c14280262dd205215303c2f4142d1b451a43e42ec85c1b1c4b"
+  },
+  {
+   "path": "frigate/embeddings/onnx/face_embedding.py",
+   "sha256": "27d9eb39f3a53cc164a60e8b0a79e16f6acdc2cd08344deeb470fea9bb84b3ca"
+  },
+  {
+   "path": "frigate/embeddings/onnx/jina_v1_embedding.py",
+   "sha256": "7b0185cf8cf645a68dbe58eadd77f92011f58c8ad6c4a9e24a41a2cfbba55e99"
+  },
+  {
+   "path": "frigate/embeddings/onnx/jina_v2_embedding.py",
+   "sha256": "be3139234d7dc2adc8cc323e8321cb951857e11fd612345a8c5d0a1af5ba67e0"
+  },
+  {
+   "path": "frigate/embeddings/onnx/lpr_embedding.py",
+   "sha256": "f08c9c0835a8905bcc88a87940919b094d8dfbb293fbec33eab81918fa938b87"
+  },
+  {
+   "path": "frigate/embeddings/types.py",
+   "sha256": "c01449c3c27d0a4674250085b50d2a2859f06a7d2224ecacab33dfe1e446a90a"
+  },
+  {
+   "path": "frigate/embeddings/util.py",
+   "sha256": "5dd439320b542ef6ad45a02b92bb13c2c157cc868ed19d64827ae69ce87eabaa"
+  },
+  {
+   "path": "frigate/events/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/events/audio.py",
+   "sha256": "1102b783280c327e6511fdedc1a97fc30a929a751aa2e5d61e33a78c5467900e"
+  },
+  {
+   "path": "frigate/events/cleanup.py",
+   "sha256": "e8f9f29302cc8c7f6939ca35f606cbfae93e54c1d6dbbedd71b3a374d84731d5"
+  },
+  {
+   "path": "frigate/events/maintainer.py",
+   "sha256": "715181a0cac677ef6a197031081e5c8ffcef7fa0841fd14b79c04e751bb4261c"
+  },
+  {
+   "path": "frigate/events/types.py",
+   "sha256": "543db0deaa106971c37ab2db36213bdb373e736553777bff1bfa37e4f317995b"
+  },
+  {
+   "path": "frigate/ffmpeg_presets.py",
+   "sha256": "eaf86f24a5549dcd252523cd92cb6a3842811e68e09d7351b26d6a6d84c90650"
+  },
+  {
+   "path": "frigate/genai/__init__.py",
+   "sha256": "7acec29c44d0b43ba48777420fdf6733780104be8f49eebce53e42a1b696351c"
+  },
+  {
+   "path": "frigate/genai/manager.py",
+   "sha256": "c4f8a155636cb1a5695586cb1f1ba88db9222ca45d780a2b987d2fdfd9cf16bd"
+  },
+  {
+   "path": "frigate/genai/plugins/__init__.py",
+   "sha256": "ecd6ec6a26eb6fbf867442214e3acb0a9582e36d6071944b831cd8ccc685b72d"
+  },
+  {
+   "path": "frigate/genai/plugins/azure-openai.py",
+   "sha256": "402f9f5659cf2b6d71ad487cae7f2c86871c829a252680dca06745a8aa721c31"
+  },
+  {
+   "path": "frigate/genai/plugins/gemini.py",
+   "sha256": "23edff076244f0002d54ca5d51e065bbbe1d1f0b0797dc1a2b4dac881dac45ad"
+  },
+  {
+   "path": "frigate/genai/plugins/llama_cpp.py",
+   "sha256": "93ac26134e8696a242a73f267122c9be6ad30a455e21a77c9b5eaa2993485f57"
+  },
+  {
+   "path": "frigate/genai/plugins/ollama.py",
+   "sha256": "c9fb96b05ffea84ab8c661e1accd0b16b71c9be2c265c69622ec78ddd360ef12"
+  },
+  {
+   "path": "frigate/genai/plugins/openai.py",
+   "sha256": "a6cc79e7bd862ade59b3fad3f64538082b26c9a5f5f65cce6f909b448be6f85b"
+  },
+  {
+   "path": "frigate/genai/prompts.py",
+   "sha256": "75f32afad9d3a5420555159f061ba408be882a21eb45b731e37eb1f3c94fb1b3"
+  },
+  {
+   "path": "frigate/genai/utils.py",
+   "sha256": "00c3aef1f903076ece798bf0670ee45ccc527589e95e661469b9b1b88aff893f"
+  },
+  {
+   "path": "frigate/images/birdseye.png",
+   "sha256": "5282bdc82cbc5e4adc92af401618d43589b2f2f3f46b16af7e68ab11f62354f0"
+  },
+  {
+   "path": "frigate/images/camera-error.jpg",
+   "sha256": "2ebb7860c495bb2bf48685f88357471d2afde291175617a243499e80eafbeaa9"
+  },
+  {
+   "path": "frigate/jobs/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/jobs/debug_replay.py",
+   "sha256": "cb0bb13f7f1a218a2581325bcd00e4d518fc83b4677af58ec47cbb6eeb59a623"
+  },
+  {
+   "path": "frigate/jobs/export.py",
+   "sha256": "8e6c5dc249b02736abdb1f9110e6ce0f0480f84539109eca1aa61d7a1da3d219"
+  },
+  {
+   "path": "frigate/jobs/job.py",
+   "sha256": "f165e0d9607c28736dc83acf4fd4fc1f1d7c88339d77fdd89fc491a1482ef963"
+  },
+  {
+   "path": "frigate/jobs/manager.py",
+   "sha256": "f7e0f459632a78a99629be85eb6c4608afb3642ade2b2e2d27d0e5282089f136"
+  },
+  {
+   "path": "frigate/jobs/media_sync.py",
+   "sha256": "8ad1758a231a859bb3fe1df0dde28ab9bd553facd82e1a35f9bf5411fdc17032"
+  },
+  {
+   "path": "frigate/jobs/motion_search.py",
+   "sha256": "dabacd8b0c51ad47208300defac86a41b315a6453af3f0046dca27f415594f62"
+  },
+  {
+   "path": "frigate/jobs/motion_search_batch.py",
+   "sha256": "4c58650bd17f321cff1b1f64bdec25d3ac83b34456205814bec1326e7ab2adb3"
+  },
+  {
+   "path": "frigate/jobs/motion_search_decode.py",
+   "sha256": "472c0245e75a5f082b52ac497bf3449f2508dae1bf94411df30a8281aa31bbcc"
+  },
+  {
+   "path": "frigate/jobs/vlm_watch.py",
+   "sha256": "45375440d850894318c74b4235e41fb0f0510dad4ac2108bd4b8be59b4941bb1"
+  },
+  {
+   "path": "frigate/log.py",
+   "sha256": "cf05eed1799018a770710e78c04a0be52ae2746554fcefb24260a172049e2347"
+  },
+  {
+   "path": "frigate/models.py",
+   "sha256": "1d6aa15452c68da5a049ac75550fd9dd1f582d2512f03eb388c4129f222146bc"
+  },
+  {
+   "path": "frigate/motion/__init__.py",
+   "sha256": "50002ab3f27419752ada45e13b6d4592505b87babe04eed6f2e5df1af1cdd22f"
+  },
+  {
+   "path": "frigate/motion/frigate_motion.py",
+   "sha256": "068611ec37834469ed9e04fbdc2a7f147bd5a1a36afe2d46763dfc8a31d98bb0"
+  },
+  {
+   "path": "frigate/motion/improved_motion.py",
+   "sha256": "83245feab63ad960ad651be43aa30c144865812edc5c8ec0ff521e09349fa2ac"
+  },
+  {
+   "path": "frigate/mypy.ini",
+   "sha256": "1be74dba8447a57a75ad6acf713c0d564ab2d0ba5ee74fadb27e61073e389c2c"
+  },
+  {
+   "path": "frigate/object_detection/base.py",
+   "sha256": "5363c3ebe8193ad929f3e2e9a5f9434bc5f9770e67cd684c3bfcd1aff79d4a1b"
+  },
+  {
+   "path": "frigate/object_detection/util.py",
+   "sha256": "40d893c5b15490bdd4363ec5bb3fb3123d8ac4bee625cd5d8f0a042f2c07f1e9"
+  },
+  {
+   "path": "frigate/output/birdseye.py",
+   "sha256": "b7c83f9d5a6824c7bb888d3c397fd91c845fe653ce15c2759ea40685741cc12e"
+  },
+  {
+   "path": "frigate/output/camera.py",
+   "sha256": "ad5d23dd513764f1c62ac36b953febb004b260b5ab8979b8e3bb333d28f5c381"
+  },
+  {
+   "path": "frigate/output/output.py",
+   "sha256": "182c780e39043e102260c967df53e75beb51d1ebd2d665c075b0d6d26b8be183"
+  },
+  {
+   "path": "frigate/output/preview.py",
+   "sha256": "3428152c4a911865ccf1898932fecfaa59d4af9bf6fb60cd8bcab0e4d51ce511"
+  },
+  {
+   "path": "frigate/output/ws_auth.py",
+   "sha256": "686e17b44f4e6ac74aeebcc7eb71bb11677f7a26426f8e80c634d4ed8d4b551b"
+  },
+  {
+   "path": "frigate/plus.py",
+   "sha256": "9e7b6c106df72a4366c7a5493189f59ef6b3c4f5d42a478982484e2090e84441"
+  },
+  {
+   "path": "frigate/ptz/autotrack.py",
+   "sha256": "4d68739ff44c7c2fa3c6828aaf5407136427f6a2687584a15ee401daba130d3e"
+  },
+  {
+   "path": "frigate/ptz/onvif.py",
+   "sha256": "f6a85cf8265c3cbce72914c90ccce8d95fdfd13cc1cbc093f2b966bd731409be"
+  },
+  {
+   "path": "frigate/record/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/record/cleanup.py",
+   "sha256": "87aadc9343ce0cdf9e5b3bcf1e015b6d338b9d2e91533c07090f111058727313"
+  },
+  {
+   "path": "frigate/record/export.py",
+   "sha256": "2e577fd235472c72a969e6892cbf61644420121572ac5c57e632e14e1e575b86"
+  },
+  {
+   "path": "frigate/record/maintainer.py",
+   "sha256": "3d21fe2c889ca1e911ff6fe719005c242c62a288e4f1ecac438e157f6b2c4b74"
+  },
+  {
+   "path": "frigate/record/record.py",
+   "sha256": "49c1b11f89d4db1438f2607f50873121c6cd4b719ec0884e43005d3544af1a45"
+  },
+  {
+   "path": "frigate/review/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/review/maintainer.py",
+   "sha256": "4ef0a07ecd6af46ceb2ae91e33e06f91c178e6a0ddc463c4115fe2ee0c3be6a3"
+  },
+  {
+   "path": "frigate/review/review.py",
+   "sha256": "0758ea0521b9f48fbc9a15a2bed34422525d993a160f4db2bbccf26ec4cbb9f6"
+  },
+  {
+   "path": "frigate/review/types.py",
+   "sha256": "ea2eba19dd6d970044953c61edd63af496d85e900e88e72a4efb9c059e7c1646"
+  },
+  {
+   "path": "frigate/service_manager/__init__.py",
+   "sha256": "9c8871f4e25a970d2cc17c2ecca50746e0a3fccd53effedcdd9db95004155864"
+  },
+  {
+   "path": "frigate/service_manager/multiprocessing.py",
+   "sha256": "35b5053756a9a9cf8be8ac0a073e953a09b106e87518dff90fe12acffb97ffcd"
+  },
+  {
+   "path": "frigate/service_manager/multiprocessing_waiter.py",
+   "sha256": "d8eb922602f90c52f3319201cd5dc3e9c5f92add318de87e6f4c36a6bc06f06f"
+  },
+  {
+   "path": "frigate/service_manager/service.py",
+   "sha256": "25ff57827e18dfb367b46331703d898048bac73010d78f52a84b0e838f453319"
+  },
+  {
+   "path": "frigate/stats/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/stats/emitter.py",
+   "sha256": "7a94ace25e09f6efbd3bbbea619f675fe827745dde69eb5185c868fb0a6ec5ca"
+  },
+  {
+   "path": "frigate/stats/intel_gpu_info.py",
+   "sha256": "4c98cefc4118d99b5f46b88ef17829b50a3b766b7cb774cf8d0b30c15eb9ebd0"
+  },
+  {
+   "path": "frigate/stats/prometheus.py",
+   "sha256": "ea66e680d221d1e909d31d06da7be1a1eefff01867985e83b9bbc046b54bdaa2"
+  },
+  {
+   "path": "frigate/stats/util.py",
+   "sha256": "2d4a39d98c5aa01607608e46550a44baa9121c83017e8ac6d0b45dc8610d237f"
+  },
+  {
+   "path": "frigate/storage.py",
+   "sha256": "7e4f95ad515f6138ba905473b0536501f02ea4f002b668c6742f9813657ec204"
+  },
+  {
+   "path": "frigate/test/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/test/const.py",
+   "sha256": "c38f85cb79565f7dca3df731c9183dd65ee7890863e8f2ee384f99f3a29847e6"
+  },
+  {
+   "path": "frigate/test/http_api/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/test/http_api/base_http_test.py",
+   "sha256": "96b845d66e1348fee02dbbad367d34f4e24f3997fe618c7e37654c58242b8bcd"
+  },
+  {
+   "path": "frigate/test/http_api/test_debug_replay_api.py",
+   "sha256": "e9b864d313949f39aca4b9b6ea20485366bfe1691e9af8f3c9f0ce6e469602e8"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_app.py",
+   "sha256": "9371871190f06d37e65d7aaa606287391939b6a71135b8412835575510bebc3a"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_auth_internal_port.py",
+   "sha256": "89322707b5ceadd8dd88fce7ee3aff883e049a34bb1b775edc5497fce42caf3b"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_camera.py",
+   "sha256": "611bee39491673c62804fe550669ce16453c1926a990c2eb6dbb7424f0d4193d"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_camera_access.py",
+   "sha256": "911deca90a2cac0a1971120ec50d5cce9e2331a1b74c696dd58be550c7de8290"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_classification_traversal.py",
+   "sha256": "aa2a1561a9be248cd6c045a1109b2ad5b7ec11e23c7cb10314569464564812cd"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_config_go2rtc_streams.py",
+   "sha256": "b9861ce002aa28d582a7e157a71920cba2b5d69f0f6c9a74b2a5f42724aab1ee"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_config_set.py",
+   "sha256": "60dc96f1b5f93df66e7d5f7816db44b1a4db9d46cd33fe50585e45043d86c350"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_event.py",
+   "sha256": "4b13b5b474b80f474484303c84eec94e95ec962044f4a5296481bd6651122b94"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_export.py",
+   "sha256": "a7d4357d6ed600605307962f5adb1140de8ad683f5378cf3f6a483d0f426f3f6"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_go2rtc_proxy_auth.py",
+   "sha256": "1bdab35124c00bfe6712de67c0565554c683bba3387f1aa7c8544dbb28c8d2c0"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_keyframe_analysis.py",
+   "sha256": "1e06785d8d9891893ef776a4c326d458b190ea03ba3afbace15bad520746ac1e"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_latest_frame.py",
+   "sha256": "62cfb785400340c2df811add007474aff82dac9cd204a2fa15cb082779f33909"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_media.py",
+   "sha256": "720512fcea7b05c9ab5f4e4584ca986637e70a052f11dc9967cd3ca9dd91f25c"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_password.py",
+   "sha256": "c9526452cd8ba6b2fd1cf0f8fe932076e422d636416a98fdbad81ca2d867c179"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_review.py",
+   "sha256": "cf232a0327f7a5e8a4ac12985c92eaeb3c15433c9383cf64e7e23424aa25c6da"
+  },
+  {
+   "path": "frigate/test/http_api/test_http_users.py",
+   "sha256": "94209482773e353f7564ccdce06e85905ae3c6c5559fdce5638da2e04d94d2ce"
+  },
+  {
+   "path": "frigate/test/test_birdseye.py",
+   "sha256": "0da2af6d1d93d50e6d9f8298902c673c76374b3b47b2b000aeeb706541b3f907"
+  },
+  {
+   "path": "frigate/test/test_builtin.py",
+   "sha256": "ef8a560201bdd551d81d0d9de406c1438f67ff4f81a8def196a05d584be914e6"
+  },
+  {
+   "path": "frigate/test/test_camera_maintainer.py",
+   "sha256": "815f658025638a5ffed57798446f48c531f0a021353ce2bb535e68abbac67f97"
+  },
+  {
+   "path": "frigate/test/test_camera_pw.py",
+   "sha256": "dcc3605c483c55a9ffcf672906c6d52fe561bc2e161f85544dc4735106e482e0"
+  },
+  {
+   "path": "frigate/test/test_chat_find_similar_objects.py",
+   "sha256": "2ccda1f12b204ea3f958320cfa237b277648911c11bb3b6f2603af10b96c86af"
+  },
+  {
+   "path": "frigate/test/test_classification_enabled.py",
+   "sha256": "e660a65235f3b4d69a4be5499b4cf04177ee211bde30014bc888ba31b56eba58"
+  },
+  {
+   "path": "frigate/test/test_comms_thread_safety.py",
+   "sha256": "e7938106d504b5bb33848a44cec44c57575140a473a0ea4af8485613010eaad0"
+  },
+  {
+   "path": "frigate/test/test_config.py",
+   "sha256": "494964b942d207daa31ae05d895d0b9d80a2df1442f54ba7636a8dd0006ca541"
+  },
+  {
+   "path": "frigate/test/test_config_util.py",
+   "sha256": "c157a05f9a2a3760d5ec464ef6bbb6b3478d251a43ae0db4b40053fa17c0b9db"
+  },
+  {
+   "path": "frigate/test/test_copy_yuv_to_position.py",
+   "sha256": "f81fbaa0235b9f8b5766c5ebf936cd3b7feb09fef0adae5609cb4c2ecad385e0"
+  },
+  {
+   "path": "frigate/test/test_debug_replay.py",
+   "sha256": "9e8fe7722a8905bcf226deb11dcbb95c7915ca1e4de4c5c6927d69baa384da4e"
+  },
+  {
+   "path": "frigate/test/test_debug_replay_job.py",
+   "sha256": "7c73f508e31602a77d2532bd0a412790ddc085e67896125c1fc494d2f69c9812"
+  },
+  {
+   "path": "frigate/test/test_deferred_processor.py",
+   "sha256": "3434ab24e7b0362b135353eff5048dd13f0205af2805841ba14131c4ceb38456"
+  },
+  {
+   "path": "frigate/test/test_detection_runners.py",
+   "sha256": "3861c5f04cf172e16b756256e24362c9b47309d3bf939fb54341db484a2fd7cf"
+  },
+  {
+   "path": "frigate/test/test_dispatcher_runtime_state.py",
+   "sha256": "8717167bd3199b3c7dc9d2acef08eacedae68057a9c9aea920dc3b85b1b5ee04"
+  },
+  {
+   "path": "frigate/test/test_env.py",
+   "sha256": "80bb5291a22a864f5cd845fa487eae320e6e9f595028a01b823b0f86140b9ec2"
+  },
+  {
+   "path": "frigate/test/test_export.py",
+   "sha256": "9be3879b66aa4ca0a9189975322b5f6c79251620592bd45bd9979fbcb67f77be"
+  },
+  {
+   "path": "frigate/test/test_export_progress.py",
+   "sha256": "abd5a5b1ea4dd727142d31e53478baf8254564c7eaae0abca69b01c3c8b90351"
+  },
+  {
+   "path": "frigate/test/test_ffmpeg_presets.py",
+   "sha256": "93240d7afbf62f6032f941375b9f03b0ab1c40553be8bc16b507a6adca983ab0"
+  },
+  {
+   "path": "frigate/test/test_ffmpeg_progress.py",
+   "sha256": "2ffde065990ec00c106a82ff44c00bfa1cf3acd01b59be53bf9d4e68a842617f"
+  },
+  {
+   "path": "frigate/test/test_file.py",
+   "sha256": "739a0db96bccc7a5dbf56e8a4c1e9f5ee98e6ba02025fdd42b2c230560c9daca"
+  },
+  {
+   "path": "frigate/test/test_genai_processor_sync.py",
+   "sha256": "237115979fa567e2fd1f3085257f8f9ca06c3bb1d3c23ddc69794df542d6e6f7"
+  },
+  {
+   "path": "frigate/test/test_genai_providers.py",
+   "sha256": "9db393157b22c2624f08d73c1cc52c2f6c0d9dea90112a3ee2ba7b1c9c3cd6e2"
+  },
+  {
+   "path": "frigate/test/test_go2rtc_stream_auth.py",
+   "sha256": "de273a118530e5f35b0fdbdd4ae4c1f169a91f344a26967dbad7cbd8096b6533"
+  },
+  {
+   "path": "frigate/test/test_gpu_stats.py",
+   "sha256": "24614f0316a1255d5925540d11b61cc069068c9f0bb67a0edfd08e7b8438ea80"
+  },
+  {
+   "path": "frigate/test/test_keyframe_analysis.py",
+   "sha256": "e7e9f8fb45de770c7b5de22cb429d939af71b846403f95f801fe1e733bbf24c6"
+  },
+  {
+   "path": "frigate/test/test_maintainer.py",
+   "sha256": "a9dd22d4b6760bfbea5f06277cfdb7017358b8243cca6d27ba4ab3939452d494"
+  },
+  {
+   "path": "frigate/test/test_media_auth.py",
+   "sha256": "f78b0707fcc5948b466024c245584eb9526f09203174679aa35ed69bf217a448"
+  },
+  {
+   "path": "frigate/test/test_motion_detector.py",
+   "sha256": "5a6cbb66fc525bc9c15fd4d075c64686a31a378036adeba89ea79f7b43afd92e"
+  },
+  {
+   "path": "frigate/test/test_motion_search_batch.py",
+   "sha256": "e47eb1425ed1f06d76e27dcb879cd21792ff6b538a14c49f578335e9bbf67cd5"
+  },
+  {
+   "path": "frigate/test/test_motion_search_decode.py",
+   "sha256": "6973e1e2ede46e08ceb1360c312fa9cd4e2af23fc4524839e78539bc92aa859f"
+  },
+  {
+   "path": "frigate/test/test_motion_search_spatial.py",
+   "sha256": "e3457e176a998bd9177fa45b834c01c1deadf33c3e97e8aa58c6c765a4cd60aa"
+  },
+  {
+   "path": "frigate/test/test_mqtt_topic_registration.py",
+   "sha256": "5cfebac741f63bb8516771925cda0c650e864f6a23d3e3a01bc65ae58893fa22"
+  },
+  {
+   "path": "frigate/test/test_network_config.py",
+   "sha256": "32f8709cb251ea1e2d0d3c31195279b4220316d63cc5c8d3cd78e903fdcb077c"
+  },
+  {
+   "path": "frigate/test/test_norfair_distance.py",
+   "sha256": "37514efb6d1e4d0100b508a7a5ab3d7d39299b50104a234007d6ce50cb82e56f"
+  },
+  {
+   "path": "frigate/test/test_obects.py",
+   "sha256": "0fc6e0e4b0b45656f124aa0a5215cc7388074d9b155ee7d57eb39ae2f73b4286"
+  },
+  {
+   "path": "frigate/test/test_object_detector.py",
+   "sha256": "38136484571a26bc7f4e56ea39f9716606a8acea7bd5b042afb033abc046ac16"
+  },
+  {
+   "path": "frigate/test/test_onvif_probe.py",
+   "sha256": "34322251c6d45c9804ba96791d41ee01221d5c3dd8abd0b4a4da49041ce241dc"
+  },
+  {
+   "path": "frigate/test/test_output_ws_auth.py",
+   "sha256": "a92765565df291abf11f501c6e43ef0cf9a5be603f7a3598ff487198a79ddebd"
+  },
+  {
+   "path": "frigate/test/test_post_processing.py",
+   "sha256": "d07015c4bf490ab08494d1cd6a6af7d4c5e9af2be8aac4969bac9d129ce2c19c"
+  },
+  {
+   "path": "frigate/test/test_preview_loader.py",
+   "sha256": "0ccaabfe683433973b20dde1daa95405dd5371b40c31adb1e73c79e7c46e4e40"
+  },
+  {
+   "path": "frigate/test/test_process.py",
+   "sha256": "56431b0206fb56a89dcf6f118de5716d62fdc53a17e0479e7ae2fbe1a2fc5aef"
+  },
+  {
+   "path": "frigate/test/test_profiles.py",
+   "sha256": "eb99cf40636f59d2c28b5ea11fc0b4fa6c0beca14c0ccaa7d07506b581897643"
+  },
+  {
+   "path": "frigate/test/test_proxy_auth.py",
+   "sha256": "f2c84bd55d8c98180187bd3c74827d8b0116416064d13e085b93bb9c1107e131"
+  },
+  {
+   "path": "frigate/test/test_ptz_autotrack.py",
+   "sha256": "2b62ca49d59e673f85d3f5e511ffbdce05e70307eb88dacc34993ffe06aebbbb"
+  },
+  {
+   "path": "frigate/test/test_ptz_onvif.py",
+   "sha256": "6c1ebbb09781a657a6ff917fa13145eae0ac55af5e7429c2b3a6b7a07acaac80"
+  },
+  {
+   "path": "frigate/test/test_record_retention.py",
+   "sha256": "58961bf988f79a1035270fdbdfb36b0ed788866d308290be15cee8cba75b70ae"
+  },
+  {
+   "path": "frigate/test/test_reduce_boxes.py",
+   "sha256": "152a20bd7e23288abb043afe0bc0d563fdd2d55a06f648c1cd4daa2cf5e2985e"
+  },
+  {
+   "path": "frigate/test/test_review_manual_event_severity.py",
+   "sha256": "4b81ff2ad25a3320baf55008d102369b0cb22d85b7967845756e26fcb89e1e4d"
+  },
+  {
+   "path": "frigate/test/test_runtime_state.py",
+   "sha256": "a88055a6b23f0d3d51ed1879e1e1331c96e8dfc2e8eba9a4bda5d60be0abc4bb"
+  },
+  {
+   "path": "frigate/test/test_shared_memory_frame_manager.py",
+   "sha256": "f4ef0aa283ea0ca47d8afb246e82a3498f4ea1f8f18a659c66944bc2300b2d3e"
+  },
+  {
+   "path": "frigate/test/test_sqlitevecq_embeddings.py",
+   "sha256": "5684370130a6508dab32b7d3ac3dbb2475e0b3cb13b41ddf02ca75d6468ce7c0"
+  },
+  {
+   "path": "frigate/test/test_sqlitevecq_regexp.py",
+   "sha256": "554c1fe1abad75175c4bbc37cb0d04259cf8b67152143ec43a6064e08610acc4"
+  },
+  {
+   "path": "frigate/test/test_stationary_classifier.py",
+   "sha256": "3798fd969eacead38ac22bd2a73b0dec76c85db86a9f745af7e8a2fd10f943c5"
+  },
+  {
+   "path": "frigate/test/test_storage.py",
+   "sha256": "b54310214ba498b2d5226b82f48d837957824adc580dc82db322b484334ab7c1"
+  },
+  {
+   "path": "frigate/test/test_timeline.py",
+   "sha256": "8c864bdea2aa3a93e90422e37bcb554e21244031f23423b2f797b7b2ea4f5cb2"
+  },
+  {
+   "path": "frigate/test/test_update_yaml.py",
+   "sha256": "1367344aa1847c85ca8d5f82f28ee88e6f356d7d4f413c142dd8c2c986da026d"
+  },
+  {
+   "path": "frigate/test/test_util_path.py",
+   "sha256": "e3e896623a7c3fc9bd1cc9d2e90c79b320c2aa2da2fd6d56db0ad854920e457c"
+  },
+  {
+   "path": "frigate/test/test_video.py",
+   "sha256": "df05f75880ba17376de388703e1d28f2fe799f5cfccb5934d59f36c06194c410"
+  },
+  {
+   "path": "frigate/test/test_webpush_camera_monitoring.py",
+   "sha256": "51388f911d74d8ca25eb11029ef3abd8d6ca5b904d385e5bbb986120a778912c"
+  },
+  {
+   "path": "frigate/test/test_webpush_registration.py",
+   "sha256": "b1bce4d834c3ddae390f376a1abfac1a034d1491275164606b81029d9c5f141a"
+  },
+  {
+   "path": "frigate/test/test_webpush_suspend.py",
+   "sha256": "e6c269f89f19eef165f58e0f925ebf9c18bb62b20f29abfa3bb6a7eb0843f195"
+  },
+  {
+   "path": "frigate/test/test_ws_auth.py",
+   "sha256": "5902a410d1b5e20277e12d1b0628c41fb9c3650ae26f38ff76b4f1503a45f019"
+  },
+  {
+   "path": "frigate/test/test_ws_outbound_filter.py",
+   "sha256": "9cb7d98daf818f93f8d31789ac7d0659908ef871ec14ef2449eba2dec44ea01f"
+  },
+  {
+   "path": "frigate/test/test_yuv_region_2_rgb.py",
+   "sha256": "8b88d2330c566814169e8b989ed109a1ee908feb56edc3905dd1cf9f4be0d18c"
+  },
+  {
+   "path": "frigate/timeline.py",
+   "sha256": "7bfd21bc2e28f846e353ae0540ad892f7abe698a57afccbc438238b78416605b"
+  },
+  {
+   "path": "frigate/track/__init__.py",
+   "sha256": "67dfabb15c868dc723a529c22ff250ce0c437c100f592a7080e8f23c422afdcb"
+  },
+  {
+   "path": "frigate/track/centroid_tracker.py",
+   "sha256": "3ec6229345b777cd9d9de95cc4c53be9882ca238b53d5b41f973a5f66d9ac8a8"
+  },
+  {
+   "path": "frigate/track/norfair_tracker.py",
+   "sha256": "1ce3fdfa45d18dea00765a6e4d2d7703f4ee983ba63c45424213e19283af038b"
+  },
+  {
+   "path": "frigate/track/object_processing.py",
+   "sha256": "27afbe9cd05b061516e904652420a76566c7cb4687f433ad4397713624a7f293"
+  },
+  {
+   "path": "frigate/track/stationary_classifier.py",
+   "sha256": "66cd13dff6d14ab0655068a84fb5656cd43ef988ab3ef2ec903a910c7ddfb48c"
+  },
+  {
+   "path": "frigate/track/tracked_object.py",
+   "sha256": "b384a96e634d666b79972a8d6c8c4f535e4a40f827208911335ff1302882059a"
+  },
+  {
+   "path": "frigate/types.py",
+   "sha256": "ed6d6ed133ee4e9eaa229cf51473e8825e9b2939af35f5d0c88eff4cfd0bfdaf"
+  },
+  {
+   "path": "frigate/util/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "frigate/util/audio.py",
+   "sha256": "293045de6a9aa549db96a35564c5fc2a7e6ee88b6045dda3ba4bbc0c7f100e3c"
+  },
+  {
+   "path": "frigate/util/builtin.py",
+   "sha256": "e66785c001b016822afeec379bc26998996ea8d9280a5a39c13cedbc3e2fe87b"
+  },
+  {
+   "path": "frigate/util/camera_cleanup.py",
+   "sha256": "020d07787908926dd9fcc5870ac7bc305cd0443a285e5d2c6495af19756579a4"
+  },
+  {
+   "path": "frigate/util/classification.py",
+   "sha256": "5e4f11b5b382f89d7b0d6f03ca00a1f716ae4051a3cae6854fcff9071eff3796"
+  },
+  {
+   "path": "frigate/util/config.py",
+   "sha256": "49f5a01ab5bca902763881b5fe30261146509e2fdd0e7ab53b99dfa43e954596"
+  },
+  {
+   "path": "frigate/util/downloader.py",
+   "sha256": "168c6e2d87e471cee7819a6727ccd56a632fc507065e1e38360e64923fd45ffd"
+  },
+  {
+   "path": "frigate/util/ffmpeg.py",
+   "sha256": "ad6266092e84a70066d248e2162096b1ce90c65e133ddad1face7464cfb4b6b8"
+  },
+  {
+   "path": "frigate/util/file.py",
+   "sha256": "7902e1755bc5891775c5a30e517a6a5731a0fd9123db2eea942d992ee61226eb"
+  },
+  {
+   "path": "frigate/util/image.py",
+   "sha256": "11fd656786f5908daeea8c272b97ff6f1ffc5bf6aca6204437e6f5b1b6693945"
+  },
+  {
+   "path": "frigate/util/media.py",
+   "sha256": "0785d3be85ffd5988c92f4815d1738577d85313d15d86acef25756a47cd8d745"
+  },
+  {
+   "path": "frigate/util/model.py",
+   "sha256": "3b8e47c3be43e251f69a4dc5056cae28b6ba71d219a0d6c3647a5115928533d6"
+  },
+  {
+   "path": "frigate/util/object.py",
+   "sha256": "58b73be084b622d73ee24320f9a9e3c4710083bd73cee2b71a21ee95191fd795"
+  },
+  {
+   "path": "frigate/util/path.py",
+   "sha256": "68803cffa61e82d7a71bc564e63ecd7e754cf7509f468914168abed0583709fe"
+  },
+  {
+   "path": "frigate/util/process.py",
+   "sha256": "5125ee4e487123152e6b8a568956632bf4d24fea996ec53ed2e19103a6e69484"
+  },
+  {
+   "path": "frigate/util/rknn_converter.py",
+   "sha256": "632438dc7b3ab67746ffad21def3c0fccea105836dde4e94231b2d02590985c0"
+  },
+  {
+   "path": "frigate/util/schema.py",
+   "sha256": "4fd959e2f9f67d651aaa9d2f204c5d459d42b483e4f1e138521accf204467656"
+  },
+  {
+   "path": "frigate/util/services.py",
+   "sha256": "81802ebca63fca901782c1fecdb250571cca6e4d95dbb4515562e98736f54c30"
+  },
+  {
+   "path": "frigate/util/time.py",
+   "sha256": "69fa39220ed85620878afd1d990aca3f32a366a271bbd7f10b4ca40de537c5b9"
+  },
+  {
+   "path": "frigate/util/velocity.py",
+   "sha256": "f66766c0645a73e66604b6d5f1461151a604c326f2f1f244c1d64a00d43a865d"
+  },
+  {
+   "path": "frigate/video/__init__.py",
+   "sha256": "8a3b9777ffa55cab36c176187c5c3a2b6529f608cb2da79e614f7a0fe462e195"
+  },
+  {
+   "path": "frigate/video/detect.py",
+   "sha256": "8232f95d2828dcf26182e0666f8a8ff49ed4c19384222bd87837bb98f2be8bb0"
+  },
+  {
+   "path": "frigate/video/ffmpeg.py",
+   "sha256": "e726f4c4df1a57324618866ad8b3e8d48a264cacf265847cad3b7fbbcc331b0e"
+  },
+  {
+   "path": "frigate/watchdog.py",
+   "sha256": "e1daa0e2b51a147c5ee409e171f216d11c1e91fbee31f30eec2d8280596f9bdc"
+  }
+ ],
+ "limitations": [
+  "a source copy limited to the frigate/ package of the pinned revision (343 files); docker/, web/ and the rest of the repository were not scanned",
+  "Python source was read; dependencies were not installed and no Frigate code was executed; the network was denied at OS level",
+  "the document reports no component and no cryptographic asset; that is not evidence that no cryptography is used (the generator's documented coverage excludes Python source algorithms)",
+  "the 13 services in the document are HTTP endpoint listings found in source, not cryptographic assets",
+  "CycloneDX 1.6 was chosen with --spec-version (cdxgen's default is 1.7) because BOMBridge reads 1.6",
+  "token usage, cost: not applicable; no LLM is used"
+ ],
+ "outcome": {
+  "components": 0,
+  "cryptographic_assets": 0,
+  "cyclonedx_spec_version": "1.6",
+  "exit_code": 0,
+  "log_file": "inputs/frigate/raw/cdxgen-cbom.run.log",
+  "meaning": "a successful scan that reported no cryptographic asset; not a failed scan",
+  "services": 13,
+  "source_locations_for_crypto": 0,
+  "status": "completed",
+  "warnings_in_log": []
+ },
+ "output_sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+ "repository": "https://github.com/blakeblackshear/frigate",
+ "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+ "schema": "bombridge.acquisition/1",
+ "scope": {
+  "file_count": 343,
+  "included_paths": [
+   "frigate"
+  ],
+  "listing_sha256": "3a2cc75a758f3c0eccb6d980526defaee8c0091f7880b1b1ffd1eaa19da30327",
+  "method": "git archive of the pinned revision restricted to the listed paths"
+ },
+ "tree_differs_from_revision": false
+}

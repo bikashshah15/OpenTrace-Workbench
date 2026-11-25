@@ -1,0 +1,64 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "No supported cryptographic inventory exists for this ecosystem; nothing was compared.",
+  "reason_code": "unsupported_ecosystem",
+  "state": "unsupported"
+ },
+ "binding": {
+  "analysis_digest": "sha256:fe0456f03c14f720c853dbdb98fb6ae6c87dc8a08c9fd946a83256dc79ea2af8",
+  "assessment": {
+   "bundle_sha256": "e17cb7b19a814d1078682ce9f6db91c71cabdc0295016e8530fdefb022a7b7c2",
+   "configuration": "config:fixture:ff7a0794d32d59a8",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "976654d32b55eebdccbf3ba2c9ff5a61daebf5e33021183a5b542a9278c51573"
+  },
+  "commit_sha": "1c929810a535f32d592d668fc0def6d038171cad",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/gotool",
+   "host": "github.com",
+   "name": "gotool",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

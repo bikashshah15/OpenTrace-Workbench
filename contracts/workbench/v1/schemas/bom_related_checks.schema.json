@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/bom_related_checks.schema.json",
+  "title": "OpenTrace workbench BOM related checks v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "subject",
+    "resolution",
+    "related_total",
+    "items",
+    "record_detail",
+    "counts",
+    "page"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.bom_related_checks/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "canonical_ref"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "record",
+            "relationship"
+          ]
+        },
+        "id": {
+          "$ref": "bom_related_checks.schema.json#/$defs/bom_record_id"
+        },
+        "canonical_ref": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/canonical_ref"
+            }
+          ]
+        }
+      }
+    },
+    "resolution": {
+      "enum": [
+        "none",
+        "single",
+        "multiple",
+        "not_applicable"
+      ]
+    },
+    "related_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_id",
+          "assertion_id",
+          "display_name",
+          "family",
+          "state",
+          "location"
+        ],
+        "properties": {
+          "item_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "assertion_id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/engine_id"
+              }
+            ]
+          },
+          "display_name": {
+            "$ref": "common.schema.json#/$defs/text_or_empty"
+          },
+          "family": {
+            "enum": [
+              "software",
+              "cryptography",
+              "ai_model",
+              "other"
+            ]
+          },
+          "state": {
+            "enum": [
+              "supported",
+              "contradicted",
+              "conflicting_evidence",
+              "unverifiable",
+              "unknown_coverage",
+              "no_rule"
+            ]
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "path",
+                  "line_start",
+                  "line_end"
+                ],
+                "properties": {
+                  "path": {
+                    "$ref": "common.schema.json#/$defs/path"
+                  },
+                  "line_start": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    ]
+                  },
+                  "line_end": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 20
+    },
+    "record_detail": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "title",
+            "kinds",
+            "provenance",
+            "limitations"
+          ],
+          "properties": {
+            "title": {
+              "$ref": "common.schema.json#/$defs/text_or_empty"
+            },
+            "kinds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              },
+              "minItems": 0,
+              "maxItems": 8
+            },
+            "provenance": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "common.schema.json#/$defs/provenance"
+                }
+              ]
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/message"
+              },
+              "minItems": 0,
+              "maxItems": 6
+            }
+          }
+        }
+      ]
+    },
+    "counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offset",
+        "size",
+        "has_more"
+      ],
+      "properties": {
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 20
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "bom_record_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*|[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*_<scan-root>/[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*)(?!\\n)$"
+    }
+  }
+}

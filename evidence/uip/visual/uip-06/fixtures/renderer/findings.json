@@ -1,0 +1,195 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:f41fbcc7ed03f705ef69e2b3",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "string literal at the call site",
+     "state": "recorded",
+     "value": "sha256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "sha256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:372c165781f0c34af88c4ff9",
+     "operation": "synthetic.call",
+     "producer_id": "opentrace-source-check",
+     "source_location": {
+      "excerpt": "  synthetic_hash(\"sha256\")  # invented line",
+      "excerpt_state": "recorded",
+      "file_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/g1/file.py",
+       "text": "synthetic/g1/file.py"
+      },
+      "path": "synthetic/g1/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:0e1d33633dd355a3342c8650"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Cryptographic assets recorded in the original CBOM.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ac743b9e831346d5052357d0a7c607fbeb59c9bc2e083320ddb2ba2d08fa78b5",
+  "assessment": null,
+  "commit_sha": "5103a3384916f4b89b169dd6043d5293512a89c9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "findings",
+ "filter_totals": {
+  "algorithms": 2,
+  "all": 5,
+  "certificates": 1,
+  "findings": 1,
+  "protocols": 2
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": "synthetic-cbom-tool 0.0"
+   },
+   "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 1,
+    "files_excluded": 0,
+    "files_parsed": 1,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  }
+ ],
+ "review_items": [
+  {
+   "asset_id": "ast:f41fbcc7ed03f705ef69e2b3",
+   "bounded_meaning": "Synthetic bounded meaning.",
+   "condition": "Rule state inconclusive; reason codes synthetic",
+   "evidence_ids": [
+    "ev-synthetic-11"
+   ],
+   "next_action": "Synthetic next action.",
+   "rationale": "Synthetic rationale for layout tests.",
+   "review_id": "rev:3a6882d676aca8b0d2548033",
+   "rule_id": "synthetic_rule.example",
+   "rule_version": "1",
+   "tone": "review"
+  }
+ ],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 1,
+   "group_id": "grp:0e1d33633dd355a3342c8650",
+   "label": "synthetic/g1/file.py",
+   "path": "synthetic/g1/file.py"
+  }
+ ],
+ "tab": "crypto"
+}

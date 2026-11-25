@@ -1,0 +1,182 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:284824ac205f68f2e4b8f464d61765eaa072f71026a5e0defdfc3f85cbadd5e8",
+  "assessment": null,
+  "commit_sha": "5b8d80f17df9ddd8208118914d39b2486368bd98",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": null,
+  "ready": true
+ },
+ "identity": {
+  "analysis_digest": "sha256:284824ac205f68f2e4b8f464d61765eaa072f71026a5e0defdfc3f85cbadd5e8",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/example-org/sample-web/tree/v1.0.0"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "5b8d80f17df9ddd8208118914d39b2486368bd98",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 4000,
+  "job_id": "job:e3c5ce405c5bdbdf1cae7b87",
+  "seq": 4,
+  "state": "completed",
+  "updated_at": "2026-01-01T00:00:04Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:04Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": "2026-01-01T00:00:03Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:04Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:06Z",
+   "outputs": [
+    {
+     "artifact_id": "art:sbom-96d41abe",
+     "kind": "sbom",
+     "sha256": "9d80f7fbf3bb489ec6613dff340d3248305aaeeccaec59b34e6622b9abc9b908",
+     "size": 1010
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": "2026-01-01T00:00:05Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:06Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:08Z",
+   "outputs": [
+    {
+     "artifact_id": "art:cbom-19ebfc85",
+     "kind": "cbom",
+     "sha256": "0f517f4ddcf82e8dc11d2eb6c79e577db5c50e93fbfe9aee5edd769b1ded468c",
+     "size": 1010
+    }
+   ],
+   "reason_code": "no_applicable_assets",
+   "stage_id": "cbom",
+   "started_at": "2026-01-01T00:00:07Z",
+   "state": "completed_empty",
+   "updated_at": "2026-01-01T00:00:08Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "not_configured",
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:16Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": "2026-01-01T00:00:15Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:16Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:18Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": "2026-01-01T00:00:17Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:18Z",
+   "warnings": []
+  }
+ ]
+}

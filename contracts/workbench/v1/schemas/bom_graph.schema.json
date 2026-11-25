@@ -1,0 +1,351 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/bom_graph.schema.json",
+  "title": "OpenTrace workbench BOM graph v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "scope",
+    "graph_state",
+    "message_code",
+    "nodes",
+    "edges",
+    "records",
+    "page",
+    "counts",
+    "truncated"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.bom_graph/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "candidate_id",
+        "group",
+        "query"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "focused_candidate",
+            "group_summary",
+            "full_view"
+          ]
+        },
+        "candidate_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/engine_id"
+            }
+          ]
+        },
+        "group": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "software",
+                "cryptography",
+                "ai_model",
+                "other",
+                "all"
+              ]
+            }
+          ]
+        },
+        "query": {
+          "$ref": "common.schema.json#/$defs/query"
+        }
+      }
+    },
+    "graph_state": {
+      "enum": [
+        "assertion_graph",
+        "evidence_only",
+        "no_graph_collection_task",
+        "not_compared"
+      ]
+    },
+    "message_code": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "const": "more_evidence_needed"
+        }
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id",
+          "canonical_ref",
+          "kind",
+          "label",
+          "full_label",
+          "origin",
+          "role",
+          "evidence_role",
+          "state"
+        ],
+        "properties": {
+          "node_id": {
+            "$ref": "bom_graph.schema.json#/$defs/bom_record_id"
+          },
+          "canonical_ref": {
+            "$ref": "common.schema.json#/$defs/canonical_ref"
+          },
+          "kind": {
+            "enum": [
+              "entity",
+              "evidence",
+              "assertion",
+              "inventory"
+            ]
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/label"
+          },
+          "full_label": {
+            "$ref": "common.schema.json#/$defs/text"
+          },
+          "origin": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "role": {
+            "enum": [
+              "primary",
+              "neighbor"
+            ]
+          },
+          "evidence_role": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "used",
+                  "excluded",
+                  "context"
+                ]
+              }
+            ]
+          },
+          "state": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "supported",
+                  "contradicted",
+                  "conflicting_evidence",
+                  "unverifiable",
+                  "unknown_coverage",
+                  "no_rule"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 150
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "edge_id",
+          "from",
+          "to",
+          "type",
+          "label",
+          "role",
+          "rationale"
+        ],
+        "properties": {
+          "edge_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "from": {
+            "$ref": "bom_graph.schema.json#/$defs/bom_record_id"
+          },
+          "to": {
+            "$ref": "bom_graph.schema.json#/$defs/bom_record_id"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/label"
+          },
+          "role": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "used",
+                  "excluded",
+                  "context"
+                ]
+              }
+            ]
+          },
+          "rationale": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 300
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id",
+          "full_label"
+        ],
+        "properties": {
+          "node_id": {
+            "$ref": "bom_graph.schema.json#/$defs/bom_record_id"
+          },
+          "full_label": {
+            "$ref": "common.schema.json#/$defs/text"
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 150
+    },
+    "page": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "offset",
+            "primary_size"
+          ],
+          "properties": {
+            "offset": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "primary_size": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        }
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "nodes_in_scope",
+        "nodes_shown",
+        "primary_shown",
+        "neighbors_shown",
+        "edges_in_scope",
+        "edges_shown",
+        "omitted_nodes",
+        "omitted_edges"
+      ],
+      "properties": {
+        "nodes_in_scope": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nodes_shown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "primary_shown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "neighbors_shown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges_in_scope": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges_shown": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "omitted_nodes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "omitted_edges": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "truncated": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "bom_record_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^(?:[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*|[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*_<scan-root>/[A-Za-z0-9][A-Za-z0-9._:/@+#~=,-]*)(?!\\n)$"
+    }
+  }
+}

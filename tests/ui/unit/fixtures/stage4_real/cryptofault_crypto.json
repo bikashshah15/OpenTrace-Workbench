@@ -1,0 +1,206 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:9a0ff1551cfc1aa3eda75d46",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "algorithm named at a hashlib call site",
+     "state": "recorded",
+     "value": "sha256"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "sha256",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:b127c0085026ae8381b864eb",
+     "operation": "hashlib hash call",
+     "producer_id": "opentrace-source-crypto",
+     "source_location": {
+      "excerpt": "hashlib.sha256(b'x')",
+      "excerpt_state": "recorded",
+      "file_sha256": "172fd1c47170b7adfa8acce2569a42083af03d36c18a440eed7588c127e56c8a",
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/acme/cryptofault/blob/36fc4faa75cc67f1e3a65ea3cedc7a3142d05e2e/ok/h.py",
+       "text": "ok/h.py"
+      },
+      "path": "ok/h.py"
+     }
+    }
+   ],
+   "occurrences_total": 1,
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:bfa4b4a912a0c6a08e4cafcb"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Collection was incomplete (opentrace-source-crypto). The assets shown are those that were recorded; this is not a complete inventory.",
+  "reason_code": "partial_coverage",
+  "state": "partial"
+ },
+ "binding": {
+  "analysis_digest": "sha256:dd82ef1b65ed263eb3f7bcb326848d57933dc085686f68e1c7f256f53dd2f7e2",
+  "assessment": {
+   "bundle_sha256": "4ca60937b222b129257d9c5240c47de6950918e17423b0d6a252c1ba08d0c005",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "03244f661eba5730312c761dcd0507bcf14951c3ce5f7d6a5695f35bccadc5c2"
+  },
+  "commit_sha": "36fc4faa75cc67f1e3a65ea3cedc7a3142d05e2e",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/cryptofault",
+   "host": "github.com",
+   "name": "cryptofault",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 1,
+  "all": 1,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 9.9.9"
+   },
+   "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 3,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 3
+   },
+   "outcome": "partial",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (hashlib, jwt and TLS-configuration call sites of supported forms); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 1,
+   "group_id": "grp:bfa4b4a912a0c6a08e4cafcb",
+   "label": "ok/h.py",
+   "path": "ok/h.py"
+  }
+ ],
+ "tab": "crypto"
+}

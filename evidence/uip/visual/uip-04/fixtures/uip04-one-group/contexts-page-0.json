@@ -1,0 +1,92 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:f243886e894d54ab9e2d321bbc2d7235688e6db71b1d0fab97d080891e5690cd",
+  "assessment": null,
+  "commit_sha": "18ba886e159b40ed59b4aac48bb6a1f3e719b479",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 3,
+   "files": [
+    {
+     "dependency_context_id": "ctx:27d97d0dd59a21124adb8897",
+     "distinct_total": 2,
+     "file_id": "ctx:27d97d0dd59a21124adb8897",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "go.mod",
+     "raw_locations": [
+      "/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/18ba886e159b40ed59b4aac48bb6a1f3e719b479/go.mod",
+      "text": "go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:c1b990da47f3bafda19371d8",
+     "distinct_total": 2,
+     "file_id": "ctx:c1b990da47f3bafda19371d8",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "svc/go.sum",
+     "raw_locations": [
+      "/svc/go.sum"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/18ba886e159b40ed59b4aac48bb6a1f3e719b479/svc/go.sum",
+      "text": "svc/go.sum"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:0d1459663e91dfbfb873b62f",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 4,
+   "token": "amber"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "18ba886e159b40ed59b4aac48bb6a1f3e719b479",
+  "distinct_total": 3,
+  "located_distinct_total": 3,
+  "membership_total": 4,
+  "name": "example-org/sample-web",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

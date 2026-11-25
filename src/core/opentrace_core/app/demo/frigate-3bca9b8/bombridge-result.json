@@ -1,0 +1,418 @@
+{
+  "bundle_sha256": "cfb376a1b33cbc2c1fef8dd6ea6fa7678151d2dbaa0351e5bce74c11559c5df1",
+  "capture": {
+    "build": null,
+    "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+    "execution": null,
+    "inventories": [
+      {
+        "acquisition": {
+          "duration_ms": 942,
+          "exit_code": 0,
+          "isolation": "docker-worker",
+          "outcome": "acquired",
+          "pinned_version": "1.51.1",
+          "reason": null,
+          "version": "1.51.1"
+        },
+        "command": "syft 1.51.1 scan dir:. -o cyclonedx-json -q",
+        "format": "CycloneDX 1.7 JSON",
+        "generator": "Syft 1.51.1",
+        "inventory_id": "inv:syft-source-dir",
+        "kind": "sbom",
+        "label": "source-directory inventory (package manifests and lockfiles in the exported tree); not a deployed-image or runtime SBOM",
+        "origin": "captured",
+        "record_counts": {
+          "components": 1861
+        },
+        "scan_binding": {
+          "basis": "scan run by OpenTrace over the tree exported from the pinned commit; every exported blob was re-hashed against the commit's tree before scanning",
+          "not_established": "that the scanner reported every component the repository contains"
+        },
+        "scan_scope": {
+          "basis": "whole repository tree exported from the pinned commit (blobs only; symlinks and submodules not materialised)",
+          "file_count": 3337,
+          "listing_sha256": "8f69b1c8a6834bfb116f830da248ba852865422e5b5c3061609132c70c43ad22",
+          "paths": [
+            "."
+          ],
+          "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+          "tree_sha": "4297f11bd27d22f3b13245c0fa0b3a7ae1d7bc00"
+        },
+        "source_file": "syft-sbom.cdx.json",
+        "source_sha256": "ef942a4185a5deaf3216894ed247bd1081fc5dc53203fab3ad827057947f3f66"
+      },
+      {
+        "acquisition": {
+          "duration_ms": 12922,
+          "exit_code": 0,
+          "isolation": "docker-worker",
+          "outcome": "acquired",
+          "pinned_version": "12.9.0",
+          "reason": null,
+          "version": "12.9.0"
+        },
+        "command": "cdxgen 12.9.0 -r . --no-install-deps --include-crypto --evidence --spec-version 1.6",
+        "format": "CycloneDX 1.6 (CBOM)",
+        "generator": "cdxgen 12.9.0",
+        "inventory_id": "inv:cdxgen-cbom",
+        "kind": "cbom",
+        "label": "CBOM \u00b7 cdxgen: third-party generator, source-only run over the whole exported tree; coverage is the generator's own (Java keystores and certificates, JavaScript/TypeScript source algorithms, crypto-library components); an empty result is not evidence that no cryptography is used",
+        "origin": "captured",
+        "record_counts": {
+          "components": 1988,
+          "crypto_assets": 0,
+          "services": 0
+        },
+        "scan_binding": {
+          "basis": "scan run by OpenTrace over the tree exported from the pinned commit; every exported blob was re-hashed against the commit's tree before scanning",
+          "not_established": "that the scanner reported every component the repository contains"
+        },
+        "scan_scope": {
+          "basis": "whole repository tree exported from the pinned commit (blobs only; symlinks and submodules not materialised)",
+          "file_count": 3337,
+          "listing_sha256": "8f69b1c8a6834bfb116f830da248ba852865422e5b5c3061609132c70c43ad22",
+          "paths": [
+            "."
+          ],
+          "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+          "tree_sha": "4297f11bd27d22f3b13245c0fa0b3a7ae1d7bc00"
+        },
+        "source_file": "cdxgen-cbom.cdx.json",
+        "source_sha256": "979e792d9d98562762cebd7cb40d4ff27d28026a048088bd6317e17159e8580c"
+      },
+      {
+        "acquisition": {
+          "duration_ms": 479743,
+          "exit_code": 0,
+          "isolation": "docker-aibom-worker",
+          "outcome": "acquired",
+          "pinned_version": "1.10.1",
+          "reason": null,
+          "version": "1.10.1"
+        },
+        "command": "cisco-aibom 1.10.1 analyze <scan-root> -o cyclonedx --llm-provider openai --llm-model gpt-6-luna --no-galileo --no-code-snippets --validate",
+        "completeness": "degraded",
+        "format": "CycloneDX 1.6 (AI-BOM)",
+        "generator": "cisco-aibom 1.10.1",
+        "inventory_id": "inv:cisco-aibom",
+        "kind": "aibom",
+        "label": "AI-BOM \u00b7 Cisco AI-BOM: third-party, language-model-assisted generator run over the whole exported tree in a separate worker; the classifier chose what to add or prune, so repository-declared and repository-text steering is possible; coverage and completeness are the generator's own; an empty result is not evidence that no AI is used",
+        "origin": "captured",
+        "record_counts": {
+          "agentic_degraded_count": 121,
+          "components": 57
+        },
+        "scan_binding": {
+          "basis": "scan run by OpenTrace over the tree exported from the pinned commit; every exported blob was re-hashed against the commit's tree before scanning",
+          "not_established": "that the producer reported every AI asset the repository contains, or that its classifier completed for every candidate"
+        },
+        "scan_scope": {
+          "basis": "whole repository tree exported from the pinned commit (blobs only; symlinks and submodules not materialised); the AI worker reads the full exported tree, with no exclusion",
+          "file_count": 3337,
+          "listing_sha256": "8f69b1c8a6834bfb116f830da248ba852865422e5b5c3061609132c70c43ad22",
+          "paths": [
+            "."
+          ],
+          "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+          "tree_sha": "4297f11bd27d22f3b13245c0fa0b3a7ae1d7bc00"
+        },
+        "source_file": "cisco-aibom.cdx.json",
+        "source_sha256": "719ba25fe34da298ca8a53315ae636348bf1b06c07aaa7e099ab87370338a2f2"
+      }
+    ],
+    "model": null,
+    "origin": "captured",
+    "repository": {
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "revision_selection": {
+        "basis": "url_revision",
+        "method": "OpenTrace intake: server-side resolution, then fetch by full SHA and verified against the commit's tree",
+        "requested": {
+          "kind": "commit",
+          "origin": "url_tree",
+          "text": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e"
+        },
+        "tree_sha": "4297f11bd27d22f3b13245c0fa0b3a7ae1d7bc00"
+      },
+      "url": "https://github.com/blakeblackshear/frigate"
+    },
+    "scope_id": "scope:live-blakeblackshear-frigate-3bca9b867684",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "configuration",
+      "model",
+      "execution"
+    ]
+  },
+  "findings": [],
+  "graph": {
+    "edges": [],
+    "nodes": [
+      {
+        "id": "evidence:ev-live-cdxgen-cbom",
+        "limitations": [
+          "scan ran with network access denied, write access limited to scratch directories and no process execution other than the scanner itself (docker-worker)",
+          "the repository was read as data: nothing was built, installed or executed",
+          "scope: the whole exported tree at the pinned commit (3337 files; 2 symlink/submodule entries not materialised)",
+          "cdxgen's reachability/usage analysis (atom) did not run in this boundary; the result is manifest, lockfile and source-pattern based",
+          "Set the environment variable CDXGEN_GEM_HOME or GEM_HOME to collect the module names for installed gems.",
+          "Slicing was not successful. For large projects (> 1 million lines of code), try running atom cli externally in Java mode. Please refer to the instructions in https://github.com/cdxgen/cdxgen/blob/master/ADVANCED.md.",
+          "Creating reachables slice for <source>/src. Please wait ...",
+          "Unable to generate reachables slice using atom. Check if this is a supported language.",
+          "Set the environment variable CDXGEN_DEBUG_MODE=debug to troubleshoot.",
+          "Creating usages slice for <source>/src. Please wait ...",
+          "what the document says, not whether it is right"
+        ],
+        "method": "cyclonedx-1.6-cbom-intake",
+        "observation": {
+          "acquisition_generator": {
+            "invocation": "cdxgen 12.9.0 -r . --no-install-deps --include-crypto --evidence --spec-version 1.6",
+            "name": "cdxgen",
+            "third_party": true,
+            "version": "12.9.0"
+          },
+          "acquisition_outcome": {
+            "components": 1988,
+            "cryptographic_assets": 0,
+            "cyclonedx_spec_version": "1.6",
+            "exit_code": 0,
+            "meaning": "a successful scan that reported no cryptographic asset; not a failed scan, and not evidence that no cryptography is used",
+            "services": 0,
+            "status": "completed"
+          },
+          "acquisition_scope": {
+            "file_count": 3337,
+            "included_paths": [
+              "."
+            ],
+            "listing_sha256": "8f69b1c8a6834bfb116f830da248ba852865422e5b5c3061609132c70c43ad22",
+            "method": "tree exported from the pinned commit"
+          },
+          "assets": [],
+          "counts": {
+            "assets": 0,
+            "by_type": {
+              "application": 12,
+              "framework": 49,
+              "library": 1927
+            },
+            "components_total": 1988,
+            "library_mentions": 1,
+            "services": 0
+          },
+          "coverage": {
+            "compositions": [],
+            "stated": false
+          },
+          "document": {
+            "document_version": 2,
+            "format": "CycloneDX",
+            "raw_sha256": "979e792d9d98562762cebd7cb40d4ff27d28026a048088bd6317e17159e8580c",
+            "serial_number": "urn:uuid:5fc09304-47cd-4b4b-8c62-2241d80ef02c",
+            "spec_version": "1.6",
+            "timestamp": "2026-11-23T19:36:35Z"
+          },
+          "extractor_notes": {},
+          "kind": "cbom_document",
+          "library_mentions": [
+            {
+              "name": "cryptography",
+              "purl": "pkg:pypi/cryptography",
+              "raw_pointer": "/components/1923"
+            }
+          ],
+          "limitations": [
+            "the document states no coverage (no compositions)",
+            "the document declares no cryptographic-asset component (a successful document with zero crypto assets; not a failed scan)"
+          ],
+          "producer": [
+            {
+              "name": "cdxgen",
+              "vendor": "OWASP Foundation",
+              "version": "12.9.0"
+            }
+          ],
+          "services": {
+            "count": 0,
+            "names": [],
+            "note": null
+          },
+          "status": "ok",
+          "subject": {
+            "bom_ref": "pkg:npm/src",
+            "declared_revision": null,
+            "name": "src",
+            "type": "application",
+            "version": ""
+          }
+        },
+        "origin": "captured",
+        "scope": {
+          "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e"
+        },
+        "scope_id": "scope:live-blakeblackshear-frigate-3bca9b867684",
+        "source_locator": "cdxgen-cbom.cdx.json",
+        "tool": "opentrace_core/bombridge/adapters.py",
+        "type": "evidence",
+        "underlying_source": "tool-output:cbom-979e792d9d98"
+      }
+    ]
+  },
+  "input_checks": [
+    {
+      "detail": "cisco-aibom 1.10.1 produced a valid CycloneDX 1.6 document (57 components).",
+      "evidence": [],
+      "input": "live-aibom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "cdxgen 12.9.0 produced a valid CycloneDX 1.6 document (0 crypto_assets). a successful scan that reported no cryptographic asset; not a failed scan, and not evidence that no cryptography is used.",
+      "evidence": [],
+      "input": "live-cbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Syft 1.51.1 produced a valid CycloneDX 1.7 document (1861 components).",
+      "evidence": [],
+      "input": "live-sbom",
+      "status": "present_inspected"
+    },
+    {
+      "detail": "Commit 3bca9b867684 fetched by full SHA; its tree 4297f11bd27d was read blob by blob and every blob re-hashed to the object id in the tree.",
+      "evidence": [],
+      "input": "live-source-revision",
+      "status": "present_inspected"
+    }
+  ],
+  "inventory_links": [
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: .. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 Syft \u2194 AI-BOM \u00b7 cisco-aibom"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:sbom-cbom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: .. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "SBOM \u00b7 Syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:syft-source-dir",
+        "inv:cdxgen-cbom"
+      ],
+      "connects_records": false,
+      "evidence": [
+        "ev-live-cdxgen-cbom"
+      ],
+      "id": "records:sbom-cbom",
+      "kind": "record_identifier_or_path",
+      "reason": "the CBOM contains 1988 component(s) and 0 cryptographic asset(s) (0 service record(s) are endpoint listings), so there is no CBOM record that carries an identifier to compare with the SBOM's components",
+      "status": "unresolved",
+      "title": "SBOM \u00b7 Syft \u2194 CBOM \u00b7 cdxgen"
+    },
+    {
+      "between": [
+        "inv:cdxgen-cbom",
+        "inv:cisco-aibom"
+      ],
+      "connects_records": false,
+      "evidence": [],
+      "id": "scope:cbom-aibom",
+      "kind": "shared_scan_paths",
+      "reason": "both captures read these paths at the same pinned revision: .. This relates two scan scopes; it does not connect any record of one BOM to a record of the other.",
+      "status": "established",
+      "title": "CBOM \u00b7 cdxgen \u2194 AI-BOM \u00b7 cisco-aibom"
+    }
+  ],
+  "notice": "LIVE SCAN. Inventories were generated by Syft and cdxgen from one pinned public commit; there are no curated declarations. There are no assessed inventory checks in this analysis. Advisory matching is a separate lookup of the lockfile inventory against OSV, joined to the SBOM; it is not a BOMBridge check. The AI-BOM was generated by Cisco AI-BOM, a language-model-assisted producer; it is recorded as that generator's own inventory and is not a BOMBridge check.",
+  "rules": [
+    {
+      "artifact_classes": {
+        "build_output": {
+          "meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes",
+          "required_scope": [
+            "build"
+          ]
+        },
+        "committed_file": {
+          "meaning": "digest of the file at the stated repository path and revision",
+          "required_scope": [
+            "revision"
+          ]
+        },
+        "external_acquisition": {
+          "meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision",
+          "required_scope": []
+        }
+      },
+      "rule_id": "model_identity.digest/2"
+    },
+    {
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1"
+    },
+    {
+      "meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2"
+    },
+    {
+      "meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1"
+    }
+  ],
+  "schema": "bombridge.result/2",
+  "summary": {
+    "illustrative": {},
+    "note": "Origin labels are provenance, not ground truth. No precision, recall or accuracy is computed.",
+    "real": {}
+  }
+}

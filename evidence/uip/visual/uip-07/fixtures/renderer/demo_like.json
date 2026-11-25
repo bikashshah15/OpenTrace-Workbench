@@ -1,0 +1,124 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:9bda4f330d99f7188f019f68",
+   "attributes": {
+    "active_configuration": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "artifact_digest": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "dataset_provenance": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "license": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "model_version": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    },
+    "provider": {
+     "basis": "not recorded by this producer",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_group": null,
+   "display_name": "synthetic_model.hef",
+   "identity_state": "unresolved",
+   "kind": "inventory_model",
+   "occurrences": [],
+   "occurrences_total": 0,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": null
+   },
+   "source_group_ids": []
+  }
+ ],
+ "availability": {
+  "message": "Inventory-reported models only; identity, provider and runtime use are not established.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:052ce00f39e0e25a5d06d55951b879153757742a2ddb37578bd5b48b5912794e",
+  "assessment": null,
+  "commit_sha": "f3e4a50c85d3b8c14561b3c0364ba483b0dc9409",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "ai_services": 0,
+  "all": 1,
+  "findings": 0,
+  "models": 1,
+  "runtimes": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-aibom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-aibom",
+    "producer_version": "synthetic-aibom 0.0"
+   },
+   "scope": "AI inventory (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.ai_assets/1",
+ "source_groups": [],
+ "tab": "ai"
+}

@@ -1,0 +1,200 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:71ce65e3da73834a48ab3900cb0dae33e3e0514c57d2e9b1773bcd6f95b7d1b3",
+  "assessment": null,
+  "commit_sha": "aba37dec82019e67a43a12766e371e62b14320cb",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/o-w-n-e-r/xbxrepox/bx",
+   "host": "github.com",
+   "name": "xbxrepox/bx",
+   "owner": "o-w-n-e-r"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 4,
+  "total": 4,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 1,
+   "files": [
+    {
+     "dependency_context_id": "ctx:1149121eaaa69322006d6cba",
+     "distinct_total": 1,
+     "file_id": "ctx:1149121eaaa69322006d6cba",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/<script>alert(1)</script>.md",
+     "raw_locations": [
+      "/docs/<script>alert(1)</script>.md"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/o-w-n-e-r/xbxrepox/bx/blob/aba37dec82019e67a43a12766e371e62b14320cb/docs/%3Cscript%3Ealert%281%29%3C/script%3E.md",
+      "text": "docs/<script>alert(1)</script>.md"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:bf89ed8dd2ddc5d268d18515",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 1,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 2,
+   "files": [
+    {
+     "dependency_context_id": "ctx:984e26a18c95107aa8c49af0",
+     "distinct_total": 1,
+     "file_id": "ctx:984e26a18c95107aa8c49af0",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/\"><img src=x onerror=alert(1)>.json",
+     "raw_locations": [
+      "/web/\"><img src=x onerror=alert(1)>.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/o-w-n-e-r/xbxrepox/bx/blob/aba37dec82019e67a43a12766e371e62b14320cb/web/%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E.json",
+      "text": "web/\"><img src=x onerror=alert(1)>.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:ce1339a3c7a3f741a397b8c9",
+     "distinct_total": 1,
+     "file_id": "ctx:ce1339a3c7a3f741a397b8c9",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a b/%2e%2e/c#frag?q=1",
+     "raw_locations": [
+      "/web/a b/%2e%2e/c#frag?q=1"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/o-w-n-e-r/xbxrepox/bx/blob/aba37dec82019e67a43a12766e371e62b14320cb/web/a%20b/%252e%252e/c%23frag%3Fq%3D1",
+      "text": "web/a b/%2e%2e/c#frag?q=1"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:b7ce09d5b0f94363970fba61",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 2,
+   "token": "green"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 1,
+   "files": [
+    {
+     "dependency_context_id": "ctx:c53b9dcc0eba6277b0dbc7ae",
+     "distinct_total": 1,
+     "file_id": "ctx:c53b9dcc0eba6277b0dbc7ae",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/‮<b>x</b>.yml",
+     "raw_locations": [
+      "/.github/workflows/‮<b>x</b>.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/o-w-n-e-r/xbxrepox/bx/blob/aba37dec82019e67a43a12766e371e62b14320cb/.github/workflows/%E2%80%AE%3Cb%3Ex%3C/b%3E.yml",
+      "text": ".github/workflows/‮<b>x</b>.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:26dc684e8364910b6d85047e",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 1,
+   "token": "purple"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 1,
+   "files": [
+    {
+     "dependency_context_id": "ctx:0549af517e778ecfbfac74b8",
+     "distinct_total": 1,
+     "file_id": "ctx:0549af517e778ecfbfac74b8",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "javascript:alert(1)",
+     "raw_locations": [
+      "/javascript:alert(1)"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/o-w-n-e-r/xbxrepox/bx/blob/aba37dec82019e67a43a12766e371e62b14320cb/javascript%3Aalert%281%29",
+      "text": "javascript:alert(1)"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:afaeebc3d512ee608f77aeeb",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 1,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/o-w-n-e-r/xbxrepox/bx",
+  "commit_sha": "aba37dec82019e67a43a12766e371e62b14320cb",
+  "distinct_total": 5,
+  "located_distinct_total": 5,
+  "membership_total": 5,
+  "name": "o-w-n-e-r/xbxrepox/bx",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

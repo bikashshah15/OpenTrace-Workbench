@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "56e42f656af71d2baa9bca7056ab68303ef9f1eb10d8d921d065ecdaf0f5ac0e"
+  },
+  {
+   "bytes": 945,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "dd971fc3fef13eb9439cb8d9756220a27342d59dab9232d4cd9c4df2e0e0065a"
+  }
+ ],
+ "name": "uip04-zero-location",
+ "notes": "No located and no unlocated components: an empty valid map.",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

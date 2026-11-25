@@ -1,0 +1,247 @@
+{
+  "description": "Expected outcome for every v3 example. 'schema' layer: must fail JSON Schema. 'semantic' layer: must pass JSON Schema and fail the named core rule (validate_v3, plus validate_v2 rules). Store holds the I1 go.mod fixture only; example artifact refs point at it.",
+  "store_inputs": [
+    "evidence/fixtures/i1/gomod-basic/go.mod"
+  ],
+  "valid": [
+    {
+      "file": "valid/capability_request.json",
+      "kind": "capability_request"
+    },
+    {
+      "file": "valid/capability_response.json",
+      "kind": "capability_response"
+    },
+    {
+      "file": "valid/rejection_unsupported_contract.json",
+      "kind": "rejection"
+    },
+    {
+      "file": "valid/result_hosted_forbidden.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "valid/result_hosted_unbound.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "valid/result_manifest_inventory.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_repo_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "valid/result_manifest_partial.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_repo_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "valid/result_osv_inventory.json",
+      "kind": "result",
+      "semantic": {
+        "task": "valid/task_request_osv_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "valid/task_request_github_sbom.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_osv_inventory.json",
+      "kind": "task_request"
+    },
+    {
+      "file": "valid/task_request_repo_inventory.json",
+      "kind": "task_request"
+    }
+  ],
+  "invalid": [
+    {
+      "file": "invalid/hosted_claim_wrong_type.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "hosted_binding_violation",
+      "rule": "V13",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/hosted_observed_revision_set.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "hosted_binding_violation",
+      "rule": "V13",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/hosted_scope_bound.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/hosted_table_duplicate_spdx_id.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "table_integrity",
+      "rule": "V12",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/hosted_table_unsorted.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "table_integrity",
+      "rule": "V12",
+      "semantic": {
+        "task": "valid/task_request_github_sbom.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/hosted_table_wrong_key.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/manifest_inventory_complete_status.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/manifest_status_unknown_value.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/missing_reason_unknown.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/partial_manifest_supported_claim.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "partial_promoted",
+      "rule": "V14",
+      "semantic": {
+        "task": "valid/task_request_repo_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/rejection_code_unknown.json",
+      "kind": "rejection",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/result_missing_details.json",
+      "kind": "result",
+      "layer": "schema",
+      "expected_code": "schema_invalid"
+    },
+    {
+      "file": "invalid/table_count_mismatch.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "table_integrity",
+      "rule": "V12",
+      "semantic": {
+        "task": "valid/task_request_repo_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/table_digest_mismatch.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "table_integrity",
+      "rule": "V12",
+      "semantic": {
+        "task": "valid/task_request_repo_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/task_request_major_2.json",
+      "kind": "task_request",
+      "layer": "schema",
+      "expected_code": "unsupported_schema_version"
+    },
+    {
+      "file": "invalid/withdrawn_match_supported.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "withdrawn_promoted",
+      "rule": "V16",
+      "semantic": {
+        "task": "valid/task_request_osv_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/zero_claim_inexact_query.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "incomplete_query_claim",
+      "rule": "V15",
+      "semantic": {
+        "task": "valid/task_request_osv_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    },
+    {
+      "file": "invalid/zero_claim_on_positive_query.json",
+      "kind": "result",
+      "layer": "semantic",
+      "expected_code": "positive_query_contradiction",
+      "rule": "V15/V8",
+      "semantic": {
+        "task": "valid/task_request_osv_inventory.json",
+        "capability": "valid/capability_response.json",
+        "received_at": "2026-10-14T12:00:30.000Z"
+      }
+    }
+  ]
+}

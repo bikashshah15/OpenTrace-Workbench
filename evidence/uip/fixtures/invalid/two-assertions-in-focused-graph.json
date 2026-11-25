@@ -1,0 +1,246 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "binding": {
+   "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+   "assessment": {
+    "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+    "configuration": "config:fixture:f673dd289e88b82a",
+    "kind": "discovery",
+    "schema": "opentrace.bombridge_assessment/1",
+    "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+   },
+   "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/bom-lab",
+    "host": "github.com",
+    "name": "bom-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "edges_in_scope": 4,
+   "edges_shown": 4,
+   "neighbors_shown": 0,
+   "nodes_in_scope": 6,
+   "nodes_shown": 6,
+   "omitted_edges": 0,
+   "omitted_nodes": 0,
+   "primary_shown": 6
+  },
+  "edges": [
+   {
+    "edge_id": "edge:a1",
+    "from": "assert-00",
+    "label": "used_evidence",
+    "rationale": "Declares the requirement.",
+    "role": "used",
+    "to": "ev:decl-0",
+    "type": "used_evidence"
+   },
+   {
+    "edge_id": "edge:a2",
+    "from": "assert-00",
+    "label": "used_evidence",
+    "rationale": "Looked the name up in the inventory.",
+    "role": "used",
+    "to": "ev:look-0",
+    "type": "used_evidence"
+   },
+   {
+    "edge_id": "edge:a3",
+    "from": "assert-00",
+    "label": "context_evidence",
+    "rationale": null,
+    "role": "context",
+    "to": "ev:ctx-0",
+    "type": "context_evidence"
+   },
+   {
+    "edge_id": "edge:a4",
+    "from": "assert-00",
+    "label": "excluded_evidence",
+    "rationale": "Excluded: different scope.",
+    "role": "excluded",
+    "to": "ev:excl-0",
+    "type": "excluded_evidence"
+   }
+  ],
+  "graph_state": "assertion_graph",
+  "message_code": null,
+  "nodes": [
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_assertion",
+     "record_id": "assert-00"
+    },
+    "evidence_role": null,
+    "full_label": "Requirement represented in inventory",
+    "kind": "assertion",
+    "label": "Requirement represented in inventory",
+    "node_id": "assert-00",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": "contradicted"
+   },
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_evidence",
+     "record_id": "ev:decl-0"
+    },
+    "evidence_role": "used",
+    "full_label": "Requirement declaration",
+    "kind": "evidence",
+    "label": "Requirement declaration",
+    "node_id": "ev:decl-0",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": null
+   },
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_evidence",
+     "record_id": "ev:look-0"
+    },
+    "evidence_role": "used",
+    "full_label": "Inventory lookup",
+    "kind": "evidence",
+    "label": "Inventory lookup",
+    "node_id": "ev:look-0",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": null
+   },
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_evidence",
+     "record_id": "ev:ctx-0"
+    },
+    "evidence_role": "context",
+    "full_label": "Parse context",
+    "kind": "evidence",
+    "label": "Parse context",
+    "node_id": "ev:ctx-0",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": null
+   },
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_evidence",
+     "record_id": "ev:excl-0"
+    },
+    "evidence_role": "excluded",
+    "full_label": "Excluded record",
+    "kind": "evidence",
+    "label": "Excluded record",
+    "node_id": "ev:excl-0",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": null
+   },
+   {
+    "canonical_ref": {
+     "binding": {
+      "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+      "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+      "configuration": "config:fixture:f673dd289e88b82a",
+      "generation": 1,
+      "session_id": "00000000000000000000000000000001"
+     },
+     "record_class": "graph_assertion",
+     "record_id": "assert-00"
+    },
+    "evidence_role": null,
+    "full_label": "Requirement represented in inventory",
+    "kind": "assertion",
+    "label": "Requirement represented in inventory",
+    "node_id": "assert-second",
+    "origin": "recorded_result",
+    "role": "primary",
+    "state": "contradicted"
+   }
+  ],
+  "page": null,
+  "records": [
+   {
+    "full_label": "Requirement represented in inventory",
+    "node_id": "assert-00"
+   },
+   {
+    "full_label": "Requirement declaration",
+    "node_id": "ev:decl-0"
+   },
+   {
+    "full_label": "Inventory lookup",
+    "node_id": "ev:look-0"
+   },
+   {
+    "full_label": "Parse context",
+    "node_id": "ev:ctx-0"
+   },
+   {
+    "full_label": "Excluded record",
+    "node_id": "ev:excl-0"
+   },
+   {
+    "full_label": "Requirement represented in inventory",
+    "node_id": "assert-second"
+   }
+  ],
+  "schema": "opentrace.workbench.bom_graph/1",
+  "scope": {
+   "candidate_id": "cand:missing_component:2217bfba",
+   "group": null,
+   "kind": "focused_candidate",
+   "query": ""
+  },
+  "truncated": false
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "bom_graph",
+ "sequence": null
+}

@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "471baff526eaffb481ad5c7d624e6e3334c4de466b67c7fc2d75399697a05815"
+  },
+  {
+   "bytes": 240,
+   "path": "error-projection-failed.json",
+   "schema": "opentrace.workbench.error/1",
+   "sha256": "0e7c073e666af69829fcfaaf04625339e4a64063658412f07edb060bdae92f38"
+  }
+ ],
+ "name": "uip04-unrepresentable-path",
+ "notes": "A recorded path the frozen schema cannot carry: projection_failed / unrepresentable_path (the Contexts tab shows an explicit unavailable state).",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

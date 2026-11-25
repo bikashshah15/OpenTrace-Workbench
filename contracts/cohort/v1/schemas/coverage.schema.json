@@ -1,0 +1,107 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/coverage.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.i3.coverage/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "cohort": {
+   "additionalProperties": false,
+   "properties": {
+    "A_linked": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "A_source_occurrences": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "A_unresolved": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "B_outcomes": {
+     "additionalProperties": false,
+     "properties": {
+      "complete_positive": {
+       "minimum": 0,
+       "type": "integer"
+      },
+      "complete_zero": {
+       "minimum": 0,
+       "type": "integer"
+      },
+      "incomplete": {
+       "minimum": 0,
+       "type": "integer"
+      },
+      "rejected": {
+       "minimum": 0,
+       "type": "integer"
+      }
+     },
+     "required": [
+      "complete_positive",
+      "complete_zero",
+      "incomplete",
+      "rejected"
+     ],
+     "type": "object"
+    },
+    "B_unique_query_triples": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "C_both": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "C_only_queried": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "C_only_unresolved": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "C_unique_identities": {
+     "minimum": 0,
+     "type": "integer"
+    },
+    "D_query_occurrence_links": {
+     "minimum": 0,
+     "type": "integer"
+    }
+   },
+   "required": [
+    "A_source_occurrences",
+    "A_linked",
+    "A_unresolved",
+    "B_unique_query_triples",
+    "B_outcomes",
+    "C_unique_identities",
+    "C_only_queried",
+    "C_only_unresolved",
+    "C_both",
+    "D_query_occurrence_links"
+   ],
+   "type": "object"
+  },
+  "definitions": {
+   "type": "object"
+  },
+  "repos": {
+   "type": "object"
+  },
+  "schema": {
+   "const": "opentrace.i3.coverage/1"
+  }
+ },
+ "required": [
+  "schema",
+  "cohort",
+  "repos",
+  "definitions"
+ ],
+ "title": "coverage",
+ "type": "object"
+}

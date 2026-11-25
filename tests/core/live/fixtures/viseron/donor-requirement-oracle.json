@@ -1,0 +1,80 @@
+{
+  "by_category_requirements_only": {
+    "missing_component": 8,
+    "unknown_coverage": 1
+  },
+  "candidates": [
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements-3.9.txt:3",
+      "group": "requirements:inv:syft-source-dir:requirements-3.9.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "pycoral (range) declared at requirements-3.9.txt:3 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:41",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-PyYAML (unpinned) declared at requirements_test.txt:41 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:35",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-aiofiles (unpinned) declared at requirements_test.txt:35 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:36",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-croniter (unpinned) declared at requirements_test.txt:36 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:38",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-psutil (unpinned) declared at requirements_test.txt:38 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:39",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-psycopg2 (unpinned) declared at requirements_test.txt:39 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:40",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-python-slugify (unpinned) declared at requirements_test.txt:40 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "missing_component",
+      "evidence_location": "requirements_test.txt:42",
+      "group": "requirements:inv:syft-source-dir:requirements_test.txt",
+      "selected_inventory": "inv:syft-source-dir",
+      "title": "types-pytz (unpinned) declared at requirements_test.txt:42 has no record in inv:syft-source-dir"
+    },
+    {
+      "category": "unknown_coverage",
+      "evidence_location": "requirements.txt:4,9,46",
+      "group": "requirements:requirements.txt",
+      "selected_inventory": null,
+      "title": "3 declaration(s) in requirements.txt carry environment markers; no target environment was recorded"
+    }
+  ],
+  "note": "Peiran Shi overlay full-donor run on the captured Viseron v3.7.0 inputs; only the requirement->SBOM part is reproduced by OpenTrace. Not an independent live validation.",
+  "requirements_counts": {
+    "files": 6,
+    "missing": 8,
+    "named_requirements": 99,
+    "represented": 91
+  },
+  "source": "BOMBridge_gap_discovery_files/exports/viseron/viseron-v3.7.0-hailo-detector.discovery.result.json",
+  "source_sha256": "1722d46bf201e36528ae215ba7a4ba92f8b47bb99c7fa8ad4e09c42c5609e777"
+}

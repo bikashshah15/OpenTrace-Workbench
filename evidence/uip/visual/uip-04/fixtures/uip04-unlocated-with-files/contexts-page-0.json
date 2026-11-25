@@ -1,0 +1,145 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:da8832425d309d8d3f2d5f3ec47a34dc4ee583fff541359bff799cbf112daaa2",
+  "assessment": null,
+  "commit_sha": "98ed9f69bbc48cbba033940efe68622ae0d80a6e",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/sample-web",
+   "host": "github.com",
+   "name": "sample-web",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 3,
+  "total": 3,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 6,
+   "files": [
+    {
+     "dependency_context_id": "ctx:3b4dc2e6558580e1587aa2ca",
+     "distinct_total": 3,
+     "file_id": "ctx:3b4dc2e6558580e1587aa2ca",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a0/package.json",
+     "raw_locations": [
+      "/web/a0/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/98ed9f69bbc48cbba033940efe68622ae0d80a6e/web/a0/package.json",
+      "text": "web/a0/package.json"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:23d30ed8268ce7eddbc29810",
+     "distinct_total": 3,
+     "file_id": "ctx:23d30ed8268ce7eddbc29810",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/a1/package.json",
+     "raw_locations": [
+      "/web/a1/package.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/98ed9f69bbc48cbba033940efe68622ae0d80a6e/web/a1/package.json",
+      "text": "web/a1/package.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 2,
+    "total": 2,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:e8f15e09f7c78ddf8187f9d8",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 6,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 3,
+   "files": [
+    {
+     "dependency_context_id": "ctx:2fc83363e1d5158db787e29c",
+     "distinct_total": 3,
+     "file_id": "ctx:2fc83363e1d5158db787e29c",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "go.mod",
+     "raw_locations": [
+      "/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/sample-web/blob/98ed9f69bbc48cbba033940efe68622ae0d80a6e/go.mod",
+      "text": "go.mod"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:dcada415146f5a427df90dad",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 3,
+   "token": "amber"
+  },
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 2,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:85308f4c1162d502047205c9",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 2,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/sample-web",
+  "commit_sha": "98ed9f69bbc48cbba033940efe68622ae0d80a6e",
+  "distinct_total": 11,
+  "located_distinct_total": 9,
+  "membership_total": 9,
+  "name": "example-org/sample-web",
+  "unlocated_total": 2
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

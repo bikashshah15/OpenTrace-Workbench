@@ -1,0 +1,12 @@
+{
+  "contract_versions": [
+    "1.0"
+  ],
+  "kind": "capability_request",
+  "request_id": "ex-cap-001",
+  "requester": {
+    "implementation": "python",
+    "service_id": "investigator-a"
+  },
+  "schema_version": "1.0"
+}

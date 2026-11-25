@@ -1,0 +1,485 @@
+{
+ "$id": "https://schemas.opentrace.invalid/cohort/v1/findings.schema.json",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "additionalProperties": false,
+ "description": "I3 derived artifact opentrace.i3.findings/1 (core-owned, not an NLIP payload).",
+ "properties": {
+  "families": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "active": {
+      "type": "boolean"
+     },
+     "band": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "family_id": {
+      "type": "string"
+     },
+     "has_unknown_member": {
+      "type": "boolean"
+     },
+     "members": {
+      "items": {
+       "additionalProperties": false,
+       "properties": {
+        "affected": {
+         "type": "array"
+        },
+        "fetched": {
+         "type": "boolean"
+        },
+        "id": {
+         "type": "string"
+        },
+        "record_digest": {
+         "pattern": "^sha256:[0-9a-f]{64}$",
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "related": {
+         "items": {
+          "type": "string"
+         },
+         "type": "array"
+        },
+        "severity": {
+         "type": [
+          "object",
+          "null"
+         ]
+        },
+        "withdrawn": {
+         "type": [
+          "boolean",
+          "null"
+         ]
+        }
+       },
+       "required": [
+        "id",
+        "fetched",
+        "record_digest",
+        "withdrawn",
+        "severity",
+        "affected",
+        "related"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     },
+     "severity_conflict": {
+      "type": "boolean"
+     },
+     "withdrawn": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "family_id",
+     "members",
+     "active",
+     "withdrawn",
+     "band",
+     "has_unknown_member",
+     "severity_conflict"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "groups": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "band": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "ecosystem": {
+      "enum": [
+       "Go",
+       "npm",
+       "PyPI"
+      ],
+      "type": "string"
+     },
+     "family_id": {
+      "type": "string"
+     },
+     "group_key": {
+      "type": "string"
+     },
+     "has_direct": {
+      "type": "boolean"
+     },
+     "has_runtime_scope": {
+      "type": "boolean"
+     },
+     "has_unknown_member": {
+      "type": "boolean"
+     },
+     "name_normalized": {
+      "type": "string"
+     },
+     "rankable": {
+      "type": "boolean"
+     },
+     "repos_supported": {
+      "minimum": 0,
+      "type": "integer"
+     },
+     "severity_conflict": {
+      "type": "boolean"
+     },
+     "statement": {
+      "type": "string"
+     },
+     "tier": {
+      "enum": [
+       "E1",
+       "E2",
+       "E3"
+      ],
+      "type": "string"
+     },
+     "unmatched_versions": {
+      "items": {
+       "additionalProperties": false,
+       "properties": {
+        "outcome": {
+         "enum": [
+          "complete_positive",
+          "complete_zero",
+          "incomplete",
+          "rejected"
+         ],
+         "type": "string"
+        },
+        "query_key": {
+         "type": "string"
+        },
+        "repos": {
+         "type": "object"
+        },
+        "version_original": {
+         "type": "string"
+        },
+        "version_queried": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "version_queried",
+        "version_original",
+        "query_key",
+        "outcome",
+        "repos"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     },
+     "version_groups": {
+      "items": {
+       "additionalProperties": false,
+       "properties": {
+        "matches": {
+         "items": {
+          "additionalProperties": false,
+          "properties": {
+           "range_check": {
+            "type": [
+             "string",
+             "null"
+            ]
+           },
+           "record_digest": {
+            "pattern": "^sha256:[0-9a-f]{64}$",
+            "type": "string"
+           },
+           "status": {
+            "type": [
+             "string",
+             "null"
+            ]
+           },
+           "vuln_id": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "vuln_id",
+           "range_check",
+           "status",
+           "record_digest"
+          ],
+          "type": "object"
+         },
+         "type": "array"
+        },
+        "query_key": {
+         "type": "string"
+        },
+        "repos": {
+         "type": "object"
+        },
+        "status": {
+         "enum": [
+          "matched",
+          "unknown"
+         ],
+         "type": "string"
+        },
+        "version_original": {
+         "type": "string"
+        },
+        "version_queried": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "version_queried",
+        "version_original",
+        "query_key",
+        "status",
+        "matches",
+        "repos"
+       ],
+       "type": "object"
+      },
+      "type": "array"
+     }
+    },
+    "required": [
+     "group_key",
+     "family_id",
+     "ecosystem",
+     "name_normalized",
+     "band",
+     "has_unknown_member",
+     "severity_conflict",
+     "tier",
+     "repos_supported",
+     "has_direct",
+     "has_runtime_scope",
+     "rankable",
+     "version_groups",
+     "unmatched_versions",
+     "statement"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "integrity": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "digest": {
+      "type": "string"
+     },
+     "problem": {
+      "type": "string"
+     },
+     "vuln_id": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "vuln_id",
+     "digest",
+     "problem"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "query_outcomes": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "active": {
+      "minimum": 0,
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "outcome": {
+      "enum": [
+       "complete_positive",
+       "complete_zero",
+       "incomplete",
+       "rejected"
+      ],
+      "type": "string"
+     },
+     "query_key": {
+      "type": "string"
+     },
+     "reasons": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "returned": {
+      "minimum": 0,
+      "type": [
+       "integer",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "query_key",
+     "outcome",
+     "reasons",
+     "returned",
+     "active"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "schema": {
+   "const": "opentrace.i3.findings/1"
+  },
+  "scope": {
+   "additionalProperties": false,
+   "properties": {
+    "go_version_form": {
+     "enum": [
+      "bare",
+      "v_prefixed"
+     ],
+     "type": "string"
+    },
+    "lane": {
+     "const": "pinned_source_inventory"
+    },
+    "osv_capture_set_id": {
+     "pattern": "^sha256:[0-9a-f]{64}$",
+     "type": "string"
+    },
+    "osv_captured_at": {
+     "type": "string"
+    },
+    "planned_query_digest": {
+     "pattern": "^sha256:[0-9a-f]{64}$",
+     "type": "string"
+    },
+    "repos": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "source_capture_set_id": {
+     "pattern": "^sha256:[0-9a-f]{64}$",
+     "type": "string"
+    }
+   },
+   "required": [
+    "lane",
+    "repos",
+    "source_capture_set_id",
+    "osv_capture_set_id",
+    "osv_captured_at",
+    "planned_query_digest",
+    "go_version_form"
+   ],
+   "type": "object"
+  },
+  "statement": {
+   "type": "string"
+  },
+  "unresolved": {
+   "items": {
+    "additionalProperties": false,
+    "properties": {
+     "direct": {
+      "type": [
+       "boolean",
+       "null"
+      ]
+     },
+     "ecosystem": {
+      "enum": [
+       "Go",
+       "npm",
+       "PyPI"
+      ],
+      "type": "string"
+     },
+     "locator": {
+      "type": "string"
+     },
+     "name_normalized": {
+      "type": "string"
+     },
+     "path": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     },
+     "repo": {
+      "type": "string"
+     },
+     "scope": {
+      "type": "string"
+     },
+     "version_original": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "ecosystem",
+     "name_normalized",
+     "reason",
+     "repo",
+     "path",
+     "locator",
+     "version_original",
+     "direct",
+     "scope"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "withdrawn_only_families": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "schema",
+  "scope",
+  "statement",
+  "families",
+  "groups",
+  "unresolved",
+  "withdrawn_only_families",
+  "query_outcomes",
+  "integrity"
+ ],
+ "title": "findings",
+ "type": "object"
+}

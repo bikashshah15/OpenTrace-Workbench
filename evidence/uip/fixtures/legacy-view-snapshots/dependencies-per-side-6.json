@@ -1,0 +1,286 @@
+{
+ "advisories": {
+  "advisory_groups": 218,
+  "items": [
+   {
+    "component_id": "art:inv:syft-source-dir/components/3",
+    "family": "GHSA-866g-f22w-33x8",
+    "label": "CVE-2026-8769",
+    "name": "@ai-sdk/provider-utils",
+    "records": 1,
+    "severity": "LOW",
+    "summary": "@ai-sdk/provider-utils has an Uncontrolled Resource Consumption issue",
+    "version": "3.0.19"
+   },
+   {
+    "component_id": "art:inv:syft-source-dir/components/28",
+    "family": "GHSA-4x5r-pxfx-6jf8",
+    "label": "CVE-2026-49356",
+    "name": "@babel/core",
+    "records": 1,
+    "severity": "LOW",
+    "summary": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
+    "version": "7.28.5"
+   },
+   {
+    "component_id": "art:inv:syft-source-dir/components/87",
+    "family": "GHSA-fv7c-fp4j-7gwp",
+    "label": "CVE-2026-44728",
+    "name": "@babel/plugin-transform-modules-systemjs",
+    "records": 1,
+    "severity": "HIGH",
+    "summary": "@babel/plugin-transform-modules-systemjs generates arbitrary code when compiling malicious input",
+    "version": "7.28.5"
+   },
+   {
+    "component_id": "art:inv:syft-source-dir/components/220",
+    "family": "GHSA-qxc2-j82w-r537",
+    "label": "CVE-2026-73231",
+    "name": "@faker-js/faker",
+    "records": 1,
+    "severity": "HIGH",
+    "summary": "Faker: helpers.fake exploitable into arbritary code execution",
+    "version": "5.5.3"
+   },
+   {
+    "component_id": "art:inv:syft-source-dir/components/354",
+    "family": "GHSA-2j2x-hqr9-3h42",
+    "label": "CVE-2026-40181",
+    "name": "@remix-run/router",
+    "records": 1,
+    "severity": "MODERATE",
+    "summary": "React Router's same-origin redirect with path starting // causes open redirect via protocol-relative URL reinterpretation",
+    "version": "1.23.2"
+   }
+  ],
+  "package_versions": 73,
+  "page": 0,
+  "page_size": 5,
+  "total": 260
+ },
+ "advisories_for_focus": [],
+ "context_path": null,
+ "focus": {
+  "advisory": false,
+  "bom_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+  "id": "art:inv:syft-source-dir/components/1934",
+  "locations": [
+   "web/package-lock.json"
+  ],
+  "name": "web-new",
+  "type": "library",
+  "version": "0.0.0"
+ },
+ "generation": 1,
+ "incoming": {
+  "before_context_filter": 0,
+  "has_more": false,
+  "items": [],
+  "offset": 0,
+  "shown": 0,
+  "total": 0
+ },
+ "inspected": {
+  "advisories": [],
+  "advisory_lookup": null,
+  "component": {
+   "advisory": false,
+   "bom_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+   "id": "art:inv:syft-source-dir/components/1934",
+   "locations": [
+    "web/package-lock.json"
+   ],
+   "name": "web-new",
+   "type": "library",
+   "version": "0.0.0"
+  },
+  "depends_on": 82,
+  "used_by": 0
+ },
+ "inspector": {
+  "artifact_id": "art:inv:syft-source-dir",
+  "pointer": "/components/1934",
+  "record": {
+   "bom-ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+   "name": "web-new",
+   "properties": [
+    {
+     "name": "syft:package:foundBy",
+     "value": "javascript-lock-cataloger"
+    },
+    {
+     "name": "syft:package:language",
+     "value": "javascript"
+    },
+    {
+     "name": "syft:package:type",
+     "value": "npm"
+    },
+    {
+     "name": "syft:package:metadataType",
+     "value": "javascript-npm-package-lock-entry"
+    },
+    {
+     "name": "syft:cpe23",
+     "value": "cpe:2.3:a:web-new:web_new:0.0.0:*:*:*:*:*:*:*"
+    },
+    {
+     "name": "syft:cpe23",
+     "value": "cpe:2.3:a:web_new:web-new:0.0.0:*:*:*:*:*:*:*"
+    },
+    {
+     "name": "syft:cpe23",
+     "value": "cpe:2.3:a:web_new:web_new:0.0.0:*:*:*:*:*:*:*"
+    },
+    {
+     "name": "syft:cpe23",
+     "value": "cpe:2.3:a:web:web-new:0.0.0:*:*:*:*:*:*:*"
+    },
+    {
+     "name": "syft:cpe23",
+     "value": "cpe:2.3:a:web:web_new:0.0.0:*:*:*:*:*:*:*"
+    },
+    {
+     "name": "syft:location:0:path",
+     "value": "/web/package-lock.json"
+    }
+   ],
+   "purl": "pkg:npm/web-new@0.0.0",
+   "type": "library",
+   "version": "0.0.0"
+  }
+ },
+ "inspector_ref": {
+  "binding": {
+   "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+   "bundle_sha256": "3f3cf2667ea6d0a8d6acf1bd51d728bb5402ae6b7cca237531d51b32b48341d6",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "generation": 1,
+   "session_id": "00000000000000000000000000000001"
+  },
+  "record_class": "artifact_component",
+  "record_id": "art:inv:syft-source-dir/components/1934"
+ },
+ "outgoing": {
+  "before_context_filter": 82,
+  "has_more": true,
+  "items": [
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40cycjimmy/jsmpeg-player@6.1.2?package-id=419822413c27ce34",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/0"
+     ],
+     "to_ref": "pkg:npm/%40cycjimmy/jsmpeg-player@6.1.2?package-id=419822413c27ce34"
+    },
+    "id": "art:inv:syft-source-dir/components/185",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@cycjimmy/jsmpeg-player",
+    "type": "library",
+    "version": "6.1.2"
+   },
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40hookform/resolvers@3.10.0?package-id=94bd421fb6a57804",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/1"
+     ],
+     "to_ref": "pkg:npm/%40hookform/resolvers@3.10.0?package-id=94bd421fb6a57804"
+    },
+    "id": "art:inv:syft-source-dir/components/228",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@hookform/resolvers",
+    "type": "library",
+    "version": "3.10.0"
+   },
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40melloware/react-logviewer@6.1.2?package-id=72fa7e2af2fc0be1",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/2"
+     ],
+     "to_ref": "pkg:npm/%40melloware/react-logviewer@6.1.2?package-id=72fa7e2af2fc0be1"
+    },
+    "id": "art:inv:syft-source-dir/components/255",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@melloware/react-logviewer",
+    "type": "library",
+    "version": "6.1.2"
+   },
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40radix-ui/react-alert-dialog@1.1.15?package-id=68d12df92e46f01e",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/3"
+     ],
+     "to_ref": "pkg:npm/%40radix-ui/react-alert-dialog@1.1.15?package-id=68d12df92e46f01e"
+    },
+    "id": "art:inv:syft-source-dir/components/286",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@radix-ui/react-alert-dialog",
+    "type": "library",
+    "version": "1.1.15"
+   },
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40radix-ui/react-aspect-ratio@1.1.2?package-id=e0a64d5becfdfcb2",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/4"
+     ],
+     "to_ref": "pkg:npm/%40radix-ui/react-aspect-ratio@1.1.2?package-id=e0a64d5becfdfcb2"
+    },
+    "id": "art:inv:syft-source-dir/components/288",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@radix-ui/react-aspect-ratio",
+    "type": "library",
+    "version": "1.1.2"
+   },
+   {
+    "advisory": false,
+    "bom_ref": "pkg:npm/%40radix-ui/react-checkbox@1.3.3?package-id=76fe86f613597ab1",
+    "edge": {
+     "from_ref": "pkg:npm/web-new@0.0.0?package-id=0483f7c8d405f9f3",
+     "pointers": [
+      "/dependencies/1077/dependsOn/5"
+     ],
+     "to_ref": "pkg:npm/%40radix-ui/react-checkbox@1.3.3?package-id=76fe86f613597ab1"
+    },
+    "id": "art:inv:syft-source-dir/components/289",
+    "locations": [
+     "web/package-lock.json"
+    ],
+    "name": "@radix-ui/react-checkbox",
+    "type": "library",
+    "version": "1.3.3"
+   }
+  ],
+  "offset": 0,
+  "shown": 6,
+  "total": 82
+ },
+ "per_side": 6,
+ "scope": {
+  "components": 1989,
+  "edges": 5483
+ }
+}

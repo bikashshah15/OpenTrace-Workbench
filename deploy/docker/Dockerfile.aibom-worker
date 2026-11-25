@@ -1,0 +1,27 @@
+# OpenTrace AI-BOM worker (UIP-07C BUILD-1). Built with networking DISABLED from a locally prepared, hash-verified wheelhouse:
+#   docker build --network none --pull=false -f deploy/docker/Dockerfile.aibom-worker <context made by tools/uip07c/make_aibom_context.py>
+# Nothing is downloaded here: the base image is digest-pinned and already local, the 115 wheels come from the context and are installed
+# with --no-index --only-binary=:all: --require-hashes; the build FAILS if the installed set differs from the lock.
+FROM python:3.13-slim-bookworm@sha256:aed314f1f0c7e988b7aee5d889414ec977430bad37770966c52aff5366a13a06
+LABEL opentrace.uip07c="aibom-worker"
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+COPY wheelhouse/ /wheelhouse/
+COPY requirements.lock /requirements.lock
+RUN --network=none python -m venv /opt/venv \
+ && /opt/venv/bin/pip install --no-index --only-binary=:all: --require-hashes --find-links /wheelhouse -r /requirements.lock \
+ && rm -rf /wheelhouse
+COPY verify_install.py /tmp/verify_install.py
+RUN --network=none /opt/venv/bin/python -I /tmp/verify_install.py /requirements.lock && rm /tmp/verify_install.py
+# Knowledge base: baked at build, checked against the pinned digest at build and again by the worker at start.
+COPY KB.sha256 /tmp/KB.sha256
+COPY aibom_catalog-1.10.1.duckdb /opt/aibom/aibom_catalog-1.10.1.duckdb
+RUN --network=none cd /opt/aibom && sha256sum -c /tmp/KB.sha256 && rm /tmp/KB.sha256 && chmod 0755 /opt/aibom && chmod 0644 aibom_catalog-1.10.1.duckdb
+COPY empty-catalog.json empty.env /opt/aibom/
+# Licences: the wheels are installed unmodified, so their dist-info licence/NOTICE files are preserved in place; condition C1 adds the
+# upstream MIT text for packageurl-python next to the package notices.
+COPY licences/ /usr/share/doc/opentrace-aibom/
+COPY aibom_cisco.py worker.py validate_artifact.py /opt/worker/
+RUN groupadd --gid 10001 opentrace && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin opentrace \
+ && mkdir -p /scan /spool/out /work && chown 10001:10001 /spool /spool/out /work
+USER 10001:10001
+CMD ["/opt/venv/bin/python", "-I", "/opt/worker/worker.py"]

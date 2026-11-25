@@ -1,0 +1,1066 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "capabilities": [
+  {
+   "family": "software",
+   "reason_code": null,
+   "state": "completed"
+  },
+  {
+   "family": "cryptography",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "ai_model",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "other",
+   "reason_code": null,
+   "state": "completed"
+  }
+ ],
+ "counts": {
+  "assertions_unique": 75,
+  "candidates_total": 79,
+  "family_counts": {
+   "ai_model": 0,
+   "cryptography": 0,
+   "other": 4,
+   "software": 75
+  },
+  "family_counts_disjoint": true,
+  "filter_group_counts": {
+   "not_represented": 69,
+   "represented": 0,
+   "unknown": 10
+  },
+  "filtered_total": 79,
+  "records_total": 210,
+  "relationships_total": 202,
+  "state_counts": {
+   "conflicting_evidence": 0,
+   "contradicted": 69,
+   "no_rule": 0,
+   "supported": 0,
+   "unknown_coverage": 4,
+   "unverifiable": 6
+  }
+ },
+ "filters": {
+  "category": null,
+  "family": null,
+  "filter_group": null,
+  "query": "",
+  "state": null
+ },
+ "items": [
+  {
+   "assertion_id": "dreq-types-peewee-5c986a69",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:6df16cbe"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir",
+    "raw_title": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:6df16cbe",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 4,
+    "line_start": 4,
+    "path": "docker/main/requirements-dev.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-aiofiles-1dd33f89",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:0bd313c8"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "aiofiles (wildcard_pin) declared at docker/main/requirements-wheels.txt:1 has no record in inv:syft-source-dir",
+    "raw_title": "aiofiles (wildcard_pin) declared at docker/main/requirements-wheels.txt:1 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:0bd313c8",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 1,
+    "line_start": 1,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-aiohttp-6a47c41f",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:b81f0c4f"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "aiohttp (wildcard_pin) declared at docker/main/requirements-wheels.txt:4 has no record in inv:syft-source-dir",
+    "raw_title": "aiohttp (wildcard_pin) declared at docker/main/requirements-wheels.txt:4 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:b81f0c4f",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 4,
+    "line_start": 4,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-appdirs-d7b4b588",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:f1c36ea5"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "appdirs (wildcard_pin) declared at docker/main/requirements-wheels.txt:61 has no record in inv:syft-source-dir",
+    "raw_title": "appdirs (wildcard_pin) declared at docker/main/requirements-wheels.txt:61 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:f1c36ea5",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 61,
+    "line_start": 61,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-argcomplete-3f6e67f8",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:d7466742"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "argcomplete (wildcard_pin) declared at docker/main/requirements-wheels.txt:62 has no record in inv:syft-source-dir",
+    "raw_title": "argcomplete (wildcard_pin) declared at docker/main/requirements-wheels.txt:62 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:d7466742",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 62,
+    "line_start": 62,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-click-0ac4ff98",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:50f13ccf"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "click (wildcard_pin) declared at docker/main/requirements-wheels.txt:2 has no record in inv:syft-source-dir",
+    "raw_title": "click (wildcard_pin) declared at docker/main/requirements-wheels.txt:2 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:50f13ccf",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 2,
+    "line_start": 2,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-contextlib2-b996d713",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:810ec59d"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "contextlib2 (wildcard_pin) declared at docker/main/requirements-wheels.txt:63 has no record in inv:syft-source-dir",
+    "raw_title": "contextlib2 (wildcard_pin) declared at docker/main/requirements-wheels.txt:63 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:810ec59d",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 63,
+    "line_start": 63,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-cryptography-a1a1658d",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:db96be05"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "cryptography (wildcard_pin) declared at docker/main/requirements-wheels.txt:11 has no record in inv:syft-source-dir",
+    "raw_title": "cryptography (wildcard_pin) declared at docker/main/requirements-wheels.txt:11 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:db96be05",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 11,
+    "line_start": 11,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-distlib-b038f139",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:7cc3d55f"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "distlib (wildcard_pin) declared at docker/main/requirements-wheels.txt:64 has no record in inv:syft-source-dir",
+    "raw_title": "distlib (wildcard_pin) declared at docker/main/requirements-wheels.txt:64 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:7cc3d55f",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 64,
+    "line_start": 64,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-fastapi-7657fae2",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:78d52e27"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "fastapi (wildcard_pin) declared at docker/main/requirements-wheels.txt:7 has no record in inv:syft-source-dir",
+    "raw_title": "fastapi (wildcard_pin) declared at docker/main/requirements-wheels.txt:7 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:78d52e27",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 7,
+    "line_start": 7,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-faster-whisper-d531bef5",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:11958881"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "faster-whisper (wildcard_pin) declared at docker/main/requirements-wheels.txt:79 has no record in inv:syft-source-dir",
+    "raw_title": "faster-whisper (wildcard_pin) declared at docker/main/requirements-wheels.txt:79 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:11958881",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 79,
+    "line_start": 79,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-filelock-26619435",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:67be7754"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "filelock (wildcard_pin) declared at docker/main/requirements-wheels.txt:65 has no record in inv:syft-source-dir",
+    "raw_title": "filelock (wildcard_pin) declared at docker/main/requirements-wheels.txt:65 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:67be7754",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 65,
+    "line_start": 65,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-future-1573185b",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:d334da41"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "future (wildcard_pin) declared at docker/main/requirements-wheels.txt:66 has no record in inv:syft-source-dir",
+    "raw_title": "future (wildcard_pin) declared at docker/main/requirements-wheels.txt:66 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:d334da41",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 66,
+    "line_start": 66,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-google-genai-7a98f9fb",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:2ed57684"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "google-genai (wildcard_pin) declared at docker/main/requirements-wheels.txt:50 has no record in inv:syft-source-dir",
+    "raw_title": "google-genai (wildcard_pin) declared at docker/main/requirements-wheels.txt:50 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:2ed57684",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 50,
+    "line_start": 50,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-importlib-metadata-af923de5",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:923983f1"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "importlib-metadata (wildcard_pin) declared at docker/main/requirements-wheels.txt:67 has no record in inv:syft-source-dir",
+    "raw_title": "importlib-metadata (wildcard_pin) declared at docker/main/requirements-wheels.txt:67 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:923983f1",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 67,
+    "line_start": 67,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-importlib-resources-d4785497",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:edc4257a"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "importlib-resources (wildcard_pin) declared at docker/main/requirements-wheels.txt:68 has no record in inv:syft-source-dir",
+    "raw_title": "importlib-resources (wildcard_pin) declared at docker/main/requirements-wheels.txt:68 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:edc4257a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 68,
+    "line_start": 68,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-joserfc-cbd79f69",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:2be856fd"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "joserfc (wildcard_pin) declared at docker/main/requirements-wheels.txt:10 has no record in inv:syft-source-dir",
+    "raw_title": "joserfc (wildcard_pin) declared at docker/main/requirements-wheels.txt:10 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:2be856fd",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 10,
+    "line_start": 10,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-librosa-ab89a6d1",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:2a406c52"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "librosa (wildcard_pin) declared at docker/main/requirements-wheels.txt:80 has no record in inv:syft-source-dir",
+    "raw_title": "librosa (wildcard_pin) declared at docker/main/requirements-wheels.txt:80 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:2a406c52",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 80,
+    "line_start": 80,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-markupsafe-8aa13811",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:55a9c687"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "markupsafe (wildcard_pin) declared at docker/main/requirements-wheels.txt:13 has no record in inv:syft-source-dir",
+    "raw_title": "markupsafe (wildcard_pin) declared at docker/main/requirements-wheels.txt:13 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:55a9c687",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 13,
+    "line_start": 13,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-memray-010898c2",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:0f681d0f"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "memray (wildcard_pin) declared at docker/main/requirements-wheels.txt:83 has no record in inv:syft-source-dir",
+    "raw_title": "memray (wildcard_pin) declared at docker/main/requirements-wheels.txt:83 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:0f681d0f",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 83,
+    "line_start": 83,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-netaddr-2baf7270",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:01f9483a"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "netaddr (wildcard_pin) declared at docker/main/requirements-wheels.txt:69 has no record in inv:syft-source-dir",
+    "raw_title": "netaddr (wildcard_pin) declared at docker/main/requirements-wheels.txt:69 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:01f9483a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 69,
+    "line_start": 69,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-netifaces-c1ebf9b3",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:811f9c88"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "netifaces (wildcard_pin) declared at docker/main/requirements-wheels.txt:70 has no record in inv:syft-source-dir",
+    "raw_title": "netifaces (wildcard_pin) declared at docker/main/requirements-wheels.txt:70 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:811f9c88",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 70,
+    "line_start": 70,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-norfair-5b34d1ae",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:a6e0b740"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "norfair (wildcard_pin) declared at docker/main/requirements-wheels.txt:34 has no record in inv:syft-source-dir",
+    "raw_title": "norfair (wildcard_pin) declared at docker/main/requirements-wheels.txt:34 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:a6e0b740",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 34,
+    "line_start": 34,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-numpy-e492595b",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:5adaa766"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "numpy (wildcard_pin) declared at docker/main/requirements-wheels.txt:40 has no record in inv:syft-source-dir",
+    "raw_title": "numpy (wildcard_pin) declared at docker/main/requirements-wheels.txt:40 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:5adaa766",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 40,
+    "line_start": 40,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "dreq-ollama-a5e8d3f3",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+     "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+     "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:254607c5"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ollama (wildcard_pin) declared at docker/main/requirements-wheels.txt:51 has no record in inv:syft-source-dir",
+    "raw_title": "ollama (wildcard_pin) declared at docker/main/requirements-wheels.txt:51 has no record in inv:syft-source-dir"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "syft 1.51.1",
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "item_id": "cand:missing_component:254607c5",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 51,
+    "line_start": 51,
+    "path": "docker/main/requirements-wheels.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  }
+ ],
+ "mode": "discovery_compared",
+ "page": {
+  "has_more": true,
+  "offset": 0,
+  "size": 25
+ },
+ "schema": "opentrace.workbench.bom_candidates/1",
+ "status_detail": null
+}

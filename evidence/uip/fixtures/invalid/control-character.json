@@ -1,0 +1,159 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "absence_established": false,
+  "assets": [
+   {
+    "asset_id": "ast:0ed1d58708fe53a106cb2661",
+    "attributes": {
+     "algorithm_name": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "certificate_subject": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "parameter": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "primitive": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     },
+     "protocol_name": {
+      "basis": "source text",
+      "state": "recorded",
+      "value": "data:text/html,<svg onload=alert(1)>"
+     },
+     "protocol_version": {
+      "basis": "not recorded by this producer",
+      "state": "unavailable",
+      "value": null
+     }
+    },
+    "display_name": "<script>alert(1)</script>\u0007",
+    "kind": "protocol",
+    "occurrences": [
+     {
+      "alternative_of": null,
+      "condition": {
+       "basis": "source_text",
+       "text": "javascript:alert(1)"
+      },
+      "occurrence_id": "occ:665a2150e02761a31795b767",
+      "operation": "<script>alert(1)</script>",
+      "producer_id": "fixture-source-observer",
+      "source_location": {
+       "excerpt": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<script>",
+       "excerpt_state": "recorded",
+       "file_sha256": "5394c7e81b7d1700f5fdfaa04a5bdbd656dfa58bedebf733f8fc32c5c8658086",
+       "line_end": 1,
+       "line_start": 1,
+       "link": {
+        "href": null,
+        "text": "data:text/html,<svg onload=alert(1)>"
+       },
+       "path": "src/a.py"
+      }
+     }
+    ],
+    "occurrences_total": 1,
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-observer",
+     "producer_version": null
+    },
+    "source_group_ids": []
+   }
+  ],
+  "availability": {
+   "message": "' OR '1'='1",
+   "reason_code": "partial_coverage",
+   "state": "partial"
+  },
+  "binding": {
+   "analysis_digest": "sha256:8e657b60a1d708f2624eff200c17238bb95a008fdedf1641c9f5b56a4f87fcf7",
+   "assessment": null,
+   "commit_sha": "6677b0f7096aa4a2756460807ffa16fa8b9e1882",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/hostile-lab",
+    "host": "github.com",
+    "name": "hostile-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "counts": {
+   "shown": 1,
+   "total": 1,
+   "truncated": false
+  },
+  "filter": "all",
+  "filter_totals": {
+   "algorithms": 0,
+   "all": 1,
+   "certificates": 0,
+   "findings": 0,
+   "protocols": 1
+  },
+  "links": [],
+  "page": {
+   "assets_shown": 1,
+   "assets_total": 1,
+   "has_more": false,
+   "offset": 0,
+   "size": 30
+  },
+  "producers": [
+   {
+    "coverage": {
+     "excluded_paths": [],
+     "files_considered": 0,
+     "files_excluded": 0,
+     "files_parsed": 0,
+     "unknown_dynamic_values_total": 0,
+     "unparsed_total": 0
+    },
+    "outcome": "partial",
+    "provenance": {
+     "artifact_id": null,
+     "experimental": true,
+     "json_pointer": null,
+     "origin": "supplemental_observation",
+     "producer_id": "fixture-source-observer",
+     "producer_version": null
+    },
+    "scope": "<script>alert(1)</script>"
+   }
+  ],
+  "review_items": [],
+  "schema": "opentrace.workbench.crypto_assets/1",
+  "services": [],
+  "services_counts": {
+   "shown": 0,
+   "total": 0,
+   "truncated": false
+  },
+  "source_groups": [],
+  "tab": "crypto"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "crypto_assets",
+ "sequence": null
+}

@@ -1,0 +1,305 @@
+{
+ "expected_binding": null,
+ "params": null,
+ "payload": {
+  "binding": {
+   "analysis_digest": "sha256:0d318449315ca4d437b6fc6499d7cd9ca23176df6a0aea6f9844399e33bf25af",
+   "assessment": null,
+   "commit_sha": "6f6ffaf0e60fb9af087ff70cc2ce25cb93c47a6c",
+   "generation": 1,
+   "mode": "captured",
+   "repository": {
+    "canonical_url": "https://github.com/example-org/path-lab",
+    "host": "github.com",
+    "name": "path-lab",
+    "owner": "example-org"
+   },
+   "requested_ref": {
+    "kind": "tag",
+    "text": "v1.0.0"
+   }
+  },
+  "context": {
+   "context_id": "ctx:7cdfed8069c41ffc56c4aa3b",
+   "path": "lab/package-lock.json"
+  },
+  "counts": {
+   "shown": 7,
+   "total": 7,
+   "truncated": false
+  },
+  "edges": [
+   {
+    "edge_id": "edge:29c2e6dd300ee222f3bab7fe",
+    "from": "pkg:a",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/5c0238"
+    ],
+    "to": "pkg:d"
+   },
+   {
+    "edge_id": "edge:2031c64437b576fada68516c",
+    "from": "pkg:b",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/8024c8"
+    ],
+    "to": "pkg:d"
+   },
+   {
+    "edge_id": "edge:752c558ba4b54d92dac4f471",
+    "from": "pkg:c",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/00af46"
+    ],
+    "to": "pkg:g"
+   },
+   {
+    "edge_id": "edge:817ef60033bf844b9f48d551",
+    "from": "pkg:d",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/0ac829"
+    ],
+    "to": "pkg:e"
+   },
+   {
+    "edge_id": "edge:98ac84cd2e8455fbeb776724",
+    "from": "pkg:e",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/86ac37"
+    ],
+    "to": "pkg:f"
+   },
+   {
+    "edge_id": "edge:89c3c0ef55acf2f180278669",
+    "from": "pkg:focus",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/a5210d"
+    ],
+    "to": "pkg:a"
+   },
+   {
+    "edge_id": "edge:c8168ec9827835031e9204b6",
+    "from": "pkg:focus",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/c942a4"
+    ],
+    "to": "pkg:b"
+   },
+   {
+    "edge_id": "edge:dd69e547e415fc509268f505",
+    "from": "pkg:focus",
+    "kind": "declares_dependency",
+    "source_pointers": [
+     "/dependencies/5b4ced"
+    ],
+    "to": "pkg:c"
+   }
+  ],
+  "filter": "all",
+  "filter_totals": {
+   "advisory": 1,
+   "all": 8,
+   "direct": 3,
+   "evidence_gaps": 4,
+   "transitive": 4
+  },
+  "focus": {
+   "basis": "graph_root",
+   "candidates_total": 2,
+   "node_id": "pkg:focus"
+  },
+  "limits": {
+   "connectors_shown": 0,
+   "connectors_truncated": false,
+   "edges_truncated": false
+  },
+  "lookup": {
+   "counts_by_state": {
+    "match": 1,
+    "missing_version": 1,
+    "no_match": 2,
+    "not_run": 1,
+    "unavailable": 1,
+    "unsupported": 1
+   },
+   "explanation": "Advisory lookup was not performed for these components; this is not a completed clean lookup and not a finding.",
+   "mode": "recorded"
+  },
+  "nodes": [
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 0,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "focus-root",
+    "node_id": "pkg:focus",
+    "path_state": "complete",
+    "role": "focus",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "match",
+    "advisory_match_count": 2,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "node-a",
+    "node_id": "pkg:a",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": false,
+     "transitive": false
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "node-b",
+    "node_id": "pkg:b",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "unavailable",
+    "advisory_match_count": 0,
+    "depth": 1,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": true,
+     "evidence_gap": true,
+     "transitive": false
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "node-c",
+    "node_id": "pkg:c",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "unsupported",
+    "advisory_match_count": 0,
+    "depth": 2,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": true,
+     "transitive": true
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "node-d",
+    "node_id": "pkg:d",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "missing_version",
+    "advisory_match_count": 0,
+    "depth": 3,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": true,
+     "transitive": true
+    },
+    "gap_causes": [
+     "lookup_incomplete"
+    ],
+    "has_source_location": true,
+    "name": "node-e",
+    "node_id": "pkg:e",
+    "path_state": "complete",
+    "role": "match",
+    "version": null
+   },
+   {
+    "advisory_lookup": "no_match",
+    "advisory_match_count": 0,
+    "depth": 4,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": false,
+     "transitive": true
+    },
+    "gap_causes": [],
+    "has_source_location": true,
+    "name": "node-f",
+    "node_id": "pkg:f",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   },
+   {
+    "advisory_lookup": "not_run",
+    "advisory_match_count": 0,
+    "depth": 2,
+    "ecosystem": "npm",
+    "flags": {
+     "direct": false,
+     "evidence_gap": true,
+     "transitive": true
+    },
+    "gap_causes": [
+     "lookup_not_run"
+    ],
+    "has_source_location": true,
+    "name": "node-g",
+    "node_id": "pkg:g",
+    "path_state": "complete",
+    "role": "match",
+    "version": "1.0.0"
+   }
+  ],
+  "page": {
+   "has_more": false,
+   "matches_shown": 7,
+   "matches_total": 7,
+   "offset": 0,
+   "range_first": 1,
+   "range_last": 7,
+   "size": 30
+  },
+  "query": "",
+  "schema": "opentrace.workbench.dependency_page/1"
+ },
+ "request": null,
+ "route": null,
+ "schema_name": "dependency_page",
+ "sequence": null
+}

@@ -1,0 +1,31 @@
+# OpenTrace scanner worker: pinned Syft and cdxgen, no network at runtime, nothing fetched at runtime.
+FROM node:22-bookworm-slim@sha256:5ec23b7c622b00547753bc6ffd78085dd868a68aeb41c8e0a1418f033e13d96d
+ARG TARGETARCH
+ARG SYFT_VERSION=1.51.1
+ARG SYFT_SHA256_ARM64=a7fd2b784e6664acd44719270574f6cd8c6864fc2b1700bf9099bd1cccda7d7f
+ARG SYFT_SHA256_AMD64=8fcb33017a0dc1058298c923c436d19dfa68ae93968e0b423248542e3afb9fc3
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends python3 ca-certificates curl \
+ && rm -rf /var/lib/apt/lists/*
+# Syft: the release tarball must match the pinned SHA-256 for this architecture or the build fails.
+RUN set -eu; \
+    case "${TARGETARCH:-$(dpkg --print-architecture)}" in \
+      arm64) sum="$SYFT_SHA256_ARM64"; arch=arm64 ;; \
+      amd64) sum="$SYFT_SHA256_AMD64"; arch=amd64 ;; \
+      *) echo "unsupported architecture" >&2; exit 1 ;; \
+    esac; \
+    curl -fsSL -o /tmp/syft.tgz "https://github.com/anchore/syft/releases/download/v${SYFT_VERSION}/syft_${SYFT_VERSION}_linux_${arch}.tar.gz"; \
+    echo "${sum}  /tmp/syft.tgz" | sha256sum -c -; \
+    tar -xzf /tmp/syft.tgz -C /usr/local/bin syft; rm /tmp/syft.tgz; \
+    /usr/local/bin/syft version | grep -q "^Version: *${SYFT_VERSION}$"; \
+    apt-get purge -y curl && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+# cdxgen: exact tree fixed by the committed package-lock.json (integrity-checked), lifecycle scripts disabled.
+COPY tools/live/cdxgen/package.json tools/live/cdxgen/package-lock.json /opt/cdxgen/
+RUN cd /opt/cdxgen && npm ci --ignore-scripts --no-audit --no-fund \
+ && node -e 'const v=require("./node_modules/@cyclonedx/cdxgen/package.json").version; if(v!=="12.9.0"){process.exit(1)}'
+COPY src/workers/scanner/worker.py /opt/worker/worker.py
+RUN groupadd --gid 10001 opentrace && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin opentrace \
+ && mkdir -p /spool/in /spool/out /work && chown -R 10001:10001 /spool /work
+USER 10001:10001
+CMD ["python3", "-I", "/opt/worker/worker.py"]

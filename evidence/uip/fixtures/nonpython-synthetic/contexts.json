@@ -1,0 +1,206 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:fe0456f03c14f720c853dbdb98fb6ae6c87dc8a08c9fd946a83256dc79ea2af8",
+  "assessment": {
+   "bundle_sha256": "e17cb7b19a814d1078682ce9f6db91c71cabdc0295016e8530fdefb022a7b7c2",
+   "configuration": "config:fixture:ff7a0794d32d59a8",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "976654d32b55eebdccbf3ba2c9ff5a61daebf5e33021183a5b542a9278c51573"
+  },
+  "commit_sha": "1c929810a535f32d592d668fc0def6d038171cad",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/gotool",
+   "host": "github.com",
+   "name": "gotool",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 2,
+  "total": 2,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "manifest_basename",
+   "category": "go_modules",
+   "distinct_total": 24,
+   "files": [
+    {
+     "dependency_context_id": "ctx:df8fd3ab19fd0652200314b9",
+     "distinct_total": 4,
+     "file_id": "ctx:df8fd3ab19fd0652200314b9",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool0/go.mod",
+     "raw_locations": [
+      "/cmd/tool0/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool0/go.mod",
+      "text": "cmd/tool0/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:45a80b0b33d946471419dfbc",
+     "distinct_total": 4,
+     "file_id": "ctx:45a80b0b33d946471419dfbc",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool1/go.mod",
+     "raw_locations": [
+      "/cmd/tool1/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool1/go.mod",
+      "text": "cmd/tool1/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:25929163c20ac33939c34f25",
+     "distinct_total": 4,
+     "file_id": "ctx:25929163c20ac33939c34f25",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool2/go.mod",
+     "raw_locations": [
+      "/cmd/tool2/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool2/go.mod",
+      "text": "cmd/tool2/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:69415f4d36d8aa2e67991766",
+     "distinct_total": 4,
+     "file_id": "ctx:69415f4d36d8aa2e67991766",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool3/go.mod",
+     "raw_locations": [
+      "/cmd/tool3/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool3/go.mod",
+      "text": "cmd/tool3/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:10a75d953f1d6cdbeb7c799e",
+     "distinct_total": 4,
+     "file_id": "ctx:10a75d953f1d6cdbeb7c799e",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool4/go.mod",
+     "raw_locations": [
+      "/cmd/tool4/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool4/go.mod",
+      "text": "cmd/tool4/go.mod"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:4c74d8bc0ab89c4dee16921e",
+     "distinct_total": 4,
+     "file_id": "ctx:4c74d8bc0ab89c4dee16921e",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "cmd/tool5/go.mod",
+     "raw_locations": [
+      "/cmd/tool5/go.mod"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/cmd/tool5/go.mod",
+      "text": "cmd/tool5/go.mod"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 6,
+    "total": 6,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:2e8878d613568c2da591ac46",
+   "kind": "located",
+   "label": "Go modules",
+   "membership_total": 24,
+   "token": "amber"
+  },
+  {
+   "basis": "fallback",
+   "category": "other_locations",
+   "distinct_total": 1,
+   "files": [
+    {
+     "dependency_context_id": null,
+     "distinct_total": 1,
+     "file_id": "ctx:fb8f86ea8abeebd249fdfbeb",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "Makefile",
+     "raw_locations": [
+      "/Makefile"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/example-org/gotool/blob/1c929810a535f32d592d668fc0def6d038171cad/Makefile",
+      "text": "Makefile"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:d72b34ac21760db8106b4aa1",
+   "kind": "located",
+   "label": "Other locations",
+   "membership_total": 1,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/example-org/gotool",
+  "commit_sha": "1c929810a535f32d592d668fc0def6d038171cad",
+  "distinct_total": 25,
+  "located_distinct_total": 25,
+  "membership_total": 25,
+  "name": "example-org/gotool",
+  "unlocated_total": 0
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

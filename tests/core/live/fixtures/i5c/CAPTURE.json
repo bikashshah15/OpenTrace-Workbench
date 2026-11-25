@@ -1,0 +1,49 @@
+{
+  "analysis_digest": "sha256:f9db2d899ece378d6c06ba638f669a017438dd52038c56e69905edd4a4fcbd70",
+  "analysis_generation": 1,
+  "analysis_ok": true,
+  "captured_at": "2026-11-06",
+  "captured_by": "tools/live/run_demo.py machinery via the loopback service (main-guarded driver; see the I5C implementation log)",
+  "commit_sha": "074b8108f340590268f2900741403755e923a11c",
+  "files": {
+    "auth-helper.ts": "9fae566d7fdf1161b02e1bec8ff0f2b19a1dd4ff9eb4e50c236f7e0e35adc450",
+    "cdxgen-cbom.cdx.json": "51200f75b86e3fd4de4e87464881aa6a649ba7a437fafcaf09c4cea8941f62bc",
+    "syft-sbom.cdx.json": "4d25152482819c17a041c75acd77a3f897705951e6d7d861debd20c62ac1b239"
+  },
+  "purpose": "Recorded real scanner outputs for the I5C tests. Live OSV was off. Not a live-test input: tests read these files, they do not call GitHub or a scanner.",
+  "repository": "https://github.com/modelcontextprotocol/inspector",
+  "scanners": [
+    {
+      "command": "syft 1.51.1 scan dir:. -o cyclonedx-json -q",
+      "exit_code": 0,
+      "outcome": "acquired",
+      "pinned_version": "1.51.1",
+      "record_count": 463,
+      "record_count_unit": "components",
+      "sha256": "4d25152482819c17a041c75acd77a3f897705951e6d7d861debd20c62ac1b239",
+      "spec_version": "1.7",
+      "tool": "Syft",
+      "version": "1.51.1"
+    },
+    {
+      "command": "cdxgen 12.9.0 -r . --no-install-deps --include-crypto --evidence --spec-version 1.6",
+      "exit_code": 0,
+      "outcome": "acquired",
+      "pinned_version": "12.9.0",
+      "record_count": 1,
+      "record_count_unit": "crypto_assets",
+      "sha256": "51200f75b86e3fd4de4e87464881aa6a649ba7a437fafcaf09c4cea8941f62bc",
+      "spec_version": "1.6",
+      "tool": "cdxgen",
+      "version": "12.9.0"
+    }
+  ],
+  "schema": "opentrace.recorded_capture/1",
+  "source_file": {
+    "git_blob": "cd67546d4edac269ca721094a9b34d1879f1112f",
+    "note": "fetched by full commit SHA into a scratch bare repository; blob id from git ls-tree",
+    "path": "clients/mcpdo/src/connection/auth-helper.ts",
+    "sha256": "9fae566d7fdf1161b02e1bec8ff0f2b19a1dd4ff9eb4e50c236f7e0e35adc450"
+  },
+  "tree_sha": "ec5625bc7925884da14b13a55b8b388f05d86bb5"
+}

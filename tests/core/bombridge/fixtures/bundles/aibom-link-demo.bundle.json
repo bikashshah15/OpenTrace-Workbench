@@ -1,0 +1,538 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "r1-declared-in-aibom",
+      "declared_in": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "supported: unique locator match, no shared-source independence"
+      },
+      "family": "model_identity",
+      "object": {
+        "inventory_id": "inv:synthetic-aibom",
+        "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      "origin": "illustrative",
+      "predicate": "declared_in_aibom",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "subject": "scope:aibom-demo::inv:synthetic-source-reading::r1"
+    },
+    {
+      "assertion_id": "r2-declared-in-aibom",
+      "declared_in": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "same basename, different location: candidate only"
+      },
+      "family": "model_identity",
+      "object": {
+        "inventory_id": "inv:synthetic-aibom",
+        "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      "origin": "illustrative",
+      "predicate": "declared_in_aibom",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "subject": "scope:aibom-demo::inv:synthetic-source-reading::r2"
+    },
+    {
+      "assertion_id": "r3-declared-in-aibom",
+      "declared_in": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "two AI-BOM models list the locator: ambiguous"
+      },
+      "family": "model_identity",
+      "object": {
+        "inventory_id": "inv:synthetic-aibom",
+        "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      "origin": "illustrative",
+      "predicate": "declared_in_aibom",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "subject": "scope:aibom-demo::inv:synthetic-source-reading::r3"
+    },
+    {
+      "assertion_id": "r4-declared-in-aibom",
+      "declared_in": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "no AI-BOM record: unverifiable, not contradicted"
+      },
+      "family": "model_identity",
+      "object": {
+        "inventory_id": "inv:synthetic-aibom",
+        "inventory_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      "origin": "illustrative",
+      "predicate": "declared_in_aibom",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "subject": "scope:aibom-demo::inv:synthetic-source-reading::r4"
+    }
+  ],
+  "capture": {
+    "build": null,
+    "configuration": null,
+    "execution": null,
+    "inventories": [
+      {
+        "coverage_contract": {
+          "established": false,
+          "note": "no coverage contract inspected"
+        },
+        "format": "CycloneDX 1.6",
+        "generator": "synthetic-aibom-generator 0.0",
+        "intended_coverage": [],
+        "inventory_id": "inv:synthetic-aibom",
+        "kind": "aibom",
+        "origin": "illustrative",
+        "source_file": "fixtures/illustrative/synthetic-mlbom.cdx.json",
+        "source_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c"
+      },
+      {
+        "generator": "synthetic",
+        "intended_coverage": [],
+        "inventory_id": "inv:synthetic-source-reading",
+        "kind": "curation",
+        "origin": "illustrative"
+      }
+    ],
+    "model": null,
+    "origin": "illustrative",
+    "repository": {
+      "revision": "0123456789abcdef0123456789abcdef01234567",
+      "url": "https://example.invalid/synthetic-subject"
+    },
+    "scope_id": "scope:aibom-demo",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "configuration",
+      "model",
+      "execution"
+    ]
+  },
+  "entities": [
+    {
+      "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-unique",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "unique-detector",
+      "origin": "illustrative",
+      "source": {
+        "bom_ref": "model-unique",
+        "inventory_id": "inv:synthetic-aibom",
+        "raw_pointer": "/components/0"
+      },
+      "version": "1"
+    },
+    {
+      "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-samename",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "samename",
+      "origin": "illustrative",
+      "source": {
+        "bom_ref": "model-samename",
+        "inventory_id": "inv:synthetic-aibom",
+        "raw_pointer": "/components/1"
+      },
+      "version": "1"
+    },
+    {
+      "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "dup-a",
+      "origin": "illustrative",
+      "source": {
+        "bom_ref": "model-dup-a",
+        "inventory_id": "inv:synthetic-aibom",
+        "raw_pointer": "/components/2"
+      },
+      "version": "1"
+    },
+    {
+      "entity_id": "scope:aibom-demo::inv:synthetic-aibom::model-dup-b",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "dup-b",
+      "origin": "illustrative",
+      "source": {
+        "bom_ref": "model-dup-b",
+        "inventory_id": "inv:synthetic-aibom",
+        "raw_pointer": "/components/3"
+      },
+      "version": "1"
+    },
+    {
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://models.example.invalid/unique.tflite"
+        ]
+      },
+      "entity_id": "scope:aibom-demo::inv:synthetic-source-reading::r1",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "r1",
+      "origin": "illustrative",
+      "source": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "r1"
+      },
+      "version": null
+    },
+    {
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://origin.example.invalid/models/samename.tflite"
+        ]
+      },
+      "entity_id": "scope:aibom-demo::inv:synthetic-source-reading::r2",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "r2",
+      "origin": "illustrative",
+      "source": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "r2"
+      },
+      "version": null
+    },
+    {
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://models.example.invalid/dup.tflite"
+        ]
+      },
+      "entity_id": "scope:aibom-demo::inv:synthetic-source-reading::r3",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "r3",
+      "origin": "illustrative",
+      "source": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "r3"
+      },
+      "version": null
+    },
+    {
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://models.example.invalid/absent.tflite"
+        ]
+      },
+      "entity_id": "scope:aibom-demo::inv:synthetic-source-reading::r4",
+      "identity_matches": [],
+      "kind": "model",
+      "name": "r4",
+      "origin": "illustrative",
+      "source": {
+        "inventory_id": "inv:synthetic-source-reading",
+        "source_ref": "r4"
+      },
+      "version": null
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e-aibom",
+      "limitations": [
+        "what the document says, not whether it is right",
+        "the document's coverage is only as stated in it",
+        "SYNTHETIC illustrative manifest; describes no real run"
+      ],
+      "method": "cyclonedx-1.6-intake",
+      "observation": {
+        "binding": {
+          "acquisition_limitations": [
+            "SYNTHETIC illustrative manifest; describes no real run"
+          ],
+          "conflicts": [],
+          "corroborated": null,
+          "declared": "0123456789abcdef0123456789abcdef01234567",
+          "level": "recorded",
+          "notes": [
+            "revision recorded by an acquisition manifest; the document's declaration agrees; not independently corroborated"
+          ],
+          "recorded": "0123456789abcdef0123456789abcdef01234567",
+          "revision": "0123456789abcdef0123456789abcdef01234567"
+        },
+        "counts": {
+          "by_type": {
+            "library": 1,
+            "machine-learning-model": 4
+          },
+          "components_total": 5,
+          "models": 4
+        },
+        "coverage": {
+          "compositions": [],
+          "stated": false
+        },
+        "document": {
+          "document_version": 1,
+          "format": "CycloneDX",
+          "raw_sha256": "8c9acee73ca08ce045c272433f8056168f874375d93046796229be066b1f698c",
+          "serial_number": "urn:uuid:00000000-0000-4000-8000-000000000001",
+          "spec_version": "1.6",
+          "timestamp": "2026-01-01T00:00:00Z"
+        },
+        "kind": "aibom_document",
+        "limitations": [
+          "the document states no coverage (no compositions)",
+          "components[1]: model declares no hash (representable, but its digest cannot be verified)",
+          "components[2]: model declares no hash (representable, but its digest cannot be verified)",
+          "components[3]: model declares no hash (representable, but its digest cannot be verified)"
+        ],
+        "models": [
+          {
+            "bom_ref": "model-unique",
+            "external_references": [
+              {
+                "type": "distribution",
+                "url": "https://models.example.invalid/unique.tflite"
+              }
+            ],
+            "generator_properties": {},
+            "group": null,
+            "hashes": [
+              {
+                "alg": "SHA-256",
+                "content": "84c8f4dab26c5ab4986d98d187c64dfe9b993d9e9f770f039c34e0cae16d3bc0",
+                "normalized_algorithm": "sha256"
+              }
+            ],
+            "locations": [
+              {
+                "file": "docker/Dockerfile",
+                "line": 10
+              }
+            ],
+            "name": "unique-detector",
+            "purl": null,
+            "raw_pointer": "/components/0",
+            "version": "1"
+          },
+          {
+            "bom_ref": "model-samename",
+            "external_references": [
+              {
+                "type": "distribution",
+                "url": "https://mirror.example.invalid/other/samename.tflite"
+              }
+            ],
+            "generator_properties": {},
+            "group": null,
+            "hashes": [],
+            "locations": [],
+            "name": "samename",
+            "purl": null,
+            "raw_pointer": "/components/1",
+            "version": "1"
+          },
+          {
+            "bom_ref": "model-dup-a",
+            "external_references": [
+              {
+                "type": "distribution",
+                "url": "https://models.example.invalid/dup.tflite"
+              }
+            ],
+            "generator_properties": {},
+            "group": null,
+            "hashes": [],
+            "locations": [],
+            "name": "dup-a",
+            "purl": null,
+            "raw_pointer": "/components/2",
+            "version": "1"
+          },
+          {
+            "bom_ref": "model-dup-b",
+            "external_references": [
+              {
+                "type": "distribution",
+                "url": "https://models.example.invalid/dup.tflite"
+              }
+            ],
+            "generator_properties": {},
+            "group": null,
+            "hashes": [],
+            "locations": [],
+            "name": "dup-b",
+            "purl": null,
+            "raw_pointer": "/components/3",
+            "version": "1"
+          }
+        ],
+        "producer": [
+          {
+            "name": "synthetic-aibom-generator",
+            "vendor": "illustrative",
+            "version": "0.0"
+          }
+        ],
+        "status": "ok",
+        "subject": {
+          "bom_ref": "subject",
+          "declared_revision": {
+            "basis": "metadata.component.version is a 40-hex string",
+            "value": "0123456789abcdef0123456789abcdef01234567"
+          },
+          "name": "synthetic-subject",
+          "type": "application",
+          "version": "0123456789abcdef0123456789abcdef01234567"
+        }
+      },
+      "observes": [
+        "scope:aibom-demo::inv:synthetic-aibom::model-unique",
+        "scope:aibom-demo::inv:synthetic-aibom::model-samename",
+        "scope:aibom-demo::inv:synthetic-aibom::model-dup-a",
+        "scope:aibom-demo::inv:synthetic-aibom::model-dup-b"
+      ],
+      "origin": "illustrative",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "source_locator": "fixtures/illustrative/synthetic-mlbom.cdx.json",
+      "tool": "src/bombridge/adapters.py",
+      "underlying_source": "tool-output:aibom-8c9acee73ca0"
+    },
+    {
+      "evidence_id": "e-src-r1",
+      "limitations": [
+        "synthetic text"
+      ],
+      "method": "synthetic",
+      "observation": {
+        "artifact": {
+          "locator": "docker/Dockerfile"
+        },
+        "excerpt": "RUN wget -O m.tflite https://models.example.invalid/unique.tflite",
+        "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+        "kind": "source_excerpt",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "observes": [
+        "scope:aibom-demo::inv:synthetic-source-reading::r1"
+      ],
+      "origin": "illustrative",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "source_locator": "docker/Dockerfile",
+      "tool": "illustrative",
+      "underlying_source": "source-file:docker/Dockerfile@synthetic"
+    },
+    {
+      "evidence_id": "e-src-r2",
+      "limitations": [
+        "synthetic text"
+      ],
+      "method": "synthetic",
+      "observation": {
+        "artifact": {
+          "locator": "docker/Dockerfile"
+        },
+        "excerpt": "RUN wget -O m.tflite https://origin.example.invalid/models/samename.tflite",
+        "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+        "kind": "source_excerpt",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "observes": [
+        "scope:aibom-demo::inv:synthetic-source-reading::r2"
+      ],
+      "origin": "illustrative",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "source_locator": "docker/Dockerfile",
+      "tool": "illustrative",
+      "underlying_source": "source-file:docker/Dockerfile@synthetic"
+    },
+    {
+      "evidence_id": "e-src-r3",
+      "limitations": [
+        "synthetic text"
+      ],
+      "method": "synthetic",
+      "observation": {
+        "artifact": {
+          "locator": "docker/Dockerfile"
+        },
+        "excerpt": "RUN wget -O m.tflite https://models.example.invalid/dup.tflite",
+        "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+        "kind": "source_excerpt",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "observes": [
+        "scope:aibom-demo::inv:synthetic-source-reading::r3"
+      ],
+      "origin": "illustrative",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "source_locator": "docker/Dockerfile",
+      "tool": "illustrative",
+      "underlying_source": "source-file:docker/Dockerfile@synthetic"
+    },
+    {
+      "evidence_id": "e-src-r4",
+      "limitations": [
+        "synthetic text"
+      ],
+      "method": "synthetic",
+      "observation": {
+        "artifact": {
+          "locator": "docker/Dockerfile"
+        },
+        "excerpt": "RUN wget -O m.tflite https://models.example.invalid/absent.tflite",
+        "file_sha256": "f3377404afa40e76bc68ebde31499e4093d6935104f27ca39e60596f49d5c19a",
+        "kind": "source_excerpt",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "observes": [
+        "scope:aibom-demo::inv:synthetic-source-reading::r4"
+      ],
+      "origin": "illustrative",
+      "scope": {
+        "revision": "0123456789abcdef0123456789abcdef01234567"
+      },
+      "scope_id": "scope:aibom-demo",
+      "source_locator": "docker/Dockerfile",
+      "tool": "illustrative",
+      "underlying_source": "source-file:docker/Dockerfile@synthetic"
+    }
+  ],
+  "notice": "ILLUSTRATIVE ONLY. Synthetic CycloneDX 1.6 ML-BOM and synthetic source text. Not a real AI-BOM, not about Frigate or any real repository; excluded from real-case summaries.",
+  "origin": "illustrative",
+  "schema": "bombridge.bundle/2"
+}

@@ -1,0 +1,103 @@
+{
+ "builder": {
+  "path": "tools/uip_fixtures/build.py",
+  "seed": "uip-01b/1",
+  "sha256": "b4ccc8bc5959958dcd8639947dcfc8f6cb00625fcd24fbd3517ef2cc3c122588"
+ },
+ "contains_frigate_names": true,
+ "files": [
+  {
+   "bytes": 33395,
+   "path": "ai.json",
+   "schema": "legacy",
+   "sha256": "106a1b2cb4a02c1d8807bce2c339edbc28f7b2d17cec7304bca1596bf56639ec"
+  },
+  {
+   "bytes": 115847,
+   "path": "bom.json",
+   "schema": "legacy",
+   "sha256": "58282dc0af5977f5fd9f0fda5c0b86af6e0a7fa6fab36d095e6968e13ba7b544"
+  },
+  {
+   "bytes": 3422,
+   "path": "contexts.json",
+   "schema": "legacy",
+   "sha256": "4a73814e2a6e5c3877ed4821cf209c6e2f9a4a0bc2b000bd299c5b3f0f75afa5"
+  },
+  {
+   "bytes": 39898,
+   "path": "crypto.json",
+   "schema": "legacy",
+   "sha256": "77c53020c1a6aae61a3086cd4b59bc2a58b9cd6caeee10b2a1bbb932edc465f7"
+  },
+  {
+   "bytes": 408399,
+   "path": "dependencies-network.json",
+   "schema": "legacy",
+   "sha256": "6b0446966603aaa83aed80b65f9ee47030b41dfaf1b40d09026a6d8204e70a6d"
+  },
+  {
+   "bytes": 5175,
+   "path": "dependencies-per-side-1.json",
+   "schema": "legacy",
+   "sha256": "95b57598be463c66444d54eb84107eb6ee6506c74ae4011001a9fd2fa3b2c58c"
+  },
+  {
+   "bytes": 7981,
+   "path": "dependencies-per-side-6.json",
+   "schema": "legacy",
+   "sha256": "92c4340b832962a73655acce899d3a90db6a9fee228c22d3c8017e8811a61100"
+  },
+  {
+   "bytes": 5356,
+   "path": "gap-first.json",
+   "schema": "legacy",
+   "sha256": "36be27eef05020114e5a69e377ad189ccad12288d36e4a9f8fe2a8ee5060a44c"
+  },
+  {
+   "bytes": 21364,
+   "path": "gaps-offset-0.json",
+   "schema": "legacy",
+   "sha256": "de2c75ce18f81e96111a42d3a670d0cfdc555db072b6d296837c8a0b4cb4ee21"
+  }
+ ],
+ "name": "legacy-view-snapshots",
+ "normalized": [
+  "session_id (random per run) replaced by a fixed value"
+ ],
+ "notes": "Existing handler responses on the recorded demo, canonicalized; only the random session id is replaced by a fixed value.",
+ "provenance": "derived",
+ "schema": "opentrace.uip.fixture_manifest/1",
+ "sources": [
+  {
+   "path": "tests/core/bombridge/fixtures/bundles/frigate-v0.18.2-cpu-pilot.json",
+   "role": "recorded input",
+   "sha256": "2ff13bd1caa2aa856ac0670b9f7b5b935f5aa548ac8e34f6299a9526faaef86e"
+  },
+  {
+   "path": "src/core/opentrace_core/app/demo/frigate_advisories.json",
+   "role": "recorded input",
+   "sha256": "4494ea900f33c4c12983c974749779cc634df31ece0dddcb094cf474a8666e06"
+  },
+  {
+   "path": "tests/core/bombridge/fixtures/inputs/frigate/source-declarations.json",
+   "role": "recorded input",
+   "sha256": "aada73d87aebbba9f0f65a61d09549b921f5bf8b7c3fbe0e5b510168bc24185c"
+  },
+  {
+   "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/syft-source-dir.cdx.json",
+   "role": "recorded input",
+   "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+  },
+  {
+   "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/cdxgen-cbom.cdx.json",
+   "role": "recorded input",
+   "sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509"
+  },
+  {
+   "path": "tests/core/bombridge/fixtures/inputs/frigate/raw/cisco-aibom.cdx.json",
+   "role": "recorded input",
+   "sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6"
+  }
+ ]
+}

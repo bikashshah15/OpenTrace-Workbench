@@ -1,0 +1,2046 @@
+{
+  "bundle_sha256": "bae53d8251f8ab3832136d4d7fa0e6fbdc0fbd6f98a0d8433f95dc02ee85b286",
+  "capture": {
+    "build": null,
+    "configuration": "config:A",
+    "execution": null,
+    "inventories": [
+      {
+        "generator": "illustrative",
+        "intended_coverage": [
+          "source-dependencies"
+        ],
+        "inventory_id": "inv:toy-sbom",
+        "kind": "sbom",
+        "source_file": "toy.cdx.json"
+      },
+      {
+        "generator": "illustrative",
+        "intended_coverage": [
+          "models"
+        ],
+        "inventory_id": "inv:toy-aibom",
+        "kind": "aibom",
+        "source_file": "toy.aibom.json"
+      }
+    ],
+    "model": "model:toy-v1",
+    "origin": "illustrative",
+    "repository": {
+      "revision": "0000000-illustrative",
+      "url": "https://example.invalid/illustrative/toy-detector"
+    },
+    "scope_id": "scope:toy-1",
+    "unavailable": [],
+    "unknown": [
+      "build",
+      "execution"
+    ]
+  },
+  "findings": [
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a01-supported",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a01-supported",
+      "next_action": null,
+      "rationale": "Supported: 2 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+      "reason_codes": [],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {
+        "src:file-detector": [
+          "e01",
+          "e10"
+        ]
+      },
+      "state": "supported",
+      "underlying_sources": [
+        "src:file-detector"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e01",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        },
+        {
+          "evidence_id": "e10",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a02-contradicted",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a02-contradicted",
+      "next_action": null,
+      "rationale": "Contradicted: a compatible observation of the matched artifact has a different digest (same algorithm); 1 observation(s) used.",
+      "reason_codes": [],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "contradicted",
+      "underlying_sources": [
+        "src:file-classifier"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e02",
+          "reason": "same algorithm, different digest for the matched artifact",
+          "reason_code": "digest_different",
+          "relation": "contradicts",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a03-conflicting",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a03-conflicting",
+      "next_action": null,
+      "rationale": "Conflicting: compatible observations of the matched artifact both equal and differ from the declared digest.",
+      "reason_codes": [],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "conflicting_evidence",
+      "underlying_sources": [
+        "src:file-segmenter",
+        "src:release-manifest"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e03a",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        },
+        {
+          "evidence_id": "e03b",
+          "reason": "same algorithm, different digest for the matched artifact",
+          "reason_code": "digest_different",
+          "relation": "contradicts",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a04-no-revision",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [
+        {
+          "detail": "assertion lacks required scope: revision",
+          "evidence_id": "e04",
+          "reason_code": "assertion_scope_incomplete"
+        }
+      ],
+      "finding_id": "finding:a04-no-revision",
+      "next_action": null,
+      "rationale": "Unverifiable: assertion lacks required scope field(s) revision for a committed_file artifact; evidence cannot be bound to it.",
+      "reason_codes": [
+        "assertion_scope_incomplete"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a05-no-observation",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:a05-no-observation",
+      "next_action": null,
+      "rationale": "Unverifiable: no compatible observation of the matched artifact.",
+      "reason_codes": [
+        "no_usable_observation"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a06-other-config-excluded",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; assertion depends on the selecting configuration; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [
+        {
+          "detail": "configuration: assertion 'config:A' vs evidence 'config:B'",
+          "evidence_id": "e06b",
+          "reason_code": "scope_mismatch"
+        },
+        {
+          "detail": "evidence capture 'scope:other-capture' vs assertion capture 'scope:toy-1'",
+          "evidence_id": "e06c",
+          "reason_code": "capture_mismatch"
+        }
+      ],
+      "finding_id": "finding:a06-other-config-excluded",
+      "next_action": null,
+      "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting. 2 candidate observation(s) excluded; see excluded_evidence.",
+      "reason_codes": [],
+      "required_scope": [
+        "revision",
+        "configuration"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "src:file-embedder"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e06a",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a07-unknown-artifact",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:a07-unknown-artifact",
+      "next_action": null,
+      "rationale": "Unverifiable: the declared entity names no artifact locator, so no observation can be matched to it.",
+      "reason_codes": [
+        "artifact_identity_unknown"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a08-ambiguous-artifact",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [
+        {
+          "detail": "declared artifact locators: ['models/depth-a.tflite', 'models/depth-b.tflite']",
+          "evidence_id": "e08",
+          "reason_code": "artifact_identity_ambiguous"
+        }
+      ],
+      "finding_id": "finding:a08-ambiguous-artifact",
+      "next_action": null,
+      "rationale": "Unverifiable: the declared entity names several candidate artifacts ['models/depth-a.tflite', 'models/depth-b.tflite']; no single artifact is matched.",
+      "reason_codes": [
+        "artifact_identity_ambiguous"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "committed_file",
+      "assertion_id": "a09-algorithm-differs",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of the file at the stated repository path and revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a09-algorithm-differs",
+      "next_action": null,
+      "rationale": "Unverifiable: observations used were inconclusive (digest absent or algorithm differs).",
+      "reason_codes": [
+        "only_inconclusive_observations"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [
+        "src:file-hasher"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e09",
+          "reason": "declared sha256, observed sha512; digests are not comparable",
+          "reason_code": "algorithm_mismatch",
+          "relation": "inconclusive",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": null,
+        "reason": "no rule is implemented for crypto_attribution/uses_library; applicability not established",
+        "reason_code": "rule_not_implemented"
+      },
+      "artifact_class": null,
+      "assertion_id": "a10-rule-not-implemented",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [],
+      "finding_id": "finding:a10-rule-not-implemented",
+      "next_action": null,
+      "rationale": "Unverifiable: no rule is implemented for crypto_attribution/uses_library; applicability not established. The relationship is a declaration only.",
+      "reason_codes": [
+        "rule_not_implemented"
+      ],
+      "required_scope": [],
+      "rule_id": null,
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "build_output",
+      "assertion_id": "a11-build-output-supported",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a11-build-output-supported",
+      "next_action": null,
+      "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+      "reason_codes": [],
+      "required_scope": [
+        "build"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "src:out-model"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e11",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "build_output",
+      "assertion_id": "a12-build-output-revision-only",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [
+        {
+          "detail": "assertion lacks required scope: build",
+          "evidence_id": "e12",
+          "reason_code": "assertion_scope_incomplete"
+        }
+      ],
+      "finding_id": "finding:a12-build-output-revision-only",
+      "next_action": null,
+      "rationale": "Unverifiable: assertion lacks required scope field(s) build for a build_output artifact; evidence cannot be bound to it.",
+      "reason_codes": [
+        "assertion_scope_incomplete"
+      ],
+      "required_scope": [
+        "build"
+      ],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "external_acquisition",
+      "assertion_id": "a13-external-supported",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs illustrative evidence",
+      "evidence_origins": [
+        "illustrative"
+      ],
+      "excluded_evidence": [],
+      "finding_id": "finding:a13-external-supported",
+      "next_action": null,
+      "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+      "reason_codes": [],
+      "required_scope": [],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "supported",
+      "underlying_sources": [
+        "src:ext"
+      ],
+      "used_evidence": [
+        {
+          "evidence_id": "e13",
+          "reason": "same algorithm, equal digest",
+          "reason_code": "digest_equal",
+          "relation": "supports",
+          "role": "observation"
+        }
+      ]
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "external_acquisition",
+      "assertion_id": "a14-external-no-retrieval",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision; runtime loading is not established",
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [
+        {
+          "detail": "externally acquired artifact needs retrieval.source (= acquisition locator) and retrieval.method",
+          "evidence_id": "e14",
+          "reason_code": "retrieval_metadata_missing"
+        }
+      ],
+      "finding_id": "finding:a14-external-no-retrieval",
+      "next_action": null,
+      "rationale": "Unverifiable: no compatible observation of the matched artifact. 1 candidate observation(s) excluded; see excluded_evidence.",
+      "reason_codes": [
+        "no_usable_observation"
+      ],
+      "required_scope": [],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    },
+    {
+      "applicability": {
+        "applicable": true,
+        "reason": "assertion declares a digest for an artifact",
+        "reason_code": "digest_declared"
+      },
+      "artifact_class": "container_layer",
+      "assertion_id": "a15-class-unsupported",
+      "assertion_origin": "illustrative",
+      "bounded_meaning": null,
+      "category": null,
+      "evaluation": "illustrative assertion vs no used evidence",
+      "evidence_origins": [],
+      "excluded_evidence": [
+        {
+          "detail": "artifact class 'container_layer' is not supported by this rule",
+          "evidence_id": "e15",
+          "reason_code": "artifact_class_unsupported"
+        }
+      ],
+      "finding_id": "finding:a15-class-unsupported",
+      "next_action": null,
+      "rationale": "Unverifiable: artifact class 'container_layer' is unsupported; supported classes: ['build_output', 'committed_file', 'external_acquisition'].",
+      "reason_codes": [
+        "artifact_class_unsupported"
+      ],
+      "required_scope": [],
+      "rule_id": "model_identity.digest/2",
+      "scope_id": "scope:toy-1",
+      "shared_underlying_sources": {},
+      "state": "unverifiable",
+      "underlying_sources": [],
+      "used_evidence": []
+    }
+  ],
+  "graph": {
+    "edges": [
+      {
+        "from": "assertion:a01-supported",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a02-contradicted",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::classifier",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a03-conflicting",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::segmenter",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a04-no-revision",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::tracker",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a05-no-observation",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::ocr",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a06-other-config-excluded",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::embedder",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a07-unknown-artifact",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::pose",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a08-ambiguous-artifact",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::depth",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a09-algorithm-differs",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::hasher",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a10-rule-not-implemented",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::detector",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a10-rule-not-implemented",
+        "key": "object",
+        "to": "entity:scope:toy-1::inv:toy-sbom::libssl",
+        "type": "object"
+      },
+      {
+        "from": "assertion:a11-build-output-supported",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::bundle-model",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a12-build-output-revision-only",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::bundle-model-2",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a13-external-supported",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::ext-model",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a14-external-no-retrieval",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::ext-model-2",
+        "type": "subject"
+      },
+      {
+        "from": "assertion:a15-class-unsupported",
+        "key": "subject",
+        "to": "entity:scope:toy-1::inv:toy-aibom::layer-model",
+        "type": "subject"
+      },
+      {
+        "basis": "same family name only",
+        "from": "entity:scope:toy-1::inv:toy-aibom::pose",
+        "key": "identity:scope:toy-1::inv:toy-aibom::detector",
+        "status": "uncertain",
+        "to": "entity:scope:toy-1::inv:toy-aibom::detector",
+        "type": "identity_match"
+      },
+      {
+        "from": "evidence:e01",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a01-supported",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e02",
+        "key": "assesses",
+        "reason": "same algorithm, different digest for the matched artifact",
+        "reason_code": "digest_different",
+        "relation": "contradicts",
+        "role": "observation",
+        "to": "assertion:a02-contradicted",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e03a",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a03-conflicting",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e03b",
+        "key": "assesses",
+        "reason": "same algorithm, different digest for the matched artifact",
+        "reason_code": "digest_different",
+        "relation": "contradicts",
+        "role": "observation",
+        "to": "assertion:a03-conflicting",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e04",
+        "key": "excluded",
+        "reason": "assertion lacks required scope: revision",
+        "reason_code": "assertion_scope_incomplete",
+        "to": "assertion:a04-no-revision",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e06a",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a06-other-config-excluded",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e06b",
+        "key": "excluded",
+        "reason": "configuration: assertion 'config:A' vs evidence 'config:B'",
+        "reason_code": "scope_mismatch",
+        "to": "assertion:a06-other-config-excluded",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e06c",
+        "key": "excluded",
+        "reason": "evidence capture 'scope:other-capture' vs assertion capture 'scope:toy-1'",
+        "reason_code": "capture_mismatch",
+        "to": "assertion:a06-other-config-excluded",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e08",
+        "key": "excluded",
+        "reason": "declared artifact locators: ['models/depth-a.tflite', 'models/depth-b.tflite']",
+        "reason_code": "artifact_identity_ambiguous",
+        "to": "assertion:a08-ambiguous-artifact",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e09",
+        "key": "assesses",
+        "reason": "declared sha256, observed sha512; digests are not comparable",
+        "reason_code": "algorithm_mismatch",
+        "relation": "inconclusive",
+        "role": "observation",
+        "to": "assertion:a09-algorithm-differs",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e10",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a01-supported",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e11",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a11-build-output-supported",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e12",
+        "key": "excluded",
+        "reason": "assertion lacks required scope: build",
+        "reason_code": "assertion_scope_incomplete",
+        "to": "assertion:a12-build-output-revision-only",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e13",
+        "key": "assesses",
+        "reason": "same algorithm, equal digest",
+        "reason_code": "digest_equal",
+        "relation": "supports",
+        "role": "observation",
+        "to": "assertion:a13-external-supported",
+        "type": "assesses",
+        "used": true
+      },
+      {
+        "from": "evidence:e14",
+        "key": "excluded",
+        "reason": "externally acquired artifact needs retrieval.source (= acquisition locator) and retrieval.method",
+        "reason_code": "retrieval_metadata_missing",
+        "to": "assertion:a14-external-no-retrieval",
+        "type": "excluded_from",
+        "used": false
+      },
+      {
+        "from": "evidence:e15",
+        "key": "excluded",
+        "reason": "artifact class 'container_layer' is not supported by this rule",
+        "reason_code": "artifact_class_unsupported",
+        "to": "assertion:a15-class-unsupported",
+        "type": "excluded_from",
+        "used": false
+      }
+    ],
+    "nodes": [
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "detector",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a01-supported",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "a7f16c420e81dcc0c20ad9ee3bfd3bac09f5439a7506bcfe6dc826241d4a0dff"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Supported: 2 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "classifier",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a02-contradicted",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "a6ad37252697e5b70807f71343bc0395d0d32976bf7efcbb893e55034387b8e9"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Contradicted: a compatible observation of the matched artifact has a different digest (same algorithm); 1 observation(s) used.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "contradicted",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "segmenter",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a03-conflicting",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "7e612a5a6b57801c4f814fc0adf2ff6d9b5c67bd01be5fb54507e6c45fd0db6d"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Conflicting: compatible observations of the matched artifact both equal and differ from the declared digest.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "conflicting_evidence",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "tracker",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a04-no-revision",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "c8d50c1aefe9d0fc5586f1c9f8941ea4ceee69640f6e722a37e7bff8828a43a1"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: assertion lacks required scope field(s) revision for a committed_file artifact; evidence cannot be bound to it.",
+        "reason_codes": [
+          "assertion_scope_incomplete"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": null
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "ocr",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a05-no-observation",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "af9d0af83349793a2d28307fb735f38e0905e54a69595d47e4e624be13d0bd88"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: no compatible observation of the matched artifact.",
+        "reason_codes": [
+          "no_usable_observation"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "embedder",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": true,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a06-other-config-excluded",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting. 2 candidate observation(s) excluded; see excluded_evidence.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "pose",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a07-unknown-artifact",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "6d0450b31773df78bc44136c9ca2c61fcf5ab73aa600614d81f4a3893862816b"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: the declared entity names no artifact locator, so no observation can be matched to it.",
+        "reason_codes": [
+          "artifact_identity_unknown"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "depth",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a08-ambiguous-artifact",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "2687b360fdb815b4ef3290a451283c611567612eb9942b72d55572db476f7020"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: the declared entity names several candidate artifacts ['models/depth-a.tflite', 'models/depth-b.tflite']; no single artifact is matched.",
+        "reason_codes": [
+          "artifact_identity_ambiguous"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "hasher",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a09-algorithm-differs",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "6530968a021fd1fa4610822f7f3ba405297b4955e68f792ccf3cc9d981be09a0"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: observations used were inconclusive (digest absent or algorithm differs).",
+        "reason_codes": [
+          "only_inconclusive_observations"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": null,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "detector",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "crypto_attribution",
+        "id": "assertion:a10-rule-not-implemented",
+        "next_action": null,
+        "object": "scope:toy-1::inv:toy-sbom::libssl",
+        "origin": "illustrative",
+        "predicate": "uses_library",
+        "rationale": "Unverifiable: no rule is implemented for crypto_attribution/uses_library; applicability not established. The relationship is a declaration only.",
+        "reason_codes": [
+          "rule_not_implemented"
+        ],
+        "rule_id": null,
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "bundle-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a11-build-output-supported",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "b6cf10fca60bd238a6980405d4342bdb3ff7aa0083a30f4b793fd3306d9c096a"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "build": "build:toy-1"
+        },
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "bundle-model-2",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a12-build-output-revision-only",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "a65b59b4ffb035d958666575c9f5686bf63a13d712f4bb7fd661a56746ab43c0"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: assertion lacks required scope field(s) build for a build_output artifact; evidence cannot be bound to it.",
+        "reason_codes": [
+          "assertion_scope_incomplete"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "ext-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs illustrative evidence",
+        "family": "model_identity",
+        "id": "assertion:a13-external-supported",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "5dd97a2340c552a22b1114eb2da3b763140102f38c592ba19fa63da5c9838123"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Supported: 1 compatible observation(s) of the matched artifact; digest equal and none contradicting.",
+        "reason_codes": [],
+        "rule_id": "model_identity.digest/2",
+        "scope": {},
+        "state": "supported",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "ext-model-2",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a14-external-no-retrieval",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "4d34bdba3762b3db21f5ed4c59af3206f7e899038c19858621b9058bfbdc7561"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: no compatible observation of the matched artifact. 1 candidate observation(s) excluded; see excluded_evidence.",
+        "reason_codes": [
+          "no_usable_observation"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {},
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "applicable": true,
+        "category": null,
+        "declared_in": {
+          "bom_ref": "layer-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "depends_on_configuration": false,
+        "evaluation": "illustrative assertion vs no used evidence",
+        "family": "model_identity",
+        "id": "assertion:a15-class-unsupported",
+        "next_action": null,
+        "object": {
+          "algorithm": "sha256",
+          "value": "2c10ab5c76d9698f08a80918ea465d79dd6960b53925aa2d33e84b1c36b9434d"
+        },
+        "origin": "illustrative",
+        "predicate": "has_digest",
+        "rationale": "Unverifiable: artifact class 'container_layer' is unsupported; supported classes: ['build_output', 'committed_file', 'external_acquisition'].",
+        "reason_codes": [
+          "artifact_class_unsupported"
+        ],
+        "rule_id": "model_identity.digest/2",
+        "scope": {
+          "revision": "0000000-illustrative"
+        },
+        "state": "unverifiable",
+        "type": "assertion"
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::bundle-model",
+        "kind": "model",
+        "name": "toy-bundled",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "bundle-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::bundle-model-2",
+        "kind": "model",
+        "name": "toy-bundled-2",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "bundle-model-2",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::classifier",
+        "kind": "model",
+        "name": "toy-classifier",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "classifier",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::depth",
+        "kind": "model",
+        "name": "toy-depth",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "depth",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::detector",
+        "kind": "model",
+        "name": "toy-detector",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "detector",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::embedder",
+        "kind": "model",
+        "name": "toy-embedder",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "embedder",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::ext-model",
+        "kind": "model",
+        "name": "toy-external",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "ext-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::ext-model-2",
+        "kind": "model",
+        "name": "toy-external-2",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "ext-model-2",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::hasher",
+        "kind": "model",
+        "name": "toy-hasher",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "hasher",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::layer-model",
+        "kind": "model",
+        "name": "toy-layer",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "layer-model",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::ocr",
+        "kind": "model",
+        "name": "toy-ocr",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "ocr",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::pose",
+        "kind": "model",
+        "name": "toy-pose",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "pose",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::segmenter",
+        "kind": "model",
+        "name": "toy-segmenter",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "segmenter",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-aibom::tracker",
+        "kind": "model",
+        "name": "toy-tracker",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "tracker",
+          "inventory_id": "inv:toy-aibom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "entity:scope:toy-1::inv:toy-sbom::libssl",
+        "kind": "library",
+        "name": "libssl",
+        "origin": "illustrative",
+        "source": {
+          "bom_ref": "libssl",
+          "inventory_id": "inv:toy-sbom"
+        },
+        "type": "entity",
+        "version": null
+      },
+      {
+        "id": "evidence:e01",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/detector.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "A7F16C420E81DCC0C20AD9EE3BFD3BAC09F5439A7506BCFE6DC826241D4A0DFF"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/detector.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-detector"
+      },
+      {
+        "id": "evidence:e02",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/classifier.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "3f32a623a2190d2bda7f9216310087653aa9ffd9641bca6d98027086b39d3803"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/classifier.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-classifier"
+      },
+      {
+        "id": "evidence:e03a",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/segmenter.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "7e612a5a6b57801c4f814fc0adf2ff6d9b5c67bd01be5fb54507e6c45fd0db6d"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/segmenter.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-segmenter"
+      },
+      {
+        "id": "evidence:e03b",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "release-manifest-read",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/segmenter.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "8628d76a0227729384286764a109c9fd810723d6e9bf438e6c6252033320c70c"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/segmenter.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:release-manifest"
+      },
+      {
+        "id": "evidence:e04",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/tracker.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "c8d50c1aefe9d0fc5586f1c9f8941ea4ceee69640f6e722a37e7bff8828a43a1"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/tracker.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-tracker"
+      },
+      {
+        "id": "evidence:e06a",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/embedder.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/embedder.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-embedder"
+      },
+      {
+        "id": "evidence:e06b",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/embedder.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "a5134126cb750d3b6328da44aa9d25871ef2dc8a6e6af7317bd23c44df9354f5"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:B",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/embedder.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-embedder-b"
+      },
+      {
+        "id": "evidence:e06c",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/embedder.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:other-capture",
+        "source_locator": "file:models/embedder.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:other-capture"
+      },
+      {
+        "id": "evidence:e07",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/pose.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "6d0450b31773df78bc44136c9ca2c61fcf5ab73aa600614d81f4a3893862816b"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/pose.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-pose"
+      },
+      {
+        "id": "evidence:e08",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/depth-a.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "2687b360fdb815b4ef3290a451283c611567612eb9942b72d55572db476f7020"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/depth-a.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-depth"
+      },
+      {
+        "id": "evidence:e09",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha512",
+          "artifact": {
+            "locator": "models/hasher.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "bd2bc2e0735854093afa2f0fda7ac703ebbe135c6f896f29d1d6207f43d9dd66134601e58b84d5f4269ed455a4f208f1f1df4e17567ce72bef90bdc2b64c9cd4"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "model": "model:toy-v1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/hasher.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-hasher"
+      },
+      {
+        "id": "evidence:e10",
+        "limitations": [
+          "static digest of one file at the stated revision; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "models/detector.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "a7f16c420e81dcc0c20ad9ee3bfd3bac09f5439a7506bcfe6dc826241d4a0dff"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "configuration": "config:A",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:models/detector.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:file-detector"
+      },
+      {
+        "id": "evidence:e11",
+        "limitations": [
+          "static digest of one file; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "out/model.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "b6cf10fca60bd238a6980405d4342bdb3ff7aa0083a30f4b793fd3306d9c096a"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "build": "build:toy-1",
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:out/model.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:out-model"
+      },
+      {
+        "id": "evidence:e12",
+        "limitations": [
+          "static digest of one file; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "out/model2.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "a65b59b4ffb035d958666575c9f5686bf63a13d712f4bb7fd661a56746ab43c0"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:out/model2.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:out-model2"
+      },
+      {
+        "id": "evidence:e13",
+        "limitations": [
+          "static digest of one file; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "https://example.invalid/models/ext.tflite"
+          },
+          "kind": "artifact_digest",
+          "retrieval": {
+            "method": "http-get",
+            "retrieved_at": "2026-01-01T00:00:00Z",
+            "source": "https://example.invalid/models/ext.tflite"
+          },
+          "value": "5dd97a2340c552a22b1114eb2da3b763140102f38c592ba19fa63da5c9838123"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "unrelated-revision"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:https://example.invalid/models/ext.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:ext"
+      },
+      {
+        "id": "evidence:e14",
+        "limitations": [
+          "static digest of one file; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "https://example.invalid/models/ext2.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "4d34bdba3762b3db21f5ed4c59af3206f7e899038c19858621b9058bfbdc7561"
+        },
+        "origin": "illustrative",
+        "scope": {},
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:https://example.invalid/models/ext2.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:ext2"
+      },
+      {
+        "id": "evidence:e15",
+        "limitations": [
+          "static digest of one file; says nothing about what a run loaded"
+        ],
+        "method": "file-hash",
+        "observation": {
+          "algorithm": "sha256",
+          "artifact": {
+            "locator": "layers/0/model.tflite"
+          },
+          "kind": "artifact_digest",
+          "value": "2c10ab5c76d9698f08a80918ea465d79dd6960b53925aa2d33e84b1c36b9434d"
+        },
+        "origin": "illustrative",
+        "scope": {
+          "revision": "0000000-illustrative"
+        },
+        "scope_id": "scope:toy-1",
+        "source_locator": "file:layers/0/model.tflite",
+        "tool": "illustrative",
+        "type": "evidence",
+        "underlying_source": "src:layer"
+      }
+    ]
+  },
+  "input_checks": [],
+  "notice": "ILLUSTRATIVE ONLY. Fictional subject. Digest values are synthetic: the hash of the string 'illustrative-synthetic:<seed>', not of any file. Not evidence about any real repository; must not contribute to real-evidence summaries.",
+  "rules": [
+    {
+      "artifact_classes": {
+        "build_output": {
+          "meaning": "digest of a file inside the identified build's output; source revision alone does not identify generated bytes",
+          "required_scope": [
+            "build"
+          ]
+        },
+        "committed_file": {
+          "meaning": "digest of the file at the stated repository path and revision",
+          "required_scope": [
+            "revision"
+          ]
+        },
+        "external_acquisition": {
+          "meaning": "digest of bytes retrieved from the stated acquisition locator; not bound to any source revision",
+          "required_scope": []
+        }
+      },
+      "rule_id": "model_identity.digest/2"
+    },
+    {
+      "match_granularity": {
+        "identity": "PEP 503 normalized package name within the pypi ecosystem",
+        "not_established": [
+          "version",
+          "platform or marker applicability",
+          "build",
+          "artifact equality",
+          "inventory completeness",
+          "that other components of the inventory describe this revision",
+          "application use",
+          "installation in a deployed image",
+          "runtime loading"
+        ]
+      },
+      "meaning": "Whether this parsed inventory contains a component with the declared package name, where the inventory's recorded digest of the requirements file matches that file at the stated revision. The digest binds that one file to the revision; it does not show that other components of the inventory describe the revision. Not a statement about completeness, use, installation or runtime.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "inventory_coverage.requirement_represented/1"
+    },
+    {
+      "meaning": "A CBOM document bound to the stated revision by an acquisition manifest records an operation with the same algorithm at a call site inside the file and line range that a source observation shows. Declaration-level agreement only: not execution, data flow, integrity verification, vulnerability, protection of any model, or independent verification.",
+      "not_established": [
+        "that the code runs",
+        "what data is hashed",
+        "integrity verification of any artifact",
+        "that the algorithm is a vulnerability here",
+        "protection of the model by any TLS or other crypto component",
+        "independent verification"
+      ],
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "crypto_attribution.operation_declared_in_cbom/2"
+    },
+    {
+      "meaning": "An AI-BOM document whose recorded acquisition binding (not merely its declared revision) equals the stated revision lists a model with the same acquisition locator that the source reference states. Declaration-level agreement only: not artifact identity, digest verification, independent verification, or evidence that the model is loaded.",
+      "required_scope": [
+        "revision"
+      ],
+      "rule_id": "model_identity.declared_in_aibom/1"
+    }
+  ],
+  "schema": "bombridge.result/2",
+  "summary": {
+    "illustrative": {
+      "illustrative assertion vs illustrative evidence": {
+        "applicability_unknown": 0,
+        "applicable_assessed": 7,
+        "assertions": 7,
+        "excluded_evidence": 2,
+        "not_applicable": 0,
+        "resolved": 6,
+        "states": {
+          "conflicting_evidence": 1,
+          "contradicted": 1,
+          "supported": 4,
+          "unverifiable": 1
+        },
+        "unresolved": 1
+      },
+      "illustrative assertion vs no used evidence": {
+        "applicability_unknown": 1,
+        "applicable_assessed": 7,
+        "assertions": 8,
+        "excluded_evidence": 5,
+        "not_applicable": 0,
+        "resolved": 0,
+        "states": {
+          "conflicting_evidence": 0,
+          "contradicted": 0,
+          "supported": 0,
+          "unverifiable": 7
+        },
+        "unresolved": 8
+      }
+    },
+    "note": "Origin labels are provenance, not ground truth. No precision, recall or accuracy is computed.",
+    "real": {}
+  }
+}

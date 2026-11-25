@@ -1,0 +1,30 @@
+# BOMBridge import provenance
+
+OpenTrace imports the BOMBridge source from `https://github.com/bikashshah15/BOMBridge` at commit `7195f6eb1743e9fc31368c8234471a268ba51ce4`. The manifest beside this file pins SHA-256 hashes for all 18 source files, 17 fixtures, and four adapted donor test files. The source and fixtures are byte-identical to the pinned donor. Imported tests record both their resulting OpenTrace hash and the original donor hash; their only adaptations are absolute imports, fixture-root relocation, and the five exclusions below.
+
+## Excluded donor tests
+
+- `test_aibom.DemoAndPilot.test_deterministic_export_matches_golden` runs donor `tools/build_aibom_demo.py`; INT-01 parity covers the aibom-link-demo golden.
+- `test_cbom.Extractor.test_committed_raw_inventory_regenerates_identically` needs donor `tools/build_crypto_inventory.py` and a pinned Frigate checkout; it is a historical producer check and has no I4B replacement.
+- `test_cbom.PreparedAibomScope.test_manifest_writer_produces_a_valid_manifest_and_never_estimates_usage` runs donor `tools/make_acquisition_manifest.py` and `.tools`; acquisition tooling belongs to I5.
+- `test_cbom.SecretHygiene.test_no_credentials_in_tracked_text` scans the whole Git repository and would inspect OpenTrace changes; OpenTrace's own hygiene tests cover the repository.
+- `test_cbom.SecretHygiene.test_run_script_reads_the_key_only_from_the_environment_and_disables_env_files` inspects the unimported donor `tools/run_aibom_scan.sh`.
+
+## Golden rule IDs
+
+The owner clarification for I4B states that contract §3.3's “five rule IDs in each result” count is incorrect. The exact ordered IDs pinned by each golden are preserved: Frigate, toy-detector, and aibom-link-demo contain four each; Viseron contains five, including `dependency_mapping.import_resolves_to_component/1`. This clarification changes no source, algorithm, or golden export and does not amend the frozen contract.
+
+## Local changes since import
+
+- **I5C (2026-11-06).** `rules.py` (dispatch to `rules_cbom3` for assertions that request `rule_version` 3) and `pipeline.py` (list `crypto_attribution.operation_declared_in_cbom/3` in `result.rules` only when a finding uses it). Their manifest entries carry `adaptation: local_change`, the new SHA-256 and the unchanged donor SHA-256; `local_changes` repeats them. `rules_cbom.py` (rule /2) is byte-identical to the donor. `rules_cbom3.py` is a new OpenTrace-authored file (listed under `opentrace_authored_files`), not a donor file. Goldens and the captured Frigate results are unchanged (INT-01 parity passes).
+
+- **UIP-10 (2026-11-15).** Two OpenTrace-authored files outside this directory use, but do not modify, the imported module: `src/core/opentrace_core/live/source_declarations.py` (bounded, deterministic, cancellable collector of Python requirement files over a sealed exported tree; it replaces the overlay's checkout collector `sources.collect`, which needs `git ls-files`, and reuses only the overlay's requirement-file selection rule plus the already imported pip line parsing) and `src/core/opentrace_core/app/live_discovery.py` (live orchestration of the unchanged `discovery.discover` and assessment). They are listed in the manifest under `opentrace_authored_outside_import`. No imported-file hash, canonical ID or rule changed; the overlay's model-locator and hashlib collection are still not ported.
+
+## Maintenance
+
+OpenTrace owns this imported module. BOMBridge is a reference only; there is no automatic synchronization. Any backport is a separately reviewed action. Future rule changes must bump the rule ID version. The donor repository has no LICENSE or NOTICE; both repositories are owner-controlled, and release handling remains open under BB-REL-01.
+
+The sole dependency added for this import is `networkx==3.4.2`.
+- **UIP-12 (2026-11-15; Stage 2, Python crypto call sites to CBOM).** New OpenTrace-authored files: `rules_cbom4.py` (rule `crypto_attribution.operation_declared_in_cbom/4`, owner decision D7; a finite alias mapping and prerequisite gates; `rules_cbom.py` /2 and `rules_cbom3.py` /3 are untouched) and `discovery_crypto.py` (in the spirit of the overlay's `discovery._crypto`, BOMBridge donor base `7195f6eb`, overlay by Peiran Shi; not copied), plus `src/core/opentrace_core/live/crypto_sites.py` outside this directory (calls the unchanged, byte-identical `cryptoscan.scan_source`; adds a conservative second AST audit). Local changes: `rules.py` (dispatch `/4` before the version-agnostic `/2` branch), `pipeline.py` (list `/4` in `result.rules` only when used) and the optional keywords of `discovery.discover()` (child-generator boundary now also for the requirement generator, ID-strict `_Out` with full-content collision checks incl. base-bundle records, `propagate` for session control flow; UIP-12 correction 01; defaults keep every earlier output byte-identical). Correction 01 also adds a verified `imported_name` fact to the `crypto_sites.py` audit and a renamed-from-import resolution step in `rules_cbom4.py`; `cryptoscan.py` stays untouched. Their manifest entries carry the new SHA-256 and the unchanged donor SHA-256. No imported donor file hash changed (`cryptoscan.py`, `rules_cbom.py` unchanged). Licensing (BB-REL-01) remains unresolved.
+
+- **UIP-13 (2026-11-15; Stage 3, static model references to AI-BOM).** New OpenTrace-authored files: `discovery_models.py` (model generator; the rule `model_identity.declared_in_aibom/1` is reused unchanged) and, outside this directory, `live/model_refs.py` (bounded static collector). Both are written in the spirit of the gap-discovery overlay (`sources.py` sha256 `7b139713...5ed7`, `discovery.py` sha256 `21bfe5a9...c6f545`; Peiran Shi; no git history); no overlay file is copied. `discovery.py` changes only the per-generator note text. Deliberate differences are listed in the `opentrace_authored_*` entries. BOMBridge licensing remains unresolved (`BB-REL-01`); this note does not resolve it and asserts no permission. No new third-party dependency.

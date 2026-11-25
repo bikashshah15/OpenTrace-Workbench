@@ -1,0 +1,1066 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+  "assessment": {
+   "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+   "configuration": "config:fixture:f673dd289e88b82a",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+  },
+  "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/bom-lab",
+   "host": "github.com",
+   "name": "bom-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "capabilities": [
+  {
+   "family": "software",
+   "reason_code": null,
+   "state": "completed"
+  },
+  {
+   "family": "cryptography",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "ai_model",
+   "reason_code": "not_configured",
+   "state": "not_run"
+  },
+  {
+   "family": "other",
+   "reason_code": null,
+   "state": "completed"
+  }
+ ],
+ "counts": {
+  "assertions_unique": 49,
+  "candidates_total": 60,
+  "family_counts": {
+   "ai_model": 0,
+   "cryptography": 0,
+   "other": 10,
+   "software": 50
+  },
+  "family_counts_disjoint": true,
+  "filter_group_counts": {
+   "not_represented": 40,
+   "represented": 10,
+   "unknown": 10
+  },
+  "filtered_total": 60,
+  "records_total": 180,
+  "relationships_total": 120,
+  "state_counts": {
+   "conflicting_evidence": 0,
+   "contradicted": 40,
+   "no_rule": 0,
+   "supported": 10,
+   "unknown_coverage": 4,
+   "unverifiable": 6
+  }
+ },
+ "filters": {
+  "category": null,
+  "family": null,
+  "filter_group": null,
+  "query": "",
+  "state": null
+ },
+ "items": [
+  {
+   "assertion_id": "assert-25",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:30994f80"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-25",
+    "raw_title": "pkg-25 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:30994f80",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 26,
+    "line_start": 26,
+    "path": "reqs/r4.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-26",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:16b21a88"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-26",
+    "raw_title": "pkg-26 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:16b21a88",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 27,
+    "line_start": 27,
+    "path": "reqs/r5.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-27",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:a1a7dd9c"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-27",
+    "raw_title": "pkg-27 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:a1a7dd9c",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 28,
+    "line_start": 28,
+    "path": "reqs/r6.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-28",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:a23569cc"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-28",
+    "raw_title": "pkg-28 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:a23569cc",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 29,
+    "line_start": 29,
+    "path": "reqs/r0.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-29",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:ccbc67e5"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-29",
+    "raw_title": "pkg-29 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:ccbc67e5",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 30,
+    "line_start": 30,
+    "path": "reqs/r1.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-30",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:e6e2d858"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-30",
+    "raw_title": "pkg-30 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:e6e2d858",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 31,
+    "line_start": 31,
+    "path": "reqs/r2.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-31",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:f9249f91"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-31",
+    "raw_title": "pkg-31 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:f9249f91",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 32,
+    "line_start": 32,
+    "path": "reqs/r3.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-32",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:1c1e6b32"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-32",
+    "raw_title": "pkg-32 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:1c1e6b32",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 33,
+    "line_start": 33,
+    "path": "reqs/r4.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-33",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:2ba81303"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-33",
+    "raw_title": "pkg-33 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:2ba81303",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 34,
+    "line_start": 34,
+    "path": "reqs/r5.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-34",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:904b3306"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-34",
+    "raw_title": "pkg-34 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:904b3306",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 35,
+    "line_start": 35,
+    "path": "reqs/r6.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-35",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:703eabc8"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-35",
+    "raw_title": "pkg-35 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:703eabc8",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 36,
+    "line_start": 36,
+    "path": "reqs/r0.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-36",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:07b64c3e"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-36",
+    "raw_title": "pkg-36 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:07b64c3e",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 37,
+    "line_start": 37,
+    "path": "reqs/r1.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-37",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:e37582d3"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-37",
+    "raw_title": "pkg-37 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:e37582d3",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 38,
+    "line_start": 38,
+    "path": "reqs/r2.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-38",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:b6d0d339"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-38",
+    "raw_title": "pkg-38 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:b6d0d339",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 39,
+    "line_start": 39,
+    "path": "reqs/r3.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-39",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:612b5cdb"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "pkg-39",
+    "raw_title": "pkg-39 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "not_represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:612b5cdb",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 40,
+    "line_start": 40,
+    "path": "reqs/r4.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-40",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:1912e1b5"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-40",
+    "raw_title": "ok-40 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:1912e1b5",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 40,
+    "line_start": 40,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-41",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:83ab50d9"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-41",
+    "raw_title": "ok-41 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:83ab50d9",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 41,
+    "line_start": 41,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-42",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:438047d4"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-42",
+    "raw_title": "ok-42 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:438047d4",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 42,
+    "line_start": 42,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-43",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:1b5c1d9a"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-43",
+    "raw_title": "ok-43 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:1b5c1d9a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 43,
+    "line_start": 43,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-44",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:862e55a0"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-44",
+    "raw_title": "ok-44 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:862e55a0",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 44,
+    "line_start": 44,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-45",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:bca59ba1"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-45",
+    "raw_title": "ok-45 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:bca59ba1",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 45,
+    "line_start": 45,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-46",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:4a17d94d"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-46",
+    "raw_title": "ok-46 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:4a17d94d",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 46,
+    "line_start": 46,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-47",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:11e09b36"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-47",
+    "raw_title": "ok-47 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:11e09b36",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 47,
+    "line_start": 47,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-48",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:6cb95c3a"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-48",
+    "raw_title": "ok-48 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:6cb95c3a",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 48,
+    "line_start": 48,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  },
+  {
+   "assertion_id": "assert-49",
+   "canonical_ref": {
+    "binding": {
+     "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+     "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+     "configuration": "config:fixture:f673dd289e88b82a",
+     "generation": 1,
+     "session_id": "00000000000000000000000000000001"
+    },
+    "record_class": "candidate",
+    "record_id": "cand:missing_component:b3ec4de5"
+   },
+   "category": "missing_component",
+   "display": {
+    "name": "ok-49",
+    "raw_title": "ok-49 is declared in source but not represented in the inventory"
+   },
+   "family": "software",
+   "family_basis": "inventory_kind",
+   "filter_group": "represented",
+   "graph_state": "assertion_graph",
+   "inherited": false,
+   "inventory": {
+    "generator": "fixture-generator 1.0",
+    "inventory_id": "inv:sbom-source",
+    "kind": "sbom",
+    "sha256": "923c9bb5fb8b30c245ee5066dce855c6a0641e433d88fd26e83fc1fdd07ebf3e"
+   },
+   "item_id": "cand:missing_component:b3ec4de5",
+   "item_kind": "candidate",
+   "location": {
+    "line_end": 49,
+    "line_start": 49,
+    "path": "reqs/ok.txt"
+   },
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "supported"
+  }
+ ],
+ "mode": "discovery_compared",
+ "page": {
+  "has_more": true,
+  "offset": 25,
+  "size": 25
+ },
+ "schema": "opentrace.workbench.bom_candidates/1",
+ "status_detail": null
+}

@@ -1,0 +1,125 @@
+{
+ "absence_established": false,
+ "assets": [],
+ "availability": {
+  "message": "Collection was incomplete (opentrace-source-crypto). The assets shown are those that were recorded; this is not a complete inventory.",
+  "reason_code": "partial_coverage",
+  "state": "partial"
+ },
+ "binding": {
+  "analysis_digest": "sha256:234d74cab3cecfa9e422381775e4d1bb6bd5a134601bb6f8663823c804a9b144",
+  "assessment": {
+   "bundle_sha256": "f09a0026f637f7ff539655bff54995464a46ed3d893d3a8910dbb83ce0693153",
+   "configuration": "scan-profile:opentrace.scan.default/1;target-environment:not-recorded",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "18f293da823b81801ec2d848093d280b0967d424405f7c7e263d8ded6627f96f"
+  },
+  "commit_sha": "6ae06032c82b9fc090398f12e6d7b0afd564b1a4",
+  "generation": 1,
+  "mode": "live",
+  "repository": {
+   "canonical_url": "https://github.com/acme/partial",
+   "host": "github.com",
+   "name": "partial",
+   "owner": "acme"
+  },
+  "requested_ref": {
+   "kind": "default_branch",
+   "text": "main"
+  }
+ },
+ "counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 0,
+  "all": 0,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 0,
+  "assets_total": 0,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:cdxgen-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "cdxgen",
+    "producer_version": "cdxgen 9.9.9"
+   },
+   "scope": "cdxgen over the acquired source tree at the pinned commit; per-file coverage counts are not recorded in the artifact; zeros mean unrecorded"
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "not_run",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-check",
+    "producer_version": null
+   },
+   "scope": "One reviewed call site on one pinned commit (experimental source observation); absence is not established."
+  },
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 2,
+    "files_excluded": 0,
+    "files_parsed": 1,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 1
+   },
+   "outcome": "partial",
+   "provenance": {
+    "artifact_id": null,
+    "experimental": true,
+    "json_pointer": null,
+    "origin": "supplemental_observation",
+    "producer_id": "opentrace-source-crypto",
+    "producer_version": null
+   },
+   "scope": "Experimental static source observation (hashlib, jwt and TLS-configuration call sites of supported forms); absence is not established."
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [],
+ "tab": "crypto"
+}

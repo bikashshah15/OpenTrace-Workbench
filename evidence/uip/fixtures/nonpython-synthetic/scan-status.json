@@ -1,0 +1,175 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:63231194453eb6e8e37f48338cc4e1dfd0a53b5410a6a6693d97826e3a8c9c55",
+  "assessment": null,
+  "commit_sha": "a42978a5c28e50c6d2cca5e5ec1808dcac4af208",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/gotool",
+   "host": "github.com",
+   "name": "gotool",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "binding_state": "resolved",
+ "cleanup": {
+  "state": "not_needed"
+ },
+ "generation": 1,
+ "handoff": {
+  "blocked_reason": null,
+  "ready": true
+ },
+ "identity": {
+  "analysis_digest": "sha256:63231194453eb6e8e37f48338cc4e1dfd0a53b5410a6a6693d97826e3a8c9c55",
+  "input": {
+   "manual_sha": null,
+   "url": "https://github.com/example-org/gotool/tree/v1.0.0"
+  },
+  "repository": {
+   "canonical_url": "https://github.com/example-org/gotool",
+   "host": "github.com",
+   "name": "gotool",
+   "owner": "example-org"
+  },
+  "requested": {
+   "kind": "tag",
+   "origin": "url_tree",
+   "text": "v1.0.0"
+  },
+  "resolved": {
+   "basis": "url_revision",
+   "commit_sha": "a42978a5c28e50c6d2cca5e5ec1808dcac4af208",
+   "manual_corroboration": false,
+   "resolved_at": "2026-01-01T00:00:00Z"
+  },
+  "scan": {
+   "inventories": [
+    "aibom",
+    "cbom",
+    "sbom"
+   ],
+   "profile_id": "opentrace.scan.default/1",
+   "scope": "repository_root"
+  },
+  "schema": "opentrace.analysis_identity/1",
+  "session": {
+   "generation": 1
+  }
+ },
+ "job": {
+  "created_at": "2026-01-01T00:00:00Z",
+  "elapsed_ms": 7000,
+  "job_id": "job:a2f01b84a466c305e6bb8338",
+  "seq": 7,
+  "state": "partial",
+  "updated_at": "2026-01-01T00:00:07Z"
+ },
+ "mode": "captured",
+ "pinned": true,
+ "schema": "opentrace.workbench.scan_status/1",
+ "stages": [
+  {
+   "finished_at": "2026-01-01T00:00:02Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "resolve_revision",
+   "started_at": "2026-01-01T00:00:01Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:02Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:04Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "acquire_source",
+   "started_at": "2026-01-01T00:00:03Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:04Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:06Z",
+   "outputs": [
+    {
+     "artifact_id": "art:sbom-512c7f2e",
+     "kind": "sbom",
+     "sha256": "9b7972316f4a27a11fba7ca0903ac5a764f10d9e0908e9a5149122d9b6473c53",
+     "size": 1010
+    }
+   ],
+   "reason_code": null,
+   "stage_id": "sbom",
+   "started_at": "2026-01-01T00:00:05Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:06Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "unsupported_ecosystem",
+   "stage_id": "cbom",
+   "started_at": null,
+   "state": "unsupported",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "not_configured",
+   "stage_id": "aibom",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "advisory_lookup",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": null,
+   "outputs": [],
+   "reason_code": "disabled",
+   "stage_id": "source_checks",
+   "started_at": null,
+   "state": "not_run",
+   "updated_at": "2026-01-01T00:00:00Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:16Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "evidence_projection",
+   "started_at": "2026-01-01T00:00:15Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:16Z",
+   "warnings": []
+  },
+  {
+   "finished_at": "2026-01-01T00:00:18Z",
+   "outputs": [],
+   "reason_code": null,
+   "stage_id": "workbench_ready",
+   "started_at": "2026-01-01T00:00:17Z",
+   "state": "completed",
+   "updated_at": "2026-01-01T00:00:18Z",
+   "warnings": []
+  }
+ ]
+}

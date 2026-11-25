@@ -1,0 +1,26 @@
+{
+ "builder": {
+  "path": "tools/uip04/build_fixtures.py",
+  "seed": "uip-04/1",
+  "sha256": "bb7f978781c5cd7367ec04fae0e19031d8bb4893238b453434187716dbfece6f"
+ },
+ "contains_frigate_names": false,
+ "files": [
+  {
+   "bytes": 663,
+   "path": "analysis.json",
+   "schema": "opentrace.uip.analysis_stub/1",
+   "sha256": "119369c505fb060ae79d0087b32b349e77f8d220cb32ff422b99f41b1845e497"
+  },
+  {
+   "bytes": 16568,
+   "path": "contexts-page-0.json",
+   "schema": "opentrace.workbench.contexts/1",
+   "sha256": "d4fbbc9eacd1d9c5f505e4810d63be2a73b04a3f130eb2f2cf4975e462983799"
+  }
+ ],
+ "name": "uip04-eleven-groups",
+ "notes": "All ten categories plus Unlocated, produced by the production classifier (the maximum a real repository can yield).",
+ "provenance": "synthetic",
+ "schema": "opentrace.uip.fixture_manifest/1"
+}

@@ -1,0 +1,573 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opentrace.local/contracts/workbench/v1/schemas/ai_assets.schema.json",
+  "title": "OpenTrace workbench ai assets v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "binding",
+    "tab",
+    "availability",
+    "absence_established",
+    "producers",
+    "filter",
+    "filter_totals",
+    "source_groups",
+    "assets",
+    "links",
+    "review_items",
+    "page",
+    "counts"
+  ],
+  "properties": {
+    "schema": {
+      "const": "opentrace.workbench.ai_assets/1"
+    },
+    "binding": {
+      "$ref": "common.schema.json#/$defs/binding"
+    },
+    "tab": {
+      "const": "ai"
+    },
+    "availability": {
+      "$ref": "common.schema.json#/$defs/availability"
+    },
+    "absence_established": {
+      "const": false
+    },
+    "producers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "provenance",
+          "scope",
+          "outcome",
+          "coverage"
+        ],
+        "properties": {
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "outcome": {
+            "enum": [
+              "not_run",
+              "unsupported",
+              "failed",
+              "partial",
+              "completed_empty",
+              "completed"
+            ]
+          },
+          "coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "files_considered",
+              "files_parsed",
+              "files_excluded",
+              "excluded_paths",
+              "unparsed_total",
+              "unknown_dynamic_values_total"
+            ],
+            "properties": {
+              "files_considered": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "files_parsed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "files_excluded": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "excluded_paths": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/path"
+                },
+                "minItems": 0,
+                "maxItems": 10
+              },
+              "unparsed_total": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "unknown_dynamic_values_total": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "filter": {
+      "enum": [
+        "all",
+        "models",
+        "runtimes",
+        "ai_services",
+        "findings"
+      ]
+    },
+    "filter_totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "all",
+        "models",
+        "runtimes",
+        "ai_services",
+        "findings"
+      ],
+      "properties": {
+        "all": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "models": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "runtimes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ai_services": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "findings": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "source_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group_id",
+          "label",
+          "path",
+          "assets_total"
+        ],
+        "properties": {
+          "group_id": {
+            "$ref": "common.schema.json#/$defs/grp_id"
+          },
+          "label": {
+            "$ref": "common.schema.json#/$defs/label"
+          },
+          "path": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/path"
+              }
+            ]
+          },
+          "assets_total": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 24
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_id",
+          "kind",
+          "display_name",
+          "provenance",
+          "attributes",
+          "source_group_ids",
+          "occurrences",
+          "occurrences_total",
+          "identity_state",
+          "display_group"
+        ],
+        "properties": {
+          "asset_id": {
+            "$ref": "common.schema.json#/$defs/ast_id"
+          },
+          "kind": {
+            "enum": [
+              "model_artifact",
+              "model_reference",
+              "inventory_model",
+              "runtime",
+              "ai_service"
+            ]
+          },
+          "display_name": {
+            "$ref": "common.schema.json#/$defs/text"
+          },
+          "provenance": {
+            "$ref": "common.schema.json#/$defs/provenance"
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "provider",
+              "model_version",
+              "license",
+              "dataset_provenance",
+              "artifact_digest",
+              "active_configuration"
+            ],
+            "properties": {
+              "provider": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "model_version": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "license": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "dataset_provenance": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "artifact_digest": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              },
+              "active_configuration": {
+                "$ref": "common.schema.json#/$defs/attribute"
+              }
+            }
+          },
+          "source_group_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/grp_id"
+            },
+            "minItems": 0,
+            "maxItems": 24
+          },
+          "occurrences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "occurrence_id",
+                "source_location",
+                "operation",
+                "condition",
+                "alternative_of",
+                "producer_id"
+              ],
+              "properties": {
+                "occurrence_id": {
+                  "$ref": "common.schema.json#/$defs/occ_id"
+                },
+                "source_location": {
+                  "$ref": "common.schema.json#/$defs/source_location"
+                },
+                "operation": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200,
+                      "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                    }
+                  ]
+                },
+                "condition": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "text",
+                    "basis"
+                  ],
+                  "properties": {
+                    "text": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200,
+                          "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                        }
+                      ]
+                    },
+                    "basis": {
+                      "enum": [
+                        "source_text",
+                        "recorded_artifact",
+                        "none"
+                      ]
+                    }
+                  }
+                },
+                "alternative_of": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "$ref": "common.schema.json#/$defs/occ_id"
+                    }
+                  ]
+                },
+                "producer_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64,
+                  "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                }
+              }
+            },
+            "minItems": 0,
+            "maxItems": 20
+          },
+          "occurrences_total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "identity_state": {
+            "enum": [
+              "resolved",
+              "unresolved"
+            ]
+          },
+          "display_group": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "group_id",
+                  "rule"
+                ],
+                "properties": {
+                  "group_id": {
+                    "$ref": "common.schema.json#/$defs/grp_id"
+                  },
+                  "rule": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 30
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "relation",
+          "from",
+          "to",
+          "basis",
+          "evidence_ref",
+          "condition"
+        ],
+        "properties": {
+          "relation": {
+            "enum": [
+              "references",
+              "imports",
+              "conditionally_selects",
+              "located_in"
+            ]
+          },
+          "from": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "to": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "basis": {
+            "enum": [
+              "recorded",
+              "resolved"
+            ]
+          },
+          "evidence_ref": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/engine_id"
+              }
+            ]
+          },
+          "condition": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200,
+                "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 90
+    },
+    "review_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "review_id",
+          "asset_id",
+          "rule_id",
+          "rule_version",
+          "tone",
+          "condition",
+          "evidence_ids",
+          "rationale",
+          "bounded_meaning",
+          "next_action"
+        ],
+        "properties": {
+          "review_id": {
+            "$ref": "common.schema.json#/$defs/engine_id"
+          },
+          "asset_id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "common.schema.json#/$defs/ast_id"
+              }
+            ]
+          },
+          "rule_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "rule_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "tone": {
+            "enum": [
+              "review",
+              "advisory"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000-\\u001f]*(?!\\n)$"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/engine_id"
+            },
+            "minItems": 0,
+            "maxItems": 20
+          },
+          "rationale": {
+            "$ref": "common.schema.json#/$defs/rationale"
+          },
+          "bounded_meaning": {
+            "$ref": "common.schema.json#/$defs/message"
+          },
+          "next_action": {
+            "$ref": "common.schema.json#/$defs/message"
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 50
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "offset",
+        "size",
+        "assets_total",
+        "assets_shown",
+        "has_more"
+      ],
+      "properties": {
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "size": {
+          "const": 30
+        },
+        "assets_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assets_shown": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    },
+    "counts": {
+      "$ref": "common.schema.json#/$defs/count_block"
+    }
+  }
+}

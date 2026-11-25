@@ -1,0 +1,1052 @@
+{
+  "schema": "bombridge.bundle/2",
+  "origin": "illustrative",
+  "notice": "ILLUSTRATIVE ONLY. Fictional subject. Digest values are synthetic: the hash of the string 'illustrative-synthetic:<seed>', not of any file. Not evidence about any real repository; must not contribute to real-evidence summaries.",
+  "capture": {
+    "scope_id": "scope:toy-1",
+    "repository": {
+      "url": "https://example.invalid/illustrative/toy-detector",
+      "revision": "0000000-illustrative"
+    },
+    "build": null,
+    "configuration": "config:A",
+    "model": "model:toy-v1",
+    "execution": null,
+    "unknown": [
+      "build",
+      "execution"
+    ],
+    "unavailable": [],
+    "inventories": [
+      {
+        "inventory_id": "inv:toy-sbom",
+        "kind": "sbom",
+        "generator": "illustrative",
+        "source_file": "toy.cdx.json",
+        "intended_coverage": [
+          "source-dependencies"
+        ]
+      },
+      {
+        "inventory_id": "inv:toy-aibom",
+        "kind": "aibom",
+        "generator": "illustrative",
+        "source_file": "toy.aibom.json",
+        "intended_coverage": [
+          "models"
+        ]
+      }
+    ],
+    "origin": "illustrative"
+  },
+  "entities": [
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::detector",
+      "kind": "model",
+      "name": "toy-detector",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "detector"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/detector.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::classifier",
+      "kind": "model",
+      "name": "toy-classifier",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "classifier"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/classifier.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::segmenter",
+      "kind": "model",
+      "name": "toy-segmenter",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "segmenter"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/segmenter.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::tracker",
+      "kind": "model",
+      "name": "toy-tracker",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "tracker"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/tracker.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::ocr",
+      "kind": "model",
+      "name": "toy-ocr",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ocr"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/ocr.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::embedder",
+      "kind": "model",
+      "name": "toy-embedder",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "embedder"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/embedder.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::pose",
+      "kind": "model",
+      "name": "toy-pose",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "pose"
+      },
+      "identity_matches": [
+        {
+          "other": "scope:toy-1::inv:toy-aibom::detector",
+          "status": "uncertain",
+          "basis": "same family name only"
+        }
+      ],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::depth",
+      "kind": "model",
+      "name": "toy-depth",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "depth"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/depth-a.tflite",
+          "models/depth-b.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::hasher",
+      "kind": "model",
+      "name": "toy-hasher",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "hasher"
+      },
+      "identity_matches": [],
+      "origin": "illustrative",
+      "artifact": {
+        "locators": [
+          "models/hasher.tflite"
+        ],
+        "class": "committed_file"
+      }
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-sbom::libssl",
+      "kind": "library",
+      "name": "libssl",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-sbom",
+        "bom_ref": "libssl"
+      },
+      "identity_matches": [],
+      "origin": "illustrative"
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::bundle-model",
+      "kind": "model",
+      "name": "toy-bundled",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "bundle-model"
+      },
+      "identity_matches": [],
+      "artifact": {
+        "class": "build_output",
+        "locators": [
+          "out/model.tflite"
+        ]
+      },
+      "origin": "illustrative"
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::bundle-model-2",
+      "kind": "model",
+      "name": "toy-bundled-2",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "bundle-model-2"
+      },
+      "identity_matches": [],
+      "artifact": {
+        "class": "build_output",
+        "locators": [
+          "out/model2.tflite"
+        ]
+      },
+      "origin": "illustrative"
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::ext-model",
+      "kind": "model",
+      "name": "toy-external",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ext-model"
+      },
+      "identity_matches": [],
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://example.invalid/models/ext.tflite"
+        ]
+      },
+      "origin": "illustrative"
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::ext-model-2",
+      "kind": "model",
+      "name": "toy-external-2",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ext-model-2"
+      },
+      "identity_matches": [],
+      "artifact": {
+        "class": "external_acquisition",
+        "locators": [
+          "https://example.invalid/models/ext2.tflite"
+        ]
+      },
+      "origin": "illustrative"
+    },
+    {
+      "entity_id": "scope:toy-1::inv:toy-aibom::layer-model",
+      "kind": "model",
+      "name": "toy-layer",
+      "version": null,
+      "source": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "layer-model"
+      },
+      "identity_matches": [],
+      "artifact": {
+        "class": "container_layer",
+        "locators": [
+          "layers/0/model.tflite"
+        ]
+      },
+      "origin": "illustrative"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "a01-supported",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::detector",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "a7f16c420e81dcc0c20ad9ee3bfd3bac09f5439a7506bcfe6dc826241d4a0dff"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "detector"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a02-contradicted",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::classifier",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "a6ad37252697e5b70807f71343bc0395d0d32976bf7efcbb893e55034387b8e9"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "classifier"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a03-conflicting",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::segmenter",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "7e612a5a6b57801c4f814fc0adf2ff6d9b5c67bd01be5fb54507e6c45fd0db6d"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "segmenter"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a04-no-revision",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::tracker",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "c8d50c1aefe9d0fc5586f1c9f8941ea4ceee69640f6e722a37e7bff8828a43a1"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "tracker"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": null,
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a05-no-observation",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::ocr",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "af9d0af83349793a2d28307fb735f38e0905e54a69595d47e4e624be13d0bd88"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ocr"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a06-other-config-excluded",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::embedder",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "embedder"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative",
+      "depends_on_configuration": true
+    },
+    {
+      "assertion_id": "a07-unknown-artifact",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::pose",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "6d0450b31773df78bc44136c9ca2c61fcf5ab73aa600614d81f4a3893862816b"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "pose"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a08-ambiguous-artifact",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::depth",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "2687b360fdb815b4ef3290a451283c611567612eb9942b72d55572db476f7020"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "depth"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a09-algorithm-differs",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::hasher",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "6530968a021fd1fa4610822f7f3ba405297b4955e68f792ccf3cc9d981be09a0"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "hasher"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a10-rule-not-implemented",
+      "family": "crypto_attribution",
+      "subject": "scope:toy-1::inv:toy-aibom::detector",
+      "predicate": "uses_library",
+      "object": "scope:toy-1::inv:toy-sbom::libssl",
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "detector"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a11-build-output-supported",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::bundle-model",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "b6cf10fca60bd238a6980405d4342bdb3ff7aa0083a30f4b793fd3306d9c096a"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "bundle-model"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "build": "build:toy-1"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a12-build-output-revision-only",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::bundle-model-2",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "a65b59b4ffb035d958666575c9f5686bf63a13d712f4bb7fd661a56746ab43c0"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "bundle-model-2"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative"
+      },
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a13-external-supported",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::ext-model",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "5dd97a2340c552a22b1114eb2da3b763140102f38c592ba19fa63da5c9838123"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ext-model"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {},
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a14-external-no-retrieval",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::ext-model-2",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "4d34bdba3762b3db21f5ed4c59af3206f7e899038c19858621b9058bfbdc7561"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "ext-model-2"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {},
+      "origin": "illustrative"
+    },
+    {
+      "assertion_id": "a15-class-unsupported",
+      "family": "model_identity",
+      "subject": "scope:toy-1::inv:toy-aibom::layer-model",
+      "predicate": "has_digest",
+      "object": {
+        "algorithm": "sha256",
+        "value": "2c10ab5c76d9698f08a80918ea465d79dd6960b53925aa2d33e84b1c36b9434d"
+      },
+      "declared_in": {
+        "inventory_id": "inv:toy-aibom",
+        "bom_ref": "layer-model"
+      },
+      "scope_id": "scope:toy-1",
+      "scope": {
+        "revision": "0000000-illustrative"
+      },
+      "origin": "illustrative"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e01",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/detector.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/detector.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "A7F16C420E81DCC0C20AD9EE3BFD3BAC09F5439A7506BCFE6DC826241D4A0DFF"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-detector",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e02",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/classifier.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/classifier.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "3f32a623a2190d2bda7f9216310087653aa9ffd9641bca6d98027086b39d3803"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-classifier",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e03a",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/segmenter.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/segmenter.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "7e612a5a6b57801c4f814fc0adf2ff6d9b5c67bd01be5fb54507e6c45fd0db6d"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-segmenter",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e03b",
+      "scope_id": "scope:toy-1",
+      "method": "release-manifest-read",
+      "tool": "illustrative",
+      "source_locator": "file:models/segmenter.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/segmenter.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "8628d76a0227729384286764a109c9fd810723d6e9bf438e6c6252033320c70c"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:release-manifest",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e04",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/tracker.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/tracker.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "c8d50c1aefe9d0fc5586f1c9f8941ea4ceee69640f6e722a37e7bff8828a43a1"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-tracker",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e06a",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/embedder.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/embedder.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-embedder",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e06b",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/embedder.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:B",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/embedder.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "a5134126cb750d3b6328da44aa9d25871ef2dc8a6e6af7317bd23c44df9354f5"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-embedder-b",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e06c",
+      "scope_id": "scope:other-capture",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/embedder.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/embedder.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "b00c85b911c49f946466d4a1154ad4e47d7c85308c59d7ba3e8bad9221147249"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:other-capture",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e07",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/pose.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/pose.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "6d0450b31773df78bc44136c9ca2c61fcf5ab73aa600614d81f4a3893862816b"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-pose",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e08",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/depth-a.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/depth-a.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "2687b360fdb815b4ef3290a451283c611567612eb9942b72d55572db476f7020"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-depth",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e09",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/hasher.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A",
+        "model": "model:toy-v1"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/hasher.tflite"
+        },
+        "algorithm": "sha512",
+        "value": "bd2bc2e0735854093afa2f0fda7ac703ebbe135c6f896f29d1d6207f43d9dd66134601e58b84d5f4269ed455a4f208f1f1df4e17567ce72bef90bdc2b64c9cd4"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-hasher",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e10",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:models/detector.tflite",
+      "scope": {
+        "revision": "0000000-illustrative",
+        "configuration": "config:A"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "models/detector.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "a7f16c420e81dcc0c20ad9ee3bfd3bac09f5439a7506bcfe6dc826241d4a0dff"
+      },
+      "limitations": [
+        "static digest of one file at the stated revision; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:file-detector",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e11",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:out/model.tflite",
+      "scope": {
+        "build": "build:toy-1",
+        "revision": "0000000-illustrative"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "out/model.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "b6cf10fca60bd238a6980405d4342bdb3ff7aa0083a30f4b793fd3306d9c096a"
+      },
+      "limitations": [
+        "static digest of one file; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:out-model",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e12",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:out/model2.tflite",
+      "scope": {
+        "revision": "0000000-illustrative"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "out/model2.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "a65b59b4ffb035d958666575c9f5686bf63a13d712f4bb7fd661a56746ab43c0"
+      },
+      "limitations": [
+        "static digest of one file; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:out-model2",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e13",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:https://example.invalid/models/ext.tflite",
+      "scope": {
+        "revision": "unrelated-revision"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "https://example.invalid/models/ext.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "5dd97a2340c552a22b1114eb2da3b763140102f38c592ba19fa63da5c9838123",
+        "retrieval": {
+          "source": "https://example.invalid/models/ext.tflite",
+          "method": "http-get",
+          "retrieved_at": "2026-01-01T00:00:00Z"
+        }
+      },
+      "limitations": [
+        "static digest of one file; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:ext",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e14",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:https://example.invalid/models/ext2.tflite",
+      "scope": {},
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "https://example.invalid/models/ext2.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "4d34bdba3762b3db21f5ed4c59af3206f7e899038c19858621b9058bfbdc7561"
+      },
+      "limitations": [
+        "static digest of one file; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:ext2",
+      "origin": "illustrative"
+    },
+    {
+      "evidence_id": "e15",
+      "scope_id": "scope:toy-1",
+      "method": "file-hash",
+      "tool": "illustrative",
+      "source_locator": "file:layers/0/model.tflite",
+      "scope": {
+        "revision": "0000000-illustrative"
+      },
+      "observation": {
+        "kind": "artifact_digest",
+        "artifact": {
+          "locator": "layers/0/model.tflite"
+        },
+        "algorithm": "sha256",
+        "value": "2c10ab5c76d9698f08a80918ea465d79dd6960b53925aa2d33e84b1c36b9434d"
+      },
+      "limitations": [
+        "static digest of one file; says nothing about what a run loaded"
+      ],
+      "underlying_source": "src:layer",
+      "origin": "illustrative"
+    }
+  ],
+  "expectations": {
+    "note": "Illustrative expectations for the demo; the engine ignores this key.",
+    "a01-supported": "supported",
+    "a02-contradicted": "contradicted",
+    "a03-conflicting": "conflicting_evidence",
+    "a04-no-revision": "unverifiable",
+    "a05-no-observation": "unverifiable",
+    "a06-other-config-excluded": "supported",
+    "a07-unknown-artifact": "unverifiable",
+    "a08-ambiguous-artifact": "unverifiable",
+    "a09-algorithm-differs": "unverifiable",
+    "a10-rule-not-implemented": "unverifiable",
+    "a11-build-output-supported": "supported",
+    "a12-build-output-revision-only": "unverifiable",
+    "a13-external-supported": "supported",
+    "a14-external-no-retrieval": "unverifiable",
+    "a15-class-unsupported": "unverifiable"
+  }
+}

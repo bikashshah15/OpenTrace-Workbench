@@ -1,0 +1,367 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "assessment": {
+   "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+   "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "95cd0c8c5c9e8a5814f2aabf86ecb06aaacb857537db40d1ffcff573cf2bfdb4"
+  },
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/blakeblackshear/frigate",
+   "host": "github.com",
+   "name": "frigate",
+   "owner": "blakeblackshear"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v0.18.2"
+  }
+ },
+ "counts": {
+  "shown": 5,
+  "total": 5,
+  "truncated": false
+ },
+ "edge_semantics": "grouping_or_inventory_location",
+ "groups": [
+  {
+   "basis": "path_prefix",
+   "category": "documentation",
+   "distinct_total": 1513,
+   "files": [
+    {
+     "dependency_context_id": null,
+     "distinct_total": 1513,
+     "file_id": "ctx:ef7441fd0adaef78ab11f45d",
+     "membership_total": 1513,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docs/package-lock.json",
+     "raw_locations": [
+      "/docs/package-lock.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docs/package-lock.json",
+      "text": "docs/package-lock.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:a8e5e7d3c7bd1bd0ef3a34e9",
+   "kind": "located",
+   "label": "Documentation",
+   "membership_total": 1513,
+   "token": "blue"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "web",
+   "distinct_total": 421,
+   "files": [
+    {
+     "dependency_context_id": "ctx:9d0ff26a0da7a08962ff8834",
+     "distinct_total": 421,
+     "file_id": "ctx:9d0ff26a0da7a08962ff8834",
+     "membership_total": 421,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "web/package-lock.json",
+     "raw_locations": [
+      "/web/package-lock.json"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/web/package-lock.json",
+      "text": "web/package-lock.json"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 1,
+    "total": 1,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:95103c4df39c4f444ad4c7fe",
+   "kind": "located",
+   "label": "Web application",
+   "membership_total": 421,
+   "token": "green"
+  },
+  {
+   "basis": "manifest_basename",
+   "category": "python_requirements",
+   "distinct_total": 21,
+   "files": [
+    {
+     "dependency_context_id": "ctx:bd2baf14c3b709909659361e",
+     "distinct_total": 1,
+     "file_id": "ctx:bd2baf14c3b709909659361e",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docker/main/requirements-dev.txt",
+     "raw_locations": [
+      "/docker/main/requirements-dev.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docker/main/requirements-dev.txt",
+      "text": "docker/main/requirements-dev.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:68727567f0c547f27be99e35",
+     "distinct_total": 3,
+     "file_id": "ctx:68727567f0c547f27be99e35",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docker/main/requirements-wheels.txt",
+     "raw_locations": [
+      "/docker/main/requirements-wheels.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docker/main/requirements-wheels.txt",
+      "text": "docker/main/requirements-wheels.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:957e82826a006b0ad66039d2",
+     "distinct_total": 2,
+     "file_id": "ctx:957e82826a006b0ad66039d2",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docker/rockchip/requirements-wheels-rk.txt",
+     "raw_locations": [
+      "/docker/rockchip/requirements-wheels-rk.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docker/rockchip/requirements-wheels-rk.txt",
+      "text": "docker/rockchip/requirements-wheels-rk.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:9125293fc5bcfb716d0cbc07",
+     "distinct_total": 13,
+     "file_id": "ctx:9125293fc5bcfb716d0cbc07",
+     "membership_total": 13,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docker/tensorrt/requirements-amd64.txt",
+     "raw_locations": [
+      "/docker/tensorrt/requirements-amd64.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docker/tensorrt/requirements-amd64.txt",
+      "text": "docker/tensorrt/requirements-amd64.txt"
+     }
+    },
+    {
+     "dependency_context_id": "ctx:83ea4efe7f522ddfa82d414d",
+     "distinct_total": 2,
+     "file_id": "ctx:83ea4efe7f522ddfa82d414d",
+     "membership_total": 2,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": "docker/tensorrt/requirements-models-arm64.txt",
+     "raw_locations": [
+      "/docker/tensorrt/requirements-models-arm64.txt"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/docker/tensorrt/requirements-models-arm64.txt",
+      "text": "docker/tensorrt/requirements-models-arm64.txt"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 5,
+    "total": 5,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:c25e12157165ce70f97c4a8d",
+   "kind": "located",
+   "label": "Python requirements",
+   "membership_total": 21,
+   "token": "amber"
+  },
+  {
+   "basis": "path_prefix",
+   "category": "github_actions",
+   "distinct_total": 21,
+   "files": [
+    {
+     "dependency_context_id": null,
+     "distinct_total": 5,
+     "file_id": "ctx:bf6fe749fcd8b96da508e580",
+     "membership_total": 5,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/actions/setup/action.yml",
+     "raw_locations": [
+      "/.github/actions/setup/action.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/actions/setup/action.yml",
+      "text": ".github/actions/setup/action.yml"
+     }
+    },
+    {
+     "dependency_context_id": null,
+     "distinct_total": 7,
+     "file_id": "ctx:380e2a0a49bdbc73df35689e",
+     "membership_total": 7,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/ci.yml",
+     "raw_locations": [
+      "/.github/workflows/ci.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/workflows/ci.yml",
+      "text": ".github/workflows/ci.yml"
+     }
+    },
+    {
+     "dependency_context_id": null,
+     "distinct_total": 1,
+     "file_id": "ctx:d38c51cc077a46ea0e8bda25",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/pr_template_check.yml",
+     "raw_locations": [
+      "/.github/workflows/pr_template_check.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/workflows/pr_template_check.yml",
+      "text": ".github/workflows/pr_template_check.yml"
+     }
+    },
+    {
+     "dependency_context_id": null,
+     "distinct_total": 4,
+     "file_id": "ctx:5c0e866c560885697d3d1a82",
+     "membership_total": 4,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/pull_request.yml",
+     "raw_locations": [
+      "/.github/workflows/pull_request.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/workflows/pull_request.yml",
+      "text": ".github/workflows/pull_request.yml"
+     }
+    },
+    {
+     "dependency_context_id": null,
+     "distinct_total": 3,
+     "file_id": "ctx:8df6ffe81a15440d150739f5",
+     "membership_total": 3,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/release.yml",
+     "raw_locations": [
+      "/.github/workflows/release.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/workflows/release.yml",
+      "text": ".github/workflows/release.yml"
+     }
+    },
+    {
+     "dependency_context_id": null,
+     "distinct_total": 1,
+     "file_id": "ctx:bf53ee3649427f43bee1c6a5",
+     "membership_total": 1,
+     "normalization_basis": [
+      "syft_root_relative"
+     ],
+     "path": ".github/workflows/stale.yml",
+     "raw_locations": [
+      "/.github/workflows/stale.yml"
+     ],
+     "raw_locations_total": 1,
+     "revision_link": {
+      "href": "https://github.com/blakeblackshear/frigate/blob/cfa08c56b23d23280c3d0a218e5a43182c97445b/.github/workflows/stale.yml",
+      "text": ".github/workflows/stale.yml"
+     }
+    }
+   ],
+   "files_counts": {
+    "shown": 6,
+    "total": 6,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:0764276f0480f29b7e8eeed8",
+   "kind": "located",
+   "label": "GitHub Actions",
+   "membership_total": 21,
+   "token": "purple"
+  },
+  {
+   "basis": "fallback",
+   "category": null,
+   "distinct_total": 13,
+   "files": [],
+   "files_counts": {
+    "shown": 0,
+    "total": 0,
+    "truncated": false
+   },
+   "files_offset": 0,
+   "group_id": "grp:1414c1fd9ccb5480371ca294",
+   "kind": "unlocated",
+   "label": "Unlocated components",
+   "membership_total": 13,
+   "token": "neutral"
+  }
+ ],
+ "root": {
+  "canonical_url": "https://github.com/blakeblackshear/frigate",
+  "commit_sha": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+  "distinct_total": 1989,
+  "located_distinct_total": 1976,
+  "membership_total": 1976,
+  "name": "blakeblackshear/frigate",
+  "unlocated_total": 13
+ },
+ "schema": "opentrace.workbench.contexts/1",
+ "selected_id": null
+}

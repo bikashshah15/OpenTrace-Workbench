@@ -1,0 +1,578 @@
+{
+ "absence_established": false,
+ "assets": [
+  {
+   "asset_id": "ast:7e49c80b32f15c7af22bdcde",
+   "attributes": {
+    "algorithm_name": {
+     "basis": "component name",
+     "state": "recorded",
+     "value": "synthetic-many"
+    },
+    "certificate_subject": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "parameter": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "primitive": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_name": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    },
+    "protocol_version": {
+     "basis": "not recorded in the artifact",
+     "state": "unavailable",
+     "value": null
+    }
+   },
+   "display_name": "synthetic-many",
+   "kind": "algorithm",
+   "occurrences": [
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:1ae2ee97d005400d7443cdf0",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 1,
+      "line_start": 1,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:bcbfc9e1fbd29eb49c10818d",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 2,
+      "line_start": 2,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:6c6e305f4fb5e2f0f80bccda",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 3,
+      "line_start": 3,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:5a5304a7c13d9a9ca75dedd3",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 4,
+      "line_start": 4,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:21541d806b593243a53abe4d",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 5,
+      "line_start": 5,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:4c20afe057ec0639d69c60ca",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 6,
+      "line_start": 6,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:c63c83cbce5c64bce89f6351",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 7,
+      "line_start": 7,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:6c65a41dd3b4427a7181c854",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 8,
+      "line_start": 8,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:66032da7480c3f2e5e436fb3",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 9,
+      "line_start": 9,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:49caabf45dd65c9ddc1113d7",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 10,
+      "line_start": 10,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:21ba22f0db79f54bab99f0e0",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 11,
+      "line_start": 11,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:f24ff7db2fe36ddc91fa64df",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 12,
+      "line_start": 12,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:72d918169ce5c5d4c5e7cf35",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 13,
+      "line_start": 13,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:cc37e26929c5a0831c9e96d0",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 14,
+      "line_start": 14,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:9effbcb0bc8038289e5a2167",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 15,
+      "line_start": 15,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:9deca9ce101a1875e0ad40d0",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 16,
+      "line_start": 16,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:947240767ffac1f0caf59ac2",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 17,
+      "line_start": 17,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:7742562031c802c5c60743df",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 18,
+      "line_start": 18,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:e82bc6ac3e5781404b349d6f",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 19,
+      "line_start": 19,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    },
+    {
+     "alternative_of": null,
+     "condition": {
+      "basis": "none",
+      "text": null
+     },
+     "occurrence_id": "occ:598894a3cae122ab68722474",
+     "operation": "synthetic.call",
+     "producer_id": "synthetic-cbom-tool",
+     "source_location": {
+      "excerpt": null,
+      "excerpt_state": "unavailable",
+      "file_sha256": null,
+      "line_end": 20,
+      "line_start": 20,
+      "link": {
+       "href": "https://github.com/example-org/synthetic-lab/blob/5103a3384916f4b89b169dd6043d5293512a89c9/synthetic/one/file.py",
+       "text": "synthetic/one/file.py"
+      },
+      "path": "synthetic/one/file.py"
+     }
+    }
+   ],
+   "occurrences_total": 45,
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components/0",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": null
+   },
+   "source_group_ids": [
+    "grp:234ffecc7b109e5dc40f8c65"
+   ]
+  }
+ ],
+ "availability": {
+  "message": "Cryptographic assets recorded in the original CBOM.",
+  "reason_code": null,
+  "state": "completed"
+ },
+ "binding": {
+  "analysis_digest": "sha256:ac743b9e831346d5052357d0a7c607fbeb59c9bc2e083320ddb2ba2d08fa78b5",
+  "assessment": null,
+  "commit_sha": "5103a3384916f4b89b169dd6043d5293512a89c9",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/synthetic-lab",
+   "host": "github.com",
+   "name": "synthetic-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 1,
+  "total": 1,
+  "truncated": false
+ },
+ "filter": "all",
+ "filter_totals": {
+  "algorithms": 1,
+  "all": 1,
+  "certificates": 0,
+  "findings": 0,
+  "protocols": 0
+ },
+ "links": [],
+ "page": {
+  "assets_shown": 1,
+  "assets_total": 1,
+  "has_more": false,
+  "offset": 0,
+  "size": 30
+ },
+ "producers": [
+  {
+   "coverage": {
+    "excluded_paths": [],
+    "files_considered": 0,
+    "files_excluded": 0,
+    "files_parsed": 0,
+    "unknown_dynamic_values_total": 0,
+    "unparsed_total": 0
+   },
+   "outcome": "completed",
+   "provenance": {
+    "artifact_id": "art:inv:synthetic-cbom",
+    "experimental": false,
+    "json_pointer": "/components",
+    "origin": "original_artifact",
+    "producer_id": "synthetic-cbom-tool",
+    "producer_version": "synthetic-cbom-tool 0.0"
+   },
+   "scope": "cdxgen over the whole repository (captured); per-file coverage counts are not recorded in the captured artifact; zeros mean unrecorded"
+  }
+ ],
+ "review_items": [],
+ "schema": "opentrace.workbench.crypto_assets/1",
+ "services": [],
+ "services_counts": {
+  "shown": 0,
+  "total": 0,
+  "truncated": false
+ },
+ "source_groups": [
+  {
+   "assets_total": 1,
+   "group_id": "grp:234ffecc7b109e5dc40f8c65",
+   "label": "synthetic/one/file.py",
+   "path": "synthetic/one/file.py"
+  }
+ ],
+ "tab": "crypto"
+}

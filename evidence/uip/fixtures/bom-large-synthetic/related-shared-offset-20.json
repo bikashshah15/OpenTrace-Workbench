@@ -1,0 +1,296 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+  "assessment": {
+   "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+   "configuration": "config:fixture:f673dd289e88b82a",
+   "kind": "discovery",
+   "schema": "opentrace.bombridge_assessment/1",
+   "validation_digest": "036b230d3e5aef6c0ce4ce929a5e9355a1509c9079cb3b53867dbee7a5b182bf"
+  },
+  "commit_sha": "b48d2f08d7ef531f1e77a94fccd8522a44318035",
+  "generation": 1,
+  "mode": "captured",
+  "repository": {
+   "canonical_url": "https://github.com/example-org/bom-lab",
+   "host": "github.com",
+   "name": "bom-lab",
+   "owner": "example-org"
+  },
+  "requested_ref": {
+   "kind": "tag",
+   "text": "v1.0.0"
+  }
+ },
+ "counts": {
+  "shown": 20,
+  "total": 45,
+  "truncated": true
+ },
+ "items": [
+  {
+   "assertion_id": "assert-20",
+   "display_name": "pkg-20",
+   "family": "software",
+   "item_id": "cand:missing_component:fc7fe9c1",
+   "location": {
+    "line_end": 21,
+    "line_start": 21,
+    "path": "reqs/r6.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-21",
+   "display_name": "pkg-21",
+   "family": "software",
+   "item_id": "cand:missing_component:a9f68157",
+   "location": {
+    "line_end": 22,
+    "line_start": 22,
+    "path": "reqs/r0.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-22",
+   "display_name": "pkg-22",
+   "family": "software",
+   "item_id": "cand:missing_component:44bac339",
+   "location": {
+    "line_end": 23,
+    "line_start": 23,
+    "path": "reqs/r1.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-23",
+   "display_name": "pkg-23",
+   "family": "software",
+   "item_id": "cand:missing_component:0b5000b1",
+   "location": {
+    "line_end": 24,
+    "line_start": 24,
+    "path": "reqs/r2.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-24",
+   "display_name": "pkg-24",
+   "family": "software",
+   "item_id": "cand:missing_component:601c218b",
+   "location": {
+    "line_end": 25,
+    "line_start": 25,
+    "path": "reqs/r3.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-25",
+   "display_name": "pkg-25",
+   "family": "software",
+   "item_id": "cand:missing_component:30994f80",
+   "location": {
+    "line_end": 26,
+    "line_start": 26,
+    "path": "reqs/r4.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-26",
+   "display_name": "pkg-26",
+   "family": "software",
+   "item_id": "cand:missing_component:16b21a88",
+   "location": {
+    "line_end": 27,
+    "line_start": 27,
+    "path": "reqs/r5.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-27",
+   "display_name": "pkg-27",
+   "family": "software",
+   "item_id": "cand:missing_component:a1a7dd9c",
+   "location": {
+    "line_end": 28,
+    "line_start": 28,
+    "path": "reqs/r6.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-28",
+   "display_name": "pkg-28",
+   "family": "software",
+   "item_id": "cand:missing_component:a23569cc",
+   "location": {
+    "line_end": 29,
+    "line_start": 29,
+    "path": "reqs/r0.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-29",
+   "display_name": "pkg-29",
+   "family": "software",
+   "item_id": "cand:missing_component:ccbc67e5",
+   "location": {
+    "line_end": 30,
+    "line_start": 30,
+    "path": "reqs/r1.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-30",
+   "display_name": "pkg-30",
+   "family": "software",
+   "item_id": "cand:missing_component:e6e2d858",
+   "location": {
+    "line_end": 31,
+    "line_start": 31,
+    "path": "reqs/r2.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-31",
+   "display_name": "pkg-31",
+   "family": "software",
+   "item_id": "cand:missing_component:f9249f91",
+   "location": {
+    "line_end": 32,
+    "line_start": 32,
+    "path": "reqs/r3.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-32",
+   "display_name": "pkg-32",
+   "family": "software",
+   "item_id": "cand:missing_component:1c1e6b32",
+   "location": {
+    "line_end": 33,
+    "line_start": 33,
+    "path": "reqs/r4.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-33",
+   "display_name": "pkg-33",
+   "family": "software",
+   "item_id": "cand:missing_component:2ba81303",
+   "location": {
+    "line_end": 34,
+    "line_start": 34,
+    "path": "reqs/r5.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-34",
+   "display_name": "pkg-34",
+   "family": "software",
+   "item_id": "cand:missing_component:904b3306",
+   "location": {
+    "line_end": 35,
+    "line_start": 35,
+    "path": "reqs/r6.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-35",
+   "display_name": "pkg-35",
+   "family": "software",
+   "item_id": "cand:missing_component:703eabc8",
+   "location": {
+    "line_end": 36,
+    "line_start": 36,
+    "path": "reqs/r0.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-36",
+   "display_name": "pkg-36",
+   "family": "software",
+   "item_id": "cand:missing_component:07b64c3e",
+   "location": {
+    "line_end": 37,
+    "line_start": 37,
+    "path": "reqs/r1.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-37",
+   "display_name": "pkg-37",
+   "family": "software",
+   "item_id": "cand:missing_component:e37582d3",
+   "location": {
+    "line_end": 38,
+    "line_start": 38,
+    "path": "reqs/r2.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-38",
+   "display_name": "pkg-38",
+   "family": "software",
+   "item_id": "cand:missing_component:b6d0d339",
+   "location": {
+    "line_end": 39,
+    "line_start": 39,
+    "path": "reqs/r3.txt"
+   },
+   "state": "contradicted"
+  },
+  {
+   "assertion_id": "assert-39",
+   "display_name": "pkg-39",
+   "family": "software",
+   "item_id": "cand:missing_component:612b5cdb",
+   "location": {
+    "line_end": 40,
+    "line_start": 40,
+    "path": "reqs/r4.txt"
+   },
+   "state": "contradicted"
+  }
+ ],
+ "page": {
+  "has_more": true,
+  "offset": 20,
+  "size": 20
+ },
+ "record_detail": null,
+ "related_total": 45,
+ "resolution": "multiple",
+ "schema": "opentrace.workbench.bom_related_checks/1",
+ "subject": {
+  "canonical_ref": {
+   "binding": {
+    "analysis_digest": "sha256:d1323ea3910906ab46cc1f77f8df3e018b9c28550270c9f33255005189615114",
+    "bundle_sha256": "946106b9c9b2c2c70cf571bd9437a84ec5ff7484a50247e3475984dac8895a6c",
+    "configuration": "config:fixture:f673dd289e88b82a",
+    "generation": 1,
+    "session_id": "00000000000000000000000000000001"
+   },
+   "record_class": "record",
+   "record_id": "inv:sbom-source"
+  },
+  "id": "inv:sbom-source",
+  "kind": "record"
+ }
+}

@@ -1,0 +1,545 @@
+{
+ "binding": {
+  "analysis_digest": "sha256:7d050127f8ba8ff570b1b29aea33d0fb5973383bf0c66fcd8db015d62f082139",
+  "bundle_sha256": "4dba614416171d880997057b1a38602700b2d2a71cfe4802a78d96e5fb9a9b00",
+  "configuration": "config:researcher-cpu-detector:sha256-1a287afaa3378a48",
+  "generation": 1,
+  "session_id": "00000000000000000000000000000001"
+ },
+ "filtered_total": 79,
+ "generation": 1,
+ "has_more": true,
+ "inputs": [
+  {
+   "inventory_id": "inv:cdxgen-cbom",
+   "kind": "inventory",
+   "sha256": "200ca6c7556c5d5ecd918061fc0a15077fe20d6e562ad746da7877ebd3c1b509",
+   "source_file": "inputs/frigate/raw/cdxgen-cbom.cdx.json",
+   "status": "not_loaded"
+  },
+  {
+   "inventory_id": "inv:cisco-aibom",
+   "kind": "inventory",
+   "sha256": "5d1a2885fbd35b67413c8651c84305fef81b9f136d6218b655bd68dedc4526b6",
+   "source_file": "inputs/frigate/raw/cisco-aibom.cdx.json",
+   "status": "not_loaded"
+  },
+  {
+   "inventory_id": "inv:syft-source-dir",
+   "kind": "inventory",
+   "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7",
+   "source_file": "inputs/frigate/raw/syft-source-dir.cdx.json",
+   "status": "loaded"
+  },
+  {
+   "kind": "source_declarations",
+   "repository": "https://github.com/blakeblackshear/frigate",
+   "requirement_files": 9,
+   "requirement_files_loaded": 9,
+   "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+  }
+ ],
+ "items": [
+  {
+   "assertion_id": "dreq-types-peewee-5c986a69",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:6df16cbe",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-dev.txt:4",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "types-peewee (wildcard_pin) declared at docker/main/requirements-dev.txt:4 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-aiofiles-1dd33f89",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:0bd313c8",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:1",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "aiofiles (wildcard_pin) declared at docker/main/requirements-wheels.txt:1 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-aiohttp-6a47c41f",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:b81f0c4f",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:4",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "aiohttp (wildcard_pin) declared at docker/main/requirements-wheels.txt:4 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-appdirs-d7b4b588",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:f1c36ea5",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:61",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "appdirs (wildcard_pin) declared at docker/main/requirements-wheels.txt:61 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-argcomplete-3f6e67f8",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:d7466742",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:62",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "argcomplete (wildcard_pin) declared at docker/main/requirements-wheels.txt:62 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-click-0ac4ff98",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:50f13ccf",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:2",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "click (wildcard_pin) declared at docker/main/requirements-wheels.txt:2 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-contextlib2-b996d713",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:810ec59d",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:63",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "contextlib2 (wildcard_pin) declared at docker/main/requirements-wheels.txt:63 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-cryptography-a1a1658d",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:db96be05",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:11",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "cryptography (wildcard_pin) declared at docker/main/requirements-wheels.txt:11 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-distlib-b038f139",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:7cc3d55f",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:64",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "distlib (wildcard_pin) declared at docker/main/requirements-wheels.txt:64 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-fastapi-7657fae2",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:78d52e27",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:7",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "fastapi (wildcard_pin) declared at docker/main/requirements-wheels.txt:7 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-faster-whisper-d531bef5",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:11958881",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:79",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "faster-whisper (wildcard_pin) declared at docker/main/requirements-wheels.txt:79 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-filelock-26619435",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:67be7754",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:65",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "filelock (wildcard_pin) declared at docker/main/requirements-wheels.txt:65 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-future-1573185b",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:d334da41",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:66",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "future (wildcard_pin) declared at docker/main/requirements-wheels.txt:66 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-google-genai-7a98f9fb",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:2ed57684",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:50",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "google-genai (wildcard_pin) declared at docker/main/requirements-wheels.txt:50 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-importlib-metadata-af923de5",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:923983f1",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:67",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "importlib-metadata (wildcard_pin) declared at docker/main/requirements-wheels.txt:67 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-importlib-resources-d4785497",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:edc4257a",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:68",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "importlib-resources (wildcard_pin) declared at docker/main/requirements-wheels.txt:68 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-joserfc-cbd79f69",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:2be856fd",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:10",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "joserfc (wildcard_pin) declared at docker/main/requirements-wheels.txt:10 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-librosa-ab89a6d1",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:2a406c52",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:80",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "librosa (wildcard_pin) declared at docker/main/requirements-wheels.txt:80 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-markupsafe-8aa13811",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:55a9c687",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:13",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "markupsafe (wildcard_pin) declared at docker/main/requirements-wheels.txt:13 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-memray-010898c2",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:0f681d0f",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:83",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "memray (wildcard_pin) declared at docker/main/requirements-wheels.txt:83 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-netaddr-2baf7270",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:01f9483a",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:69",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "netaddr (wildcard_pin) declared at docker/main/requirements-wheels.txt:69 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-netifaces-c1ebf9b3",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:811f9c88",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:70",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "netifaces (wildcard_pin) declared at docker/main/requirements-wheels.txt:70 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-norfair-5b34d1ae",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:a6e0b740",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:34",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "norfair (wildcard_pin) declared at docker/main/requirements-wheels.txt:34 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-numpy-e492595b",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:5adaa766",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:40",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "numpy (wildcard_pin) declared at docker/main/requirements-wheels.txt:40 has no record in inv:syft-source-dir"
+  },
+  {
+   "assertion_id": "dreq-ollama-a5e8d3f3",
+   "bom": {
+    "inventory_id": "inv:syft-source-dir",
+    "kind": "sbom",
+    "label": "syft 1.51.1",
+    "sha256": "8ee39ed7f937158ecc782d5839608079f1750dc9855212c54035b596e03513e7"
+   },
+   "candidate_id": "cand:missing_component:254607c5",
+   "category": "missing_component",
+   "category_label": "Missing component",
+   "gap_class": "inventory_coverage_gap",
+   "has_evidence": true,
+   "location": "docker/main/requirements-wheels.txt:51",
+   "rule_id": "inventory_coverage.requirement_represented/1",
+   "state": "contradicted",
+   "state_label": "Not represented in the BOM",
+   "title": "ollama (wildcard_pin) declared at docker/main/requirements-wheels.txt:51 has no record in inv:syft-source-dir"
+  }
+ ],
+ "limit": 25,
+ "notes": [
+  "A candidate is a hypothesis generated by set comparison; its verdict is the finding of the assertion it names.",
+  "Unknown coverage is a collection or parsing task, not a defect. Missing evidence is never turned into a contradiction.",
+  "Only requirement declarations compared with the selected SBOM are discovered in this build; models, cryptographic call sites, dependency edges and document structure are not."
+ ],
+ "offset": 0,
+ "ported_scope": [
+  "requirement_declarations_vs_sbom"
+ ],
+ "status": "compared",
+ "totals": {
+  "by_category": {
+   "invalid_reference": 0,
+   "missing_bom_document": 0,
+   "missing_component": 69,
+   "missing_connection": 0,
+   "unknown_coverage": 10
+  },
+  "by_state": {
+   "contradicted": 69,
+   "unknown_coverage": 4,
+   "unverifiable": 6
+  },
+  "candidates": 79
+ }
+}

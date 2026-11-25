@@ -1,0 +1,117 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "crypto/algorithm/md5",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.113549.2.5"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.md5 in ModelConfig.compute_model_hash",
+            "line": 215,
+            "location": "frigate/detectors/detector_config.py",
+            "offset": 31
+          },
+          {
+            "additionalContext": "hashlib.md5 in ModelConfig.compute_model_hash",
+            "line": 218,
+            "location": "frigate/detectors/detector_config.py",
+            "offset": 28
+          }
+        ]
+      },
+      "name": "md5",
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "crypto/algorithm/sha256",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm",
+        "oid": "2.16.840.1.101.3.4.2.1"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.pbkdf2_hmac in hash_password",
+            "line": 374,
+            "location": "frigate/api/auth.py",
+            "offset": 14
+          },
+          {
+            "additionalContext": "hashlib.sha256 in profile",
+            "line": 813,
+            "location": "frigate/api/auth.py",
+            "offset": 20
+          }
+        ]
+      },
+      "name": "sha256",
+      "type": "cryptographic-asset"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "incomplete",
+      "assemblies": [
+        "crypto/algorithm/md5",
+        "crypto/algorithm/sha256"
+      ]
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "subject",
+      "name": "https://github.com/blakeblackshear/frigate",
+      "type": "application",
+      "version": "cfa08c56b23d23280c3d0a218e5a43182c97445b"
+    },
+    "properties": [
+      {
+        "name": "bombridge:label",
+        "value": "BOMBridge experimental source-derived crypto inventory"
+      },
+      {
+        "name": "bombridge:extraction-method",
+        "value": "python-ast call-site detection of hashlib; not validated against any standard"
+      },
+      {
+        "name": "bombridge:scope-listing-sha256",
+        "value": "598a638f054708b323be8aba9aa59cce7ee3a11d9df247e098fdb3bb3d7b414e"
+      },
+      {
+        "name": "bombridge:files-parsed",
+        "value": "340"
+      },
+      {
+        "name": "bombridge:parse-errors",
+        "value": "[]"
+      },
+      {
+        "name": "bombridge:observed-not-inventoried",
+        "value": "[{\"file\": \"frigate/api/auth.py\", \"line\": 10, \"module\": \"secrets\"}, {\"file\": \"frigate/api/notification.py\", \"line\": 9, \"module\": \"cryptography.hazmat.primitives\"}, {\"file\": \"frigate/app.py\", \"line\": 5, \"module\": \"secrets\"}]"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "author": "BOMBridge (this repository)",
+          "name": "BOMBridge experimental source-derived crypto inventory",
+          "type": "application",
+          "version": "0.1"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:3ede1e3a-b0d4-5676-9709-62a917b11c00",
+  "specVersion": "1.6",
+  "version": 1
+}

@@ -1,0 +1,783 @@
+{
+ "exclusions": "everything outside included_paths (no .git, no untracked or environment files)",
+ "file_count": 153,
+ "files": [
+  {
+   "bytes": 12756,
+   "path": "docker/main/Dockerfile",
+   "sha256": "183add624b4c32d594a6b89be5dc0971c49a3e910b3941ca0693d7b0ec490b37"
+  },
+  {
+   "bytes": 1951,
+   "path": "docker/main/build_intel_media_driver.sh",
+   "sha256": "f7541c62bee4dd7bbd2f946c4425a0516fa20cfc69ca30ec0afd86c0b868d9b9"
+  },
+  {
+   "bytes": 3078,
+   "path": "docker/main/build_nginx.sh",
+   "sha256": "b307531f9c0c37ea960abde82e4da90f2ab8674d2ed8453d7290eaae343d6aaa"
+  },
+  {
+   "bytes": 4243,
+   "path": "docker/main/build_ov_model.py",
+   "sha256": "6c1bdb3f335bff7c65aa0136f3d794acc39e7e31a6927e57a2d6d2d86acfeda2"
+  },
+  {
+   "bytes": 1483,
+   "path": "docker/main/build_pysqlite3.sh",
+   "sha256": "a3b9f7f32c71bea34ccd4f8d5d4a35941331e6b6a66ef7a2e7d3948c22b0da1a"
+  },
+  {
+   "bytes": 1005,
+   "path": "docker/main/build_sqlite_vec.sh",
+   "sha256": "829d5307105bd16fc933288ece886971cdccefa8975df4689ed1f363c7a66b6c"
+  },
+  {
+   "bytes": 271,
+   "path": "docker/main/fake_frigate_run",
+   "sha256": "683ccd20e674efd86b7aef8f830b38ff6628409298e8994db6a3de3a942d3ddf"
+  },
+  {
+   "bytes": 8727,
+   "path": "docker/main/install_deps.sh",
+   "sha256": "588294a13be4f3241df3c2d2e70d10d381e41e7a62f08708b4ef495b65240c4b"
+  },
+  {
+   "bytes": 476,
+   "path": "docker/main/install_hailort.sh",
+   "sha256": "180a66e42e286a9c16f3fc3f9f29cde1a16bebde6d8ffb95d784da43db5c22c9"
+  },
+  {
+   "bytes": 1064,
+   "path": "docker/main/install_memryx.sh",
+   "sha256": "f95d81a6b5d6a8e96690eb7c2c6154512f21c7fd0571f1ab96e45054bec6b4d4"
+  },
+  {
+   "bytes": 504,
+   "path": "docker/main/install_s6_overlay.sh",
+   "sha256": "26b6b31ddcd868130323882a00cfba1c3decb80d2de8561e803288dadcee3f18"
+  },
+  {
+   "bytes": 413,
+   "path": "docker/main/install_tempio.sh",
+   "sha256": "f6b9f2a08bec77229b4bace860c3687a16951ec029df135d45c8598f575d6a9a"
+  },
+  {
+   "bytes": 48,
+   "path": "docker/main/requirements-dev.txt",
+   "sha256": "fa2c13dae315506d3afda9c0aa25436867fcb7f0b4186553c3ee7bb64728e85f"
+  },
+  {
+   "bytes": 27,
+   "path": "docker/main/requirements-ov.txt",
+   "sha256": "7ab93a268ab269b1034d07c243ff22b3dc80a89b1b308de37e11d5184f186d95"
+  },
+  {
+   "bytes": 2021,
+   "path": "docker/main/requirements-wheels.txt",
+   "sha256": "7c60b79abb0dade8f167e21ab3af4a442d601a27f7370838e6317f452495bd20"
+  },
+  {
+   "bytes": 23,
+   "path": "docker/main/requirements.txt",
+   "sha256": "dbd92a49d51cea7d79ab49fda674b8a4a9ab9e72133128808fb0e5e82d146508"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/dependencies.d/nginx",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 1024,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/finish",
+   "sha256": "e2814500c4365c17d01de06066d5fe58e8820a115930250a6e4e829826582d9a"
+  },
+  {
+   "bytes": 13,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/producer-for",
+   "sha256": "340f09e2e6e3cf98f5c4b5369299af1eceb0f6a9d09d405a93d33811f6bc4230"
+  },
+  {
+   "bytes": 1529,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/run",
+   "sha256": "ecf745c416b872d231bf30f7da68c8313c62864e85ac24d23b4e7e71065f6333"
+  },
+  {
+   "bytes": 6,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/timeout-kill",
+   "sha256": "5372588733824ecf5744e694f5d12b57d33e19ff1fd8b88a7e723e7426eea890"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 9,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync-log/consumer-for",
+   "sha256": "a5e2df602c83cef71e696e1c4a907288e242147a94b6000d7726650427d96535"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync-log/dependencies.d/log-prepare",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 18,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync-log/pipeline-name",
+   "sha256": "e644c00131c44b48041a00d8b597a55912d0518cf9c4bfcfbf0cdb957e5e7ee1"
+  },
+  {
+   "bytes": 98,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync-log/run",
+   "sha256": "0517be3ff69526f49f6d027d96121c5392b47bb262c7068175c77c7d3f811e19"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/certsync-log/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/dependencies.d/go2rtc",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 937,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/finish",
+   "sha256": "9d8378859981a5622b1eb71b124ddba01d369ef3a897eda13a052866139a91d2"
+  },
+  {
+   "bytes": 12,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/producer-for",
+   "sha256": "79255d81c1ecca36887a0cc92a09b2a99b52deac8ef28e25cf7068e28a3851b5"
+  },
+  {
+   "bytes": 915,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/run",
+   "sha256": "b6390b78a66e98bf9cf9a0d447ce63024f100f0aa9137663a66a752168223071"
+  },
+  {
+   "bytes": 7,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/timeout-kill",
+   "sha256": "7f7815524381b310ff5ef0995161dffd8ecea2a1b889f24242f2ec68411e47b0"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate-log/consumer-for",
+   "sha256": "a0f3bcb605d857cd48c3eec548447a18440bd932fab5d284132f7f377813cb10"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate-log/dependencies.d/log-prepare",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 17,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate-log/pipeline-name",
+   "sha256": "ff38b3d4e98a4848ac8a39fab3a0bd2de3e63cb3469b1e0b3d16bc764db1d9e6"
+  },
+  {
+   "bytes": 97,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate-log/run",
+   "sha256": "0b31b8a0ea0c8fd9c33d2842d7ba5f2bf8790f411301fa633c9f589035fd0ffb"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/frigate-log/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/dependencies.d/prepare",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 355,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/finish",
+   "sha256": "260d54c4ba4b7d11885369a54a494a78aed4e93c1abd5412559e467f0cecdced"
+  },
+  {
+   "bytes": 11,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/producer-for",
+   "sha256": "146058a890412027a27b7dc36556a03efa985dbf573048e6fba48df6f89661ae"
+  },
+  {
+   "bytes": 4460,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/run",
+   "sha256": "3cada229a9d4b2922d6f6537ec36e5e61354abd69cb075421d7471eba9c9df86"
+  },
+  {
+   "bytes": 6,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/timeout-kill",
+   "sha256": "5372588733824ecf5744e694f5d12b57d33e19ff1fd8b88a7e723e7426eea890"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/dependencies.d/go2rtc",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 367,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/finish",
+   "sha256": "79d1bb9bd310f602a17c03d27bc1716aedd5b184cc41e104aa65014a13350515"
+  },
+  {
+   "bytes": 11,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/producer-for",
+   "sha256": "146058a890412027a27b7dc36556a03efa985dbf573048e6fba48df6f89661ae"
+  },
+  {
+   "bytes": 836,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/run",
+   "sha256": "900349abcba3ce7fba0123574d66d2363ec3ff5bf7e8e8a59c80951f93643e30"
+  },
+  {
+   "bytes": 5,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/timeout-kill",
+   "sha256": "84b9399ba1ce23f356e882a473805faf9794dc028784335029fadc1a74909339"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-healthcheck/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 26,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-log/consumer-for",
+   "sha256": "a4b36a40ec01aa211ea9a6523ee5798553f79f7cf1e229118243697c19c2e7b8"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-log/dependencies.d/log-prepare",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 16,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-log/pipeline-name",
+   "sha256": "62cc5f977c6582e410e2292b37c789664c4abc63dcecb3ab27a0348990ce679a"
+  },
+  {
+   "bytes": 96,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-log/run",
+   "sha256": "7d810a1ebb8668f4284cf41b18a918dbc7b7c5f0886456f2f068c1fa6f758c5d"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/go2rtc-log/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/log-prepare/dependencies.d/base",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 305,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/log-prepare/run",
+   "sha256": "221f7af73886a0ce861873071380fee849e32f9b935c1e15c4cf368d823f24a5"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/log-prepare/type",
+   "sha256": "aab38fd7998987a22d44fda7822afcfa69d039d3ba02b1f707f064df64352217"
+  },
+  {
+   "bytes": 40,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/log-prepare/up",
+   "sha256": "5461ba9872f0bb030d850f511160161da11cbbe47ea164eb34941c05b2f6bb5c"
+  },
+  {
+   "bytes": 106,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/data/check",
+   "sha256": "8f019dd72b47c060f1751f1e49eb56dbba2a2d7455baa4ac98968b57d41710aa"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/dependencies.d/frigate",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 1021,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/finish",
+   "sha256": "b71a605223edfa8db09214c87b7a7575e3b45ca9fe02486ac258462bdfd4e2ca"
+  },
+  {
+   "bytes": 1,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/notification-fd",
+   "sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+  },
+  {
+   "bytes": 10,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/producer-for",
+   "sha256": "c6df150b4d70a37b938b659e84b1eb2a51c9ec9c1117fb1dbc5ca55ccc7a2f7b"
+  },
+  {
+   "bytes": 3174,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/run",
+   "sha256": "24790951f8ff897973fe30d48b9ee3d89b61c17abe47d4941d4749e870e1e707"
+  },
+  {
+   "bytes": 6,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/timeout-kill",
+   "sha256": "5372588733824ecf5744e694f5d12b57d33e19ff1fd8b88a7e723e7426eea890"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 6,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx-log/consumer-for",
+   "sha256": "ffd491252a3fbe057f2bfe4a01ae348276dbd4b639421a1608195437f1f52225"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx-log/dependencies.d/log-prepare",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 15,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx-log/pipeline-name",
+   "sha256": "7b84ff4f4db10c5db41a4d9835d5d84b1bcd4b242b72d8c8a5af57eb64deb1d5"
+  },
+  {
+   "bytes": 95,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx-log/run",
+   "sha256": "243315532ac8510b424c03a3ed5fced17c311f0d2cce63c65d478c0d4b496d41"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/nginx-log/type",
+   "sha256": "d0001a150b83f68f09004c5059045cb76a3f064eed4d42ce072bc3722c118006"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/prepare/dependencies.d/base",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 5707,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/prepare/run",
+   "sha256": "9dda8fc57af55d36e10218dad5897ec1c5298aa75e5ef409443c4bafe507f28c"
+  },
+  {
+   "bytes": 8,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/prepare/type",
+   "sha256": "aab38fd7998987a22d44fda7822afcfa69d039d3ba02b1f707f064df64352217"
+  },
+  {
+   "bytes": 36,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/prepare/up",
+   "sha256": "10279a2c9a55f91afe1e10023c5a3ef556907b9c926042e22f0532bc53636599"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/user/contents.d/certsync-pipeline",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/user/contents.d/frigate-pipeline",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/user/contents.d/go2rtc-pipeline",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 0,
+   "path": "docker/main/rootfs/etc/s6-overlay/s6-rc.d/user/contents.d/nginx-pipeline",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 928,
+   "path": "docker/main/rootfs/labelmap/coco-80.txt",
+   "sha256": "4aba1bf7742f364f2f2ca700a47eae9237807384c1a3448d8f8fcc48846673c0"
+  },
+  {
+   "bytes": 1054,
+   "path": "docker/main/rootfs/labelmap/coco.txt",
+   "sha256": "6884be1f4f35344c499f944a1c168a34d837f7f7578f203fba95b3ede42fac09"
+  },
+  {
+   "bytes": 690,
+   "path": "docker/main/rootfs/usr/local/ffmpeg/get_ffmpeg_path.py",
+   "sha256": "bf71a0c1f2aa74e69d4b74bd10587e51eb9c528abc24e684e54bb425bebc47d2"
+  },
+  {
+   "bytes": 7548,
+   "path": "docker/main/rootfs/usr/local/go2rtc/create_config.py",
+   "sha256": "4a94d28e5eb121d2a115117d99d66b368e5e97e1f3da4d681456c079c69e64cc"
+  },
+  {
+   "bytes": 1631,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/auth_location.conf",
+   "sha256": "048a9ba9d32a45e308ab62944891659c6aa89c8ad0c67b506f6e0034e7ec276a"
+  },
+  {
+   "bytes": 1024,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/auth_request.conf",
+   "sha256": "3975471709c7745ca9cce5e86a506750deaa63b3de7467d8db70fbb210fa1b7c"
+  },
+  {
+   "bytes": 66,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/go2rtc_upstream.conf",
+   "sha256": "8cc24196844c573419fb29bab0ce389aeeb5203af08144108b5a9cbb23607ef8"
+  },
+  {
+   "bytes": 11226,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/nginx.conf",
+   "sha256": "563a6e4b5219b7d3a3b9d6992ebf1f5e1ac27b5be570be903a26fe5697d9a7fd"
+  },
+  {
+   "bytes": 893,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/proxy.conf",
+   "sha256": "160c946c95aefea86d4c337429b2e30cb0e8589e951d7ded96919440c8229371"
+  },
+  {
+   "bytes": 1416,
+   "path": "docker/main/rootfs/usr/local/nginx/conf/proxy_trusted_headers.conf",
+   "sha256": "ac3b698866ffe02c669d08465c480cefbaf1d9383c9b2db8229b5e013e251f72"
+  },
+  {
+   "bytes": 1732,
+   "path": "docker/main/rootfs/usr/local/nginx/get_nginx_settings.py",
+   "sha256": "b736ef973e44ce4f70c3ae686bec134faca50b78da8f33f51ec3e7255f3e0671"
+  },
+  {
+   "bytes": 525,
+   "path": "docker/main/rootfs/usr/local/nginx/templates/base_path.gotmpl",
+   "sha256": "633393f7845b3011015514f42b5aab33a1c69b293ed8edf3766e31f99bf40aea"
+  },
+  {
+   "bytes": 1452,
+   "path": "docker/main/rootfs/usr/local/nginx/templates/listen.gotmpl",
+   "sha256": "96c9603075adfcc5e17e336356e4d5943e3e41617ea1f17957f88fcdb1167b1e"
+  },
+  {
+   "bytes": 549,
+   "path": "frigate/config/__init__.py",
+   "sha256": "36625c350085be2a8affc1deafd1a06d05762391bef112d8ff8af710d4c248d9"
+  },
+  {
+   "bytes": 3781,
+   "path": "frigate/config/auth.py",
+   "sha256": "31ec3ca93710ddbf68028bd5c766a7899c4d9e2a32afafd23a71f48b42c18067"
+  },
+  {
+   "bytes": 772,
+   "path": "frigate/config/base.py",
+   "sha256": "c7fe67a09b7924d8f837bdfbbfc6e1c70e43bcd0ade2ea4f82fdaf17049c3b86"
+  },
+  {
+   "bytes": 608,
+   "path": "frigate/config/camera/__init__.py",
+   "sha256": "ef0b11b2a705a477b341804a63588437cbbc50ce29f07158ee66030cce3bec6a"
+  },
+  {
+   "bytes": 2022,
+   "path": "frigate/config/camera/audio.py",
+   "sha256": "d688a56027147701cbfef0ecdcc5c346f810ec06313970de200aa47ced25e88e"
+  },
+  {
+   "bytes": 3432,
+   "path": "frigate/config/camera/birdseye.py",
+   "sha256": "543ea69fdce71b149680a924de9d3ed60eb5f2c71d2dcf2239a7036a35336a7c"
+  },
+  {
+   "bytes": 12362,
+   "path": "frigate/config/camera/camera.py",
+   "sha256": "62db9eb9894c82985b9dad73d1006026b5929400c6bd5cee2c048a38ca522f8f"
+  },
+  {
+   "bytes": 3804,
+   "path": "frigate/config/camera/detect.py",
+   "sha256": "f88d382e483479e6569804c7788ef726806a5eec92481b6999850ab284627b55"
+  },
+  {
+   "bytes": 4690,
+   "path": "frigate/config/camera/ffmpeg.py",
+   "sha256": "3ac8fcb5e6f4d139e5c7063ca8ede1204bf99fa867f6909e54ed027362e6ee6c"
+  },
+  {
+   "bytes": 2117,
+   "path": "frigate/config/camera/genai.py",
+   "sha256": "e6d8393d128303e0788b2587be9aabab0bc318fe493a9830b6047c120947160d"
+  },
+  {
+   "bytes": 752,
+   "path": "frigate/config/camera/live.py",
+   "sha256": "3b287dee0fccdec0efb31bf3ab7af9fd2f4d2c3a4f509185c088cb1b1def0cba"
+  },
+  {
+   "bytes": 2981,
+   "path": "frigate/config/camera/mask.py",
+   "sha256": "e7f7a142255c445b16ddd81a1f03c96390b0d9eaef9eed86018df31e988db9c7"
+  },
+  {
+   "bytes": 3759,
+   "path": "frigate/config/camera/motion.py",
+   "sha256": "12906a1a93d6ee2dea2559a8d9fba165a285a7a3c725c6a1ab5fae28e1237d02"
+  },
+  {
+   "bytes": 1366,
+   "path": "frigate/config/camera/mqtt.py",
+   "sha256": "63b487587c0b35a641e5c891155d0c86d60ca08cd44fb0453251bf3890ab29e9"
+  },
+  {
+   "bytes": 964,
+   "path": "frigate/config/camera/notification.py",
+   "sha256": "f2c140cfbd72e27ed587207851161299e66cddfe825de48363efa9d0436ca235"
+  },
+  {
+   "bytes": 6830,
+   "path": "frigate/config/camera/objects.py",
+   "sha256": "8bb0abcffd5e0176ba89198274023b3f04061521e4fb5d1f61d403c732bc651e"
+  },
+  {
+   "bytes": 4952,
+   "path": "frigate/config/camera/onvif.py",
+   "sha256": "775e27c5499c3363ac3e471625e82403666615cb2ec20bd95cc8c8335a5823a7"
+  },
+  {
+   "bytes": 1495,
+   "path": "frigate/config/camera/profile.py",
+   "sha256": "08e4eea920fcfd30d12572949262aace357866d02c9323bba74edb72c501627d"
+  },
+  {
+   "bytes": 5751,
+   "path": "frigate/config/camera/record.py",
+   "sha256": "d717668d979fc46de90bc410ef9fce1bce822c56e1897e53456aa323d188e8e7"
+  },
+  {
+   "bytes": 8174,
+   "path": "frigate/config/camera/review.py",
+   "sha256": "bb296f1c9629f5961c5a69b149cdc9b4614ade8c62f65ee3aa59a46e7a0183fb"
+  },
+  {
+   "bytes": 2031,
+   "path": "frigate/config/camera/snapshots.py",
+   "sha256": "1998b9e023b884a3e3dbefc70b7c3a24bd9464ca62b3b8addd1d77c81c0524a6"
+  },
+  {
+   "bytes": 2090,
+   "path": "frigate/config/camera/timestamp.py",
+   "sha256": "fb88c694f116cd7404930c3dbafc6a00b9c1f2fc434ff9bbef0b23cd2e1d12a4"
+  },
+  {
+   "bytes": 872,
+   "path": "frigate/config/camera/ui.py",
+   "sha256": "7850700fabce14d1fa81eaea78cea524f78259c6778dfa96c369b658fbad9006"
+  },
+  {
+   "bytes": 6727,
+   "path": "frigate/config/camera/updater.py",
+   "sha256": "98cc0d8c58e662b887f80ebf5b7624dd3d8f1874b731685345d2f757c2bea710"
+  },
+  {
+   "bytes": 7323,
+   "path": "frigate/config/camera/zone.py",
+   "sha256": "57d0f27357b375de29d109f93d3ca88a168e42b4304a3056ccbe619038a031a3"
+  },
+  {
+   "bytes": 857,
+   "path": "frigate/config/camera_group.py",
+   "sha256": "4f12ba5001597ccc39112c6204bc7d831ffbd4c8411f7b6e3da0fa69431c8151"
+  },
+  {
+   "bytes": 15815,
+   "path": "frigate/config/classification.py",
+   "sha256": "fe8899b2e28106ddb1ab41422f4f81fe17300c7084803e2f4290091ff791cd8f"
+  },
+  {
+   "bytes": 49329,
+   "path": "frigate/config/config.py",
+   "sha256": "2d35ebfdcaf1ae87b14fbeedcea2705dbc76eb039eb795a61ea632855c899630"
+  },
+  {
+   "bytes": 379,
+   "path": "frigate/config/database.py",
+   "sha256": "fa947faa96924e99122bbbba915658edb3788e0576dc38cf667cf5755cafaf51"
+  },
+  {
+   "bytes": 4350,
+   "path": "frigate/config/env.py",
+   "sha256": "918ed8e330608cb16f31a841bcc04580ff17701465b89b9000e474a415fe73ff"
+  },
+  {
+   "bytes": 1289,
+   "path": "frigate/config/holder.py",
+   "sha256": "f14862840a104c5b14e572e5b901dac1bab09dd30bdb80f341bafc84b5558b0b"
+  },
+  {
+   "bytes": 918,
+   "path": "frigate/config/logger.py",
+   "sha256": "be67cde13fe69d0dc0f6ebb67bebc3cddfabf8d481de3f80881ecd9c6c19bbc6"
+  },
+  {
+   "bytes": 3007,
+   "path": "frigate/config/mqtt.py",
+   "sha256": "9f71bcc8662abfb53112a868231ab6146bf584ee575022337015ebfc73583e7b"
+  },
+  {
+   "bytes": 1967,
+   "path": "frigate/config/network.py",
+   "sha256": "ac2f933f53562b7928d07a49dc522b04ee9ebeb41520daca9655b777a6bf546f"
+  },
+  {
+   "bytes": 540,
+   "path": "frigate/config/profile.py",
+   "sha256": "3a9b8b13f4a09292623acb46cdf51152f50ad07e95eb77769130ebc6cfa4be16"
+  },
+  {
+   "bytes": 20233,
+   "path": "frigate/config/profile_manager.py",
+   "sha256": "a8dd100799feacaf7059df0159ab1517e71ec275279105398712ac2c0d463319"
+  },
+  {
+   "bytes": 2091,
+   "path": "frigate/config/proxy.py",
+   "sha256": "8c0b70026422fa210aa6bee89d7bafc9e7eaa16489baf60f18cbb498be5fc071"
+  },
+  {
+   "bytes": 1659,
+   "path": "frigate/config/telemetry.py",
+   "sha256": "be2378b863960abe4ae74a1dcf5cdc01af8bfa7943f444b71a13695f0cb331ac"
+  },
+  {
+   "bytes": 299,
+   "path": "frigate/config/tls.py",
+   "sha256": "cc68a496b904f58744f94df2b8fddba1be6b50e9abf4922b3a08d1bc72771e0a"
+  },
+  {
+   "bytes": 973,
+   "path": "frigate/config/ui.py",
+   "sha256": "fd0b6201c00b0e54e9d213d45532ba1083e9fb0c6ce1a300ce69cada5025bb0e"
+  },
+  {
+   "bytes": 605,
+   "path": "frigate/detectors/__init__.py",
+   "sha256": "c4eb4ae2534744acd1d95aa5c6dffebc2ad1ccc0163dfc8fbc73f961ad0d8ce2"
+  },
+  {
+   "bytes": 1854,
+   "path": "frigate/detectors/detection_api.py",
+   "sha256": "454266e22834bc455d2ae34032d5d19c760aa3d96359664d4f986b49d10e0f79"
+  },
+  {
+   "bytes": 24415,
+   "path": "frigate/detectors/detection_runners.py",
+   "sha256": "bb74708a0f3da0404afe72104a3aab79c655e68e3c0641b1425eeb7550d75d91"
+  },
+  {
+   "bytes": 8790,
+   "path": "frigate/detectors/detector_config.py",
+   "sha256": "cddb12c7c1df488aa633fc2cddc9afff469666b9e0bb580a7b763bf5b6854b17"
+  },
+  {
+   "bytes": 1013,
+   "path": "frigate/detectors/detector_types.py",
+   "sha256": "54cbdb078cc3bca2492189ad0915b0fd24a8d7113592225e478ba5f3eb922b99"
+  },
+  {
+   "bytes": 2237,
+   "path": "frigate/detectors/detector_utils.py",
+   "sha256": "187a910ad8db7d498e3a490f176620f39f98616bce13db3790233424ccd7e3dd"
+  },
+  {
+   "bytes": 0,
+   "path": "frigate/detectors/plugins/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "bytes": 3208,
+   "path": "frigate/detectors/plugins/axengine.py",
+   "sha256": "a7d3de43017db9da24ca7788d4c6dcda285cbfe9e157057cbeb61f4b910fa91d"
+  },
+  {
+   "bytes": 1526,
+   "path": "frigate/detectors/plugins/cpu_tfl.py",
+   "sha256": "59194a6ce433575ae97fa697991638a9555d17b7a7c1c0a369d18c35880b6419"
+  },
+  {
+   "bytes": 3532,
+   "path": "frigate/detectors/plugins/deepstack.py",
+   "sha256": "26a8e9e3385059241e12d7a6c38e578d1b7682b87993c1423b5a7d2301d48f34"
+  },
+  {
+   "bytes": 15966,
+   "path": "frigate/detectors/plugins/edgetpu_tfl.py",
+   "sha256": "e9ee6e152537472f54e4a3dec225d4a64ff1bfb6231e5a485ed926404eea7eca"
+  },
+  {
+   "bytes": 15464,
+   "path": "frigate/detectors/plugins/hailo8l.py",
+   "sha256": "8dd559f9b9645113e50ba9c8b935e097cb061ee2b1dccd840da8d8134f80573c"
+  },
+  {
+   "bytes": 34697,
+   "path": "frigate/detectors/plugins/memryx.py",
+   "sha256": "751c035d95b2f06a7a8282beffd6514ef9db89584106fced3c2b473c92c1d0de"
+  },
+  {
+   "bytes": 5058,
+   "path": "frigate/detectors/plugins/onnx.py",
+   "sha256": "7982fab3de44b1a08a388a0bf9bbbac723f1d582b1cbfa05209ac003e2c4f211"
+  },
+  {
+   "bytes": 9032,
+   "path": "frigate/detectors/plugins/openvino.py",
+   "sha256": "7748377a684a6f9c4b89eba667648846d48b72ea5c0e4d5c588d9f099ea096a4"
+  },
+  {
+   "bytes": 11754,
+   "path": "frigate/detectors/plugins/rknn.py",
+   "sha256": "0fb092ca7a6f8b9d44154159d9dc354cc45e0e83afd307705f813c466e6deb9d"
+  },
+  {
+   "bytes": 3741,
+   "path": "frigate/detectors/plugins/synaptics.py",
+   "sha256": "9372f5606be8720955709599f67e14c4d6c37e1065bd74c77fd73955ea243f4f"
+  },
+  {
+   "bytes": 1211,
+   "path": "frigate/detectors/plugins/teflon_tfl.py",
+   "sha256": "eb6308f90c3eddaa6f44fdc6a9b568d5900b5fcebbd7590be9d50f46ad2ceeec"
+  },
+  {
+   "bytes": 12876,
+   "path": "frigate/detectors/plugins/tensorrt.py",
+   "sha256": "77057c2e25e397979e5af1ed710ec2071a8942ba57ca1eaaa81df80155c8f1ac"
+  },
+  {
+   "bytes": 13233,
+   "path": "frigate/detectors/plugins/zmq_ipc.py",
+   "sha256": "a7196d7827a05e66ee28611ac963b4bcb16a6f851eb43a55d5a659cbb1b05018"
+  }
+ ],
+ "included_paths": [
+  "frigate/detectors",
+  "frigate/config",
+  "docker/main"
+ ],
+ "listing_sha256": "540af848448658a7589006c59c4f455c3b7e2aeef44d99d8f63525b4e9345d86",
+ "method": "git archive of the pinned revision restricted to the listed paths",
+ "repository": "https://github.com/blakeblackshear/frigate",
+ "revision": "cfa08c56b23d23280c3d0a218e5a43182c97445b",
+ "schema": "bombridge.scope-record/1",
+ "total_bytes": 453886,
+ "transformations": "none"
+}

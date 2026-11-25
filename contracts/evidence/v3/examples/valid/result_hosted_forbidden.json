@@ -1,0 +1,109 @@
+{
+  "artifacts": [],
+  "capture_set_id": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "claims": [
+    {
+      "claim_id": "t3.cl1",
+      "dimension": "inventory",
+      "evidence_ids": [
+        "t3.ev1"
+      ],
+      "explanation": "Left unknown.",
+      "proposition": "No hosted inventory was acquired.",
+      "status": "unknown",
+      "type": "hosted_inventory_recorded_unbound"
+    }
+  ],
+  "completed_at": "2026-10-14T12:00:01.000Z",
+  "context": {
+    "baseline_id": "baseline",
+    "build_scope": "static inventory; no build; no code execution",
+    "candidate_id": null,
+    "language": "go",
+    "observed_revision": null,
+    "repo_id": "github.com/modelcontextprotocol/go-sdk",
+    "requested_revision": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91"
+  },
+  "errors": [],
+  "evidence": [
+    {
+      "artifact_ref": {
+        "digest": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "media_type": "text/plain; charset=utf-8"
+      },
+      "collection_method": {
+        "argv_template": [
+          "hosted_sbom_scope",
+          "<bundle-manifest>"
+        ],
+        "output_artifact": "sha256:38eb8de4d5c72ffbe83edeaedf13770a696b51dec0e7c74a44edeaa7e290b92b",
+        "tool": "hosted_sbom_scope",
+        "tool_version": "evidence-specialist-b/i3"
+      },
+      "details": {
+        "acquisition_history": [
+          {
+            "state": "generate_requested"
+          },
+          {
+            "state": "forbidden"
+          }
+        ],
+        "created": null,
+        "creators": [],
+        "credential_class": "unauthenticated",
+        "default_branch_head_after": "ffffffffffffffffffffffffffffffffffffffff",
+        "default_branch_head_before": "ffffffffffffffffffffffffffffffffffffffff",
+        "document_binding": "unbound",
+        "document_comment": null,
+        "head_moved": false,
+        "package_count": 0,
+        "repo": "modelcontextprotocol/go-sdk",
+        "report_bytes": 0,
+        "requested_pin": "7c486efa8223d5f66af8cf7b2ac9bb04a1ee6b91",
+        "revision_binding": "unbound",
+        "spdx_version": null,
+        "state": "forbidden"
+      },
+      "dimension": "inventory",
+      "evidence_id": "t3.ev1",
+      "kind": "hosted_sbom_scope",
+      "limitations": [
+        "Declared inventory only."
+      ],
+      "locator": "hosted#scope",
+      "observation": "Hosted export not acquired: forbidden.",
+      "observed_at": "2026-10-14T12:00:01.000Z",
+      "scope": "static inventory at the pinned commit",
+      "subject": {
+        "indirect": false,
+        "module": "hosted",
+        "version": "scope"
+      }
+    }
+  ],
+  "kind": "result",
+  "missing_evidence": [
+    {
+      "dimension": "inventory",
+      "reason": "forbidden",
+      "requirement_id": "req-1"
+    }
+  ],
+  "producer": {
+    "capability_version": "3.0",
+    "dimensions_used": [
+      "inventory"
+    ],
+    "implementation": "go",
+    "operations_used": [
+      "github_sbom_import"
+    ],
+    "service_id": "evidence-specialist-b"
+  },
+  "run_id": "run-t3",
+  "schema_version": "3.0",
+  "status": "partial",
+  "task_id": "t3",
+  "warnings": []
+}
