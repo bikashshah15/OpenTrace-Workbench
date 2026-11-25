@@ -22,7 +22,7 @@ An advisory match does not show that vulnerable code runs. A source observation 
 python3 tools/start.py
 ```
 
-Open <http://127.0.0.1:8765/> (use `--port N` or `OPENTRACE_PORT` for another port). Stop it with `docker compose -p opentrace stop`.
+Open <http://127.0.0.1:8765/> (use `--port N` or `OPENTRACE_PORT` for another port). Select **Scan** to analyze a public GitHub repository, or use the header's **Demo ↗** to open the captured Frigate replay. Stop it with `docker compose -p opentrace stop`.
 
 The default `no-llm` profile starts the Workbench and an isolated scanner worker with no network. It ignores `opentrace.yml` and any inherited AI settings, so no model feature can switch on by accident. Optional live features are in [Optional live features](#optional-live-features).
 
@@ -32,7 +32,7 @@ If an OpenTrace stack already exists, `start.py` stops and prints the exact step
 
 This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, captured on 2026-11-23. It reads the saved artifacts and makes no scanner, OSV, GitHub or model call. It is **not** a fresh scan and **not** a reproduction of any benchmark.
 
-1. Open the Workbench, then click **Explore sample findings**.
+1. Open the Workbench, then click the header's **Demo ↗**.
 2. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The header chips show 1,861 component records, 4,569 declared dependency edges, 44 advisory groups and 97 items to review in BOM connections.
 3. Use the tabs under **Repository workbench**. Three examples follow, one per BOM.
 

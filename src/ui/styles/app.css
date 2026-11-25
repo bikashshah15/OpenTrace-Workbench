@@ -239,7 +239,6 @@
 #ot-home .nh-form-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:flex-start}
 #ot-home .nh-form-actions button{padding:12px 15px;border-radius:8px;font:600 13px/1.5 var(--sans);cursor:pointer;height:46px;flex:0 1 auto}
 #ot-home .nh-form-actions .button.primary{background:#1f4037;border:1px solid #1f4037;color:white}
-#ot-home #nh-sample{background:white;border:1px solid #bfd0c6;color:var(--teal)}
 #ot-home #ot-url-help,#ot-home #ot3-session-bar,#ot-home #ot3-ended-note{display:none}
 #ot-home .nh-hint{font-size:11px;color:var(--muted);font-weight:400}
 #ot-home #ot-url{height:46px;flex:none}
@@ -673,16 +672,12 @@ html[data-theme=dark] .ot-insp{--ot-insp-checked:#87cdbf;--ot-insp-reported:#99b
 @media (max-width:700px){.ot-scan-dialog-head,.ot-scan-dialog-body,.ot-scan-dialog-foot{padding-left:14px;padding-right:14px}}
 @media (prefers-reduced-motion:reduce){.ot-scan-dialog::backdrop{backdrop-filter:none}}
 
-/* UI-POLISH-01 (presentation only). 1) Homepage dark-mode form readability: the light-mode fields use a fixed white fill with ink text, which becomes pale-on-white
-   under the dark tokens. Dark overrides use the existing #ot-home theme tokens; light mode, layout and behaviour are unchanged. */
+/* UI-POLISH-01 (presentation only). Homepage dark-mode form readability: the light-mode fields use a fixed white fill with ink text, which becomes pale-on-white
+   under the dark tokens. Dark overrides use the existing #ot-home theme tokens. */
 html[data-theme=dark] #ot-home :is(#ot-url,#ot-commit){background:var(--bg);color:var(--ink);border-color:var(--muted);color-scheme:dark}
 html[data-theme=dark] #ot-home :is(#ot-url,#ot-commit)::placeholder{color:var(--muted);opacity:1}
 html[data-theme=dark] #ot-home :is(#ot-url,#ot-commit):focus{border-color:var(--teal);outline:3px solid var(--teal);outline-offset:2px}
 html[data-theme=dark] #ot-home :is(#ot-url,#ot-commit):disabled{background:var(--paper);color:var(--muted);border-color:var(--line);cursor:not-allowed}
-html[data-theme=dark] #ot-home #nh-sample{background:var(--bg);color:var(--teal);border-color:var(--muted)}
-html[data-theme=dark] #ot-home #nh-sample:hover:not(:disabled){background:var(--teal-light)}
-html[data-theme=dark] #ot-home #nh-sample:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-html[data-theme=dark] #ot-home #nh-sample:disabled{background:var(--paper);color:var(--muted);border-color:var(--line);cursor:not-allowed}
 html[data-theme=dark] #ot-home .nh-form-actions .button.primary:disabled{background:var(--paper);color:var(--muted);border-color:var(--line);cursor:not-allowed}
 
 /* 2) BOM icons, status chips and selected-row marker. Icons are decorative (aria-hidden) and inherit currentColor. */
@@ -711,6 +706,14 @@ html[data-theme=dark] .ot-bom8-row .ot-bom8-chip.muted{color:var(--muted)}
 /* UI-POLISH-01 correction (browser finding, light mode only): the existing "unavailable" amber and the selected-row accent measured 4.22:1 at 11px; darkened locally for the new chip / Selected mark. Dark mode unchanged. */
 html:not([data-theme=dark]) .ot-bom8-row .ot-bom8-chip.unavailable{color:color-mix(in srgb,rgb(180 83 9) 80%,black)}
 html:not([data-theme=dark]) .ot-bom8-row .ot-bom8-selmark,html:not([data-theme=dark]) .ot-bom8-row .ot-bom8-selmark span{color:color-mix(in srgb,var(--dep-selected) 70%,black)}
+/* Keep the full brand as a home control with visible keyboard focus. */
+.ot-home-brand{border:0;background:transparent;color:var(--ink);font:inherit;text-align:left;padding:4px;border-radius:5px;cursor:pointer}
+.ot-home-brand:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.sample-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.ot-mode-note{display:inline-flex;align-items:center;gap:5px;color:var(--amber);font:10px/1.45 var(--sans)}
+.ot-mode-note>span:first-child{font-size:14px;line-height:1}
+.ot-mode-note strong{font-weight:700}
+
 /* UI-EVIDENCE-STATUS-01: compact evidence-status strip under the outer graph tabs. Blue = inventory record, neutral dash = not run / loading, amber = incomplete or unavailable evidence. No green/red meaning. */
 .otev{--otev-doc:color-mix(in srgb,var(--dep-selected) 78%,black);--otev-warn:var(--amber);--otev-neutral:var(--muted);padding:10px 18px 2px;min-width:0}
 html[data-theme=dark] .otev{--otev-doc:var(--dep-selected);--otev-warn:var(--amber);--otev-neutral:var(--muted)}

@@ -69,10 +69,11 @@ test('Scan gate (FR-1): disabled while config is unknown/failed, in variants C a
 test('homepage: Scan replaces Review repository; disabled until config loads; the disclosure is mounted beneath the buttons only once config is known', () => {
   const unknown = renderAnalyze(initial());
   assert.match(unknown, /id="ot-scan"[^>]*disabled/); assert.equal(unknown.includes('Review repository'), false); assert.equal(unknown.includes('id="ot-disclosure"'), false);
-  assert.ok(unknown.includes('data-action="sample"'), 'the labelled sample path stays available');
+  assert.equal(unknown.includes('Explore sample findings'), false);
+  assert.equal((unknown.match(/<div class="nh-form-actions">([\s\S]*?)<\/div>/)?.[1].match(/<button\b/g) || []).length, 1, 'Scan is the only repository form action');
   const ok = renderAnalyze(loaded(A));
   assert.equal(/id="ot-scan"[^>]*disabled/.test(ok), false); assert.ok(ok.includes('id="ot-disclosure"') && ok.includes('data-variant="A"'));
-  assert.ok(ok.indexOf('id="nh-sample"') < ok.indexOf('id="ot-disclosure"'), 'Placement P: the block sits beneath the buttons');
+  assert.ok(ok.indexOf('id="ot-scan"') < ok.indexOf('id="ot-disclosure"'), 'Placement P: the block sits beneath Scan');
   const d = renderAnalyze(loaded({ enabled: false }));
   assert.ok(d.includes('data-variant="D"') && /id="ot-scan"[^>]*disabled/.test(d));
   const c = renderAnalyze(loaded({ enabled: true, isolation: { available: false, reason: 'probe failed' } }));

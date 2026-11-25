@@ -154,20 +154,21 @@ test('decorative SVGs in the BOM workspace are all aria-hidden', () => {
 });
 
 // ---------------------------------------------------------------- homepage form: markup preserved, dark overrides use theme tokens
-test('homepage inputs and sample button keep their markup, values and disabled behaviour', () => {
+test('homepage inputs and Scan action keep their markup, values and disabled behaviour', () => {
   const s = initial(); s.intake = { ...s.intake, url: 'https://github.com/acme/widget' };
   const html = renderAnalyze({ ...s, advanced: true, intake: { ...s.intake, manualSha: 'abc1234' } });
   assert.match(html, /<input id="ot-url" data-fk="url" type="url" placeholder="https:\/\/github.com\/owner\/repository"[^>]*value="https:\/\/github.com\/acme\/widget">/);
   assert.match(html, /<input class="ot-commit" id="ot-commit" data-fk="commit" placeholder="Paste a 7–40 character commit SHA"[^>]*value="abc1234">/);
-  assert.match(html, /<button type="button" id="nh-sample" data-action="sample">Explore sample findings<\/button>/);
+  assert.equal(html.includes('Explore sample findings'), false);
+  assert.equal((html.match(/<div class="nh-form-actions">([\s\S]*?)<\/div>/)?.[1].match(/<button\b/g) || []).length, 1, 'Scan is the only form action');
 });
 
 test('dark-mode homepage rules exist for text, placeholder, focus and disabled states, use theme tokens, and the light rule is untouched', () => {
   assert.match(CSS, /#ot-home #ot-url,#ot-home #ot-commit\{background:#fff;color:var\(--ink\);border:1px solid #bccdc2;/, 'light rule unchanged');
-  const dark = CSS.split('\n').filter((l) => /^html\[data-theme=dark\] #ot-home (:is\(#ot-url|#nh-sample|\.nh-form-actions)/.test(l));
-  assert.ok(dark.length >= 8);
+  const dark = CSS.split('\n').filter((l) => /^html\[data-theme=dark\] #ot-home (:is\(#ot-url|\.nh-form-actions)/.test(l));
+  assert.ok(dark.length >= 5);
   const joined = dark.join('\n');
-  for (const needle of [':is(#ot-url,#ot-commit){background:var(--bg);color:var(--ink)', '::placeholder{color:var(--muted)', ':focus{', ':disabled{', '#nh-sample{background:var(--bg);color:var(--teal)', '#nh-sample:disabled', '.button.primary:disabled']) assert.ok(joined.includes(needle), needle);
+  for (const needle of [':is(#ot-url,#ot-commit){background:var(--bg);color:var(--ink)', '::placeholder{color:var(--muted)', ':focus{', ':disabled{', '.button.primary:disabled']) assert.ok(joined.includes(needle), needle);
   assert.doesNotMatch(joined, /#fff\b|white|#[0-9a-f]{3,6}/i, 'dark overrides use theme tokens only');
 });
 
