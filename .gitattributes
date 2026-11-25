@@ -111,3 +111,5 @@ docs/BOMBRIDGE_ADAPTER.md export-ignore
 deploy/aws export-ignore
 deploy/local export-ignore
 deploy/university export-ignore
+
+src/core/opentrace_core/app/demo/frigate-3bca9b8/** -text
