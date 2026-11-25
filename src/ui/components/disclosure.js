@@ -8,6 +8,7 @@ import { esc } from '../lib/util.js';
 export const DISCLOSURE_HEADING = 'What happens when you press Scan';
 const NOT_SCORE = 'Results describe inventories and source evidence for that commit. They are not a security score.';
 const RETENTION = 'Session cleanup. OpenTrace keeps files and results locally for the session. End session attempts to delete them and reports whether cleanup succeeded.';
+const DEFAULT_AI_MODE = 'In default mode, Scan can show supported AI model references found in source code, but skips live AI-BOM generation and comparison against a newly generated AI inventory. The captured Frigate AI-BOM remains available through Demo ↗.';
 
 export function disclosureVariant(live) {
   if (!live || typeof live !== 'object') return null;
@@ -41,9 +42,10 @@ export function disclosureParagraphs(live) {
   const out = {
     A: [OPEN_A, ai, adv, RETENTION, NOT_SCORE],
     B: ['Live scanning is limited to a short list of pre-approved repositories right now. If your link is not on it, nothing is downloaded and the reason is shown.', `Approved repositories are read as data inside a sandbox (${iso.description}); the repository’s code is not installed, built or run.`, ai, adv, RETENTION, NOT_SCORE],
-    C: [`Scanning is unavailable: OpenTrace could not verify an isolation boundary (${iso.reason}). Nothing will be downloaded or scanned.`, '“Explore sample findings” opens a recorded Frigate case; it is not your repository.'],
-    D: ['Live scanning is not enabled on this service, so no repository is downloaded. “Explore sample findings” opens a recorded Frigate case; it is not your repository.'],
+    C: [`Scanning is unavailable: OpenTrace could not verify an isolation boundary (${iso.reason}). Nothing will be downloaded or scanned.`, 'Demo ↗ opens the captured Frigate replay; it is not your repository.'],
+    D: ['Live scanning is not enabled on this service, so no repository is downloaded. Demo ↗ opens the captured Frigate replay; it is not your repository.'],
   }[v];
+  if ((v === 'A' || v === 'B') && !(live.ai_bom && live.ai_bom.requested)) out.push(DEFAULT_AI_MODE);
   return out.filter(Boolean);
 }
 

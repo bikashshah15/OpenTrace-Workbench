@@ -796,7 +796,7 @@ const dispatch = (a) => store.dispatch(a);
 document.addEventListener('click', (ev) => {
   const t = ev.target.closest('[data-action],[data-nav],[data-info],[data-dep-node],[data-ctx],[data-node]'); if (!t) return;
   const s = store.get(); const d = s.workbench.perTab.dependencies;
-  if (t.dataset.nav) { dispatch({ type: 'NAVIGATE', to: t.dataset.nav }); if (t.dataset.nav === 'workbench') window.scrollTo(0, 0); return; }
+  if (t.dataset.nav) { dispatch({ type: 'NAVIGATE', to: t.dataset.nav }); if (t.dataset.nav === 'workbench' || t.id === 'ot-home-brand') window.scrollTo(0, 0); return; }
   if (t.dataset.info) { modal('More information', `<p>${esc(t.dataset.info)}</p>`); return; }
   if (t.dataset.depNode) { dispatch({ type: 'TAB_STATE', tab: 'dependencies', patch: { selection: t.dataset.depNode } }); if (t.dataset.depNode !== d.selection) loadDeps(); return; }
   if (t.dataset.ctx) { dispatch({ type: 'TAB_STATE', tab: 'contexts', patch: { selection: t.dataset.ctx } }); return; }
@@ -857,7 +857,6 @@ document.addEventListener('click', (ev) => {
     case 'adv-page': { const p = Math.max(0, d.advPage + Number(t.dataset.dir)); dispatch({ type: 'TAB_STATE', tab: 'dependencies', patch: { advPage: p } }); loadDeps(); break; }
     case 'read-advisory': readAdvisory(t.dataset.key, t.dataset.pkg); break;
     case 'drill': { if (t.dataset.dependencyContextId && !s.advanced) { dispatch({ type: 'DEP_CONTEXT', ctxId: t.dataset.dependencyContextId, path: t.dataset.path }); dispatch({ type: 'TAB_STATE', tab: 'dependencies', patch: { presentation: 'graph' } }); dispatch({ type: 'TAB', tab: 'dependencies' }); loadDepPage(); break; } dispatch({ type: 'TAB_STATE', tab: 'dependencies', patch: { context: t.dataset.path, focus: null, selection: null, offsets: [0, 0], history: [], search: '', advPage: 0, listQuery: '', listOffset: 0, dense: freshDense() } }); dispatch({ type: 'TAB', tab: 'dependencies' }); loadDeps(); break; }
-    case 'sample': $('ot-demo').click(); break;
     case 'preview': openPreview(t.dataset.name); break;
     case 'record': showRecord(t.dataset.id); break;
     case 'ask': explainSelection(); break;

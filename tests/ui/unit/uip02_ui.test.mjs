@@ -2,7 +2,6 @@
 // pure reducer: no browser, network or service. Run: node --test tests/ui/unit/
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { createStore, initial, freshWorkbench } from '../../../src/ui/lib/store.js';
@@ -315,7 +314,7 @@ test('homepage: reference content present, form ids kept, Scan submit (UIP-03), 
   for (const t of ['Know what\'s inside.', 'Verify what you trust.', 'Three inventories. One evidence trail.', 'A camera app\'s AI model', 'BOM comparison outcomes', 'See what the evidence supports.', 'Represented', 'Not represented', 'Coverage unknown', 'SBOM', 'CBOM', 'AI-BOM']) assert.ok(h.includes(t), t);
   for (const id of ['ot-form', 'ot-url', 'ot-error']) assert.ok(h.includes(`id="${id}"`), id);
   // UIP-03 (legacy assertion updated, recorded reason): the review step is replaced by one Scan action; it is disabled until the config says scanning is available.
-  assert.match(h, /id="ot-scan"[^>]*type="submit"|type="submit"[^>]*>Scan|id="ot-scan"/); assert.equal(h.includes('Review repository'), false); assert.ok(h.includes('data-action="sample"'));
+  assert.match(h, /id="ot-scan"[^>]*type="submit"|type="submit"[^>]*>Scan|id="ot-scan"/); assert.equal(h.includes('Review repository'), false); assert.equal(h.includes('Explore sample findings'), false);
   assert.equal(h.includes('Live analysis unavailable'), false);
   assert.equal(liveStatusText(null), 'Captured sample available');
   assert.match(liveStatusText({ enabled: true }), /Live scanning is enabled/);
@@ -323,9 +322,12 @@ test('homepage: reference content present, form ids kept, Scan submit (UIP-03), 
   assert.match(renderAnalyze({ ...initial(), live: { enabled: true } }), /Repository roots and \/tree\/reference links are supported\./);
 });
 
-test('the header and Workspace rail of index.html are byte-preserved', () => {
+test('the brand combines logo and name in an accessible home button; the Demo header action remains', () => {
   const t = readFileSync('src/ui/index.html', 'utf8'); const i = t.indexOf('<header class="topbar">'); const k = t.indexOf('</nav>') + 6;
-  assert.equal(createHash('sha256').update(t.slice(i, k)).digest('hex'), '614ec509f5e53a31f8b18038d135ea194654b881ff94723fe6c648b78b42c3e1');
+  const header = t.slice(i, k);
+  assert.match(header, /<button[^>]*class="brand ot-home-brand"[^>]*data-nav="analyze" aria-label="OpenTrace home"[^>]*><img[^>]*>\s*<span><strong>OpenTrace<\/strong><small>One repository\. Traceable evidence\.<\/small><\/span><\/button>/);
+  assert.match(header, /id="ot-demo">Demo ↗<\/button>/);
+  assert.match(readFileSync('src/ui/styles/app.css', 'utf8'), /\.ot-home-brand:focus-visible\{outline:3px solid var\(--teal\)/);
 });
 
 test('no inline style attribute is rendered (the app CSP is style-src self)', () => {

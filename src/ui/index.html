@@ -19,7 +19,7 @@
 <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 5a7 7 0 0 1 0 14Z" fill="currentColor"/></symbol>
 </defs></svg>
 <header class="topbar">
-  <div class="brand"><img class="brand-logo" src="/static/assets/opentrace-logo.png" width="44" height="44" alt=""><div><strong>OpenTrace</strong><small>One repository. Traceable evidence.</small></div></div>
+  <button type="button" class="brand ot-home-brand" id="ot-home-brand" data-nav="analyze" aria-label="OpenTrace home"><img class="brand-logo" src="/static/assets/opentrace-logo.png" width="44" height="44" alt=""><span><strong>OpenTrace</strong><small>One repository. Traceable evidence.</small></span></button>
   <div class="top-meta ot-top-links">
     <button type="button" id="ot-about">About</button>
     <button type="button" id="ot-demo">Demo ↗</button>
@@ -29,7 +29,7 @@
     <button type="button" class="icon-button" id="ot-theme" aria-label="Switch to dark theme"><svg width="18" height="18"><use href="#i-theme"/></svg></button>
   </div>
 </header>
-<div class="sample-bar"><span class="capture-label">LOCAL SERVICE</span><span id="ot-bar-text">Captured Frigate inventories + OSV query snapshot 2026-11-04. Offline preview · live repository acquisition is not connected.</span></div>
+<div class="sample-bar"><span class="capture-label">LOCAL SERVICE</span><span class="ot-mode-note"><span aria-hidden="true">ⓘ</span><strong>Mode</strong><span>In default mode, live AI-BOM generation and the Lab Assistant are off.</span></span><span id="ot-bar-text">Captured Frigate inventories + OSV query snapshot 2026-11-04. Offline preview · live repository acquisition is not connected.</span></div>
 <div class="shell ot-shell">
   <nav class="rail ot-rail" aria-label="Workspace navigation">
     <span class="rail-label">Workspace</span>

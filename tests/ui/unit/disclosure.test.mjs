@@ -1,4 +1,4 @@
-// UIP-D08 copy rev. 3: exact approved text per variant, selected only from the raw /api/config live block.
+// UIP-D08 disclosure copy selected only from the raw /api/config live block.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -9,6 +9,7 @@ const REPO = 'Repository scan. OpenTrace pins your GitHub link to one commit. Th
 const ADV = 'Advisory lookup. When enabled, OpenTrace sends OSV only the ecosystem, name, and exact version of eligible lockfile dependencies.';
 const CLEANUP = 'Session cleanup. OpenTrace keeps files and results locally for the session. End session attempts to delete them and reports whether cleanup succeeded.';
 const NOSCORE = 'Results describe inventories and source evidence for that commit. They are not a security score.';
+const DEFAULT_AI_MODE = 'In default mode, Scan can show supported AI model references found in source code, but skips live AI-BOM generation and comparison against a newly generated AI inventory. The captured Frigate AI-BOM remains available through Demo ↗.';
 const adv = { enabled: true, host: 'api.osv.dev', sends: 'the ecosystem, package name and version of each lockfile entry' };
 
 test('variants are chosen only from the live block; nothing before config loads', () => {
@@ -21,8 +22,8 @@ test('variants are chosen only from the live block; nothing before config loads'
 });
 
 test('approved text, variant A', () => {
-  assert.deepEqual(disclosureParagraphs(live()), [REPO, 'No advisory lookup is made.', CLEANUP, NOSCORE]);
-  assert.deepEqual(disclosureParagraphs(live({ advisories: adv })), [REPO, ADV, CLEANUP, NOSCORE], 'order: repository scan, advisory lookup, session cleanup');
+  assert.deepEqual(disclosureParagraphs(live()), [REPO, 'No advisory lookup is made.', CLEANUP, NOSCORE, DEFAULT_AI_MODE]);
+  assert.deepEqual(disclosureParagraphs(live({ advisories: adv })), [REPO, ADV, CLEANUP, NOSCORE, DEFAULT_AI_MODE], 'order: repository scan, advisory lookup, session cleanup');
 });
 
 test('advisory parser unavailable: no query claim, the unavailability is stated', () => {
@@ -40,21 +41,24 @@ test('approved text, variant B', () => {
   const p = disclosureParagraphs(live({ policy: { effective: 'allowlist' } }));
   assert.equal(p[0], 'Live scanning is limited to a short list of pre-approved repositories right now. If your link is not on it, nothing is downloaded and the reason is shown.');
   assert.equal(p[1], 'Approved repositories are read as data inside a sandbox (a gVisor sandbox); the repository’s code is not installed, built or run.');
-  assert.deepEqual(p.slice(2), ['No advisory lookup is made.', CLEANUP, NOSCORE]);
-  assert.equal(p.length, 5);
-  assert.deepEqual(disclosureParagraphs(live({ policy: { effective: 'allowlist' }, advisories: adv })).slice(2), [ADV, CLEANUP, NOSCORE]);
+  assert.deepEqual(p.slice(2), ['No advisory lookup is made.', CLEANUP, NOSCORE, DEFAULT_AI_MODE]);
+  assert.equal(p.length, 6);
+  assert.deepEqual(disclosureParagraphs(live({ policy: { effective: 'allowlist' }, advisories: adv })).slice(2), [ADV, CLEANUP, NOSCORE, DEFAULT_AI_MODE]);
 });
 
 test('approved text, variant C never mentions a sandbox or container; no advisory line (nothing is scanned, so nothing is sent)', () => {
   const c = live({ isolation: { available: false, reason: 'no isolation provider configured' } });
   const p = disclosureParagraphs(c);
-  assert.deepEqual(p, ['Scanning is unavailable: OpenTrace could not verify an isolation boundary (no isolation provider configured). Nothing will be downloaded or scanned.', '“Explore sample findings” opens a recorded Frigate case; it is not your repository.']);
+  assert.deepEqual(p, ['Scanning is unavailable: OpenTrace could not verify an isolation boundary (no isolation provider configured). Nothing will be downloaded or scanned.', 'Demo ↗ opens the captured Frigate replay; it is not your repository.']);
   assert.equal(/sandbox|container/i.test(p.join(' ')), false);
   assert.equal(disclosureParagraphs({ ...c, advisories: adv }).length, 2);
+  assert.equal(p.includes(DEFAULT_AI_MODE), false);
 });
 
 test('approved text, variant D', () => {
-  assert.deepEqual(disclosureParagraphs({ enabled: false }), ['Live scanning is not enabled on this service, so no repository is downloaded. “Explore sample findings” opens a recorded Frigate case; it is not your repository.']);
+  const p = disclosureParagraphs({ enabled: false });
+  assert.deepEqual(p, ['Live scanning is not enabled on this service, so no repository is downloaded. Demo ↗ opens the captured Frigate replay; it is not your repository.']);
+  assert.equal(p.includes(DEFAULT_AI_MODE), false);
 });
 
 test('rendering: heading verbatim, text escaped, no deletion promise (mounted by UIP-03 in the intake only)', () => {
@@ -71,7 +75,7 @@ test('rendering: heading verbatim, text escaped, no deletion promise (mounted by
 const aiBom = (o = {}) => ({ requested: true, available: true, reason: null, provider: 'openai', host: 'api.openai.com', model: 'gpt-6-luna', sends: 'repository file names and code excerpts chosen by the classifier', ...o });
 test('UIP-07C A2: AI paragraph and qualified isolation sentence only when ai_bom.requested', () => {
   const base = disclosureParagraphs(live());
-  assert.equal(base.length, 4, 'no ai_bom block: unchanged');
+  assert.equal(base.length, 5, 'no ai_bom block: unchanged');
   assert.deepEqual(disclosureParagraphs(live({ ai_bom: aiBom({ requested: false }) })), base, 'not requested: unchanged');
   const p = disclosureParagraphs(live({ ai_bom: aiBom() }));
   assert.equal(p.length, 5);
@@ -79,11 +83,14 @@ test('UIP-07C A2: AI paragraph and qualified isolation sentence only when ai_bom
   const ai = 'AI inventory. When available and enabled, Cisco AI-BOM sends selected file names and code excerpts to the configured LLM provider through a restricted gateway. Repository text and configuration can influence what it selects. OpenTrace explains if this step is skipped.';
   assert.equal(p[1], ai);
   for (const re of [/configured LLM provider/, /restricted gateway/, /file names and code excerpts/]) assert.match(p[1], re);
-  assert.deepEqual(p.slice(2), base.slice(1), 'order: repository scan, AI inventory, advisory lookup, session cleanup');
+  assert.deepEqual(p.slice(2), base.slice(1, -1), 'order: repository scan, AI inventory, advisory lookup, session cleanup');
+  assert.equal(p.includes(DEFAULT_AI_MODE), false, 'requested AI-BOM uses the provider disclosure instead');
   assert.equal(disclosureParagraphs(live({ ai_bom: aiBom(), advisories: adv })).indexOf(ADV), 2);
-  assert.equal(disclosureParagraphs(live({ ai_bom: aiBom({ available: false, reason: 'isolation_unavailable' }) }))[1], ai + ' It is unavailable right now.');
-  assert.equal(disclosureParagraphs(live({ isolation: { available: false, reason: 'x' }, ai_bom: aiBom() })).some((x) => x.includes('AI inventory')), false, 'variant C never mentions it');
-  assert.equal(disclosureParagraphs({ enabled: false, ai_bom: aiBom() }).some((x) => x.includes('AI inventory')), false, 'variant D never mentions it');
+  const unavailable = disclosureParagraphs(live({ ai_bom: aiBom({ available: false, reason: 'isolation_unavailable' }) }));
+  assert.equal(unavailable[1], ai + ' It is unavailable right now.');
+  assert.equal(unavailable.includes(DEFAULT_AI_MODE), false, 'requested but unavailable AI-BOM retains its provider availability disclosure');
+  assert.equal(disclosureParagraphs(live({ isolation: { available: false, reason: 'x' }, ai_bom: aiBom() })).some((x) => x.startsWith('AI inventory.')), false, 'variant C never shows provider disclosure');
+  assert.equal(disclosureParagraphs({ enabled: false, ai_bom: aiBom() }).some((x) => x.startsWith('AI inventory.')), false, 'variant D never shows provider disclosure');
   const h = renderDisclosure(live({ ai_bom: aiBom({ model: '<b>m</b>', host: 'h.example' }) }));
   assert.ok(!h.includes('<b>m</b>') && !h.includes('h.example') && !h.includes('gpt-6'), 'the fixed wording does not interpolate provider config');
 });

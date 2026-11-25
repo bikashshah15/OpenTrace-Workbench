@@ -42,7 +42,7 @@ If `py -3` is unavailable, use `python tools/start.py` only when `python --versi
 
 If you previously cloned OpenTrace on Windows, clone into a new folder to ensure Git checks out the bundled Frigate evidence with its original line endings.
 
-Open <http://127.0.0.1:8765/> and click **Explore sample findings** to open the recorded Frigate case. Stop the stack with `docker compose -p opentrace stop`.
+Open <http://127.0.0.1:8765/>. Select **Scan** to analyze a public GitHub repository, or use the header’s **Demo ↗** control to open the recorded Frigate case. Stop the stack with `docker compose -p opentrace stop`.
 
 | Startup profile | What it enables | Requirements |
 |---|---|---|
@@ -55,7 +55,7 @@ Use `--port 8766` (or `OPENTRACE_PORT=8766`) if port 8765 is occupied. If Docker
 
 This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, captured on 2026-11-23. It reads the saved artifacts and makes no scanner, OSV, GitHub or model call. It is **not** a fresh scan and **not** a reproduction of any benchmark.
 
-1. Open the Workbench, then click **Explore sample findings**.
+1. Open the Workbench, then click the header’s **Demo ↗** control.
 2. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The header chips show 1,861 component records, 4,569 declared dependency edges, 44 advisory groups and 97 items to review in BOM connections.
 3. Use the tabs under **Repository workbench**. Three examples follow, one per BOM.
 
