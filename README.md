@@ -176,7 +176,7 @@ The launcher passes key-file paths, not secret contents, and mounts the key thro
 
 ## Layout
 
-`src/` runtime, `tests/`, `tools/`, `contracts/`, `evidence/` (test and renderer fixtures only), `deploy/`, `docs/`. The project was formerly called Open Ecosystem Change Lab.
+`src/` runtime, `tests/`, `tools/`, `contracts/`, `evidence/` (test and renderer fixtures only), `deploy/`, `docs/`.
 
 ## Acknowledgments
 
