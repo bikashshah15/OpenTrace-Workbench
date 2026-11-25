@@ -1,15 +1,28 @@
-# OpenTrace in Docker Compose (I6)
+# OpenTrace in Docker Compose
 
-Runs the Workbench and an isolated Linux scanner worker. Requires Docker Engine/Desktop with Compose v2 and outbound HTTPS from the
+Requires Docker Engine/Desktop with Compose v2. The recommended quickstart uses the project launcher, which starts the Workbench and an isolated Linux scanner worker:
+
+```bash
+python3 tools/start.py
+```
+
+Then open <http://127.0.0.1:8765/>. The launcher uses the default no-LLM profile and needs no API key or configuration file. It keeps named volumes when replacing containers.
+
+## Advanced setup: direct Docker Compose
+
+The direct commands below are for operators who need to control Compose options. They run from the repository root. The Workbench needs outbound HTTPS from the
 **Workbench** container (to `api.github.com`, `github.com` and, for advisory lookup, `api.osv.dev`). The worker has no network at all.
 
 ```bash
-docker compose up --build          # from the repository root; then open http://127.0.0.1:8765/
+docker compose up --build          # then open http://127.0.0.1:8765/
 OPENTRACE_PORT=8766 docker compose up --build              # another host port (the container uses the same port)
 OPENTRACE_LIVE_POLICY=allowlist docker compose up --build  # the Inspector-only pilot instead of the bounded policy
 OPENTRACE_LIVE_ADVISORIES=0 docker compose up --build      # opt out of the live OSV advisory lookup (on by default)
-docker compose down -v             # stop and delete the spool volumes
+docker compose down                # stop and remove containers/network; keep named volumes and their data
+docker compose down -v              # also remove this Compose project's named volumes and their data
 ```
+
+Use `down -v` only when you intend to delete volume data, including spool data and any persistent ledgers.
 
 Click **Demo** or **Explore sample findings** to open the bundled Frigate recording at commit `3bca9b867684`. It uses recorded artifacts and requires no scan or provider call.
 

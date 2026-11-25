@@ -6,12 +6,12 @@ This is a single-repository case study, not a benchmark. It shows what OpenTrace
 
 - **Subject:** [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e` (3,337 exported files).
 - **Original live acquisition:** 2026-11-23, run by the project team through the Workbench's live scan path (Docker, scanners in a no-network container). The advisory lookup ran at 19:44:41 UTC the same day.
-- **Evidence kept in the public export:** only this capture ([saved files](../src/core/opentrace_core/app/demo/frigate-3bca9b8/)). Earlier captures and development logs are not part of the public submission.
+- **Evaluation dataset:** the 2026-11-23 Frigate capture is the sole evaluation dataset ([saved files](../src/core/opentrace_core/app/demo/frigate-3bca9b8/)). Older bundled fixtures support software tests only; they are not evaluation data. Earlier captures and development logs are not part of the public submission.
 
 ## Method
 
 1. OpenTrace resolved the URL to the full commit SHA, fetched the source with git, and checked the tree.
-2. Scanners ran over the exported source: Syft 1.51.1 (SBOM, 0.9 s), cdxgen 12.9.0 with crypto and evidence options (CBOM, 12.9 s) and Cisco AI-BOM 1.10.1 (AI-BOM, about 8 minutes; the run was marked degraded, with 121 degraded results).
+2. Syft 1.51.1 (SBOM, 0.9 s) and cdxgen 12.9.0 with crypto and evidence options (CBOM, 12.9 s) ran in a separate worker with no network interface. Cisco AI-BOM 1.10.1 ran in a separate worker; its model-provider requests went through a gateway (AI-BOM, about 8 minutes; the run was marked degraded, with 121 degraded results).
 3. Static collectors added source observations: Python `hashlib` call sites, TLS settings, model-file URLs and inference-runtime imports.
 4. Exact lockfile versions (1,876) were looked up in OSV; 27 returned at least one advisory.
 5. A deterministic comparison step compared what the repository declares with what the SBOM, CBOM and AI-BOM recorded, and the Workbench presents the result with its limits.
@@ -41,7 +41,7 @@ Step-by-step instructions and evidence links are in the [README](../README.md#fr
 
 ## Original live acquisition versus replay verification
 
-- **Live acquisition** (2026-11-23) ran the scanners, the OSV lookup and, for the AI-BOM, a model-backed scan. It needed network access, the pinned tools and, for the AI-BOM, an API key. Its raw capture directory is private and **not** in this repository.
+- **Live acquisition** (2026-11-23) ran the scanners, the OSV lookup and, for the AI-BOM, a model-assisted scan through the provider gateway. Syft and cdxgen ran in a network-disabled worker; Cisco AI-BOM ran separately and reached its model provider through the gateway. The scan needed network access, the pinned tools and, for the AI-BOM, an API key. Its raw capture directory is private and **not** in this repository.
 - **Replay verification** is what a reader can run from this repository. It checks the saved files against their recorded SHA-256 hashes, rebuilds the Workbench views from those saved inputs, and runs the replay tests. It makes no scanner, OSV, GitHub or model call. It does **not** show that rerunning the scanners would give the same bytes, and the comparison with the original live session needs the private capture. See [reproducibility](REPRODUCIBILITY.md).
 
 ## Limitations

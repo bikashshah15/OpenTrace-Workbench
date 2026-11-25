@@ -75,7 +75,7 @@ The replay verifies the bundled files against MANIFEST.json and checks the three
 1. You give a public GitHub URL. OpenTrace resolves it to a full commit SHA and fetches that source with git.
 2. A scanner worker in a separate Linux container with **no network** (read-only source, no capabilities) runs Syft (SBOM) and cdxgen (CBOM). Static collectors add source observations (Python `hashlib` calls, TLS settings, model URLs, runtime imports).
 3. Cisco AI-BOM runs in a **separate, optional AI worker** on an internal network; its only outbound route is a gateway that holds the provider key. It is off in the default profile. The recorded Frigate AI-BOM was produced this way in the original live scan.
-4. A deterministic comparison step checks declarations against the SBOM and builds the Workbench views. Facts and limits come from deterministic code, not from a model.
+4. OpenTrace's comparison rules are deterministic: code checks declarations against the SBOM and builds the Workbench views. The Cisco AI-BOM was generated with model assistance through the provider gateway; the model does not make the comparison decisions.
 5. With live lookup on, exact lockfile versions go to OSV (ecosystem, name and version only).
 
 **NLIP is used in one place:** when lockfile packages are looked up live, a Python Investigator asks a Go Evidence Specialist over NLIP to parse the lockfiles. The recorded Frigate replay does not exercise this path. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the components.
@@ -91,7 +91,14 @@ Everything above works without these.
   cp opentrace.example.yml opentrace.yml   # git-ignored; set llm.api_key_file to the absolute path of the key file
   ```
 
-  Current prerequisites, checked by `start.py`: the Cisco AI-BOM images built offline (`tools/uip07c/build_aibom_images.py`, see [deploy/docker/README.md](deploy/docker/README.md)); a supported Docker platform (today exactly Docker Desktop 4.98.0, Engine 29.9.2, linux/arm64); a current local gateway pricing record (`cp -n deploy/docker/gateway/pricing.json .opentrace/aibom-pricing.json`, then verify and update its dates; see [deploy/docker/gateway/README.md](deploy/docker/gateway/README.md)); and `llm.assistant_billing_verified: true` once you have verified how OpenAI bills the token-count endpoint. OpenAI is the only supported live provider.
+  Current prerequisites, checked by `start.py`: the Cisco AI-BOM images built offline (`tools/uip07c/build_aibom_images.py`, see [deploy/docker/README.md](deploy/docker/README.md)); a supported Docker platform (today exactly Docker Desktop 4.98.0, Engine 29.9.2, linux/arm64); and a current local gateway pricing record with verified, updated dates (see [deploy/docker/gateway/README.md](deploy/docker/gateway/README.md)). From a fresh clone, create its directory and copy the file:
+
+  ```bash
+  mkdir -p .opentrace
+  cp -n deploy/docker/gateway/pricing.json .opentrace/aibom-pricing.json
+  ```
+
+  Also set `llm.assistant_billing_verified: true` after verifying how OpenAI bills the token-count endpoint. OpenAI is the only supported live provider.
 
 Secret values never appear in command arguments, logs or build contexts. These features were not exercised for this README.
 
