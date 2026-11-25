@@ -22,13 +22,4 @@ llm:
   # The dollar budget is a separate, fixed $5 ceiling. Raising this number and restarting keeps everything already recorded in the usage ledger.
   # assistant_dispatch_allowance: 800
 
-# --- Future providers: NOT SUPPORTED for live use. start.py rejects these with a clear message. ---
-# OpenAI is the only live provider in this version.
-#
-# llm:
-#   provider: anthropic          # Anthropic Claude (unsupported)
-#   api_key_file: /absolute/path/to/anthropic.key
-#
-# llm:
-#   provider: google             # Google Gemini (unsupported)
-#   api_key_file: /absolute/path/to/gemini.key
+# OpenAI is the only supported live provider.

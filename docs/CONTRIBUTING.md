@@ -6,13 +6,13 @@ Thank you for your interest. OpenTrace is a research prototype that helps a revi
 
 1. Read the [README](../README.md), [architecture](ARCHITECTURE.md) and [reproducibility](REPRODUCIBILITY.md).
 2. Run the Workbench with `python3 tools/start.py` (Docker with Compose v2, Python 3.10+). No API key is needed for the default profile.
-3. Run the tests you touched. Install the Python test dependencies with `pip install -r requirements-dev.txt`, then:
+3. Run the tests you touched. Install the Python test dependencies with `pip install -r requirements-dev.txt`. As a quick check, run the 12 recorded Frigate replay tests:
 
    ```bash
-   PYTHONPATH=src/core:src/agents/investigator python3 -m unittest discover -s tests -t .
+   PYTHONPATH=src/core:src/agents/investigator python3 -m unittest tests.core.app.test_demo_replay
    ```
 
-   Some suites need Docker, Go or a browser and skip or fail without them. State exactly which tests you ran and which you could not run; a run with skips is not a zero-skip run. The Go specialist's tests (`cd src/agents/evidence_specialist && go test ./...`) include cases that need private capture archives, so some fail in the public export; see [reproducibility](REPRODUCIBILITY.md).
+   For the [full-suite instructions and historical results](REPRODUCIBILITY.md#6-full-suite-instructions-and-historical-results-secondary), use the separate secondary check. Some suites need Docker, Go or a browser and skip or fail without them. State exactly which tests you ran and which you could not run; a run with skips is not a zero-skip run. The Go specialist's tests (`cd src/agents/evidence_specialist && go test ./...`) include cases that need private capture archives, so some fail in the public export; see [reproducibility](REPRODUCIBILITY.md).
 
 ## Pull requests
 

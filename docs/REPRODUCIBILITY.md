@@ -50,17 +50,17 @@ The replay verifies the bundled files against `MANIFEST.json` and checks the thr
 
 The default profile can scan other public GitHub repositories. This needs outbound HTTPS from the Workbench container to GitHub and `api.osv.dev`, and is a fresh scan, not a replay. Details and the optional AI-BOM profile are in the [README](../README.md#optional-live-features) and [deploy/docker/README.md](../deploy/docker/README.md).
 
-## 6. Full test suite (secondary)
+## 6. Full-suite instructions and historical results (secondary)
 
 ```bash
 PYTHONPATH=src/core:src/agents/investigator python3 -m unittest discover -s tests -t .
 ```
 
-The full suite is not the judge check and is **not** a zero-failure run. On the release-candidate export (macOS arm64, Python 3.14, a venv with `requirements-dev.txt`) the Python suite ran 1,998 tests with 40 failures, 10 errors and 2 skips. **All 50 failures and errors also occurred on the untrimmed export**, so trimming the export did not cause any of them.
+The counts below are historical release-candidate results, not a run on the current checkout. On the release-candidate export (macOS arm64, Python 3.14, a venv with `requirements-dev.txt`) the Python suite ran 1,998 tests with 40 failures, 10 errors and 2 skips. The full suite is not the judge check and is **not** a zero-failure run. **All 50 failures and errors also occurred on the untrimmed export**, so trimming the export did not cause any of them.
 
 - **The 10 errors** are `FileNotFoundError`s for private development records that are not in the export (`.context/contracts/UIP-01B.md`, `.context/intake/I4C_EXPECTED_FRIGATE_2026-11-04.json`, and `.context/references/prototypes/OpenTrace-UI-Update-9-Combined.html`).
 - **The 40 failures** are assertion mismatches, mostly in the scanner-worker and scan-job tests (for example an unexpected `output_invalid`, `timeout` or `isolation_unavailable` outcome). We did not establish their cause, so we do not attribute them to the environment. None involves the replay tests.
 
-**Go tests are not a public check.** `go test ./...` in `src/agents/evidence_specialist` fails 15 tests in this export (Go 1.26.5). Nine of them read the older I2/I3 capture archives (`evidence/i2`, `evidence/i3`), which stay in the private development repository; the other six also fail in the development repository, and we did not establish why. Go is not needed for the Docker quickstart or the replay tests: the Workbench image builds the specialist itself.
+**Historical Go result (release-candidate export; not a public check):** `go test ./...` in `src/agents/evidence_specialist` failed 15 tests (Go 1.26.5). Nine of them read the older I2/I3 capture archives (`evidence/i2`, `evidence/i3`), which stay in the private development repository; the other six also failed in the development repository, and we did not establish why. Go is not needed for the Docker quickstart or the replay tests: the Workbench image builds the specialist itself.
 
 Report every failure, error, skip and unavailable prerequisite when you run it; a run with skips or failures is not a zero-failure run.

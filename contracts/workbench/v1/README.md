@@ -1,12 +1,12 @@
 # Workbench view contracts v1
 
-`opentrace.workbench.*/1` — twelve closed JSON Schemas (Draft 2020-12, `additionalProperties: false`, no `format` keywords), `limits.json` and the stdlib validators in `src/core/opentrace_core/app/view_contracts.py`. Frozen contract: a private planning record (not in this export) v1.0.0. **No route serves these payloads yet**; the proposed `/api/workbench/v1/` routes belong to later increments (UIP-03…UIP-08B).
+`opentrace.workbench.*/1` — twelve closed JSON Schemas (Draft 2020-12, `additionalProperties: false`, no `format` keywords), `limits.json` and the stdlib validators in `src/core/opentrace_core/app/view_contracts.py`. The Workbench serves these view payloads through `/api/workbench/v1/` endpoints.
 
 | Schema | Payload |
 |---|---|
 | `common` | shared `$defs` (binding, availability, source_location, provenance, attribute, …) |
 | `error` | typed error envelope (existing `{error, message}` plus optional fields) |
-| `requests` | one `$defs` entry per proposed route (generation required, unknown parameters rejected) |
+| `requests` | one `$defs` entry per route (generation required, unknown parameters rejected) |
 | `scan_status`, `contexts`, `dependency_page`, `crypto_assets`, `ai_assets`, `inspector`, `bom_candidates`, `bom_graph`, `bom_related_checks` | view payloads |
 
 ## Validation layers

@@ -13,7 +13,9 @@ OpenTrace's original code is under the MIT License (see [LICENSE](LICENSE)). The
 
 The replay holds scanner outputs and excerpts from [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, which is under the MIT License: "Copyright (c) 2026 Frigate, Inc. (Frigate™)". The included material is: full copies of nine small requirements files and short source excerpts (`source-declarations.json`), file paths with SHA-256 digests (`source-inputs.json`), and package metadata (names, versions, licenses, authors) inside the SBOM, CBOM and AI-BOM. No Frigate source tree is shipped. Frigate's MIT permission notice applies to those excerpts and copies; it is the same text as in [LICENSE](LICENSE), with the copyright line above.
 
-`advisory-report.json` and `advisory-lookup.json` hold 44 OSV records, all from the GitHub Advisory Database (GHSA), which is published under CC BY 4.0 (<https://github.com/github/advisory-database>). Attribution: advisory text © GitHub, Inc. and the advisory contributors, unmodified.
+`advisory-report.json` and `advisory-lookup.json` hold 44 OSV records, all from the GitHub Advisory Database (GHSA), which is published under CC BY 4.0 (<https://github.com/github/advisory-database>). Attribution: advisory text © GitHub, Inc. and the advisory contributors.
+
+Selected older test fixtures were sanitized for publication to remove machine-specific local paths; their public bytes can differ from the original test captures. The November 23, 2026 Frigate evaluation capture is byte-identical to the saved release fixture, as recorded in its [manifest](src/core/opentrace_core/app/demo/frigate-3bca9b8/MANIFEST.json).
 
 Package metadata in the SBOM can include the names and e-mail addresses of upstream package authors, as published in those packages. It is kept verbatim as scan evidence.
 
