@@ -20,13 +20,25 @@ An advisory match does not show that vulnerable code runs. A source observation 
 
 ## Quick start
 
-**Prerequisites:** Git, Docker Desktop or Docker Engine with Compose v2, and Python 3.10+ (the launcher uses only the standard library). The default profile needs no API key or configuration file.
+**Prerequisites:** Git, Docker Desktop or Docker Engine with Compose v2, and Python 3.10+ (the launcher uses only the standard library). On Windows, start Docker Desktop in **Linux-container mode**. The default profile needs no API key or configuration file.
 
-```bash
+**macOS/Linux**
+
+```sh
 git clone https://github.com/bikashshah15/OpenTrace-Workbench.git
 cd OpenTrace-Workbench
 python3 tools/start.py
 ```
+
+**Windows PowerShell**
+
+```powershell
+git clone https://github.com/bikashshah15/OpenTrace-Workbench.git
+Set-Location OpenTrace-Workbench
+py -3 tools/start.py
+```
+
+If `py -3` is unavailable, use `python tools/start.py` only when `python --version` reports Python 3.10 or newer.
 
 Open <http://127.0.0.1:8765/> and click **Explore sample findings** to open the recorded Frigate case. Stop the stack with `docker compose -p opentrace stop`.
 
@@ -35,7 +47,7 @@ Open <http://127.0.0.1:8765/> and click **Explore sample findings** to open the 
 | **`no-llm` (default)** | Starts the Workbench and isolated scanner worker. Supports live Syft SBOM and cdxgen CBOM scans, supported static source observations, and OSV lookups by default for eligible packages found in live lockfiles. It can also display the captured Frigate AI-BOM in the replay. Live Cisco AI-BOM generation and the Lab Assistant are disabled. | No key or `opentrace.yml`. The Workbench needs outbound HTTPS to GitHub for live scans and `api.osv.dev` for OSV; the scanner worker has no network. Set `OPENTRACE_LIVE_ADVISORIES=0` to opt out of OSV. |
 | **`with-llm` (opt in)** | Starts the Workbench and scanner worker plus live Cisco AI-BOM and Lab Assistant services. | Run `python3 tools/start.py --profile with-llm`. Requires an OpenAI key stored in a readable file outside the checkout, `opentrace.yml` configured from [`opentrace.example.yml`](opentrace.example.yml), the Cisco AI-BOM images built offline, a current owner-verified local pricing record, and a supported Docker platform. The launcher requires `llm.assistant_billing_verified: true` even though the example config comments it as optional; without `true`, startup is refused. See [Optional Cisco AI-BOM and Lab Assistant](#optional-cisco-ai-bom-and-lab-assistant) for the required order and linked instructions. |
 
-Use `--port 8766` (or `OPENTRACE_PORT=8766`) if port 8765 is occupied. If Docker is unavailable, start Docker Desktop or the Docker Engine service, then retry. If OpenTrace is already running in the same Compose project, the launcher reports its URL. `docker compose -p opentrace stop` stops but leaves the containers and volumes in place. A stopped `no-llm` stack can be reused; a stopped `with-llm` stack can require `--replace` even when restarting the same profile. When the launcher reports an existing stack, follow the exact command it prints. Replacement loses in-progress scans, sessions, and Assistant chats, but keeps named volumes and their data, including ledgers.
+Use `--port 8766` (or `OPENTRACE_PORT=8766`) if port 8765 is occupied. If Docker is unavailable, start Docker Desktop or the Docker Engine service, confirm `docker compose version` works, then retry. On Windows, confirm Docker Desktop is using Linux-container mode. If OpenTrace is already running in the same Compose project, the launcher reports its URL. `docker compose -p opentrace stop` stops but leaves the containers and volumes in place. A stopped `no-llm` stack can be reused; a stopped `with-llm` stack can require `--replace` even when restarting the same profile. When the launcher reports an existing stack, follow the exact command it prints. Replacement loses in-progress scans, sessions, and Assistant chats, but keeps named volumes and their data, including ledgers.
 
 ## Frigate demo walkthrough (recorded replay)
 
