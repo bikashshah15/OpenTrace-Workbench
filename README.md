@@ -49,7 +49,26 @@ Open <http://127.0.0.1:8765/>. Select **Scan** to analyze a public GitHub reposi
 | **`no-llm` (default)** | Starts the Workbench and isolated scanner worker. Supports live Syft SBOM and cdxgen CBOM scans, supported static source observations, and OSV lookups by default for eligible packages found in live lockfiles. It can also display the captured Frigate AI-BOM in the replay. Live Cisco AI-BOM generation and the Lab Assistant are disabled. | No key or `opentrace.yml`. The Workbench needs outbound HTTPS to GitHub for live scans and `api.osv.dev` for OSV; the scanner worker has no network. Set `OPENTRACE_LIVE_ADVISORIES=0` to opt out of OSV. |
 | **`with-llm` (opt in)** | Starts the Workbench and scanner worker plus live Cisco AI-BOM and Lab Assistant services. | Run `python3 tools/start.py --profile with-llm`. Requires an OpenAI key stored in a readable file outside the checkout, `opentrace.yml` configured from [`opentrace.example.yml`](opentrace.example.yml), the Cisco AI-BOM images built offline, a current owner-verified local pricing record, and a supported Docker platform. The launcher requires `llm.assistant_billing_verified: true` even though the example config comments it as optional; without `true`, startup is refused. See [Optional Cisco AI-BOM and Lab Assistant](#optional-cisco-ai-bom-and-lab-assistant) for the required order and linked instructions. |
 
-Use `--port 8766` (or `OPENTRACE_PORT=8766`) if port 8765 is occupied. If Docker is unavailable, start Docker Desktop or the Docker Engine service, confirm `docker compose version` works, then retry. On Windows, confirm Docker Desktop is using Linux-container mode. If OpenTrace is already running in the same Compose project, the launcher reports its URL. `docker compose -p opentrace stop` stops but leaves the containers and volumes in place. A stopped `no-llm` stack can be reused; a stopped `with-llm` stack can require `--replace` even when restarting the same profile. When the launcher reports an existing stack, follow the exact command it prints. Replacement loses in-progress scans, sessions, and Assistant chats, but keeps named volumes and their data, including ledgers.
+See [Troubleshooting](#troubleshooting) if Docker is unavailable or the launcher reports an existing stack.
+
+## Troubleshooting
+
+### OpenTrace stack already exists
+
+The launcher uses the Compose project name `opentrace` by default. `docker compose -p opentrace stop` stops its containers and leaves them in that project. If you previously ran `with-llm`, starting the default `no-llm` profile can report **An OpenTrace stack already exists** and **Nothing was changed**, even when every listed container is stopped. The launcher detected containers from the previous profile and is waiting for you to confirm replacement.
+
+To switch that stack to `no-llm`, run the launcher with `--replace`:
+
+- **macOS/Linux** — `python3 tools/start.py --profile no-llm --replace`
+- **Windows PowerShell** — `py -3 tools/start.py --profile no-llm --replace` (or use `python` as in Quick Start)
+
+Replacement clears any in-memory scans, sessions, or Assistant chats. Reload open OpenTrace browser tabs afterward. Named volumes and ledgers are preserved. A stopped `no-llm` stack can be reused, while restarting a stopped `with-llm` stack can also require replacement. Follow the launcher’s instructions for the profile and project you intend to use.
+
+If you want both checkouts to have separate stacks, give each a distinct `--project` name. Use a different free `--port` for each stack if both will run at the same time.
+
+### Docker unavailable or port in use
+
+Start Docker Desktop or the Docker Engine service and check `docker compose version`. On Windows, use Linux-container mode. If port 8765 is occupied, add `--port 8766` to the launcher command or set `OPENTRACE_PORT=8766`.
 
 ## Frigate demo walkthrough (recorded replay)
 
