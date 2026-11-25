@@ -188,7 +188,7 @@ def make_runner(env, inner=None):
         if inner is not None:
             return inner(argv, timeout)
         try:
-            done = subprocess.run(argv, capture_output=True, text=True, timeout=timeout, env=env)
+            done = subprocess.run(argv, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout, env=env)
             return PF.Result(done.returncode, done.stdout, done.stderr)
         except subprocess.TimeoutExpired:
             return PF.Result(124, "", "timed out after %ss" % timeout)

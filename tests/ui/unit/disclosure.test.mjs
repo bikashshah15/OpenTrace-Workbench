@@ -49,13 +49,16 @@ test('approved text, variant B', () => {
 test('approved text, variant C never mentions a sandbox or container; no advisory line (nothing is scanned, so nothing is sent)', () => {
   const c = live({ isolation: { available: false, reason: 'no isolation provider configured' } });
   const p = disclosureParagraphs(c);
-  assert.deepEqual(p, ['Scanning is unavailable: OpenTrace could not verify an isolation boundary (no isolation provider configured). Nothing will be downloaded or scanned.', 'Demo ↗ opens the captured Frigate replay; it is not your repository.', DEFAULT_AI_MODE]);
+  assert.deepEqual(p, ['Scanning is unavailable: OpenTrace could not verify an isolation boundary (no isolation provider configured). Nothing will be downloaded or scanned.', 'Demo ↗ opens the captured Frigate replay; it is not your repository.']);
   assert.equal(/sandbox|container/i.test(p.join(' ')), false);
-  assert.equal(disclosureParagraphs({ ...c, advisories: adv }).length, 3);
+  assert.equal(disclosureParagraphs({ ...c, advisories: adv }).length, 2);
+  assert.equal(p.includes(DEFAULT_AI_MODE), false);
 });
 
 test('approved text, variant D', () => {
-  assert.deepEqual(disclosureParagraphs({ enabled: false }), ['Live scanning is not enabled on this service, so no repository is downloaded. Demo ↗ opens the captured Frigate replay; it is not your repository.', DEFAULT_AI_MODE]);
+  const p = disclosureParagraphs({ enabled: false });
+  assert.deepEqual(p, ['Live scanning is not enabled on this service, so no repository is downloaded. Demo ↗ opens the captured Frigate replay; it is not your repository.']);
+  assert.equal(p.includes(DEFAULT_AI_MODE), false);
 });
 
 test('rendering: heading verbatim, text escaped, no deletion promise (mounted by UIP-03 in the intake only)', () => {
@@ -75,14 +78,17 @@ test('UIP-07C A2: AI paragraph and qualified isolation sentence only when ai_bom
   assert.equal(base.length, 5, 'no ai_bom block: unchanged');
   assert.deepEqual(disclosureParagraphs(live({ ai_bom: aiBom({ requested: false }) })), base, 'not requested: unchanged');
   const p = disclosureParagraphs(live({ ai_bom: aiBom() }));
-  assert.equal(p.length, 6);
+  assert.equal(p.length, 5);
   assert.equal(p[0], REPO);
   const ai = 'AI inventory. When available and enabled, Cisco AI-BOM sends selected file names and code excerpts to the configured LLM provider through a restricted gateway. Repository text and configuration can influence what it selects. OpenTrace explains if this step is skipped.';
   assert.equal(p[1], ai);
   for (const re of [/configured LLM provider/, /restricted gateway/, /file names and code excerpts/]) assert.match(p[1], re);
-  assert.deepEqual(p.slice(2), base.slice(1), 'order: repository scan, AI inventory, advisory lookup, session cleanup');
+  assert.deepEqual(p.slice(2), base.slice(1, -1), 'order: repository scan, AI inventory, advisory lookup, session cleanup');
+  assert.equal(p.includes(DEFAULT_AI_MODE), false, 'requested AI-BOM uses the provider disclosure instead');
   assert.equal(disclosureParagraphs(live({ ai_bom: aiBom(), advisories: adv })).indexOf(ADV), 2);
-  assert.equal(disclosureParagraphs(live({ ai_bom: aiBom({ available: false, reason: 'isolation_unavailable' }) }))[1], ai + ' It is unavailable right now.');
+  const unavailable = disclosureParagraphs(live({ ai_bom: aiBom({ available: false, reason: 'isolation_unavailable' }) }));
+  assert.equal(unavailable[1], ai + ' It is unavailable right now.');
+  assert.equal(unavailable.includes(DEFAULT_AI_MODE), false, 'requested but unavailable AI-BOM retains its provider availability disclosure');
   assert.equal(disclosureParagraphs(live({ isolation: { available: false, reason: 'x' }, ai_bom: aiBom() })).some((x) => x.startsWith('AI inventory.')), false, 'variant C never shows provider disclosure');
   assert.equal(disclosureParagraphs({ enabled: false, ai_bom: aiBom() }).some((x) => x.startsWith('AI inventory.')), false, 'variant D never shows provider disclosure');
   const h = renderDisclosure(live({ ai_bom: aiBom({ model: '<b>m</b>', host: 'h.example' }) }));

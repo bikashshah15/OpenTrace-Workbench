@@ -10,7 +10,7 @@ Prerequisites: Docker with Compose v2 and Python 3.10+.
 python3 tools/start.py          # default no-llm profile; open http://127.0.0.1:8765/
 ```
 
-Click **Explore sample findings**. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The three walkthrough examples are in the [README](../README.md#frigate-demo-walkthrough-recorded-replay).
+Click the header’s **Demo ↗** control. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The three walkthrough examples are in the [README](../README.md#frigate-demo-walkthrough-recorded-replay).
 
 ## 2. Saved evidence
 

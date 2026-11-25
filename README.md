@@ -6,7 +6,11 @@
 
 ## What OpenTrace helps a reviewer decide
 
-The **Workbench** puts a repository's software (SBOM), cryptographic (CBOM) and AI (AI-BOM) bills of materials side by side, pinned to one GitHub commit that OpenTrace resolved and verified. Where a scan recorded a source location, the item shows the file and line it came from; where none was recorded, the view says so. Each view also states what it did *not* establish. A reviewer can answer:
+The **Workbench** puts a repository's software (SBOM), cryptographic (CBOM) and AI (AI-BOM) bills of materials side by side, pinned to one GitHub commit that OpenTrace resolved and verified. Where a scan recorded a source location, the item shows the file and line it came from; where none was recorded, the view says so. Each view also states what it did *not* establish.
+
+Using the same verified commit for all three inventories and the source evidence lets a reviewer compare claims against the files from that exact revision, without mixing evidence from different versions of a repository.
+
+A reviewer can answer:
 
 - Which components, algorithms and models does this commit declare, and where in the source?
 - Which package versions have advisories (OSV lookup), and which are only in a lockfile and not in the SBOM?
@@ -16,25 +20,53 @@ An advisory match does not show that vulnerable code runs. A source observation 
 
 ## Quick start
 
-**Prerequisites:** Docker Desktop or Docker Engine with Compose v2, and Python 3.10+ (standard library only). Run from the repository root. No API key or config file is needed.
+**Prerequisites:** Git, Docker Desktop or Docker Engine with Compose v2, and Python 3.10+ (the launcher uses only the standard library). On Windows, start Docker Desktop in **Linux-container mode**. The default profile needs no API key or configuration file.
 
-```bash
+**macOS/Linux**
+
+```sh
+git clone https://github.com/bikashshah15/OpenTrace-Workbench.git
+cd OpenTrace-Workbench
 python3 tools/start.py
 ```
 
-Open <http://127.0.0.1:8765/> (use `--port N` or `OPENTRACE_PORT` for another port). Select **Scan** to analyze a public GitHub repository, or use the header's **Demo ↗** to open the captured Frigate replay. Stop it with `docker compose -p opentrace stop`.
+**Windows PowerShell**
 
-The default `no-llm` profile starts the Workbench and an isolated scanner worker with no network. It ignores `opentrace.yml` and any inherited AI settings, so no model feature can switch on by accident. Optional live features are in [Optional live features](#optional-live-features).
+```powershell
+git clone https://github.com/bikashshah15/OpenTrace-Workbench.git
+Set-Location OpenTrace-Workbench
+py -3 tools/start.py
+```
 
-If an OpenTrace stack already exists, `start.py` stops and prints the exact steps; rerun with `--replace` to proceed.
+If `py -3` is unavailable, use `python tools/start.py` only when `python --version` reports Python 3.10 or newer.
+
+If you previously cloned OpenTrace on Windows, clone into a new folder to ensure Git checks out the bundled Frigate evidence with its original line endings.
+
+Open <http://127.0.0.1:8765/>. Select **Scan** to analyze a public GitHub repository, or use the header’s **Demo ↗** control to open the recorded Frigate case. Stop the stack with `docker compose -p opentrace stop`.
+
+| Startup profile | What it enables | Requirements |
+|---|---|---|
+| **`no-llm` (default)** | Starts the Workbench and isolated scanner worker. Supports live Syft SBOM and cdxgen CBOM scans, supported static source observations, and OSV lookups by default for eligible packages found in live lockfiles. It can also display the captured Frigate AI-BOM in the replay. Live Cisco AI-BOM generation and the Lab Assistant are disabled. | No key or `opentrace.yml`. The Workbench needs outbound HTTPS to GitHub for live scans and `api.osv.dev` for OSV; the scanner worker has no network. Set `OPENTRACE_LIVE_ADVISORIES=0` to opt out of OSV. |
+| **`with-llm` (opt in)** | Starts the Workbench and scanner worker plus live Cisco AI-BOM and Lab Assistant services. | Run `python3 tools/start.py --profile with-llm`. Requires an OpenAI key stored in a readable file outside the checkout, `opentrace.yml` configured from [`opentrace.example.yml`](opentrace.example.yml), the Cisco AI-BOM images built offline, a current owner-verified local pricing record, and a supported Docker platform. The launcher requires `llm.assistant_billing_verified: true` even though the example config comments it as optional; without `true`, startup is refused. See [Optional Cisco AI-BOM and Lab Assistant](#optional-cisco-ai-bom-and-lab-assistant) for the required order and linked instructions. |
+
+Use `--port 8766` (or `OPENTRACE_PORT=8766`) if port 8765 is occupied. If Docker is unavailable, start Docker Desktop or the Docker Engine service, confirm `docker compose version` works, then retry. On Windows, confirm Docker Desktop is using Linux-container mode. If OpenTrace is already running in the same Compose project, the launcher reports its URL. `docker compose -p opentrace stop` stops but leaves the containers and volumes in place. A stopped `no-llm` stack can be reused; a stopped `with-llm` stack can require `--replace` even when restarting the same profile. When the launcher reports an existing stack, follow the exact command it prints. Replacement loses in-progress scans, sessions, and Assistant chats, but keeps named volumes and their data, including ledgers.
 
 ## Frigate demo walkthrough (recorded replay)
 
 This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, captured on 2026-11-23. It reads the saved artifacts and makes no scanner, OSV, GitHub or model call. It is **not** a fresh scan and **not** a reproduction of any benchmark.
 
-1. Open the Workbench, then click the header's **Demo ↗**.
+1. Open the Workbench, then click the header’s **Demo ↗** control.
 2. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The header chips show 1,861 component records, 4,569 declared dependency edges, 44 advisory groups and 97 items to review in BOM connections.
 3. Use the tabs under **Repository workbench**. Three examples follow, one per BOM.
+
+**[Run the 12 replay tests](docs/REPRODUCIBILITY.md#3-primary-check-the-12-replay-tests)** for the published Frigate case study. From the repository root, the documented commands are:
+
+```bash
+pip install -r requirements-dev.txt
+PYTHONPATH=src/core:src/agents/investigator python3 -m unittest tests.core.app.test_demo_replay
+```
+
+Expected result: `Ran 12 tests ... OK`. These replay tests check saved artifacts and selected outputs; they do not run a fresh scan or verify parity with the original live session. See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for the scope and limitations.
 
 | BOM | Where to click | What the record shows | Evidence |
 |---|---|---|---|
@@ -43,6 +75,12 @@ This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](htt
 | **AI source evidence, partial AI-BOM coverage:** `hailo_platform` | **AI models** → **List** → search `hailo` → `hailo_platform` | A runtime recorded at two source imports, `frigate/detectors/plugins/hailo.py:147` and `frigate/util/services.py:1075`. The tab is marked **Partial AI-BOM · Coverage incomplete**. An import does not show the runtime is installed or active; provider, model version and license are unknown. | `ai_source.runtimes` in [source-declarations.json](src/core/opentrace_core/app/demo/frigate-3bca9b8/source-declarations.json); [cisco-aibom.cdx.json](src/core/opentrace_core/app/demo/frigate-3bca9b8/cisco-aibom.cdx.json) (scan ran degraded, 121 degraded results) |
 
 All coverage here is partial. An empty or short list does not show that nothing is missing, and none of these records is a vulnerability finding.
+
+## Live scan walkthrough
+
+The default `no-llm` profile supports live scans, distinct from the recorded replay above. In the home page's **Review a repository** card, enter a public repository root URL (for example, the form's documented shape `https://github.com/owner/repository`) in **GitHub repository URL**, then select **Scan ↗**. The service resolves and verifies one full commit SHA; during the scan, the status view identifies the repository and pinned commit. When complete, the **Repository workbench** header shows the repository and abbreviated commit, with live scan evidence. Review the available **Repository contexts**, **Dependencies**, **Cryptography**, **AI models**, and **BOM connections** views.
+
+The Workbench container needs outbound HTTPS to `api.github.com` and `github.com` to resolve, fetch, and verify a public repository, and to `api.osv.dev` for the default live advisory lookup. The scanner worker has no network. Live advisory lookup sends eligible lockfile package ecosystem, name, and exact version to OSV; opt out with `OPENTRACE_LIVE_ADVISORIES=0`. For live lockfile parsing, the Python Investigator asks the Go Evidence Specialist to parse lockfiles over NLIP. The Frigate replay does not exercise this path. This workflow is documented from the implementation; no live repository output or NLIP exchange is presented here as a verified example.
 
 ## License and evaluation
 
@@ -72,6 +110,8 @@ The replay verifies the bundled files against MANIFEST.json and checks the three
 
 ## How it works
 
+![OpenTrace architecture: a verified repository feeds SBOM, CBOM, AI-BOM, and source observations into comparison and the Workbench; OSV and the Lab Assistant are shown as separate flows.](src/ui/assets/opentrace-architecture.webp)
+
 1. You give a public GitHub URL. OpenTrace resolves it to a full commit SHA and fetches that source with git.
 2. A scanner worker in a separate Linux container with **no network** (read-only source, no capabilities) runs Syft (SBOM) and cdxgen (CBOM). Static collectors add source observations (Python `hashlib` calls, TLS settings, model URLs, runtime imports).
 3. Cisco AI-BOM runs in a **separate, optional AI worker** on an internal network; its only outbound route is a gateway that holds the provider key. It is off in the default profile. The recorded Frigate AI-BOM was produced this way in the original live scan.
@@ -80,27 +120,40 @@ The replay verifies the bundled files against MANIFEST.json and checks the three
 
 **NLIP is used in one place:** when lockfile packages are looked up live, a Python Investigator asks a Go Evidence Specialist over NLIP to parse the lockfiles. The recorded Frigate replay does not exercise this path. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the components.
 
-## Optional live features
+<!-- Keep this alias for docs/REPRODUCIBILITY.md links. -->
+<a name="optional-live-features"></a>
 
-Everything above works without these.
+## Optional Cisco AI-BOM and Lab Assistant
 
-- **Live scans of other public repositories** work in the default profile; they need outbound HTTPS from the Workbench container (GitHub and `api.osv.dev`). Opt out of OSV with `OPENTRACE_LIVE_ADVISORIES=0`.
-- **Live Cisco AI-BOM and the Lab Assistant:** `python3 tools/start.py --profile with-llm` with one OpenAI key stored in a file outside the checkout.
+The default profile works without these features. Enabling them requires a deliberate setup; do not put key contents in the config file or checkout.
 
-  ```bash
-  cp opentrace.example.yml opentrace.yml   # git-ignored; set llm.api_key_file to the absolute path of the key file
-  ```
+1. Create a key file outside the checkout and configure the opt-in profile:
 
-  Current prerequisites, checked by `start.py`: the Cisco AI-BOM images built offline (`tools/uip07c/build_aibom_images.py`, see [deploy/docker/README.md](deploy/docker/README.md)); a supported Docker platform (today exactly Docker Desktop 4.98.0, Engine 29.9.2, linux/arm64); and a current local gateway pricing record with verified, updated dates (see [deploy/docker/gateway/README.md](deploy/docker/gateway/README.md)). From a fresh clone, create its directory and copy the file:
+   ```bash
+   cp opentrace.example.yml opentrace.yml   # git-ignored; set llm.api_key_file to the absolute key-file path
+   ```
 
-  ```bash
-  mkdir -p .opentrace
-  cp -n deploy/docker/gateway/pricing.json .opentrace/aibom-pricing.json
-  ```
+   Set `llm.provider: openai`, use an absolute path to the key file, and set `llm.assistant_billing_verified: true` only after independently verifying how OpenAI bills the token-count endpoint. Although the example comments that setting as optional, `tools/start.py` refuses `with-llm` startup unless it is `true`. OpenAI is the only supported live provider.
 
-  Also set `llm.assistant_billing_verified: true` after verifying how OpenAI bills the token-count endpoint. OpenAI is the only supported live provider.
+2. Make a local copy of the intentionally expired pricing template, then follow the gateway's [pricing and key custody instructions](deploy/docker/gateway/README.md#what-the-operator-does-for-a-live-validation-l1-not-part-of-this-change) to verify official pricing and update the validity dates and sources in your copy. The gateway refuses dispatch without a current, matching record.
 
-Secret values never appear in command arguments, logs or build contexts. These features were not exercised for this README.
+   ```bash
+   mkdir -p .opentrace
+   cp -n deploy/docker/gateway/pricing.json .opentrace/aibom-pricing.json
+   ```
+
+3. Build the Cisco AI-BOM images offline using [`tools/uip07c/build_aibom_images.py`](tools/uip07c/build_aibom_images.py) and the [optional Cisco AI-BOM phase instructions](deploy/docker/README.md#optional-cisco-ai-bom-phase-uip-07c-off-by-default). The launcher checks that the required images exist. Its documented Docker support is limited to the tested Docker Desktop 4.98.0 (245422), Engine 29.9.2, `linux/arm64`, VM kernel 7.0.14-linuxkit platform; see the linked [platform and preflight instructions](deploy/docker/README.md#optional-cisco-ai-bom-phase-uip-07c-off-by-default).
+
+4. Run the launcher preflight and then start the profile:
+
+   ```bash
+   python3 tools/start.py --profile with-llm --check
+   python3 tools/start.py --profile with-llm
+   ```
+
+`--check` validates the config, key file and billing flag, pricing record, required images, Docker platform, and read-only Cisco isolation preflight. It starts nothing and makes no change. A successful preflight does not build images, test Docker secret access, create the broker token, or prove a provider call or live scan succeeds; the launcher performs remaining startup checks and service verification during the real start.
+
+The launcher passes key-file paths, not secret contents, and mounts the key through Docker secrets. Live provider requests can incur charges subject to the documented gateway and Assistant limits. This README does not present a verified Lab Assistant session, answer, or citation example.
 
 ## Layout
 

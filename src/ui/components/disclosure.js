@@ -45,7 +45,7 @@ export function disclosureParagraphs(live) {
     C: [`Scanning is unavailable: OpenTrace could not verify an isolation boundary (${iso.reason}). Nothing will be downloaded or scanned.`, 'Demo ↗ opens the captured Frigate replay; it is not your repository.'],
     D: ['Live scanning is not enabled on this service, so no repository is downloaded. Demo ↗ opens the captured Frigate replay; it is not your repository.'],
   }[v];
-  out.push(DEFAULT_AI_MODE);
+  if ((v === 'A' || v === 'B') && !(live.ai_bom && live.ai_bom.requested)) out.push(DEFAULT_AI_MODE);
   return out.filter(Boolean);
 }
 

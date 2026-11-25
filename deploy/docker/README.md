@@ -24,7 +24,7 @@ docker compose down -v              # also remove this Compose project's named v
 
 Use `down -v` only when you intend to delete volume data, including spool data and any persistent ledgers.
 
-Click **Demo** or **Explore sample findings** to open the bundled Frigate recording at commit `3bca9b867684`. It uses recorded artifacts and requires no scan or provider call.
+Click the header’s **Demo ↗** control to open the bundled Frigate recording at commit `3bca9b867684`. It uses recorded artifacts and requires no scan or provider call.
 
 ## Live OSV advisory lookup (on by default; LIVE-ADVISORIES-DEFAULT-01)
 
