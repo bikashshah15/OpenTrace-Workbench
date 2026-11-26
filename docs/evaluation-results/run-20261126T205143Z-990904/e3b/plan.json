@@ -1,0 +1,2500 @@
+{
+  "counts": {
+    "cyclonedx-cli": 150,
+    "malformed_controls": 9,
+    "sbom-tools": 14,
+    "valid_documents": 141
+  },
+  "operations": [
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_original/sbom.cdx.json",
+        "sha256": "93b9ccb0a07458a5700dc765b3e260fd6e98e918b2ed2c9d9dccb69bf0ca8f54"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-001",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-002",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-003",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-004",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-005",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-006",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::original",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-007",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::original",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_original/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-008",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::original",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_original/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-009",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::original",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_original/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-010",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::original",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_original/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-011",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::original",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_original/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-012",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::original",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_original/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-013",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::original",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_original/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-014",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::original",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_original/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-015",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::original",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_original/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-016",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR1/sbom.cdx.json",
+        "sha256": "66100e5deaccc6f52a4969377fdcd197943bd3b785a66b8d74f006a8d122f27f"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-017",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR2/sbom.cdx.json",
+        "sha256": "b51927950ad5e13c9865a744b259e50458ab6cd8aa7050e01393c62b63618064"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-018",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR3-rev/sbom.cdx.json",
+        "sha256": "93b9ccb0a07458a5700dc765b3e260fd6e98e918b2ed2c9d9dccb69bf0ca8f54"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-019",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR3-digest/sbom.cdx.json",
+        "sha256": "dd1dc542ca8eee1db3432a22f1e4fcd10d4c64476924b77aa451df3382ca0e7f"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-020",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR6/sbom.cdx.json",
+        "sha256": "cadda1f02740521886865df0d95a7d519c2cb0d072a28e9d24f1620b55d43395"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-021",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR7-filebinding/sbom.cdx.json",
+        "sha256": "eeccbb74074fcca35bcae58f5ce9b79b89220949718cd9a42e4d6e12639acf60"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-022",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_NC-ecosystem/sbom.cdx.json",
+        "sha256": "ed4771f6e7438160b2570dd9e9b22748e00368ae1e5102f38da348e285888ffd"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-023",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR1/sbom.cdx.json",
+        "sha256": "9d526faf5745f6b04d25598228c867d4195a5caf10366b6439206a993322e88c"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-024",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR2/sbom.cdx.json",
+        "sha256": "ed3871b44add29f42a1d54c1cac948b02836d9a17f6303d3307b439fb8423e56"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-025",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-026",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-027",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR6/sbom.cdx.json",
+        "sha256": "371ddcb04dd9200bde2588cd8f6bfe3cf9744e2aaaae181598b03510dfdd687b"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-028",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-029",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_NC-ecosystem/sbom.cdx.json",
+        "sha256": "7fefeaefe0669f95760f7812ba2da791eaec71ff07ee528a5f5b945175d5922e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-030",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR1/sbom.cdx.json",
+        "sha256": "c421863527b1eca70614ce327555a116f3cfa532cf5cd004988eb3015557b3a1"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-031",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR2/sbom.cdx.json",
+        "sha256": "73074f7f5f260459a3746dd2838f797ce0dbe732ee2e384901e36fca80ab5543"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-032",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-033",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-034",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR6/sbom.cdx.json",
+        "sha256": "36d26f88d125c8a660baf0b76be0059783f4a3c80b6c3dbfb33bff49c3eb490f"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-035",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-036",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_NC-ecosystem/sbom.cdx.json",
+        "sha256": "4ffe892fcc874bb2245cc7fbe3d9fd2cdfc5038a76818273e1a9b4fa79d5a8a5"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-037",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR1/sbom.cdx.json",
+        "sha256": "0f90a6df31a68c3ef9e183dbf8347af8418c35c0809947b3d2d4364ee04044c8"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-038",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR2/sbom.cdx.json",
+        "sha256": "3372eec700d73cc7cf2639d962bdc0529bf04f8e485232f8b014c5b2fe005c42"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-039",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-040",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-041",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR6/sbom.cdx.json",
+        "sha256": "a1d8c2fc8cc48aa48a97f087826a43d21bfd3efde95f5ea5fa06e13c869b2310"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-042",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-043",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_NC-ecosystem/sbom.cdx.json",
+        "sha256": "f6cea5ac134cb8d285259394a9b0fec58af2ee5914c5bc0980ae36c2834c18b1"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-044",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR1/sbom.cdx.json",
+        "sha256": "ad372a17daff6588a5caa783319602f2135b36b38c6f8610ae9fc1822f482284"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-045",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR2/sbom.cdx.json",
+        "sha256": "990b4ab16913c3c452180a8ab95a56ac1159af64b195c60c73082cf9de5b9c10"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-046",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-047",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-048",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR6/sbom.cdx.json",
+        "sha256": "7c0c82d60fe018a18b91aabfc1a4a4a0ca7279c21b9c635a210afd49de5bb4f8"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-049",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-050",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_NC-ecosystem/sbom.cdx.json",
+        "sha256": "10f3a0fb0870097e7ebd6f494918b03beb8a7fd20da08a2ad1f7d29ecaa60fda"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-051",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR1/sbom.cdx.json",
+        "sha256": "96a197bb2b01c46210d9a148d22bc6657af176bcf3fe6db387c2cdf607559019"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-052",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR2/sbom.cdx.json",
+        "sha256": "2665cc710b92faf0bd9d58653d5243989589a72fa1fef1de7b6446f33e300cd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-053",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-054",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-055",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR6/sbom.cdx.json",
+        "sha256": "90568bf8a86c80398db5af1146393c15e9b5cc14b41e41f6a04a16e56723bc3b"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-056",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-057",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_NC-ecosystem/sbom.cdx.json",
+        "sha256": "7f82938bd3f7e2ce86afa79b7337392b8ae301ccea0dcfe235ba2ef21c61feb2"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-058",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR1",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR1/sbom.cdx.json",
+        "sha256": "2143612d83ae688061de481dbb5d7e7fb877a97d74eee1822cf8b376e6ccb387"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-059",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR2",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR2/sbom.cdx.json",
+        "sha256": "cf406f28b2a5ef6636cf2a9ab906170577830f24b810b3001f68dc50f2dea996"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-060",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR3-rev/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-061",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR3-digest",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR3-digest/sbom.cdx.json",
+        "sha256": "43374cf7726acab9593d09ddab08f3d7db6ed2265d160ba0353e956b9011a86a"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-062",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR6",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR6/sbom.cdx.json",
+        "sha256": "416a333e7bff1360f9651dcc4781430d3beb6adfbc1baf1cc3ab360c892a6ce7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-063",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR7-filebinding",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR7-filebinding/sbom.cdx.json",
+        "sha256": "3a0676452f63f89b53d4392f18e0a5e37046a56708f2d481476492ebf7854014"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-064",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::NC-ecosystem",
+      "input": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_NC-ecosystem/sbom.cdx.json",
+        "sha256": "37084a4e9d5e1191e23e174e14acd02528bdaa6c0928b5bb1e94403997bea2a3"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-065",
+      "opentrace_state": "contradicted",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR1",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR1/cbom.cdx.json",
+        "sha256": "da8df519470bc7e26791668149180ce4ccf023e9a11705c29c4e76eab8a56435"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-066",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR3-rev/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-067",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR3-binding/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-068",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR4-line",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR4-line/cbom.cdx.json",
+        "sha256": "3aa1fcb1907d680199f6b1615e211580200e1fa65691865e755618614e0d30fb"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-069",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR4-file",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR4-file/cbom.cdx.json",
+        "sha256": "78188f3abe5bf1e958dd9a16d4f17cb699ccceb7c13a7dc8e1225ce59718744e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-070",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR6",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR6/cbom.cdx.json",
+        "sha256": "4d9ea2b07815119880fa91e171198b6049c57ed2046ee0b56b38a9d67068df78"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-071",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR7-manifest/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-072",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::MR7-resolution",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_MR7-resolution/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-073",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::NC-primitive",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_68_sha3_256_NC-primitive/cbom.cdx.json",
+        "sha256": "24be2d73a51fa19b607ccc3b18538a2b8d43efa702434489cd7eb6c15523d194"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-074",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR1",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR1/cbom.cdx.json",
+        "sha256": "c173ab07cd69a52dcf4c87c58cdbb3a5f28669f425386d05f5b18935030c9204"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-075",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR3-rev/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-076",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR3-binding/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-077",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR4-line",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR4-line/cbom.cdx.json",
+        "sha256": "8b3f212d09af08280f37a5022d1784715a8b0594b8724c980360db89461bbeff"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-078",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR4-file",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR4-file/cbom.cdx.json",
+        "sha256": "ce966fb779f79cd4f53fa595669f41d4d139cf0f59c6f73d68b5ac0d9256afb7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-079",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR6",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR6/cbom.cdx.json",
+        "sha256": "52fb8773647dea7fa72ab1ad864a26acb74c9d55b5b264ec0ee2261696e9ca8f"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-080",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR7-manifest/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-081",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::MR7-resolution",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_MR7-resolution/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-082",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:85:sha1::NC-primitive",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_85_sha1_NC-primitive/cbom.cdx.json",
+        "sha256": "aa6abc892a2516b9f090096004f5c4906e80e8a4ea4d8d084abca793194a50a0"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-083",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR1",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR1/cbom.cdx.json",
+        "sha256": "1e4814bee11ea2ed906af4813cbc326cdd784a2b3e3ace722d2bf8270dfec059"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-084",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR3-rev/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-085",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR3-binding/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-086",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR4-line",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR4-line/cbom.cdx.json",
+        "sha256": "03285459bb5535f03931f5f97647f431958aad7507c7cdcac4ac78ebc9fa8e0c"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-087",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR4-file",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR4-file/cbom.cdx.json",
+        "sha256": "a6a759cb187db4d3a938a3d6f22e5abca57cb4257175c7fff5c6135b15014796"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-088",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR6",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR6/cbom.cdx.json",
+        "sha256": "201702f87d768f01e6ace6f4395f60fb30e8f4a21e01d8e374e65596715c66c4"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-089",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR7-manifest/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-090",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::MR7-resolution",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_MR7-resolution/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-091",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:94:sha256::NC-primitive",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_94_sha256_NC-primitive/cbom.cdx.json",
+        "sha256": "ecaef1aea923762589a741744411b77868bb43740f40b357a87d32c42fc3a394"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-092",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR1",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR1/cbom.cdx.json",
+        "sha256": "b6f8283bcbed1f4581c663f3e8ed8029f618d2b74eaa3c0da9b3bbd801f3a485"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-093",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR3-rev/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-094",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR3-binding/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-095",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR4-line",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR4-line/cbom.cdx.json",
+        "sha256": "23ef9f29ce89dc794e56d9f8448c83874f6d5fd627b199c1317b8a58184e6541"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-096",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR4-file",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR4-file/cbom.cdx.json",
+        "sha256": "1b3c708958fbd8895d2d1e852b46c737da4abbc44608c2a3242e1f42dc369b47"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-097",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR6",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR6/cbom.cdx.json",
+        "sha256": "1e931bfef429d4d7cc762e788b737268c7ac6060ebef8a124fda6430360625ed"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-098",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR7-manifest/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-099",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::MR7-resolution",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_MR7-resolution/cbom.cdx.json",
+        "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-100",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:98:md5::NC-primitive",
+      "input": {
+        "path": "e2_e3/cases/cbom_app_crypto_demo.py_98_md5_NC-primitive/cbom.cdx.json",
+        "sha256": "d2ba95cd142ba51fd507a086db4c0c1708bab18f667a53b3b7771e9c97798ab6"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-101",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR1",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR1/aibom.cdx.json",
+        "sha256": "e1a37a9d735b65407cc0a34c767980d4d79eb4105ebd0bf8a608ffff8464c7b1"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-102",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR3-rev/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-103",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR3-binding/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-104",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR5",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR5/aibom.cdx.json",
+        "sha256": "82260aafaaa6823672381936c74ceb2ee5df0075bad7ad80d3ba82f59d2f9475"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-105",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR6",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR6/aibom.cdx.json",
+        "sha256": "805590596148fc0f8ad8e06840342ecc67086439fa95a06d27312d6429547217"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-106",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR7-manifest/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-107",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::MR7-extref",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_MR7-extref/aibom.cdx.json",
+        "sha256": "450aa7c482fdc20bc8bb4878351ef90b9a1831fd0602a11adb3cd8973da10a3e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-108",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::NC-query",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess.tflite_93459a7f23_NC-query/aibom.cdx.json",
+        "sha256": "25fafb9872c85681391b713c68fcfee407115e56812ea061dc00a1cf014fdbe3"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-109",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR1",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR1/aibom.cdx.json",
+        "sha256": "59b8d48bbbe34ab0b8614b0419f0b88d36580cbdf662a1a6746d2758b810eb49"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-110",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR3-rev/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-111",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR3-binding/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-112",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR5",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR5/aibom.cdx.json",
+        "sha256": "22680b7a46fdc839bc7844883379009ceadaa2c1448fc1372c3d16e226c7e86c"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-113",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR6",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR6/aibom.cdx.json",
+        "sha256": "954039a77c792cbcf3258b27573bd787107ed172897a77dac048e2d4f05c9b6e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-114",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR7-manifest/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-115",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::MR7-extref",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_MR7-extref/aibom.cdx.json",
+        "sha256": "fc2849a012759b0bc23fbba85b9d617b8e84ed0342aa1f75ab8541b5053ab0ad"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-116",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::NC-query",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite_f97dedf377_NC-query/aibom.cdx.json",
+        "sha256": "f313af820bb98829bf5a12d4fb4e441499c16cc02e2dcee7286c3c6ea3a40aca"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-117",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR1",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR1/aibom.cdx.json",
+        "sha256": "032df3b4980a0a4cb904cc7290f7c63386409ed5b72dc8af9562cd36ab6aff32"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-118",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR3-rev/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-119",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR3-binding/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-120",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR5",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR5/aibom.cdx.json",
+        "sha256": "265eba480e403cec7881894b1afed4ef6a4dd35fe2b64f073416fe949afbd1b1"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-121",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR6",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR6/aibom.cdx.json",
+        "sha256": "eaa025a57c5364b11e39c8f5e7c3344235a60aebba2d430a92248141ee4d610d"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-122",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR7-manifest/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-123",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::MR7-extref",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_MR7-extref/aibom.cdx.json",
+        "sha256": "0d5e1154d921c2ab7b64a7f602b387aa400d0d0024f4f87878bb378a00bdafa9"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-124",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6::NC-query",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_mobilenetv2-7.onnx_e445c080c6_NC-query/aibom.cdx.json",
+        "sha256": "f28043801002cfbfa125c3f5ce35a3a2c368ce89e96d5c4a052b0e19989514f4"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-125",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR1",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR1/aibom.cdx.json",
+        "sha256": "6771a84802bc0f3a7d798c989bd0658d80f225c5806470c269c5661dd67b3b1c"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-126",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR3-rev/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-127",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR3-binding/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-128",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR5",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR5/aibom.cdx.json",
+        "sha256": "bc648c9fc7d38655f5e5531e10f6f2fb3dfaf5226ceb81b48d8e2765ef4213a4"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-129",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR6",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR6/aibom.cdx.json",
+        "sha256": "2156ca1efe74420531273c74062f6ab3598d764fb5bdd680f469c47e93f94d46"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-130",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR7-manifest/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-131",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::MR7-extref",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_MR7-extref/aibom.cdx.json",
+        "sha256": "a6faf37b4464334cbdebbb3a8c17e54047c61fbd46edfb1fae6221465be45715"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-132",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf::NC-query",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_f572949bdf_NC-query/aibom.cdx.json",
+        "sha256": "bd48198341eead19c86f01750a397506c5fd2457bcf9e804b0cd39aafe948ac9"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-133",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR1",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR1/aibom.cdx.json",
+        "sha256": "27f38daa0d4634e66efd32ad0a57cd3ea543f9150ecd3f89dc2f29feec2500e3"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-134",
+      "opentrace_state": "supported",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR3-rev",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR3-rev/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-135",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR3-binding",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR3-binding/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-136",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR5",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR5/aibom.cdx.json",
+        "sha256": "050c02a2da0a63222af57af76795ea9854702727d4683cbb767e5ba0e31b500d"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-137",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR6",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR6/aibom.cdx.json",
+        "sha256": "6a7c907c62fbdec5c0bd6c65dae824edd4bb608ab2dc3f13c85fb70abc1ba5b5"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-138",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR7-manifest",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR7-manifest/aibom.cdx.json",
+        "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-139",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::MR7-extref",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_MR7-extref/aibom.cdx.json",
+        "sha256": "1dd111c88d66a401962eebb4c9eeef35a9954cb6c95110b8f0077bac35059af1"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-140",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937::NC-query",
+      "input": {
+        "path": "e2_e3/cases/aibom_frigate-recorded_yolov6n.hef_bd5b9a6937_NC-query/aibom.cdx.json",
+        "sha256": "87e59267a777c9302b289f2347531821c1f14db7b9fe0bb3b617a38b6a94315c"
+      },
+      "input_kind": "valid_document",
+      "input_version": "v1_6",
+      "op_id": "val-141",
+      "opentrace_state": "unverifiable",
+      "operation": "validate",
+      "oracle": "valid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::SV-no-bomFormat",
+      "input": {
+        "path": "e2_e3/structural_controls/aibom-SV-no-bomFormat.cdx.json",
+        "sha256": "1af6c392dead15da265f69453adb6c468d67ff109f7b904305e69bfd1389c351"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-142",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::SV-specVersion-number",
+      "input": {
+        "path": "e2_e3/structural_controls/aibom-SV-specVersion-number.cdx.json",
+        "sha256": "7e9ce8976a4ae009cbe792f0e7e17e44a9ccce491ec2e7ec4d6dd07d50d3274c"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-143",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23::SV-component-without-name",
+      "input": {
+        "path": "e2_e3/structural_controls/aibom-SV-component-without-name.cdx.json",
+        "sha256": "9f4c8705224b4e23d6823f08846d9e06e08cb8747abaa9d00df996da48630acf"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-144",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::SV-no-bomFormat",
+      "input": {
+        "path": "e2_e3/structural_controls/cbom-SV-no-bomFormat.cdx.json",
+        "sha256": "a08035057952adcc46cebc9536b4d31922040778040a578406c6b8ae8532b69a"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-145",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::SV-specVersion-number",
+      "input": {
+        "path": "e2_e3/structural_controls/cbom-SV-specVersion-number.cdx.json",
+        "sha256": "8c8f440d376aee72ae4549cbac500c6f9567b7e9988717f0c5b038ea9ec5807e"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-146",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "cbom:app/crypto_demo.py:68:sha3_256::SV-component-without-name",
+      "input": {
+        "path": "e2_e3/structural_controls/cbom-SV-component-without-name.cdx.json",
+        "sha256": "c2444453189f67d2b0fcc6001c9e818d90707c7d5889a598ae7574711c530079"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-147",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::SV-no-bomFormat",
+      "input": {
+        "path": "e2_e3/structural_controls/sbom-SV-no-bomFormat.cdx.json",
+        "sha256": "c7a9e90dd6775e266b38cb821ed47b0891b496d596c354102bf41172c08ae6c1"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-148",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::SV-specVersion-number",
+      "input": {
+        "path": "e2_e3/structural_controls/sbom-SV-specVersion-number.cdx.json",
+        "sha256": "ae32c8f4ad2ae132cad41b88e815558b7a0e69379d71596e4dc752928323f136"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-149",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::SV-component-without-name",
+      "input": {
+        "path": "e2_e3/structural_controls/sbom-SV-component-without-name.cdx.json",
+        "sha256": "eea9d9f66cb0ff8496457a1d97039294e132b5dc21eeb0d3f6821c18120ec73d"
+      },
+      "input_kind": "malformed_control",
+      "input_version": "v1_6",
+      "op_id": "val-150",
+      "opentrace_state": null,
+      "operation": "validate",
+      "oracle": "invalid",
+      "tool": "cyclonedx-cli"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "s3transfer",
+        "purl": "pkg:pypi/s3transfer@0.10.1",
+        "version": "0.10.1"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_MR2/sbom.cdx.json",
+        "sha256": "b51927950ad5e13c9865a744b259e50458ab6cd8aa7050e01393c62b63618064"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_original/sbom.cdx.json",
+        "sha256": "93b9ccb0a07458a5700dc765b3e260fd6e98e918b2ed2c9d9dccb69bf0ca8f54"
+      },
+      "op_id": "diff-151",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:otherreq.txt:s3transfer::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "s3transfer",
+          "purl": "pkg:npm/s3transfer@0.10.1",
+          "version": "0.10.1"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "s3transfer",
+        "purl": "pkg:pypi/s3transfer@0.10.1",
+        "version": "0.10.1"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_NC-ecosystem/sbom.cdx.json",
+        "sha256": "ed4771f6e7438160b2570dd9e9b22748e00368ae1e5102f38da348e285888ffd"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_otherreq.txt_s3transfer_original/sbom.cdx.json",
+        "sha256": "93b9ccb0a07458a5700dc765b3e260fd6e98e918b2ed2c9d9dccb69bf0ca8f54"
+      },
+      "op_id": "diff-152",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "beautifulsoup4",
+        "purl": "pkg:pypi/beautifulsoup4@4.1.0",
+        "version": "4.1.0"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_MR2/sbom.cdx.json",
+        "sha256": "ed3871b44add29f42a1d54c1cac948b02836d9a17f6303d3307b439fb8423e56"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-153",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:beautifulsoup4::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "beautifulsoup4",
+          "purl": "pkg:npm/beautifulsoup4@4.1.0",
+          "version": "4.1.0"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "beautifulsoup4",
+        "purl": "pkg:pypi/beautifulsoup4@4.1.0",
+        "version": "4.1.0"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_NC-ecosystem/sbom.cdx.json",
+        "sha256": "7fefeaefe0669f95760f7812ba2da791eaec71ff07ee528a5f5b945175d5922e"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_beautifulsoup4_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-154",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "docopt",
+        "purl": "pkg:pypi/docopt@0.6.2",
+        "version": "0.6.2"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_MR2/sbom.cdx.json",
+        "sha256": "73074f7f5f260459a3746dd2838f797ce0dbe732ee2e384901e36fca80ab5543"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-155",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:docopt::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "docopt",
+          "purl": "pkg:npm/docopt@0.6.2",
+          "version": "0.6.2"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "docopt",
+        "purl": "pkg:pypi/docopt@0.6.2",
+        "version": "0.6.2"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_NC-ecosystem/sbom.cdx.json",
+        "sha256": "4ffe892fcc874bb2245cc7fbe3d9fd2cdfc5038a76818273e1a9b4fa79d5a8a5"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_docopt_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-156",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "httpx",
+        "purl": "pkg:pypi/httpx@0.25.2",
+        "version": "0.25.2"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_MR2/sbom.cdx.json",
+        "sha256": "3372eec700d73cc7cf2639d962bdc0529bf04f8e485232f8b014c5b2fe005c42"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-157",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:httpx::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "httpx",
+          "purl": "pkg:npm/httpx@0.25.2",
+          "version": "0.25.2"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "httpx",
+        "purl": "pkg:pypi/httpx@0.25.2",
+        "version": "0.25.2"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_NC-ecosystem/sbom.cdx.json",
+        "sha256": "f6cea5ac134cb8d285259394a9b0fec58af2ee5914c5bc0980ae36c2834c18b1"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_httpx_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-158",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "redis",
+        "purl": "pkg:pypi/redis@5.0.4",
+        "version": "5.0.4"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_MR2/sbom.cdx.json",
+        "sha256": "990b4ab16913c3c452180a8ab95a56ac1159af64b195c60c73082cf9de5b9c10"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-159",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:redis::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "redis",
+          "purl": "pkg:npm/redis@5.0.4",
+          "version": "5.0.4"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "redis",
+        "purl": "pkg:pypi/redis@5.0.4",
+        "version": "5.0.4"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_NC-ecosystem/sbom.cdx.json",
+        "sha256": "10f3a0fb0870097e7ebd6f494918b03beb8a7fd20da08a2ad1f7d29ecaa60fda"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_redis_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-160",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "requests",
+        "purl": "pkg:pypi/requests@2.8.1",
+        "version": "2.8.1"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_MR2/sbom.cdx.json",
+        "sha256": "2665cc710b92faf0bd9d58653d5243989589a72fa1fef1de7b6446f33e300cd7"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-161",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:requests::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "requests",
+          "purl": "pkg:npm/requests@2.8.1",
+          "version": "2.8.1"
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "requests",
+        "purl": "pkg:pypi/requests@2.8.1",
+        "version": "2.8.1"
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_NC-ecosystem/sbom.cdx.json",
+        "sha256": "7f82938bd3f7e2ce86afa79b7337392b8ae301ccea0dcfe235ba2ef21c61feb2"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_requests_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-162",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::MR2",
+      "expected_added": [],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "urllib3",
+        "purl": "pkg:pypi/urllib3",
+        "version": null
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_MR2/sbom.cdx.json",
+        "sha256": "cf406f28b2a5ef6636cf2a9ab906170577830f24b810b3001f68dc50f2dea996"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-163",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "MR2"
+    },
+    {
+      "case_id": "sbom:requirements.txt:urllib3::NC-ecosystem",
+      "expected_added": [
+        {
+          "ecosystem": "npm",
+          "name": "urllib3",
+          "purl": "pkg:npm/urllib3",
+          "version": null
+        }
+      ],
+      "expected_removed": {
+        "ecosystem": "pypi",
+        "name": "urllib3",
+        "purl": "pkg:pypi/urllib3",
+        "version": null
+      },
+      "new": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_NC-ecosystem/sbom.cdx.json",
+        "sha256": "37084a4e9d5e1191e23e174e14acd02528bdaa6c0928b5bb1e94403997bea2a3"
+      },
+      "old": {
+        "path": "e2_e3/cases/sbom_requirements.txt_urllib3_original/sbom.cdx.json",
+        "sha256": "5339c78efed90c7813a7cdc60f876c5b427371dc1fc2f51a7b4dead55a0da740"
+      },
+      "op_id": "diff-164",
+      "opentrace_original_state": "supported",
+      "opentrace_state": "contradicted",
+      "operation": "diff",
+      "tool": "sbom-tools",
+      "variant": "NC-ecosystem"
+    }
+  ],
+  "origin": "recovered from the prior run's external_tool_runs.jsonl",
+  "plan_sha256": "d98272b86a137f16e268a1879924880d77e341a423506746181a30911fab0117",
+  "prior_tool_records_sha256": "35eff21ab888c5a8405831e4906c7ded951bbd676dd2b26023f7eed127c25f18",
+  "schema": "opentrace.evaluation.e3b_plan/1",
+  "selection_sha256": "e72b4abbc437e442c0e04c9ce9f2e8dc3b01a12144f436fe3421615f3d2d8e21"
+}

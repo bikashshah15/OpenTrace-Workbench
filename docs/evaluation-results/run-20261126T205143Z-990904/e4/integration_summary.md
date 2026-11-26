@@ -1,0 +1,6 @@
+# E4 integration summary (generated; numbers are computed from this run's files)
+
+- Reference `composite-a`: valid=True, assessed findings per family={'software': 5, 'cryptography': 4, 'ai_model': 2}, construction facts agreeing=11/11; provenance={'software': 'external_reference (DeepBits requirement lines, verbatim)', 'cryptography': 'external_reference (BF-CBOM micro-python file, verbatim)', 'ai_model': 'captured locators (Frigate recorded model references) in a synthetic Python statement'}
+- Reference `composite-b`: valid=True, assessed findings per family={'software': 3, 'cryptography': 4, 'ai_model': 2}, construction facts agreeing=9/9; provenance={'software': 'external_reference (DeepBits requirement lines, verbatim)', 'cryptography': 'external_reference (BF-CBOM micro-python file, verbatim)', 'ai_model': 'captured locators (Frigate recorded model references) in a synthetic Python statement'}
+
+Composite references are assembled for the experiment; they are not real IoT products. Retention compares unaffected-family findings with the reference and does not establish the reference findings' correctness. Fail-closed (R6) and lifecycle (R7) conditions are scored by their safety expectation, not by retention. The all-or-nothing comparator is an illustrative architectural ablation, not an existing product.

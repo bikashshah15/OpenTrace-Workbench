@@ -1,0 +1,6 @@
+capture_id,workload,elapsed_ms_median,elapsed_ms_q1,elapsed_ms_q3,elapsed_ms_iqr,elapsed_ms_min,elapsed_ms_max,elapsed_ms_quantile_method,n_successful,n_failed,n_failed_warmup_or_memory,peak_total_mib_max,peak_total_mib_median,note
+frigate-recorded,engine_discovery,169.023958,166.864792,170.911875,4.047083000000015,164.806708,173.63875,type7_linear,5,0,0,156.0625,153.4375,
+frigate-recorded,engine_assessment,10.741792,10.659875,10.974791,0.3149160000000002,9.336792,10.992042,type7_linear,5,0,0,153.671875,153.671875,rule evaluation + graph + export combined (graph not isolated)
+frigate-recorded,integrated_worker,251.592792,225.583167,260.795875,35.21270800000002,212.779625,267.998917,type7_linear,5,0,0,203.015625,196.40625,"limits (not measurements): deadline 30.0s, bundle 16 MiB, result 32 MiB"
+frigate-recorded,offline_replay,912.851042,894.628041,944.228583,49.600541999999905,849.004084,977.084375,type7_linear,5,0,0,279.65625,259.0,"fresh session -> demo -> all bom-candidates and gaps pages; local service, no browser paint"
+frigate-recorded,service_startup,552.829625,552.410833,555.0505,2.6396670000000313,548.525959,555.375708,type7_linear,5,0,0,246.96875,246.953125,ReplayCapture hash verification + loopback server start/stop

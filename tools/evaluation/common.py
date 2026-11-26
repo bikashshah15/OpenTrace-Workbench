@@ -165,13 +165,9 @@ def content_revision_token(listing_digest: str) -> str:
 
 
 def git_revision(path: str) -> dict:
-    """``{"git_sha": .., "available": bool, "reason": ..}`` when Git metadata exists.
-
-    Linked worktrees store ``.git`` as a text file pointing at their worktree metadata, so checking only for a directory would
-    incorrectly mark a clean worktree as an extracted archive.
-    """
-    if not os.path.exists(os.path.join(path, ".git")):
-        return {"git_sha": None, "available": False, "reason": "no .git metadata (e.g. extracted archive); Git revision unavailable"}
+    """``{"git_sha": .., "available": bool, "reason": ..}`` without guessing: only an actual ``.git`` yields a SHA."""
+    if not os.path.isdir(os.path.join(path, ".git")):
+        return {"git_sha": None, "available": False, "reason": "no .git directory (e.g. extracted archive); Git revision unavailable"}
     git = shutil.which("git")
     if not git:
         return {"git_sha": None, "available": False, "reason": "git executable not found"}
@@ -207,6 +203,34 @@ def load_config(path: str | None = None, overrides: dict | None = None) -> dict:
     cfg["_config_path"] = os.path.abspath(path)
     cfg["_config_sha256"] = sha256_file(path)
     return cfg
+
+
+def validate_config(cfg: dict) -> None:
+    """Validate settings used at startup before the runner creates an output directory."""
+    tools = cfg.get("external_tools", {})
+    if not isinstance(tools, dict):
+        raise HarnessError("configuration key 'external_tools' expected a mapping of executable names to command strings")
+    allowed = {"cyclonedx", "sbom_tools"}
+    for key, value in tools.items():
+        full_key = f"external_tools.{key}"
+        if key not in allowed:
+            raise HarnessError(
+                f"configuration key '{full_key}' is not an executable setting; expected only command-name/path strings "
+                "under external_tools (put timeout settings under e3b.timeout_seconds)"
+            )
+        if value is not None and (not isinstance(value, str) or not value.strip()):
+            raise HarnessError(
+                f"configuration key '{full_key}' expected a non-empty executable command name or path (string), "
+                f"or null to disable it; received {type(value).__name__}"
+            )
+    e3b = cfg.get("e3b", {})
+    if not isinstance(e3b, dict):
+        raise HarnessError("configuration key 'e3b' expected a mapping")
+    timeout = e3b.get("timeout_seconds", 120)
+    if isinstance(timeout, bool) or not isinstance(timeout, (int, float)) or timeout <= 0:
+        raise HarnessError(
+            f"configuration key 'e3b.timeout_seconds' expected a positive number of seconds; received {type(timeout).__name__}"
+        )
 
 
 def set_dotted(cfg: dict, key: str, value: Any) -> None:
@@ -465,7 +489,7 @@ def environment_info(cfg: dict | None = None) -> dict:
         "cpu": {"model": cpu_model(), "logical_cpus": os.cpu_count()},
         "memory_total_bytes": memory_total_bytes(),
         "packages": {n: _pkg_version(n) for n in ("jsonschema", "PyYAML", "networkx", "psutil", "packaging")},
-        "external_tools": {name: tool_version(exe) for name, exe in sorted(tools.items())},
+        "external_tools": {name: tool_version(tools.get(name)) for name in ("cyclonedx", "sbom_tools")},
         "env": {k: os.environ.get(k) for k in ("PYTHONHASHSEED", "OPENTRACE_DEMO_REPLAY") if k in os.environ},
     }
 

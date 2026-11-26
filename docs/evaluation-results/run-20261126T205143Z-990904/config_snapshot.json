@@ -1,0 +1,220 @@
+{
+  "_config_path": "<opentrace-root>/tools/evaluation/config.yaml",
+  "_config_sha256": "80a189ca2b49ea869b42278071808a293c7f55c013f68e3e84a0b8a8320f49d4",
+  "benchmarks": {
+    "ai_references": "evaluation_data/external/ai_references",
+    "bf_cbom": "evaluation_data/external/bf_cbom",
+    "bf_cbom_archive_sha256": null,
+    "deepbits": "evaluation_data/external/deepbits",
+    "deepbits_archive_sha256": null
+  },
+  "captures": [
+    {
+      "documented_reference": {
+        "declared_dependency_edges": 4569,
+        "distinct_assertions": 92,
+        "exported_source_files": 3337,
+        "model_reference_checks": 6,
+        "not_represented": 59,
+        "represented": 0,
+        "review_candidates": 97,
+        "sbom_component_records": 1861,
+        "unknown_coverage": 38
+      },
+      "id": "frigate-recorded",
+      "path": "src/core/opentrace_core/app/demo/frigate-3bca9b8",
+      "provenance_tier": "captured",
+      "source_checkout": null
+    }
+  ],
+  "e1": {
+    "audit_per_family": 8,
+    "audit_strata": [
+      "family",
+      "state"
+    ],
+    "completed_audit_file": null,
+    "fetch_inspector_for_all": true,
+    "page_guard": 2000
+  },
+  "e2": {
+    "aibom": {
+      "captured_sources": [
+        "frigate-recorded"
+      ],
+      "exclude_placeholder_hosts": true,
+      "model_extensions": [
+        ".onnx",
+        ".tflite",
+        ".hef",
+        ".pt",
+        ".pth",
+        ".pb",
+        ".h5",
+        ".keras",
+        ".safetensors",
+        ".gguf",
+        ".bin",
+        ".mlmodel",
+        ".engine",
+        ".xml",
+        ".rknn"
+      ]
+    },
+    "bf_cbom": {
+      "ground_truth": "experiments/corpus/micro/ground_truth.yaml",
+      "hash_groups": [
+        "SHA-1",
+        "SHA-2",
+        "SHA-3",
+        "MD5"
+      ],
+      "project": "micro-python"
+    },
+    "deepbits": {
+      "anchor_files": [
+        "requirements.txt",
+        "otherreq.txt"
+      ],
+      "excluded_manifests": [
+        "python/pipfile/Pipfile",
+        "python/poetry/pyproject.toml"
+      ],
+      "groundtruth": "groundtruth",
+      "include_unlabeled_files": false,
+      "python_req_dir": "python/req"
+    },
+    "domains": [
+      "sbom",
+      "cbom",
+      "aibom"
+    ],
+    "method_timeout_seconds": 60,
+    "mr1_repetitions": 1,
+    "negative_controls": [
+      "NC-ecosystem",
+      "NC-primitive",
+      "NC-query"
+    ],
+    "selection_dir": "evaluation_data/frozen/e2_selection",
+    "tracks": [
+      "fixed_claim",
+      "collector",
+      "discovery"
+    ],
+    "transformations": [
+      "MR1",
+      "MR2",
+      "MR3",
+      "MR4",
+      "MR5",
+      "MR6",
+      "MR7"
+    ]
+  },
+  "e3": {
+    "cyclonedx_input_version": "v1_6",
+    "cyclonedx_validate": true,
+    "methods": [
+      "B1_name",
+      "B2_strong",
+      "opentrace"
+    ],
+    "sbom_tools_diff": true
+  },
+  "e3b": {
+    "timeout_seconds": 120
+  },
+  "e3c": {
+    "captures": "evaluation_data/e3c_captures_01"
+  },
+  "e4": {
+    "all_or_nothing_comparator": true,
+    "conditions": [
+      "R0",
+      "R1",
+      "R2",
+      "R3",
+      "R4-software",
+      "R4-crypto",
+      "R4-models",
+      "R5-once",
+      "R5-twice",
+      "R6",
+      "R7"
+    ],
+    "investigation_tasks": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5",
+      "Q6"
+    ],
+    "reference_bundles": [
+      "composite-a",
+      "composite-b"
+    ]
+  },
+  "e5": {
+    "memory_sample_interval_ms": 5,
+    "repetitions": 5,
+    "replay_consistency_repeats": 5,
+    "volatile_keys": [
+      "session_id",
+      "generation",
+      "validation_digest",
+      "queried_at",
+      "timestamp",
+      "captured_at",
+      "started_at",
+      "finished_at",
+      "resolved_at"
+    ],
+    "warmups": 1,
+    "workloads": [
+      "engine_discovery",
+      "engine_assessment",
+      "integrated_worker",
+      "offline_replay",
+      "service_startup"
+    ]
+  },
+  "external_tools": {
+    "cyclonedx": "cyclonedx",
+    "sbom_tools": "sbom-tools"
+  },
+  "offline": true,
+  "opentrace": {
+    "archive_path": null,
+    "archive_sha256": null
+  },
+  "output_root": "evaluation_results",
+  "preflight": {
+    "regression_suites": [
+      {
+        "modules": [
+          "tests.core.bombridge.test_requirement_check",
+          "tests.core.bombridge.test_rules_cbom4",
+          "tests.core.bombridge.test_discovery_models"
+        ],
+        "name": "selected_rule_tests"
+      },
+      {
+        "modules": [
+          "tests.core.app.test_demo_replay"
+        ],
+        "name": "replay_tests"
+      }
+    ],
+    "regression_timeout_seconds": 1800,
+    "run_regression_tests": true
+  },
+  "repetitions": 5,
+  "schema": "opentrace.evaluation.config/1",
+  "seed": 20261125,
+  "summary": {
+    "latex": false
+  },
+  "warmups": 1
+}

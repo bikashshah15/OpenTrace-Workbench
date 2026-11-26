@@ -1,0 +1,34 @@
+{
+  "captured_at": "2026-11-26T20:51:43Z",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.7"
+  },
+  "os": {
+    "system": "Darwin",
+    "release": "25.6.0",
+    "architecture": "arm64"
+  },
+  "cpu": {
+    "logical_cpus": 10,
+    "model": "Apple M4"
+  },
+  "memory_total_bytes": 25769803776,
+  "packages": {
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.23.0",
+    "networkx": "3.4.2",
+    "psutil": "7.2.2"
+  },
+  "external_tools": {
+    "CycloneDX CLI": {
+      "available": true,
+      "version": "0.33.1"
+    },
+    "sbom-tools": {
+      "available": true,
+      "version": "sbom-tools 0.4.0"
+    }
+  },
+  "workbench_git_revision": "not captured by this run"
+}

@@ -1,0 +1,261 @@
+{
+  "anchor_id": "cbom:app/crypto_demo.py:85:sha1",
+  "bom": {
+    "doc": {
+      "bomFormat": "CycloneDX",
+      "components": [
+        {
+          "bom-ref": "crypto/algorithm/sha3-256@app/crypto_demo.py:68",
+          "cryptoProperties": {
+            "algorithmProperties": {
+              "primitive": "hash"
+            },
+            "assetType": "algorithm"
+          },
+          "evidence": {
+            "occurrences": [
+              {
+                "additionalContext": "hashlib.sha3_256 in step11",
+                "line": 68,
+                "location": "app/crypto_demo.py",
+                "offset": 18
+              }
+            ]
+          },
+          "name": "SHA3-256",
+          "type": "cryptographic-asset"
+        },
+        {
+          "bom-ref": "crypto/algorithm/sha-1@app/crypto_demo.py:85",
+          "cryptoProperties": {
+            "algorithmProperties": {
+              "primitive": "hash"
+            },
+            "assetType": "algorithm"
+          },
+          "evidence": {
+            "occurrences": [
+              {
+                "additionalContext": "hashlib.sha1 in step14",
+                "line": 85,
+                "location": "app/crypto_demo.py",
+                "offset": 18
+              }
+            ]
+          },
+          "name": "SHA-1",
+          "type": "cryptographic-asset"
+        },
+        {
+          "bom-ref": "crypto/algorithm/sha-256@app/crypto_demo.py:94",
+          "cryptoProperties": {
+            "algorithmProperties": {
+              "primitive": "hash"
+            },
+            "assetType": "algorithm"
+          },
+          "evidence": {
+            "occurrences": [
+              {
+                "additionalContext": "hashlib.sha256 in step16",
+                "line": 94,
+                "location": "app/crypto_demo.py",
+                "offset": 20
+              }
+            ]
+          },
+          "name": "SHA-256",
+          "type": "cryptographic-asset"
+        },
+        {
+          "bom-ref": "crypto/algorithm/md5@app/crypto_demo.py:98",
+          "cryptoProperties": {
+            "algorithmProperties": {
+              "primitive": "hash"
+            },
+            "assetType": "algorithm"
+          },
+          "evidence": {
+            "occurrences": [
+              {
+                "additionalContext": "hashlib.md5 in step17",
+                "line": 98,
+                "location": "app/crypto_demo.py",
+                "offset": 17
+              }
+            ]
+          },
+          "name": "MD5",
+          "type": "cryptographic-asset"
+        },
+        {
+          "bom-ref": "pkg:pypi/cryptography",
+          "name": "cryptography",
+          "purl": "pkg:pypi/cryptography",
+          "type": "library"
+        }
+      ],
+      "compositions": [
+        {
+          "aggregate": "incomplete"
+        }
+      ],
+      "metadata": {
+        "component": {
+          "bom-ref": "subject",
+          "name": "bf-cbom-experiments-corpus-micro-python",
+          "type": "application",
+          "version": "0b06dc979649d9710eff81be3c974a559dc4fffd"
+        },
+        "properties": [
+          {
+            "name": "opentrace-eval:notice",
+            "value": "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+          }
+        ],
+        "tools": {
+          "components": [
+            {
+              "name": "opentrace-eval-controlled-cbom",
+              "type": "application",
+              "version": "1"
+            }
+          ]
+        }
+      },
+      "serialNumber": "urn:uuid:bf102f33-abd4-5927-99e9-bd945b7dd90f",
+      "specVersion": "1.6",
+      "version": 1
+    },
+    "evidence_revision": null,
+    "kind": "cbom",
+    "manifest": {
+      "generator": {
+        "invocation": "tools/evaluation/benchmark_adapters.py (CONTROLLED fixture writer; not a scanner run)",
+        "name": "opentrace-eval-controlled-cbom",
+        "third_party": true,
+        "version": "1"
+      },
+      "inputs": [
+        {
+          "path": "pyproject.toml",
+          "sha256": "c0de04bb334d5b3b57716c31b826977cf77b2ed01d21373ce4e6ee14f25a1b9e"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "37b484db902b66118ca669553d1438cdb5bc8814d0eec3304938b13d305f47cf"
+        },
+        {
+          "path": "app/crypto_demo.py",
+          "sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184"
+        }
+      ],
+      "limitations": [
+        "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+      ],
+      "output_sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7",
+      "repository": "https://github.com/SEG-UNIBE/BF-CBOM",
+      "revision": "0b06dc979649d9710eff81be3c974a559dc4fffd",
+      "schema": "bombridge.acquisition/1",
+      "tree_differs_from_revision": false
+    },
+    "producer": {
+      "name": "opentrace-eval-controlled-cbom",
+      "version": "1"
+    },
+    "sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7"
+  },
+  "case_id": "cbom:app/crypto_demo.py:85:sha1::MR3-rev",
+  "claim": {
+    "algorithm": "sha1",
+    "file": "app/crypto_demo.py",
+    "inventory_id": "inv:eval-cbom",
+    "inventory_sha256": "d2206fbcc28d3d9d13f8c9958e43cd6829a5aad7f995a2e17ff5dd46b5113fd7",
+    "lines": [
+      85,
+      85
+    ],
+    "operation": "hash",
+    "producer": {
+      "name": "opentrace-eval-controlled-cbom",
+      "version": "1"
+    },
+    "revision": "0b06dc979649d9710eff81be3c974a559dc4fffd"
+  },
+  "domain": "cbom",
+  "paired_with": "cbom:app/crypto_demo.py:85:sha1::original",
+  "provenance": {
+    "bom": "controlled",
+    "manifest": "controlled",
+    "resolution": "controlled",
+    "source": "external_reference"
+  },
+  "repository": {
+    "revision": "0b06dc979649d9710eff81be3c974a559dc4fffd",
+    "revision_kind": "content_derived_not_git",
+    "url": "https://github.com/SEG-UNIBE/BF-CBOM"
+  },
+  "source": {
+    "evidence_revision": "bb3036318b03029982a2dd53c4b76782965304bc",
+    "excerpt": "    sha1_digest = hashlib.sha1(b\"data\").hexdigest()",
+    "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+    "lines": [
+      85,
+      85
+    ],
+    "path": "app/crypto_demo.py",
+    "resolution": {
+      "algorithm_literal": null,
+      "algorithm_source": "function_name",
+      "binding": "module_level_import",
+      "binding_status": "unique_module_level",
+      "call": "python:hashlib.sha1",
+      "checks": {
+        "audit_complete": true,
+        "binding_unique_module_level": true,
+        "cbom_scope_covers_file": true,
+        "excerpt_complete": true,
+        "no_overlapping_sites": true,
+        "operation_class_hash": true,
+        "source_digest_verified": true,
+        "tree_search_complete_no_local_module": true
+      },
+      "collector": "tools/evaluation (CONTROLLED resolution record; facts from benchmark_oracle.python_hash_call_facts)",
+      "facts": {
+        "calls_on_line": [
+          "sha1"
+        ],
+        "method": "python ast parse (no execution)",
+        "module_level_import_unique": true,
+        "no_local_hashlib_module": true,
+        "single_call_on_line": true
+      },
+      "imported_name": null
+    }
+  },
+  "source_ref": {
+    "ground_truth_version": "2026-10-29.1",
+    "item_id": "sha-1",
+    "label": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.sha-1",
+    "line_range": [
+      85,
+      85
+    ],
+    "path": "experiments/corpus/micro/python/app/crypto_demo.py",
+    "revision_or_hash": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+    "unit": "SHA-1",
+    "upstream": "SEG-UNIBE/BF-CBOM"
+  },
+  "track": "fixed_claim",
+  "transform": {
+    "after_sha256": "cf3c43e09f81b7bf15b39a14f98d84b862cb6f8f77a046317fd96f91d4068834",
+    "before_sha256": "cc6b76b9f4b6ec6f98c693397ad23f35700aab784f34ed239acc5ab64280f335",
+    "family": "MR3",
+    "id": "MR3-rev",
+    "params": {
+      "evidence_revision": "bb3036318b03029982a2dd53c4b76782965304bc"
+    },
+    "rationale": "the source observation is recorded for another revision; the claim names the original revision"
+  },
+  "variant": "MR3-rev"
+}

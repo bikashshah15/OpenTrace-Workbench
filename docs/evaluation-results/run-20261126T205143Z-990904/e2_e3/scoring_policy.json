@@ -1,0 +1,228 @@
+{
+  "abstain_states": [
+    "unverifiable",
+    "refused"
+  ],
+  "baselines_definition_sha256": "1a2bdc2501d4fb13f0642c509c9e97de0c269d4d62eeccc05ca0765e5618582c",
+  "definitive_states": [
+    "supported",
+    "contradicted"
+  ],
+  "expectations": {
+    "*|MR1": {
+      "decidable": true,
+      "expected_state": "supported",
+      "property": "preserve_state_and_category",
+      "reason_class": null,
+      "underdetermined": false
+    },
+    "*|MR3-binding": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_unsupported_agreement",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "*|MR3-digest": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_unsupported_agreement",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "*|MR3-rev": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_unsupported_agreement",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "*|MR6": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_unique_match",
+      "reason_class": "ambiguity",
+      "underdetermined": true
+    },
+    "*|original": {
+      "decidable": true,
+      "expected_state": "supported",
+      "property": "positive_control",
+      "reason_class": null,
+      "underdetermined": false
+    },
+    "aibom|MR5": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_confirmed_locator",
+      "reason_class": "identity_mismatch",
+      "underdetermined": true
+    },
+    "aibom|MR7-extref": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "preserve_uncertainty",
+      "reason_class": "identity_mismatch",
+      "underdetermined": true
+    },
+    "aibom|MR7-manifest": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "preserve_uncertainty",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "aibom|NC-query": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_confirmed_locator",
+      "reason_class": "identity_mismatch",
+      "underdetermined": true
+    },
+    "cbom|MR4-file": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_confirmed_call_site",
+      "reason_class": "location",
+      "underdetermined": true
+    },
+    "cbom|MR4-line": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_confirmed_call_site",
+      "reason_class": "location",
+      "underdetermined": true
+    },
+    "cbom|MR7-manifest": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "preserve_uncertainty",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "cbom|MR7-resolution": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "preserve_uncertainty",
+      "reason_class": "source_resolution",
+      "underdetermined": true
+    },
+    "cbom|NC-primitive": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "no_confirmed_call_site",
+      "reason_class": "identity_mismatch",
+      "underdetermined": true
+    },
+    "sbom|MR2": {
+      "decidable": true,
+      "expected_state": "contradicted",
+      "property": "supported_to_contradicted",
+      "reason_class": "representation_absence",
+      "underdetermined": false
+    },
+    "sbom|MR7-filebinding": {
+      "decidable": false,
+      "expected_state": "unverifiable_or_refused",
+      "property": "preserve_uncertainty",
+      "reason_class": "scope_binding",
+      "underdetermined": true
+    },
+    "sbom|NC-ecosystem": {
+      "decidable": true,
+      "expected_state": "contradicted",
+      "property": "supported_to_contradicted",
+      "reason_class": "representation_absence",
+      "underdetermined": false
+    }
+  },
+  "metrics": {
+    "CRR": "correctly resolved decidable cases (supported agreement; SBOM bound absence) / all decidable cases; errors count as failures",
+    "PSR": "satisfied applicable paired tests / applicable paired tests attempted; errors, missing outputs and failed original controls fail the test",
+    "UCR": "underdetermined cases given supported or contradicted / all underdetermined cases (lower is better); errors counted separately",
+    "correct_uncertainty": "underdetermined cases given unverifiable or an explicit refusal / all underdetermined cases",
+    "reason_matched_uncertainty": "correct_uncertainty AND the method's reason classes include the predeclared reason class",
+    "sbom_gap_prf": "on decidable SBOM cases only; positive = representation gap (contradicted), not a vulnerability or a missing installed package",
+    "valid_correspondence_retention": "MR1 pairs whose original and reordered cases are both supported / MR1 pairs"
+  },
+  "reason_class": {
+    "aibom_format_unsupported": "parse_or_format",
+    "algorithm_record_without_matching_location": "location",
+    "alias_requires_resolved_call": "source_resolution",
+    "ambiguous_identity": "ambiguity",
+    "ambiguous_model_identity": "ambiguity",
+    "artifact_identity_unknown": "identity_mismatch",
+    "assertion_scope_incomplete": "scope_binding",
+    "call_site_in_range_unique": "agreement",
+    "call_sites_elsewhere_in_file": "location",
+    "candidates_without_locator_match": "identity_mismatch",
+    "capture_mismatch": "scope_binding",
+    "cbom_format_unsupported": "parse_or_format",
+    "declaration_files_differ": "scope_binding",
+    "inventory_binding_mismatch": "scope_binding",
+    "inventory_parse_incomplete": "parse_or_format",
+    "library_mention_only": "identity_mismatch",
+    "location_or_algorithm_not_in_excerpt": "source_resolution",
+    "locator_equal_unique": "agreement",
+    "locator_not_in_excerpt": "source_resolution",
+    "multiple_call_sites_in_range": "ambiguity",
+    "no_algorithm_record": "identity_mismatch",
+    "no_compatible_aibom_document": "scope_binding",
+    "no_compatible_cbom_document": "scope_binding",
+    "no_inventory_observation": "scope_binding",
+    "no_matching_model_record": "identity_mismatch",
+    "no_usable_observation": "other",
+    "not_represented_in_fully_parsed_inventory": "representation_absence",
+    "operation_context_mismatch": "location",
+    "primitive_mismatch": "identity_mismatch",
+    "producer_binding_mismatch": "scope_binding",
+    "represented_by_unambiguous_component": "agreement",
+    "requirement_identity_insufficient": "source_resolution",
+    "scan_binding_unsubstantiated": "scope_binding",
+    "scan_file_differs": "scope_binding",
+    "scope_mismatch": "scope_binding",
+    "scope_missing": "scope_binding",
+    "source_location_not_observed": "source_resolution",
+    "source_reference_not_observed": "source_resolution",
+    "source_resolution_ambiguous": "source_resolution"
+  },
+  "state_map": {
+    "conflicting_evidence": "conflicting",
+    "contradicted": "contradicted",
+    "supported": "supported",
+    "unverifiable": "unverifiable"
+  },
+  "variants": {
+    "aibom": [
+      "MR1",
+      "MR3-rev",
+      "MR3-binding",
+      "MR5",
+      "MR6",
+      "MR7-manifest",
+      "MR7-extref",
+      "NC-query"
+    ],
+    "cbom": [
+      "MR1",
+      "MR3-rev",
+      "MR3-binding",
+      "MR4-line",
+      "MR4-file",
+      "MR6",
+      "MR7-manifest",
+      "MR7-resolution",
+      "NC-primitive"
+    ],
+    "sbom": [
+      "MR1",
+      "MR2",
+      "MR3-rev",
+      "MR3-digest",
+      "MR6",
+      "MR7-filebinding",
+      "NC-ecosystem"
+    ]
+  },
+  "version": "e2e3-policy/1"
+}

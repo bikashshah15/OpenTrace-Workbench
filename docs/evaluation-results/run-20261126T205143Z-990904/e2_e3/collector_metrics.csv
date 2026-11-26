@@ -1,0 +1,10 @@
+domain,track,metric,n,N,rate,note
+sbom,collector,requirement_files_collected_of_anchor_files,1,2,0.5,"collector glob scope: *requirements*.txt, requirements/*.txt"
+sbom,collector,eligible_declarations_detected,6,7,0.8571428571428571,"misses in files the collector does not select are collector-scope misses, not correct abstentions"
+sbom,collector,eligible_declarations_detected_in_collected_files,6,6,1.0,
+sbom,collector,named_detections_not_oracle_named_lines,0,6,,[]
+cbom,collector,eligible_hash_items_detected,4,4,1.0,"hit = hash-operation site, same algorithm (finite alias), on the item's annotated lines"
+cbom,collector,false_detections_on_annotated_decoys,0,16,,[]
+cbom,collector,sites_on_out_of_scope_annotated_items,1,10,,"HMAC/PBKDF/pyca items: reported, not scored as hash correspondence"
+cbom,collector,sites_on_unlabeled_lines_not_scored,0,5,,unannotated lines are never treated as negatives
+aibom,collector,not_run,0,0,,no human-reviewed AI model-reference annotation with a source_tree is configured; Track A for AI is not run

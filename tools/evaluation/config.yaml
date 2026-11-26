@@ -53,6 +53,12 @@ external_tools:
   cyclonedx: cyclonedx      # CycloneDX CLI executable name or path; reported not_run when absent
   sbom_tools: sbom-tools    # optional; reported not_run when absent
 
+e3b:
+  timeout_seconds: 120      # per-operation timeout for E3-B external document tools
+
+e3c:
+  captures: evaluation_data/e3c_captures_01  # recorded source exports, scanner BOMs and provenance; evaluation is offline
+
 preflight:
   run_regression_tests: true
   regression_timeout_seconds: 1800

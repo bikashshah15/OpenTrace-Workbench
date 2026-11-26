@@ -1,0 +1,103 @@
+{
+  "E1": {
+    "captures": {
+      "frigate-recorded": {
+        "artifact_hash_mismatches": 0,
+        "inspector_errors": 0,
+        "pagination_errors": 0,
+        "reason": null,
+        "source_checkout": false,
+        "status": "completed"
+      }
+    },
+    "experiment": "E1",
+    "reason": null,
+    "scope_note": "single-repository case study",
+    "status": "completed",
+    "t": "2026-11-26T20:51:47Z"
+  },
+  "E2": {
+    "cases": 141,
+    "experiment": "E2",
+    "method_failures": {
+      "B1_name": 0,
+      "B2_strong": 0,
+      "opentrace": 0
+    },
+    "methods": [
+      "B1_name",
+      "B2_strong",
+      "opentrace"
+    ],
+    "reason": null,
+    "selection_sha256": "e72b4abbc437e442c0e04c9ce9f2e8dc3b01a12144f436fe3421615f3d2d8e21",
+    "status": "completed",
+    "t": "2026-11-26T20:52:45Z"
+  },
+  "E3": {
+    "cases": 141,
+    "experiment": "E3",
+    "method_failures": {
+      "B1_name": 0,
+      "B2_strong": 0,
+      "opentrace": 0
+    },
+    "reason": null,
+    "selection_sha256": "e72b4abbc437e442c0e04c9ce9f2e8dc3b01a12144f436fe3421615f3d2d8e21",
+    "status": "completed",
+    "t": "2026-11-26T20:52:45Z"
+  },
+  "E3-B": {
+    "experiment": "E3-B",
+    "reason": null,
+    "status": "completed",
+    "t": "2026-11-26T20:53:15Z"
+  },
+  "E3-C": {
+    "experiment": "E3-C",
+    "reason": null,
+    "status": "completed",
+    "t": "2026-11-26T20:53:17Z"
+  },
+  "E4": {
+    "experiment": "E4",
+    "reason": null,
+    "references": 2,
+    "status": "completed",
+    "t": "2026-11-26T20:53:24Z"
+  },
+  "E5": {
+    "captures": {
+      "frigate-recorded": {
+        "consistency": {
+          "attempted": 5,
+          "capture_id": "frigate-recorded",
+          "exact_equal": {
+            "N": 5,
+            "n": 5,
+            "rate": 1.0
+          },
+          "reference_nonempty": true,
+          "successful": 5,
+          "volatile_keys_removed": [
+            "captured_at",
+            "finished_at",
+            "generation",
+            "queried_at",
+            "resolved_at",
+            "session_id",
+            "started_at",
+            "timestamp",
+            "validation_digest"
+          ]
+        },
+        "problems": [],
+        "status": "completed"
+      }
+    },
+    "experiment": "E5",
+    "reason": null,
+    "status": "completed",
+    "t": "2026-11-26T20:53:56Z"
+  }
+}

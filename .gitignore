@@ -35,6 +35,14 @@ src/agents/evidence_specialist/evidence_specialist
 opentrace.yml
 .opentrace/
 
-# Local evaluation inputs and generated run outputs (see docs/EVALUATION.md).
-evaluation_data
+# The frozen cases and E3-C manifests/BOMs are reviewer inputs. Downloaded source
+# trees and materialized capture source exports stay local (see EVALUATION_SETUP.md).
+evaluation_data/
+!evaluation_data/
+evaluation_data/*
+!evaluation_data/README.md
+!evaluation_data/INPUTS.sha256
+!evaluation_data/frozen/
+!evaluation_data/e3c_captures_01/
+evaluation_data/e3c_captures_01/*/src/
 evaluation_results/

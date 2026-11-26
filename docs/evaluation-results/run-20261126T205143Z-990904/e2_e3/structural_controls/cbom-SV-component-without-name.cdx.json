@@ -1,0 +1,125 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "crypto/algorithm/sha3-256@app/crypto_demo.py:68",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.sha3_256 in step11",
+            "line": 68,
+            "location": "app/crypto_demo.py",
+            "offset": 18
+          }
+        ]
+      },
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "crypto/algorithm/sha-1@app/crypto_demo.py:85",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.sha1 in step14",
+            "line": 85,
+            "location": "app/crypto_demo.py",
+            "offset": 18
+          }
+        ]
+      },
+      "name": "SHA-1",
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "crypto/algorithm/sha-256@app/crypto_demo.py:94",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.sha256 in step16",
+            "line": 94,
+            "location": "app/crypto_demo.py",
+            "offset": 20
+          }
+        ]
+      },
+      "name": "SHA-256",
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "crypto/algorithm/md5@app/crypto_demo.py:98",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "hashlib.md5 in step17",
+            "line": 98,
+            "location": "app/crypto_demo.py",
+            "offset": 17
+          }
+        ]
+      },
+      "name": "MD5",
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "pkg:pypi/cryptography",
+      "name": "cryptography",
+      "purl": "pkg:pypi/cryptography",
+      "type": "library"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "incomplete"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "subject",
+      "name": "bf-cbom-experiments-corpus-micro-python",
+      "type": "application",
+      "version": "0b06dc979649d9710eff81be3c974a559dc4fffd"
+    },
+    "properties": [
+      {
+        "name": "opentrace-eval:notice",
+        "value": "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "name": "opentrace-eval-controlled-cbom",
+          "type": "application",
+          "version": "1"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:bf102f33-abd4-5927-99e9-bd945b7dd90f",
+  "specVersion": "1.6",
+  "version": 1
+}

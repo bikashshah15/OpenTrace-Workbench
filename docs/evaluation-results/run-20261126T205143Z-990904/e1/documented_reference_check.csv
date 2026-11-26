@@ -1,0 +1,10 @@
+capture_id,quantity,documented,derived,derivation,matches
+frigate-recorded,exported_source_files,3337,3337,replay / scan record,True
+frigate-recorded,sbom_component_records,1861,1861,replay / scan record,True
+frigate-recorded,declared_dependency_edges,4569,4569,sum of len(dependsOn) over SBOM dependencies[],True
+frigate-recorded,review_candidates,97,97,replay / scan record,True
+frigate-recorded,distinct_assertions,92,92,replay / scan record,True
+frigate-recorded,not_represented,59,59,replay / scan record,True
+frigate-recorded,unknown_coverage,38,38,bom-candidates filter_group 'unknown',True
+frigate-recorded,represented,0,0,replay / scan record,True
+frigate-recorded,model_reference_checks,6,,see findings_by_domain.csv (ai_model rows with an assertion),

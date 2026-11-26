@@ -1,0 +1,12 @@
+anchor_id,path,line,raw_status,assessment,reason_codes,reviewer,review_date,source_confirmed,raw_lookup_confirmed,binding_confirmed,verdict_justified,notes
+sbom:otherreq.txt:s3transfer,python/req/otherreq.txt,1,absent,not_discovered,[],,,,,,,
+sbom:requirements.txt:beautifulsoup4,python/req/requirements.txt,7,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+sbom:requirements.txt:docopt,python/req/requirements.txt,8,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+sbom:requirements.txt:requests,python/req/requirements.txt,9,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+sbom:requirements.txt:httpx,python/req/requirements.txt,10,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+sbom:requirements.txt:urllib3,python/req/requirements.txt,11,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+sbom:requirements.txt:redis,python/req/requirements.txt,21,absent,unverifiable,"[""scan_binding_unsubstantiated""]",,,,,,,
+cbom:app/crypto_demo.py:98:md5,experiments/corpus/micro/python/app/crypto_demo.py,98,absent,unverifiable,"[""library_mention_only""]",,,,,,,
+cbom:app/crypto_demo.py:85:sha1,experiments/corpus/micro/python/app/crypto_demo.py,85,absent,unverifiable,"[""library_mention_only""]",,,,,,,
+cbom:app/crypto_demo.py:94:sha256,experiments/corpus/micro/python/app/crypto_demo.py,94,absent,unverifiable,"[""library_mention_only""]",,,,,,,
+cbom:app/crypto_demo.py:68:sha3_256,experiments/corpus/micro/python/app/crypto_demo.py,68,absent,unverifiable,"[""library_mention_only""]",,,,,,,

@@ -186,7 +186,7 @@ def run_report(run_dir) -> str:
     env = _json(run_dir, "environment.json") or {}
     pre = _json(run_dir, "preflight.json")
     lines = ["# Evaluation run report", "", f"Run directory: `{os.path.basename(run_dir)}`", "", "## What ran", ""]
-    for exp in ("preflight", "E1", "E2", "E3", "E4", "E5"):
+    for exp in ("preflight", "E1", "E2", "E3", "E3-B", "E3-C", "E4", "E5"):
         s = st.get(exp)
         lines.append(f"- **{exp}**: " + (f"{s['status']}" + (f" - {s['reason']}" if s.get("reason") else "") if s else "not requested / not run"))
     if pre:
@@ -200,7 +200,7 @@ def run_report(run_dir) -> str:
                   f"- OS: {env.get('os', {}).get('platform')}", f"- CPU: {env.get('cpu', {}).get('model')} ({env.get('cpu', {}).get('logical_cpus')} logical)",
                   f"- RAM: {round(env['memory_total_bytes'] / (1 << 30), 1) if env.get('memory_total_bytes') else NA} GiB"]
     lines += ["", "## Output files", ""]
-    for d in ("e1", "e2_e3", "e4", "e5", "paper_tables"):
+    for d in ("e1", "e2_e3", "e3b", "e3c", "e4", "e5", "paper_tables"):
         p = os.path.join(run_dir, d)
         if os.path.isdir(p):
             lines.append(f"- `{d}/`: " + ", ".join(sorted(f for f in os.listdir(p) if os.path.isfile(os.path.join(p, f)))))

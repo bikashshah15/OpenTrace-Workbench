@@ -1,0 +1,6 @@
+{
+  "available": true,
+  "children_maxrss_mib": 74.890625,
+  "note": "process-lifetime maxima (not per workload); children = largest waited-for child",
+  "self_maxrss_mib": 360.625
+}

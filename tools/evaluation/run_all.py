@@ -182,6 +182,11 @@ def main(argv=None) -> int:
         overrides["e5.repetitions"] = a.repetitions
         overrides["e5.replay_consistency_repeats"] = a.repetitions
     cfg = C.load_config(a.config, overrides)
+    try:
+        C.validate_config(cfg)
+    except C.HarnessError as exc:
+        print(f"configuration error: {exc}", file=sys.stderr)
+        return 2
     exps = [e.upper() for e in a.experiment]
     if "ALL" in exps:
         exps = list(EXPERIMENTS)
@@ -200,9 +205,12 @@ def main(argv=None) -> int:
     harness_errors = []
     steps = (["preflight"] if a.preflight or "all" in [x.lower() for x in a.experiment] else []) + exps
     if "E2" in exps and "E3" in exps:
-        steps.remove("E3")          # E2 and E3 share one driver and one set of cases
+        steps.remove("E3")          # core E2/E3 share one driver and one set of cases
     if "E3" in steps and "E2" not in steps:
         steps[steps.index("E3")] = "E2"
+    if "E2" in exps and "E3" in exps:
+        e2_index = steps.index("E2")
+        steps[e2_index + 1:e2_index + 1] = ["E3-B", "E3-C"]
     if not os.path.isfile(ctx.path("environment.json")):
         C.write_json(ctx.path("environment.json"), C.environment_info(cfg), root=root)
     for step in steps:
@@ -216,6 +224,33 @@ def main(argv=None) -> int:
             elif step == "E2":
                 from tools.evaluation import e2_e3_verification
                 e2_e3_verification.run(ctx, stage=a.stage, refreeze=a.refreeze)
+            elif step == "E3-B":
+                from tools.evaluation import e3_external_comparison as E3B
+                from tools.evaluation import external_tools as X
+                prior = ctx.out
+                frozen = C.resolve_path((cfg.get("e2") or {}).get("selection_dir", "evaluation_data/frozen/e2_selection"), root)
+                plan = E3B.build_plan(prior, frozen)
+                tools = cfg.get("external_tools") or {}
+                probed = {"cyclonedx-cli": X.probe("cyclonedx-cli", tools.get("cyclonedx", "cyclonedx")),
+                          "sbom-tools": X.probe("sbom-tools", tools.get("sbom_tools", "sbom-tools"))}
+                # E3-B consumes e2_e3 and writes only to e3b/; guard the immutable input subtree, not their shared run parent.
+                core_inputs = os.path.join(prior, "e2_e3")
+                with C.immutability_guard({"core_run": core_inputs, "frozen_selection": frozen}, ctx, "e3b_inputs"):
+                    runs = E3B.execute(ctx, plan, probed, prior, float((cfg.get("e3b") or {}).get("timeout_seconds", 120)))
+                    E3B.write_outputs(ctx, plan, probed, runs, prior)
+                complete = all(r["status"] == "completed" for r in runs)
+                ctx.status("E3-B", "completed" if complete else "partial", None if complete else "one or more document-tool operations were unavailable or uninterpretable")
+            elif step == "E3-C":
+                from tools.evaluation import e3_scanner_outputs as E3C
+                frozen = C.resolve_path((cfg.get("e2") or {}).get("selection_dir", "evaluation_data/frozen/e2_selection"), root)
+                captures = C.resolve_path((cfg.get("e3c") or {}).get("captures"), root)
+                bm = cfg.get("benchmarks") or {}
+                benchmarks = {"deepbits": C.resolve_path(bm.get("deepbits"), root), "bf_cbom": C.resolve_path(bm.get("bf_cbom"), root)}
+                ref = E3C.reference_selection(frozen)
+                with C.immutability_guard({"frozen_selection": frozen, **benchmarks, "captures": captures}, ctx, "e3c_inputs"):
+                    rows = E3C.evaluate(ctx, ref, captures, benchmarks)
+                complete = all(r["raw_status"] != "inventory_unavailable" and r["assessment"] != "unavailable" for r in rows)
+                ctx.status("E3-C", "completed" if complete else "partial", None if complete else "see e3c/acquisition_manifest.json")
             elif step == "E4":
                 from tools.evaluation import e4_integration
                 e4_integration.run(ctx)

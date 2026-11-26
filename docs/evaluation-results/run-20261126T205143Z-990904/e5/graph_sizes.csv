@@ -1,0 +1,2 @@
+capture_id,graph_nodes,graph_edges,findings,candidates,assertions_in_bundle,evidence_in_bundle,requirement_files,crypto_call_sites,model_references,families,aibom_completeness_recorded,workload_kind
+frigate-recorded,469,999,116,97,116,224,9,7,7,"{""ai_model"": ""partial"", ""cryptography"": ""partial"", ""software"": ""partial""}",degraded,recorded real capture

@@ -1,0 +1,40 @@
+[
+  {
+    "assessed_findings_per_family": {
+      "ai_model": 2,
+      "cryptography": 4,
+      "software": 5
+    },
+    "facts_checked": {
+      "agree": 11,
+      "checked": 11,
+      "disagreements": []
+    },
+    "provenance": {
+      "ai_model": "captured locators (Frigate recorded model references) in a synthetic Python statement",
+      "cryptography": "external_reference (BF-CBOM micro-python file, verbatim)",
+      "software": "external_reference (DeepBits requirement lines, verbatim)"
+    },
+    "reference": "composite-a",
+    "valid_reference": true
+  },
+  {
+    "assessed_findings_per_family": {
+      "ai_model": 2,
+      "cryptography": 4,
+      "software": 3
+    },
+    "facts_checked": {
+      "agree": 9,
+      "checked": 9,
+      "disagreements": []
+    },
+    "provenance": {
+      "ai_model": "captured locators (Frigate recorded model references) in a synthetic Python statement",
+      "cryptography": "external_reference (BF-CBOM micro-python file, verbatim)",
+      "software": "external_reference (DeepBits requirement lines, verbatim)"
+    },
+    "reference": "composite-b",
+    "valid_reference": true
+  }
+]

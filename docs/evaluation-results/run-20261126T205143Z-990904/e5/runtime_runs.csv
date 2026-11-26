@@ -1,0 +1,56 @@
+capture_id,workload,measure,repetition,warmup,status,error,elapsed_ms,method,peak_total_mib,peak_parent_mib,peak_children_mib,samples
+frigate-recorded,engine_discovery,latency,-1,True,ok,,169.001041,,,,,
+frigate-recorded,engine_discovery,latency,0,False,ok,,166.864792,,,,,
+frigate-recorded,engine_discovery,latency,1,False,ok,,173.63875,,,,,
+frigate-recorded,engine_discovery,latency,2,False,ok,,169.023958,,,,,
+frigate-recorded,engine_discovery,latency,3,False,ok,,170.911875,,,,,
+frigate-recorded,engine_discovery,latency,4,False,ok,,164.806708,,,,,
+frigate-recorded,engine_discovery,memory,0,False,ok,,235.832833,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",156.0625,146.15625,9.90625,16
+frigate-recorded,engine_discovery,memory,1,False,ok,,219.783625,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",156.0625,146.15625,9.90625,15
+frigate-recorded,engine_discovery,memory,2,False,ok,,240.312333,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.4375,143.53125,9.90625,17
+frigate-recorded,engine_discovery,memory,3,False,ok,,231.9135,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.4375,143.53125,9.90625,16
+frigate-recorded,engine_discovery,memory,4,False,ok,,242.0325,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.4375,143.53125,9.90625,17
+frigate-recorded,engine_assessment,latency,-1,True,ok,,10.253583,,,,,
+frigate-recorded,engine_assessment,latency,0,False,ok,,10.659875,,,,,
+frigate-recorded,engine_assessment,latency,1,False,ok,,10.992042,,,,,
+frigate-recorded,engine_assessment,latency,2,False,ok,,10.741792,,,,,
+frigate-recorded,engine_assessment,latency,3,False,ok,,10.974791,,,,,
+frigate-recorded,engine_assessment,latency,4,False,ok,,9.336792,,,,,
+frigate-recorded,engine_assessment,memory,0,False,ok,,15.256084,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.609375,143.703125,9.90625,4
+frigate-recorded,engine_assessment,memory,1,False,ok,,14.201125,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.609375,143.703125,9.90625,4
+frigate-recorded,engine_assessment,memory,2,False,ok,,14.372917,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.671875,143.765625,9.90625,4
+frigate-recorded,engine_assessment,memory,3,False,ok,,14.999584,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.671875,143.765625,9.90625,4
+frigate-recorded,engine_assessment,memory,4,False,ok,,14.828542,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",153.671875,143.765625,9.90625,4
+frigate-recorded,integrated_worker,latency,-1,True,ok,,197.372292,,,,,
+frigate-recorded,integrated_worker,latency,0,False,ok,,225.583167,,,,,
+frigate-recorded,integrated_worker,latency,1,False,ok,,267.998917,,,,,
+frigate-recorded,integrated_worker,latency,2,False,ok,,212.779625,,,,,
+frigate-recorded,integrated_worker,latency,3,False,ok,,251.592792,,,,,
+frigate-recorded,integrated_worker,latency,4,False,ok,,260.795875,,,,,
+frigate-recorded,integrated_worker,memory,0,False,ok,,251.186708,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",203.015625,143.796875,59.234375,24
+frigate-recorded,integrated_worker,memory,1,False,ok,,252.238542,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",202.84375,143.796875,59.046875,24
+frigate-recorded,integrated_worker,memory,2,False,ok,,388.781542,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",194.375,144.234375,59.265625,27
+frigate-recorded,integrated_worker,memory,3,False,ok,,315.746292,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",193.859375,135.390625,59.03125,27
+frigate-recorded,integrated_worker,memory,4,False,ok,,350.946208,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",196.40625,137.28125,59.140625,25
+frigate-recorded,offline_replay,latency,-1,True,ok,,1024.580917,,,,,
+frigate-recorded,offline_replay,latency,0,False,ok,,977.084375,,,,,
+frigate-recorded,offline_replay,latency,1,False,ok,,944.228583,,,,,
+frigate-recorded,offline_replay,latency,2,False,ok,,894.628041,,,,,
+frigate-recorded,offline_replay,latency,3,False,ok,,912.851042,,,,,
+frigate-recorded,offline_replay,latency,4,False,ok,,849.004084,,,,,
+frigate-recorded,offline_replay,memory,0,False,ok,,1296.26575,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",248.46875,210.265625,58.875,89
+frigate-recorded,offline_replay,memory,1,False,ok,,1109.285333,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",254.453125,213.09375,59.0,84
+frigate-recorded,offline_replay,memory,2,False,ok,,1220.858042,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",259.0,215.171875,58.859375,94
+frigate-recorded,offline_replay,memory,3,False,ok,,1148.066458,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",266.359375,227.984375,57.671875,83
+frigate-recorded,offline_replay,memory,4,False,ok,,1264.458875,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",279.65625,232.5625,59.078125,90
+frigate-recorded,service_startup,latency,-1,True,ok,,554.294625,,,,,
+frigate-recorded,service_startup,latency,0,False,ok,,555.0505,,,,,
+frigate-recorded,service_startup,latency,1,False,ok,,548.525959,,,,,
+frigate-recorded,service_startup,latency,2,False,ok,,555.375708,,,,,
+frigate-recorded,service_startup,latency,3,False,ok,,552.410833,,,,,
+frigate-recorded,service_startup,latency,4,False,ok,,552.829625,,,,,
+frigate-recorded,service_startup,memory,0,False,ok,,551.482666,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",246.953125,237.15625,9.796875,47
+frigate-recorded,service_startup,memory,1,False,ok,,540.125208,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",246.96875,237.171875,9.796875,48
+frigate-recorded,service_startup,memory,2,False,ok,,538.447542,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",246.953125,237.15625,9.796875,47
+frigate-recorded,service_startup,memory,3,False,ok,,539.897208,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",245.328125,235.53125,9.796875,47
+frigate-recorded,service_startup,memory,4,False,ok,,538.299542,"psutil RSS sampling every 5.0 ms (parent + descendants; estimate, shared pages may be double counted)",245.328125,235.53125,9.796875,47

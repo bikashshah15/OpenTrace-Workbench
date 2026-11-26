@@ -1,0 +1,4 @@
+domain,track,discovery_coverage_n,discovery_coverage_N,discovery_coverage_rate,correct_assessment_of_generated_n,correct_assessment_of_generated_N,correct_assessment_of_generated_rate,not_completed,anchor_selection
+aibom,discovery,5,5,1.0,5,5,1.0,0,opentrace_collector_record
+cbom,discovery,4,4,1.0,4,4,1.0,0,external_reference
+sbom,discovery,6,7,0.8571428571428571,6,6,1.0,0,external_reference

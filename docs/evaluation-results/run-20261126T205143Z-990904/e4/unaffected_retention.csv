@@ -1,0 +1,17 @@
+reference,condition,valid_reference,unaffected_families,retention_n,retention_N,retention_rate,candidate_retention_n,candidate_retention_N,candidate_retention_rate,all_or_nothing_retention_n,all_or_nothing_retention_N,all_or_nothing_retention_rate
+composite-a,R1,True,"[""cryptography"", ""ai_model""]",6,6,1.0,7,7,1.0,0,6,0.0
+composite-a,R2,True,"[""software"", ""ai_model""]",7,7,1.0,7,7,1.0,0,7,0.0
+composite-a,R3,True,"[""software"", ""cryptography""]",9,9,1.0,10,10,1.0,0,9,0.0
+composite-a,R4-software,True,"[""cryptography"", ""ai_model""]",6,6,1.0,7,7,1.0,0,6,0.0
+composite-a,R4-crypto,True,"[""software"", ""ai_model""]",7,7,1.0,7,7,1.0,0,7,0.0
+composite-a,R4-models,True,"[""software"", ""cryptography""]",9,9,1.0,10,10,1.0,0,9,0.0
+composite-a,R5-once,True,"[""software"", ""cryptography""]",9,9,1.0,10,10,1.0,0,9,0.0
+composite-a,R5-twice,True,"[""software""]",5,5,1.0,5,5,1.0,0,5,0.0
+composite-b,R1,True,"[""cryptography"", ""ai_model""]",6,6,1.0,7,7,1.0,0,6,0.0
+composite-b,R2,True,"[""software"", ""ai_model""]",5,5,1.0,5,5,1.0,0,5,0.0
+composite-b,R3,True,"[""software"", ""cryptography""]",7,7,1.0,8,8,1.0,0,7,0.0
+composite-b,R4-software,True,"[""cryptography"", ""ai_model""]",6,6,1.0,7,7,1.0,0,6,0.0
+composite-b,R4-crypto,True,"[""software"", ""ai_model""]",5,5,1.0,5,5,1.0,0,5,0.0
+composite-b,R4-models,True,"[""software"", ""cryptography""]",7,7,1.0,8,8,1.0,0,7,0.0
+composite-b,R5-once,True,"[""software"", ""cryptography""]",7,7,1.0,8,8,1.0,0,7,0.0
+composite-b,R5-twice,True,"[""software""]",3,3,1.0,3,3,1.0,0,3,0.0

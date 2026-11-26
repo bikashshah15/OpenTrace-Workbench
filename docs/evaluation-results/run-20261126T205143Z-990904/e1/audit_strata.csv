@@ -1,0 +1,9 @@
+capture_id,family,state,population,sampled,note
+frigate-recorded,software,contradicted,59,3,
+frigate-recorded,software,supported,24,2,
+frigate-recorded,software,unknown_coverage,4,1,
+frigate-recorded,software,unverifiable,21,2,
+frigate-recorded,cryptography,unknown_coverage,1,1,
+frigate-recorded,cryptography,unverifiable,6,6,
+frigate-recorded,ai_model,unverifiable,6,6,
+frigate-recorded,other,,0,0,empty stratum

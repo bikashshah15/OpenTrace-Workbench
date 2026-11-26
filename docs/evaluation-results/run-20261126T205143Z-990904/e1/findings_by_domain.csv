@@ -1,0 +1,5 @@
+capture_id,family,candidates,with_assertion,without_assertion,distinct_assertions,supported,contradicted,conflicting_evidence,unverifiable,unknown_coverage_unassessed,no_rule,categories,finding_reason_codes,collection_only_reason_codes,verification_assertions_without_candidate,verification_assertion_states,capability_state,capability_reason
+frigate-recorded,software,84,80,4,80,0,59,0,21,4,0,"{""missing_component"": 59, ""unknown_coverage"": 25}","{""not_represented_in_fully_parsed_inventory"": 59, ""scan_binding_unsubstantiated"": 21}",{},24,"{""supported"": 24}",partial,partial_coverage
+frigate-recorded,cryptography,7,6,1,6,0,0,0,6,1,0,"{""unknown_coverage"": 7}","{""library_mention_only"": 6}","{""operation_class_not_assessed"": 1}",0,{},partial,partial_coverage
+frigate-recorded,ai_model,6,6,0,6,0,0,0,6,0,0,"{""unknown_coverage"": 6}","{""candidates_without_locator_match"": 2, ""no_matching_model_record"": 4}",{},0,{},partial,partial_coverage
+frigate-recorded,other,0,0,0,0,0,0,0,0,0,0,{},{},{},0,{},,

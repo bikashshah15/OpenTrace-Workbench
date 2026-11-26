@@ -1,5 +1,7 @@
 # OpenTrace
 
+For the full evaluation command, prerequisites, and input setup, see [EVALUATION_SETUP.md](EVALUATION_SETUP.md) and [the results and limitations](docs/EVALUATION.md).
+
 **One repository, one verified commit, three bills of materials, and the source evidence behind each claim.**
 
 > Research prototype for a hackathon submission. It is **not** a production security scanner and does not remediate anything. License scope and evaluation status: [below](#license-and-evaluation).
@@ -72,7 +74,7 @@ Start Docker Desktop or the Docker Engine service and check `docker compose vers
 
 ## Frigate demo walkthrough (recorded replay)
 
-This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, captured on 2026-11-23. It reads the saved artifacts and makes no scanner, OSV, GitHub or model call. It is **not** a fresh scan and **not** a reproduction of any benchmark.
+This opens a **recorded replay** of a live scan of [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`, captured on 2026-11-23. It reads the saved artifacts and makes no scanner, OSV, GitHub or model call. It is **not** a fresh scan or itself a benchmark run.
 
 1. Open the Workbench, then click the header’s **Demo ↗** control.
 2. The banner reads "Replay of a recorded scan of commit 3bca9b867684". The header chips show 1,861 component records, 4,569 declared dependency edges, 44 advisory groups and 97 items to review in BOM connections.
@@ -104,7 +106,17 @@ The Workbench container needs outbound HTTPS to `api.github.com` and `github.com
 ## License and evaluation
 
 - **License:** original OpenTrace code, documentation and project artwork are MIT-licensed, © 2026 Bikash Shah, Peiran Shi and Narges Zare (see [LICENSE](LICENSE)). This includes the comparison engine imported from the team's BOMBridge project. The logo and architecture image were generated with ChatGPT. The license does **not** cover third-party material: the vendored UI libraries, the Frigate excerpts and package metadata in the replay, and OSV advisory records. These stay under their owners' licenses; notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-- **Evaluation:** one case study of the recorded Frigate scan, with scope, method, results and limitations, in [docs/EVALUATION.md](docs/EVALUATION.md). It is not a benchmark and computes no accuracy.
+- **Evaluation:** E1–E5 plus E3-B and E3-C cover the recorded Frigate case study, controlled verification cases, recorded scanner outputs, integration behavior, and replay measurements. The scope, reference results, and limitations are in [docs/EVALUATION.md](docs/EVALUATION.md); clean-clone prerequisites and inputs are in [EVALUATION_SETUP.md](EVALUATION_SETUP.md). The Frigate walkthrough above remains a recorded demo, not the entire evaluation.
+
+### Run the evaluation
+
+From the repository root, after preparing the environment and required inputs described in [EVALUATION_SETUP.md](EVALUATION_SETUP.md), run:
+
+```sh
+python -m tools.evaluation.run_all --experiment E1 E2 E3 E4 E5
+```
+
+This command also runs E3-B and E3-C. It writes a new results directory under `evaluation_results/` for each invocation.
 
 ## Reproduction links
 
@@ -125,7 +137,7 @@ The Workbench container needs outbound HTTPS to `api.github.com` and `github.com
 
 The replay verifies the bundled files against MANIFEST.json and checks the three BOMs against the hashes in the scan record. It rebuilds the Workbench views from the saved inputs. The replay tests check artifact hashes, expected BOM connections counts, and selected results. Comparison against the original live session uses a separate parity tool and requires the private capture.
 
-**What it does not verify, and what still needs to be supplied:** that rerunning the scanners reproduces these bytes (that needs a fresh scan: network access, the pinned tools and the Docker setup); the private raw capture directory, which is not in this repository, so the fixture builder and `tools/demo_replay/verify_replay.py` cannot be rerun from here; and any benchmark. **No benchmark is reproduced**, and there is no measured comparison against other scanners or agents.
+The Frigate replay does not verify that rerunning the scanners reproduces these bytes; that needs a fresh scan, network access, pinned tools and Docker. Its private raw capture is not in this repository, so the fixture builder and `tools/demo_replay/verify_replay.py` cannot be rerun here. This replay is not a benchmark; the separate evaluation suite and its controlled cases are described in [docs/EVALUATION.md](docs/EVALUATION.md). No general accuracy claim is made.
 
 ## How it works
 
