@@ -1,9 +1,11 @@
 # Final evaluation report
 
-**Rerun date:** 2026-11-26  
-**Base:** `origin/main` at `06a2c0f9166ba47e2a0abae405d77353c758694b`  
-**Evaluated code commit:** `7acb008fa7d5ec576b54cfd5cf71ee532779e72b` on `eval/current-evaluation`  
-**Reproduction guide:** [EVALUATION.md](EVALUATION.md)
+| Field | Value |
+|---|---|
+| Rerun date | 2026-11-26 |
+| Base | `origin/main` at `06a2c0f9166ba47e2a0abae405d77353c758694b` |
+| Evaluated code commit | `7acb008fa7d5ec576b54cfd5cf71ee532779e72b` on `eval/current-evaluation` |
+| Reproduction guide | [EVALUATION.md](EVALUATION.md) |
 
 This report summarizes only the new run outputs. E1 is a replay assessment of recorded Frigate evidence; E2/E3 use the frozen
 controlled cases; E3-B runs document tools over those new E2/E3 outputs; and E3-C reruns assessment on previously saved, verified
