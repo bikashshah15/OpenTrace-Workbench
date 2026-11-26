@@ -53,21 +53,30 @@ class MemorySampler:
             self.available = False
         self.peak_total = self.peak_parent = self.peak_children = 0
         self.samples = 0
+        self.child_samples = 0
+        self.child_sampling_failures = 0
+        self.child_sampling_error = None
         self._stop = threading.Event()
 
     def _sample(self):
         try:
             parent = self._p.memory_info().rss
-            kids = 0
-            for ch in self._p.children(recursive=True):
-                try:
-                    kids += ch.memory_info().rss
-                except (self._psutil.NoSuchProcess, self._psutil.AccessDenied):
-                    pass
         except Exception:
             return
         self.samples += 1
         self.peak_parent = max(self.peak_parent, parent)
+        try:
+            kids = 0
+            for ch in self._p.children(recursive=True):
+                try:
+                    kids += ch.memory_info().rss
+                except (self._psutil.NoSuchProcess, self._psutil.AccessDenied, PermissionError):
+                    pass
+        except Exception as exc:
+            self.child_sampling_failures += 1
+            self.child_sampling_error = f"{type(exc).__name__}: {str(exc)[:160]}"
+            return
+        self.child_samples += 1
         self.peak_children = max(self.peak_children, kids)
         self.peak_total = max(self.peak_total, parent + kids)
 
@@ -92,10 +101,18 @@ class MemorySampler:
 
     def result(self) -> dict:
         if not self.available:
-            return {"method": "psutil unavailable", "peak_total_mib": None, "peak_parent_mib": None, "peak_children_mib": None, "samples": 0}
-        return {"method": f"psutil RSS sampling every {self.interval * 1000:.1f} ms (parent + descendants; estimate, shared pages may be double counted)",
-                "peak_total_mib": self.peak_total / MiB, "peak_parent_mib": self.peak_parent / MiB, "peak_children_mib": self.peak_children / MiB,
-                "samples": self.samples}
+            return {"method": "psutil unavailable", "peak_total_mib": None, "peak_parent_mib": None, "peak_children_mib": None,
+                    "samples": 0, "child_samples": 0, "child_sampling_failures": 0, "child_sampling_error": None}
+        complete = self.child_samples > 0 and self.child_sampling_failures == 0
+        method = f"psutil RSS sampling every {self.interval * 1000:.1f} ms (parent + descendants; estimate, shared pages may be double counted)"
+        if self.child_sampling_failures:
+            method += "; child enumeration incomplete, process-tree totals unavailable"
+        return {"method": method,
+                "peak_total_mib": self.peak_total / MiB if complete else None,
+                "peak_parent_mib": self.peak_parent / MiB if self.samples else None,
+                "peak_children_mib": self.peak_children / MiB if complete else None,
+                "samples": self.samples, "child_samples": self.child_samples, "child_sampling_failures": self.child_sampling_failures,
+                "child_sampling_error": self.child_sampling_error}
 
 
 def rusage() -> dict:
@@ -350,6 +367,11 @@ def run(ctx: C.RunContext) -> dict:
                                    "reference_nonempty": ref_nonempty, "volatile_keys_removed": sorted(keys)}
             measured = [s for s in summary if s["capture_id"] == cid]
             problems = [f"{s['workload']}: failed={s['n_failed']}+{s['n_failed_warmup_or_memory']}" for s in measured if s["n_failed"] or s["n_failed_warmup_or_memory"]]
+            memory_rows = [r for r in run_rows if r.get("capture_id") == cid and r.get("measure") == "memory"]
+            incomplete_memory = [r for r in memory_rows if not r.get("samples") or r.get("child_sampling_failures", 0)]
+            if incomplete_memory:
+                details = sorted({r.get("child_sampling_error") or "no usable RSS samples" for r in incomplete_memory})
+                problems.append("process-tree memory sampling incomplete: " + "; ".join(details))
             problems += [f"{w}: not measured" for w in sorted(workloads - {s["workload"] for s in measured})]
             eq = consistency_summary["exact_equal"]
             if len(ok_rows) < n_rep:

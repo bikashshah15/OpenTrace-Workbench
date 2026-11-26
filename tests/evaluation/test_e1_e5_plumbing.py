@@ -50,6 +50,10 @@ class LegacyDemoPlumbingTest(unittest.TestCase):
             sum(range(10000))
         r = m.result()
         self.assertIn("method", r)
+        self.assertGreater(r["samples"], 0)
+        self.assertGreater(r["peak_parent_mib"], 0)
+        if r["child_sampling_failures"]:
+            self.assertIsNone(r["peak_total_mib"])
 
 
 if __name__ == "__main__":
