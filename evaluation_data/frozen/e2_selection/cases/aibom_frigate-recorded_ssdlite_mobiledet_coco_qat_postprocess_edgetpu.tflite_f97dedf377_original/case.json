@@ -1,0 +1,222 @@
+{
+  "anchor_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377",
+  "bom": {
+    "doc": {
+      "bomFormat": "CycloneDX",
+      "components": [
+        {
+          "bom-ref": "model/93459a7f23303ef4",
+          "evidence": {
+            "occurrences": [
+              {
+                "line": 138,
+                "location": "docker/main/Dockerfile"
+              }
+            ]
+          },
+          "externalReferences": [
+            {
+              "type": "distribution",
+              "url": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite"
+            }
+          ],
+          "name": "ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "type": "machine-learning-model"
+        },
+        {
+          "bom-ref": "model/f97dedf3772aa886",
+          "evidence": {
+            "occurrences": [
+              {
+                "line": 137,
+                "location": "docker/main/Dockerfile"
+              }
+            ]
+          },
+          "externalReferences": [
+            {
+              "type": "distribution",
+              "url": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite"
+            }
+          ],
+          "name": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+          "type": "machine-learning-model"
+        },
+        {
+          "bom-ref": "model/e445c080c6057e02",
+          "evidence": {
+            "occurrences": [
+              {
+                "line": 105,
+                "location": "testing-scripts/object_dataset.py"
+              }
+            ]
+          },
+          "externalReferences": [
+            {
+              "type": "distribution",
+              "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx"
+            }
+          ],
+          "name": "mobilenetv2-7.onnx",
+          "type": "machine-learning-model"
+        },
+        {
+          "bom-ref": "model/f572949bdf210a30",
+          "evidence": {
+            "occurrences": [
+              {
+                "line": 60,
+                "location": "frigate/detectors/plugins/hailo.py"
+              }
+            ]
+          },
+          "externalReferences": [
+            {
+              "type": "distribution",
+              "url": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov6n.hef"
+            }
+          ],
+          "name": "yolov6n.hef",
+          "type": "machine-learning-model"
+        },
+        {
+          "bom-ref": "model/bd5b9a6937f0eeaa",
+          "evidence": {
+            "occurrences": [
+              {
+                "line": 61,
+                "location": "frigate/detectors/plugins/hailo.py"
+              }
+            ]
+          },
+          "externalReferences": [
+            {
+              "type": "distribution",
+              "url": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8l/yolov6n.hef"
+            }
+          ],
+          "name": "yolov6n.hef",
+          "type": "machine-learning-model"
+        }
+      ],
+      "compositions": [
+        {
+          "aggregate": "incomplete"
+        }
+      ],
+      "metadata": {
+        "component": {
+          "bom-ref": "subject",
+          "name": "frigate-recorded-aibom",
+          "type": "application",
+          "version": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e"
+        },
+        "properties": [
+          {
+            "name": "opentrace-eval:notice",
+            "value": "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+          }
+        ],
+        "tools": {
+          "components": [
+            {
+              "name": "opentrace-eval-controlled-aibom",
+              "type": "application",
+              "version": "1"
+            }
+          ]
+        }
+      },
+      "serialNumber": "urn:uuid:b8df4a4c-7e22-59e4-ab22-7d2d211a0390",
+      "specVersion": "1.6",
+      "version": 1
+    },
+    "evidence_revision": null,
+    "kind": "aibom",
+    "manifest": {
+      "generator": {
+        "invocation": "tools/evaluation/benchmark_adapters.py (CONTROLLED fixture writer; not a scanner run)",
+        "name": "opentrace-eval-controlled-aibom",
+        "third_party": true,
+        "version": "1"
+      },
+      "inputs": [
+        {
+          "path": "docker/main/Dockerfile",
+          "sha256": "95a958424a2ba7c92fb67f4e3f0e2b69c1b4683a97f6f679a2a5a75b504fe292"
+        },
+        {
+          "path": "frigate/detectors/plugins/hailo.py",
+          "sha256": "54da1de21684966ae944c9bb86a201799b994c56660ae26a1660b6f2f178aaf5"
+        },
+        {
+          "path": "testing-scripts/object_dataset.py",
+          "sha256": "f9b6aee3a9bfd244b0b02e2fcc974bfdac77ee86a7870d2237e33331056092e1"
+        }
+      ],
+      "limitations": [
+        "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+      ],
+      "output_sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "schema": "bombridge.acquisition/1",
+      "tree_differs_from_revision": false
+    },
+    "producer": {
+      "name": "opentrace-eval-controlled-aibom",
+      "version": "1"
+    },
+    "sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e"
+  },
+  "case_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377::original",
+  "claim": {
+    "inventory_id": "inv:eval-aibom",
+    "inventory_sha256": "72a0ec6164afeb8fe7cf698dde26db1e63dee749360492cd7c814a128011da0e",
+    "locator": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+    "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e"
+  },
+  "domain": "aibom",
+  "paired_with": null,
+  "provenance": {
+    "bom": "controlled",
+    "manifest": "controlled",
+    "source": "captured"
+  },
+  "repository": {
+    "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+    "revision_kind": "git_commit",
+    "url": "https://github.com/blakeblackshear/frigate"
+  },
+  "source": {
+    "evidence_revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+    "occurrences": [
+      {
+        "excerpt": "RUN wget -qO edgetpu_model.tflite https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+        "file_sha256": "95a958424a2ba7c92fb67f4e3f0e2b69c1b4683a97f6f679a2a5a75b504fe292",
+        "lines": [
+          137,
+          137
+        ],
+        "method": "line-url-token",
+        "path": "docker/main/Dockerfile",
+        "source_kind": "dockerfile"
+      }
+    ]
+  },
+  "source_ref": {
+    "label": "frigate-recorded source-declarations record 86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+    "line_range": [
+      137,
+      137
+    ],
+    "occurrences": 1,
+    "path": "docker/main/Dockerfile",
+    "revision_or_hash": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+    "upstream": "frigate-recorded"
+  },
+  "track": "fixed_claim",
+  "transform": null,
+  "variant": "original"
+}

@@ -1,0 +1,24 @@
+{
+  "frigate-recorded": {
+    "attempted": 5,
+    "capture_id": "frigate-recorded",
+    "exact_equal": {
+      "N": 5,
+      "n": 5,
+      "rate": 1.0
+    },
+    "reference_nonempty": true,
+    "successful": 5,
+    "volatile_keys_removed": [
+      "captured_at",
+      "finished_at",
+      "generation",
+      "queried_at",
+      "resolved_at",
+      "session_id",
+      "started_at",
+      "timestamp",
+      "validation_digest"
+    ]
+  }
+}

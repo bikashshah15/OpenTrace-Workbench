@@ -1,0 +1,6 @@
+capture_id,workload,peak_total_mib_max,peak_total_mib_median,method
+frigate-recorded,engine_discovery,156.0625,153.4375,psutil sampling every 5.0 ms; MiB = 2^20 bytes
+frigate-recorded,engine_assessment,153.671875,153.671875,psutil sampling every 5.0 ms; MiB = 2^20 bytes
+frigate-recorded,integrated_worker,203.015625,196.40625,psutil sampling every 5.0 ms; MiB = 2^20 bytes
+frigate-recorded,offline_replay,279.65625,259.0,psutil sampling every 5.0 ms; MiB = 2^20 bytes
+frigate-recorded,service_startup,246.96875,246.953125,psutil sampling every 5.0 ms; MiB = 2^20 bytes

@@ -8,7 +8,7 @@ OpenTrace is a research prototype prepared for a hackathon submission. This page
 | Recorded Frigate replay (2026-11-23, commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`) | Included; opens with the header’s **Demo ↗** control and needs no key |
 | Live scans of other public repositories | Implemented; need network access to GitHub and OSV |
 | Live Cisco AI-BOM and Lab Assistant | Optional; need an OpenAI key and extra Docker setup; not exercised for this release candidate |
-| Evaluation | One case study, see [EVALUATION.md](EVALUATION.md); no benchmark or accuracy measurement |
+| Evaluation | E1–E5 plus E3-B/E3-C; one Frigate case study and bounded controlled cases. See [EVALUATION.md](EVALUATION.md) for the single reference run and its limits; no general accuracy claim. |
 | Hosted deployment | None |
 
 Not established: runtime behavior of the scanned project, exploitability of any advisory match, completeness of any BOM, scanner determinism, or a comparison with other tools.

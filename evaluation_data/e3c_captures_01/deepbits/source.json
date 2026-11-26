@@ -1,0 +1,252 @@
+{
+  "acquired_at": "2026-11-26T18:34:00Z",
+  "anchor_checks": [
+    {
+      "anchor_id": "sbom:otherreq.txt:s3transfer",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/otherreq.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:beautifulsoup4",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:docopt",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:requests",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:httpx",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:urllib3",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:redis",
+      "file_present": true,
+      "file_sha256_matches": true,
+      "line_text_matches": true,
+      "path": "python/req/requirements.txt",
+      "verified": true
+    }
+  ],
+  "archive": {
+    "commit_in_comment": "e6bcf23b2f4e384f9fc398793529583845612b63",
+    "name": "sbom-benchmark-main.zip",
+    "sha256": "b2b32284552d629a839033bf6e88ba8914048019c6007a7875cb81b68ec69431"
+  },
+  "archive_comparison": {
+    "different": [],
+    "identical": true,
+    "only_in_archive": [],
+    "only_in_commit": []
+  },
+  "dataset": "deepbits",
+  "fetched_from": "https://github.com/DeepBitsTechnology/sbom-benchmark",
+  "record": {
+    "byte_count": 35687412,
+    "commit_sha": "e6bcf23b2f4e384f9fc398793529583845612b63",
+    "file_count": 41,
+    "git_version": "git version 2.50.1 (Apple Git-155)",
+    "inputs": [
+      {
+        "path": ".gitignore",
+        "sha256": "5e2c671ddc9e301dafc241ad1a7c07aa85a91fef560a17721b41977b9eddba17"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "135df5564bb9b9fa8536fdcec771cd7059822a31961262b44ebf2fab1a5c6839"
+      },
+      {
+        "path": "README.md",
+        "sha256": "c113c68211069137f5aba929b602f12694e22a78c0f8756d2100ea147cbba48f"
+      },
+      {
+        "path": "golang/goexec/go.exe",
+        "sha256": "178095df312aec336355c337a8b4930412065a860078596f9aa1452ce42b34d7"
+      },
+      {
+        "path": "golang/gomod/go.mod",
+        "sha256": "8df9a2a6332d8eb89ee138602f04e3ee4cc62021c6a3261613c9a1c1cf35a6b0"
+      },
+      {
+        "path": "golang/gomod/groundtruth",
+        "sha256": "54427d712bbba2cfb50ebbbf974b6a03adda3da4a1aa3e00e4cd0b0809021ec1"
+      },
+      {
+        "path": "golang/gosum/go.sum",
+        "sha256": "22785e086815b49637d05bbc3543fa6d85b24bcbe930077b589489bfafe00854"
+      },
+      {
+        "path": "golang/gosum/groundtruth",
+        "sha256": "54427d712bbba2cfb50ebbbf974b6a03adda3da4a1aa3e00e4cd0b0809021ec1"
+      },
+      {
+        "path": "java/buildgradle/build.gradle",
+        "sha256": "bf3ab09450b8f639ae683f4bb767130e4f673355031e7a532368ecfc946daf81"
+      },
+      {
+        "path": "java/buildgradle/groundtruth",
+        "sha256": "5705f9a80fea56fa0cee3c3371d071e78b22cd9abf289ba19ffd5524e1fabbb9"
+      },
+      {
+        "path": "java/buildgradle/jackson.jar",
+        "sha256": "ddb26c8a1f1a84535e8213c48b35b253370434e3287b3cf15777856fc4e58ce6"
+      },
+      {
+        "path": "java/buildgradle/libs/spring.jar",
+        "sha256": "aa1bd77c5c3fc62c3bcc6e461a768864d301db489a8d6a9fe31907547c0e3568"
+      },
+      {
+        "path": "java/pom/groundtruth",
+        "sha256": "9fda02a4574a2406e013d7a08916f78b6ef3db3d4958c2b4fa578f43375aa515"
+      },
+      {
+        "path": "java/pom/pom.xml",
+        "sha256": "35a87d0d8a2515b7d600c25ba93352fce7d0145dcc03fae3e2893c8d93032b9b"
+      },
+      {
+        "path": "javascript/packagejson/groundtruth",
+        "sha256": "c8e5b305be19d13b70341c08b71d2b18b7a0b0aedb4b1bc019f58f8c9c0532d0"
+      },
+      {
+        "path": "javascript/packagejson/local/index.js",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "javascript/packagejson/local/package.json",
+        "sha256": "ac0dc6c7c9ef895bd7477d0023006108ffb45baca12399db2e9cae15bf434349"
+      },
+      {
+        "path": "javascript/packagejson/package.json",
+        "sha256": "4f43da90c459bfb7caf3713c300e1accbe3564e7e09f52d5acd5584c96caa0d2"
+      },
+      {
+        "path": "php/composerjson/composer.json",
+        "sha256": "ca1f20e3584f7a26e54322b858789b4e59888dfe1c17a4097e09a96c64a5bbcb"
+      },
+      {
+        "path": "php/composerjson/groundtruth",
+        "sha256": "59a13d0235e5c94e0248db96082ef1bf694aa82620397102cea243149971edfb"
+      },
+      {
+        "path": "php/composerlock/composer.lock",
+        "sha256": "a9b570b314bb97bfdaa2c6dd0a374d266a97fcb5b6a1c94b3b3a40d2ac12da8a"
+      },
+      {
+        "path": "php/composerlock/groundtruth",
+        "sha256": "59a13d0235e5c94e0248db96082ef1bf694aa82620397102cea243149971edfb"
+      },
+      {
+        "path": "python/pipfile/Pipfile",
+        "sha256": "3ca1d152ced9394d976dfe42588a64bacef98022aa107b0cffead1101afe8cc6"
+      },
+      {
+        "path": "python/pipfile/groundtruth",
+        "sha256": "5a5714335edf864342f6a42bf75f5484b50fba82c8fdca6de76e9de77da90c36"
+      },
+      {
+        "path": "python/poetry/groundtruth",
+        "sha256": "0ea3ad6fb88db9f14d7154dcae002e263f707e92596788393a6027c4387090ef"
+      },
+      {
+        "path": "python/poetry/pyproject.toml",
+        "sha256": "48d82d9232bc6495131ede57ac8eba26806b660a0f7541f6c8f3604c95c41b1d"
+      },
+      {
+        "path": "python/req/const.txt",
+        "sha256": "cd1bee38b796825ce46d8505ef4267cd20ed0c9a2961ba6738659a106b50a3fc"
+      },
+      {
+        "path": "python/req/downloads/fastapi-0.111.0-py3-none-any.whl",
+        "sha256": "97ecbf994be0bcbdadedf88c3150252bed7b2087075ac99735403b1b76cc8fc0"
+      },
+      {
+        "path": "python/req/groundtruth",
+        "sha256": "8e862651034b15f216b2a6f81e77ffd8ba8c659e0aa56ae0a550099bc17b2436"
+      },
+      {
+        "path": "python/req/otherreq.txt",
+        "sha256": "85c3901ca6d8eb004a730f1a32879458931e892c19e42620684bc96adf39fd65"
+      },
+      {
+        "path": "python/req/r.txt",
+        "sha256": "c9c64c8135770a8279171a8107e86ebc3c7e24280104c48de021c71c7931f248"
+      },
+      {
+        "path": "python/req/requirements.txt",
+        "sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44"
+      },
+      {
+        "path": "ruby/gemfile/Gemfile",
+        "sha256": "9cf40a215c810f83e65fad8e10bb74b2c4947cfdb917ed79791e8c338c3fdb09"
+      },
+      {
+        "path": "ruby/gemfile/groundtruth",
+        "sha256": "ba0cdcff0f912507c7975ca1b4c363527929d5e3a8d06cca21059813eb7827db"
+      },
+      {
+        "path": "ruby/gemfilelock/Gemfile.lock",
+        "sha256": "ba0cdcff0f912507c7975ca1b4c363527929d5e3a8d06cca21059813eb7827db"
+      },
+      {
+        "path": "ruby/gemspec/.gemspec",
+        "sha256": "a223374278827523009cb12d6d771e9c02ac6f49d905b3047b09da0acc087873"
+      },
+      {
+        "path": "rust/cargo/Cargo.toml",
+        "sha256": "f69a8c4a8d02ee48a05a4def463393661487ed2346b3635edd371671dbe8cbe9"
+      },
+      {
+        "path": "rust/cargo/groundtruth",
+        "sha256": "84fb199cee3e3deb31d9256c3b5c492a566b552384dfbcafccdab5a2ea7146d6"
+      },
+      {
+        "path": "rust/cargo/src/lib.rs",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "rust/cargolock/Cargo.lock",
+        "sha256": "84fb199cee3e3deb31d9256c3b5c492a566b552384dfbcafccdab5a2ea7146d6"
+      },
+      {
+        "path": "update_groundtruth.py",
+        "sha256": "16e1976b3c5963a3749d616d71ed87b50419317c429dd248304d1dc758375aa8"
+      }
+    ],
+    "listing_sha256": "2233763767c90735b1deda0ea9d7bd817b22f5a7d051f197acb325a1673d52b9",
+    "repository_url": "https://github.com/DeepBitsTechnology/sbom-benchmark",
+    "skipped": [],
+    "tree_sha": "9ae3214759948e278a9a518e3ec52a72ac868810",
+    "verified": true
+  },
+  "schema": "opentrace.evaluation.e3c_capture/1"
+}

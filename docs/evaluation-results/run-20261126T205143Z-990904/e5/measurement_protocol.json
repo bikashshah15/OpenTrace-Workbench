@@ -1,0 +1,9 @@
+{
+  "memory_interval_ms": 5.0,
+  "offline": true,
+  "overhead_ratio": "not computed: no comparable baseline pipeline measured on the same machine and inputs",
+  "quantiles": "type7_linear",
+  "repetitions": 5,
+  "timer": "time.perf_counter_ns",
+  "warmups": 1
+}

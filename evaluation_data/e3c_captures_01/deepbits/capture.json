@@ -1,0 +1,125 @@
+{
+  "artifacts": {
+    "cbom": {
+      "file": "cdxgen.cdx.json",
+      "sha256": "17c567244cdcb7b652b405f5110147522bdfdb3357015d2b113ec3a0304cd50c"
+    },
+    "sbom": {
+      "file": "syft.cdx.json",
+      "sha256": "636eb04f6dc1ff3e0e11a1cf5db13bc89fdf45b9514b072a7fc811b1beeaf496"
+    }
+  },
+  "dataset": "deepbits",
+  "finished_at": "2026-11-26T18:34:34Z",
+  "runs": [
+    {
+      "command": "syft 1.51.1 scan dir:. -o cyclonedx-json -q",
+      "duration_ms": 1969,
+      "exit_code": 0,
+      "isolation": "docker-worker",
+      "kind": "sbom",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "",
+      "outcome": "acquired",
+      "pinned_version": "1.51.1",
+      "reason": null,
+      "record_count": 328,
+      "record_count_unit": "components",
+      "record_counts": {
+        "components": 328
+      },
+      "rejected_sha256": null,
+      "scanner": "syft",
+      "scope": {
+        "basis": "whole repository tree exported from the pinned commit (blobs only; symlinks and submodules not materialised)",
+        "file_count": 41,
+        "listing_sha256": "2233763767c90735b1deda0ea9d7bd817b22f5a7d051f197acb325a1673d52b9",
+        "paths": [
+          "."
+        ],
+        "revision": "e6bcf23b2f4e384f9fc398793529583845612b63",
+        "tree_sha": "9ae3214759948e278a9a518e3ec52a72ac868810"
+      },
+      "sha256": "636eb04f6dc1ff3e0e11a1cf5db13bc89fdf45b9514b072a7fc811b1beeaf496",
+      "size": 357105,
+      "spec_version": "1.7",
+      "tool": "Syft",
+      "version": "1.51.1",
+      "warnings": []
+    },
+    {
+      "command": "cdxgen 12.9.0 -r . --no-install-deps --include-crypto --evidence --spec-version 1.6",
+      "duration_ms": 6638,
+      "exit_code": 0,
+      "isolation": "docker-worker",
+      "kind": "cbom",
+      "log_sha256": "1530178a9491a58d9f48f898656c25e6032aa712fcbfe45e10eecd5357ccac39",
+      "meaning": "a successful scan that reported no cryptographic asset; not a failed scan, and not evidence that no cryptography is used",
+      "outcome": "acquired",
+      "pinned_version": "12.9.0",
+      "reason": null,
+      "record_count": 0,
+      "record_count_unit": "crypto_assets",
+      "record_counts": {
+        "components": 245,
+        "crypto_assets": 0,
+        "services": 0
+      },
+      "rejected_sha256": null,
+      "scanner": "cdxgen",
+      "scope": {
+        "basis": "whole repository tree exported from the pinned commit (blobs only; symlinks and submodules not materialised)",
+        "file_count": 41,
+        "listing_sha256": "2233763767c90735b1deda0ea9d7bd817b22f5a7d051f197acb325a1673d52b9",
+        "paths": [
+          "."
+        ],
+        "revision": "e6bcf23b2f4e384f9fc398793529583845612b63",
+        "tree_sha": "9ae3214759948e278a9a518e3ec52a72ac868810"
+      },
+      "sha256": "17c567244cdcb7b652b405f5110147522bdfdb3357015d2b113ec3a0304cd50c",
+      "size": 273605,
+      "spec_version": "1.6",
+      "tool": "cdxgen",
+      "version": "12.9.0",
+      "warnings": [
+        "Executing 'mvn in <source>/src/java/pom",
+        "undefined Error: spawnSync mvn ENOENT",
+        "at Object.spawnSync (node:internal/child_process:1120:20)",
+        "at spawnSync (node:child_process:902:24)",
+        "at safeSpawnSync (file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/lib/helpers/utils.js:1516:18)",
+        "at collectMvnDependencies (file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/lib/helpers/utils.js:16861:20)",
+        "at createJavaBom (file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/lib/cli/index.js:1978:39)",
+        "at createMultiXBom (file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/lib/cli/index.js:9714:23)",
+        "at async createBom (file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/lib/cli/index.js:11314:16)",
+        "at async file:///opt/cdxgen/node_modules/@cyclonedx/cdxgen/bin/cdxgen.js:1506:18 {",
+        "errno: -2,",
+        "code: 'ENOENT',"
+      ]
+    }
+  ],
+  "schema": "opentrace.evaluation.e3c_capture/1",
+  "source_record_sha256": "789c4aa77a17445be833f689a4fbae27a08a5ab7d14cdc66357f5f2cc3a551dc",
+  "source_unchanged_after_scan": true,
+  "started_at": "2026-11-26T18:34:25Z",
+  "worker": {
+    "checks": {
+      "memory_limit_set": true,
+      "no_capabilities": true,
+      "no_docker_socket": true,
+      "no_network_interface_or_route": true,
+      "no_new_privileges": true,
+      "non_root": true,
+      "process_limit_set": true,
+      "result_channel_writable": true,
+      "root_filesystem_read_only": true,
+      "scratch_writable": true,
+      "source_input_read_only": true
+    },
+    "image_id_declared_by_operator": "sha256:a38ca78542da078928039e8f143c47cd8c3a5a7aa6bf1c257fc76c6679f6a2b6",
+    "tools": {
+      "cdxgen": "12.9.0",
+      "syft": "1.51.1"
+    }
+  }
+}

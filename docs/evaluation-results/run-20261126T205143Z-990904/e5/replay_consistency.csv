@@ -1,0 +1,6 @@
+capture_id,repeat,successful,error,reference_nonempty,findings_equal,findings_lost,findings_extra,findings_count,candidates_equal,candidates_lost,candidates_extra,candidates_count,bom_items_equal,bom_items_lost,bom_items_extra,bom_items_count,summary_equal,exact_canonical_equal
+frigate-recorded,0,True,,True,True,0,0,116,True,0,0,97,True,0,0,97,True,True
+frigate-recorded,1,True,,True,True,0,0,116,True,0,0,97,True,0,0,97,True,True
+frigate-recorded,2,True,,True,True,0,0,116,True,0,0,97,True,0,0,97,True,True
+frigate-recorded,3,True,,True,True,0,0,116,True,0,0,97,True,0,0,97,True,True
+frigate-recorded,4,True,,True,True,0,0,116,True,0,0,97,True,0,0,97,True,True

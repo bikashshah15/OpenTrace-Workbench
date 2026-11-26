@@ -1,6 +1,6 @@
 # Reproducing the OpenTrace evidence
 
-Pin the exact commit, tool versions and environment. **A recorded replay is not a fresh scan, a model invocation or a benchmark.** The evaluation evidence in this repository is one capture: the 2026-11-23 scan of `blakeblackshear/frigate` at `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e`. See [EVALUATION.md](EVALUATION.md).
+Pin the exact commit, tool versions and environment. **A recorded replay is not a fresh scan or a model invocation.** The Frigate walkthrough is one recorded case study within the broader E1–E5 evaluation, which also includes controlled cases, captured scanner outputs, integration checks, and replay measurements. See [EVALUATION.md](EVALUATION.md) for the reference results and limitations, and [EVALUATION_SETUP.md](../EVALUATION_SETUP.md) for clean-clone inputs and the full suite.
 
 ## 1. Open the recorded Frigate replay (no key, no network scan)
 
@@ -44,13 +44,16 @@ The replay verifies the bundled files against `MANIFEST.json` and checks the thr
 
 - That rerunning Syft, cdxgen and Cisco AI-BOM produces the same bytes. That needs a fresh scan: network access, the pinned tools and Docker. The AI-BOM also needs an API key and is not repeatable on demand.
 - Parity with the original live session (`tools/demo_replay/verify_replay.py`) and the fixture builder (`tools/demo_replay/build_frigate_3bca9b8_fixture.py`): both need the private raw capture directory, which is **not** included.
-- Any benchmark. None is reproduced; none is claimed.
+- The Frigate replay itself is not a benchmark run. The separate E1–E5 suite includes controlled E2/E3 cases, captured E3-C scanner outputs, E3-B document-tool checks, E4 integration checks and E5 replay measurements; see [the reference results](EVALUATION.md) and [full-suite setup](../EVALUATION_SETUP.md). These bounded results do not support general accuracy claims.
 
 ## 5. Scanning another repository (live)
 
 The default profile can scan other public GitHub repositories. This needs outbound HTTPS from the Workbench container to GitHub and `api.osv.dev`, and is a fresh scan, not a replay. Details and the optional AI-BOM profile are in the [README](../README.md#optional-live-features) and [deploy/docker/README.md](../deploy/docker/README.md).
 
-## 6. Full-suite instructions and historical results (secondary)
+## 6. Full-suite instructions and historical unit-test results (secondary)
+
+For the full paper evaluation command and its external inputs, follow [EVALUATION_SETUP.md](../EVALUATION_SETUP.md). The full evaluation
+is distinct from the Frigate replay tests above.
 
 ```bash
 PYTHONPATH=src/core:src/agents/investigator python3 -m unittest discover -s tests -t .

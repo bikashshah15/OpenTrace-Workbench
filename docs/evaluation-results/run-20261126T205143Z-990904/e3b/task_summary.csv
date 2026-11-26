@@ -1,0 +1,4 @@
+task,tool,planned,attempted,interpretable,success,of_interpretable,strict_of_attempted,not_run,unsupported_operation,timeout,execution_error,unclassified,unparsed_output
+valid_documents_accepted,cyclonedx-cli,141,141,141,141,141/141 (1.000),141/141 (1.000),0,0,0,0,0,0
+malformed_controls_rejected,cyclonedx-cli,9,9,9,9,9/9 (1.000),9/9 (1.000),0,0,0,0,0,0
+known_removed_record_surfaced,sbom-tools,14,14,14,14,14/14 (1.000),14/14 (1.000),0,0,0,0,0,0

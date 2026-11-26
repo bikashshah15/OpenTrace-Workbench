@@ -1,0 +1,13 @@
+{
+  "captures": {
+    "frigate-recorded": {
+      "artifact_hash_mismatches": 0,
+      "inspector_errors": 0,
+      "pagination_errors": 0,
+      "reason": null,
+      "source_checkout": false,
+      "status": "completed"
+    }
+  },
+  "scope_note": "single-repository case study"
+}

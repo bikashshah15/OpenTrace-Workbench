@@ -1,0 +1,4 @@
+capture_id,kind,tool,version,outcome,completeness,duration_ms_recorded,note
+frigate-recorded,sbom,Syft,1.51.1,acquired,,942,one recorded live acquisition on another machine; not a local benchmark; never divided into local timings
+frigate-recorded,cbom,cdxgen,12.9.0,acquired,,12922,one recorded live acquisition on another machine; not a local benchmark; never divided into local timings
+frigate-recorded,aibom,cisco-aibom,1.10.1,acquired,degraded,479743,one recorded live acquisition on another machine; not a local benchmark; never divided into local timings

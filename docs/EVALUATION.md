@@ -1,12 +1,36 @@
-# Evaluation: Frigate case study
+# Evaluation results
 
-This is a single-repository case study, not a benchmark. It shows what OpenTrace reports for one pinned commit and where each result comes from. It computes no precision, recall or accuracy, and it does not compare OpenTrace with other scanners or agents.
+The sole reference result is run `run-20261126T205143Z-990904`. It completed E1–E5, E3-B, and E3-C. This run did **not** capture the
+OpenTrace Workbench Git revision; no later publication commit is assigned to the completed run. E1 is a single-repository Frigate case
+study. The other experiments cover controlled source-level claims, saved scanner outputs, integration behavior, and replay measurements;
+their scope does not establish general accuracy.
+
+## Reference results
+
+| Experiment | Denominator and result | Key limitation |
+|---|---|---|
+| E1 | Frigate: 97 candidates / 92 distinct assertions; **33/97 candidates unverifiable** (21 software, 6 cryptography, 6 AI model); 0/21 sampled findings reviewed. The saved row-level data, domain summary, and audit strata agree on 33. | Descriptive recorded output, not ground truth; the 21-item audit sample was not completed and cannot estimate accuracy. |
+| E2 | 141 controlled cases (16 original anchors, 125 derived); OpenTrace resolved 125/125, with 95/95 correctly uncertain where applicable. | Related derived cases are not independent; controlled BOMs and in-house baselines. |
+| E3 | Same frozen 141-case selection; reported with E2. | Source-level declaration/correspondence claims only; does not measure deployed completeness or runtime behavior. |
+| E3-B | 141/141 valid documents accepted, 9/9 malformed controls rejected, and 14/14 diff pairs surfaced by `sbom-tools`; 150 CycloneDX CLI validations completed. | Schema validation and document diff are separate tasks; neither establishes source-grounded correctness. |
+| E3-C | 11 eligible source items across DeepBits (7) and BF-CBOM (4); raw BOM represented 0/11; OpenTrace observed 10/11 and generated 10 claims. | Small, source-specific captured sample; one DeepBits item was not discovered, and none of the 10 claims was independently reviewed. |
+| E4 | 2 controlled composite references; unaffected finding retention 104/104 across injected failures. | Synthetic composites; retention measures stability, not whether reference findings are correct. |
+| E5 | 5/5 successful canonical replays exactly matched the saved Frigate reference. Latency summaries use n=5. | Local measurements; replay equality does not establish scanner or model determinism. |
+
+Counts and denominators are from the saved artifacts in `evaluation_results/run-20261126T205143Z-990904/`; detailed paper tables and
+limitations are recorded there. The E1 unverifiable figure is **33**, not 27: the run's `all_findings.jsonl` contains 97 candidate
+records, of which 33 have state `unverifiable`, and `findings_by_domain.csv` and `audit_strata.csv` independently total 21 + 6 + 6.
+The conflicting Desktop report's executive-summary count of 27 is not supported by this run's saved E1 data.
+
+The publication copy of the run status, paper tables, per-case/per-item support, and provenance is in the
+[curated reference-run artifact](evaluation-results/run-20261126T205143Z-990904/README.md). It preserves the result without assigning
+a Workbench Git revision that the completed run did not record.
 
 ## Scope
 
 - **Subject:** [blakeblackshear/frigate](https://github.com/blakeblackshear/frigate) at commit `3bca9b8676846d175f6b9f53f5818cbb9d36ec3e` (3,337 exported files).
 - **Original live acquisition:** 2026-11-23, run by the project team through the Workbench's live scan path (Docker, scanners in a no-network container). The advisory lookup ran at 19:44:41 UTC the same day.
-- **Evaluation dataset:** the 2026-11-23 Frigate capture is the sole evaluation dataset ([saved files](../src/core/opentrace_core/app/demo/frigate-3bca9b8/)). Older bundled fixtures support software tests only; they are not evaluation data. Earlier captures and development logs are not part of the public submission.
+- **E1 dataset:** the 2026-11-23 Frigate capture ([saved files](../src/core/opentrace_core/app/demo/frigate-3bca9b8/)). E2/E3 use a frozen 141-case set; E3-C uses two provenance-bound scanner captures; E4 uses controlled composite references; E5 replays the saved Frigate evidence. Full input requirements are in [EVALUATION_SETUP.md](../EVALUATION_SETUP.md).
 
 ## Method
 
@@ -46,8 +70,8 @@ Step-by-step instructions and evidence links are in the [README](../README.md#fr
 
 ## Limitations
 
-- One repository at one commit. Nothing here generalizes to other projects.
-- No ground-truth labels, so no accuracy, false-positive or false-negative rate is claimed. In particular, the AI-BOM tool's output includes strings that are not models (for example translated UI labels), so its model count is unverified.
+- E1 covers one repository at one commit. E2/E3 cover the frozen cases; E4 uses controlled composites; E3-C covers only the recorded inputs. None supports generalization to arbitrary projects.
+- E1 has no project-wide ground truth, and the manual audit is only a selected sample. No general accuracy, false-positive or false-negative rate is claimed. E2/E3 have controlled labels only for their bounded source-level claims. In particular, the AI-BOM tool's output includes strings that are not models (for example translated UI labels), so its model count is unverified.
 - The CBOM tool found no cryptographic assets; OpenTrace's source observations cover Python `hashlib` calls and fixed TLS forms only, and absence elsewhere is not established.
 - The AI-BOM run was degraded and is incomplete. Source-declared model URLs and runtime imports are not evidence of download, load, installation or execution.
 - An advisory match says a package version falls in an advisory's affected range. It does not show reachability or exploitability. Advisory lookup covers lockfile versions only; it does not show the SBOM lists every package.

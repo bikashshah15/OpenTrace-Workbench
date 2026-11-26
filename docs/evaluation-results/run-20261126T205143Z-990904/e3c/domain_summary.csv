@@ -1,0 +1,3 @@
+dataset,scanner,N,capture_state,binding,raw_unique_match,raw_absent,raw_ambiguous,raw_insufficient,raw_parse_incomplete,raw_algorithm_level_only,collector_observed,claims_generated,additional_source_evidence,verdict_supported,verdict_contradicted,verdict_conflicting_evidence,verdict_unverifiable,verdict_not_assessed,verdict_not_discovered,verdict_unavailable,assessed,assessed_independently_reviewed,independently_justified
+deepbits,syft,7,acquired,verified,0,7,0,0,0,,6,6,6,0,0,0,6,0,1,0,6,0,
+bf_cbom,cdxgen,4,acquired_empty,verified,0,4,0,0,0,0,4,4,4,0,0,0,4,0,0,0,4,0,

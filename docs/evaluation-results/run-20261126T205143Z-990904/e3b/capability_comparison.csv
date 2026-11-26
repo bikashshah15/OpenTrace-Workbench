@@ -1,0 +1,7 @@
+capability,tool,level,source
+structural validation against the CycloneDX schema,cyclonedx-cli,executed_in_this_plan,https://github.com/CycloneDX/cyclonedx-cli
+semantic diff of two documents,sbom-tools,executed_in_this_plan,https://github.com/sbom-tool/sbom-tools
+"quality profiles, compliance checks",sbom-tools,documented_only,https://github.com/sbom-tool/sbom-tools
+"document diff, merge, convert",cyclonedx-cli,documented_only,https://github.com/CycloneDX/cyclonedx-cli
+BOM signature / BOM-file hash verification,"cyclonedx-cli, sbom-tools",not_applicable_to_claim,"official documentation (checks the BOM file, not source declarations)"
+source-grounded requirement / call-site / model-URL claim,"cyclonedx-cli, sbom-tools",not_evaluated,no such operation identified in the reviewed documentation; this is not a proof that none exists

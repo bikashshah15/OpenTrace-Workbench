@@ -34,3 +34,15 @@ src/agents/evidence_specialist/evidence_specialist
 # Local startup configuration and generated secrets (tools/start.py)
 opentrace.yml
 .opentrace/
+
+# The frozen cases and E3-C manifests/BOMs are reviewer inputs. Downloaded source
+# trees and materialized capture source exports stay local (see EVALUATION_SETUP.md).
+evaluation_data/
+!evaluation_data/
+evaluation_data/*
+!evaluation_data/README.md
+!evaluation_data/INPUTS.sha256
+!evaluation_data/frozen/
+!evaluation_data/e3c_captures_01/
+evaluation_data/e3c_captures_01/*/src/
+evaluation_results/

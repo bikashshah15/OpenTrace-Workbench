@@ -1,0 +1,7 @@
+{
+  "cases": 141,
+  "frozen_at": "2026-11-26T02:23:57Z",
+  "note": "computed over cases + expected properties + scoring policy before any method output was produced",
+  "policy_version": "e2e3-policy/1",
+  "selection_sha256": "e72b4abbc437e442c0e04c9ce9f2e8dc3b01a12144f436fe3421615f3d2d8e21"
+}

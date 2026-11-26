@@ -1,0 +1,7 @@
+method,domain,PSR_n,PSR_N,PSR_rate,CRR_n,CRR_N,CRR_rate,UCR_n,UCR_N,UCR_rate,correct_uncertainty_n,correct_uncertainty_N,correct_uncertainty_rate,reason_matched_uncertainty_n,reason_matched_uncertainty_N,reason_matched_uncertainty_rate,refusals,valid_correspondence_retention_n,valid_correspondence_retention_N,valid_correspondence_retention_rate,errors,errors_in_underdetermined,cases,paired_tests,distinct_anchors,sbom_gap_tp,sbom_gap_fp,sbom_gap_fn,sbom_gap_precision_n,sbom_gap_precision_N,sbom_gap_precision_rate,sbom_gap_recall_n,sbom_gap_recall_N,sbom_gap_recall_rate,sbom_gap_f1,sbom_gap_evaluated,sbom_unknown_predictions,PSR_domains,CRR_domains,UCR_domains,correct_uncertainty_domains
+B1_name,ALL,30,125,0.24,46,46,1.0,95,95,1.0,0,95,0.0,0,95,0.0,0,16,16,1.0,0,0,141,125,16,14,0,0,14,14,1.0,14,14,1.0,1.0,28,0,,,,
+B1_name,MACRO,,,0.22156084656084654,,,1.0,,,1.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,3,3,3,3
+B2_strong,ALL,73,125,0.584,46,46,1.0,52,95,0.5473684210526316,43,95,0.45263157894736844,43,95,0.45263157894736844,0,16,16,1.0,0,0,141,125,16,14,0,0,14,14,1.0,14,14,1.0,1.0,28,0,,,,
+B2_strong,MACRO,,,0.583994708994709,,,1.0,,,0.5595238095238095,,,0.44047619047619047,,,,,,,,,,,,,,,,,,,,,,,,,3,3,3,3
+opentrace,ALL,125,125,1.0,46,46,1.0,0,95,0.0,95,95,1.0,95,95,1.0,0,16,16,1.0,0,0,141,125,16,14,0,0,14,14,1.0,14,14,1.0,1.0,28,0,,,,
+opentrace,MACRO,,,1.0,,,1.0,,,0.0,,,1.0,,,,,,,,,,,,,,,,,,,,,,,,,3,3,3,3

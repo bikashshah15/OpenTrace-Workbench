@@ -1,0 +1,866 @@
+{
+  "anchors": [
+    {
+      "anchor_id": "sbom:otherreq.txt:s3transfer",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "85c3901ca6d8eb004a730f1a32879458931e892c19e42620684bc96adf39fd65",
+      "form": "unpinned",
+      "groundtruth": {
+        "name": "s3transfer",
+        "url": null,
+        "version": "0.10.1"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "s3transfer",
+      "normalized_name": "s3transfer",
+      "path": "python/req/otherreq.txt",
+      "text": "s3transfer",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:beautifulsoup4",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "unpinned",
+      "groundtruth": {
+        "name": "beautifulsoup4",
+        "url": null,
+        "version": "4.1.0"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "beautifulsoup4",
+      "normalized_name": "beautifulsoup4",
+      "path": "python/req/requirements.txt",
+      "text": "beautifulsoup4",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:docopt",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "specifier",
+      "groundtruth": {
+        "name": "docopt",
+        "url": null,
+        "version": "0.6.2"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        8,
+        8
+      ],
+      "name": "docopt",
+      "normalized_name": "docopt",
+      "path": "python/req/requirements.txt",
+      "text": "docopt == 0.6.*",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:requests",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "specifier",
+      "groundtruth": {
+        "name": "requests",
+        "url": null,
+        "version": "2.8.1"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        9,
+        9
+      ],
+      "name": "requests",
+      "normalized_name": "requests",
+      "path": "python/req/requirements.txt",
+      "text": "requests [security] >= 2.8.1, == 2.8.*",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:httpx",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "specifier",
+      "groundtruth": {
+        "name": "httpx",
+        "url": null,
+        "version": "0.25.2"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        10,
+        10
+      ],
+      "name": "httpx",
+      "normalized_name": "httpx",
+      "path": "python/req/requirements.txt",
+      "text": "httpx <= 0.27, ~= 0.25.0",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:urllib3",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "direct_url",
+      "groundtruth": {
+        "name": "urllib3",
+        "url": "https://github.com/urllib3/urllib3/archive/refs/tags/1.26.8.zip#sha256=335f26daa3f99cae180f477efaf8c45ccaab380e02fe54292e9b5e14b3b41977",
+        "version": null
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        11,
+        11
+      ],
+      "name": "urllib3",
+      "normalized_name": "urllib3",
+      "path": "python/req/requirements.txt",
+      "text": "urllib3 @ https://github.com/urllib3/urllib3/archive/refs/tags/1.26.8.zip",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "sbom:requirements.txt:redis",
+      "applicability": "eligible",
+      "domain": "sbom",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": "unpinned",
+      "groundtruth": {
+        "name": "redis",
+        "url": null,
+        "version": "5.0.4"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        21,
+        21
+      ],
+      "name": "redis",
+      "normalized_name": "redis",
+      "path": "python/req/requirements.txt",
+      "text": "redis #inline comment",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "anchor_id": "cbom:app/crypto_demo.py:98:md5",
+      "applicability": "eligible",
+      "call_line": 98,
+      "column": 17,
+      "constructor": "md5",
+      "context_function": "step17",
+      "domain": "cbom",
+      "excerpt": "    md5_digest = hashlib.md5(b\"data\").hexdigest()",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "MD5",
+      "item_id": "md5",
+      "item_lines": [
+        98
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.md5",
+      "line_text": "    md5_digest = hashlib.md5(b\"data\").hexdigest()",
+      "lines": [
+        98,
+        98
+      ],
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "MD5",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "anchor_id": "cbom:app/crypto_demo.py:85:sha1",
+      "applicability": "eligible",
+      "call_line": 85,
+      "column": 18,
+      "constructor": "sha1",
+      "context_function": "step14",
+      "domain": "cbom",
+      "excerpt": "    sha1_digest = hashlib.sha1(b\"data\").hexdigest()",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "SHA-1",
+      "item_id": "sha-1",
+      "item_lines": [
+        85
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.sha-1",
+      "line_text": "    sha1_digest = hashlib.sha1(b\"data\").hexdigest()",
+      "lines": [
+        85,
+        85
+      ],
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "SHA-1",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "anchor_id": "cbom:app/crypto_demo.py:94:sha256",
+      "applicability": "eligible",
+      "call_line": 94,
+      "column": 20,
+      "constructor": "sha256",
+      "context_function": "step16",
+      "domain": "cbom",
+      "excerpt": "    sha256_digest = hashlib.sha256(b\"data\").hexdigest()",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "SHA-2",
+      "item_id": "sha-256",
+      "item_lines": [
+        94
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.sha-256",
+      "line_text": "    sha256_digest = hashlib.sha256(b\"data\").hexdigest()",
+      "lines": [
+        94,
+        94
+      ],
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "SHA-256",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "anchor_id": "cbom:app/crypto_demo.py:68:sha3_256",
+      "applicability": "eligible",
+      "call_line": 68,
+      "column": 18,
+      "constructor": "sha3_256",
+      "context_function": "step11",
+      "domain": "cbom",
+      "excerpt": "    sha3_digest = hashlib.sha3_256(b\"data\").hexdigest()",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "SHA-3",
+      "item_id": "sha3-256",
+      "item_lines": [
+        68
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.sha3-256",
+      "line_text": "    sha3_digest = hashlib.sha3_256(b\"data\").hexdigest()",
+      "lines": [
+        68,
+        68
+      ],
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "SHA3-256",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "anchor_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess.tflite:93459a7f23",
+      "applicability": "eligible",
+      "basename": "ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "domain": "aibom",
+      "line_range": [
+        138,
+        138
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "path": "docker/main/Dockerfile",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "source_record_sha256": "86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+      "source_tier": "captured",
+      "upstream": "frigate-recorded"
+    },
+    {
+      "anchor_id": "aibom:frigate-recorded:ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite:f97dedf377",
+      "applicability": "eligible",
+      "basename": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "domain": "aibom",
+      "line_range": [
+        137,
+        137
+      ],
+      "locator": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "path": "docker/main/Dockerfile",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "source_record_sha256": "86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+      "source_tier": "captured",
+      "upstream": "frigate-recorded"
+    },
+    {
+      "anchor_id": "aibom:frigate-recorded:mobilenetv2-7.onnx:e445c080c6",
+      "applicability": "eligible",
+      "basename": "mobilenetv2-7.onnx",
+      "domain": "aibom",
+      "line_range": [
+        105,
+        105
+      ],
+      "locator": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx",
+      "path": "testing-scripts/object_dataset.py",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "source_record_sha256": "86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+      "source_tier": "captured",
+      "upstream": "frigate-recorded"
+    },
+    {
+      "anchor_id": "aibom:frigate-recorded:yolov6n.hef:f572949bdf",
+      "applicability": "eligible",
+      "basename": "yolov6n.hef",
+      "domain": "aibom",
+      "line_range": [
+        60,
+        60
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov6n.hef",
+      "path": "frigate/detectors/plugins/hailo.py",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "source_record_sha256": "86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+      "source_tier": "captured",
+      "upstream": "frigate-recorded"
+    },
+    {
+      "anchor_id": "aibom:frigate-recorded:yolov6n.hef:bd5b9a6937",
+      "applicability": "eligible",
+      "basename": "yolov6n.hef",
+      "domain": "aibom",
+      "line_range": [
+        61,
+        61
+      ],
+      "locator": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8l/yolov6n.hef",
+      "path": "frigate/detectors/plugins/hailo.py",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "source_record_sha256": "86283342c4d8ce808e4365f952450ae6d118c5d1dc3e24ff4d7b2edefbe73f04",
+      "source_tier": "captured",
+      "upstream": "frigate-recorded"
+    }
+  ],
+  "counts": {
+    "derived_cases": 125,
+    "distinct_anchors": 16,
+    "original_cases": 16
+  },
+  "created_at": "2026-11-26T02:23:57Z",
+  "domains": {
+    "aibom": {
+      "anchors": 5,
+      "available": true,
+      "excluded": 1,
+      "reason": null,
+      "revision": null,
+      "revision_kind": null
+    },
+    "cbom": {
+      "anchors": 4,
+      "available": true,
+      "excluded": 10,
+      "reason": null,
+      "revision": "0b06dc979649d9710eff81be3c974a559dc4fffd",
+      "revision_kind": "content_derived_not_git"
+    },
+    "sbom": {
+      "anchors": 7,
+      "available": true,
+      "excluded": 12,
+      "reason": null,
+      "revision": "9794c9b17c2828ac78044b6486763a42337d2016",
+      "revision_kind": "content_derived_not_git"
+    }
+  },
+  "excluded": [
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "constraint_file_not_a_requirement_declaration",
+      "file_sha256": "cd1bee38b796825ce46d8505ef4267cd20ed0c9a2961ba6738659a106b50a3fc",
+      "form": "specifier",
+      "groundtruth": {
+        "name": "beautifulsoup4",
+        "url": null,
+        "version": "4.1.0"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        1,
+        1
+      ],
+      "name": "beautifulsoup4",
+      "normalized_name": "beautifulsoup4",
+      "path": "python/req/const.txt",
+      "text": "beautifulsoup4==4.1.0",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "line_continuation_spans_physical_lines",
+      "file_sha256": "c9c64c8135770a8279171a8107e86ebc3c7e24280104c48de021c71c7931f248",
+      "form": "specifier",
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        2,
+        4
+      ],
+      "name": "numpy",
+      "normalized_name": "numpy",
+      "path": "python/req/r.txt",
+      "text": "numpy \\\n==\\\n1.26.2",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "directive_constraint_file",
+      "file_sha256": "c9c64c8135770a8279171a8107e86ebc3c7e24280104c48de021c71c7931f248",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        5,
+        5
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/r.txt",
+      "text": "-c const.txt",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "file_not_covered_by_upstream_groundtruth",
+      "file_sha256": "c9c64c8135770a8279171a8107e86ebc3c7e24280104c48de021c71c7931f248",
+      "form": "unpinned",
+      "groundtruth": {
+        "name": "beautifulsoup4",
+        "url": null,
+        "version": "4.1.0"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        6,
+        6
+      ],
+      "name": "beautifulsoup4",
+      "normalized_name": "beautifulsoup4",
+      "path": "python/req/r.txt",
+      "text": "beautifulsoup4",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "file_not_covered_by_upstream_groundtruth",
+      "file_sha256": "c9c64c8135770a8279171a8107e86ebc3c7e24280104c48de021c71c7931f248",
+      "form": "specifier",
+      "groundtruth": {
+        "name": "requests",
+        "url": null,
+        "version": "2.8.1"
+      },
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        7,
+        7
+      ],
+      "name": "requests",
+      "normalized_name": "requests",
+      "path": "python/req/r.txt",
+      "text": "requests [security] >= 2.8.1, == 2.8.*",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "directive_requirement_file",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        2,
+        2
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/requirements.txt",
+      "text": "-r otherreq.txt",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "directive_constraint_file",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        3,
+        3
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/requirements.txt",
+      "text": "-c const.txt",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "directive_option",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        4,
+        4
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/requirements.txt",
+      "text": "-f https://data.pyg.org/whl/torch-2.0.0+cpu.html",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "unnamed_url_or_local_path",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        14,
+        14
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/requirements.txt",
+      "text": "./downloads/fastapi-0.111.0-py3-none-any.whl",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "unnamed_url_or_local_path",
+      "file_sha256": "08e79fd48da8e9677a914c7e07a97944dfdd82ba059841251d140b39d0cedf44",
+      "form": null,
+      "groundtruth": null,
+      "label_location": "python/req/groundtruth",
+      "line_range": [
+        17,
+        17
+      ],
+      "name": null,
+      "normalized_name": null,
+      "path": "python/req/requirements.txt",
+      "text": "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl",
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "manifest_format_outside_requirement_rule_scope",
+      "line_range": null,
+      "path": "python/pipfile/Pipfile",
+      "text": null,
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "domain": "sbom",
+      "exclusion_reason": "manifest_format_outside_requirement_rule_scope",
+      "line_range": null,
+      "path": "python/poetry/pyproject.toml",
+      "text": null,
+      "upstream": "DeepBitsTechnology/sbom-benchmark"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 48,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "AES",
+      "item_id": "aes-128-gcm",
+      "item_lines": [
+        47,
+        48
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.aes-128-gcm",
+      "line_text": "    aes_ciphertext = AESGCM(aes_key).encrypt(os.urandom(12), b\"data\", None)",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "AES",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 62,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "AES",
+      "item_id": "aes-256-cbc",
+      "item_lines": [
+        62,
+        63,
+        64
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.aes-256-cbc",
+      "line_text": "    aes_cipher = Cipher(algorithms.AES(os.urandom(32)), modes.CBC(os.urandom(16)))",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "AES",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 53,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "AES",
+      "item_id": "aes-256-gcm",
+      "item_lines": [
+        52,
+        53
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.aes-256-gcm",
+      "line_text": "    aes_ciphertext = AESGCM(aes_key).encrypt(os.urandom(12), b\"data\", None)",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "AES",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 21,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "EC",
+      "item_id": "ec-p256-keygen",
+      "item_lines": [
+        21,
+        22
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.ec-p256-keygen",
+      "line_text": "    ec_private_key = ec.generate_private_key(ec.SECP256R1())",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "EC",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 34,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "EC",
+      "item_id": "ecdsa-p256-sign",
+      "item_lines": [
+        32,
+        33,
+        34
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.ecdsa-p256-sign",
+      "line_text": "    ecdsa_signature = ec_private_key.sign(b\"data\", ec.ECDSA(signature_hash))",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "ECDSA",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 38,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "EC",
+      "item_id": "ed25519-sign",
+      "item_lines": [
+        38,
+        39
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.ed25519-sign",
+      "line_text": "    ed25519_private_key = Ed25519PrivateKey.generate()",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "Ed25519",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 107,
+      "domain": "cbom",
+      "exclusion_reason": "hmac_is_not_a_plain_hash_operation",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "HMAC",
+      "item_id": "hmac-sha256",
+      "item_lines": [
+        107
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.hmac-sha256",
+      "line_text": "    hmac_tag = hmac.new(b\"key\", b\"data\", hashlib.sha256).hexdigest()",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "HMAC",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 111,
+      "domain": "cbom",
+      "exclusion_reason": "kdf_operation_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "PBKDF",
+      "item_id": "pbkdf2-hmac-sha256",
+      "item_lines": [
+        111
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.pbkdf2-hmac-sha256",
+      "line_text": "    derived_key = hashlib.pbkdf2_hmac(\"sha256\", b\"changeit\", os.urandom(16), 600000)",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "PBKDF2",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 16,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "RSA",
+      "item_id": "rsa-2048-keygen",
+      "item_lines": [
+        16,
+        17
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.rsa-2048-keygen",
+      "line_text": "    rsa_private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "RSA",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "call_line": 80,
+      "domain": "cbom",
+      "exclusion_reason": "algorithm_group_outside_hash_correspondence",
+      "file_sha256": "e76c4f032d5f82f2fdb700e9d9fadf780b68266c0f312e7817c05a59cc715184",
+      "ground_truth_version": "2026-10-29.1",
+      "group": "RSA",
+      "item_id": "rsa-oaep-sha256",
+      "item_lines": [
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "label_location": "experiments/corpus/micro/ground_truth.yaml#projects.micro-python.calls.rsa-oaep-sha256",
+      "line_text": "        padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None),",
+      "path": "app/crypto_demo.py",
+      "repo_path": "experiments/corpus/micro/python/app/crypto_demo.py",
+      "unit": "RSAES-OAEP",
+      "upstream": "SEG-UNIBE/BF-CBOM"
+    },
+    {
+      "applicability": "excluded",
+      "basename": "facedet.onnx",
+      "domain": "aibom",
+      "exclusion_reason": "placeholder_host_not_a_public_acquisition_locator",
+      "line_range": [
+        58,
+        58
+      ],
+      "locator": "http://x/facedet.onnx",
+      "path": "frigate/test/test_model_downloader.py",
+      "repository": "https://github.com/blakeblackshear/frigate",
+      "revision": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e",
+      "upstream": "frigate-recorded"
+    }
+  ],
+  "inputs": {
+    "bf_cbom": {
+      "archive": "https://zenodo.org/records/17225260",
+      "archive_sha256": "64e5fd94d0a7d610bacbc3001cf45d362c379d8396d357f53f72f4a95916e70f",
+      "available": true,
+      "citation_cff_sha256": "dc8d0f366888aedbcabfe9644e1e8fc6ae3aeb3323b2201be3093e383cb6711a",
+      "file_count": 333,
+      "git": {
+        "available": false,
+        "git_sha": null,
+        "reason": "no .git directory (e.g. extracted archive); Git revision unavailable"
+      },
+      "kind": "bf_cbom",
+      "licence_detected": "GPL-3.0",
+      "licence_hint": "GPL-3.0-only",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "listing_sha256": "00b360026e69449cce4aefb43cc277d1f2ac1626a48d229ff20e92210104ba43",
+      "path": "<opentrace-root>/evaluation_data/external/bf_cbom",
+      "readme_md_sha256": "1e676227534395c70a888c9307500bb065dbce64bc2711a93226249f4b623417",
+      "redistribution": "GPL-3.0: do not copy BF-CBOM files into the paper artifact; cases cite paths, lines and hashes (the micro project excerpt lines are quoted)",
+      "url": "https://github.com/SEG-UNIBE/BF-CBOM",
+      "version_file": "2.0.0-rc.2",
+      "version_sha256": "a6a2b799e16c0200482e30cfe3454c7681371a80fc4e667e2e71dee09fa445b0"
+    },
+    "deepbits": {
+      "archive_sha256": "b2b32284552d629a839033bf6e88ba8914048019c6007a7875cb81b68ec69431",
+      "available": true,
+      "file_count": 42,
+      "git": {
+        "available": false,
+        "git_sha": null,
+        "reason": "no .git directory (e.g. extracted archive); Git revision unavailable"
+      },
+      "kind": "deepbits",
+      "licence_detected": "MIT",
+      "licence_hint": "MIT",
+      "license_sha256": "135df5564bb9b9fa8536fdcec771cd7059822a31961262b44ebf2fab1a5c6839",
+      "listing_sha256": "e0a89b217317374326a3a918c26f101ef1bb1795dfd887726d2dfeeac6563fa5",
+      "paper": "https://doi.org/10.1109/DSN58291.2024.00018",
+      "path": "<opentrace-root>/evaluation_data/external/deepbits",
+      "readme_md_sha256": "c113c68211069137f5aba929b602f12694e22a78c0f8756d2100ea147cbba48f",
+      "redistribution": "MIT: copies may be redistributed with the licence notice; the package redistributes nothing - cases cite paths and hashes",
+      "url": "https://github.com/DeepBitsTechnology/sbom-benchmark"
+    }
+  },
+  "kind": "e2_selection",
+  "notes": [
+    "Transformations of one anchor are related tests, not independent samples.",
+    "BOM documents, acquisition manifests and CBOM resolution records are CONTROLLED; source anchors are external_reference or captured.",
+    "Expected outcomes come from benchmark_oracle.EXPECTED (task definitions), never from a method output."
+  ],
+  "schema": "opentrace.evaluation/1",
+  "seed": 20261125
+}

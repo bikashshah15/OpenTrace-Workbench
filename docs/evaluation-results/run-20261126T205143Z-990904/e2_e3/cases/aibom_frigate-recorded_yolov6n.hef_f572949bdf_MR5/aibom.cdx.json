@@ -1,0 +1,131 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "model/93459a7f23303ef4",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 138,
+            "location": "docker/main/Dockerfile"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess.tflite"
+        }
+      ],
+      "name": "ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "model/f97dedf3772aa886",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 137,
+            "location": "docker/main/Dockerfile"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/google-coral/test_data/raw/release-frogfish/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite"
+        }
+      ],
+      "name": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "model/e445c080c6057e02",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 105,
+            "location": "testing-scripts/object_dataset.py"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/onnx/models/raw/main/validated/vision/classification/mobilenet/model/mobilenetv2-7.onnx"
+        }
+      ],
+      "name": "mobilenetv2-7.onnx",
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "model/f572949bdf210a30",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 60,
+            "location": "frigate/detectors/plugins/hailo.py"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/opentrace-eval-alt/yolov6n.hef"
+        }
+      ],
+      "name": "yolov6n.hef",
+      "type": "machine-learning-model"
+    },
+    {
+      "bom-ref": "model/bd5b9a6937f0eeaa",
+      "evidence": {
+        "occurrences": [
+          {
+            "line": 61,
+            "location": "frigate/detectors/plugins/hailo.py"
+          }
+        ]
+      },
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8l/yolov6n.hef"
+        }
+      ],
+      "name": "yolov6n.hef",
+      "type": "machine-learning-model"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "incomplete"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "subject",
+      "name": "frigate-recorded-aibom",
+      "type": "application",
+      "version": "3bca9b8676846d175f6b9f53f5818cbb9d36ec3e"
+    },
+    "properties": [
+      {
+        "name": "opentrace-eval:notice",
+        "value": "CONTROLLED evaluation fixture written by tools/evaluation/benchmark_adapters.py for a known verification test; not an authentic scanner output"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "name": "opentrace-eval-controlled-aibom",
+          "type": "application",
+          "version": "1"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:b8df4a4c-7e22-59e4-ab22-7d2d211a0390",
+  "specVersion": "1.6",
+  "version": 1
+}

@@ -1,0 +1,208 @@
+{
+  "bf_cbom": {
+    "binding": "verified",
+    "binding_reason": null,
+    "capture_reason": null,
+    "capture_state": "acquired_empty",
+    "collector_error": null,
+    "collector_tree": "commit_verified_export",
+    "pipeline_not_run_reason": null,
+    "source": {
+      "acquired_at": "2026-11-26T18:34:01Z",
+      "anchor_checks": [
+        {
+          "anchor_id": "cbom:app/crypto_demo.py:98:md5",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "experiments/corpus/micro/python/app/crypto_demo.py",
+          "verified": true
+        },
+        {
+          "anchor_id": "cbom:app/crypto_demo.py:85:sha1",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "experiments/corpus/micro/python/app/crypto_demo.py",
+          "verified": true
+        },
+        {
+          "anchor_id": "cbom:app/crypto_demo.py:94:sha256",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "experiments/corpus/micro/python/app/crypto_demo.py",
+          "verified": true
+        },
+        {
+          "anchor_id": "cbom:app/crypto_demo.py:68:sha3_256",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "experiments/corpus/micro/python/app/crypto_demo.py",
+          "verified": true
+        }
+      ],
+      "archive": {
+        "commit_in_comment": "33f20d703e084f821bd148104291e78698cc12dd",
+        "name": "BF-CBOM-main.zip",
+        "sha256": "64e5fd94d0a7d610bacbc3001cf45d362c379d8396d357f53f72f4a95916e70f"
+      },
+      "archive_comparison": {
+        "different": [],
+        "identical": true,
+        "only_in_archive": [],
+        "only_in_commit": []
+      },
+      "dataset": "bf_cbom",
+      "fetched_from": "https://github.com/SEG-UNIBE/BF-CBOM",
+      "record": {
+        "byte_count": 9971233,
+        "commit_sha": "33f20d703e084f821bd148104291e78698cc12dd",
+        "file_count": 332,
+        "git_version": "git version 2.50.1 (Apple Git-155)",
+        "listing_sha256": "29cf92a32a5d1f6b8a51ab104d368d3fb4a6e0b600933ad4578b02e61990eb67",
+        "repository_url": "https://github.com/SEG-UNIBE/BF-CBOM",
+        "skipped": [],
+        "tree_sha": "c65b773e7c851d5246eda73134880a1ec39fd4d9",
+        "verified": true
+      },
+      "schema": "opentrace.evaluation.e3c_capture/1"
+    },
+    "worker": {
+      "checks": {
+        "memory_limit_set": true,
+        "no_capabilities": true,
+        "no_docker_socket": true,
+        "no_network_interface_or_route": true,
+        "no_new_privileges": true,
+        "non_root": true,
+        "process_limit_set": true,
+        "result_channel_writable": true,
+        "root_filesystem_read_only": true,
+        "scratch_writable": true,
+        "source_input_read_only": true
+      },
+      "image_id_declared_by_operator": "sha256:a38ca78542da078928039e8f143c47cd8c3a5a7aa6bf1c257fc76c6679f6a2b6",
+      "tools": {
+        "cdxgen": "12.9.0",
+        "syft": "1.51.1"
+      }
+    }
+  },
+  "deepbits": {
+    "binding": "verified",
+    "binding_reason": null,
+    "capture_reason": null,
+    "capture_state": "acquired",
+    "collector_error": null,
+    "collector_tree": "commit_verified_export",
+    "pipeline_not_run_reason": null,
+    "source": {
+      "acquired_at": "2026-11-26T18:34:00Z",
+      "anchor_checks": [
+        {
+          "anchor_id": "sbom:otherreq.txt:s3transfer",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/otherreq.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:beautifulsoup4",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:docopt",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:requests",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:httpx",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:urllib3",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        },
+        {
+          "anchor_id": "sbom:requirements.txt:redis",
+          "file_present": true,
+          "file_sha256_matches": true,
+          "line_text_matches": true,
+          "path": "python/req/requirements.txt",
+          "verified": true
+        }
+      ],
+      "archive": {
+        "commit_in_comment": "e6bcf23b2f4e384f9fc398793529583845612b63",
+        "name": "sbom-benchmark-main.zip",
+        "sha256": "b2b32284552d629a839033bf6e88ba8914048019c6007a7875cb81b68ec69431"
+      },
+      "archive_comparison": {
+        "different": [],
+        "identical": true,
+        "only_in_archive": [],
+        "only_in_commit": []
+      },
+      "dataset": "deepbits",
+      "fetched_from": "https://github.com/DeepBitsTechnology/sbom-benchmark",
+      "record": {
+        "byte_count": 35687412,
+        "commit_sha": "e6bcf23b2f4e384f9fc398793529583845612b63",
+        "file_count": 41,
+        "git_version": "git version 2.50.1 (Apple Git-155)",
+        "listing_sha256": "2233763767c90735b1deda0ea9d7bd817b22f5a7d051f197acb325a1673d52b9",
+        "repository_url": "https://github.com/DeepBitsTechnology/sbom-benchmark",
+        "skipped": [],
+        "tree_sha": "9ae3214759948e278a9a518e3ec52a72ac868810",
+        "verified": true
+      },
+      "schema": "opentrace.evaluation.e3c_capture/1"
+    },
+    "worker": {
+      "checks": {
+        "memory_limit_set": true,
+        "no_capabilities": true,
+        "no_docker_socket": true,
+        "no_network_interface_or_route": true,
+        "no_new_privileges": true,
+        "non_root": true,
+        "process_limit_set": true,
+        "result_channel_writable": true,
+        "root_filesystem_read_only": true,
+        "scratch_writable": true,
+        "source_input_read_only": true
+      },
+      "image_id_declared_by_operator": "sha256:a38ca78542da078928039e8f143c47cd8c3a5a7aa6bf1c257fc76c6679f6a2b6",
+      "tools": {
+        "cdxgen": "12.9.0",
+        "syft": "1.51.1"
+      }
+    }
+  }
+}
