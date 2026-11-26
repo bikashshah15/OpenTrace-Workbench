@@ -36,5 +36,5 @@ opentrace.yml
 .opentrace/
 
 # Local evaluation inputs and generated run outputs (see docs/EVALUATION.md).
-evaluation_data/
+evaluation_data
 evaluation_results/
