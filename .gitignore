@@ -34,3 +34,7 @@ src/agents/evidence_specialist/evidence_specialist
 # Local startup configuration and generated secrets (tools/start.py)
 opentrace.yml
 .opentrace/
+
+# Local evaluation inputs and generated run outputs (see docs/EVALUATION.md).
+evaluation_data/
+evaluation_results/

@@ -1,0 +1,118 @@
+# OpenTrace evaluation configuration (E1-E5).
+# Relative paths are resolved against the OpenTrace checkout root (the directory that contains src/ and tools/).
+# Every value can be overridden on the command line: --set e5.repetitions=7 --set benchmarks.deepbits=/data/sbom-benchmark-main
+schema: opentrace.evaluation.config/1
+
+seed: 20261125            # every seeded choice (E1 audit sample, MR1 shuffles) derives from this seed and a purpose string
+repetitions: 5            # default timing repetitions (E5) and replay repetitions
+warmups: 1
+offline: true             # the package never performs network calls; live acquisition is out of scope for this package
+output_root: evaluation_results   # each run writes evaluation_results/<run_id>/ (never overwritten)
+
+opentrace:
+  # When the checkout has no .git (e.g. extracted from OpenTrace-Workbench-main_v1.zip), give the archive so its SHA-256 is recorded.
+  # A ZIP is never assigned a Git commit.
+  archive_path: null
+  archive_sha256: null
+
+captures:
+  - id: frigate-recorded
+    path: src/core/opentrace_core/app/demo/frigate-3bca9b8
+    provenance_tier: captured
+    # Optional pinned source checkout of the same revision (blakeblackshear/frigate@3bca9b8...) for the E1 manual audit.
+    # Without it, cited excerpts are checked against the recorded capture only and source-byte availability is reported as false.
+    source_checkout: null
+    # Values printed in docs/EVALUATION.md. Used ONLY for a reconciliation table (derived vs documented); never used as results.
+    documented_reference:
+      exported_source_files: 3337
+      sbom_component_records: 1861
+      declared_dependency_edges: 4569
+      review_candidates: 97
+      distinct_assertions: 92
+      not_represented: 59
+      unknown_coverage: 38
+      represented: 0
+      model_reference_checks: 6
+  # A second capture must be a replay fixture produced by THIS OpenTrace version (MANIFEST.json, schema opentrace.demo_replay.manifest/1).
+  # Older Viseron fixtures under tests/ are development fixtures, not E1 data. Example:
+  # - id: viseron-fresh
+  #   path: evaluation_data/captures/viseron-<sha12>
+  #   provenance_tier: live_new
+  #   source_checkout: evaluation_data/captures/viseron-<sha12>-source
+
+benchmarks:
+  # Point these at the extracted downloads (directories that contain the upstream README/LICENSE).
+  deepbits: evaluation_data/external/deepbits          # https://github.com/DeepBitsTechnology/sbom-benchmark
+  bf_cbom: evaluation_data/external/bf_cbom            # https://github.com/SEG-UNIBE/BF-CBOM
+  ai_references: evaluation_data/external/ai_references  # optional extra *.json reference files (see evaluation_data/README.md)
+  # Optional: SHA-256 of the downloaded archives, recorded in the input manifest when given.
+  deepbits_archive_sha256: null
+  bf_cbom_archive_sha256: null
+
+external_tools:
+  cyclonedx: cyclonedx      # CycloneDX CLI executable name or path; reported not_run when absent
+  sbom_tools: sbom-tools    # optional; reported not_run when absent
+
+preflight:
+  run_regression_tests: true
+  regression_timeout_seconds: 1800
+  regression_suites:
+    - name: selected_rule_tests
+      modules: [tests.core.bombridge.test_requirement_check, tests.core.bombridge.test_rules_cbom4, tests.core.bombridge.test_discovery_models]
+    - name: replay_tests
+      modules: [tests.core.app.test_demo_replay]
+
+e1:
+  audit_per_family: 8               # 5-10 per available family; all candidates if fewer
+  audit_strata: [family, state]     # seeded stratified selection, never by favourable outcome
+  fetch_inspector_for_all: true     # /api/view/gap for every candidate (used for evidence traceability)
+  page_guard: 2000                  # hard stop for pagination loops (harness safety)
+  completed_audit_file: null        # path to a filled manual_audit.csv from an earlier run, to summarise statuses
+
+e2:
+  # Selection is frozen BEFORE any method runs: `--stage select` writes the frozen selection; `--stage run` refuses to run on a different hash.
+  selection_dir: evaluation_data/frozen/e2_selection
+  domains: [sbom, cbom, aibom]
+  tracks: [fixed_claim, collector, discovery]   # fixed_claim = Track B (core), collector = Track A, discovery = Track C
+  transformations: [MR1, MR2, MR3, MR4, MR5, MR6, MR7]
+  negative_controls: [NC-ecosystem, NC-primitive, NC-query]   # predeclared optional stronger controls
+  mr1_repetitions: 1                 # deterministic seeded shuffles per anchor
+  method_timeout_seconds: 60
+  deepbits:
+    python_req_dir: python/req
+    anchor_files: [requirements.txt, otherreq.txt]   # files whose direct named declarations are covered by python/req/groundtruth
+    groundtruth: groundtruth
+    include_unlabeled_files: false   # r.txt / const.txt declarations are not covered by the upstream groundtruth
+    excluded_manifests: [python/pipfile/Pipfile, python/poetry/pyproject.toml]   # not pip requirements files (out of rule scope)
+  bf_cbom:
+    ground_truth: experiments/corpus/micro/ground_truth.yaml
+    project: micro-python
+    hash_groups: [SHA-1, SHA-2, SHA-3, MD5]          # BF-CBOM groups that correspond to plain hash operations
+  aibom:
+    captured_sources: [frigate-recorded]              # take literal model URLs from these captures' source-declarations.json
+    exclude_placeholder_hosts: true                   # hosts without a dot (e.g. http://x/...) are not public acquisition locators
+    model_extensions: [.onnx, .tflite, .hef, .pt, .pth, .pb, .h5, .keras, .safetensors, .gguf, .bin, .mlmodel, .engine, .xml, .rknn]
+
+e3:
+  methods: [B1_name, B2_strong, opentrace]
+  cyclonedx_validate: true
+  cyclonedx_input_version: v1_6     # CycloneDX CLI --input-version for spec 1.6 documents (verify with `cyclonedx validate --help`)
+  sbom_tools_diff: true
+
+e4:
+  reference_bundles: [composite-a, composite-b]     # externally anchored composite cases (each must yield nonempty findings in all three families)
+  conditions: [R0, R1, R2, R3, R4-software, R4-crypto, R4-models, R5-once, R5-twice, R6, R7]
+  all_or_nothing_comparator: true
+  investigation_tasks: [Q1, Q2, Q3, Q4, Q5, Q6]
+
+e5:
+  repetitions: 5
+  warmups: 1
+  memory_sample_interval_ms: 5
+  workloads: [engine_discovery, engine_assessment, integrated_worker, offline_replay, service_startup]
+  replay_consistency_repeats: 5
+  # Fields removed before comparing replay outputs (documented volatile fields only; never states, reasons or source identity).
+  volatile_keys: [session_id, generation, validation_digest, queried_at, timestamp, captured_at, started_at, finished_at, resolved_at]
+
+summary:
+  latex: false

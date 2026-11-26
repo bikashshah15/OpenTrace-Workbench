@@ -1,0 +1,3 @@
+# Evaluation-only dependencies (install in addition to the project's requirements-dev.txt).
+# psutil: E5 peak-RSS sampling of the parent and worker process tree. Without it, memory is reported N/A (never estimated).
+psutil==7.2.2
