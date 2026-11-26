@@ -21,6 +21,7 @@ repository. Exact invocations and their full arguments are preserved in each run
 | Harness tests, with the local CycloneDX schema enabled | `tests/evaluation` | 52 passed |
 | Preflight and configured production regressions | `preflight-final-01` | completed; 62 selected rule tests and 12 replay tests passed |
 | E1–E5 combined run | `all-final-01` | E1, E2, E3, E4 completed; E5 partial because process-tree RSS sampling was denied by macOS |
+| E5-only Terminal follow-up | `e5-terminal-20261126-01` | completed; all timing, replay, and process-tree memory checks passed |
 | E3-B | `e3b-final-01` | completed |
 | E3-C | `e3c-final-01` | completed |
 
@@ -183,10 +184,14 @@ retention measures stability relative to those assembled references, not their g
 
 ### E5: timing, replay, and memory
 
-Each workload used five timed repetitions. Replay consistency was exact in 5/5 attempts after removing only documented volatile
-fields.
+There are two E5 records. The original E5 stage in `all-final-01` remains partial; the separate E5-only Terminal run
+`e5-terminal-20261126-01` completed on macOS 26.6.2 arm64 (Apple M4), using CPython 3.14.7 and psutil 7.2.2 from the tested
+evaluation worktree. It retained the configured 5 timing repetitions, 1 warmup, 5 ms sampling interval, and 5 replay-consistency
+repeats. The run status reports no problems.
 
-| Workload | Median elapsed time | Successful repetitions |
+The original combined run's timing results remain recorded separately:
+
+| Workload | `all-final-01` median elapsed time | Successful repetitions |
 |---|---:|---:|
 | Engine discovery | 167.3 ms | 5/5 |
 | Engine assessment | 9.7 ms | 5/5 |
@@ -194,10 +199,22 @@ fields.
 | Offline replay (local service, all pages) | 923.4 ms | 5/5 |
 | Replay service startup | 546.9 ms | 5/5 |
 
-Per-workload process-tree memory is unavailable. macOS returned `PermissionError: [Errno 1] Operation not permitted` while psutil
-enumerated descendants. The corrected sampler retains parent RSS samples and leaves total/child RSS blank instead of reporting zero;
-E5 is therefore partial. `resource.getrusage` reports 353.4 MiB for the parent and 73.7 MiB for the largest waited-for child over the
-whole process lifetime, not per workload, so those values are not substituted for per-workload measurements.
+The completed Terminal rerun produced valid process-tree memory samples for every configured workload. Each had five successful
+timing runs and five successful memory runs; all memory runs had nonzero sample counts, positive parent/child/total RSS, and zero
+child-sampling failures. Replay consistency was exact in 5/5 attempts after removing only documented volatile fields.
+
+| Workload | Terminal median elapsed time | Process-tree RSS median of peaks | Process-tree RSS maximum of peaks |
+|---|---:|---:|---:|
+| Engine discovery | 165.1 ms | 153.0 MiB | 153.0 MiB |
+| Engine assessment | 9.5 ms | 147.8 MiB | 147.8 MiB |
+| Integrated worker | 224.4 ms | 188.6 MiB | 196.6 MiB |
+| Offline replay (local service, all pages) | 938.1 ms | 265.5 MiB | 285.2 MiB |
+| Replay service startup | 554.3 ms | 251.2 MiB | 251.9 MiB |
+
+The original combined run's per-workload process-tree memory remains unavailable: macOS denied descendant enumeration with
+`PermissionError: [Errno 1] Operation not permitted`. The corrected sampler left its total/child RSS blank. This does not affect the
+separate Terminal rerun's samples. For the original run only, `resource.getrusage` reported 353.4 MiB for the parent and 73.7 MiB for
+the largest waited-for child over the whole process lifetime; these are not per-workload measurements.
 
 ## Limits and discrepancies
 
@@ -207,8 +224,9 @@ whole process lifetime, not per workload, so those values are not substituted fo
   claims concern declared requirements and hash call sites, not installed packages, execution, or security.
 - E3-B's 141 valid documents, 9 malformed controls, and 14 diffs are limited to the frozen plan. Validators and diff tools do not
   perform source-grounded assessment.
-- E4 uses synthetic composite references. E5 timings are local; memory is unavailable per workload because of process-tree access
-  permissions. Replay consistency is for saved evidence, not scanner determinism.
+- E4 uses synthetic composite references. E5 timings are local; the Terminal rerun's process-tree RSS is sampled and may double-count
+  shared pages. The earlier combined run's memory was unavailable because of process-tree access permissions. Replay consistency is
+  for saved evidence, not scanner determinism.
 - No manual review was available to reuse or report as completed for this rerun.
 
 ## Raw output locations
@@ -219,6 +237,7 @@ Raw outputs remain local and untracked. Their run IDs and manifest records are:
 - `$OT_RUNS/all-final-01`
 - `${OT_RUNS}-e3b/e3b-final-01`
 - `${OT_RUNS}-e3c/e3c-final-01`
+- `<local output root>/e5-terminal-20261126-01` (E5-only run from macOS Terminal)
 
 The code outputs only these reviewed summaries in this repository; raw scanner runs and benchmark trees remain in their local input and
 output locations.
